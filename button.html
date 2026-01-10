@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Blog - Tailwind CSS Education Template</title>
+    <meta name="robots" content="noindex, follow">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+    <!-- CSS
+	============================================ -->
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/swiper.css">
+    <link rel="stylesheet" href="assets/css/animation.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/output.css">
+    <link rel="stylesheet" href="assets/css/input.css">
+</head>
+
+
+
+<body class="rbt-header-sticky">
+    <header class="bg-white dark:bg-gray-900 shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 lg:px-6">
+            <div class="flex items-center justify-between h-16 lg:h-20">
+                <div class="flex items-center">
+                    <a href="/" class="flex items-center space-x-2">
+                        <img src="assets/images/logo.png" alt="Logo" class="h-8 lg:h-10 w-auto"
+                            onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 100 100\'%3E%3Ctext y=\'.9em\' font-size=\'90\'%3E🏫%3C/text%3E%3C/svg%3E'; this.alt='Logo'">
+                        <span class="text-xl lg:text-2xl font-bold text-gray-900 dark:text-white">Educate</span>
+                    </a>
+                </div>
+
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#" class="nav-link">Home</a>
+                    <a href="#" class="nav-link">Courses</a>
+                    <a href="#" class="nav-link">About</a>
+                    <a href="#" class="nav-link">Contact</a>
+                </div>
+
+                <button id="mobile-menu-btn"
+                    class="lg:hidden p-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="hidden lg:hidden pb-4">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="#"
+                        class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors py-2">Home</a>
+                    <a href="#"
+                        class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors py-2">Courses</a>
+                    <a href="#"
+                        class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors py-2">About</a>
+                    <a href="#"
+                        class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors py-2">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="bg-[#050520] min-h-screen">
+        <section class="container mx-auto px-4 lg:px-6 py-12 lg:py-20 max-w-[1320px]">
+            <div class="mb-12 lg:mb-16">
+                <h1 class="text-white text-3xl lg:text-4xl font-bold mb-4">Button Components</h1>
+                <p class="text-gray-300 text-base">Modern, responsive button UI components with multiple variations</p>
+            </div>
+
+            <div class="space-y-16 lg:space-y-20">
+                <div>
+                    <h2 class="text-white text-2xl lg:text-3xl font-semibold mb-8">Button Types</h2>
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+                        <div>
+                            <h3 class="text-white text-lg font-medium mb-6">Default</h3>
+                            <div class="space-y-6">
+                                <div>
+                                    <button class="btn-primary btn-md">Learnhub Button</button>
+                                </div>
+                                <div>
+                                    <button class="btn-secondary btn-md">Learnhub Button</button>
+                                </div>
+                                <div>
+                                    <button class="btn-outline-primary btn-md">Learnhub Button</button>
+                                </div>
+                                <div>
+                                    <button class="btn-outline-secondary btn-md">Learnhub Button</button>
+                                </div>
+                                <div>
+                                    <button class="btn-text p-px">Learnhub Button <i
+                                            class="fa-sharp fa-solid fa-arrow-right"></i></button>
+                                </div>
+                                <div>
+                                    <button class="btn-icon btn-md"><i class="fa-sharp fa-solid fa-arrow-right"></i>
+                                        Learnhub Button</button>
+                                </div>
+                                <div>
+                                    <button class="btn-icon btn-md">Learnhub Button <i
+                                            class="fas fa-arrow-right btn-icon-arrow"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-white text-lg font-medium mb-6">Hover</h3>
+                            <div class="space-y-6">
+                                <div>
+                                    <button class="btn-primary btn-md btn-hover">Learnhub Button</button>
+                                </div>
+                                <div>
+                                    <button class="btn-secondary btn-md btn-hover">Learnhub Button</button>
+                                </div>
+                                <div>
+                                    <button class="btn-outline-primary btn-md btn-hover">Learnhub Button</button>
+                                </div>
+                                <div>
+                                    <button class="btn-outline-secondary btn-md btn-hover">Learnhub Button</button>
+                                </div>
+                                <div>
+                                    <button class="btn-text p-px btn-hover">Learnhub Button <i
+                                            class="fa-sharp fa-solid fa-arrow-right"></i></button>
+                                </div>
+                                <div>
+                                    <button class="btn-icon btn-md btn-hover"><i
+                                            class="fa-sharp fa-solid fa-arrow-right"></i> Learnhub Button</button>
+                                </div>
+                                <div>
+                                    <button class="btn-icon btn-md btn-hover">Learnhub Button <i
+                                            class="fas fa-arrow-right btn-icon-arrow"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-white text-2xl lg:text-3xl font-semibold mb-8">Size Variations</h2>
+                    <div class="space-y-10">
+                        <div>
+                            <h3 class="text-white text-base font-medium mb-4">Extra Large</h3>
+                            <div class="flex flex-wrap items-center gap-4">
+                                <button class="btn-primary btn-xl">Learnhub Button</button>
+                                <button class="btn-secondary btn-xl">Learnhub Button</button>
+                                <button class="btn-outline-primary btn-xl">Learnhub Button</button>
+                                <button class="btn-outline-secondary btn-xl">Learnhub Button</button>
+                                <button class="btn-text btn-xl ">Learnhub Button <i
+                                        class="fa-sharp fa-solid fa-arrow-right"></i></button>
+                                <button class="btn-icon btn-xl">Learnhub Button <i
+                                        class="fas fa-arrow-right btn-icon-arrow"></i></button>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-white text-base font-medium mb-4">Large</h3>
+                            <div class="flex flex-wrap items-center gap-4">
+                                <button class="btn-primary btn-lg">Learnhub Button</button>
+                                <button class="btn-secondary btn-lg">Learnhub Button</button>
+                                <button class="btn-outline-primary btn-lg">Learnhub Button</button>
+                                <button class="btn-outline-secondary btn-lg">Learnhub Button</button>
+                                <button class="btn-text btn-lg">Learnhub Button <i
+                                        class="fa-sharp fa-solid fa-arrow-right"></i></button>
+                                <button class="btn-icon btn-lg">Learnhub Button <i
+                                        class="fas fa-arrow-right btn-icon-arrow"></i></button>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-white text-base font-medium mb-4">Medium</h3>
+                            <div class="flex flex-wrap items-center gap-4">
+                                <button class="btn-primary btn-md">Learnhub Button</button>
+                                <button class="btn-secondary btn-md">Learnhub Button</button>
+                                <button class="btn-outline-primary btn-md">Learnhub Button</button>
+                                <button class="btn-outline-secondary btn-md">Learnhub Button</button>
+                                <button class="btn-text p-px">Learnhub Button <i
+                                        class="fa-sharp fa-solid fa-arrow-right"></i></button>
+                                <button class="btn-icon btn-md">Learnhub Button <i
+                                        class="fas fa-arrow-right btn-icon-arrow"></i></button>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-white text-base font-medium mb-4">Small</h3>
+                            <div class="flex flex-wrap items-center gap-4">
+                                <button class="btn-primary btn-sm"><i class="fas fa-shopping-cart"></i> Buy Now</button>
+                                <button class="btn-secondary btn-sm">Learnhub Button</button>
+                                <button class="btn-outline-primary btn-sm">Learnhub Button</button>
+                                <button class="btn-outline-secondary btn-sm">Learnhub Button</button>
+                                <button class="btn-text btn-sm">Learnhub Button <i
+                                        class="fa-sharp fa-solid fa-arrow-right"></i></button>
+                                <button class="btn-icon btn-sm">Learnhub Button <i
+                                        class="fas fa-arrow-right btn-icon-arrow"></i></button>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-white text-base font-medium mb-4">Extra Small</h3>
+                            <div class="flex flex-wrap items-center gap-4">
+                                <button class="btn-primary btn-xs">Learnhub <i
+                                        class="fa-sharp fa-solid fa-arrow-right"></i></button>
+                                <button class="btn-secondary btn-xs">Learnhub Button</button>
+                                <button class="btn-outline-primary btn-xs">Learnhub Button</button>
+                                <button class="btn-outline-secondary btn-xs">Learnhub Button</button>
+                                <button class="btn-text btn-xs">Learnhub Button <i
+                                        class="fa-sharp fa-solid fa-arrow-right"></i></button>
+                                <button class="btn-icon btn-xs">Learnhub Button <i
+                                        class="fas fa-arrow-right btn-icon-arrow"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h2 class="text-white text-2xl lg:text-3xl font-semibold mb-8">Additional Components</h2>
+                    <div class="space-y-10">
+                        <div>
+                            <h3 class="text-white text-base font-medium mb-4">Gradient Buttons</h3>
+                            <div class="flex flex-wrap items-center gap-4">
+                                <button class="btn-primary btn-md"><i class="fas fa-user-plus"></i> Sign Up</button>
+                                <button class="btn-primary btn-md"><i class="fas fa-shopping-cart"></i> Buy Now</button>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-white text-base font-medium mb-4">Disabled State</h3>
+                            <div class="flex flex-wrap items-center gap-4">
+                                <button class="btn-primary btn-md" disabled>Disabled Button</button>
+                                <button class="btn-secondary btn-md" disabled>Disabled Button</button>
+                                <button class="btn-outline-primary btn-md" disabled>Disabled Button</button>
+                                <button class="btn-outline-secondary btn-md" disabled>Disabled Button</button>
+                                <button class="btn-text p-px" disabled>Disabled Button <i
+                                        class="fa-sharp fa-solid fa-arrow-right"></i></button>
+                                <button class="btn-icon btn-md" disabled>Disabled Button <i
+                                        class="fas fa-arrow-right btn-icon-arrow"></i></button>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-white text-base font-medium mb-4">Section Badge</h3>
+                            <div class="flex flex-wrap items-center gap-4">
+                                <span class="badge-outline">Our Teacher</span>
+                                <span class="badge-solid">Our Teacher</span>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-white text-base font-medium mb-4">Text Button</h3>
+                            <div class="flex flex-wrap items-center gap-4">
+                                <button class="btn-text p-px">Read More <i
+                                        class="fa-sharp fa-solid fa-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-white text-base font-medium mb-4">Icon Buttons</h3>
+                            <div class="flex flex-wrap items-center gap-4">
+                                <button class="btn-icon btn-md"><i class="fas fa-heart"></i> Learnhub Button</button>
+                                <button class="btn-icon btn-md">Learnhub Button <i
+                                        class="fas fa-arrow-right btn-icon-arrow"></i></button>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-white text-base font-medium mb-4">Circle Buttons</h3>
+                            <div class="flex flex-wrap items-center gap-4">
+                                <button class="btn-circle"><i class="fas fa-heart"></i></button>
+                                <button class="btn-circle"><i class="fas fa-file"></i></button>
+                                <button class="btn-circle"><i class="fas fa-chevron-left"></i></button>
+                                <button class="btn-circle"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-primary relative overflow-hidden pt-16 pb-8">
+        <div class="max-w-[1320px] mx-auto px-4">
+            <section class="mb-16">
+                <div class="bg-border-primary rounded-[16px] p-8 md:p-12">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                        <h2 class="text-white text-[30px] md:text-[36px] font-semibold">Subscribe Our Newsletter</h2>
+                        <form class="flex flex-col sm:flex-row gap-4 flex-1 md:max-w-lg md:ml-auto">
+                            <input type="email" placeholder="Email address"
+                                class="flex-1 bg-primary border border-border-white rounded-full px-6 py-4 text-white placeholder:text-white/50 focus:outline-none focus:border-secondary transition-colors text-[15px]">
+                            <button type="submit"
+                                class="btn-primary btn-md rounded-full flex items-center justify-center gap-2 whitespace-nowrap">
+                                Subscribe <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3">
+                        <img src="assets/images/logo.png" alt="Logo" class="h-8 lg:h-10 w-auto">
+                    </div>
+                    <p class="text-white/70 text-[14px] leading-relaxed">Education is typically divided into various
+                        levels, including primary, secondary</p>
+                    <div class="space-y-3">
+                        <p class="text-white/70 text-[14px] flex items-center gap-2">
+                            <i class="fa-solid fa-phone text-secondary"></i>
+                            Phone: <a href="tel:+923123456789"
+                                class="text-white/70 hover:text-secondary transition-colors">+923123456789</a>
+                        </p>
+                        <p class="text-white/70 text-[14px] flex items-center gap-2">
+                            <i class="fa-solid fa-envelope text-secondary"></i>
+                            E-mail: <a href="mailto:educa.info@gmail.com"
+                                class="text-white/70 hover:text-secondary transition-colors">educa.info@gmail.com</a>
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 pt-2">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 border border-border-white flex items-center justify-center text-secondary hover:bg-secondary hover:text-white hover:border-secondary transition-all">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 border border-border-white flex items-center justify-center text-secondary hover:bg-secondary hover:text-white hover:border-secondary transition-all">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 border border-border-white flex items-center justify-center text-secondary hover:bg-secondary hover:text-white hover:border-secondary transition-all">
+                            <i class="fa-brands fa-dribbble"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 border border-border-white flex items-center justify-center text-secondary hover:bg-secondary hover:text-white hover:border-secondary transition-all">
+                            <i class="fa-brands fa-behance"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <nav class="space-y-6">
+                    <h5 class="text-white text-[20px] font-semibold">Company</h5>
+                    <ul class="space-y-3">
+                        <li><a href="#"
+                                class="text-white/70 hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>About
+                                    Us</span> <i class="fa-solid fa-arrow-right text-[12px] footer-arrow"></i></a></li>
+                        <li><a href="#"
+                                class="text-white/70 hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>Become
+                                    Teacher</span> <i class="fa-solid fa-arrow-right text-[12px] footer-arrow"></i></a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/70 hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>News
+                                    & Blog</span> <i class="fa-solid fa-arrow-right text-[12px] footer-arrow"></i></a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/70 hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>Instructor</span>
+                                <i class="fa-solid fa-arrow-right text-[12px] footer-arrow"></i></a></li>
+                        <li><a href="#"
+                                class="text-white/70 hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>Our
+                                    Events</span> <i class="fa-solid fa-arrow-right text-[12px] footer-arrow"></i></a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/70 hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>Contact
+                                    Us</span> <i class="fa-solid fa-arrow-right text-[12px] footer-arrow"></i></a></li>
+                    </ul>
+                </nav>
+
+                <nav class="space-y-6">
+                    <h5 class="text-white text-[20px] font-semibold">Resources</h5>
+                    <ul class="space-y-3">
+                        <li><a href="#"
+                                class="text-white/70 hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>Educa
+                                    Course</span> <i class="fa-solid fa-arrow-right text-[12px] footer-arrow"></i></a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/70 hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>Marketplace</span>
+                                <i class="fa-solid fa-arrow-right text-[12px] footer-arrow"></i></a></li>
+                        <li><a href="#"
+                                class="text-white/70 hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>University</span>
+                                <i class="fa-solid fa-arrow-right text-[12px] footer-arrow"></i></a></li>
+                        <li><a href="#"
+                                class="text-white/70 hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>Course
+                                    Overview</span> <i class="fa-solid fa-arrow-right text-[12px] footer-arrow"></i></a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/70 hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>FAQ</span>
+                                <i class="fa-solid fa-arrow-right text-[12px] footer-arrow"></i></a></li>
+                        <li><a href="#"
+                                class="text-white/70 hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>Refunds
+                                    Policy</span> <i class="fa-solid fa-arrow-right text-[12px] footer-arrow"></i></a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="space-y-6">
+                    <h5 class="text-white text-[20px] font-semibold">Recent Posts</h5>
+                    <div class="space-y-4">
+                        <a href="#" class="flex gap-4">
+                            <img src="assets/images/blog/bg.webp" alt="Post thumbnail"
+                                class="w-20 h-20 rounded-[10px] object-cover shrink-0 hover:scale-105 hover:opacity-50 transition-all">
+                            <div class="flex-1">
+                                <h6
+                                    class="text-white hover:text-secondary transition-colors text-[14px] font-medium mb-2">
+                                    Online education is empowering</h6>
+                                <p class="text-white/70 text-[12px] flex items-center gap-2">
+                                    <i class="fa-regular fa-clock"></i>
+                                    15 August, 2024
+                                </p>
+                            </div>
+                        </a>
+                        <a href="#" class="flex gap-4">
+                            <img src="assets/images/blog/bg-1.webp" alt="Post thumbnail"
+                                class="w-20 h-20 rounded-[10px] object-cover shrink-0 hover:scale-105 hover:opacity-50 transition-all">
+                            <div class="flex-1">
+                                <h6
+                                    class="text-white hover:text-secondary transition-colors text-[14px] font-medium mb-2">
+                                    Online education is empowering</h6>
+                                <p class="text-white/70 text-[12px] flex items-center gap-2">
+                                    <i class="fa-regular fa-clock"></i>
+                                    15 August, 2024
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="border-t border-border-white pt-8">
+            <div class="max-w-[1320px] mx-auto px-4">
+                <p class="text-white/70 text-center text-[14px]">©2026 <a
+                        href="https://themeforest.net/user/rainbow-themes" target="_blank"
+                        class=" font-bold hover:text-secondary transition-colors">Rainbow-Themes</a> All rights
+                    reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="assets/js/modernizr.min.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/swiper.js"></script>
+    <script src="assets/js/jquery-appear.js"></script>
+    <script src="assets/js/animation.js"></script>
+    <script src="assets/js/text-type.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script src="assets/js/countdown.js"></script>
+    <script src="assets/js/progressbar.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/imageloaded.js"></script>
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Main JS -->
+    <script src="assets/js/main.min.js"></script>
+</body>
+
+</html>

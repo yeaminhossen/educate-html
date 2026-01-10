@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Blog - Tailwind CSS Education Template</title>
+    <meta name="robots" content="noindex, follow">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+    <!-- CSS
+	============================================ -->
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/swiper.css">
+    <link rel="stylesheet" href="assets/css/animation.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/output.css">
+    <link rel="stylesheet" href="assets/css/input.css">
+
+</head>
+
+
+
+<body class="rbt-header-sticky primary-color">
+    <header class="bg-white dark:bg-gray-900 shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-4 lg:px-6">
+            <div class="flex items-center justify-between h-16 lg:h-20">
+                <div class="flex items-center">
+                    <a href="/" class="flex items-center space-x-2">
+                        <img src="assets/images/logo.png" alt="Logo" class="h-8 lg:h-10 w-auto">
+                    </a>
+                </div>
+
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#" class="nav-link">Home</a>
+                    <a href="#" class="nav-link">Courses</a>
+                    <a href="#" class="nav-link">About</a>
+                    <a href="#" class="nav-link">Contact</a>
+                </div>
+
+                <button id="mobile-menu-btn"
+                    class="lg:hidden p-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <div id="mobile-menu" class="hidden lg:hidden pb-4">
+                <div class="flex flex-col space-y-3 pt-4">
+                    <a href="#"
+                        class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors py-2">Home</a>
+                    <a href="#"
+                        class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors py-2">Courses</a>
+                    <a href="#"
+                        class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors py-2">About</a>
+                    <a href="#"
+                        class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors py-2">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Set Career Goals -->
+        <section class="bg-primary py-20 md:py-24 pt-120 pb-120">
+            <div class="max-w-[1320px] mx-auto px-4">
+                <div class="text-center mb-12 md:mb-16">
+                    <button class="mb-6 gradient-border-primary gradient-color-primary subtitle text-[14px]">
+                        Set Career Goals
+                    </button>
+                    <h1 class="text-white text-[36px] md:text-[54px] font-bold mb-4 leading-tight">
+                        Your Journey to a Better You<br>
+                        <span class="gradient-color-primary bg-clip-text text-transparent">Begins Here</span>
+                    </h1>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                    <div
+                        class="bg-[#0F102A] rounded-[12px] p-6 relative overflow-hidden group cursor-pointer transition-all duration-300 hover:-translate-y-2 before:pointer-events-none before:content-[''] before:absolute before:top-[-10px] before:right-[-10px] before:w-[100px] before:h-[100px] before:bg-[#B26EF7] before:opacity-0 before:blur-[70px] before:rounded-full before:transition-opacity before:duration-300 hover:before:opacity-100 after:pointer-events-none after:content-[''] after:absolute after:bottom-[-10px] after:left-[-10px] after:w-[100px] after:h-[100px] after:bg-[#B26EF7] after:opacity-0 after:blur-[70px] after:rounded-full after:transition-opacity after:duration-300 hover:after:opacity-100">
+                        <div class="flex flex-col items-center text-center h-full relative z-10">
+                            <div
+                                class="w-[70px] h-[70px] rounded-full gradient-color-secondary flex items-center justify-center mb-4 bg-white/5">
+                                <img src="assets/images/course-category/webdeve.svg" alt="Web Development"
+                                    class="w-[36px] h-[36px]">
+                            </div>
+                            <h3
+                                class="text-[#D6DAF0] text-[24px] font-semibold mb-3 hover:text-secondary transition-all duration-500 ease-in-out">
+                                <a href="#">Web Development</a>
+                            </h3>
+                            <div class="flex items-center gap-2 text-white/50 text-[14px] mb-auto">
+                                <img src="assets/images/course-category/book.svg" alt="Book" class="w-4 h-4">
+                                <span>06 Courses</span>
+                            </div>
+                            <a href="#"
+                                class="w-[50px] h-[50px] rounded-full bg-[#050520] cursor-pointer flex items-center justify-center border border-white/20 hover:scale-110 hover:bg-gradient-to-r hover:from-[#B26EF7] hover:via-[#FF71BF] hover:to-[#FFBD7A] hover:border-transparent hover:shadow-[0px_8px_25px_rgba(178,110,247,0.5)] hover:-translate-y-1 transition-all duration-500 ease-in-out mt-4 group">
+                                <i
+                                    class="fa-sharp fa-solid fa-angle-right text-white text-[14px] group-hover:scale-110 transition-all duration-500 ease-in-out"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-[#0F102A] rounded-[12px] p-6 relative overflow-hidden group cursor-pointer transition-all duration-300 hover:-translate-y-2 before:pointer-events-none before:content-[''] before:absolute before:top-[-10px] before:right-[-10px] before:w-[100px] before:h-[100px] before:bg-[#B26EF7] before:opacity-0 before:blur-[70px] before:rounded-full before:transition-opacity before:duration-300 hover:before:opacity-100 after:pointer-events-none after:content-[''] after:absolute after:bottom-[-10px] after:left-[-10px] after:w-[100px] after:h-[100px] after:bg-[#B26EF7] after:opacity-0 after:blur-[70px] after:rounded-full after:transition-opacity after:duration-300 hover:after:opacity-100">
+                        <div class="flex flex-col items-center text-center h-full relative z-10">
+                            <div
+                                class="w-[70px] h-[70px] rounded-full gradient-color-secondary flex items-center justify-center mb-4 bg-white/5">
+                                <img src="assets/images/course-category/pen.svg" alt="Graphic & Art Design"
+                                    class="w-[36px] h-[36px]">
+                            </div>
+                            <h3
+                                class="text-[#D6DAF0] text-[24px] font-semibold mb-3 hover:text-secondary transition-all duration-500 ease-in-out">
+                                <a href="#">Graphic & Art Design</a>
+                            </h3>
+                            <div class="flex items-center gap-2 text-white/50 text-[14px] mb-auto">
+                                <img src="assets/images/course-category/book.svg" alt="Book" class="w-4 h-4">
+                                <span>06 Courses</span>
+                            </div>
+                            <a href="#"
+                                class="w-[50px] h-[50px] rounded-full bg-[#050520] cursor-pointer flex items-center justify-center border border-white/20 hover:scale-110 hover:bg-gradient-to-r hover:from-[#B26EF7] hover:via-[#FF71BF] hover:to-[#FFBD7A] hover:border-transparent hover:shadow-[0px_8px_25px_rgba(178,110,247,0.5)] hover:-translate-y-1 transition-all duration-500 ease-in-out mt-4 group">
+                                <i
+                                    class="fa-sharp fa-solid fa-angle-right text-white text-[14px] group-hover:scale-110 transition-all duration-500 ease-in-out"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-[#0F102A] rounded-[12px] p-6 relative overflow-hidden group cursor-pointer transition-all duration-300 hover:-translate-y-2 before:pointer-events-none before:content-[''] before:absolute before:top-[-10px] before:right-[-10px] before:w-[100px] before:h-[100px] before:bg-[#B26EF7] before:opacity-0 before:blur-[70px] before:rounded-full before:transition-opacity before:duration-300 hover:before:opacity-100 after:pointer-events-none after:content-[''] after:absolute after:bottom-[-10px] after:left-[-10px] after:w-[100px] after:h-[100px] after:bg-[#B26EF7] after:opacity-0 after:blur-[70px] after:rounded-full after:transition-opacity after:duration-300 hover:after:opacity-100">
+                        <div class="flex flex-col items-center text-center h-full relative z-10">
+                            <div
+                                class="w-[70px] h-[70px] rounded-full gradient-color-secondary flex items-center justify-center mb-4 bg-white/5">
+                                <img src="assets/images/course-category/appdevelop.svg" alt="App Development"
+                                    class="w-[36px] h-[36px]">
+                            </div>
+                            <h3
+                                class="text-[#D6DAF0] text-[24px] font-semibold mb-3 hover:text-secondary transition-all duration-500 ease-in-out">
+                                <a href="#">App Development</a>
+                            </h3>
+                            <div class="flex items-center gap-2 text-white/50 text-[14px] mb-auto">
+                                <img src="assets/images/course-category/book.svg" alt="Book" class="w-4 h-4">
+                                <span>06 Courses</span>
+                            </div>
+                            <a href="#"
+                                class="w-[50px] h-[50px] rounded-full bg-[#050520] cursor-pointer flex items-center justify-center border border-white/20 hover:scale-110 hover:bg-gradient-to-r hover:from-[#B26EF7] hover:via-[#FF71BF] hover:to-[#FFBD7A] hover:border-transparent hover:shadow-[0px_8px_25px_rgba(178,110,247,0.5)] hover:-translate-y-1 transition-all duration-500 ease-in-out mt-4 group">
+                                <i
+                                    class="fa-sharp fa-solid fa-angle-right text-white text-[14px] group-hover:scale-110 transition-all duration-500 ease-in-out"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-[#0F102A] rounded-[12px] p-6 relative overflow-hidden group cursor-pointer transition-all duration-300 hover:-translate-y-2 before:pointer-events-none before:content-[''] before:absolute before:top-[-10px] before:right-[-10px] before:w-[100px] before:h-[100px] before:bg-[#B26EF7] before:opacity-0 before:blur-[70px] before:rounded-full before:transition-opacity before:duration-300 hover:before:opacity-100 after:pointer-events-none after:content-[''] after:absolute after:bottom-[-10px] after:left-[-10px] after:w-[100px] after:h-[100px] after:bg-[#B26EF7] after:opacity-0 after:blur-[70px] after:rounded-full after:transition-opacity after:duration-300 hover:after:opacity-100">
+                        <div class="flex flex-col items-center text-center h-full relative z-10">
+                            <div
+                                class="w-[70px] h-[70px] rounded-full gradient-color-secondary flex items-center justify-center mb-4 bg-white/5">
+                                <img src="assets/images/course-category/hello.svg" alt="Digital Marketing"
+                                    class="w-[36px] h-[36px]">
+                            </div>
+                            <h3
+                                class="text-[#D6DAF0] text-[24px] font-semibold mb-3 hover:text-secondary transition-all duration-500 ease-in-out">
+                                <a href="#">Digital Marketing</a>
+                            </h3>
+                            <div class="flex items-center gap-2 text-white/50 text-[14px] mb-auto">
+                                <img src="assets/images/course-category/book.svg" alt="Book" class="w-4 h-4">
+                                <span>06 Courses</span>
+                            </div>
+                            <a href="#"
+                                class="w-[50px] h-[50px] rounded-full bg-[#050520] cursor-pointer flex items-center justify-center border border-white/20 hover:scale-110 hover:bg-gradient-to-r hover:from-[#B26EF7] hover:via-[#FF71BF] hover:to-[#FFBD7A] hover:border-transparent hover:shadow-[0px_8px_25px_rgba(178,110,247,0.5)] hover:-translate-y-1 transition-all duration-500 ease-in-out mt-4 group">
+                                <i
+                                    class="fa-sharp fa-solid fa-angle-right text-white text-[14px] group-hover:scale-110 transition-all duration-500 ease-in-out"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-[#0F102A] rounded-[12px] p-6 relative overflow-hidden group cursor-pointer transition-all duration-300 hover:-translate-y-2 before:pointer-events-none before:content-[''] before:absolute before:top-[-10px] before:right-[-10px] before:w-[100px] before:h-[100px] before:bg-[#B26EF7] before:opacity-0 before:blur-[70px] before:rounded-full before:transition-opacity before:duration-300 hover:before:opacity-100 after:pointer-events-none after:content-[''] after:absolute after:bottom-[-10px] after:left-[-10px] after:w-[100px] after:h-[100px] after:bg-[#B26EF7] after:opacity-0 after:blur-[70px] after:rounded-full after:transition-opacity after:duration-300 hover:after:opacity-100">
+                        <div class="flex flex-col items-center text-center h-full relative z-10">
+                            <div
+                                class="w-[70px] h-[70px] rounded-full gradient-color-secondary flex items-center justify-center mb-4 bg-white/5">
+                                <img src="assets/images/course-category/ida.svg" alt="Advance UI/UX Design"
+                                    class="w-[36px] h-[36px]">
+                            </div>
+                            <h3
+                                class="text-[#D6DAF0] text-[24px] font-semibold mb-3 hover:text-secondary transition-all duration-500 ease-in-out">
+                                <a href="#">Advance UI/UX Design</a>
+                            </h3>
+                            <div class="flex items-center gap-2 text-white/50 text-[14px] mb-auto">
+                                <img src="assets/images/course-category/book.svg" alt="Book" class="w-4 h-4">
+                                <span>06 Courses</span>
+                            </div>
+                            <a href="#"
+                                class="w-[50px] h-[50px] rounded-full bg-[#050520] cursor-pointer flex items-center justify-center border border-white/20 hover:scale-110 hover:bg-gradient-to-r hover:from-[#B26EF7] hover:via-[#FF71BF] hover:to-[#FFBD7A] hover:border-transparent hover:shadow-[0px_8px_25px_rgba(178,110,247,0.5)] hover:-translate-y-1 transition-all duration-500 ease-in-out mt-4 group">
+                                <i
+                                    class="fa-sharp fa-solid fa-angle-right text-white text-[14px] group-hover:scale-110 transition-all duration-500 ease-in-out"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-[#0F102A] rounded-[12px] p-6 relative overflow-hidden group cursor-pointer transition-all duration-300 hover:-translate-y-2 before:pointer-events-none before:content-[''] before:absolute before:top-[-10px] before:right-[-10px] before:w-[100px] before:h-[100px] before:bg-[#B26EF7] before:opacity-0 before:blur-[70px] before:rounded-full before:transition-opacity before:duration-300 hover:before:opacity-100 after:pointer-events-none after:content-[''] after:absolute after:bottom-[-10px] after:left-[-10px] after:w-[100px] after:h-[100px] after:bg-[#B26EF7] after:opacity-0 after:blur-[70px] after:rounded-full after:transition-opacity after:duration-300 hover:after:opacity-100">
+                        <div class="flex flex-col items-center text-center h-full relative z-10">
+                            <div
+                                class="w-[70px] h-[70px] rounded-full gradient-color-secondary flex items-center justify-center mb-4 bg-white/5">
+                                <img src="assets/images/course-category/book.svg" alt="Finance & Accounts"
+                                    class="w-[36px] h-[36px]">
+                            </div>
+                            <h3
+                                class="text-[#D6DAF0] text-[24px] font-semibold mb-3 hover:text-secondary transition-all duration-500 ease-in-out">
+                                <a href="#">Finance & Accounts</a>
+                            </h3>
+                            <div class="flex items-center gap-2 text-white/50 text-[14px] mb-auto">
+                                <img src="assets/images/course-category/book.svg" alt="Book" class="w-4 h-4">
+                                <span>06 Courses</span>
+                            </div>
+                            <a href="#"
+                                class="w-[50px] h-[50px] rounded-full bg-[#050520] cursor-pointer flex items-center justify-center border border-white/20 hover:scale-110 hover:bg-gradient-to-r hover:from-[#B26EF7] hover:via-[#FF71BF] hover:to-[#FFBD7A] hover:border-transparent hover:shadow-[0px_8px_25px_rgba(178,110,247,0.5)] hover:-translate-y-1 transition-all duration-500 ease-in-out mt-4 group">
+                                <i
+                                    class="fa-sharp fa-solid fa-angle-right text-white text-[14px] group-hover:scale-110 transition-all duration-500 ease-in-out"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-[#0F102A] rounded-[12px] p-6 relative overflow-hidden group cursor-pointer transition-all duration-300 hover:-translate-y-2 before:pointer-events-none before:content-[''] before:absolute before:top-[-10px] before:right-[-10px] before:w-[100px] before:h-[100px] before:bg-[#B26EF7] before:opacity-0 before:blur-[70px] before:rounded-full before:transition-opacity before:duration-300 hover:before:opacity-100 after:pointer-events-none after:content-[''] after:absolute after:bottom-[-10px] after:left-[-10px] after:w-[100px] after:h-[100px] after:bg-[#B26EF7] after:opacity-0 after:blur-[70px] after:rounded-full after:transition-opacity after:duration-300 hover:after:opacity-100">
+                        <div class="flex flex-col items-center text-center h-full relative z-10">
+                            <div
+                                class="w-[70px] h-[70px] rounded-full gradient-color-secondary flex items-center justify-center mb-4 bg-white/5">
+                                <img src="assets/images/course-category/man.svg" alt="Digital Marketing"
+                                    class="w-[36px] h-[36px]">
+                            </div>
+                            <h3
+                                class="text-[#D6DAF0] text-[24px] font-semibold mb-3 hover:text-secondary transition-all duration-500 ease-in-out">
+                                <a href="#">Digital Marketing</a>
+                            </h3>
+                            <div class="flex items-center gap-2 text-white/50 text-[14px] mb-auto">
+                                <img src="assets/images/course-category/book.svg" alt="Book" class="w-4 h-4">
+                                <span>06 Courses</span>
+                            </div>
+                            <a href="#"
+                                class="w-[50px] h-[50px] rounded-full bg-[#050520] cursor-pointer flex items-center justify-center border border-white/20 hover:scale-110 hover:bg-gradient-to-r hover:from-[#B26EF7] hover:via-[#FF71BF] hover:to-[#FFBD7A] hover:border-transparent hover:shadow-[0px_8px_25px_rgba(178,110,247,0.5)] hover:-translate-y-1 transition-all duration-500 ease-in-out mt-4 group">
+                                <i
+                                    class="fa-sharp fa-solid fa-angle-right text-white text-[14px] group-hover:scale-110 transition-all duration-500 ease-in-out"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-[#0F102A] rounded-[12px] p-6 relative overflow-hidden group cursor-pointer transition-all duration-300 hover:-translate-y-2 before:pointer-events-none before:content-[''] before:absolute before:top-[-10px] before:right-[-10px] before:w-[100px] before:h-[100px] before:bg-[#B26EF7] before:opacity-0 before:blur-[70px] before:rounded-full before:transition-opacity before:duration-300 hover:before:opacity-100 after:pointer-events-none after:content-[''] after:absolute after:bottom-[-10px] after:left-[-10px] after:w-[100px] after:h-[100px] after:bg-[#B26EF7] after:opacity-0 after:blur-[70px] after:rounded-full after:transition-opacity after:duration-300 hover:after:opacity-100">
+                        <div class="flex flex-col items-center text-center h-full relative z-10">
+                            <div
+                                class="w-[70px] h-[70px] rounded-full gradient-color-secondary flex items-center justify-center mb-4 bg-white/5">
+                                <img src="assets/images/course-category/pen.svg" alt="Graphic & Art Design"
+                                    class="w-[36px] h-[36px]">
+                            </div>
+                            <h3
+                                class="text-[#D6DAF0] text-[24px] font-semibold mb-3 hover:text-secondary transition-all duration-500 ease-in-out">
+                                <a href="#">Graphic & Art Design</a>
+                            </h3>
+                            <div class="flex items-center gap-2 text-white/50 text-[14px] mb-auto">
+                                <img src="assets/images/course-category/book.svg" alt="Book" class="w-4 h-4">
+                                <span>06 Courses</span>
+                            </div>
+                            <a href="#"
+                                class="w-[50px] h-[50px] rounded-full bg-[#050520] cursor-pointer flex items-center justify-center border border-white/20 hover:scale-110 hover:bg-gradient-to-r hover:from-[#B26EF7] hover:via-[#FF71BF] hover:to-[#FFBD7A] hover:border-transparent hover:shadow-[0px_8px_25px_rgba(178,110,247,0.5)] hover:-translate-y-1 transition-all duration-500 ease-in-out mt-4 group">
+                                <i
+                                    class="fa-sharp fa-solid fa-angle-right text-white text-[14px] group-hover:scale-110 transition-all duration-500 ease-in-out"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Courses -->
+        <section class="bg-primary py-20 md:py-24">
+            <div class="max-w-[1320px] mx-auto px-4">
+                <div
+                    class="relative overflow-hidden rounded-[20px] bg-[#0F102A] px-5 py-12 md:px-10 md:py-16 before:pointer-events-none before:content-[''] before:absolute before:top-[-120px] before:left-[-120px] before:w-[260px] before:h-[260px] before:bg-[#B26EF7] before:opacity-25 before:blur-[110px] before:rounded-full after:pointer-events-none after:content-[''] after:absolute after:bottom-[-120px] after:right-[-120px] after:w-[260px] after:h-[260px] after:bg-[#FF71BF] after:opacity-20 after:blur-[110px] after:rounded-full">
+                    <div class="relative z-10">
+                        <div class="text-center max-w-[760px] mx-auto mb-10 md:mb-12">
+                            <span
+                                class="inline-flex items-center justify-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 text-[14px] text-[#D6DAF0]">
+                                <i class="fa-solid fa-graduation-cap text-secondary text-[14px]"></i>
+                                10+ Courses
+                            </span>
+                            <h2 class="text-white text-[30px] md:text-[44px] font-bold mt-5 leading-tight">
+                                Pick Your Favorite Course and
+                                <span class="text-secondary">Grow your Skills</span>
+                            </h2>
+                        </div>
+
+                        <div class="relative">
+                            <div class="course-swiper swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide h-auto">
+                                        <article
+                                            class="h-full bg-primary rounded-[14px] border border-white/10 overflow-hidden">
+                                            <div class="relative">
+                                                <img src="assets/images/blog/bg.webp"
+                                                    alt="Reactive data updates for smooth and dynamic user experiences"
+                                                    class="w-full h-[210px] object-cover">
+                                                <span
+                                                    class="absolute top-4 right-4 bg-secondary text-white text-[12px] font-medium px-3 py-1 rounded-full">All
+                                                    Level</span>
+                                            </div>
+                                            <div class="p-6 flex flex-col h-full">
+                                                <div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-white/60 text-[12px] mb-4">
+                                                    <span class="inline-flex items-center gap-2">
+                                                        <i class="fa-regular fa-file-lines text-secondary"></i>
+                                                        15 Lessons
+                                                    </span>
+                                                    <span class="inline-flex items-center gap-2">
+                                                        <i class="fa-regular fa-user text-secondary"></i>
+                                                        30 Students
+                                                    </span>
+                                                </div>
+                                                <h3 class="text-white text-[20px] font-semibold leading-snug mb-6">
+                                                    <a href="#" class="hover:text-secondary transition-colors">Reactive
+                                                        data updates for smooth and dynamic user experiences</a>
+                                                </h3>
+                                                <div class="flex items-center justify-between gap-4 mb-6">
+                                                    <div class="flex items-center gap-3">
+                                                        <img src="assets/images/blog/bg-1.webp" alt="Instructor"
+                                                            class="w-[32px] h-[32px] rounded-full object-cover">
+                                                        <span class="text-white/70 text-[13px]">Javier Bardem</span>
+                                                    </div>
+                                                    <div class="flex items-center gap-2">
+                                                        <div class="flex items-center gap-1">
+                                                            <i class="fa-solid fa-star text-[#FCC418] text-[12px]"></i>
+                                                            <i class="fa-solid fa-star text-[#FCC418] text-[12px]"></i>
+                                                            <i class="fa-solid fa-star text-[#FCC418] text-[12px]"></i>
+                                                            <i class="fa-solid fa-star text-[#FCC418] text-[12px]"></i>
+                                                            <i class="fa-solid fa-star text-[#FCC418] text-[12px]"></i>
+                                                        </div>
+                                                        <span class="text-white/60 text-[12px]">(0 Reviews)</span>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-auto flex items-center justify-between gap-4">
+                                                    <div class="flex items-center gap-2">
+                                                        <span class="text-white text-[16px] font-semibold">$75</span>
+                                                        <span class="text-white/35 line-through text-[14px]">$150</span>
+                                                    </div>
+                                                    <a href="#"
+                                                        class="inline-flex items-center justify-center h-[40px] px-5 rounded-full bg-gradient-to-r from-[#B26EF7] via-[#FF71BF] to-[#FFBD7A] text-white text-[14px] font-medium hover:shadow-[0px_8px_25px_rgba(178,110,247,0.45)] transition-all">View
+                                                        Details</a>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+
+                                    <div class="swiper-slide h-auto">
+                                        <article
+                                            class="h-full bg-primary rounded-[14px] border border-white/10 overflow-hidden">
+                                            <div class="relative">
+                                                <img src="assets/images/blog/bg-1.webp"
+                                                    alt="Fast rendering that keeps every interaction smooth and responsive"
+                                                    class="w-full h-[210px] object-cover">
+                                                <span
+                                                    class="absolute top-4 right-4 bg-secondary text-white text-[12px] font-medium px-3 py-1 rounded-full">All
+                                                    Level</span>
+                                            </div>
+                                            <div class="p-6 flex flex-col h-full">
+                                                <div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-white/60 text-[12px] mb-4">
+                                                    <span class="inline-flex items-center gap-2">
+                                                        <i class="fa-regular fa-file-lines text-secondary"></i>
+                                                        12 Lessons
+                                                    </span>
+                                                    <span class="inline-flex items-center gap-2">
+                                                        <i class="fa-regular fa-user text-secondary"></i>
+                                                        25 Students
+                                                    </span>
+                                                </div>
+                                                <h3 class="text-white text-[20px] font-semibold leading-snug mb-6">
+                                                    <a href="#" class="hover:text-secondary transition-colors">Fast
+                                                        rendering that keeps every interaction smooth and responsive</a>
+                                                </h3>
+                                                <div class="flex items-center justify-between gap-4 mb-6">
+                                                    <div class="flex items-center gap-3">
+                                                        <img src="assets/images/blog/bg.webp" alt="Instructor"
+                                                            class="w-[32px] h-[32px] rounded-full object-cover">
+                                                        <span class="text-white/70 text-[13px]">Javier Bardem</span>
+                                                    </div>
+                                                    <div class="flex items-center gap-2">
+                                                        <div class="flex items-center gap-1">
+                                                            <i class="fa-solid fa-star text-[#FCC418] text-[12px]"></i>
+                                                            <i class="fa-solid fa-star text-[#FCC418] text-[12px]"></i>
+                                                            <i class="fa-solid fa-star text-[#FCC418] text-[12px]"></i>
+                                                            <i class="fa-solid fa-star text-[#FCC418] text-[12px]"></i>
+                                                            <i class="fa-solid fa-star text-[#FCC418] text-[12px]"></i>
+                                                        </div>
+                                                        <span class="text-white/60 text-[12px]">(0 Reviews)</span>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-auto flex items-center justify-between gap-4">
+                                                    <div class="flex items-center gap-2">
+                                                        <span class="text-white text-[16px] font-semibold">$75</span>
+                                                        <span class="text-white/35 line-through text-[14px]">$150</span>
+                                                    </div>
+                                                    <a href="#"
+                                                        class="inline-flex items-center justify-center h-[40px] px-5 rounded-full bg-gradient-to-r from-[#B26EF7] via-[#FF71BF] to-[#FFBD7A] text-white text-[14px] font-medium hover:shadow-[0px_8px_25px_rgba(178,110,247,0.45)] transition-all">View
+                                                        Details</a>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+
+                                    <div class="swiper-slide h-auto">
+                                        <article
+                                            class="h-full bg-primary rounded-[14px] border border-white/10 overflow-hidden">
+                                            <div class="relative">
+                                                <img src="assets/images/blog/bg.webp"
+                                                    alt="Smart architecture that simplifies development and maintenance"
+                                                    class="w-full h-[210px] object-cover">
+                                                <span
+                                                    class="absolute top-4 right-4 bg-secondary text-white text-[12px] font-medium px-3 py-1 rounded-full">All
+                                                    Level</span>
+                                            </div>
+                                            <div class="p-6 flex flex-col h-full">
+                                                <div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-white/60 text-[12px] mb-4">
+                                                    <span class="inline-flex items-center gap-2">
+                                                        <i class="fa-regular fa-file-lines text-secondary"></i>
+                                                        14 Lessons
+                                                    </span>
+                                                    <span class="inline-flex items-center gap-2">
+                                                        <i class="fa-regular fa-user text-secondary"></i>
+                                                        40 Students
+                                                    </span>
+                                                </div>
+                                                <h3 class="text-white text-[20px] font-semibold leading-snug mb-6">
+                                                    <a href="#" class="hover:text-secondary transition-colors">Smart
+                                                        architecture that simplifies development and maintenance</a>
+                                                </h3>
+                                                <div class="flex items-center justify-between gap-4 mb-6">
+                                                    <div class="flex items-center gap-3">
+                                                        <img src="assets/images/blog/bg-1.webp" alt="Instructor"
+                                                            class="w-[32px] h-[32px] rounded-full object-cover">
+                                                        <span class="text-white/70 text-[13px]">Javier Bardem</span>
+                                                    </div>
+                                                    <div class="flex items-center gap-2">
+                                                        <div class="flex items-center gap-1">
+                                                            <i class="fa-solid fa-star text-[#FCC418] text-[12px]"></i>
+                                                            <i class="fa-solid fa-star text-[#FCC418] text-[12px]"></i>
+                                                            <i class="fa-solid fa-star text-[#FCC418] text-[12px]"></i>
+                                                            <i class="fa-solid fa-star text-[#FCC418] text-[12px]"></i>
+                                                            <i class="fa-solid fa-star text-[#FCC418] text-[12px]"></i>
+                                                        </div>
+                                                        <span class="text-white/60 text-[12px]">(0 Reviews)</span>
+                                                    </div>
+                                                </div>
+                                                <div class="mt-auto flex items-center justify-between gap-4">
+                                                    <div class="flex items-center gap-2">
+                                                        <span class="text-white text-[16px] font-semibold">$75</span>
+                                                        <span class="text-white/35 line-through text-[14px]">$150</span>
+                                                    </div>
+                                                    <a href="#"
+                                                        class="inline-flex items-center justify-center h-[40px] px-5 rounded-full bg-gradient-to-r from-[#B26EF7] via-[#FF71BF] to-[#FFBD7A] text-white text-[14px] font-medium hover:shadow-[0px_8px_25px_rgba(178,110,247,0.45)] transition-all">View
+                                                        Details</a>
+                                                </div>
+                                            </div>
+                                        </article>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <button type="button" aria-label="Previous course"
+                                class="course-swiper-prev hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-1/2 w-[46px] h-[46px] rounded-full bg-primary border border-white/10 text-white items-center justify-center hover:bg-secondary hover:border-secondary transition-colors">
+                                <i class="fa-solid fa-angle-left text-[14px]"></i>
+                            </button>
+                            <button type="button" aria-label="Next course"
+                                class="course-swiper-next hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 w-[46px] h-[46px] rounded-full bg-primary border border-white/10 text-white items-center justify-center hover:bg-secondary hover:border-secondary transition-colors">
+                                <i class="fa-solid fa-angle-right text-[14px]"></i>
+                            </button>
+                        </div>
+
+                        <div class="course-swiper-pagination mt-10"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="bg-primary relative overflow-hidden pt-16 pb-8">
+        <div class="max-w-[1320px] mx-auto px-4">
+            <section class="mb-16">
+                <div class="bg-border-primary rounded-[16px] p-8 md:p-12">
+                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                        <h2 class="text-white text-[30px] md:text-[36px] font-semibold">Subscribe Our Newsletter</h2>
+                        <form class="flex flex-col sm:flex-row gap-4 flex-1 md:max-w-lg md:ml-auto">
+                            <input type="email" placeholder="Email address"
+                                class="flex-1 bg-primary border border-border-white px-6 py-4 text-white placeholder:text-white/50 focus:outline-none focus:border-secondary transition-colors text-[15px]">
+                            <button type="submit"
+                                class="btn-primary btn-md flex items-center justify-center gap-2 whitespace-nowrap">
+                                Subscribe <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+            <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3">
+                        <img src="assets/images/logo.png" alt="Logo" class="h-8 lg:h-10 w-auto">
+                    </div>
+                    <p class="text-white/70 text-[14px] leading-relaxed">Education is typically divided into various
+                        levels, including primary, secondary</p>
+                    <div class="space-y-3">
+                        <p class="text-white/70 text-[14px] flex items-center gap-2">
+                            <i class="fa-solid fa-phone text-secondary"></i>
+                            Phone: <a href="tel:+923123456789"
+                                class="text-white/70 hover:text-secondary transition-colors">+923123456789</a>
+                        </p>
+                        <p class="text-white/70 text-[14px] flex items-center gap-2">
+                            <i class="fa-solid fa-envelope text-secondary"></i>
+                            E-mail: <a href="mailto:educa.info@gmail.com"
+                                class="text-white/70 hover:text-secondary transition-colors">educa.info@gmail.com</a>
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 pt-2">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 border border-border-white flex items-center justify-center text-secondary hover:bg-secondary hover:text-white hover:border-secondary transition-all">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 border border-border-white flex items-center justify-center text-secondary hover:bg-secondary hover:text-white hover:border-secondary transition-all">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 border border-border-white flex items-center justify-center text-secondary hover:bg-secondary hover:text-white hover:border-secondary transition-all">
+                            <i class="fa-brands fa-dribbble"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 border border-border-white flex items-center justify-center text-secondary hover:bg-secondary hover:text-white hover:border-secondary transition-all">
+                            <i class="fa-brands fa-behance"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <nav class="space-y-6">
+                    <h5 class="text-white text-[20px] font-semibold">Company</h5>
+                    <ul class="space-y-3">
+                        <li><a href="#"
+                                class="text-white/70 hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>About
+                                    Us</span> <i class="fa-solid fa-arrow-right text-[12px] footer-arrow"></i></a></li>
+                        <li><a href="#"
+                                class="text-white/70 hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>Become
+                                    Teacher</span> <i class="fa-solid fa-arrow-right text-[12px] footer-arrow"></i></a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/70 hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>News
+                                    & Blog</span> <i class="fa-solid fa-arrow-right text-[12px] footer-arrow"></i></a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/70 hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>Instructor</span>
+                                <i class="fa-solid fa-arrow-right text-[12px] footer-arrow"></i></a></li>
+                        <li><a href="#"
+                                class="text-white/70 hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>Our
+                                    Events</span> <i class="fa-solid fa-arrow-right text-[12px] footer-arrow"></i></a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/70 hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>Contact
+                                    Us</span> <i class="fa-solid fa-arrow-right text-[12px] footer-arrow"></i></a></li>
+                    </ul>
+                </nav>
+
+                <nav class="space-y-6">
+                    <h5 class="text-white text-[20px] font-semibold">Resources</h5>
+                    <ul class="space-y-3">
+                        <li><a href="#"
+                                class="text-white/70 hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>Educa
+                                    Course</span> <i class="fa-solid fa-arrow-right text-[12px] footer-arrow"></i></a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/70 hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>Marketplace</span>
+                                <i class="fa-solid fa-arrow-right text-[12px] footer-arrow"></i></a></li>
+                        <li><a href="#"
+                                class="text-white/70 hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>University</span>
+                                <i class="fa-solid fa-arrow-right text-[12px] footer-arrow"></i></a></li>
+                        <li><a href="#"
+                                class="text-white/70 hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>Course
+                                    Overview</span> <i class="fa-solid fa-arrow-right text-[12px] footer-arrow"></i></a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/70 hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>FAQ</span>
+                                <i class="fa-solid fa-arrow-right text-[12px] footer-arrow"></i></a></li>
+                        <li><a href="#"
+                                class="text-white/70 hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>Refunds
+                                    Policy</span> <i class="fa-solid fa-arrow-right text-[12px] footer-arrow"></i></a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="space-y-6">
+                    <h5 class="text-white text-[20px] font-semibold">Recent Posts</h5>
+                    <div class="space-y-4">
+                        <a href="#" class="flex gap-4">
+                            <img src="assets/images/blog/bg.webp" alt="Post thumbnail"
+                                class="w-20 h-20 rounded-[10px] object-cover shrink-0 hover:scale-105 hover:opacity-50 transition-all">
+                            <div class="flex-1">
+                                <h6
+                                    class="text-white hover:text-secondary transition-colors text-[14px] font-medium mb-2">
+                                    Online education is empowering</h6>
+                                <p class="text-white/70 text-[12px] flex items-center gap-2">
+                                    <i class="fa-regular fa-clock"></i>
+                                    15 August, 2024
+                                </p>
+                            </div>
+                        </a>
+                        <a href="#" class="flex gap-4">
+                            <img src="assets/images/blog/bg-1.webp" alt="Post thumbnail"
+                                class="w-20 h-20 rounded-[10px] object-cover shrink-0 hover:scale-105 hover:opacity-50 transition-all">
+                            <div class="flex-1">
+                                <h6
+                                    class="text-white hover:text-secondary transition-colors text-[14px] font-medium mb-2">
+                                    Online education is empowering</h6>
+                                <p class="text-white/70 text-[12px] flex items-center gap-2">
+                                    <i class="fa-regular fa-clock"></i>
+                                    15 August, 2024
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="border-t border-border-white pt-8">
+            <div class="max-w-[1320px] mx-auto px-4">
+                <p class="text-white/70 text-center text-[14px]">©2026 <a
+                        href="https://themeforest.net/user/rainbow-themes" target="_blank"
+                        class=" font-bold hover:text-secondary transition-colors">Rainbow-Themes</a> All rights
+                    reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/modernizr.min.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/swiper.js"></script>
+    <script src="assets/js/jquery-appear.js"></script>
+    <script src="assets/js/animation.js"></script>
+    <script src="assets/js/text-type.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script src="assets/js/countdown.js"></script>
+    <script src="assets/js/progressbar.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/imageloaded.js"></script>
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Main JS -->
+    <script src="assets/js/main.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+---
+alwaysApply: true
+---
+
+Key Principles
+
+- You also used Tailwind CSS. Please be careful—our site is optimized for speed and is 100% responsive.
+- Write concise, technical code with accurate PHP examples.
+- Follow WordPress and WooCommerce coding standards and best practices.
+- Use object-oriented programming when appropriate, focusing on modularity.
+- Prefer iteration and modularization over duplication.
+- Use descriptive function, variable, and file names.
+- Use lowercase with hyphens for directories (e.g., wp-content/themes/my-theme) (e.g., wp-content/plugins/my-plugin).
+- Favor hooks (actions and filters) for extending functionality.
+- Never write unnecessary comment, instead write self explanatory code, like seniors do.
+- you any change in our file 
+- any js code add our main.js file 
+- The backgroud color of each section is #050520
+- our design contenair width 1320px and all css px usd
+- Please carefully read and follow all the prompts I provide. Do not create or modify any section without reviewing those instructions first. Work only according to the given prompts.
+- Before creating any section, please include my variables and ensure all CSS is applied properly and efficiently.
+- you applay fontawesome icon in our template
+- you applay inline Tailwind css our templates
+
+- Themeforest Stander Code applay
+- Write clean, semantic HTML with a minimal and accessible structure
+- Use Tailwind CSS utility classes directly, avoid unnecessary abstraction
+- Prefer composition over duplication
+- Keep markup readable, predictable, and scalable
+- Follow a mobile-first responsive approach
+- Use consistent spacing, typography, and layout patterns
+- Never add unnecessary wrappers or divs
+- Never add explanations or comments inside code
+- Output only what is requested, nothing extra
+- HTML Guidelines
+- Always use semantic elements: header, nav, main, section, article, footer
+- Maintain proper heading hierarchy (h1 to h6)
+ - Use descriptive and meaningful class composition
+- Avoid inline styles
+- Avoid unnecessary attributes
+- Ensure accessibility by default (aria only when needed)
+- Tailwind CSS Guidelines
+- Use Tailwind utility classes directly in markup
+- Avoid custom CSS unless explicitly requested
+- Prefer Tailwind spacing, color, and typography scales
+- Keep class order logical: layout → spacing → typography → color → state
+- Do not overuse arbitrary values unless required
+- Ensure responsive variants are minimal and intentional
+- Ensure dark mode compatibility using Tailwind’s dark variant
+- Performance Rules
+- Keep DOM depth shallow
+- Avoid redundant containers
+- Ensure layouts are lightweight and fast-loading
+- Do not introduce heavy UI patterns unless requested
+- Favor simple grids and flex layouts
+- Dark and Light Mode
+- Before writing any styling, clearly define light and dark color tokens
+- Use consistent background, text, border, and accent colors
+- After confirmation, apply styles using Tailwind or SCSS only if requested
+
+Workflow Rules
+
+- Before modifying or extending existing work, review the provided structure
+- Never remove existing functionality without explicit permission
+- If an issue exists, report it instead of silently changing logic
+- Do not refactor unless requested
+- Traits or reusable UI patterns already in use must not be removed
+
+Output Rules
+
+- Respond quickly and directly
+- Always reply in English, even if instructions are given in Bangla
+- Do not add opinions, explanations, or suggestions unless explicitly asked
