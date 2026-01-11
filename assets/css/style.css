@@ -1,4 +1,0 @@
-.course-swiper-pagination{display:flex;align-items:center;justify-content:center;gap:10px}
-.course-swiper-pagination.swiper-pagination-bullets{position:static}
-.course-swiper-pagination .swiper-pagination-bullet{background:rgba(255,255,255,.25);opacity:1;width:8px;height:8px;border-radius:999px;transition:all .3s ease}
-.course-swiper-pagination .swiper-pagination-bullet-active{background:#B26EF7;width:20px}
