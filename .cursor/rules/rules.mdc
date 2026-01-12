@@ -21,6 +21,11 @@ Key Principles
 - Before creating any section, please include my variables and ensure all CSS is applied properly and efficiently.
 - you applay fontawesome icon in our template
 - you applay inline Tailwind css our templates
+- Our site uses the font-family 'Spartan', sans-serif.
+-  /* Fonts */
+  --font-spartan: "League Spartan", sans-serif; // all title usd this font
+  --font-inter: "Inter", sans-serif; /// body and paragrap usd this is font
+
 
 - Themeforest Stander Code applay
 - Write clean, semantic HTML with a minimal and accessible structure

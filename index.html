@@ -11,61 +11,181 @@
 
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
     <!-- CSS
 	============================================ -->
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/css/swiper.css">
     <link rel="stylesheet" href="assets/css/animation.css">
-    <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/output.css">
     <link rel="stylesheet" href="assets/css/input.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 
-
-
 <body class="rbt-header-sticky primary-color">
-    <header class="bg-white dark:bg-gray-900 shadow-sm sticky top-0 z-50">
-        <nav class="container mx-auto px-4 lg:px-6">
-            <div class="flex items-center justify-between h-16 lg:h-20">
+    <header class="bg-primary sticky top-0 z-50 border-b border-white/5 shadow-lg">
+        <div class="max-w-[1320px] mx-auto px-4">
+            <div class="flex items-center justify-between h-[90px]">
+                <!-- Logo Section -->
                 <div class="flex items-center">
-                    <a href="/" class="flex items-center space-x-2">
-                        <img src="assets/images/logo.png" alt="Logo" class="h-8 lg:h-10 w-auto">
+                    <a href="index.html">
+                        <img src="assets/images/logo.png" alt="educate" class="h-10 w-auto">
                     </a>
                 </div>
 
-                <div class="hidden lg:flex items-center space-x-8">
-                    <a href="#" class="nav-link">Home</a>
-                    <a href="#" class="nav-link">Courses</a>
-                    <a href="#" class="nav-link">About</a>
-                    <a href="#" class="nav-link">Contact</a>
-                </div>
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center space-x-[40px]">
+                    <a href="#" class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300">Home</a>
+                    <a href="#" class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300">Courses</a>
+                    <div class="relative group">
+                        <button class="flex items-center gap-1.5 px-5 py-2 rounded-full bg-white/5 text-secondary text-[16px] font-medium font-inter transition-all duration-300 hover:bg-white/10">
+                            Elements <i class="fa-solid fa-angle-down text-[12px] group-hover:rotate-180 transition-transform"></i>
+                        </button>
+                    </div>
+                    <a href="#" class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300">Dashboard</a>
+                    <a href="#" class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300">Pages</a>
+                </nav>
 
-                <button id="mobile-menu-btn"
-                    class="lg:hidden p-2 text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
+                <!-- Action Section -->
+                <div class="flex items-center gap-6">
+                    <!-- Language Switcher -->
+                    <div class="hidden sm:flex items-center gap-2 cursor-pointer group">
+                        <img src="https://flagcdn.com/w20/us.png" alt="English" class="w-5 h-5 rounded-full object-cover">
+                        <span class="text-white/90 text-[15px] font-medium font-inter group-hover:text-secondary transition-all">English</span>
+                        <i class="fa-solid fa-angle-down text-white/40 text-[10px] group-hover:text-secondary transition-all"></i>
+                    </div>
+
+                    <!-- Cart Icon -->
+                    <div class="relative cursor-pointer group">
+                        <div class="w-[46px] h-[46px] rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/90 group-hover:bg-secondary group-hover:border-secondary transition-all duration-300">
+                            <i class="fa-solid fa-cart-shopping text-[17px]"></i>
+                        </div>
+                        <span class="absolute -top-1 -right-1 w-[20px] h-[20px] bg-[#9382FF] text-white text-[11px] font-bold rounded-full flex items-center justify-center border-2 border-primary">2</span>
+                    </div>
+
+                    <!-- Login link -->
+                    <a href="#" class="hidden md:block text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300">Login</a>
+
+                    <!-- Join Button -->
+                    <a href="#" class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-linear-to-r from-[#B26EF7] via-[#FF71BF] to-[#FFBD7A] text-white text-[16px] font-semibold font-spartan hover:shadow-[0px_10px_30px_rgba(178,110,247,0.4)] hover:-translate-y-0.5 transition-all duration-300">
+                        <i class="fa-solid fa-right-to-bracket"></i>
+                        Join for free
+                    </a>
+
+                    <!-- Mobile Toggle -->
+                    <button id="mobile-menu-btn" class="lg:hidden text-white/90 text-2xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
             </div>
 
-            <div id="mobile-menu" class="hidden lg:hidden pb-4">
-                <div class="flex flex-col space-y-3 pt-4">
-                    <a href="#"
-                        class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors py-2">Home</a>
-                    <a href="#"
-                        class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors py-2">Courses</a>
-                    <a href="#"
-                        class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors py-2">About</a>
-                    <a href="#"
-                        class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors py-2">Contact</a>
+            <!-- Mobile Menu Container -->
+            <div id="mobile-menu" class="hidden lg:hidden pb-6 border-t border-white/5">
+                <div class="flex flex-col space-y-4 pt-4">
+                    <a href="#" class="text-white/80 hover:text-secondary transition-colors text-[16px] font-inter">Home</a>
+                    <a href="#" class="text-white/80 hover:text-secondary transition-colors text-[16px] font-inter">Courses</a>
+                    <a href="#" class="text-white/80 hover:text-secondary transition-colors text-[16px] font-inter">Dashboard</a>
+                    <a href="#" class="text-white/80 hover:text-secondary transition-colors text-[16px] font-inter">Pages</a>
                 </div>
             </div>
-        </nav>
+        </div>
     </header>
 
     <main>
+            <!-- Hero Section Start -->
+            <section class="bg-[#050520] pt-[120px] pb-[100px] relative overflow-hidden">
+                <!-- Background Decorations -->
+                <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+                    <div class="absolute top-[20%] left-[-5%] w-[400px] h-[400px] bg-[#B26EF7] blur-[150px] rounded-full"></div>
+                    <div class="absolute bottom-[10%] right-[-5%] w-[400px] h-[400px] bg-[#FF71BF] blur-[150px] rounded-full"></div>
+                </div>
+    
+                <div class="max-w-[1320px] mx-auto px-4 relative z-10">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-[60px] items-center">
+                        <!-- Left Content -->
+                        <div class="max-w-[650px]">
+                            <span class="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-white/5 border border-white/10 text-secondary text-[14px] font-semibold font-inter mb-8">
+                                <i class="fa-solid fa-user-graduate text-secondary"></i>
+                                Welcome To Online Education
+                            </span>
+    
+                            <h1 class="text-white text-[48px] md:text-[72px] font-bold font-spartan leading-[1.1] mb-8">
+                                Start learning from the world’s <span class="gradient-color-primary bg-clip-text text-transparent">Best Sites</span>
+                            </h1>
+    
+                            <p class="text-white/60 text-[18px] leading-[1.7] font-inter mb-12 max-w-[520px]">
+                                Education is the most powerful weapon which you can to change leadership is not about a title or a designation it's about.
+                            </p>
+    
+                            <!-- Search Box -->
+                            <div class="relative max-w-[480px] mb-14">
+                                <input type="text" placeholder="What do you want to learn?.." 
+                                    class="w-full h-[66px] bg-[#11112D] border border-white/10 rounded-full px-8 text-white placeholder:text-white/30 focus:outline-none focus:border-secondary/50 transition-all font-inter">
+                                <button class="absolute right-[6px] top-[6px] h-[54px] px-8 rounded-full bg-linear-to-r from-[#B26EF7] via-[#FF71BF] to-[#FFBD7A] text-white font-semibold font-spartan flex items-center gap-2 hover:shadow-[0px_10px_25px_rgba(178,110,247,0.4)] hover:-translate-y-0.5 transition-all">
+                                    Search <i class="fa-solid fa-magnifying-glass text-[14px]"></i>
+                                </button>
+                            </div>
+    
+                            <!-- Stats -->
+                            <div class="flex flex-wrap items-center gap-10 md:gap-16">
+                                <div class="flex items-center gap-4">
+                                    <div class="w-[54px] h-[54px] rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-secondary text-[20px]">
+                                        <i class="fa-solid fa-video"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-white text-[24px] font-bold font-spartan leading-none">36k+</h4>
+                                        <p class="text-white/50 text-[14px] mt-1 font-inter">Enrolled Students</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-4">
+                                    <div class="w-[54px] h-[54px] rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-secondary text-[20px]">
+                                        <i class="fa-solid fa-graduation-cap"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-white text-[24px] font-bold font-spartan leading-none">36k+</h4>
+                                        <p class="text-white/50 text-[14px] mt-1 font-inter">Enrolled Students</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <!-- Right Image Area -->
+                        <div class="relative">
+                            <div class="relative z-10 rounded-[24px] overflow-hidden border-[6px] border-white/5 shadow-2xl">
+                                <img src="assets/images/faq/Image.webp" alt="Student learning online" class="w-full h-[600px] object-cover">
+                            </div>
+                            
+                            <!-- Floating Card -->
+                            <div class="absolute -bottom-[30px] -left-[40px] z-20 bg-[#0F102A] p-6 rounded-[20px] border border-white/10 shadow-2xl min-w-[240px]">
+                                <div class="flex items-center gap-4 mb-4">
+                                    <div class="w-[50px] h-[50px] rounded-[12px] bg-linear-to-br from-[#B26EF7] to-[#FF71BF] flex items-center justify-center text-white text-[24px]">
+                                        <i class="fa-solid fa-cube"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="text-white text-[20px] font-bold font-spartan">36k+</h5>
+                                        <p class="text-white/60 text-[13px] font-inter">Crashed Courses</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center -space-x-3">
+                                    <img src="assets/images/faq/avada1.png" class="w-9 h-9 rounded-full border-2 border-[#0F102A] object-cover">
+                                    <img src="assets/images/faq/avada2.png" class="w-9 h-9 rounded-full border-2 border-[#0F102A] object-cover">
+                                    <img src="assets/images/faq/avada3.png" class="w-9 h-9 rounded-full border-2 border-[#0F102A] object-cover">
+                                    <img src="assets/images/faq/avada4.png" class="w-9 h-9 rounded-full border-2 border-[#0F102A] object-cover">
+                                </div>
+                            </div>
+    
+                            <!-- Decor -->
+                            <div class="absolute -top-10 -right-10 w-[140px] h-[140px] opacity-20">
+                                <img src="assets/images/faq/shape.png" alt="" class="animate-pulse">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Hero Section End -->
+    
 
         <!-- Set Career Goals -->
         <section class="bg-primary py-20 md:py-24 pt-120 pb-120">

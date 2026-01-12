@@ -55,7 +55,7 @@
   --color-border-primary: #1A1A35;
   --color-border-secondary: #B26EF7;
   --color-border-white: rgba(255, 255, 255, 0.08);
-  --border-gradient-primary: linear-gradient(to right, #B26EF7 0%, #FF71BF 47%, #FFBD7A 100%);
+  --border-gradient-primary: linear-gradient(to right, #3F5EFB 0%, #7E6FC0 47%, #FC466B 100%);
   --border-gradient-secondary: linear-gradient(to right, #7E6FC0 0%, #302A53 100%);
 
 
@@ -76,6 +76,11 @@
   --border-width: 2px;
   --radius: 6px;
   --radius-full: 50%;
+
+
+  /* Fonts */
+  --font-inter: "Inter", sans-serif;
+  --font-spartan: "League Spartan", sans-serif;
 
 
   /* Font weight */
@@ -105,13 +110,6 @@
   --transition-3: transform .85s cubic-bezier(.23,1,.32,1),background .3s,border .3s,border-radius .3s,box-shadow .3s;
   --transition-4: all .25s cubic-bezier(.645,.045,.355,1);
 
-
-
-  /* Fonts */
-  --font-primary: "Cabin", sans-serif;
-  --font-secondary: "Caveat", cursive;
-  --font-tertiary: "Bebas Neue", serif;
-  --font-quaternary: "Caprasimo", serif;
 
 
   /* Font Sizes */
