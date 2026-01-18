@@ -62,6 +62,7 @@ Key Principles
 - Before writing any styling, clearly define light and dark color tokens
 - Use consistent background, text, border, and accent colors
 - After confirmation, apply styles using Tailwind or SCSS only if requested
+- our site border readus design perfaction
 
 Workflow Rules
 

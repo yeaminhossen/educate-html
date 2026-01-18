@@ -12,7 +12,9 @@
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&display=swap"
+        rel="stylesheet">
     <!-- CSS
 	============================================ -->
     <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
@@ -25,8 +27,41 @@
 </head>
 
 <body class="rbt-header-sticky primary-color">
+    <!-- Preloader Start -->
+    <div id="preloader"
+        class="fixed inset-0 z-9999 flex items-center justify-center bg-primary transition-all duration-700 overflow-hidden">
+        <div class="relative w-40 h-40 flex items-center justify-center">
+            <!-- Main Neumorphic Circle -->
+            <div
+                class="absolute w-32 h-32 rounded-full bg-primary shadow-[15px_15px_30px_#02020d,-15px_-15px_30px_#080833]">
+            </div>
+
+            <!-- Inner Inset Circle -->
+            <div
+                class="absolute w-24 h-24 rounded-full bg-primary shadow-[inset_8px_8px_16px_#02020d,inset_-8px_-8px_16px_#080833]">
+            </div>
+
+            <!-- Rotating Light Ring -->
+            <div
+                class="absolute w-32 h-32 rounded-full border-4 border-transparent border-t-[#9382FF] border-l-[#9382FF]/30 animate-[spin_2s_cubic-bezier(0.58,0.185,0.395,0.81)_infinite]">
+            </div>
+
+            <!-- Second Rotating Ring (Opposite) -->
+            <div
+                class="absolute w-32 h-32 rounded-full border-4 border-transparent border-b-[#FF71BF] border-r-[#FF71BF]/30 animate-[spin_2s_cubic-bezier(0.58,0.185,0.395,0.81)_infinite_reverse]">
+            </div>
+
+            <!-- Center Content -->
+            <div class="relative z-10 flex flex-col items-center">
+                <img src="assets/images/favicon.png" alt="Logo" class="w-10 h-10 object-contain animate-pulse">
+            </div>
+        </div>
+    </div>
+    <!-- Preloader End -->
+
+
     <header class="bg-primary sticky top-0 z-50 border-b border-white/5 shadow-lg">
-        <div class="max-w-[1320px] mx-auto px-4">
+        <div class="max-w-[1320px] mx-auto px-4 relative">
             <div class="flex items-center justify-between h-[90px]">
                 <!-- Logo Section -->
                 <div class="flex items-center">
@@ -37,41 +72,488 @@
 
                 <!-- Desktop Navigation -->
                 <nav class="hidden lg:flex items-center space-x-[40px]">
-                    <a href="#" class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300">Home</a>
-                    <a href="#" class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300">Courses</a>
-                    <div class="relative group">
-                        <button class="flex items-center gap-1.5 px-5 py-2 rounded-full bg-white/5 text-secondary text-[16px] font-medium font-inter transition-all duration-300 hover:bg-white/10">
-                            Elements <i class="fa-solid fa-angle-down text-[12px] group-hover:rotate-180 transition-transform"></i>
+                    <!-- Demos Mega Menu Item -->
+                    <div class="group">
+                        <button
+                            class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300 flex items-center gap-1.5 py-8 cursor-pointer relative z-[100]">
+                            Demos <i
+                                class="fa-solid fa-angle-down text-[11px] group-hover:rotate-180 transition-transform"></i>
                         </button>
+
+                        <!-- Menu Blur Overlay -->
+                        <div
+                            class="fixed inset-0 bg-[#050520]/60 backdrop-blur-[6px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 z-[90] pointer-events-none">
+                        </div>
+
+                        <!-- Demos Mega Menu Content -->
+                        <div
+                            class="absolute left-1/2 -translate-x-1/2 top-full opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-100 w-[1200px]">
+                            <div
+                                class="bg-white rounded-b-[20px] shadow-[0px_30px_70px_rgba(0,0,0,0.15)] overflow-hidden p-8">
+                                <div class="grid grid-cols-5 gap-6 mb-10">
+                                    <!-- Demo Card 1 -->
+                                    <div class="group/demo transition-all duration-300">
+                                        <div
+                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
+                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                            </div>
+                                            <div class="relative overflow-hidden aspect-[4/4]">
+                                                <img src="assets/images/demo/demo-1.webp" alt="Electronics One"
+                                                    class="w-full object-contain">
+                                                <div
+                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5
+                                            class="text-center mt-4 text-[15px] font-bold font-spartan text-[#050520] group-hover/demo:text-secondary transition-colors">
+                                            Electronics One</h5>
+                                    </div>
+
+                                    <!-- Demo Card 2 -->
+                                    <div class="group/demo transition-all duration-300">
+                                        <div
+                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
+                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                            </div>
+                                            <div class="relative overflow-hidden aspect-[4/4]">
+                                                <img src="assets/images/demo/demo-2.webp" alt="Fashion One"
+                                                    class="w-full object-contain">
+                                                <div
+                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5
+                                            class="text-center mt-4 text-[15px] font-bold font-spartan text-[#050520] group-hover/demo:text-secondary transition-colors">
+                                            Fashion One</h5>
+                                    </div>
+
+                                    <!-- Demo Card 3 -->
+                                    <div class="group/demo transition-all duration-300">
+                                        <div
+                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
+                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                            </div>
+                                            <div class="relative overflow-hidden aspect-[4/4]">
+                                                <img src="assets/images/demo/demo-3.webp" alt="Furniture One"
+                                                    class="w-full object-contain">
+                                                <div
+                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5
+                                            class="text-center mt-4 text-[15px] font-bold font-spartan text-[#050520] group-hover/demo:text-secondary transition-colors">
+                                            Furniture One</h5>
+                                    </div>
+
+                                    <!-- Demo Card 4 -->
+                                    <div class="group/demo transition-all duration-300">
+                                        <div
+                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
+                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                            </div>
+                                            <div class="relative overflow-hidden aspect-[4/4]">
+                                                <img src="assets/images/demo/demo-5.webp" alt="Print Service One"
+                                                    class="w-full object-contain">
+                                                <div
+                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5
+                                            class="text-center mt-4 text-[15px] font-bold font-spartan text-[#050520] group-hover/demo:text-secondary transition-colors">
+                                            Print Service One</h5>
+                                    </div>
+
+                                    <!-- Demo Card 5 -->
+                                    <div class="group/demo transition-all duration-300">
+                                        <div
+                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
+                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                            </div>
+                                            <div class="relative overflow-hidden aspect-[4/4]">
+                                                <img src="assets/images/demo/demo-6.webp" alt="Cosmetic Beauty One"
+                                                    class="w-full object-contain">
+                                                <div
+                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5
+                                            class="text-center mt-4 text-[15px] font-bold font-spartan text-[#050520] group-hover/demo:text-secondary transition-colors">
+                                            Cosmetic Beauty One</h5>
+                                    </div>
+
+                                    <!-- Demo Card 6 -->
+                                    <div class="group/demo transition-all duration-300">
+                                        <div
+                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
+                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                            </div>
+                                            <div class="relative overflow-hidden aspect-[4/4]">
+                                                <img src="assets/images/demo/demo-8.webp" alt="Sports One"
+                                                    class="w-full object-contain">
+                                                <div
+                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5
+                                            class="text-center mt-4 text-[15px] font-bold font-spartan text-[#050520] group-hover/demo:text-secondary transition-colors">
+                                            Sports One</h5>
+                                    </div>
+
+                                    <!-- Demo Card 7 -->
+                                    <div class="group/demo transition-all duration-300">
+                                        <div
+                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
+                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                            </div>
+                                            <div class="relative overflow-hidden aspect-[4/4]">
+                                                <img src="assets/images/demo/demo-9.webp" alt="Glass One"
+                                                    class="w-full object-contain">
+                                                <div
+                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5
+                                            class="text-center mt-4 text-[15px] font-bold font-spartan text-[#050520] group-hover/demo:text-secondary transition-colors">
+                                            Glass One</h5>
+                                    </div>
+
+                                    <!-- Demo Card 8 -->
+                                    <div class="group/demo transition-all duration-300">
+                                        <div
+                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
+                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                            </div>
+                                            <div class="relative overflow-hidden aspect-[4/4]">
+                                                <img src="assets/images/demo/demo-10.webp" alt="Phone One"
+                                                    class="w-full object-contain">
+                                                <div
+                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5
+                                            class="text-center mt-4 text-[15px] font-bold font-spartan text-[#050520] group-hover/demo:text-secondary transition-colors">
+                                            Phone One</h5>
+                                    </div>
+
+                                    <!-- Demo Card 9 -->
+                                    <div class="group/demo transition-all duration-300">
+                                        <div
+                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
+                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                            </div>
+                                            <div class="relative overflow-hidden aspect-[4/4]">
+                                                <img src="assets/images/demo/demo-11.webp" alt="Accessories One"
+                                                    class="w-full object-contain">
+                                                <div
+                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5
+                                            class="text-center mt-4 text-[15px] font-bold font-spartan text-[#050520] group-hover/demo:text-secondary transition-colors">
+                                            Accessories One</h5>
+                                    </div>
+
+                                    <!-- Demo Card 10 -->
+                                    <div class="group/demo transition-all duration-300">
+                                        <div
+                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
+                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                            </div>
+                                            <div class="relative overflow-hidden aspect-[4/4]">
+                                                <img src="assets/images/demo/demo-1.webp" alt="jewellery One"
+                                                    class="w-full object-contain">
+                                                <div
+                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5
+                                            class="text-center mt-4 text-[15px] font-bold font-spartan text-[#050520] group-hover/demo:text-secondary transition-colors">
+                                            jewellery One</h5>
+                                    </div>
+                                </div>
+
+                                <!-- View All Button -->
+                                <div class="flex justify-center -mb-4">
+                                    <a href="#"
+                                        class="inline-flex items-center gap-3 px-10 py-4 rounded-[50px] bg-[#2D56FF] text-white text-[16px] font-bold font-spartan hover:shadow-[0px_15px_30px_rgba(45,86,255,0.4)] transition-all duration-300 hover:-translate-y-1">
+                                        View All The Trending Collection
+                                        <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
+                                            <i
+                                                class="fa-solid fa-arrow-right-from-bracket rotate-[-45deg] text-[14px]"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <a href="#" class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300">Dashboard</a>
-                    <a href="#" class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300">Pages</a>
+
+                    <a href="#"
+                        class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300 flex items-center gap-1.5">Pages</a>
+
+                    <!-- Mega Menu Item -->
+                    <div class="group">
+                        <button
+                            class="flex items-center gap-1.5 rounded-[50px] text-white text-[16px] font-medium font-inter transition-all duration-300 relative z-[100]">
+                            Elements <i
+                                class="fa-solid fa-angle-down text-[12px] group-hover:rotate-180 transition-transform"></i>
+                        </button>
+
+                        <!-- Menu Blur Overlay -->
+                        <div
+                            class="fixed inset-0 bg-[#050520]/60 backdrop-blur-[6px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 z-[90] pointer-events-none">
+                        </div>
+
+                        <!-- Mega Menu Content -->
+                        <div
+                            class="absolute left-1/2 -translate-x-1/2 top-full pt-[30px] opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-5 group-hover:translate-y-0 transition-all duration-300 z-100 w-[1140px]">
+                            <div
+                                class="bg-white rounded-[20px] shadow-[0px_30px_70px_rgba(0,0,0,0.2)] overflow-hidden flex">
+                                <!-- Left Columns (Links) -->
+                                <div class="flex-1 grid grid-cols-3 p-10 gap-x-12">
+                                    <!-- Column 1: Ultimate User Experience -->
+                                    <div>
+                                        <h4
+                                            class="text-[#888888] text-[13px] font-bold font-spartan uppercase tracking-wider mb-8 pb-3 border-b border-gray-100">
+                                            Ultimate User Experience</h4>
+                                        <ul class="space-y-4">
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Easy
+                                                    to Customize Codes</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Powerful
+                                                    Page Options</a></li>
+                                            <li><a href="#"
+                                                    class="flex items-center justify-between text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Fast
+                                                    Performance <span
+                                                        class="px-2 py-0.5 rounded-[4px] bg-secondary text-white text-[9px] font-bold">HOT</span></a>
+                                            </li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Ultimate
+                                                    Header Layouts</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Excessive
+                                                    Footer Variation</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Advanced
+                                                    Mega Menu</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Popup
+                                                    & Sidebar Search</a></li>
+                                            <li><a href="#"
+                                                    class="flex items-center justify-between text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">All
+                                                    Boost Sales Features <span
+                                                        class="px-2 py-0.5 rounded-[4px] bg-secondary text-white text-[9px] font-bold">NEW</span></a>
+                                            </li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Mobile-first
+                                                    Experience</a></li>
+                                            <li><a href="#"
+                                                    class="flex items-center justify-between text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">User
+                                                    Feedback <span
+                                                        class="px-2 py-0.5 rounded-[4px] bg-[#FFBD7A] text-white text-[9px] font-bold">COMING</span></a>
+                                            </li>
+                                            <li><a href="#"
+                                                    class="flex items-center justify-between text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Seamless
+                                                    Integration <span
+                                                        class="px-2 py-0.5 rounded-[4px] bg-[#FFBD7A] text-white text-[9px] font-bold">COMING</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- Column 2: Flexible Shopping -->
+                                    <div>
+                                        <h4
+                                            class="text-[#888888] text-[13px] font-bold font-spartan uppercase tracking-wider mb-8 pb-3 border-b border-gray-100">
+                                            Flexible Shopping</h4>
+                                        <ul class="space-y-4">
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Smart
+                                                    Product Filtering</a></li>
+                                            <li><a href="#"
+                                                    class="flex items-center justify-between text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Variant
+                                                    Swatches <span
+                                                        class="px-2 py-0.5 rounded-[4px] bg-[#FF71BF] text-white text-[9px] font-bold uppercase">FULLY
+                                                        READY</span></a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Product
+                                                    Compare</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">WishLists
+                                                    Builder</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Quick
+                                                    View</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Flash
+                                                    Sales Management</a></li>
+                                            <li><a href="#"
+                                                    class="flex items-center justify-between text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Cart
+                                                    Upsell <span
+                                                        class="px-2 py-0.5 rounded-[4px] bg-secondary text-white text-[9px] font-bold">NEW</span></a>
+                                            </li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Size
+                                                    Chart Variation</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Sticky
+                                                    Add To Cart</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Product
+                                                    Video & 3D View</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Multi-Step
+                                                    Checkout</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- Column 3: Boost Sales -->
+                                    <div>
+                                        <h4
+                                            class="text-[#888888] text-[13px] font-bold font-spartan uppercase tracking-wider mb-8 pb-3 border-b border-gray-100">
+                                            Boost Sales</h4>
+                                        <ul class="space-y-4">
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Back
+                                                    To Stock Notification</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Sales
+                                                    Popup</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Pre
+                                                    Order</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Backorder</a>
+                                            </li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Partial
+                                                    Payment</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Shareable
+                                                    Cart</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Bulk
+                                                    Amount Purchase</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Stock
+                                                    Progress Bar</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Sales
+                                                    Push Notification</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Special
+                                                    Offers Management</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Free
+                                                    Shipping Threshold</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Right Column (Image/Grid) -->
+                                <div class="w-[450px] bg-gray-light p-8">
+                                    <div class="grid grid-cols-2 gap-4 h-full">
+                                        <div
+                                            class="relative group/card overflow-hidden rounded-xl shadow-md bg-white p-2">
+                                            <img src="assets/images/demo/demo-1.webp" alt="Preview"
+                                                class="w-full h-32 object-cover rounded-lg mb-2 transition-transform duration-500 group-hover/card:scale-110">
+                                            <p class="text-[12px] font-bold font-spartan text-gray-800">Classic Demo</p>
+                                        </div>
+                                        <div
+                                            class="relative group/card overflow-hidden rounded-xl shadow-md bg-white p-2">
+                                            <img src="assets/images/demo/demo-2.webp" alt="Preview"
+                                                class="w-full h-32 object-cover rounded-lg mb-2 transition-transform duration-500 group-hover/card:scale-110">
+                                            <p class="text-[12px] font-bold font-spartan text-gray-800">Modern Shop</p>
+                                        </div>
+                                        <div
+                                            class="relative group/card overflow-hidden rounded-xl shadow-md bg-white p-2">
+                                            <img src="assets/images/demo/demo-3.webp" alt="Preview"
+                                                class="w-full h-32 object-cover rounded-lg mb-2 transition-transform duration-500 group-hover/card:scale-110">
+                                            <p class="text-[12px] font-bold font-spartan text-gray-800">LMS System</p>
+                                        </div>
+                                        <div
+                                            class="relative group/card overflow-hidden rounded-xl shadow-md bg-white p-2 flex items-center justify-center border-2 border-dashed border-gray-200 hover:border-secondary transition-colors cursor-pointer">
+                                            <div class="text-center">
+                                                <i class="fa-solid fa-plus text-secondary mb-1"></i>
+                                                <p class="text-[10px] font-bold font-spartan text-gray-500 uppercase">
+                                                    View All</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </nav>
 
                 <!-- Action Section -->
                 <div class="flex items-center gap-6">
                     <!-- Language Switcher -->
                     <div class="hidden sm:flex items-center gap-2 cursor-pointer group">
-                        <img src="https://flagcdn.com/w20/us.png" alt="English" class="w-5 h-5 rounded-full object-cover">
-                        <span class="text-white/90 text-[15px] font-medium font-inter group-hover:text-secondary transition-all">English</span>
-                        <i class="fa-solid fa-angle-down text-white/40 text-[10px] group-hover:text-secondary transition-all"></i>
+                        <img src="https://flagcdn.com/w20/us.png" alt="English"
+                            class="w-5 h-5 rounded-full object-cover">
+                        <span
+                            class="text-white/90 text-[15px] font-medium font-inter group-hover:text-secondary transition-all">English</span>
+                        <i
+                            class="fa-solid fa-angle-down text-white/40 text-[10px] group-hover:text-secondary transition-all"></i>
                     </div>
 
                     <!-- Cart Icon -->
                     <div class="relative cursor-pointer group">
-                        <div class="w-[46px] h-[46px] rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/90 group-hover:bg-secondary group-hover:border-secondary transition-all duration-300">
+                        <div
+                            class="w-[46px] h-[46px] rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/90 group-hover:bg-secondary group-hover:border-secondary transition-all duration-300">
                             <i class="fa-solid fa-cart-shopping text-[17px]"></i>
                         </div>
-                        <span class="absolute -top-1 -right-1 w-[20px] h-[20px] bg-[#9382FF] text-white text-[11px] font-bold rounded-full flex items-center justify-center border-2 border-primary">2</span>
+                        <span
+                            class="absolute -top-1 -right-1 w-[20px] h-[20px] bg-[#9382FF] text-white text-[11px] font-bold rounded-full flex items-center justify-center border-2 border-primary">2</span>
                     </div>
 
                     <!-- Login link -->
-                    <a href="#" class="hidden md:block text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300">Login</a>
+                    <a href="#"
+                        class="hidden md:block text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300">Login</a>
 
                     <!-- Join Button -->
-                    <a href="#" class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-linear-to-r from-[#B26EF7] via-[#FF71BF] to-[#FFBD7A] text-white text-[16px] font-semibold font-spartan hover:shadow-[0px_10px_30px_rgba(178,110,247,0.4)] hover:-translate-y-0.5 transition-all duration-300">
-                        <i class="fa-solid fa-right-to-bracket"></i>
-                        Join for free
+                    <a href="#"
+                        class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-[50px] bg-linear-to-r from-[#B26EF7] via-[#FF71BF] to-[#FFBD7A] text-white text-[16px] font-semibold font-spartan hover:shadow-[0px_10px_30px_rgba(178,110,247,0.4)] hover:-translate-y-0.5 transition-all duration-300 border-b-2 border-primary/29">
+                        <img src="assets/images/icon/right-icon.svg" alt="Join" class="w-5 h-5">
+                        <span>Join for free</span>
                     </a>
 
                     <!-- Mobile Toggle -->
@@ -84,118 +566,256 @@
             <!-- Mobile Menu Container -->
             <div id="mobile-menu" class="hidden lg:hidden pb-6 border-t border-white/5">
                 <div class="flex flex-col space-y-4 pt-4">
-                    <a href="#" class="text-white/80 hover:text-secondary transition-colors text-[16px] font-inter">Home</a>
-                    <a href="#" class="text-white/80 hover:text-secondary transition-colors text-[16px] font-inter">Courses</a>
-                    <a href="#" class="text-white/80 hover:text-secondary transition-colors text-[16px] font-inter">Dashboard</a>
-                    <a href="#" class="text-white/80 hover:text-secondary transition-colors text-[16px] font-inter">Pages</a>
+                    <a href="#"
+                        class="text-white/80 hover:text-secondary transition-colors text-[16px] font-inter">Demos</a>
+                    <a href="#"
+                        class="text-white/80 hover:text-secondary transition-colors text-[16px] font-inter">Pages</a>
+                    <a href="#"
+                        class="text-white/80 hover:text-secondary transition-colors text-[16px] font-inter">Elements</a>
+                    <a href="#"
+                        class="text-white/80 hover:text-secondary transition-colors text-[16px] font-inter">More</a>
                 </div>
             </div>
         </div>
     </header>
 
     <main>
-            <!-- Hero Section Start -->
-            <section class="bg-[#050520] pt-[120px] pb-[100px] relative overflow-hidden">
-                <!-- Background Decorations -->
-                <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-                    <div class="absolute top-[20%] left-[-5%] w-[400px] h-[400px] bg-[#B26EF7] blur-[150px] rounded-full"></div>
-                    <div class="absolute bottom-[10%] right-[-5%] w-[400px] h-[400px] bg-[#FF71BF] blur-[150px] rounded-full"></div>
+        <!-- Hero Section Start -->
+        <section class="bg-[#050520] pt-[120px] pb-[100px] relative overflow-hidden">
+            <!-- Background Decorations -->
+            <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+                <div class="absolute top-[20%] left-[-5%] w-[400px] h-[400px] bg-[#B26EF7] blur-[150px] rounded-full">
                 </div>
-    
-                <div class="max-w-[1320px] mx-auto px-4 relative z-10">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-[60px] items-center">
-                        <!-- Left Content -->
-                        <div class="max-w-[650px]">
-                            <span class="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-white/5 border border-white/10 text-secondary text-[14px] font-semibold font-inter mb-8">
-                                <i class="fa-solid fa-user-graduate text-secondary"></i>
-                                Welcome To Online Education
-                            </span>
-    
-                            <h1 class="text-white text-[48px] md:text-[72px] font-bold font-spartan leading-[1.1] mb-8">
-                                Start learning from the world’s <span class="gradient-color-primary bg-clip-text text-transparent">Best Sites</span>
-                            </h1>
-    
-                            <p class="text-white/60 text-[18px] leading-[1.7] font-inter mb-12 max-w-[520px]">
-                                Education is the most powerful weapon which you can to change leadership is not about a title or a designation it's about.
-                            </p>
-    
-                            <!-- Search Box -->
-                            <div class="relative max-w-[480px] mb-14">
-                                <input type="text" placeholder="What do you want to learn?.." 
-                                    class="w-full h-[66px] bg-[#11112D] border border-white/10 rounded-full px-8 text-white placeholder:text-white/30 focus:outline-none focus:border-secondary/50 transition-all font-inter">
-                                <button class="absolute right-[6px] top-[6px] h-[54px] px-8 rounded-full bg-linear-to-r from-[#B26EF7] via-[#FF71BF] to-[#FFBD7A] text-white font-semibold font-spartan flex items-center gap-2 hover:shadow-[0px_10px_25px_rgba(178,110,247,0.4)] hover:-translate-y-0.5 transition-all">
-                                    Search <i class="fa-solid fa-magnifying-glass text-[14px]"></i>
-                                </button>
-                            </div>
-    
-                            <!-- Stats -->
-                            <div class="flex flex-wrap items-center gap-10 md:gap-16">
-                                <div class="flex items-center gap-4">
-                                    <div class="w-[54px] h-[54px] rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-secondary text-[20px]">
-                                        <i class="fa-solid fa-video"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-white text-[24px] font-bold font-spartan leading-none">36k+</h4>
-                                        <p class="text-white/50 text-[14px] mt-1 font-inter">Enrolled Students</p>
-                                    </div>
+                <div
+                    class="absolute bottom-[10%] right-[-5%] w-[400px] h-[400px] bg-[#FF71BF] blur-[150px] rounded-full">
+                </div>
+            </div>
+
+            <div class="max-w-[1320px] mx-auto px-4 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-[60px] items-center">
+                    <!-- Left Content -->
+                    <div class="lg:col-span-7">
+                        <span
+                            class="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-white/5 border border-white/10 text-secondary text-[14px] font-semibold font-inter mb-8">
+                            <i class="fa-solid fa-user-graduate text-secondary"></i>
+                            Welcome To Online Education
+                        </span>
+
+                        <h1 class="text-white text-[48px] md:text-[72px] font-bold font-spartan leading-[1.1] mb-8">
+                            Start learning from the world’s <span
+                                class="gradient-color-primary bg-clip-text text-transparent">Best Sites</span>
+                        </h1>
+
+                        <p class="text-white/60 text-[18px] leading-[1.7] font-inter mb-12 max-w-[520px]">
+                            Education is the most powerful weapon which you can to change leadership is not about a
+                            title or a designation it's about.
+                        </p>
+
+                        <!-- Search Box -->
+                        <div class="relative max-w-[480px] mb-14">
+                            <input type="text" placeholder="What do you want to learn?.."
+                                class="w-full h-[66px] bg-[#11112D] border border-white/10 rounded-full px-8 text-white placeholder:text-white/30 focus:outline-none focus:border-secondary/50 transition-all duration-300 ease-in-out font-inter">
+                            <button
+                                class="absolute right-[6px] top-[6px] h-[54px] px-8 rounded-full bg-linear-to-r from-[#B26EF7] via-[#FF71BF] to-[#FFBD7A] text-white font-semibold font-spartan flex items-center gap-2 hover:shadow-[0px_10px_25px_rgba(178,110,247,0.4)] hover:-translate-y-0.5 transition-all duration-500 ease-in-out border-b-2 border-primary/29">
+                                Search <i class="fa-solid fa-magnifying-glass text-[14px]"></i>
+                            </button>
+                        </div>
+
+                        <!-- Stats -->
+                        <div class="flex flex-wrap items-center gap-10 md:gap-16">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-[54px] h-[54px] rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-secondary text-[20px]">
+                                    <i class="fa-solid fa-video"></i>
                                 </div>
-                                <div class="flex items-center gap-4">
-                                    <div class="w-[54px] h-[54px] rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-secondary text-[20px]">
-                                        <i class="fa-solid fa-graduation-cap"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="text-white text-[24px] font-bold font-spartan leading-none">36k+</h4>
-                                        <p class="text-white/50 text-[14px] mt-1 font-inter">Enrolled Students</p>
-                                    </div>
+                                <div>
+                                    <h4 class="text-white text-[24px] font-bold font-spartan leading-none">36k+</h4>
+                                    <p class="text-white/50 text-[14px] mt-1 font-inter">Enrolled Students</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-[54px] h-[54px] rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-secondary text-[20px]">
+                                    <i class="fa-solid fa-graduation-cap"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-white text-[24px] font-bold font-spartan leading-none">36k+</h4>
+                                    <p class="text-white/50 text-[14px] mt-1 font-inter">Enrolled Students</p>
                                 </div>
                             </div>
                         </div>
-    
-                        <!-- Right Image Area -->
-                        <div class="relative">
-                            <div class="relative z-10 rounded-[24px] overflow-hidden border-[6px] border-white/5 shadow-2xl">
-                                <img src="assets/images/faq/Image.webp" alt="Student learning online" class="w-full h-[600px] object-cover">
-                            </div>
-                            
-                            <!-- Floating Card -->
-                            <div class="absolute -bottom-[30px] -left-[40px] z-20 bg-[#0F102A] p-6 rounded-[20px] border border-white/10 shadow-2xl min-w-[240px]">
-                                <div class="flex items-center gap-4 mb-4">
-                                    <div class="w-[50px] h-[50px] rounded-[12px] bg-linear-to-br from-[#B26EF7] to-[#FF71BF] flex items-center justify-center text-white text-[24px]">
-                                        <i class="fa-solid fa-cube"></i>
-                                    </div>
-                                    <div>
-                                        <h5 class="text-white text-[20px] font-bold font-spartan">36k+</h5>
-                                        <p class="text-white/60 text-[13px] font-inter">Crashed Courses</p>
-                                    </div>
+                    </div>
+
+                    <!-- Right Image Area -->
+                    <div class="relative lg:col-span-5">
+                        <div
+                            class="relative z-10 rounded-[24px] overflow-hidden border-[6px] border-white/5 shadow-2xl py-[20px] px-[8px] bg-[#0F102A]">
+                            <img src="assets/images/hero/image.webp" alt="Student learning online"
+                                class="w-full h-[600px] object-cover">
+                        </div>
+
+                        <!-- Floating Card -->
+                        <div
+                            class="absolute -bottom-[30px] -left-[40px] z-20 bg-[#0F102A] p-6 rounded-[20px] border border-white/10 shadow-2xl min-w-[240px]">
+                            <div class="flex items-center gap-4 mb-4">
+                                <div
+                                    class="w-[50px] h-[50px] rounded-[12px] bg-linear-to-br from-[#B26EF7] to-[#FF71BF] flex items-center justify-center text-white text-[24px]">
+                                    <i class="fa-solid fa-cube"></i>
                                 </div>
-                                <div class="flex items-center -space-x-3">
-                                    <img src="assets/images/faq/avada1.png" class="w-9 h-9 rounded-full border-2 border-[#0F102A] object-cover">
-                                    <img src="assets/images/faq/avada2.png" class="w-9 h-9 rounded-full border-2 border-[#0F102A] object-cover">
-                                    <img src="assets/images/faq/avada3.png" class="w-9 h-9 rounded-full border-2 border-[#0F102A] object-cover">
-                                    <img src="assets/images/faq/avada4.png" class="w-9 h-9 rounded-full border-2 border-[#0F102A] object-cover">
+                                <div>
+                                    <h5 class="text-white text-[20px] font-bold font-spartan">36k+</h5>
+                                    <p class="text-white/60 text-[13px] font-inter">Crashed Courses</p>
                                 </div>
                             </div>
-    
-                            <!-- Decor -->
-                            <div class="absolute -top-10 -right-10 w-[140px] h-[140px] opacity-20">
-                                <img src="assets/images/faq/shape.png" alt="" class="animate-pulse">
+                            <div class="flex items-center -space-x-3">
+                                <img src="assets/images/faq/avada1.png"
+                                    class="w-9 h-9 rounded-full border-2 border-[#0F102A] object-cover">
+                                <img src="assets/images/faq/avada2.png"
+                                    class="w-9 h-9 rounded-full border-2 border-[#0F102A] object-cover">
+                                <img src="assets/images/faq/avada3.png"
+                                    class="w-9 h-9 rounded-full border-2 border-[#0F102A] object-cover">
+                                <img src="assets/images/faq/avada4.png"
+                                    class="w-9 h-9 rounded-full border-2 border-[#0F102A] object-cover">
+                            </div>
+                        </div>
+
+                        <!-- Decor -->
+                        <div class="absolute -top-10 -right-10 w-[140px] h-[140px] opacity-20">
+                            <img src="assets/images/faq/shape.png" alt="" class="animate-pulse">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Hero Section End -->
+
+        <!-- Major Partners Section Start -->
+        <section class="bg-[#0F102A] py-20 md:py-24 relative overflow-hidden">
+            <!-- Background Decoration -->
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/5 blur-[120px] rounded-full pointer-events-none">
+            </div>
+
+            <div class="max-w-[1320px] mx-auto px-4 relative z-10">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <span
+                        class="inline-flex items-center justify-center px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-secondary text-[13px] font-bold font-spartan mb-6">
+                        Our Partners
+                    </span>
+                    <h2 class="text-white text-[36px] md:text-[54px] font-bold font-spartan leading-tight mb-4">
+                        Institution <span class="gradient-color-primary bg-clip-text text-transparent">Work With
+                            Us</span>
+                    </h2>
+                    <p class="text-white/60 text-[16px] md:text-[18px] font-inter max-w-[670px] mx-auto">
+                        Education is the most powerful weapon which you can to change the world leadership is not about
+                        a title or a designation
+                    </p>
+                </div>
+
+                <!-- Brand Slider -->
+                <div class="swiper brand-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Slack -->
+                        <div class="swiper-slide">
+                            <div
+                                class="h-[100px] bg-primary bg-box-color border border-white/5 rounded-12 flex items-center justify-center group hover:border-secondary/30 transition-all duration-300 relative overflow-hidden before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-0 before:bg-linear-to-t before:from-secondary/20 before:to-transparent hover:before:h-full before:transition-all before:duration-500 before:pointer-events-none">
+                                <div class="flex items-center gap-3 relative z-10">
+                                    <img src="assets/images/brand/slack.png" alt="slack">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Asana -->
+                        <div class="swiper-slide">
+                            <div
+                                class="h-[100px] bg-primary bg-box-color border border-white/5 rounded-12 flex items-center justify-center group hover:border-secondary/30 transition-all duration-300 relative overflow-hidden before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-0 before:bg-linear-to-t before:from-secondary/20 before:to-transparent hover:before:h-full before:transition-all before:duration-500 before:pointer-events-none">
+                                <div class="flex items-center gap-3 relative z-10">
+                                    <img src="assets/images/brand/asana.png" alt="asana">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Dropbox -->
+                        <div class="swiper-slide">
+                            <div
+                                class="h-[100px] bg-primary bg-box-color border border-white/5 rounded-12 flex items-center justify-center group hover:border-secondary/30 transition-all duration-300 relative overflow-hidden before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-0 before:bg-linear-to-t before:from-secondary/20 before:to-transparent hover:before:h-full before:transition-all before:duration-500 before:pointer-events-none">
+                                <div class="flex items-center gap-3 relative z-10">
+
+                                    <img src="assets/images/brand/dropbox.png" alt="dropbox">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Grammarly -->
+                        <div class="swiper-slide">
+                            <div
+                                class="h-[100px] bg-primary bg-box-color border border-white/5 rounded-12 flex items-center justify-center group hover:border-secondary/30 transition-all duration-300 relative overflow-hidden before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-0 before:bg-linear-to-t before:from-secondary/20 before:to-transparent hover:before:h-full before:transition-all before:duration-500 before:pointer-events-none">
+                                <div class="flex items-center gap-3 relative z-10">
+                                    <img src="assets/images/brand/grammarly.png" alt="grammarly">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Medium -->
+                        <div class="swiper-slide">
+                            <div
+                                class="h-[100px] bg-primary bg-box-color border border-white/5 rounded-12 flex items-center justify-center group hover:border-secondary/30 transition-all duration-300 relative overflow-hidden before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-0 before:bg-linear-to-t before:from-secondary/20 before:to-transparent hover:before:h-full before:transition-all before:duration-500 before:pointer-events-none">
+                                <div class="flex items-center gap-3 relative z-10">
+                                    <img src="assets/images/brand/medium.png" alt="medium">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Microsoft -->
+                        <div class="swiper-slide">
+                            <div
+                                class="h-[100px] bg-primary bg-box-color border border-white/5 rounded-12 flex items-center justify-center group hover:border-secondary/30 transition-all duration-300 relative overflow-hidden before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-0 before:bg-linear-to-t before:from-secondary/20 before:to-transparent hover:before:h-full before:transition-all before:duration-500 before:pointer-events-none">
+                                <div class="flex items-center gap-3 relative z-10">
+                                    <img src="assets/images/brand/microsoft.png" alt="microsoft">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Airbnb -->
+                        <div class="swiper-slide">
+                            <div
+                                class="h-[100px] bg-primary bg-box-color border border-white/5 rounded-12 flex items-center justify-center group hover:border-secondary/30 transition-all duration-300 relative overflow-hidden before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-0 before:bg-linear-to-t before:from-secondary/20 before:to-transparent hover:before:h-full before:transition-all before:duration-500 before:pointer-events-none">
+                                <div class="flex items-center gap-3 relative z-10">
+                                    <img src="assets/images/brand/airbnb.png" alt="airbnb">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Framer -->
+                        <div class="swiper-slide">
+                            <div
+                                class="h-[100px] bg-primary bg-box-color border border-white/5 rounded-12 flex items-center justify-center group hover:border-secondary/30 transition-all duration-300 relative overflow-hidden before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-0 before:bg-linear-to-t before:from-secondary/20 before:to-transparent hover:before:h-full before:transition-all before:duration-500 before:pointer-events-none">
+                                <div class="flex items-center gap-3 relative z-10">
+                                    <img src="assets/images/brand/framer.png" alt="framer">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Discord -->
+                        <div class="swiper-slide relative">
+                            <div
+                                class="h-[100px] bg-primary bg-box-color border border-white/5 rounded-12 flex items-center justify-center group hover:border-secondary/30 transition-all duration-300 relative overflow-hidden before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-0 before:bg-linear-to-t before:from-secondary/20 before:to-transparent hover:before:h-full before:transition-all before:duration-500 before:pointer-events-none">
+                                <div class="flex items-center gap-3 relative z-10">
+                                    <img src="assets/images/brand/discord.png" alt="discord">
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-            <!-- Hero Section End -->
-    
+
+            </div>
+        </section>
+        <!-- Major Partners Section End -->
+
 
         <!-- Set Career Goals -->
         <section class="bg-primary py-20 md:py-24 pt-120 pb-120">
             <div class="max-w-[1320px] mx-auto px-4">
                 <div class="text-center mb-12 md:mb-16">
                     <span
-                    class="inline-flex items-center justify-center gap-2 border border-white/10 rounded-[50px] px-4 py-2 text-[14px] gradient-color-primary bg-clip-text text-transparent font-semibold">
-                    <i class="fa-solid fa-graduation-cap text-[14px] gradient-color-primary bg-clip-text text-transparent"></i>
-                    Set Career Goals
-                </span>
+                        class="inline-flex items-center justify-center gap-2 border border-white/10 rounded-[50px] px-4 py-2 text-[14px] gradient-color-primary bg-clip-text text-transparent font-semibold">
+                        <i
+                            class="fa-solid fa-graduation-cap text-[14px] gradient-color-primary bg-clip-text text-transparent"></i>
+                        Set Career Goals
+                    </span>
                     <h1 class="text-white text-[36px] md:text-[54px] font-bold mb-4 leading-tight">
                         Your Journey to a Better You<br>
                         <span class="gradient-color-primary bg-clip-text text-transparent">Begins Here</span>
@@ -401,16 +1021,16 @@
         <!-- Courses -->
         <section class="bg-primary  py-20 md:py-24">
             <div class="max-w-[1820px] mx-auto px-4">
-                <div
-                    class="relative overflow-hidden rounded-[20px] bg-[#160A35] bg-no-repeat bg-center bg-cover px-5 py-12 md:px-10 md:py-16 before:pointer-events-none before:content-[''] before:absolute before:top-[-120px] before:left-[-120px] before:w-[260px] before:h-[260px] before:bg-[#B26EF7] before:opacity-25 before:blur-[110px] before:rounded-full after:pointer-events-none after:content-[''] after:absolute after:bottom-[-120px] after:right-[-120px] after:w-[260px] after:h-[260px] after:bg-[#FF71BF] after:opacity-20 after:blur-[110px] after:rounded-full"
+                <div class="relative overflow-hidden rounded-[20px] bg-[#160A35] bg-no-repeat bg-center bg-cover px-5 py-12 md:px-10 md:py-16 before:pointer-events-none before:content-[''] before:absolute before:top-[-120px] before:left-[-120px] before:w-[260px] before:h-[260px] before:bg-[#B26EF7] before:opacity-25 before:blur-[110px] before:rounded-full after:pointer-events-none after:content-[''] after:absolute after:bottom-[-120px] after:right-[-120px] after:w-[260px] after:h-[260px] after:bg-[#FF71BF] after:opacity-20 after:blur-[110px] after:rounded-full"
                     data-background="assets/images/course/bg-shape.png">
                     <div class="relative z-10">
                         <div class="text-center max-w-[760px] mx-auto mb-10 md:mb-12">
                             <span
-                            class="inline-flex items-center justify-center gap-2 border border-white/10 rounded-[50px] px-4 py-2 text-[14px] gradient-color-primary bg-clip-text text-transparent font-semibold">
-                            <i class="fa-solid fa-graduation-cap text-[14px] gradient-color-primary bg-clip-text text-transparent"></i>
-                            10+ Courses
-                        </span>
+                                class="inline-flex items-center justify-center gap-2 border border-white/10 rounded-[50px] px-4 py-2 text-[14px] gradient-color-primary bg-clip-text text-transparent font-semibold">
+                                <i
+                                    class="fa-solid fa-graduation-cap text-[14px] gradient-color-primary bg-clip-text text-transparent"></i>
+                                10+ Courses
+                            </span>
                             <h2 class="text-white text-[30px] md:text-[44px] font-bold mt-5 leading-tight">
                                 Pick Your Favorite Course and
                                 <span class="text-secondary">Grow your Skills</span>
@@ -432,7 +1052,8 @@
                                                     Level</span>
                                             </div>
                                             <div class="p-6 flex flex-col h-full">
-                                                <div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-white/60 text-[12px] mb-4">
+                                                <div
+                                                    class="flex flex-wrap items-center gap-x-5 gap-y-2 text-white/60 text-[12px] mb-4">
                                                     <span class="inline-flex items-center gap-2">
                                                         <i class="fa-regular fa-file-lines text-secondary"></i>
                                                         15 Lessons
@@ -483,12 +1104,13 @@
                                                 <img src="assets/images/course/course-imag2.webp"
                                                     alt="Fast rendering that keeps every interaction smooth and responsive"
                                                     class="w-full h-[210px] object-cover transition duration-500 ease-out hover:scale-110 hover:opacity-80">
-                                                    <span
+                                                <span
                                                     class="absolute top-4 right-4 bg-[#9382FF] text-white text-[12px] font-medium px-3 py-1 rounded-[20px]">All
                                                     Level</span>
                                             </div>
                                             <div class="p-6 flex flex-col h-full">
-                                                <div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-white/60 text-[12px] mb-4">
+                                                <div
+                                                    class="flex flex-wrap items-center gap-x-5 gap-y-2 text-white/60 text-[12px] mb-4">
                                                     <span class="inline-flex items-center gap-2">
                                                         <i class="fa-regular fa-file-lines text-secondary"></i>
                                                         12 Lessons
@@ -525,8 +1147,8 @@
                                                         <span class="text-white/35 line-through text-[14px]">$150</span>
                                                     </div>
                                                     <a href="#"
-                                                    class="inline-flex items-center justify-center h-[40px] px-5 rounded-[20px] bg-gradient-to-r from-[#B26EF7] via-[#FF71BF] to-[#FFBD7A] text-white text-[14px] font-medium hover:shadow-[0px_8px_25px_rgba(178,110,247,0.45)] transition-all">View
-                                                    Details</a>
+                                                        class="inline-flex items-center justify-center h-[40px] px-5 rounded-[20px] bg-gradient-to-r from-[#B26EF7] via-[#FF71BF] to-[#FFBD7A] text-white text-[14px] font-medium hover:shadow-[0px_8px_25px_rgba(178,110,247,0.45)] transition-all">View
+                                                        Details</a>
                                                 </div>
                                             </div>
                                         </article>
@@ -539,12 +1161,13 @@
                                                 <img src="assets/images/course/course-imag3.webp"
                                                     alt="Smart architecture that simplifies development and maintenance"
                                                     class="w-full h-[210px] object-cover transition duration-500 ease-out hover:scale-110 hover:opacity-80">
-                                                    <span
+                                                <span
                                                     class="absolute top-4 right-4 bg-[#9382FF] text-white text-[12px] font-medium px-3 py-1 rounded-[20px]">All
                                                     Level</span>
                                             </div>
                                             <div class="p-6 flex flex-col h-full">
-                                                <div class="flex flex-wrap items-center gap-x-5 gap-y-2 text-white/60 text-[12px] mb-4">
+                                                <div
+                                                    class="flex flex-wrap items-center gap-x-5 gap-y-2 text-white/60 text-[12px] mb-4">
                                                     <span class="inline-flex items-center gap-2">
                                                         <i class="fa-regular fa-file-lines text-secondary"></i>
                                                         14 Lessons
@@ -581,8 +1204,8 @@
                                                         <span class="text-white/35 line-through text-[14px]">$150</span>
                                                     </div>
                                                     <a href="#"
-                                                    class="inline-flex items-center justify-center h-[40px] px-5 rounded-[20px] bg-gradient-to-r from-[#B26EF7] via-[#FF71BF] to-[#FFBD7A] text-white text-[14px] font-medium hover:shadow-[0px_8px_25px_rgba(178,110,247,0.45)] transition-all">View
-                                                    Details</a>
+                                                        class="inline-flex items-center justify-center h-[40px] px-5 rounded-[20px] bg-gradient-to-r from-[#B26EF7] via-[#FF71BF] to-[#FFBD7A] text-white text-[14px] font-medium hover:shadow-[0px_8px_25px_rgba(178,110,247,0.45)] transition-all">View
+                                                        Details</a>
                                                 </div>
                                             </div>
                                         </article>
@@ -590,7 +1213,7 @@
                                 </div>
                             </div>
 
-                       
+
                         </div>
                         <div class="mt-10 flex items-center justify-center">
                             <div
@@ -601,7 +1224,8 @@
                                 </button>
 
                                 <div
-                                    class="course-swiper-pagination flex items-center justify-center text-center overflow-inherit gap-[10px] [&_.swiper-pagination-bullet]:w-[6px] [&_.swiper-pagination-bullet]:h-[6px] [&_.swiper-pagination-bullet]:rounded-full [&_.swiper-pagination-bullet]:bg-[rgba(255, 255, 255, 0.1)] [&_.swiper-pagination-bullet]:opacity-100 [&_.swiper-pagination-bullet]:transition-all [&_.swiper-pagination-bullet-active]:w-[12px] [&_.swiper-pagination-bullet-active]:h-[12px] [&_.swiper-pagination-bullet-active]:bg-white [&_.swiper-pagination-bullet-active]:shadow-[0px_0px_0px_6px_rgba(255,255,255,0.06)] [&_.swiper-pagination-bullet-active-main]:w-[12px] [&_.swiper-pagination-bullet-active-main]:h-[12px] [&_.swiper-pagination-bullet-active-main]:bg-white [&_.swiper-pagination-bullet-active-main]:shadow-[0px_0px_0px_6px_rgba(255,255,255,0.06)]"></div>
+                                    class="course-swiper-pagination flex items-center justify-center text-center overflow-inherit gap-[10px] [&_.swiper-pagination-bullet]:w-[6px] [&_.swiper-pagination-bullet]:h-[6px] [&_.swiper-pagination-bullet]:rounded-full [&_.swiper-pagination-bullet]:bg-[rgba(255, 255, 255, 0.1)] [&_.swiper-pagination-bullet]:opacity-100 [&_.swiper-pagination-bullet]:transition-all [&_.swiper-pagination-bullet-active]:w-[12px] [&_.swiper-pagination-bullet-active]:h-[12px] [&_.swiper-pagination-bullet-active]:bg-white [&_.swiper-pagination-bullet-active]:shadow-[0px_0px_0px_6px_rgba(255,255,255,0.06)] [&_.swiper-pagination-bullet-active-main]:w-[12px] [&_.swiper-pagination-bullet-active-main]:h-[12px] [&_.swiper-pagination-bullet-active-main]:bg-white [&_.swiper-pagination-bullet-active-main]:shadow-[0px_0px_0px_6px_rgba(255,255,255,0.06)]">
+                                </div>
 
                                 <button type="button" aria-label="Next course"
                                     class="course-swiper-next relative flex items-center justify-center w-[26px] h-[26px] rounded-[12px] bg-gradient-to-r from-[#B26EF7] via-[#FF71BF] to-[#FFBD7A] text-white shadow-[0px_14px_40px_rgba(178,110,247,0.35)] transition-all hover:shadow-[0px_16px_45px_rgba(255,113,191,0.35)] hover:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30 after:content-[''] after:absolute after:inset-[6px] after:rounded-full after:border after:border-white/20">
@@ -615,13 +1239,16 @@
         </section>
 
         <section class="bg-primary py-20 md:py-24 relative overflow-hidden">
-            <div class="pointer-events-none absolute -top-[160px] left-1/2 -translate-x-1/2 w-[420px] h-[420px] bg-[#B26EF7] opacity-15 blur-[140px] rounded-full"></div>
+            <div
+                class="pointer-events-none absolute -top-[160px] left-1/2 -translate-x-1/2 w-[420px] h-[420px] bg-[#B26EF7] opacity-15 blur-[140px] rounded-full">
+            </div>
 
             <div class="max-w-[1320px] mx-auto px-4">
                 <div class="text-center max-w-[860px] mx-auto">
                     <span
                         class="inline-flex items-center justify-center gap-2 border border-white/10 rounded-[50px] px-4 py-2 text-[14px] gradient-color-primary bg-clip-text text-transparent font-semibold">
-                        <i class="fa-solid fa-graduation-cap text-[14px] gradient-color-primary bg-clip-text text-transparent"></i>
+                        <i
+                            class="fa-solid fa-graduation-cap text-[14px] gradient-color-primary bg-clip-text text-transparent"></i>
                         Set Career Goals
                     </span>
                     <h2 class="text-white text-[36px] md:text-[54px] font-bold mt-5 leading-[1.12]">
@@ -636,8 +1263,12 @@
                             <div class="swiper-slide h-auto">
                                 <article
                                     class="h-full bg-[#0F102A] border border-white/10 rounded-[16px] p-8 md:p-10 relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:border-white/20 hover:shadow-[0px_18px_60px_rgba(0,0,0,0.35)]">
-                                    <div class="pointer-events-none absolute -top-[90px] -right-[110px] w-[260px] h-[260px] bg-[#B26EF7] opacity-15 blur-[120px] rounded-full"></div>
-                                    <div class="pointer-events-none absolute -bottom-[90px] -left-[110px] w-[260px] h-[260px] bg-[#FF71BF] opacity-10 blur-[120px] rounded-full"></div>
+                                    <div
+                                        class="pointer-events-none absolute -top-[90px] -right-[110px] w-[260px] h-[260px] bg-[#B26EF7] opacity-15 blur-[120px] rounded-full">
+                                    </div>
+                                    <div
+                                        class="pointer-events-none absolute -bottom-[90px] -left-[110px] w-[260px] h-[260px] bg-[#FF71BF] opacity-10 blur-[120px] rounded-full">
+                                    </div>
 
                                     <div class="relative z-10">
                                         <div class="flex items-center gap-3 text-white/80">
@@ -666,13 +1297,20 @@
                                                         loading="lazy" decoding="async">
                                                     <div
                                                         class="absolute -right-[6px] -bottom-[6px] w-[26px] h-[26px] rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
-                                                        <i class="fa-solid fa-quote-left text-secondary text-[12px]"></i>
+                                                        <i
+                                                            class="fa-solid fa-quote-left text-secondary text-[12px]"></i>
                                                     </div>
                                                 </div>
                                                 <div>
-                                                    <h3 class="text-white text-[18px] font-semibold leading-none">David Krumholtz</h3>
+                                                    <h3 class="text-white text-[18px] font-semibold leading-none">David
+                                                        Krumholtz</h3>
                                                     <p class="text-white/55 text-[14px] mt-2 leading-none">Developer</p>
                                                 </div>
+                                            </div>
+
+                                            <div
+                                                class="w-[44px] h-[44px] rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/30 transition-all duration-500 group-hover:bg-white/10 group-hover:border-white/20 group-hover:text-white/50">
+                                                <i class="fa-brands fa-google text-[20px]"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -682,8 +1320,12 @@
                             <div class="swiper-slide h-auto">
                                 <article
                                     class="h-full bg-[#0F102A] border border-white/10 rounded-[16px] p-8 md:p-10 relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:border-white/20 hover:shadow-[0px_18px_60px_rgba(0,0,0,0.35)]">
-                                    <div class="pointer-events-none absolute -top-[90px] -right-[110px] w-[260px] h-[260px] bg-[#B26EF7] opacity-15 blur-[120px] rounded-full"></div>
-                                    <div class="pointer-events-none absolute -bottom-[90px] -left-[110px] w-[260px] h-[260px] bg-[#FF71BF] opacity-10 blur-[120px] rounded-full"></div>
+                                    <div
+                                        class="pointer-events-none absolute -top-[90px] -right-[110px] w-[260px] h-[260px] bg-[#B26EF7] opacity-15 blur-[120px] rounded-full">
+                                    </div>
+                                    <div
+                                        class="pointer-events-none absolute -bottom-[90px] -left-[110px] w-[260px] h-[260px] bg-[#FF71BF] opacity-10 blur-[120px] rounded-full">
+                                    </div>
 
                                     <div class="relative z-10">
                                         <div class="flex items-center gap-3 text-white/80">
@@ -712,13 +1354,20 @@
                                                         loading="lazy" decoding="async">
                                                     <div
                                                         class="absolute -right-[6px] -bottom-[6px] w-[26px] h-[26px] rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
-                                                        <i class="fa-solid fa-quote-left text-secondary text-[12px]"></i>
+                                                        <i
+                                                            class="fa-solid fa-quote-left text-secondary text-[12px]"></i>
                                                     </div>
                                                 </div>
                                                 <div>
-                                                    <h3 class="text-white text-[18px] font-semibold leading-none">Shannon Chan</h3>
+                                                    <h3 class="text-white text-[18px] font-semibold leading-none">
+                                                        Shannon Chan</h3>
                                                     <p class="text-white/55 text-[14px] mt-2 leading-none">Developer</p>
                                                 </div>
+                                            </div>
+
+                                            <div
+                                                class="w-[44px] h-[44px] rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/30 transition-all duration-500 group-hover:bg-white/10 group-hover:border-white/20 group-hover:text-white/50">
+                                                <i class="fa-brands fa-amazon text-[20px]"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -728,8 +1377,12 @@
                             <div class="swiper-slide h-auto">
                                 <article
                                     class="h-full bg-[#0F102A] border border-white/10 rounded-[16px] p-8 md:p-10 relative overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:border-white/20 hover:shadow-[0px_18px_60px_rgba(0,0,0,0.35)]">
-                                    <div class="pointer-events-none absolute -top-[90px] -right-[110px] w-[260px] h-[260px] bg-[#B26EF7] opacity-15 blur-[120px] rounded-full"></div>
-                                    <div class="pointer-events-none absolute -bottom-[90px] -left-[110px] w-[260px] h-[260px] bg-[#FF71BF] opacity-10 blur-[120px] rounded-full"></div>
+                                    <div
+                                        class="pointer-events-none absolute -top-[90px] -right-[110px] w-[260px] h-[260px] bg-[#B26EF7] opacity-15 blur-[120px] rounded-full">
+                                    </div>
+                                    <div
+                                        class="pointer-events-none absolute -bottom-[90px] -left-[110px] w-[260px] h-[260px] bg-[#FF71BF] opacity-10 blur-[120px] rounded-full">
+                                    </div>
 
                                     <div class="relative z-10">
                                         <div class="flex items-center gap-3 text-white/80">
@@ -758,13 +1411,20 @@
                                                         loading="lazy" decoding="async">
                                                     <div
                                                         class="absolute -right-[6px] -bottom-[6px] w-[26px] h-[26px] rounded-full bg-white/5 border border-white/10 flex items-center justify-center">
-                                                        <i class="fa-solid fa-quote-left text-secondary text-[12px]"></i>
+                                                        <i
+                                                            class="fa-solid fa-quote-left text-secondary text-[12px]"></i>
                                                     </div>
                                                 </div>
                                                 <div>
-                                                    <h3 class="text-white text-[18px] font-semibold leading-none">Sarah Ali</h3>
+                                                    <h3 class="text-white text-[18px] font-semibold leading-none">Sarah
+                                                        Ali</h3>
                                                     <p class="text-white/55 text-[14px] mt-2 leading-none">Developer</p>
                                                 </div>
+                                            </div>
+
+                                            <div
+                                                class="w-[44px] h-[44px] rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white/30 transition-all duration-500 group-hover:bg-white/10 group-hover:border-white/20 group-hover:text-white/50">
+                                                <i class="fa-brands fa-microsoft text-[20px]"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -790,14 +1450,20 @@
             </div>
         </section>
 
-        <section class="bg-primary py-20 md:py-24 relative overflow-hidden">
-            <div class="pointer-events-none absolute -top-[160px] left-1/2 -translate-x-1/2 w-[420px] h-[420px] bg-[#FF71BF] opacity-10 blur-[140px] rounded-full"></div>
+
+
+        <!-- Team Section -->
+        <section class="bg-primary py-20 md:py-24 relative overflow-hidden abe">
+            <div
+                class="pointer-events-none absolute -top-[160px] left-1/2 -translate-x-1/2 w-[420px] h-[420px] bg-[#FF71BF] opacity-10 blur-[140px] rounded-full">
+            </div>
 
             <div class="max-w-[1320px] mx-auto px-4">
                 <div class="text-center max-w-[860px] mx-auto">
                     <span
                         class="inline-flex items-center justify-center gap-2 border border-white/10 rounded-[50px] px-4 py-2 text-[14px] gradient-color-primary bg-clip-text text-transparent font-semibold">
-                        <i class="fa-solid fa-graduation-cap text-[14px] gradient-color-primary bg-clip-text text-transparent"></i>
+                        <i
+                            class="fa-solid fa-graduation-cap text-[14px] gradient-color-primary bg-clip-text text-transparent"></i>
                         Set Career Goals
                     </span>
                     <h2 class="text-white text-[36px] md:text-[54px] font-bold mt-5 leading-[1.12]">
@@ -811,72 +1477,46 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide h-auto">
                                 <article
-                                    class="h-full group bg-[#0F102A] border border-white/10 rounded-[16px] overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:border-white/20 hover:shadow-[0px_18px_60px_rgba(0,0,0,0.35)]">
+                                    class="h-full group bg-[#0F102A] border border-white/10 rounded-[16px] overflow-hidden transition-all duration-500 ease-in-out hover:border-white/20 hover:shadow-[0px_18px_60px_rgba(0,0,0,0.35)] focus-within:border-white/20"
+                                    data-team-card>
                                     <div class="relative overflow-hidden">
-                                        <img src="assets/images/blog/bg.webp" alt="Stellan Skarsgard"
-                                            class="w-full h-[360px] object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                                        <img src="assets/images/team/teacher1.webp" alt="Stellan Skarsgard"
+                                            class="w-full h-[300px] md:h-[360px] object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                                             loading="lazy" decoding="async">
-                                        <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#050520]/85 via-[#050520]/15 to-transparent opacity-90"></div>
-                                        <button type="button" aria-label="Share"
-                                            class="absolute right-4 bottom-4 w-[42px] h-[42px] rounded-full bg-white/5 border border-white/10 text-white/80 flex items-center justify-center transition-all duration-500 hover:bg-white/10 hover:border-white/20 active:scale-95">
-                                            <i class="fa-solid fa-share-nodes text-[14px]"></i>
-                                        </button>
-                                    </div>
-                                    <div class="px-6 py-5">
-                                        <div class="flex items-center justify-between gap-3">
-                                            <div>
-                                                <h3 class="text-white text-[18px] font-semibold leading-none">Stellan Skarsgard</h3>
-                                                <p class="text-white/55 text-[14px] mt-2 leading-none">Developer</p>
-                                            </div>
-                                            <button type="button" aria-label="Profile"
-                                                class="w-[40px] h-[40px] rounded-full bg-white/5 border border-white/10 text-white/70 flex items-center justify-center transition-all duration-500 hover:bg-secondary hover:border-secondary hover:text-white active:scale-95">
-                                                <i class="fa-solid fa-arrow-up-right-from-square text-[14px]"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </article>
-                            </div>
-
-                            <div class="swiper-slide h-auto">
-                                <article
-                                    class="h-full group bg-[#0F102A] border border-white/10 rounded-[16px] overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:border-white/20 hover:shadow-[0px_18px_60px_rgba(0,0,0,0.35)]">
-                                    <div class="relative overflow-hidden">
-                                        <img src="assets/images/blog/bg-1.webp" alt="Charlotte Rampling"
-                                            class="w-full h-[360px] object-cover transition-transform duration-700 ease-out group-hover:scale-110"
-                                            loading="lazy" decoding="async">
-                                        <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#050520]/85 via-[#050520]/15 to-transparent opacity-90"></div>
-
                                         <div
-                                            class="absolute right-4 top-1/2 -translate-y-1/2 flex flex-col gap-2 opacity-0 translate-x-2 transition-all duration-500 group-hover:opacity-100 group-hover:translate-x-0">
-                                            <a href="#" aria-label="Facebook"
-                                                class="w-[34px] h-[34px] rounded-full bg-white/5 border border-white/10 text-secondary flex items-center justify-center transition-all duration-500 hover:bg-secondary hover:border-secondary hover:text-white">
-                                                <i class="fa-brands fa-facebook-f text-[12px]"></i>
-                                            </a>
-                                            <a href="#" aria-label="Twitter"
-                                                class="w-[34px] h-[34px] rounded-full bg-white/5 border border-white/10 text-secondary flex items-center justify-center transition-all duration-500 hover:bg-secondary hover:border-secondary hover:text-white">
-                                                <i class="fa-brands fa-x-twitter text-[12px]"></i>
-                                            </a>
-                                            <a href="#" aria-label="LinkedIn"
-                                                class="w-[34px] h-[34px] rounded-full bg-white/5 border border-white/10 text-secondary flex items-center justify-center transition-all duration-500 hover:bg-secondary hover:border-secondary hover:text-white">
-                                                <i class="fa-brands fa-linkedin-in text-[12px]"></i>
-                                            </a>
+                                            class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#050520]/90 via-[#050520]/25 to-transparent opacity-95">
                                         </div>
 
-                                        <button type="button" aria-label="Share"
-                                            class="absolute right-4 bottom-4 w-[46px] h-[46px] rounded-full bg-gradient-to-r from-[#B26EF7] via-[#FF71BF] to-[#FFBD7A] text-white flex items-center justify-center shadow-[0px_14px_40px_rgba(178,110,247,0.35)] transition-all duration-500 hover:shadow-[0px_16px_45px_rgba(255,113,191,0.35)] hover:scale-105 active:scale-95">
-                                            <i class="fa-solid fa-share-nodes text-[14px]"></i>
-                                        </button>
                                     </div>
                                     <div class="px-6 py-5">
                                         <div class="flex items-center justify-between gap-3">
                                             <div>
-                                                <h3 class="text-white text-[18px] font-semibold leading-none">Charlotte Rampling</h3>
+                                                <h3 class="text-white text-[18px] font-semibold leading-none">Stellan
+                                                    Skarsgard</h3>
                                                 <p class="text-white/55 text-[14px] mt-2 leading-none">Developer</p>
                                             </div>
-                                            <button type="button" aria-label="Profile"
-                                                class="w-[40px] h-[40px] rounded-full bg-white/5 border border-white/10 text-white/70 flex items-center justify-center transition-all duration-500 hover:bg-secondary hover:border-secondary hover:text-white active:scale-95">
-                                                <i class="fa-solid fa-arrow-up-right-from-square text-[14px]"></i>
-                                            </button>
+                                            <div class="relative group/teamshare" data-team-share-wrap>
+                                                <div class="absolute right-0 bottom-full mb-2 flex flex-col items-center gap-2 px-2 py-3 rounded-full bg-[#0F102A]/95 border border-white/10 shadow-[0px_18px_60px_rgba(0,0,0,0.35)] opacity-0 translate-y-2 scale-95 pointer-events-none transition-all duration-300 ease-out group-hover/teamshare:opacity-100 group-hover/teamshare:translate-y-0 group-hover/teamshare:scale-100 group-hover/teamshare:pointer-events-auto group-focus-within/teamshare:opacity-100 group-focus-within/teamshare:translate-y-0 group-focus-within/teamshare:scale-100 group-focus-within/teamshare:pointer-events-auto"
+                                                    data-team-social>
+                                                    <a href="#" aria-label="Facebook"
+                                                        class="w-[36px] h-[36px] rounded-full bg-white/5 border border-white/10 text-secondary flex items-center justify-center opacity-0 translate-y-2 transition-all duration-300 ease-out delay-75 group-hover/teamshare:opacity-100 group-hover/teamshare:translate-y-0 group-focus-within/teamshare:opacity-100 group-focus-within/teamshare:translate-y-0 hover:bg-secondary hover:border-secondary hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30">
+                                                        <i class="fa-brands fa-facebook-f text-[12px]"></i>
+                                                    </a>
+                                                    <a href="#" aria-label="Twitter"
+                                                        class="w-[36px] h-[36px] rounded-full bg-white/5 border border-white/10 text-secondary flex items-center justify-center opacity-0 translate-y-2 transition-all duration-300 ease-out delay-100 group-hover/teamshare:opacity-100 group-hover/teamshare:translate-y-0 group-focus-within/teamshare:opacity-100 group-focus-within/teamshare:translate-y-0 hover:bg-secondary hover:border-secondary hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30">
+                                                        <i class="fa-brands fa-x-twitter text-[12px]"></i>
+                                                    </a>
+                                                    <a href="#" aria-label="LinkedIn"
+                                                        class="w-[36px] h-[36px] rounded-full bg-white/5 border border-white/10 text-secondary flex items-center justify-center opacity-0 translate-y-2 transition-all duration-300 ease-out delay-150 group-hover/teamshare:opacity-100 group-hover/teamshare:translate-y-0 group-focus-within/teamshare:opacity-100 group-focus-within/teamshare:translate-y-0 hover:bg-secondary hover:border-secondary hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30">
+                                                        <i class="fa-brands fa-linkedin-in text-[12px]"></i>
+                                                    </a>
+                                                </div>
+                                                <button type="button" aria-label="Share"
+                                                    class="w-[44px] h-[44px] rounded-big bg-[#0F102A] border border-white/10 text-white flex items-center justify-center shadow-[0px_14px_40px_rgba(0,0,0,0.35)] transition-all duration-300 ease-out group-hover/teamshare:rounded-full group-hover/teamshare:bg-linear-to-r group-hover/teamshare:from-border-secondary group-hover/teamshare:via-[#FF71BF] group-hover/teamshare:to-[#FFBD7A] group-hover/teamshare:border-transparent group-hover/teamshare:shadow-[0px_14px_40px_rgba(178,110,247,0.35)] group-hover/teamshare:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
+                                                    aria-expanded="false" data-team-share>
+                                                    <i class="fa-solid fa-share-nodes text-[14px]"></i>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </article>
@@ -884,27 +1524,94 @@
 
                             <div class="swiper-slide h-auto">
                                 <article
-                                    class="h-full group bg-[#0F102A] border border-white/10 rounded-[16px] overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:border-white/20 hover:shadow-[0px_18px_60px_rgba(0,0,0,0.35)]">
+                                    class="h-full group bg-[#0F102A] border border-white/10 rounded-[16px] overflow-hidden transition-all duration-500 ease-in-out hover:border-white/20 hover:shadow-[0px_18px_60px_rgba(0,0,0,0.35)] focus-within:border-white/20"
+                                    data-team-card>
                                     <div class="relative overflow-hidden">
-                                        <img src="assets/images/course/course-imag.webp" alt="Javier Bardem"
-                                            class="w-full h-[360px] object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                                        <img src="assets/images/team/teacher2.webp" alt="Charlotte Rampling"
+                                            class="w-full h-[300px] md:h-[360px] object-cover transition-transform duration-700 ease-out"
                                             loading="lazy" decoding="async">
-                                        <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#050520]/85 via-[#050520]/15 to-transparent opacity-90"></div>
-                                        <button type="button" aria-label="Share"
-                                            class="absolute right-4 bottom-4 w-[42px] h-[42px] rounded-full bg-white/5 border border-white/10 text-white/80 flex items-center justify-center transition-all duration-500 hover:bg-white/10 hover:border-white/20 active:scale-95">
-                                            <i class="fa-solid fa-share-nodes text-[14px]"></i>
-                                        </button>
+                                        <div
+                                            class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#050520]/90 via-[#050520]/25 to-transparent opacity-95">
+                                        </div>
+
+
                                     </div>
                                     <div class="px-6 py-5">
                                         <div class="flex items-center justify-between gap-3">
                                             <div>
-                                                <h3 class="text-white text-[18px] font-semibold leading-none">Javier Bardem</h3>
+                                                <h3 class="text-white text-[18px] font-semibold leading-none">Charlotte
+                                                    Rampling</h3>
                                                 <p class="text-white/55 text-[14px] mt-2 leading-none">Developer</p>
                                             </div>
-                                            <button type="button" aria-label="Profile"
-                                                class="w-[40px] h-[40px] rounded-full bg-white/5 border border-white/10 text-white/70 flex items-center justify-center transition-all duration-500 hover:bg-secondary hover:border-secondary hover:text-white active:scale-95">
-                                                <i class="fa-solid fa-arrow-up-right-from-square text-[14px]"></i>
-                                            </button>
+                                            <div class="relative group/teamshare" data-team-share-wrap>
+                                                <div class="absolute right-0 bottom-full mb-2 flex flex-col items-center gap-2 px-2 py-3 rounded-full bg-[#0F102A]/95 border border-white/10 shadow-[0px_18px_60px_rgba(0,0,0,0.35)] opacity-0 translate-y-2 scale-95 pointer-events-none transition-all duration-300 ease-out group-hover/teamshare:opacity-100 group-hover/teamshare:translate-y-0 group-hover/teamshare:scale-100 group-hover/teamshare:pointer-events-auto group-focus-within/teamshare:opacity-100 group-focus-within/teamshare:translate-y-0 group-focus-within/teamshare:scale-100 group-focus-within/teamshare:pointer-events-auto"
+                                                    data-team-social>
+                                                    <a href="#" aria-label="Facebook"
+                                                        class="w-[36px] h-[36px] rounded-full bg-white/5 border border-white/10 text-secondary flex items-center justify-center opacity-0 translate-y-2 transition-all duration-300 ease-out delay-75 group-hover/teamshare:opacity-100 group-hover/teamshare:translate-y-0 group-focus-within/teamshare:opacity-100 group-focus-within/teamshare:translate-y-0 hover:bg-secondary hover:border-secondary hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30">
+                                                        <i class="fa-brands fa-facebook-f text-[12px]"></i>
+                                                    </a>
+                                                    <a href="#" aria-label="Twitter"
+                                                        class="w-[36px] h-[36px] rounded-full bg-white/5 border border-white/10 text-secondary flex items-center justify-center opacity-0 translate-y-2 transition-all duration-300 ease-out delay-100 group-hover/teamshare:opacity-100 group-hover/teamshare:translate-y-0 group-focus-within/teamshare:opacity-100 group-focus-within/teamshare:translate-y-0 hover:bg-secondary hover:border-secondary hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30">
+                                                        <i class="fa-brands fa-x-twitter text-[12px]"></i>
+                                                    </a>
+                                                    <a href="#" aria-label="LinkedIn"
+                                                        class="w-[36px] h-[36px] rounded-full bg-white/5 border border-white/10 text-secondary flex items-center justify-center opacity-0 translate-y-2 transition-all duration-300 ease-out delay-150 group-hover/teamshare:opacity-100 group-hover/teamshare:translate-y-0 group-focus-within/teamshare:opacity-100 group-focus-within/teamshare:translate-y-0 hover:bg-secondary hover:border-secondary hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30">
+                                                        <i class="fa-brands fa-linkedin-in text-[12px]"></i>
+                                                    </a>
+                                                </div>
+                                                <button type="button" aria-label="Share"
+                                                    class="w-[44px] h-[44px] rounded-big bg-[#0F102A] border border-white/10 text-white flex items-center justify-center shadow-[0px_14px_40px_rgba(0,0,0,0.35)] transition-all duration-300 ease-out group-hover/teamshare:rounded-full group-hover/teamshare:bg-linear-to-r group-hover/teamshare:from-border-secondary group-hover/teamshare:via-[#FF71BF] group-hover/teamshare:to-[#FFBD7A] group-hover/teamshare:border-transparent group-hover/teamshare:shadow-[0px_14px_40px_rgba(178,110,247,0.35)] group-hover/teamshare:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
+                                                    aria-expanded="false" data-team-share>
+                                                    <i class="fa-solid fa-share-nodes text-[14px]"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+
+                            <div class="swiper-slide h-auto">
+                                <article
+                                    class="h-full group bg-[#0F102A] border border-white/10 rounded-[16px] overflow-hidden transition-all duration-500 ease-in-out hover:border-white/20 hover:shadow-[0px_18px_60px_rgba(0,0,0,0.35)] focus-within:border-white/20"
+                                    data-team-card>
+                                    <div class="relative overflow-hidden">
+                                        <img src="assets/images/team/teacher3.webp" alt="Javier Bardem"
+                                            class="w-full h-[300px] md:h-[360px] object-cover transition-transform duration-700 ease-out"
+                                            loading="lazy" decoding="async">
+                                        <div
+                                            class="pointer-events-none absolute inset-0 bg-gradient-to-t from-[#050520]/90 via-[#050520]/25 to-transparent opacity-95">
+                                        </div>
+
+                                    </div>
+                                    <div class="px-6 py-5">
+                                        <div class="flex items-center justify-between gap-3">
+                                            <div>
+                                                <h3 class="text-white text-[18px] font-semibold leading-none">Javier
+                                                    Bardem</h3>
+                                                <p class="text-white/55 text-[14px] mt-2 leading-none">Developer</p>
+                                            </div>
+                                            <div class="relative group/teamshare" data-team-share-wrap>
+                                                <div class="absolute right-0 bottom-full mb-2 flex flex-col items-center gap-2 px-2 py-3 rounded-full bg-[#0F102A]/95 border border-white/10 shadow-[0px_18px_60px_rgba(0,0,0,0.35)] opacity-0 translate-y-2 scale-95 pointer-events-none transition-all duration-300 ease-out group-hover/teamshare:opacity-100 group-hover/teamshare:translate-y-0 group-hover/teamshare:scale-100 group-hover/teamshare:pointer-events-auto group-focus-within/teamshare:opacity-100 group-focus-within/teamshare:translate-y-0 group-focus-within/teamshare:scale-100 group-focus-within/teamshare:pointer-events-auto"
+                                                    data-team-social>
+                                                    <a href="#" aria-label="Facebook"
+                                                        class="w-[36px] h-[36px] rounded-full bg-white/5 border border-white/10 text-secondary flex items-center justify-center opacity-0 translate-y-2 transition-all duration-300 ease-out delay-75 group-hover/teamshare:opacity-100 group-hover/teamshare:translate-y-0 group-focus-within/teamshare:opacity-100 group-focus-within/teamshare:translate-y-0 hover:bg-secondary hover:border-secondary hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30">
+                                                        <i class="fa-brands fa-facebook-f text-[12px]"></i>
+                                                    </a>
+                                                    <a href="#" aria-label="Twitter"
+                                                        class="w-[36px] h-[36px] rounded-full bg-white/5 border border-white/10 text-secondary flex items-center justify-center opacity-0 translate-y-2 transition-all duration-300 ease-out delay-100 group-hover/teamshare:opacity-100 group-hover/teamshare:translate-y-0 group-focus-within/teamshare:opacity-100 group-focus-within/teamshare:translate-y-0 hover:bg-secondary hover:border-secondary hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30">
+                                                        <i class="fa-brands fa-x-twitter text-[12px]"></i>
+                                                    </a>
+                                                    <a href="#" aria-label="LinkedIn"
+                                                        class="w-[36px] h-[36px] rounded-full bg-white/5 border border-white/10 text-secondary flex items-center justify-center opacity-0 translate-y-2 transition-all duration-300 ease-out delay-150 group-hover/teamshare:opacity-100 group-hover/teamshare:translate-y-0 group-focus-within/teamshare:opacity-100 group-focus-within/teamshare:translate-y-0 hover:bg-secondary hover:border-secondary hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30">
+                                                        <i class="fa-brands fa-linkedin-in text-[12px]"></i>
+                                                    </a>
+                                                </div>
+                                                <button type="button" aria-label="Share"
+                                                    class="w-[44px] h-[44px] rounded-big bg-[#0F102A] border border-white/10 text-white flex items-center justify-center shadow-[0px_14px_40px_rgba(0,0,0,0.35)] transition-all duration-300 ease-out group-hover/teamshare:rounded-full group-hover/teamshare:bg-linear-to-r group-hover/teamshare:from-border-secondary group-hover/teamshare:via-[#FF71BF] group-hover/teamshare:to-[#FFBD7A] group-hover/teamshare:border-transparent group-hover/teamshare:shadow-[0px_14px_40px_rgba(178,110,247,0.35)] group-hover/teamshare:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30"
+                                                    aria-expanded="false" data-team-share>
+                                                    <i class="fa-solid fa-share-nodes text-[14px]"></i>
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </article>
@@ -916,16 +1623,17 @@
                         <div
                             class="flex items-center justify-between gap-[22px] w-full max-w-[220px] h-[46px] px-[18px] rounded-[50px] bg-primary border border-white/10 backdrop-blur-[20px] shadow-[0px_18px_60px_rgba(0,0,0,0.35)]">
                             <button type="button" aria-label="Previous team"
-                                class="team-swiper-prev relative flex items-center justify-center w-[26px] h-[26px] rounded-full bg-white/5 border border-white/20 text-white/80 transition-all hover:bg-white/10 hover:text-white hover:border-white/30 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30">
-                                <i class="fa-solid fa-chevron-left text-[16px] leading-none"></i>
+                                class="team-swiper-prev relative flex items-center justify-center w-[30px] h-[30px] rounded-full bg-white/5 border border-white/20 text-white/80 transition-all duration-300 hover:bg-white/10 hover:text-white hover:border-white/30 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30">
+                                <i class="fa-solid fa-chevron-left text-[14px] leading-none"></i>
                             </button>
 
                             <div
-                                class="team-swiper-pagination flex items-center justify-center text-center overflow-inherit gap-[10px] [&_.swiper-pagination-bullet]:w-[6px] [&_.swiper-pagination-bullet]:h-[6px] [&_.swiper-pagination-bullet]:rounded-full [&_.swiper-pagination-bullet]:bg-[rgba(255, 255, 255, 0.1)] [&_.swiper-pagination-bullet]:opacity-100 [&_.swiper-pagination-bullet]:transition-all [&_.swiper-pagination-bullet-active]:w-[12px] [&_.swiper-pagination-bullet-active]:h-[12px] [&_.swiper-pagination-bullet-active]:bg-white [&_.swiper-pagination-bullet-active]:shadow-[0px_0px_0px_6px_rgba(255,255,255,0.06)]"></div>
+                                class="team-swiper-pagination flex items-center justify-center text-center overflow-visible gap-[10px] [&_.swiper-pagination-bullet]:w-[6px] [&_.swiper-pagination-bullet]:h-[6px] [&_.swiper-pagination-bullet]:rounded-full [&_.swiper-pagination-bullet]:bg-[rgba(255,255,255,0.1)] [&_.swiper-pagination-bullet]:opacity-100 [&_.swiper-pagination-bullet]:transition-all [&_.swiper-pagination-bullet-active]:w-[12px] [&_.swiper-pagination-bullet-active]:h-[12px] [&_.swiper-pagination-bullet-active]:bg-white [&_.swiper-pagination-bullet-active]:shadow-[0px_0px_0px_6px_rgba(255,255,255,0.06)]">
+                            </div>
 
                             <button type="button" aria-label="Next team"
-                                class="team-swiper-next relative flex items-center justify-center w-[26px] h-[26px] rounded-[12px] bg-gradient-to-r from-[#B26EF7] via-[#FF71BF] to-[#FFBD7A] text-white shadow-[0px_14px_40px_rgba(178,110,247,0.35)] transition-all hover:shadow-[0px_16px_45px_rgba(255,113,191,0.35)] hover:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30">
-                                <i class="fa-solid fa-chevron-right text-[10px] leading-none"></i>
+                                class="team-swiper-next relative flex items-center justify-center w-[30px] h-[30px] rounded-full bg-gradient-to-r from-[#B26EF7] via-[#FF71BF] to-[#FFBD7A] text-white shadow-[0px_14px_40px_rgba(178,110,247,0.35)] transition-all duration-300 hover:shadow-[0px_16px_45px_rgba(255,113,191,0.35)] hover:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30">
+                                <i class="fa-solid fa-chevron-right text-[14px] leading-none"></i>
                             </button>
                         </div>
                     </div>
@@ -935,15 +1643,20 @@
 
         <!-- faq section start -->
         <section class="bg-primary py-20 md:py-24 relative overflow-hidden">
-            <div class="pointer-events-none absolute -top-[140px] -left-[140px] w-[320px] h-[320px] bg-[#B26EF7] opacity-20 blur-[120px] rounded-full"></div>
-            <div class="pointer-events-none absolute -bottom-[140px] -right-[140px] w-[320px] h-[320px] bg-[#FF71BF] opacity-15 blur-[120px] rounded-full"></div>
+            <div
+                class="pointer-events-none absolute -top-[140px] -left-[140px] w-[320px] h-[320px] bg-[#B26EF7] opacity-20 blur-[120px] rounded-full">
+            </div>
+            <div
+                class="pointer-events-none absolute -bottom-[140px] -right-[140px] w-[320px] h-[320px] bg-[#FF71BF] opacity-15 blur-[120px] rounded-full">
+            </div>
 
             <div class="max-w-[1320px] mx-auto px-4">
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
                     <div>
                         <span
                             class="inline-flex items-center justify-center gap-2 border border-white/10 rounded-[50px] px-4 py-2 text-[14px] gradient-color-primary bg-clip-text text-transparent font-semibold">
-                            <i class="fa-solid fa-circle-question text-[14px] gradient-color-primary bg-clip-text text-transparent"></i>
+                            <i
+                                class="fa-solid fa-circle-question text-[14px] gradient-color-primary bg-clip-text text-transparent"></i>
                             Most Asked Question
                         </span>
 
@@ -962,7 +1675,8 @@
                                     <span
                                         class="w-[34px] h-[34px] rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/80 transition-all duration-500"
                                         data-faq-icon>
-                                        <i class="fa-solid fa-angle-down text-[14px] rotate-180 transition-transform duration-500"></i>
+                                        <i
+                                            class="fa-solid fa-angle-down text-[14px] rotate-180 transition-transform duration-500"></i>
                                     </span>
                                 </button>
                                 <div class="grid grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-in-out"
@@ -971,7 +1685,8 @@
                                         <div class="px-5 pb-5 text-white/65 text-[14px] leading-relaxed">
                                             We offer a wide range of courses in a variety of subjects including science,
                                             technology, engineering, mathematics, humanities and social sciences. Our
-                                            courses are designed for a variety of educational levels, from primary school
+                                            courses are designed for a variety of educational levels, from primary
+                                            school
                                             to university.
                                         </div>
                                     </div>
@@ -983,11 +1698,13 @@
                                 <button type="button"
                                     class="w-full flex items-center justify-between gap-4 px-5 py-4 text-left text-white/90 text-[15px] md:text-[16px] font-medium transition-colors hover:text-white"
                                     aria-expanded="false" data-faq-trigger>
-                                    <span class="flex-1">02 How is special education delivered in inclusive classrooms?</span>
+                                    <span class="flex-1">02 How is special education delivered in inclusive
+                                        classrooms?</span>
                                     <span
                                         class="w-[34px] h-[34px] rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/80 transition-all duration-500"
                                         data-faq-icon>
-                                        <i class="fa-solid fa-angle-down text-[14px] transition-transform duration-500"></i>
+                                        <i
+                                            class="fa-solid fa-angle-down text-[14px] transition-transform duration-500"></i>
                                     </span>
                                 </button>
                                 <div class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-in-out"
@@ -1007,11 +1724,13 @@
                                 <button type="button"
                                     class="w-full flex items-center justify-between gap-4 px-5 py-4 text-left text-white/90 text-[15px] md:text-[16px] font-medium transition-colors hover:text-white"
                                     aria-expanded="false" data-faq-trigger>
-                                    <span class="flex-1">03 How can teachers effectively manage a diverse classroom?</span>
+                                    <span class="flex-1">03 How can teachers effectively manage a diverse
+                                        classroom?</span>
                                     <span
                                         class="w-[34px] h-[34px] rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/80 transition-all duration-500"
                                         data-faq-icon>
-                                        <i class="fa-solid fa-angle-down text-[14px] transition-transform duration-500"></i>
+                                        <i
+                                            class="fa-solid fa-angle-down text-[14px] transition-transform duration-500"></i>
                                     </span>
                                 </button>
                                 <div class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-in-out"
@@ -1019,7 +1738,8 @@
                                     <div class="min-h-0">
                                         <div class="px-5 pb-5 text-white/65 text-[14px] leading-relaxed">
                                             Use clear routines, differentiated activities, and formative feedback.
-                                            Small-group instruction and consistent expectations help keep learning smooth
+                                            Small-group instruction and consistent expectations help keep learning
+                                            smooth
                                             and inclusive.
                                         </div>
                                     </div>
@@ -1031,11 +1751,13 @@
                                 <button type="button"
                                     class="w-full flex items-center justify-between gap-4 px-5 py-4 text-left text-white/90 text-[15px] md:text-[16px] font-medium transition-colors hover:text-white"
                                     aria-expanded="false" data-faq-trigger>
-                                    <span class="flex-1">04 How can teachers effectively manage a diverse classroom?</span>
+                                    <span class="flex-1">04 How can teachers effectively manage a diverse
+                                        classroom?</span>
                                     <span
                                         class="w-[34px] h-[34px] rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/80 transition-all duration-500"
                                         data-faq-icon>
-                                        <i class="fa-solid fa-angle-down text-[14px] transition-transform duration-500"></i>
+                                        <i
+                                            class="fa-solid fa-angle-down text-[14px] transition-transform duration-500"></i>
                                     </span>
                                 </button>
                                 <div class="grid grid-rows-[0fr] transition-[grid-template-rows] duration-500 ease-in-out"
@@ -1056,8 +1778,7 @@
                             class="pointer-events-none absolute -top-[30px] -left-[36px] w-[110px] h-[110px] opacity-80"
                             loading="lazy" decoding="async">
 
-                        <div
-                            class="relative bg-[#0F102A] border border-white/10 rounded-[20px] p-4 overflow-hidden">
+                        <div class="relative bg-[#0F102A] border border-white/10 rounded-[20px] p-4 overflow-hidden">
                             <img src="assets/images/faq/card-shape.png" alt=""
                                 class="pointer-events-none absolute -top-[40px] -right-[40px] w-[220px] opacity-40"
                                 loading="lazy" decoding="async">
@@ -1068,8 +1789,7 @@
                             </div>
 
                             <img src="assets/images/faq/Image.webp" alt="Student"
-                                class="w-full h-[520px] object-cover rounded-[14px]"
-                                loading="lazy" decoding="async">
+                                class="w-full h-[520px] object-cover rounded-[14px]" loading="lazy" decoding="async">
                         </div>
 
                         <div
@@ -1106,17 +1826,23 @@
         <!-- faq section end -->
 
         <section class="bg-primary py-20 md:py-24 relative overflow-hidden">
-            <div class="pointer-events-none absolute -top-[170px] -left-[170px] w-[360px] h-[360px] bg-[#B26EF7] opacity-15 blur-[140px] rounded-full"></div>
-            <div class="pointer-events-none absolute -bottom-[170px] -right-[170px] w-[360px] h-[360px] bg-[#FF71BF] opacity-10 blur-[140px] rounded-full"></div>
+            <div
+                class="pointer-events-none absolute -top-[170px] -left-[170px] w-[360px] h-[360px] bg-[#B26EF7] opacity-15 blur-[140px] rounded-full">
+            </div>
+            <div
+                class="pointer-events-none absolute -bottom-[170px] -right-[170px] w-[360px] h-[360px] bg-[#FF71BF] opacity-10 blur-[140px] rounded-full">
+            </div>
 
             <div class="max-w-[1320px] mx-auto px-4">
                 <div class="text-center max-w-[820px] mx-auto">
                     <span
                         class="inline-flex items-center justify-center gap-2 border border-white/10 rounded-[50px] px-4 py-2 text-[14px] gradient-color-primary bg-clip-text text-transparent font-semibold">
-                        <i class="fa-solid fa-lightbulb text-[14px] gradient-color-primary bg-clip-text text-transparent"></i>
+                        <i
+                            class="fa-solid fa-lightbulb text-[14px] gradient-color-primary bg-clip-text text-transparent"></i>
                         Our Insights
                     </span>
-                    <h2 class="text-white text-[36px] md:text-[54px] font-bold mt-5 leading-[1.12]">Latest News & Blog</h2>
+                    <h2 class="text-white text-[36px] md:text-[54px] font-bold mt-5 leading-[1.12]">Latest News & Blog
+                    </h2>
                 </div>
 
                 <div class="mt-12 md:mt-14">
@@ -1124,9 +1850,9 @@
                         <div class="swiper-wrapper">
                             <div class="swiper-slide h-auto">
                                 <article
-                                    class="h-full group bg-[#0F102A] border border-white/10 rounded-[16px] overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:border-white/20 hover:shadow-[0px_18px_60px_rgba(0,0,0,0.35)]">
+                                    class="h-full group bg-[#0F102A] border border-white/10 rounded-[16px] overflow-hidden transition-all duration-500 ease-in-out hover:border-white/20 hover:shadow-[0px_18px_60px_rgba(0,0,0,0.35)]">
                                     <a href="#" class="block relative overflow-hidden">
-                                        <img src="assets/images/blog/bg.webp" alt="Top 10 E-Learning Tools"
+                                        <img src="assets/images/blog/blog-image1.webp" alt="Top 10 E-Learning Tools"
                                             class="w-full h-[260px] object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                                             loading="lazy" decoding="async">
                                         <span
@@ -1135,7 +1861,8 @@
                                         </span>
                                     </a>
                                     <div class="p-6">
-                                        <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-white/55 text-[12px]">
+                                        <div
+                                            class="flex flex-wrap items-center gap-x-4 gap-y-2 text-white/55 text-[12px]">
                                             <span class="inline-flex items-center gap-2">
                                                 <i class="fa-regular fa-user text-secondary"></i>
                                                 by John David
@@ -1158,8 +1885,9 @@
 
                                         <div class="mt-6">
                                             <a href="#"
-                                                class="inline-flex items-center justify-center h-[38px] px-4 rounded-[50px] bg-white/5 border border-white/10 text-white/70 text-[13px] transition-all duration-500 hover:bg-white/10 hover:border-white/20 hover:text-white">
-                                                Read More <i class="fa-solid fa-arrow-right text-[12px] ml-2"></i>
+                                                class="inline-flex items-center justify-center h-[38px] px-4 rounded-[50px] bg-white/5 border border-white/10 text-white/70 text-[13px] transition-all duration-500 ease-in-out group-hover:bg-linear-to-r group-hover:from-border-secondary group-hover:via-[#FF71BF] group-hover:to-[#FFBD7A] group-hover:text-white group-hover:border-transparent group-hover:-translate-y-1 group-hover:shadow-[0px_10px_20px_rgba(178,110,247,0.3)]">
+                                                Read More <i
+                                                    class="fa-solid fa-arrow-right text-[12px] ml-2 transition-transform duration-500 group-hover:translate-x-1"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -1168,9 +1896,9 @@
 
                             <div class="swiper-slide h-auto">
                                 <article
-                                    class="h-full group bg-[#0F102A] border border-white/10 rounded-[16px] overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:border-white/20 hover:shadow-[0px_18px_60px_rgba(0,0,0,0.35)]">
+                                    class="h-full group bg-[#0F102A] border border-white/10 rounded-[16px] overflow-hidden transition-all duration-500 ease-in-out hover:border-white/20 hover:shadow-[0px_18px_60px_rgba(0,0,0,0.35)]">
                                     <a href="#" class="block relative overflow-hidden">
-                                        <img src="assets/images/blog/bg-1.webp" alt="Top 10 E-Learning Tools"
+                                        <img src="assets/images/blog/blog-image2.webp" alt="Top 10 E-Learning Tools"
                                             class="w-full h-[260px] object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                                             loading="lazy" decoding="async">
                                         <span
@@ -1179,7 +1907,8 @@
                                         </span>
                                     </a>
                                     <div class="p-6">
-                                        <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-white/55 text-[12px]">
+                                        <div
+                                            class="flex flex-wrap items-center gap-x-4 gap-y-2 text-white/55 text-[12px]">
                                             <span class="inline-flex items-center gap-2">
                                                 <i class="fa-regular fa-user text-secondary"></i>
                                                 by John David
@@ -1202,8 +1931,9 @@
 
                                         <div class="mt-6">
                                             <a href="#"
-                                                class="inline-flex items-center justify-center h-[38px] px-4 rounded-[50px] bg-white/5 border border-white/10 text-white/70 text-[13px] transition-all duration-500 hover:bg-white/10 hover:border-white/20 hover:text-white">
-                                                Read More <i class="fa-solid fa-arrow-right text-[12px] ml-2"></i>
+                                                class="inline-flex items-center justify-center h-[38px] px-4 rounded-[50px] bg-white/5 border border-white/10 text-white/70 text-[13px] transition-all duration-500 ease-in-out group-hover:bg-linear-to-r group-hover:from-border-secondary group-hover:via-[#FF71BF] group-hover:to-[#FFBD7A] group-hover:text-white group-hover:border-transparent group-hover:-translate-y-1 group-hover:shadow-[0px_10px_20px_rgba(178,110,247,0.3)]">
+                                                Read More <i
+                                                    class="fa-solid fa-arrow-right text-[12px] ml-2 transition-transform duration-500 group-hover:translate-x-1"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -1212,9 +1942,9 @@
 
                             <div class="swiper-slide h-auto">
                                 <article
-                                    class="h-full group bg-[#0F102A] border border-white/10 rounded-[16px] overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:border-white/20 hover:shadow-[0px_18px_60px_rgba(0,0,0,0.35)]">
+                                    class="h-full group bg-[#0F102A] border border-white/10 rounded-[16px] overflow-hidden transition-all duration-500 ease-in-out hover:border-white/20 hover:shadow-[0px_18px_60px_rgba(0,0,0,0.35)]">
                                     <a href="#" class="block relative overflow-hidden">
-                                        <img src="assets/images/course/course-imag3.webp" alt="Top 10 E-Learning Tools"
+                                        <img src="assets/images/blog/blog-image3.webp" alt="Top 10 E-Learning Tools"
                                             class="w-full h-[260px] object-cover transition-transform duration-700 ease-out group-hover:scale-110"
                                             loading="lazy" decoding="async">
                                         <span
@@ -1223,7 +1953,8 @@
                                         </span>
                                     </a>
                                     <div class="p-6">
-                                        <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-white/55 text-[12px]">
+                                        <div
+                                            class="flex flex-wrap items-center gap-x-4 gap-y-2 text-white/55 text-[12px]">
                                             <span class="inline-flex items-center gap-2">
                                                 <i class="fa-regular fa-user text-secondary"></i>
                                                 by John David
@@ -1246,8 +1977,9 @@
 
                                         <div class="mt-6">
                                             <a href="#"
-                                                class="inline-flex items-center justify-center h-[38px] px-4 rounded-[50px] bg-white/5 border border-white/10 text-white/70 text-[13px] transition-all duration-500 hover:bg-white/10 hover:border-white/20 hover:text-white">
-                                                Read More <i class="fa-solid fa-arrow-right text-[12px] ml-2"></i>
+                                                class="inline-flex items-center justify-center h-[38px] px-4 rounded-[50px] bg-white/5 border border-white/10 text-white/70 text-[13px] transition-all duration-500 ease-in-out group-hover:bg-linear-to-r group-hover:from-border-secondary group-hover:via-[#FF71BF] group-hover:to-[#FFBD7A] group-hover:text-white group-hover:border-transparent group-hover:-translate-y-1 group-hover:shadow-[0px_10px_20px_rgba(178,110,247,0.3)]">
+                                                Read More <i
+                                                    class="fa-solid fa-arrow-right text-[12px] ml-2 transition-transform duration-500 group-hover:translate-x-1"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -1260,11 +1992,11 @@
                         <div
                             class="flex items-center justify-between gap-[18px] w-full max-w-[120px] h-[46px] px-[14px] rounded-[50px] bg-primary border border-white/10 backdrop-blur-[20px] shadow-[0px_18px_60px_rgba(0,0,0,0.35)]">
                             <button type="button" aria-label="Previous blog"
-                                class="blog-swiper-prev relative flex items-center justify-center w-[28px] h-[28px] rounded-full bg-white/5 border border-white/20 text-white/80 transition-all hover:bg-white/10 hover:text-white hover:border-white/30 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30">
+                                class="blog-swiper-prev relative flex items-center justify-center w-[28px] h-[28px] rounded-full bg-white/5 border border-white/20 text-white/80 transition-all duration-500 ease-in-out hover:bg-white/10 hover:text-white hover:border-white/30 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30">
                                 <i class="fa-solid fa-angle-left text-[16px] leading-none"></i>
                             </button>
                             <button type="button" aria-label="Next blog"
-                                class="blog-swiper-next relative flex items-center justify-center w-[34px] h-[34px] rounded-full bg-gradient-to-r from-[#B26EF7] via-[#FF71BF] to-[#FFBD7A] text-white shadow-[0px_14px_40px_rgba(178,110,247,0.35)] transition-all hover:shadow-[0px_16px_45px_rgba(255,113,191,0.35)] hover:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30">
+                                class="blog-swiper-next relative flex items-center justify-center w-[34px] h-[34px] rounded-full bg-gradient-to-r from-[#B26EF7] via-[#FF71BF] to-[#FFBD7A] text-white shadow-[0px_14px_40px_rgba(178,110,247,0.35)] transition-all duration-500 ease-in-out hover:shadow-[0px_16px_45px_rgba(255,113,191,0.35)] hover:scale-105 active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/30">
                                 <i class="fa-solid fa-angle-right text-[14px] leading-none"></i>
                             </button>
                         </div>
@@ -1273,10 +2005,10 @@
             </div>
         </section>
 
-        
+
     </main>
 
-    <footer class="bg-primary relative overflow-hidden pt-16 pb-8">
+    <footer class="bg-primary relative overflow-hidden pb-8">
         <div class="max-w-[1320px] mx-auto px-4">
             <section class="mb-16">
                 <div class="bg-border-primary rounded-[16px] p-8 md:p-12">
@@ -1430,6 +2162,25 @@
             </div>
         </div>
     </footer>
+
+    <div id="back-to-top"
+        class="fixed bottom-[30px] right-[30px] z-60 w-[100px] h-[100px] cursor-pointer group opacity-0 invisible translate-y-4 transition-all duration-500">
+        <div id="back-to-top-glow" class="absolute inset-0 rounded-full bg-[#24BD25]/0 transition-all duration-500">
+        </div>
+        <svg class="w-full h-full transform -rotate-90 relative z-10">
+            <circle class="text-white/10" stroke-width="4" stroke="currentColor" fill="transparent" r="45" cx="50"
+                cy="50"></circle>
+            <circle id="back-to-top-progress" class="text-[#24BD25]" stroke-width="4" stroke-dasharray="282.7"
+                stroke-dashoffset="282.7" stroke-linecap="round" stroke="currentColor" fill="transparent" r="45" cx="50"
+                cy="50"></circle>
+        </svg>
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+            <span id="back-to-top-percent" class="text-white text-[18px] font-bold font-spartan leading-none">0%</span>
+            <span id="back-to-top-text"
+                class="text-white/60 text-[10px] font-medium font-inter uppercase tracking-wider mt-1 leading-tight">Explore
+                <br> More</span>
+        </div>
+    </div>
 
     <script src="assets/js/modernizr.min.js"></script>
     <script src="assets/js/jquery.js"></script>
