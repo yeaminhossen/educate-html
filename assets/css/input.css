@@ -571,5 +571,54 @@
   .footer-menu-link.active .footer-arrow {
     opacity: 1;
   }
+}
 
+/* Light Theme Overrides */
+.light-theme {
+  --color-primary: #ffffff;
+  --color-white: #050520;
+  --color-heading: #050520;
+  --color-body: #444444;
+  --box-color: #f8f9fa;
+  --color-border-white: rgba(0, 0, 0, 0.1);
+  --color-border-primary: #e5e7eb;
+}
+
+.light-theme body {
+  background-color: var(--color-primary);
+  color: var(--color-body);
+}
+
+.light-theme .text-white,
+.light-theme .text-white\/90,
+.light-theme .text-white\/80,
+.light-theme .text-white\/70,
+.light-theme .text-white\/60,
+.light-theme .text-white\/50,
+.light-theme .text-white\/40,
+.light-theme .text-white\/30 {
+  color: var(--color-heading) !important;
+}
+
+.light-theme .bg-primary,
+.light-theme .bg-\[\#050520\],
+.light-theme .bg-\[\#11112D\],
+.light-theme .bg-\[\#0F102A\] {
+  background-color: var(--color-primary) !important;
+}
+
+.light-theme .bg-white\/5 {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+.light-theme .border-white\/5,
+.light-theme .border-white\/10 {
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.light-theme #theme-toggle {
+    background-color: #ffffff !important;
+    border-color: rgba(0, 0, 0, 0.1) !important;
+    color: #050520 !important;
+    shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
 }

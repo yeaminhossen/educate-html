@@ -418,4 +418,67 @@ document.addEventListener('DOMContentLoaded', function () {
             }, 0);
         }
     }
+
+    // Counter Up Animation
+    const counters = document.querySelectorAll('.counter');
+    const counterObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                const target = parseInt(counter.getAttribute('data-target'));
+                const duration = 2000; // 2 seconds
+                const startTime = performance.now();
+
+                const updateCounter = (currentTime) => {
+                    const elapsedTime = currentTime - startTime;
+                    const progress = Math.min(elapsedTime / duration, 1);
+                    const currentCount = Math.floor(progress * target);
+
+                    // Add comma for large numbers (like 1,500)
+                    counter.innerText = currentCount.toLocaleString();
+
+                    if (progress < 1) {
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.innerText = target.toLocaleString();
+                    }
+                };
+
+                requestAnimationFrame(updateCounter);
+                observer.unobserve(counter);
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+
+    counters.forEach(counter => counterObserver.observe(counter));
+
+    // Theme Toggle Logic
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+    const htmlElement = document.documentElement;
+
+    // Check for saved theme preference or use default dark
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+
+    if (currentTheme === 'light') {
+        htmlElement.classList.add('light-theme');
+        themeToggleDarkIcon.classList.add('hidden');
+        themeToggleLightIcon.classList.remove('hidden');
+    }
+
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+            const isLight = htmlElement.classList.toggle('light-theme');
+            
+            // Toggle icons: Dark mode (not isLight) -> Moon icon, Light mode (isLight) -> Sun icon
+            themeToggleDarkIcon.classList.toggle('hidden', isLight);
+            themeToggleLightIcon.classList.toggle('hidden', !isLight);
+            
+            // Save preference
+            localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        });
+    }
 });
