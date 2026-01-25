@@ -13,7 +13,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
     <!-- Google Fonts -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Spartan:wght@100..900&display=swap"
         rel="stylesheet">
     <!-- CSS
 	============================================ -->
@@ -23,19 +23,9 @@
     <link rel="stylesheet" href="assets/css/output.css">
     <link rel="stylesheet" href="assets/css/input.css">
     <link rel="stylesheet" href="assets/css/style.css">
-
-    <script>
-        // Check for saved theme preference or use default dark
-        (function () {
-            const currentTheme = localStorage.getItem('theme') || 'dark';
-            if (currentTheme === 'light') {
-                document.documentElement.classList.add('light-theme');
-            }
-        })();
-    </script>
 </head>
 
-<body class="rbt-header-sticky primary-color">
+<body class="rbt-header-sticky primary-color font-inter">
     <!-- Preloader Start -->
     <div id="preloader"
         class="fixed inset-0 z-9999 flex items-center justify-center bg-primary transition-all duration-700 overflow-hidden">
@@ -69,7 +59,7 @@
     <!-- Preloader End -->
 
 
-    <header class="bg-primary sticky top-0 z-50 border-b border-white/5 shadow-lg">
+    <header class="bg-[#11112A] sticky top-0 z-50 border-b border-white/5 shadow-lg">
         <div class="max-w-[1320px] mx-auto px-4 relative">
             <div class="flex items-center justify-between h-[90px]">
                 <!-- Logo Section -->
@@ -545,7 +535,7 @@
                     </div>
 
                     <!-- Cart Icon -->
-                    <div class="relative cursor-pointer group">
+                    <div id="cart-btn" class="relative cursor-pointer group">
                         <div
                             class="w-[46px] h-[46px] rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/90 group-hover:bg-secondary group-hover:border-secondary transition-all duration-300">
                             <i class="fa-solid fa-cart-shopping text-[17px]"></i>
@@ -554,9 +544,104 @@
                             class="absolute -top-1 -right-1 w-[20px] h-[20px] bg-[#9382FF] text-white text-[11px] font-bold rounded-full flex items-center justify-center border-2 border-primary">2</span>
                     </div>
 
-                    <!-- Login link -->
-                    <a href="#"
-                        class="hidden md:block text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300">Login</a>
+                    <!-- Login link replaced with User Profile Dropdown -->
+                    <div class="relative group/user">
+                        <button id="user-profile-btn"
+                            class="hidden md:flex items-center gap-2 text-secondary text-[16px] font-medium font-inter transition-all duration-300 cursor-pointer">
+                            <i class="fa-regular fa-user"></i>
+                            <span>Admin</span>
+                        </button>
+
+                        <!-- User Dropdown Menu -->
+                        <div id="user-profile-dropdown"
+                            class="absolute top-full right-0 mt-6 w-[280px] bg-white rounded-xl shadow-[0px_20px_50px_rgba(0,0,0,0.1)] opacity-0 invisible translate-y-4 transition-all duration-300 z-[100] overflow-hidden">
+                            <!-- Profile Header -->
+                            <div class="p-6 pb-4 flex items-center gap-4">
+                                <div class="w-16 h-16 rounded-full overflow-hidden border-2 border-secondary/20 shrink-0">
+                                    <img src="assets/images/team/team-1.webp" alt="User" class="w-full h-full object-cover">
+                                </div>
+                                <div class="overflow-hidden">
+                                    <h4 class="text-[18px] font-bold font-spartan text-[#050520] truncate">RainbowIT</h4>
+                                    <a href="#"
+                                        class="text-secondary text-[14px] font-medium font-inter hover:underline">View
+                                        Profile</a>
+                                </div>
+                            </div>
+
+                            <!-- Menu Links -->
+                            <div class="py-2">
+                                <a href="#"
+                                    class="flex items-center gap-3 px-6 py-2.5 text-[#52526C] hover:text-secondary hover:bg-secondary/5 transition-all text-[15px] font-medium font-inter group/item">
+                                    <i class="fa-solid fa-house-chimney w-5 text-center text-gray-400 group-hover/item:text-secondary transition-colors"></i>
+                                    <span>My Dashboard</span>
+                                </a>
+                                <a href="#"
+                                    class="flex items-center gap-3 px-6 py-2.5 text-[#52526C] hover:text-secondary hover:bg-secondary/5 transition-all text-[15px] font-medium font-inter group/item">
+                                    <i class="fa-regular fa-bookmark w-5 text-center text-gray-400 group-hover/item:text-secondary transition-colors"></i>
+                                    <span>Bookmark</span>
+                                </a>
+                                <a href="#"
+                                    class="flex items-center gap-3 px-6 py-2.5 text-[#52526C] hover:text-secondary hover:bg-secondary/5 transition-all text-[15px] font-medium font-inter group/item">
+                                    <i class="fa-solid fa-briefcase w-5 text-center text-gray-400 group-hover/item:text-secondary transition-colors"></i>
+                                    <span>Enrolled Courses</span>
+                                </a>
+                                <a href="#"
+                                    class="flex items-center gap-3 px-6 py-2.5 text-[#52526C] hover:text-secondary hover:bg-secondary/5 transition-all text-[15px] font-medium font-inter group/item">
+                                    <i class="fa-regular fa-heart w-5 text-center text-gray-400 group-hover/item:text-secondary transition-colors"></i>
+                                    <span>Wishlist</span>
+                                </a>
+                                <a href="#"
+                                    class="flex items-center gap-3 px-6 py-2.5 text-[#52526C] hover:text-secondary hover:bg-secondary/5 transition-all text-[15px] font-medium font-inter group/item">
+                                    <i class="fa-regular fa-star w-5 text-center text-gray-400 group-hover/item:text-secondary transition-colors"></i>
+                                    <span>Reviews</span>
+                                </a>
+                                <a href="#"
+                                    class="flex items-center gap-3 px-6 py-2.5 text-[#52526C] hover:text-secondary hover:bg-secondary/5 transition-all text-[15px] font-medium font-inter group/item">
+                                    <i class="fa-solid fa-list-check w-5 text-center text-gray-400 group-hover/item:text-secondary transition-colors"></i>
+                                    <span>My Quiz Attempts</span>
+                                </a>
+                                <a href="#"
+                                    class="flex items-center gap-3 px-6 py-2.5 text-[#52526C] hover:text-secondary hover:bg-secondary/5 transition-all text-[15px] font-medium font-inter group/item">
+                                    <i class="fa-regular fa-clock w-5 text-center text-gray-400 group-hover/item:text-secondary transition-colors"></i>
+                                    <span>Order History</span>
+                                </a>
+                                <a href="#"
+                                    class="flex items-center gap-3 px-6 py-2.5 text-[#52526C] hover:text-secondary hover:bg-secondary/5 transition-all text-[15px] font-medium font-inter group/item">
+                                    <i class="fa-regular fa-comment w-5 text-center text-gray-400 group-hover/item:text-secondary transition-colors"></i>
+                                    <span>Question & Answer</span>
+                                </a>
+                            </div>
+
+                            <!-- Separator -->
+                            <div class="border-t border-gray-100"></div>
+
+                            <!-- Getting Started -->
+                            <div class="py-2">
+                                <a href="#"
+                                    class="flex items-center gap-3 px-6 py-2.5 text-[#52526C] hover:text-secondary hover:bg-secondary/5 transition-all text-[15px] font-medium font-inter group/item">
+                                    <i class="fa-solid fa-book-open w-5 text-center text-gray-400 group-hover/item:text-secondary transition-colors"></i>
+                                    <span>Getting Started</span>
+                                </a>
+                            </div>
+
+                            <!-- Separator -->
+                            <div class="border-t border-gray-100"></div>
+
+                            <!-- Settings & Logout -->
+                            <div class="py-2">
+                                <a href="#"
+                                    class="flex items-center gap-3 px-6 py-2.5 text-[#52526C] hover:text-secondary hover:bg-secondary/5 transition-all text-[15px] font-medium font-inter group/item">
+                                    <i class="fa-solid fa-gear w-5 text-center text-gray-400 group-hover/item:text-secondary transition-colors"></i>
+                                    <span>Settings</span>
+                                </a>
+                                <a href="#"
+                                    class="flex items-center gap-3 px-6 py-2.5 text-[#52526C] hover:text-secondary hover:bg-secondary/5 transition-all text-[15px] font-medium font-inter group/item">
+                                    <i class="fa-solid fa-arrow-right-from-bracket w-5 text-center text-gray-400 group-hover/item:text-secondary transition-colors"></i>
+                                    <span>Logout</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
 
                     <!-- Join Button -->
                     <a href="#"
@@ -590,7 +675,7 @@
 
     <main>
         <!-- Hero Section Start -->
-        <section class="bg-[#050520] pt-[120px] pb-[100px] relative overflow-hidden">
+        <section id="hero" class="bg-primary pt-[120px] pb-[100px] relative overflow-hidden rbt-scroll-trigger rbt-scroll-trigger--offscreen">
             <!-- Shape Background -->
             <div class="absolute top-[150px] left-0 pointer-events-none z-0">
                 <img src="assets/images/hero/shape.png" alt="Shape" class="w-auto h-auto">
@@ -608,16 +693,16 @@
             <div class="max-w-[1320px] mx-auto px-4 relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-[60px] items-center">
                     <!-- Left Content -->
-                    <div class="lg:col-span-7">
+                    <div class="lg:col-span-8">
                         <span
                             class="inline-flex items-center gap-2.5 px-5 py-2 rounded-[50px] bg-white/5 border border-white/10 text-secondary text-[14px] font-semibold font-inter mb-8">
                             <i class="fa-solid fa-user-graduate text-secondary"></i>
                             Welcome To Online Education
                         </span>
 
-                        <h1 class="text-white text-[48px] md:text-[72px] font-bold font-spartan leading-[1.1] mb-8">
+                        <h1 class="text-white text-[48px] md:text-[65px] font-bold font-spartan leading-[80px] mb-8">
                             Start learning from the world’s <span
-                                class="gradient-color-primary bg-clip-text text-transparent">Best Sites</span>
+                                class="gradient-color-primary bg-clip-text text-transparent font-semibold">Best Sites</span>
                         </h1>
 
                         <p class="text-white/60 text-[18px] leading-[1.7] font-inter mb-12 max-w-[520px]">
@@ -643,7 +728,7 @@
                                     <i class="fa-solid fa-video"></i>
                                 </div>
                                 <div>
-                                    <h4 class="text-white text-[24px] font-bold font-spartan leading-none">36k+</h4>
+                                    <h4 class="text-white text-[24px] font-bold font-spartan leading-none"><span class="counter" data-target="36">0</span>k+</h4>
                                     <p class="text-white/50 text-[14px] mt-1 font-inter">Enrolled Students</p>
                                 </div>
                             </div>
@@ -653,7 +738,7 @@
                                     <i class="fa-solid fa-graduation-cap"></i>
                                 </div>
                                 <div>
-                                    <h4 class="text-white text-[24px] font-bold font-spartan leading-none">36k+</h4>
+                                    <h4 class="text-white text-[24px] font-bold font-spartan leading-none"><span class="counter" data-target="36">0</span>k+</h4>
                                     <p class="text-white/50 text-[14px] mt-1 font-inter">Enrolled Students</p>
                                 </div>
                             </div>
@@ -661,15 +746,15 @@
                     </div>
 
                     <!-- Right Image Area -->
-                    <div class="relative lg:col-span-5">
+                    <div class="relative lg:col-span-4">
                         <!-- Dots Shape -->
-                        <div class="absolute -top-12 -left-10 z-0">
+                        <div class="absolute -top-[26px] -left-[25px] z-0">
                             <img src="assets/images/hero/dots.png" alt="dots">
                         </div>
                         <div
-                            class="relative z-10 rounded-[24px] overflow-hidden border-[6px] border-white/5 shadow-2xl py-[20px] px-[8px] bg-[#0F102A]">
+                            class="relative z-10 rounded-[24px] overflow-hidden border-[6px] border-white/ shadow-2xl py-[8px] px-[8px] bg-[#0F102A]">
                             <img src="assets/images/hero/image.webp" alt="Student learning online"
-                                class="w-full h-[600px] object-cover">
+                                class="w-[400px] h-[480px] object-cover rounded-[8px]">
                         </div>
 
                         <!-- Transparent Shape -->
@@ -679,32 +764,88 @@
 
                         <!-- Floating Card -->
                         <div
-                            class="absolute -bottom-[30px] -left-[40px] z-20 bg-[#0F102A] p-6 rounded-[20px] border border-white/10 shadow-2xl min-w-[240px]">
-                            <div class="flex items-center gap-4 mb-4">
-                                <div
-                                    class="w-[50px] h-[50px] rounded-[12px] bg-linear-to-br from-[#B26EF7] to-[#FF71BF] flex items-center justify-center text-white text-[24px]">
-                                    <i class="fa-solid fa-cube"></i>
-                                </div>
-                                <div>
-                                    <h5 class="text-white text-[20px] font-bold font-spartan">36k+</h5>
-                                    <p class="text-white/60 text-[13px] font-inter">Crashed Courses</p>
-                                </div>
+                            class="absolute bottom-[100px] left-[-100px] bg-[#0F102A]/90 border border-white/10 backdrop-blur-[20px] rounded-[12px] pl-[20px] pt-[15px] pb-[14px] shadow-[0px_20px_50px_rgba(0,0,0,0.5)] transition-all duration-500 hover:-translate-y-2 hover:border-white group w-[262px] h-[124px] z-20">
+                            <!-- Background Curved Lines -->
+                            <div class="absolute top-0 right-0 h-full  pointer-events-none px-[14px] pl-[20px]">
+                                <img src="assets/images/faq/card-shape.png" alt="" class="w-full h-full object-cover">
                             </div>
-                            <div class="flex items-center -space-x-3">
-                                <img src="assets/images/faq/avada1.png"
-                                    class="w-9 h-9 rounded-full border-2 border-[#0F102A] object-cover">
-                                <img src="assets/images/faq/avada2.png"
-                                    class="w-9 h-9 rounded-full border-2 border-[#0F102A] object-cover">
-                                <img src="assets/images/faq/avada3.png"
-                                    class="w-9 h-9 rounded-full border-2 border-[#0F102A] object-cover">
-                                <img src="assets/images/faq/avada4.png"
-                                    class="w-9 h-9 rounded-full border-2 border-[#0F102A] object-cover">
-                            </div>
-                        </div>
 
-                        <!-- Decor -->
-                        <div class="absolute -top-10 -right-10 w-[140px] h-[140px] opacity-20">
-                            <img src="assets/images/faq/shape.png" alt="" class="animate-pulse">
+                            <div class="relative z-10">
+                                <div class="flex items-center gap-[15px]">
+                                    <img src="assets/images/favicon.png" alt="Logo" class="">
+                                    <div>
+                                        <p class="text-white text-[20px] font-medium leading-none font-spartan"><span class="counter" data-target="36">0</span>k+</p>
+                                        <p class="text-white/70 text-[12px] font-inter">Enrolled Students</p>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center mt-[10px]">
+                                    <div class="relative group/avatar">
+                                        <img src="assets/images/faq/avada1.png" alt="Student"
+                                            class="w-[42px] h-[42px] rounded-full border-[3px] border-[#1E1F42] object-cover transition-transform group-hover/avatar:scale-110 duration-300 cursor-pointer relative z-0 group-hover/avatar:z-20">
+                                        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-3 opacity-0 invisible group-hover/avatar:opacity-100 group-hover/avatar:visible transition-all duration-300 z-30 pointer-events-none flex flex-col items-center">
+                                            <div class="relative bg-secondary px-2.5 py-1 rounded-[6px] shadow-lg">
+                                                <div class="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-secondary rotate-45"></div>
+                                                <span class="text-white text-[11px] font-bold font-spartan whitespace-nowrap">Alena</span>
+                                            </div>
+                                            <div class="flex items-center gap-0.5 mt-1">
+                                                <i class="fa-solid fa-star text-[#FF8A00] text-[8px]"></i>
+                                                <i class="fa-solid fa-star text-[#FF8A00] text-[8px]"></i>
+                                                <i class="fa-solid fa-star text-[#FF8A00] text-[8px]"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="relative group/avatar -ml-[14px]">
+                                        <img src="assets/images/faq/avada2.png" alt="Student"
+                                            class="w-[42px] h-[42px] rounded-full border-[3px] border-[#1E1F42] object-cover transition-transform group-hover/avatar:scale-110 duration-300 cursor-pointer relative z-0 group-hover/avatar:z-20">
+                                        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-3 opacity-0 invisible group-hover/avatar:opacity-100 group-hover/avatar:visible transition-all duration-300 z-30 pointer-events-none flex flex-col items-center">
+                                            <div class="relative bg-secondary px-2.5 py-1 rounded-[6px] shadow-lg">
+                                                <div class="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-secondary rotate-45"></div>
+                                                <span class="text-white text-[11px] font-bold font-spartan whitespace-nowrap">David</span>
+                                            </div>
+                                            <div class="flex items-center gap-0.5 mt-1">
+                                                <i class="fa-solid fa-star text-[#FF8A00] text-[8px]"></i>
+                                                <i class="fa-solid fa-star text-[#FF8A00] text-[8px]"></i>
+                                                <i class="fa-solid fa-star text-[#FF8A00] text-[8px]"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="relative group/avatar -ml-[14px]">
+                                        <img src="assets/images/faq/avada3.png" alt="Student"
+                                            class="w-[42px] h-[42px] rounded-full border-[3px] border-[#1E1F42] object-cover transition-transform group-hover/avatar:scale-110 duration-300 cursor-pointer relative z-0 group-hover/avatar:z-20">
+                                        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-3 opacity-0 invisible group-hover/avatar:opacity-100 group-hover/avatar:visible transition-all duration-300 z-30 pointer-events-none flex flex-col items-center">
+                                            <div class="relative bg-secondary px-2.5 py-1 rounded-[6px] shadow-lg">
+                                                <div class="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-secondary rotate-45"></div>
+                                                <span class="text-white text-[11px] font-bold font-spartan whitespace-nowrap">Sophia</span>
+                                            </div>
+                                            <div class="flex items-center gap-0.5 mt-1">
+                                                <i class="fa-solid fa-star text-[#FF8A00] text-[8px]"></i>
+                                                <i class="fa-solid fa-star text-[#FF8A00] text-[8px]"></i>
+                                                <i class="fa-solid fa-star text-[#FF8A00] text-[8px]"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="relative group/avatar -ml-[14px]">
+                                        <img src="assets/images/faq/avada4.png" alt="Student"
+                                            class="w-[42px] h-[42px] rounded-full border-[3px] border-[#1E1F42] object-cover transition-transform group-hover/avatar:scale-110 duration-300 cursor-pointer relative z-0 group-hover/avatar:z-20">
+                                        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-3 opacity-0 invisible group-hover/avatar:opacity-100 group-hover/avatar:visible transition-all duration-300 z-30 pointer-events-none flex flex-col items-center">
+                                            <div class="relative bg-secondary px-2.5 py-1 rounded-[6px] shadow-lg">
+                                                <div class="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-secondary rotate-45"></div>
+                                                <span class="text-white text-[11px] font-bold font-spartan whitespace-nowrap">Michael</span>
+                                            </div>
+                                            <div class="flex items-center gap-0.5 mt-1">
+                                                <i class="fa-solid fa-star text-[#FF8A00] text-[8px]"></i>
+                                                <i class="fa-solid fa-star text-[#FF8A00] text-[8px]"></i>
+                                                <i class="fa-solid fa-star text-[#FF8A00] text-[8px]"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="w-[42px] h-[42px] rounded-full gradient-color-secondary from-white/10 to-white/5 border-[3px] border-[#1E1F42] flex items-center justify-center -ml-[14px] backdrop-blur-sm">
+                                        <i class="fa-solid fa-plus text-white text-[12px]"></i>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -713,7 +854,7 @@
         <!-- Hero Section End -->
 
         <!-- Major Partners Section Start -->
-        <section class="bg-[#0F102A] py-20 md:py-24 relative overflow-hidden">
+        <section id="partners" class="bg-primary py-20 md:py-24 relative overflow-hidden rbt-scroll-trigger rbt-scroll-trigger--offscreen">
             <!-- Background Decoration -->
             <div
                 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/5 blur-[120px] rounded-full pointer-events-none">
@@ -830,7 +971,7 @@
 
 
         <!-- Set Career Goals -->
-        <section class="bg-primary py-20 md:py-24 pt-120 pb-120">
+        <section id="goals" class="bg-primary py-20 md:py-24 pt-120 pb-120 rbt-scroll-trigger rbt-scroll-trigger--offscreen">
             <div class="max-w-[1320px] mx-auto px-4">
                 <div class="text-center mb-12 md:mb-16">
                     <span
@@ -839,7 +980,7 @@
                             class="fa-solid fa-graduation-cap text-[14px] gradient-color-primary bg-clip-text text-transparent"></i>
                         Set Career Goals
                     </span>
-                    <h1 class="text-white text-[36px] md:text-[54px] font-bold mb-4 leading-tight">
+                    <h1 class="text-white text-[36px] md:text-[54px] font-bold font-spartan mb-4 leading-tight">
                         Your Journey to a Better You<br>
                         <span class="gradient-color-primary bg-clip-text text-transparent">Begins Here</span>
                     </h1>
@@ -855,7 +996,7 @@
                                     class="w-[36px] h-[36px]">
                             </div>
                             <h3
-                                class="text-[#D6DAF0] text-[24px] font-semibold mb-3 hover:text-secondary transition-all duration-500 ease-in-out">
+                                class="text-[#D6DAF0] text-[24px] font-bold font-spartan mb-3 hover:text-secondary transition-all duration-500 ease-in-out">
                                 <a href="#">Web Development</a>
                             </h3>
                             <div class="flex items-center gap-2 text-white/50 text-[14px] mb-auto">
@@ -879,7 +1020,7 @@
                                     class="w-[36px] h-[36px]">
                             </div>
                             <h3
-                                class="text-[#D6DAF0] text-[24px] font-semibold mb-3 hover:text-secondary transition-all duration-500 ease-in-out">
+                                class="text-[#D6DAF0] text-[24px] font-bold font-spartan mb-3 hover:text-secondary transition-all duration-500 ease-in-out">
                                 <a href="#">Graphic & Art Design</a>
                             </h3>
                             <div class="flex items-center gap-2 text-white/50 text-[14px] mb-auto">
@@ -903,7 +1044,7 @@
                                     class="w-[36px] h-[36px]">
                             </div>
                             <h3
-                                class="text-[#D6DAF0] text-[24px] font-semibold mb-3 hover:text-secondary transition-all duration-500 ease-in-out">
+                                class="text-[#D6DAF0] text-[24px] font-bold font-spartan mb-3 hover:text-secondary transition-all duration-500 ease-in-out">
                                 <a href="#">App Development</a>
                             </h3>
                             <div class="flex items-center gap-2 text-white/50 text-[14px] mb-auto">
@@ -927,7 +1068,7 @@
                                     class="w-[36px] h-[36px]">
                             </div>
                             <h3
-                                class="text-[#D6DAF0] text-[24px] font-semibold mb-3 hover:text-secondary transition-all duration-500 ease-in-out">
+                                class="text-[#D6DAF0] text-[24px] font-bold font-spartan mb-3 hover:text-secondary transition-all duration-500 ease-in-out">
                                 <a href="#">Digital Marketing</a>
                             </h3>
                             <div class="flex items-center gap-2 text-white/50 text-[14px] mb-auto">
@@ -951,7 +1092,7 @@
                                     class="w-[36px] h-[36px]">
                             </div>
                             <h3
-                                class="text-[#D6DAF0] text-[24px] font-semibold mb-3 hover:text-secondary transition-all duration-500 ease-in-out">
+                                class="text-[#D6DAF0] text-[24px] font-bold font-spartan mb-3 hover:text-secondary transition-all duration-500 ease-in-out">
                                 <a href="#">Advance UI/UX Design</a>
                             </h3>
                             <div class="flex items-center gap-2 text-white/50 text-[14px] mb-auto">
@@ -975,7 +1116,7 @@
                                     class="w-[36px] h-[36px]">
                             </div>
                             <h3
-                                class="text-[#D6DAF0] text-[24px] font-semibold mb-3 hover:text-secondary transition-all duration-500 ease-in-out">
+                                class="text-[#D6DAF0] text-[24px] font-bold font-spartan mb-3 hover:text-secondary transition-all duration-500 ease-in-out">
                                 <a href="#">Finance & Accounts</a>
                             </h3>
                             <div class="flex items-center gap-2 text-white/50 text-[14px] mb-auto">
@@ -999,7 +1140,7 @@
                                     class="w-[36px] h-[36px]">
                             </div>
                             <h3
-                                class="text-[#D6DAF0] text-[24px] font-semibold mb-3 hover:text-secondary transition-all duration-500 ease-in-out">
+                                class="text-[#D6DAF0] text-[24px] font-bold font-spartan mb-3 hover:text-secondary transition-all duration-500 ease-in-out">
                                 <a href="#">Digital Marketing</a>
                             </h3>
                             <div class="flex items-center gap-2 text-white/50 text-[14px] mb-auto">
@@ -1023,7 +1164,7 @@
                                     class="w-[36px] h-[36px]">
                             </div>
                             <h3
-                                class="text-[#D6DAF0] text-[24px] font-semibold mb-3 hover:text-secondary transition-all duration-500 ease-in-out">
+                                class="text-[#D6DAF0] text-[24px] font-bold font-spartan mb-3 hover:text-secondary transition-all duration-500 ease-in-out">
                                 <a href="#">Graphic & Art Design</a>
                             </h3>
                             <div class="flex items-center gap-2 text-white/50 text-[14px] mb-auto">
@@ -1042,7 +1183,7 @@
         </section>
 
         <!-- Courses -->
-        <section class="bg-primary  py-20 md:py-24">
+        <section id="courses" class="bg-primary py-20 md:py-24 rbt-scroll-trigger rbt-scroll-trigger--offscreen">
             <div class="max-w-[1820px] mx-auto px-4">
                 <div class="relative overflow-hidden rounded-[20px] bg-[#160A35] bg-no-repeat bg-center bg-cover px-5 py-12 md:px-10 md:py-16 before:pointer-events-none before:content-[''] before:absolute before:top-[-120px] before:left-[-120px] before:w-[260px] before:h-[260px] before:bg-[#B26EF7] before:opacity-25 before:blur-[110px] before:rounded-full after:pointer-events-none after:content-[''] after:absolute after:bottom-[-120px] after:right-[-120px] after:w-[260px] after:h-[260px] after:bg-[#FF71BF] after:opacity-20 after:blur-[110px] after:rounded-full"
                     data-background="assets/images/course/bg-shape.png">
@@ -1054,7 +1195,7 @@
                                     class="fa-solid fa-graduation-cap text-[14px] gradient-color-primary bg-clip-text text-transparent"></i>
                                 10+ Courses
                             </span>
-                            <h2 class="text-white text-[30px] md:text-[44px] font-bold mt-5 leading-tight">
+                            <h2 class="text-white text-[30px] md:text-[44px] font-bold font-spartan mt-5 leading-tight">
                                 Pick Your Favorite Course and
                                 <span class="text-secondary">Grow your Skills</span>
                             </h2>
@@ -1086,7 +1227,7 @@
                                                         30 Students
                                                     </span>
                                                 </div>
-                                                <h3 class="text-white text-[20px] font-semibold leading-snug mb-6">
+                                                <h3 class="text-white text-[20px] font-bold font-spartan leading-snug mb-6">
                                                     <a href="#" class="hover:text-secondary transition-colors">Reactive
                                                         data updates for smooth and dynamic user experiences</a>
                                                 </h3>
@@ -1143,7 +1284,7 @@
                                                         25 Students
                                                     </span>
                                                 </div>
-                                                <h3 class="text-white text-[20px] font-semibold leading-snug mb-6">
+                                                <h3 class="text-white text-[20px] font-bold font-spartan leading-snug mb-6">
                                                     <a href="#" class="hover:text-secondary transition-colors">Fast
                                                         rendering that keeps every interaction smooth and responsive</a>
                                                 </h3>
@@ -1200,7 +1341,7 @@
                                                         40 Students
                                                     </span>
                                                 </div>
-                                                <h3 class="text-white text-[20px] font-semibold leading-snug mb-6">
+                                                <h3 class="text-white text-[20px] font-bold font-spartan leading-snug mb-6">
                                                     <a href="#" class="hover:text-secondary transition-colors">Smart
                                                         architecture that simplifies development and maintenance</a>
                                                 </h3>
@@ -1261,7 +1402,7 @@
             </div>
         </section>
 
-        <section class="bg-primary py-20 md:py-24 relative overflow-hidden">
+        <section id="categories" class="bg-primary py-20 md:py-24 relative overflow-hidden rbt-scroll-trigger rbt-scroll-trigger--offscreen">
             <div
                 class="pointer-events-none absolute -top-[160px] left-1/2 -translate-x-1/2 w-[420px] h-[420px] bg-[#B26EF7] opacity-15 blur-[140px] rounded-full">
             </div>
@@ -1274,7 +1415,7 @@
                             class="fa-solid fa-graduation-cap text-[14px] gradient-color-primary bg-clip-text text-transparent"></i>
                         Set Career Goals
                     </span>
-                    <h2 class="text-white text-[36px] md:text-[54px] font-bold mt-5 leading-[1.12]">
+                    <h2 class="text-white text-[36px] md:text-[54px] font-bold font-spartan mt-5 leading-[1.12]">
                         Explore Top Courses Categorist<br>
                         <span class="gradient-color-primary bg-clip-text text-transparent">Change Yourself</span>
                     </h2>
@@ -1325,7 +1466,7 @@
                                                     </div>
                                                 </div>
                                                 <div>
-                                                    <h3 class="text-white text-[18px] font-semibold leading-none">David
+                                                    <h3 class="text-white text-[18px] font-bold font-spartan leading-none">David
                                                         Krumholtz</h3>
                                                     <p class="text-white/55 text-[14px] mt-2 leading-none">Developer</p>
                                                 </div>
@@ -1382,7 +1523,7 @@
                                                     </div>
                                                 </div>
                                                 <div>
-                                                    <h3 class="text-white text-[18px] font-semibold leading-none">
+                                                    <h3 class="text-white text-[18px] font-bold font-spartan leading-none">
                                                         Shannon Chan</h3>
                                                     <p class="text-white/55 text-[14px] mt-2 leading-none">Developer</p>
                                                 </div>
@@ -1439,7 +1580,7 @@
                                                     </div>
                                                 </div>
                                                 <div>
-                                                    <h3 class="text-white text-[18px] font-semibold leading-none">Sarah
+                                                    <h3 class="text-white text-[18px] font-bold font-spartan leading-none">Sarah
                                                         Ali</h3>
                                                     <p class="text-white/55 text-[14px] mt-2 leading-none">Developer</p>
                                                 </div>
@@ -1474,7 +1615,7 @@
         </section>
 
         <!-- Statistics Section -->
-        <section class="bg-primary py-20 md:py-24">
+        <section id="statistics" class="bg-primary py-20 md:py-24 rbt-scroll-trigger rbt-scroll-trigger--offscreen">
             <div class="max-w-[1320px] mx-auto px-4">
                 <div
                     class="bg-box-color border border-white/10 rounded-[20px] py-14 px-6 md:px-12 flex flex-wrap justify-between items-center gap-y-10 relative overflow-hidden group shadow-[0px_20px_50px_rgba(0,0,0,0.3)] transition-all duration-500 hover:border-white/20">
@@ -1556,7 +1697,7 @@
         </section>
 
         <!-- Team Section -->
-        <section class="bg-primary py-20 md:py-24 relative overflow-hidden abe">
+        <section id="team" class="bg-primary py-20 md:py-24 relative overflow-hidden rbt-scroll-trigger rbt-scroll-trigger--offscreen">
             <div
                 class="pointer-events-none absolute -top-[160px] left-1/2 -translate-x-1/2 w-[420px] h-[420px] bg-[#FF71BF] opacity-10 blur-[140px] rounded-full">
             </div>
@@ -1569,7 +1710,7 @@
                             class="fa-solid fa-graduation-cap text-[14px] gradient-color-primary bg-clip-text text-transparent"></i>
                         Set Career Goals
                     </span>
-                    <h2 class="text-white text-[36px] md:text-[54px] font-bold mt-5 leading-[1.12]">
+                    <h2 class="text-white text-[36px] md:text-[54px] font-bold font-spartan mt-5 leading-[1.12]">
                         Explore Top Courses Categorist<br>
                         <span class="gradient-color-primary bg-clip-text text-transparent">Change Yourself</span>
                     </h2>
@@ -1594,7 +1735,7 @@
                                     <div class="px-6 py-5">
                                         <div class="flex items-center justify-between gap-3">
                                             <div>
-                                                <h3 class="text-white text-[18px] font-semibold leading-none">Stellan
+                                                <h3 class="text-white text-[18px] font-bold font-spartan leading-none">Stellan
                                                     Skarsgard</h3>
                                                 <p class="text-white/55 text-[14px] mt-2 leading-none">Developer</p>
                                             </div>
@@ -1642,7 +1783,7 @@
                                     <div class="px-6 py-5">
                                         <div class="flex items-center justify-between gap-3">
                                             <div>
-                                                <h3 class="text-white text-[18px] font-semibold leading-none">Charlotte
+                                                <h3 class="text-white text-[18px] font-bold font-spartan leading-none">Charlotte
                                                     Rampling</h3>
                                                 <p class="text-white/55 text-[14px] mt-2 leading-none">Developer</p>
                                             </div>
@@ -1689,7 +1830,7 @@
                                     <div class="px-6 py-5">
                                         <div class="flex items-center justify-between gap-3">
                                             <div>
-                                                <h3 class="text-white text-[18px] font-semibold leading-none">Javier
+                                                <h3 class="text-white text-[18px] font-bold font-spartan leading-none">Javier
                                                     Bardem</h3>
                                                 <p class="text-white/55 text-[14px] mt-2 leading-none">Developer</p>
                                             </div>
@@ -1744,8 +1885,8 @@
             </div>
         </section>
 
-        <!-- faq section start -->
-        <section class="bg-primary py-20 md:py-24 relative overflow-hidden">
+        <!-- FAQ Section -->
+        <section id="faq" class="bg-primary py-20 md:py-24 relative overflow-hidden rbt-scroll-trigger rbt-scroll-trigger--offscreen">
             <div
                 class="pointer-events-none absolute -top-[140px] -left-[140px] w-[320px] h-[320px] bg-[#B26EF7] opacity-20 blur-[120px] rounded-full">
             </div>
@@ -1763,7 +1904,7 @@
                             Most Asked Question
                         </span>
 
-                        <h2 class="text-white text-[36px] md:text-[40px] font-bold mt-5 leading-[1.12]">
+                        <h2 class="text-white text-[36px] md:text-[40px] font-bold font-spartan mt-5 leading-[1.12]">
                             High-Performance System<br>
                             <span class="gradient-color-primary bg-clip-text text-transparent">Framework</span>
                         </h2>
@@ -1877,10 +2018,9 @@
                     </div>
 
                     <div class="relative max-w-[560px] mx-auto lg:ml-auto">
-                        <img src="assets/images/faq/shape.png" alt="FAQ shape"
-                            class="pointer-events-none absolute top-[60px] -left-[36px] w-[110px] h-[110px] z-50 "
-                            loading="lazy" decoding="async">
-
+                        <div class="absolute -top-10 -left-10 w-[140px] h-[140px] opacity-20">
+                            <img src="assets/images/faq/shape.png" alt="" class="animate-pulse">
+                        </div>
                         <div class="relative bg-[#0F102A] border border-white/10 rounded-[20px] p-4 overflow-hidden">
 
                             <img src="assets/images/faq/Image.webp" alt="Student"
@@ -1899,20 +2039,72 @@
                                 <div class="flex items-center gap-[15px]">
                                     <img src="assets/images/favicon.png" alt="Logo" class="">
                                     <div>
-                                        <p class="text-white text-[20px] font-medium leading-none font-spartan">36k+</p>
+                                        <p class="text-white text-[20px] font-medium leading-none font-spartan"><span class="counter" data-target="36">0</span>k+</p>
                                         <p class="text-white/70 text-[12px] font-inter">Enrolled Students</p>
                                     </div>
                                 </div>
 
                                 <div class="flex items-center mt-[10px]">
-                                    <img src="assets/images/faq/avada1.png" alt="Student"
-                                        class="w-[42px] h-[42px] rounded-full border-[3px] border-[#1E1F42] object-cover transition-transform hover:z-10 hover:scale-110 duration-300">
-                                    <img src="assets/images/faq/avada2.png" alt="Student"
-                                        class="w-[42px] h-[42px] rounded-full border-[3px] border-[#1E1F42] object-cover -ml-[14px] transition-transform hover:z-10 hover:scale-110 duration-300">
-                                    <img src="assets/images/faq/avada3.png" alt="Student"
-                                        class="w-[42px] h-[42px] rounded-full border-[3px] border-[#1E1F42] object-cover -ml-[14px] transition-transform hover:z-10 hover:scale-110 duration-300">
-                                    <img src="assets/images/faq/avada4.png" alt="Student"
-                                        class="w-[42px] h-[42px] rounded-full border-[3px] border-[#1E1F42] object-cover -ml-[14px] transition-transform hover:z-10 hover:scale-110 duration-300">
+                                    <div class="relative group/avatar">
+                                        <img src="assets/images/faq/avada1.png" alt="Student"
+                                            class="w-[42px] h-[42px] rounded-full border-[3px] border-[#1E1F42] object-cover transition-transform group-hover/avatar:scale-110 duration-300 cursor-pointer relative z-0 group-hover/avatar:z-20">
+                                        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-3 opacity-0 invisible group-hover/avatar:opacity-100 group-hover/avatar:visible transition-all duration-300 z-30 pointer-events-none flex flex-col items-center">
+                                            <div class="relative bg-secondary px-2.5 py-1 rounded-[6px] shadow-lg">
+                                                <div class="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-secondary rotate-45"></div>
+                                                <span class="text-white text-[11px] font-bold font-spartan whitespace-nowrap">Alena</span>
+                                            </div>
+                                            <div class="flex items-center gap-0.5 mt-1">
+                                                <i class="fa-solid fa-star text-[#FF8A00] text-[8px]"></i>
+                                                <i class="fa-solid fa-star text-[#FF8A00] text-[8px]"></i>
+                                                <i class="fa-solid fa-star text-[#FF8A00] text-[8px]"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="relative group/avatar -ml-[14px]">
+                                        <img src="assets/images/faq/avada2.png" alt="Student"
+                                            class="w-[42px] h-[42px] rounded-full border-[3px] border-[#1E1F42] object-cover transition-transform group-hover/avatar:scale-110 duration-300 cursor-pointer relative z-0 group-hover/avatar:z-20">
+                                        <div class="absolute top-full left-1/2 -translate-sx-1/2 mt-3 opacity-0 invisible group-hover/avatar:opacity-100 group-hover/avatar:visible transition-all duration-300 z-30 pointer-events-none flex flex-col items-center">
+                                            <div class="relative bg-secondary px-2.5 py-1 rounded-[6px] shadow-lg">
+                                                <div class="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-secondary rotate-45"></div>
+                                                <span class="text-white text-[11px] font-bold font-spartan whitespace-nowrap">David</span>
+                                            </div>
+                                            <div class="flex items-center gap-0.5 mt-1">
+                                                <i class="fa-solid fa-star text-[#FF8A00] text-[8px]"></i>
+                                                <i class="fa-solid fa-star text-[#FF8A00] text-[8px]"></i>
+                                                <i class="fa-solid fa-star text-[#FF8A00] text-[8px]"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="relative group/avatar -ml-[14px]">
+                                        <img src="assets/images/faq/avada3.png" alt="Student"
+                                            class="w-[42px] h-[42px] rounded-full border-[3px] border-[#1E1F42] object-cover transition-transform group-hover/avatar:scale-110 duration-300 cursor-pointer relative z-0 group-hover/avatar:z-20">
+                                        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-3 opacity-0 invisible group-hover/avatar:opacity-100 group-hover/avatar:visible transition-all duration-300 z-30 pointer-events-none flex flex-col items-center">
+                                            <div class="relative bg-secondary px-2.5 py-1 rounded-[6px] shadow-lg">
+                                                <div class="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-secondary rotate-45"></div>
+                                                <span class="text-white text-[11px] font-bold font-spartan whitespace-nowrap">Sophia</span>
+                                            </div>
+                                            <div class="flex items-center gap-0.5 mt-1">
+                                                <i class="fa-solid fa-star text-[#FF8A00] text-[8px]"></i>
+                                                <i class="fa-solid fa-star text-[#FF8A00] text-[8px]"></i>
+                                                <i class="fa-solid fa-star text-[#FF8A00] text-[8px]"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="relative group/avatar -ml-[14px]">
+                                        <img src="assets/images/faq/avada4.png" alt="Student"
+                                            class="w-[42px] h-[42px] rounded-full border-[3px] border-[#1E1F42] object-cover transition-transform group-hover/avatar:scale-110 duration-300 cursor-pointer relative z-0 group-hover/avatar:z-20">
+                                        <div class="absolute top-full left-1/2 -translate-x-1/2 mt-3 opacity-0 invisible group-hover/avatar:opacity-100 group-hover/avatar:visible transition-all duration-300 z-30 pointer-events-none flex flex-col items-center">
+                                            <div class="relative bg-secondary px-2.5 py-1 rounded-[6px] shadow-lg">
+                                                <div class="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-secondary rotate-45"></div>
+                                                <span class="text-white text-[11px] font-bold font-spartan whitespace-nowrap">Michael</span>
+                                            </div>
+                                            <div class="flex items-center gap-0.5 mt-1">
+                                                <i class="fa-solid fa-star text-[#FF8A00] text-[8px]"></i>
+                                                <i class="fa-solid fa-star text-[#FF8A00] text-[8px]"></i>
+                                                <i class="fa-solid fa-star text-[#FF8A00] text-[8px]"></i>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div
                                         class="w-[42px] h-[42px] rounded-full gradient-color-secondary from-white/10 to-white/5 border-[3px] border-[#1E1F42] flex items-center justify-center -ml-[14px] backdrop-blur-sm">
                                         <i class="fa-solid fa-plus text-white text-[12px]"></i>
@@ -1928,7 +2120,7 @@
         </section>
         <!-- faq section end -->
 
-        <section class="bg-primary py-20 md:py-24 relative overflow-hidden">
+        <section id="blog" class="bg-primary py-20 md:py-24 relative overflow-hidden rbt-scroll-trigger rbt-scroll-trigger--offscreen">
             <div
                 class="pointer-events-none absolute -top-[170px] -left-[170px] w-[360px] h-[360px] bg-[#B26EF7] opacity-15 blur-[140px] rounded-full">
             </div>
@@ -1944,7 +2136,7 @@
                             class="fa-solid fa-lightbulb text-[14px] gradient-color-primary bg-clip-text text-transparent"></i>
                         Our Insights
                     </span>
-                    <h2 class="text-white text-[36px] md:text-[54px] font-bold mt-5 leading-[1.12]">Latest News & Blog
+                    <h2 class="text-white text-[36px] md:text-[54px] font-bold font-spartan mt-5 leading-[1.12]">Latest News & Blog
                     </h2>
                 </div>
 
@@ -1980,7 +2172,7 @@
                                             </span>
                                         </div>
 
-                                        <h3 class="mt-5 text-white text-[20px] font-semibold leading-snug">
+                                        <h3 class="mt-5 text-white text-[20px] font-bold font-spartan leading-snug">
                                             <a href="#" class="hover:text-secondary transition-colors">
                                                 Top 10 E-Learning Tools to Enhance Your Online Teaching
                                             </a>
@@ -2026,7 +2218,7 @@
                                             </span>
                                         </div>
 
-                                        <h3 class="mt-5 text-white text-[20px] font-semibold leading-snug">
+                                        <h3 class="mt-5 text-white text-[20px] font-bold font-spartan leading-snug">
                                             <a href="#" class="hover:text-secondary transition-colors">
                                                 Top 10 E-Learning Tools to Enhance Your Online Teaching
                                             </a>
@@ -2072,7 +2264,7 @@
                                             </span>
                                         </div>
 
-                                        <h3 class="mt-5 text-white text-[20px] font-semibold leading-snug">
+                                        <h3 class="mt-5 text-white text-[20px] font-bold font-spartan leading-snug">
                                             <a href="#" class="hover:text-secondary transition-colors">
                                                 Top 10 E-Learning Tools to Enhance Your Online Teaching
                                             </a>
@@ -2107,8 +2299,6 @@
                 </div>
             </div>
         </section>
-
-
     </main>
 
     <footer class="bg-primary relative overflow-hidden pb-8">
@@ -2116,7 +2306,7 @@
             <section class="mb-16">
                 <div class="bg-border-primary rounded-[16px] p-8 md:p-12">
                     <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-                        <h2 class="text-white text-[30px] md:text-[36px] font-semibold">Subscribe Our Newsletter</h2>
+                        <h2 class="text-white text-[30px] md:text-[36px] font-bold font-spartan">Subscribe Our Newsletter</h2>
                         <form class="flex flex-col sm:flex-row gap-4 flex-1 md:max-w-lg md:ml-auto">
                             <input type="email" placeholder="Email address"
                                 class="flex-1 bg-primary border border-border-white px-6 py-4 text-white placeholder:text-white/50 focus:outline-none focus:border-secondary transition-colors text-[15px]">
@@ -2169,7 +2359,7 @@
                 </div>
 
                 <nav class="space-y-6">
-                    <h5 class="text-white text-[20px] font-semibold">Company</h5>
+                    <h5 class="text-white text-[20px] font-bold font-spartan">Company</h5>
                     <ul class="space-y-3">
                         <li><a href="#"
                                 class="text-white/70 hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>About
@@ -2196,7 +2386,7 @@
                 </nav>
 
                 <nav class="space-y-6">
-                    <h5 class="text-white text-[20px] font-semibold">Resources</h5>
+                    <h5 class="text-white text-[20px] font-bold font-spartan">Resources</h5>
                     <ul class="space-y-3">
                         <li><a href="#"
                                 class="text-white/70 hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>Educa
@@ -2223,14 +2413,14 @@
                 </nav>
 
                 <div class="space-y-6">
-                    <h5 class="text-white text-[20px] font-semibold">Recent Posts</h5>
+                    <h5 class="text-white text-[20px] font-bold font-spartan">Recent Posts</h5>
                     <div class="space-y-4">
                         <a href="#" class="flex gap-4">
                             <img src="assets/images/blog/bg.webp" alt="Post thumbnail"
                                 class="w-20 h-20 rounded-[10px] object-cover shrink-0 hover:scale-105 hover:opacity-50 transition-all">
                             <div class="flex-1">
                                 <h6
-                                    class="text-white hover:text-secondary transition-colors text-[14px] font-medium mb-2">
+                                    class="text-white hover:text-secondary transition-colors text-[14px] font-bold font-spartan mb-2">
                                     Online education is empowering</h6>
                                 <p class="text-white/70 text-[12px] flex items-center gap-2">
                                     <i class="fa-regular fa-clock"></i>
@@ -2243,7 +2433,7 @@
                                 class="w-20 h-20 rounded-[10px] object-cover shrink-0 hover:scale-105 hover:opacity-50 transition-all">
                             <div class="flex-1">
                                 <h6
-                                    class="text-white hover:text-secondary transition-colors text-[14px] font-medium mb-2">
+                                    class="text-white hover:text-secondary transition-colors text-[14px] font-bold font-spartan mb-2">
                                     Online education is empowering</h6>
                                 <p class="text-white/70 text-[12px] flex items-center gap-2">
                                     <i class="fa-regular fa-clock"></i>
@@ -2266,13 +2456,114 @@
         </div>
     </footer>
 
-    <!-- Theme Toggle Fixed -->
-    <button id="theme-toggle"
-        class="fixed bottom-[30px] left-[30px] z-60 w-[50px] h-[50px] rounded-full bg-[#11112D] border border-white/10 flex items-center justify-center text-white/90 hover:bg-secondary hover:border-secondary transition-all duration-300 shadow-lg">
-        <i id="theme-toggle-dark-icon" class="fa-solid fa-moon text-[18px]"></i>
-        <i id="theme-toggle-light-icon" class="fa-solid fa-sun hidden text-[18px]"></i>
-    </button>
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar"
+        class="fixed top-0 right-0 h-full w-full sm:w-[400px] bg-[#050520] z-[1000] translate-x-full transition-all duration-[800ms] ease-[cubic-bezier(0.23,1,0.32,1)] border-l border-white/10 shadow-2xl overflow-y-auto invisible">
+        <div class="p-6 md:p-8 h-full flex flex-col">
+            <!-- Sidebar Header -->
+            <div class="flex items-center justify-between mb-8 pb-6 border-b border-white/10 transform transition-all duration-700 delay-300 opacity-0 translate-y-4" id="cart-header">
+                <h2 class="text-white text-[24px] font-bold font-spartan">Your shopping cart</h2>
+                <button id="cart-close-btn"
+                    class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/5 transition-all duration-300">
+                    <i class="fa-solid fa-xmark text-[20px]"></i>
+                </button>
+            </div>
 
+            <!-- Cart Items -->
+            <div class="flex-grow space-y-6 overflow-y-auto pr-2 custom-scrollbar" id="cart-items-container">
+                <!-- Item 1 -->
+                <div class="flex gap-4 group transform transition-all duration-700 delay-[400ms] opacity-0 translate-y-4 cart-item">
+                    <div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 border border-white/10">
+                        <img src="assets/images/course/course-imag.webp" alt="Course" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-white font-medium font-inter hover:text-secondary transition-colors line-clamp-1">
+                                <a href="#">Miracle Morning</a>
+                            </h3>
+                            <button class="text-white/40 hover:text-red-500 transition-colors ml-2">
+                                <i class="fa-solid fa-xmark text-sm"></i>
+                            </button>
+                        </div>
+                        <p class="text-white/60 text-[14px] font-inter mt-1">1 * $22</p>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="flex gap-4 group transform transition-all duration-700 delay-[500ms] opacity-0 translate-y-4 cart-item">
+                    <div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 border border-white/10">
+                        <img src="assets/images/course/course-imag2.webp" alt="Course" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-white font-medium font-inter hover:text-secondary transition-colors line-clamp-1">
+                                <a href="#">Happy Strong</a>
+                            </h3>
+                            <button class="text-white/40 hover:text-red-500 transition-colors ml-2">
+                                <i class="fa-solid fa-xmark text-sm"></i>
+                            </button>
+                        </div>
+                        <p class="text-white/60 text-[14px] font-inter mt-1">1 * $30</p>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="flex gap-4 group transform transition-all duration-700 delay-[600ms] opacity-0 translate-y-4 cart-item">
+                    <div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 border border-white/10">
+                        <img src="assets/images/course/course-imag3.webp" alt="Course" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-white font-medium font-inter hover:text-secondary transition-colors line-clamp-1">
+                                <a href="#">Rich Dad Poor Dad</a>
+                            </h3>
+                            <button class="text-white/40 hover:text-red-500 transition-colors ml-2">
+                                <i class="fa-solid fa-xmark text-sm"></i>
+                            </button>
+                        </div>
+                        <p class="text-white/60 text-[14px] font-inter mt-1">1 * $50</p>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="flex gap-4 group transform transition-all duration-700 delay-[700ms] opacity-0 translate-y-4 cart-item">
+                    <div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 border border-white/10">
+                        <img src="assets/images/course/course-imag.webp" alt="Course" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-white font-medium font-inter hover:text-secondary transition-colors line-clamp-1">
+                                <a href="#">Momentum Theorem</a>
+                            </h3>
+                            <button class="text-white/40 hover:text-red-500 transition-colors ml-2">
+                                <i class="fa-solid fa-xmark text-sm"></i>
+                            </button>
+                        </div>
+                        <p class="text-white/60 text-[14px] font-inter mt-1">1 * $50</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="mt-8 pt-8 border-t border-white/10 transform transition-all duration-700 delay-[800ms] opacity-0 translate-y-4" id="cart-footer">
+                <div class="flex items-center justify-between mb-8">
+                    <span class="text-white text-[18px] font-bold font-spartan uppercase">Subtotal:</span>
+                    <span class="text-white text-[18px] font-bold font-spartan">$121</span>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <a href="#"
+                        class="w-full h-[56px] flex items-center justify-center rounded-[10px] border border-white/10 text-white font-semibold font-spartan hover:bg-white hover:text-[#050520] transition-all duration-300">View
+                        Cart</a>
+                    <a href="#"
+                        class="w-full h-[56px] flex items-center justify-center rounded-[10px] bg-linear-to-r from-[#B26EF7] via-[#FF71BF] to-[#FFBD7A] text-white font-semibold font-spartan hover:shadow-[0px_10px_30px_rgba(178,110,247,0.4)] transition-all duration-300 border-b-2 border-primary/29">Checkout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar Backdrop -->
+    <div id="cart-backdrop"
+        class="fixed inset-0 bg-black/80 z-[999] opacity-0 invisible transition-all duration-[800ms] ease-[cubic-bezier(0.23,1,0.32,1)]">
+    </div>
+
+    <!-- Back to Top -->
     <div id="back-to-top"
         class="fixed bottom-[30px] right-[30px] z-60 w-[100px] h-[100px] cursor-pointer group opacity-0 invisible translate-y-4 transition-all duration-500">
         <div id="back-to-top-glow" class="absolute inset-0 rounded-full bg-[#24BD25]/0 transition-all duration-500">

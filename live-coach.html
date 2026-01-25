@@ -1,0 +1,1554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Blog - Tailwind CSS Education Template</title>
+    <meta name="robots" content="noindex, follow">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Spartan:wght@100..900&display=swap"
+        rel="stylesheet">
+    <!-- CSS
+	============================================ -->
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/swiper.css">
+    <link rel="stylesheet" href="assets/css/animation.css">
+    <link rel="stylesheet" href="assets/css/output.css">
+    <link rel="stylesheet" href="assets/css/input.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="rbt-header-sticky primary-color font-inter">
+    <!-- Preloader Start -->
+    <div id="preloader"
+        class="fixed inset-0 z-9999 flex items-center justify-center bg-primary transition-all duration-700 overflow-hidden">
+        <div class="relative w-40 h-40 flex items-center justify-center">
+            <!-- Main Neumorphic Circle -->
+            <div
+                class="absolute w-32 h-32 rounded-full bg-primary shadow-[15px_15px_30px_#02020d,-15px_-15px_30px_#080833]">
+            </div>
+
+            <!-- Inner Inset Circle -->
+            <div
+                class="absolute w-24 h-24 rounded-full bg-primary shadow-[inset_8px_8px_16px_#02020d,inset_-8px_-8px_16px_#080833]">
+            </div>
+
+            <!-- Rotating Light Ring -->
+            <div
+                class="absolute w-32 h-32 rounded-full border-4 border-transparent border-t-[#9382FF] border-l-[#9382FF]/30 animate-[spin_2s_cubic-bezier(0.58,0.185,0.395,0.81)_infinite]">
+            </div>
+
+            <!-- Second Rotating Ring (Opposite) -->
+            <div
+                class="absolute w-32 h-32 rounded-full border-4 border-transparent border-b-[#FF71BF] border-r-[#FF71BF]/30 animate-[spin_2s_cubic-bezier(0.58,0.185,0.395,0.81)_infinite_reverse]">
+            </div>
+
+            <!-- Center Content -->
+            <div class="relative z-10 flex flex-col items-center">
+                <img src="assets/images/favicon.png" alt="Logo" class="w-10 h-10 object-contain animate-pulse">
+            </div>
+        </div>
+    </div>
+    <!-- Preloader End -->
+
+
+    <header class="bg-[#11112A] sticky top-0 z-50 border-b border-white/5 shadow-lg">
+        <div class="max-w-[1320px] mx-auto px-4 relative">
+            <div class="flex items-center justify-between h-[90px]">
+                <!-- Logo Section -->
+                <div class="flex items-center">
+                    <a href="index.html">
+                        <img src="assets/images/logo.png" alt="educate" class="h-10 w-auto">
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center space-x-[40px]">
+                    <!-- Demos Mega Menu Item -->
+                    <div class="group">
+                        <button
+                            class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300 flex items-center gap-1.5 py-8 cursor-pointer relative z-[100]">
+                            Demos <i
+                                class="fa-solid fa-angle-down text-[11px] group-hover:rotate-180 transition-transform"></i>
+                        </button>
+
+                        <!-- Menu Blur Overlay -->
+                        <div
+                            class="fixed inset-0 bg-[#050520]/60 backdrop-blur-[6px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 z-[90] pointer-events-none">
+                        </div>
+
+                        <!-- Demos Mega Menu Content -->
+                        <div
+                            class="absolute left-1/2 -translate-x-1/2 top-full opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-100 w-[1200px]">
+                            <div
+                                class="bg-white rounded-b-[20px] shadow-[0px_30px_70px_rgba(0,0,0,0.15)] overflow-hidden p-8">
+                                <div class="grid grid-cols-5 gap-6 mb-10">
+                                    <!-- Demo Card 1 -->
+                                    <div class="group/demo transition-all duration-300">
+                                        <div
+                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
+                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                            </div>
+                                            <div class="relative overflow-hidden aspect-[4/4]">
+                                                <img src="assets/images/demo/demo-1.webp" alt="Electronics One"
+                                                    class="w-full object-contain">
+                                                <div
+                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5
+                                            class="text-center mt-4 text-[15px] font-bold font-spartan text-[#050520] group-hover/demo:text-secondary transition-colors">
+                                            Electronics One</h5>
+                                    </div>
+
+                                    <!-- Demo Card 2 -->
+                                    <div class="group/demo transition-all duration-300">
+                                        <div
+                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
+                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                            </div>
+                                            <div class="relative overflow-hidden aspect-[4/4]">
+                                                <img src="assets/images/demo/demo-2.webp" alt="Fashion One"
+                                                    class="w-full object-contain">
+                                                <div
+                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5
+                                            class="text-center mt-4 text-[15px] font-bold font-spartan text-[#050520] group-hover/demo:text-secondary transition-colors">
+                                            Fashion One</h5>
+                                    </div>
+
+                                    <!-- Demo Card 3 -->
+                                    <div class="group/demo transition-all duration-300">
+                                        <div
+                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
+                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                            </div>
+                                            <div class="relative overflow-hidden aspect-[4/4]">
+                                                <img src="assets/images/demo/demo-3.webp" alt="Furniture One"
+                                                    class="w-full object-contain">
+                                                <div
+                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5
+                                            class="text-center mt-4 text-[15px] font-bold font-spartan text-[#050520] group-hover/demo:text-secondary transition-colors">
+                                            Furniture One</h5>
+                                    </div>
+
+                                    <!-- Demo Card 4 -->
+                                    <div class="group/demo transition-all duration-300">
+                                        <div
+                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
+                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                            </div>
+                                            <div class="relative overflow-hidden aspect-[4/4]">
+                                                <img src="assets/images/demo/demo-5.webp" alt="Print Service One"
+                                                    class="w-full object-contain">
+                                                <div
+                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5
+                                            class="text-center mt-4 text-[15px] font-bold font-spartan text-[#050520] group-hover/demo:text-secondary transition-colors">
+                                            Print Service One</h5>
+                                    </div>
+
+                                    <!-- Demo Card 5 -->
+                                    <div class="group/demo transition-all duration-300">
+                                        <div
+                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
+                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                            </div>
+                                            <div class="relative overflow-hidden aspect-[4/4]">
+                                                <img src="assets/images/demo/demo-6.webp" alt="Cosmetic Beauty One"
+                                                    class="w-full object-contain">
+                                                <div
+                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5
+                                            class="text-center mt-4 text-[15px] font-bold font-spartan text-[#050520] group-hover/demo:text-secondary transition-colors">
+                                            Cosmetic Beauty One</h5>
+                                    </div>
+
+                                    <!-- Demo Card 6 -->
+                                    <div class="group/demo transition-all duration-300">
+                                        <div
+                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
+                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                            </div>
+                                            <div class="relative overflow-hidden aspect-[4/4]">
+                                                <img src="assets/images/demo/demo-8.webp" alt="Sports One"
+                                                    class="w-full object-contain">
+                                                <div
+                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5
+                                            class="text-center mt-4 text-[15px] font-bold font-spartan text-[#050520] group-hover/demo:text-secondary transition-colors">
+                                            Sports One</h5>
+                                    </div>
+
+                                    <!-- Demo Card 7 -->
+                                    <div class="group/demo transition-all duration-300">
+                                        <div
+                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
+                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                            </div>
+                                            <div class="relative overflow-hidden aspect-[4/4]">
+                                                <img src="assets/images/demo/demo-9.webp" alt="Glass One"
+                                                    class="w-full object-contain">
+                                                <div
+                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5
+                                            class="text-center mt-4 text-[15px] font-bold font-spartan text-[#050520] group-hover/demo:text-secondary transition-colors">
+                                            Glass One</h5>
+                                    </div>
+
+                                    <!-- Demo Card 8 -->
+                                    <div class="group/demo transition-all duration-300">
+                                        <div
+                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
+                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                            </div>
+                                            <div class="relative overflow-hidden aspect-[4/4]">
+                                                <img src="assets/images/demo/demo-10.webp" alt="Phone One"
+                                                    class="w-full object-contain">
+                                                <div
+                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5
+                                            class="text-center mt-4 text-[15px] font-bold font-spartan text-[#050520] group-hover/demo:text-secondary transition-colors">
+                                            Phone One</h5>
+                                    </div>
+
+                                    <!-- Demo Card 9 -->
+                                    <div class="group/demo transition-all duration-300">
+                                        <div
+                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
+                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                            </div>
+                                            <div class="relative overflow-hidden aspect-[4/4]">
+                                                <img src="assets/images/demo/demo-11.webp" alt="Accessories One"
+                                                    class="w-full object-contain">
+                                                <div
+                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5
+                                            class="text-center mt-4 text-[15px] font-bold font-spartan text-[#050520] group-hover/demo:text-secondary transition-colors">
+                                            Accessories One</h5>
+                                    </div>
+
+                                    <!-- Demo Card 10 -->
+                                    <div class="group/demo transition-all duration-300">
+                                        <div
+                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
+                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                            </div>
+                                            <div class="relative overflow-hidden aspect-[4/4]">
+                                                <img src="assets/images/demo/demo-1.webp" alt="jewellery One"
+                                                    class="w-full object-contain">
+                                                <div
+                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5
+                                            class="text-center mt-4 text-[15px] font-bold font-spartan text-[#050520] group-hover/demo:text-secondary transition-colors">
+                                            jewellery One</h5>
+                                    </div>
+                                </div>
+
+                                <!-- View All Button -->
+                                <div class="flex justify-center -mb-4">
+                                    <a href="#"
+                                        class="inline-flex items-center gap-3 px-10 py-4 rounded-[50px] bg-[#2D56FF] text-white text-[16px] font-bold font-spartan hover:shadow-[0px_15px_30px_rgba(45,86,255,0.4)] transition-all duration-300 hover:-translate-y-1">
+                                        View All The Trending Collection
+                                        <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
+                                            <i
+                                                class="fa-solid fa-arrow-right-from-bracket rotate-[-45deg] text-[14px]"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#"
+                        class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300 flex items-center gap-1.5">Pages</a>
+
+                    <!-- Mega Menu Item -->
+                    <div class="group">
+                        <button
+                            class="flex items-center gap-1.5 rounded-[50px] text-white text-[16px] font-medium font-inter transition-all duration-300 relative z-[100]">
+                            Elements <i
+                                class="fa-solid fa-angle-down text-[12px] group-hover:rotate-180 transition-transform"></i>
+                        </button>
+
+                        <!-- Menu Blur Overlay -->
+                        <div
+                            class="fixed inset-0 bg-[#050520]/60 backdrop-blur-[6px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 z-[90] pointer-events-none">
+                        </div>
+
+                        <!-- Mega Menu Content -->
+                        <div
+                            class="absolute left-1/2 -translate-x-1/2 top-full pt-[30px] opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-5 group-hover:translate-y-0 transition-all duration-300 z-100 w-[1140px]">
+                            <div
+                                class="bg-white rounded-[20px] shadow-[0px_30px_70px_rgba(0,0,0,0.2)] overflow-hidden flex">
+                                <!-- Left Columns (Links) -->
+                                <div class="flex-1 grid grid-cols-3 p-10 gap-x-12">
+                                    <!-- Column 1: Ultimate User Experience -->
+                                    <div>
+                                        <h4
+                                            class="text-[#888888] text-[13px] font-bold font-spartan uppercase tracking-wider mb-8 pb-3 border-b border-gray-100">
+                                            Ultimate User Experience</h4>
+                                        <ul class="space-y-4">
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Easy
+                                                    to Customize Codes</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Powerful
+                                                    Page Options</a></li>
+                                            <li><a href="#"
+                                                    class="flex items-center justify-between text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Fast
+                                                    Performance <span
+                                                        class="px-2 py-0.5 rounded-[4px] bg-secondary text-white text-[9px] font-bold">HOT</span></a>
+                                            </li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Ultimate
+                                                    Header Layouts</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Excessive
+                                                    Footer Variation</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Advanced
+                                                    Mega Menu</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Popup
+                                                    & Sidebar Search</a></li>
+                                            <li><a href="#"
+                                                    class="flex items-center justify-between text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">All
+                                                    Boost Sales Features <span
+                                                        class="px-2 py-0.5 rounded-[4px] bg-secondary text-white text-[9px] font-bold">NEW</span></a>
+                                            </li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Mobile-first
+                                                    Experience</a></li>
+                                            <li><a href="#"
+                                                    class="flex items-center justify-between text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">User
+                                                    Feedback <span
+                                                        class="px-2 py-0.5 rounded-[4px] bg-[#FFBD7A] text-white text-[9px] font-bold">COMING</span></a>
+                                            </li>
+                                            <li><a href="#"
+                                                    class="flex items-center justify-between text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Seamless
+                                                    Integration <span
+                                                        class="px-2 py-0.5 rounded-[4px] bg-[#FFBD7A] text-white text-[9px] font-bold">COMING</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- Column 2: Flexible Shopping -->
+                                    <div>
+                                        <h4
+                                            class="text-[#888888] text-[13px] font-bold font-spartan uppercase tracking-wider mb-8 pb-3 border-b border-gray-100">
+                                            Flexible Shopping</h4>
+                                        <ul class="space-y-4">
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Smart
+                                                    Product Filtering</a></li>
+                                            <li><a href="#"
+                                                    class="flex items-center justify-between text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Variant
+                                                    Swatches <span
+                                                        class="px-2 py-0.5 rounded-[4px] bg-[#FF71BF] text-white text-[9px] font-bold uppercase">FULLY
+                                                        READY</span></a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Product
+                                                    Compare</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">WishLists
+                                                    Builder</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Quick
+                                                    View</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Flash
+                                                    Sales Management</a></li>
+                                            <li><a href="#"
+                                                    class="flex items-center justify-between text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Cart
+                                                    Upsell <span
+                                                        class="px-2 py-0.5 rounded-[4px] bg-secondary text-white text-[9px] font-bold">NEW</span></a>
+                                            </li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Size
+                                                    Chart Variation</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Sticky
+                                                    Add To Cart</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Product
+                                                    Video & 3D View</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Multi-Step
+                                                    Checkout</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- Column 3: Boost Sales -->
+                                    <div>
+                                        <h4
+                                            class="text-[#888888] text-[13px] font-bold font-spartan uppercase tracking-wider mb-8 pb-3 border-b border-gray-100">
+                                            Boost Sales</h4>
+                                        <ul class="space-y-4">
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Back
+                                                    To Stock Notification</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Sales
+                                                    Popup</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Pre
+                                                    Order</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Backorder</a>
+                                            </li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Partial
+                                                    Payment</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Shareable
+                                                    Cart</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Bulk
+                                                    Amount Purchase</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Stock
+                                                    Progress Bar</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Sales
+                                                    Push Notification</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Special
+                                                    Offers Management</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Free
+                                                    Shipping Threshold</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Right Column (Image/Grid) -->
+                                <div class="w-[450px] bg-gray-light p-8">
+                                    <div class="grid grid-cols-2 gap-4 h-full">
+                                        <div
+                                            class="relative group/card overflow-hidden rounded-xl shadow-md bg-white p-2">
+                                            <img src="assets/images/demo/demo-1.webp" alt="Preview"
+                                                class="w-full h-32 object-cover rounded-lg mb-2 transition-transform duration-500 group-hover/card:scale-110">
+                                            <p class="text-[12px] font-bold font-spartan text-gray-800">Classic Demo</p>
+                                        </div>
+                                        <div
+                                            class="relative group/card overflow-hidden rounded-xl shadow-md bg-white p-2">
+                                            <img src="assets/images/demo/demo-2.webp" alt="Preview"
+                                                class="w-full h-32 object-cover rounded-lg mb-2 transition-transform duration-500 group-hover/card:scale-110">
+                                            <p class="text-[12px] font-bold font-spartan text-gray-800">Modern Shop</p>
+                                        </div>
+                                        <div
+                                            class="relative group/card overflow-hidden rounded-xl shadow-md bg-white p-2">
+                                            <img src="assets/images/demo/demo-3.webp" alt="Preview"
+                                                class="w-full h-32 object-cover rounded-lg mb-2 transition-transform duration-500 group-hover/card:scale-110">
+                                            <p class="text-[12px] font-bold font-spartan text-gray-800">LMS System</p>
+                                        </div>
+                                        <div
+                                            class="relative group/card overflow-hidden rounded-xl shadow-md bg-white p-2 flex items-center justify-center border-2 border-dashed border-gray-200 hover:border-secondary transition-colors cursor-pointer">
+                                            <div class="text-center">
+                                                <i class="fa-solid fa-plus text-secondary mb-1"></i>
+                                                <p class="text-[10px] font-bold font-spartan text-gray-500 uppercase">
+                                                    View All</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Action Section -->
+                <div class="flex items-center gap-6">
+                    <!-- Language Switcher -->
+                    <div class="hidden sm:flex items-center gap-2 cursor-pointer group">
+                        <img src="https://flagcdn.com/w20/us.png" alt="English"
+                            class="w-5 h-5 rounded-full object-cover">
+                        <span
+                            class="text-white/90 text-[15px] font-medium font-inter group-hover:text-secondary transition-all">English</span>
+                        <i
+                            class="fa-solid fa-angle-down text-white/40 text-[10px] group-hover:text-secondary transition-all"></i>
+                    </div>
+
+                    <!-- Cart Icon -->
+                    <div id="cart-btn" class="relative cursor-pointer group">
+                        <div
+                            class="w-[46px] h-[46px] rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/90 group-hover:bg-secondary group-hover:border-secondary transition-all duration-300">
+                            <i class="fa-solid fa-cart-shopping text-[17px]"></i>
+                        </div>
+                        <span
+                            class="absolute -top-1 -right-1 w-[20px] h-[20px] bg-[#9382FF] text-white text-[11px] font-bold rounded-full flex items-center justify-center border-2 border-primary">2</span>
+                    </div>
+
+                    <!-- Login link replaced with User Profile Dropdown -->
+                    <div class="relative group/user">
+                        <button id="user-profile-btn"
+                            class="hidden md:flex items-center gap-2 text-secondary text-[16px] font-medium font-inter transition-all duration-300 cursor-pointer">
+                            <i class="fa-regular fa-user"></i>
+                            <span>Admin</span>
+                        </button>
+
+                        <!-- User Dropdown Menu -->
+                        <div id="user-profile-dropdown"
+                            class="absolute top-full right-0 mt-6 w-[280px] bg-white rounded-xl shadow-[0px_20px_50px_rgba(0,0,0,0.1)] opacity-0 invisible translate-y-4 transition-all duration-300 z-[100] overflow-hidden">
+                            <!-- Profile Header -->
+                            <div class="p-6 pb-4 flex items-center gap-4">
+                                <div
+                                    class="w-16 h-16 rounded-full overflow-hidden border-2 border-secondary/20 shrink-0">
+                                    <img src="assets/images/team/team-1.webp" alt="User"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div class="overflow-hidden">
+                                    <h4 class="text-[18px] font-bold font-spartan text-[#050520] truncate">RainbowIT
+                                    </h4>
+                                    <a href="#"
+                                        class="text-secondary text-[14px] font-medium font-inter hover:underline">View
+                                        Profile</a>
+                                </div>
+                            </div>
+
+                            <!-- Menu Links -->
+                            <div class="py-2">
+                                <a href="#"
+                                    class="flex items-center gap-3 px-6 py-2.5 text-[#52526C] hover:text-secondary hover:bg-secondary/5 transition-all text-[15px] font-medium font-inter group/item">
+                                    <i
+                                        class="fa-solid fa-house-chimney w-5 text-center text-gray-400 group-hover/item:text-secondary transition-colors"></i>
+                                    <span>My Dashboard</span>
+                                </a>
+                                <a href="#"
+                                    class="flex items-center gap-3 px-6 py-2.5 text-[#52526C] hover:text-secondary hover:bg-secondary/5 transition-all text-[15px] font-medium font-inter group/item">
+                                    <i
+                                        class="fa-regular fa-bookmark w-5 text-center text-gray-400 group-hover/item:text-secondary transition-colors"></i>
+                                    <span>Bookmark</span>
+                                </a>
+                                <a href="#"
+                                    class="flex items-center gap-3 px-6 py-2.5 text-[#52526C] hover:text-secondary hover:bg-secondary/5 transition-all text-[15px] font-medium font-inter group/item">
+                                    <i
+                                        class="fa-solid fa-briefcase w-5 text-center text-gray-400 group-hover/item:text-secondary transition-colors"></i>
+                                    <span>Enrolled Courses</span>
+                                </a>
+                                <a href="#"
+                                    class="flex items-center gap-3 px-6 py-2.5 text-[#52526C] hover:text-secondary hover:bg-secondary/5 transition-all text-[15px] font-medium font-inter group/item">
+                                    <i
+                                        class="fa-regular fa-heart w-5 text-center text-gray-400 group-hover/item:text-secondary transition-colors"></i>
+                                    <span>Wishlist</span>
+                                </a>
+                                <a href="#"
+                                    class="flex items-center gap-3 px-6 py-2.5 text-[#52526C] hover:text-secondary hover:bg-secondary/5 transition-all text-[15px] font-medium font-inter group/item">
+                                    <i
+                                        class="fa-regular fa-star w-5 text-center text-gray-400 group-hover/item:text-secondary transition-colors"></i>
+                                    <span>Reviews</span>
+                                </a>
+                                <a href="#"
+                                    class="flex items-center gap-3 px-6 py-2.5 text-[#52526C] hover:text-secondary hover:bg-secondary/5 transition-all text-[15px] font-medium font-inter group/item">
+                                    <i
+                                        class="fa-solid fa-list-check w-5 text-center text-gray-400 group-hover/item:text-secondary transition-colors"></i>
+                                    <span>My Quiz Attempts</span>
+                                </a>
+                                <a href="#"
+                                    class="flex items-center gap-3 px-6 py-2.5 text-[#52526C] hover:text-secondary hover:bg-secondary/5 transition-all text-[15px] font-medium font-inter group/item">
+                                    <i
+                                        class="fa-regular fa-clock w-5 text-center text-gray-400 group-hover/item:text-secondary transition-colors"></i>
+                                    <span>Order History</span>
+                                </a>
+                                <a href="#"
+                                    class="flex items-center gap-3 px-6 py-2.5 text-[#52526C] hover:text-secondary hover:bg-secondary/5 transition-all text-[15px] font-medium font-inter group/item">
+                                    <i
+                                        class="fa-regular fa-comment w-5 text-center text-gray-400 group-hover/item:text-secondary transition-colors"></i>
+                                    <span>Question & Answer</span>
+                                </a>
+                            </div>
+
+                            <!-- Separator -->
+                            <div class="border-t border-gray-100"></div>
+
+                            <!-- Getting Started -->
+                            <div class="py-2">
+                                <a href="#"
+                                    class="flex items-center gap-3 px-6 py-2.5 text-[#52526C] hover:text-secondary hover:bg-secondary/5 transition-all text-[15px] font-medium font-inter group/item">
+                                    <i
+                                        class="fa-solid fa-book-open w-5 text-center text-gray-400 group-hover/item:text-secondary transition-colors"></i>
+                                    <span>Getting Started</span>
+                                </a>
+                            </div>
+
+                            <!-- Separator -->
+                            <div class="border-t border-gray-100"></div>
+
+                            <!-- Settings & Logout -->
+                            <div class="py-2">
+                                <a href="#"
+                                    class="flex items-center gap-3 px-6 py-2.5 text-[#52526C] hover:text-secondary hover:bg-secondary/5 transition-all text-[15px] font-medium font-inter group/item">
+                                    <i
+                                        class="fa-solid fa-gear w-5 text-center text-gray-400 group-hover/item:text-secondary transition-colors"></i>
+                                    <span>Settings</span>
+                                </a>
+                                <a href="#"
+                                    class="flex items-center gap-3 px-6 py-2.5 text-[#52526C] hover:text-secondary hover:bg-secondary/5 transition-all text-[15px] font-medium font-inter group/item">
+                                    <i
+                                        class="fa-solid fa-arrow-right-from-bracket w-5 text-center text-gray-400 group-hover/item:text-secondary transition-colors"></i>
+                                    <span>Logout</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Join Button -->
+                    <a href="#"
+                        class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-[50px] bg-linear-to-r from-[#B26EF7] via-[#FF71BF] to-[#FFBD7A] text-white text-[16px] font-semibold font-spartan hover:shadow-[0px_10px_30px_rgba(178,110,247,0.4)] hover:-translate-y-0.5 transition-all duration-300 border-b-2 border-primary/29">
+                        <img src="assets/images/icon/right-icon.svg" alt="Join" class="w-5 h-5">
+                        <span>Join for free</span>
+                    </a>
+
+                    <!-- Mobile Toggle -->
+                    <button id="mobile-menu-btn" class="lg:hidden text-white/90 text-2xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Container -->
+            <div id="mobile-menu" class="hidden lg:hidden pb-6 border-t border-white/5">
+                <div class="flex flex-col space-y-4 pt-4">
+                    <a href="#"
+                        class="text-white/80 hover:text-secondary transition-colors text-[16px] font-inter">Demos</a>
+                    <a href="#"
+                        class="text-white/80 hover:text-secondary transition-colors text-[16px] font-inter">Pages</a>
+                    <a href="#"
+                        class="text-white/80 hover:text-secondary transition-colors text-[16px] font-inter">Elements</a>
+                    <a href="#"
+                        class="text-white/80 hover:text-secondary transition-colors text-[16px] font-inter">More</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- about Section Start -->
+        <section id="about" class="bg-primary py-[100px] relative overflow-hidden">
+            <div class="max-w-[1320px] mx-auto px-4 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-[80px] items-center">
+                    <!-- Left Image Area -->
+                    <div class="relative">
+                        <!-- Experience Badge -->
+                        <div
+                            class="absolute -top-[40px] -left-[40px] z-30 bg-linear-to-br from-[#6246E5] to-[#3B2BA0] rounded-big p-6 shadow-xl transition-transform hover:-translate-y-2 duration-300">
+                            <div class="flex items-center gap-4">
+                                <span class="text-white text-[48px] font-bold font-spartan leading-none">24</span>
+                                <div class="text-white/80 text-[14px] font-medium font-inter leading-tight">
+                                    Years of<br>experience
+                                </div>
+                            </div>
+                            <!-- Decorative curves in badge -->
+                            <div
+                                class="absolute top-0 right-0 w-full h-full opacity-10 pointer-events-none overflow-hidden rounded-big">
+                                <svg viewBox="0 0 100 100"
+                                    class="w-full h-full transform scale-150 translate-x-1/4 -translate-y-1/4">
+                                    <circle cx="100" cy="0" r="80" fill="none" stroke="white" stroke-width="2" />
+                                    <circle cx="100" cy="0" r="60" fill="none" stroke="white" stroke-width="2" />
+                                </svg>
+                            </div>
+                        </div>
+
+                        <!-- Main Images -->
+                        <div class="relative z-10">
+                            <!-- Background Shape/Decoration -->
+                            <div class="absolute -bottom-[20px] -left-[20px] -z-10">
+                                <i class="fa-solid fa-clover text-secondary/20 text-[80px] rotate-12"></i>
+                            </div>
+
+                            <!-- Path Decoration -->
+                            <div class="absolute -top-[10%] -right-[10%] -z-10 opacity-50">
+                                <img src="assets/images/about/path.png" alt="path" class="w-full h-auto">
+                            </div>
+
+                            <!-- Right/Main Image -->
+                            <div
+                                class="ml-auto w-full max-w-[450px] rounded-[20px] overflow-hidden border-[6px] border-white/5 shadow-2xl">
+                                <img src="assets/images/about/about-image1.webp" alt="Students studying"
+                                    class="w-full h-auto object-cover">
+                            </div>
+
+                            <!-- Left/Overlapping Image -->
+                            <div
+                                class="absolute -left-[60px] top-[140px] w-[280px] rounded-[20px] overflow-hidden border-[6px] border-white/5 shadow-2xl z-20">
+                                <img src="assets/images/about/about-image2.webp" alt="Students in hallway"
+                                    class="w-full h-auto object-cover">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Content Area -->
+                    <div>
+                        <span
+                            class="inline-flex items-center justify-center px-5 py-2 rounded-full border border-white/10 bg-white/5 text-secondary text-[14px] font-bold font-spartan mb-6">
+                            About Our Platform
+                        </span>
+
+                        <h2 class="text-white text-[40px] md:text-[54px] font-bold font-spartan leading-[1.1] mb-6">
+                            Welcome Educate University <span
+                                class="gradient-color-primary bg-clip-text text-transparent">of Excellence</span>
+                        </h2>
+
+                        <p class="text-white/60 text-[16px] md:text-[18px] font-inter leading-[1.7] mb-8">
+                            Education is the most powerful weapon which you can to change leadership is not about a
+                            title or a designation it's about.
+                        </p>
+
+                        <!-- Feature List -->
+                        <ul class="space-y-4 mb-10">
+                            <li class="flex items-start gap-3">
+                                <div class="mt-1 shrink-0">
+                                    <i class="fa-solid fa-check text-secondary text-[14px]"></i>
+                                </div>
+                                <span class="text-white/80 text-[16px] font-inter">Create content and courses that align
+                                    with individual needs and learning</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="mt-1 shrink-0">
+                                    <i class="fa-solid fa-check text-secondary text-[14px]"></i>
+                                </div>
+                                <span class="text-white/80 text-[16px] font-inter">Engage students through multimedia
+                                    materials, quizzes, and hands-on activities</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <div class="mt-1 shrink-0">
+                                    <i class="fa-solid fa-check text-secondary text-[14px]"></i>
+                                </div>
+                                <span class="text-white/80 text-[16px] font-inter">Monitor student performance through
+                                    dashboards that provide learning insights</span>
+                            </li>
+                        </ul>
+
+                        <!-- Info Cards Row -->
+                        <div class="flex flex-wrap gap-8 mb-12">
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-[50px] h-[50px] rounded-full bg-secondary/10 flex items-center justify-center text-secondary shadow-[0_0_20px_rgba(147,130,255,0.2)]">
+                                    <i class="fa-solid fa-check text-[18px]"></i>
+                                </div>
+                                <span class="text-white text-[16px] font-bold font-spartan">Learn from anywhere</span>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div
+                                    class="w-[50px] h-[50px] rounded-full bg-secondary/10 flex items-center justify-center text-secondary shadow-[0_0_20px_rgba(147,130,255,0.2)]">
+                                    <i class="fa-solid fa-check text-[18px]"></i>
+                                </div>
+                                <span class="text-white text-[16px] font-bold font-spartan">Learn from anywhere</span>
+                            </div>
+                        </div>
+
+                        <!-- CTA Button -->
+                        <a href="#"
+                            class="inline-flex items-center gap-3 px-10 py-5 rounded-full bg-linear-to-r from-border-secondary via-[#FF71BF] to-[#FFBD7A] text-white text-[18px] font-bold font-spartan hover:shadow-[0px_15px_30px_rgba(178,110,247,0.4)] transition-all duration-300 hover:-translate-y-1 border-b-2 border-primary/29">
+                            Explore More
+                            <i class="fa-solid fa-arrow-right text-[16px]"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- about Section End -->
+
+        <!-- Major Partners Section Start -->
+        <section id="partners"
+            class="bg-primary py-20 md:py-24 relative overflow-hidden rbt-scroll-trigger rbt-scroll-trigger--offscreen">
+            <!-- Background Decoration -->
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/5 blur-[120px] rounded-full pointer-events-none">
+            </div>
+
+            <div class="max-w-[1320px] mx-auto px-4 relative z-10">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <span
+                        class="inline-flex items-center justify-center px-4 py-1.5 rounded-[50px] border border-white/10 bg-white/5 text-secondary text-[13px] font-bold font-spartan mb-6">
+                        Our Partners
+                    </span>
+                    <h2 class="text-white text-[36px] md:text-[54px] font-bold font-spartan leading-tight mb-4">
+                        Institution <span class="gradient-color-primary bg-clip-text text-transparent">Work With
+                            Us</span>
+                    </h2>
+                    <p class="text-white/60 text-[16px] md:text-[18px] font-inter max-w-[670px] mx-auto">
+                        Education is the most powerful weapon which you can to change the world leadership is not about
+                        a title or a designation
+                    </p>
+                </div>
+
+                <!-- Brand Slider -->
+                <div class="swiper brand-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Slack -->
+                        <div class="swiper-slide">
+                            <div
+                                class="h-[100px] bg-primary bg-box-color border border-white/5 rounded-12 flex items-center justify-center group hover:border-secondary/30 transition-all duration-300 relative overflow-hidden before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-0 before:bg-linear-to-t before:from-secondary/20 before:to-transparent hover:before:h-full before:transition-all before:duration-500 before:pointer-events-none">
+                                <div class="flex items-center gap-3 relative z-10">
+                                    <img src="assets/images/brand/slack.png" alt="slack">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Asana -->
+                        <div class="swiper-slide">
+                            <div
+                                class="h-[100px] bg-primary bg-box-color border border-white/5 rounded-12 flex items-center justify-center group hover:border-secondary/30 transition-all duration-300 relative overflow-hidden before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-0 before:bg-linear-to-t before:from-secondary/20 before:to-transparent hover:before:h-full before:transition-all before:duration-500 before:pointer-events-none">
+                                <div class="flex items-center gap-3 relative z-10">
+                                    <img src="assets/images/brand/asana.png" alt="asana">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Dropbox -->
+                        <div class="swiper-slide">
+                            <div
+                                class="h-[100px] bg-primary bg-box-color border border-white/5 rounded-12 flex items-center justify-center group hover:border-secondary/30 transition-all duration-300 relative overflow-hidden before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-0 before:bg-linear-to-t before:from-secondary/20 before:to-transparent hover:before:h-full before:transition-all before:duration-500 before:pointer-events-none">
+                                <div class="flex items-center gap-3 relative z-10">
+
+                                    <img src="assets/images/brand/dropbox.png" alt="dropbox">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Grammarly -->
+                        <div class="swiper-slide">
+                            <div
+                                class="h-[100px] bg-primary bg-box-color border border-white/5 rounded-12 flex items-center justify-center group hover:border-secondary/30 transition-all duration-300 relative overflow-hidden before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-0 before:bg-linear-to-t before:from-secondary/20 before:to-transparent hover:before:h-full before:transition-all before:duration-500 before:pointer-events-none">
+                                <div class="flex items-center gap-3 relative z-10">
+                                    <img src="assets/images/brand/grammarly.png" alt="grammarly">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Medium -->
+                        <div class="swiper-slide">
+                            <div
+                                class="h-[100px] bg-primary bg-box-color border border-white/5 rounded-12 flex items-center justify-center group hover:border-secondary/30 transition-all duration-300 relative overflow-hidden before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-0 before:bg-linear-to-t before:from-secondary/20 before:to-transparent hover:before:h-full before:transition-all before:duration-500 before:pointer-events-none">
+                                <div class="flex items-center gap-3 relative z-10">
+                                    <img src="assets/images/brand/medium.png" alt="medium">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Microsoft -->
+                        <div class="swiper-slide">
+                            <div
+                                class="h-[100px] bg-primary bg-box-color border border-white/5 rounded-12 flex items-center justify-center group hover:border-secondary/30 transition-all duration-300 relative overflow-hidden before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-0 before:bg-linear-to-t before:from-secondary/20 before:to-transparent hover:before:h-full before:transition-all before:duration-500 before:pointer-events-none">
+                                <div class="flex items-center gap-3 relative z-10">
+                                    <img src="assets/images/brand/microsoft.png" alt="microsoft">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Airbnb -->
+                        <div class="swiper-slide">
+                            <div
+                                class="h-[100px] bg-primary bg-box-color border border-white/5 rounded-12 flex items-center justify-center group hover:border-secondary/30 transition-all duration-300 relative overflow-hidden before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-0 before:bg-linear-to-t before:from-secondary/20 before:to-transparent hover:before:h-full before:transition-all before:duration-500 before:pointer-events-none">
+                                <div class="flex items-center gap-3 relative z-10">
+                                    <img src="assets/images/brand/airbnb.png" alt="airbnb">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Framer -->
+                        <div class="swiper-slide">
+                            <div
+                                class="h-[100px] bg-primary bg-box-color border border-white/5 rounded-12 flex items-center justify-center group hover:border-secondary/30 transition-all duration-300 relative overflow-hidden before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-0 before:bg-linear-to-t before:from-secondary/20 before:to-transparent hover:before:h-full before:transition-all before:duration-500 before:pointer-events-none">
+                                <div class="flex items-center gap-3 relative z-10">
+                                    <img src="assets/images/brand/framer.png" alt="framer">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Discord -->
+                        <div class="swiper-slide relative">
+                            <div
+                                class="h-[100px] bg-primary bg-box-color border border-white/5 rounded-12 flex items-center justify-center group hover:border-secondary/30 transition-all duration-300 relative overflow-hidden before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-0 before:bg-linear-to-t before:from-secondary/20 before:to-transparent hover:before:h-full before:transition-all before:duration-500 before:pointer-events-none">
+                                <div class="flex items-center gap-3 relative z-10">
+                                    <img src="assets/images/brand/discord.png" alt="discord">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- Major Partners Section End -->
+
+        <!-- Popular Courses Section Start -->
+        <section id="popular-courses" class="bg-primary py-20 md:py-24 relative overflow-hidden">
+            <div class="max-w-[1320px] mx-auto px-4 relative z-10">
+                <!-- Section Header -->
+                <div class="text-center mb-16">
+                    <span
+                        class="inline-flex items-center justify-center px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-secondary text-[13px] font-bold font-spartan mb-6">
+                        Popular Courses
+                    </span>
+                    <h2 class="text-white text-[36px] md:text-[54px] font-bold font-spartan leading-tight mb-8">
+                        Choose a Course to Begin <br>
+                        <span class="gradient-color-primary bg-clip-text text-transparent">Your Journey</span>
+                    </h2>
+
+                    <!-- Tabs Navigation -->
+                    <div class="flex flex-wrap items-center justify-center gap-4 mb-12">
+                        <button data-tab-filter="under-graduate"
+                            class="course-tab-btn px-8 py-3 rounded-full bg-secondary text-white text-[16px] font-bold font-spartan shadow-[0px_10px_20px_rgba(147,130,255,0.3)] transition-all">Under
+                            Graduate programs</button>
+                        <button data-tab-filter="data-engineering"
+                            class="course-tab-btn px-8 py-3 rounded-full bg-white/5 border border-white/10 text-white/60 text-[16px] font-bold font-spartan hover:bg-white/10 hover:text-white transition-all">Data
+                            Engineering</button>
+                        <button data-tab-filter="online-programs"
+                            class="course-tab-btn px-8 py-3 rounded-full bg-white/5 border border-white/10 text-white/60 text-[16px] font-bold font-spartan hover:bg-white/10 hover:text-white transition-all">Online
+                            Programs</button>
+                    </div>
+                </div>
+
+                <!-- Slider -->
+                <div class="relative">
+                    <div class="course-swiper swiper">
+                        <div class="swiper-wrapper">
+                            <!-- Slide 1 -->
+                            <div class="swiper-slide h-auto" data-category="under-graduate">
+                                <div
+                                    class="bg-box-color rounded-big border border-white/10 overflow-hidden group h-full flex flex-col">
+                                    <div class="relative overflow-hidden aspect-video">
+                                        <img src="assets/images/course/course-imag.webp" alt="Course"
+                                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                        <span
+                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Programming</span>
+                                    </div>
+                                    <div class="p-8 flex flex-col grow">
+                                        <div class="flex items-center gap-2 mb-4">
+                                            <div class="flex items-center gap-1">
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                            </div>
+                                            <span class="text-white/40 text-[12px] font-inter">(5.0/ 2 Ratings)</span>
+                                        </div>
+                                        <h3
+                                            class="text-white text-[22px] font-bold font-spartan leading-tight mb-8 hover:text-secondary transition-colors">
+                                            <a href="#">Reactive data updates for smooth and dynamic user
+                                                experiences</a>
+                                        </h3>
+                                        <div class="mt-auto">
+                                            <a href="#"
+                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/10 text-white text-[14px] font-bold font-spartan hover:bg-secondary transition-all">View
+                                                Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="swiper-slide h-auto" data-category="data-engineering">
+                                <div
+                                    class="bg-box-color rounded-big border border-white/10 overflow-hidden group h-full flex flex-col">
+                                    <div class="relative overflow-hidden aspect-video">
+                                        <img src="assets/images/course/course-imag2.webp" alt="Course"
+                                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                        <span
+                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Programming</span>
+                                    </div>
+                                    <div class="p-8 flex flex-col grow">
+                                        <div class="flex items-center gap-2 mb-4">
+                                            <div class="flex items-center gap-1">
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                            </div>
+                                            <span class="text-white/40 text-[12px] font-inter">(5.0/ 2 Ratings)</span>
+                                        </div>
+                                        <h3
+                                            class="text-white text-[22px] font-bold font-spartan leading-tight mb-8 hover:text-secondary transition-colors">
+                                            <a href="#">Reactive data updates for smooth and dynamic user
+                                                experiences</a>
+                                        </h3>
+                                        <div class="mt-auto">
+                                            <a href="#"
+                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/10 text-white text-[14px] font-bold font-spartan hover:bg-secondary transition-all">View
+                                                Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="swiper-slide h-auto" data-category="online-programs">
+                                <div
+                                    class="bg-box-color rounded-big border border-white/10 overflow-hidden group h-full flex flex-col">
+                                    <div class="relative overflow-hidden aspect-video">
+                                        <img src="assets/images/course/course-imag3.webp" alt="Course"
+                                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                        <span
+                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Programming</span>
+                                    </div>
+                                    <div class="p-8 flex flex-col grow">
+                                        <div class="flex items-center gap-2 mb-4">
+                                            <div class="flex items-center gap-1">
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                            </div>
+                                            <span class="text-white/40 text-[12px] font-inter">(5.0/ 2 Ratings)</span>
+                                        </div>
+                                        <h3
+                                            class="text-white text-[22px] font-bold font-spartan leading-tight mb-8 hover:text-secondary transition-colors">
+                                            <a href="#">Reactive data updates for smooth and dynamic user
+                                                experiences</a>
+                                        </h3>
+                                        <div class="mt-auto">
+                                            <a href="#"
+                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/10 text-white text-[14px] font-bold font-spartan hover:bg-secondary transition-all">View
+                                                Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 4 -->
+                            <div class="swiper-slide h-auto" data-category="under-graduate">
+                                <div
+                                    class="bg-box-color rounded-big border border-white/10 overflow-hidden group h-full flex flex-col">
+                                    <div class="relative overflow-hidden aspect-video">
+                                        <img src="assets/images/course/course-imag.webp" alt="Course"
+                                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                        <span
+                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Programming</span>
+                                    </div>
+                                    <div class="p-8 flex flex-col grow">
+                                        <div class="flex items-center gap-2 mb-4">
+                                            <div class="flex items-center gap-1">
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                            </div>
+                                            <span class="text-white/40 text-[12px] font-inter">(5.0/ 2 Ratings)</span>
+                                        </div>
+                                        <h3
+                                            class="text-white text-[22px] font-bold font-spartan leading-tight mb-8 hover:text-secondary transition-colors">
+                                            <a href="#">Reactive data updates for smooth and dynamic user
+                                                experiences</a>
+                                        </h3>
+                                        <div class="mt-auto">
+                                            <a href="#"
+                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/10 text-white text-[14px] font-bold font-spartan hover:bg-secondary transition-all">View
+                                                Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 5 -->
+                            <div class="swiper-slide h-auto" data-category="data-engineering">
+                                <div
+                                    class="bg-box-color rounded-big border border-white/10 overflow-hidden group h-full flex flex-col">
+                                    <div class="relative overflow-hidden aspect-video">
+                                        <img src="assets/images/course/course-imag2.webp" alt="Course"
+                                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                        <span
+                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Programming</span>
+                                    </div>
+                                    <div class="p-8 flex flex-col grow">
+                                        <div class="flex items-center gap-2 mb-4">
+                                            <div class="flex items-center gap-1">
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                            </div>
+                                            <span class="text-white/40 text-[12px] font-inter">(5.0/ 2 Ratings)</span>
+                                        </div>
+                                        <h3
+                                            class="text-white text-[22px] font-bold font-spartan leading-tight mb-8 hover:text-secondary transition-colors">
+                                            <a href="#">Reactive data updates for smooth and dynamic user
+                                                experiences</a>
+                                        </h3>
+                                        <div class="mt-auto">
+                                            <a href="#"
+                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/10 text-white text-[14px] font-bold font-spartan hover:bg-secondary transition-all">View
+                                                Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 6 -->
+                            <div class="swiper-slide h-auto" data-category="online-programs">
+                                <div
+                                    class="bg-box-color rounded-big border border-white/10 overflow-hidden group h-full flex flex-col">
+                                    <div class="relative overflow-hidden aspect-video">
+                                        <img src="assets/images/course/course-imag2.webp" alt="Course"
+                                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                        <span
+                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Programming</span>
+                                    </div>
+                                    <div class="p-8 flex flex-col grow">
+                                        <div class="flex items-center gap-2 mb-4">
+                                            <div class="flex items-center gap-1">
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                            </div>
+                                            <span class="text-white/40 text-[12px] font-inter">(5.0/ 2 Ratings)</span>
+                                        </div>
+                                        <h3
+                                            class="text-white text-[22px] font-bold font-spartan leading-tight mb-8 hover:text-secondary transition-colors">
+                                            <a href="#">Reactive data updates for smooth and dynamic user
+                                                experiences</a>
+                                        </h3>
+                                        <div class="mt-auto">
+                                            <a href="#"
+                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/10 text-white text-[14px] font-bold font-spartan hover:bg-secondary transition-all">View
+                                                Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide h-auto" data-category="under-graduate">
+                                <div
+                                    class="bg-box-color rounded-big border border-white/10 overflow-hidden group h-full flex flex-col">
+                                    <div class="relative overflow-hidden aspect-video">
+                                        <img src="assets/images/course/course-imag.webp" alt="Course"
+                                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                        <span
+                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Programming</span>
+                                    </div>
+                                    <div class="p-8 flex flex-col grow">
+                                        <div class="flex items-center gap-2 mb-4">
+                                            <div class="flex items-center gap-1">
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                            </div>
+                                            <span class="text-white/40 text-[12px] font-inter">(5.0/ 2 Ratings)</span>
+                                        </div>
+                                        <h3
+                                            class="text-white text-[22px] font-bold font-spartan leading-tight mb-8 hover:text-secondary transition-colors">
+                                            <a href="#">Reactive data updates for smooth and dynamic user
+                                                experiences</a>
+                                        </h3>
+                                        <div class="mt-auto">
+                                            <a href="#"
+                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/10 text-white text-[14px] font-bold font-spartan hover:bg-secondary transition-all">View
+                                                Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 2 -->
+                            <div class="swiper-slide h-auto" data-category="data-engineering">
+                                <div
+                                    class="bg-box-color rounded-big border border-white/10 overflow-hidden group h-full flex flex-col">
+                                    <div class="relative overflow-hidden aspect-video">
+                                        <img src="assets/images/course/course-imag2.webp" alt="Course"
+                                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                        <span
+                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Programming</span>
+                                    </div>
+                                    <div class="p-8 flex flex-col grow">
+                                        <div class="flex items-center gap-2 mb-4">
+                                            <div class="flex items-center gap-1">
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                            </div>
+                                            <span class="text-white/40 text-[12px] font-inter">(5.0/ 2 Ratings)</span>
+                                        </div>
+                                        <h3
+                                            class="text-white text-[22px] font-bold font-spartan leading-tight mb-8 hover:text-secondary transition-colors">
+                                            <a href="#">Reactive data updates for smooth and dynamic user
+                                                experiences</a>
+                                        </h3>
+                                        <div class="mt-auto">
+                                            <a href="#"
+                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/10 text-white text-[14px] font-bold font-spartan hover:bg-secondary transition-all">View
+                                                Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 3 -->
+                            <div class="swiper-slide h-auto" data-category="online-programs">
+                                <div
+                                    class="bg-box-color rounded-big border border-white/10 overflow-hidden group h-full flex flex-col">
+                                    <div class="relative overflow-hidden aspect-video">
+                                        <img src="assets/images/course/course-imag3.webp" alt="Course"
+                                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                        <span
+                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Programming</span>
+                                    </div>
+                                    <div class="p-8 flex flex-col grow">
+                                        <div class="flex items-center gap-2 mb-4">
+                                            <div class="flex items-center gap-1">
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                            </div>
+                                            <span class="text-white/40 text-[12px] font-inter">(5.0/ 2 Ratings)</span>
+                                        </div>
+                                        <h3
+                                            class="text-white text-[22px] font-bold font-spartan leading-tight mb-8 hover:text-secondary transition-colors">
+                                            <a href="#">Reactive data updates for smooth and dynamic user
+                                                experiences</a>
+                                        </h3>
+                                        <div class="mt-auto">
+                                            <a href="#"
+                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/10 text-white text-[14px] font-bold font-spartan hover:bg-secondary transition-all">View
+                                                Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 4 -->
+                            <div class="swiper-slide h-auto" data-category="under-graduate">
+                                <div
+                                    class="bg-box-color rounded-big border border-white/10 overflow-hidden group h-full flex flex-col">
+                                    <div class="relative overflow-hidden aspect-video">
+                                        <img src="assets/images/course/course-imag.webp" alt="Course"
+                                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                        <span
+                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Programming</span>
+                                    </div>
+                                    <div class="p-8 flex flex-col grow">
+                                        <div class="flex items-center gap-2 mb-4">
+                                            <div class="flex items-center gap-1">
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                            </div>
+                                            <span class="text-white/40 text-[12px] font-inter">(5.0/ 2 Ratings)</span>
+                                        </div>
+                                        <h3
+                                            class="text-white text-[22px] font-bold font-spartan leading-tight mb-8 hover:text-secondary transition-colors">
+                                            <a href="#">Reactive data updates for smooth and dynamic user
+                                                experiences</a>
+                                        </h3>
+                                        <div class="mt-auto">
+                                            <a href="#"
+                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/10 text-white text-[14px] font-bold font-spartan hover:bg-secondary transition-all">View
+                                                Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 5 -->
+                            <div class="swiper-slide h-auto" data-category="data-engineering">
+                                <div
+                                    class="bg-box-color rounded-big border border-white/10 overflow-hidden group h-full flex flex-col">
+                                    <div class="relative overflow-hidden aspect-video">
+                                        <img src="assets/images/course/course-imag2.webp" alt="Course"
+                                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                        <span
+                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Programming</span>
+                                    </div>
+                                    <div class="p-8 flex flex-col grow">
+                                        <div class="flex items-center gap-2 mb-4">
+                                            <div class="flex items-center gap-1">
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                            </div>
+                                            <span class="text-white/40 text-[12px] font-inter">(5.0/ 2 Ratings)</span>
+                                        </div>
+                                        <h3
+                                            class="text-white text-[22px] font-bold font-spartan leading-tight mb-8 hover:text-secondary transition-colors">
+                                            <a href="#">Reactive data updates for smooth and dynamic user
+                                                experiences</a>
+                                        </h3>
+                                        <div class="mt-auto">
+                                            <a href="#"
+                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/10 text-white text-[14px] font-bold font-spartan hover:bg-secondary transition-all">View
+                                                Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Slide 6 -->
+                            <div class="swiper-slide h-auto" data-category="online-programs">
+                                <div
+                                    class="bg-box-color rounded-big border border-white/10 overflow-hidden group h-full flex flex-col">
+                                    <div class="relative overflow-hidden aspect-video">
+                                        <img src="assets/images/course/course-imag2.webp" alt="Course"
+                                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                        <span
+                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Programming</span>
+                                    </div>
+                                    <div class="p-8 flex flex-col grow">
+                                        <div class="flex items-center gap-2 mb-4">
+                                            <div class="flex items-center gap-1">
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
+                                            </div>
+                                            <span class="text-white/40 text-[12px] font-inter">(5.0/ 2 Ratings)</span>
+                                        </div>
+                                        <h3
+                                            class="text-white text-[22px] font-bold font-spartan leading-tight mb-8 hover:text-secondary transition-colors">
+                                            <a href="#">Reactive data updates for smooth and dynamic user
+                                                experiences</a>
+                                        </h3>
+                                        <div class="mt-auto">
+                                            <a href="#"
+                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/10 text-white text-[14px] font-bold font-spartan hover:bg-secondary transition-all">View
+                                                Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div class="mt-12 flex items-center justify-center gap-4">
+                        <button
+                            class="course-swiper-prev w-10 h-10 rounded-full bg-primary border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-secondary transition-all">
+                            <i class="fa-solid fa-chevron-left text-[14px]"></i>
+                        </button>
+                        <button
+                            class="course-swiper-next w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-white shadow-[0px_10px_20px_rgba(147,130,255,0.3)] hover:scale-105 transition-all">
+                            <i class="fa-solid fa-chevron-right text-[14px]"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Popular Courses Section End -->
+
+    </main>
+
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar"
+        class="fixed top-0 right-0 h-full w-full sm:w-[400px] bg-[#050520] z-[1000] translate-x-full transition-all duration-[800ms] ease-[cubic-bezier(0.23,1,0.32,1)] border-l border-white/10 shadow-2xl overflow-y-auto invisible">
+        <div class="p-6 md:p-8 h-full flex flex-col">
+            <!-- Sidebar Header -->
+            <div class="flex items-center justify-between mb-8 pb-6 border-b border-white/10 transform transition-all duration-700 delay-300 opacity-0 translate-y-4"
+                id="cart-header">
+                <h2 class="text-white text-[24px] font-bold font-spartan">Your shopping cart</h2>
+                <button id="cart-close-btn"
+                    class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/5 transition-all duration-300">
+                    <i class="fa-solid fa-xmark text-[20px]"></i>
+                </button>
+            </div>
+
+            <!-- Cart Items -->
+            <div class="flex-grow space-y-6 overflow-y-auto pr-2 custom-scrollbar" id="cart-items-container">
+                <!-- Item 1 -->
+                <div
+                    class="flex gap-4 group transform transition-all duration-700 delay-[400ms] opacity-0 translate-y-4 cart-item">
+                    <div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 border border-white/10">
+                        <img src="assets/images/course/course-imag.webp" alt="Course"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex justify-between items-start">
+                            <h3
+                                class="text-white font-medium font-inter hover:text-secondary transition-colors line-clamp-1">
+                                <a href="#">Miracle Morning</a>
+                            </h3>
+                            <button class="text-white/40 hover:text-red-500 transition-colors ml-2">
+                                <i class="fa-solid fa-xmark text-sm"></i>
+                            </button>
+                        </div>
+                        <p class="text-white/60 text-[14px] font-inter mt-1">1 * $22</p>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div
+                    class="flex gap-4 group transform transition-all duration-700 delay-[500ms] opacity-0 translate-y-4 cart-item">
+                    <div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 border border-white/10">
+                        <img src="assets/images/course/course-imag2.webp" alt="Course"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex justify-between items-start">
+                            <h3
+                                class="text-white font-medium font-inter hover:text-secondary transition-colors line-clamp-1">
+                                <a href="#">Happy Strong</a>
+                            </h3>
+                            <button class="text-white/40 hover:text-red-500 transition-colors ml-2">
+                                <i class="fa-solid fa-xmark text-sm"></i>
+                            </button>
+                        </div>
+                        <p class="text-white/60 text-[14px] font-inter mt-1">1 * $30</p>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div
+                    class="flex gap-4 group transform transition-all duration-700 delay-[600ms] opacity-0 translate-y-4 cart-item">
+                    <div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 border border-white/10">
+                        <img src="assets/images/course/course-imag3.webp" alt="Course"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex justify-between items-start">
+                            <h3
+                                class="text-white font-medium font-inter hover:text-secondary transition-colors line-clamp-1">
+                                <a href="#">Rich Dad Poor Dad</a>
+                            </h3>
+                            <button class="text-white/40 hover:text-red-500 transition-colors ml-2">
+                                <i class="fa-solid fa-xmark text-sm"></i>
+                            </button>
+                        </div>
+                        <p class="text-white/60 text-[14px] font-inter mt-1">1 * $50</p>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div
+                    class="flex gap-4 group transform transition-all duration-700 delay-[700ms] opacity-0 translate-y-4 cart-item">
+                    <div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 border border-white/10">
+                        <img src="assets/images/course/course-imag.webp" alt="Course"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex justify-between items-start">
+                            <h3
+                                class="text-white font-medium font-inter hover:text-secondary transition-colors line-clamp-1">
+                                <a href="#">Momentum Theorem</a>
+                            </h3>
+                            <button class="text-white/40 hover:text-red-500 transition-colors ml-2">
+                                <i class="fa-solid fa-xmark text-sm"></i>
+                            </button>
+                        </div>
+                        <p class="text-white/60 text-[14px] font-inter mt-1">1 * $50</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="mt-8 pt-8 border-t border-white/10 transform transition-all duration-700 delay-[800ms] opacity-0 translate-y-4"
+                id="cart-footer">
+                <div class="flex items-center justify-between mb-8">
+                    <span class="text-white text-[18px] font-bold font-spartan uppercase">Subtotal:</span>
+                    <span class="text-white text-[18px] font-bold font-spartan">$121</span>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <a href="#"
+                        class="w-full h-[56px] flex items-center justify-center rounded-[10px] border border-white/10 text-white font-semibold font-spartan hover:bg-white hover:text-[#050520] transition-all duration-300">View
+                        Cart</a>
+                    <a href="#"
+                        class="w-full h-[56px] flex items-center justify-center rounded-[10px] bg-linear-to-r from-[#B26EF7] via-[#FF71BF] to-[#FFBD7A] text-white font-semibold font-spartan hover:shadow-[0px_10px_30px_rgba(178,110,247,0.4)] transition-all duration-300 border-b-2 border-primary/29">Checkout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar Backdrop -->
+    <div id="cart-backdrop"
+        class="fixed inset-0 bg-black/80 z-[999] opacity-0 invisible transition-all duration-[800ms] ease-[cubic-bezier(0.23,1,0.32,1)]">
+    </div>
+
+    <!-- Back to Top -->
+    <div id="back-to-top"
+        class="fixed bottom-[30px] right-[30px] z-60 w-[100px] h-[100px] cursor-pointer group opacity-0 invisible translate-y-4 transition-all duration-500">
+        <div id="back-to-top-glow" class="absolute inset-0 rounded-full bg-[#24BD25]/0 transition-all duration-500">
+        </div>
+        <svg class="w-full h-full transform -rotate-90 relative z-10">
+            <circle class="text-white/10" stroke-width="4" stroke="currentColor" fill="transparent" r="45" cx="50"
+                cy="50"></circle>
+            <circle id="back-to-top-progress" class="text-[#24BD25]" stroke-width="4" stroke-dasharray="282.7"
+                stroke-dashoffset="282.7" stroke-linecap="round" stroke="currentColor" fill="transparent" r="45" cx="50"
+                cy="50"></circle>
+        </svg>
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+            <span id="back-to-top-percent" class="text-white text-[18px] font-bold font-spartan leading-none">0%</span>
+            <span id="back-to-top-text"
+                class="text-white/60 text-[10px] font-medium font-inter uppercase tracking-wider mt-1 leading-tight">Explore
+                <br> More</span>
+        </div>
+    </div>
+
+    <script src="assets/js/modernizr.min.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/swiper.js"></script>
+    <script src="assets/js/jquery-appear.js"></script>
+    <script src="assets/js/animation.js"></script>
+    <script src="assets/js/text-type.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script src="assets/js/countdown.js"></script>
+    <script src="assets/js/progressbar.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/imageloaded.js"></script>
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Main JS -->
+    <script src="assets/js/main.min.js"></script>
+</body>
+
+</html>
