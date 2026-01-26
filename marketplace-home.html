@@ -1,0 +1,1273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Blog - Tailwind CSS Education Template</title>
+    <meta name="robots" content="noindex, follow">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Spartan:wght@100..900&display=swap"
+        rel="stylesheet">
+    <!-- CSS
+	============================================ -->
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/swiper.css">
+    <link rel="stylesheet" href="assets/css/animation.css">
+    <link rel="stylesheet" href="assets/css/output.css">
+    <link rel="stylesheet" href="assets/css/input.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="rbt-header-sticky primary-color font-inter">
+    <!-- Preloader Start -->
+    <div id="preloader"
+        class="fixed inset-0 z-9999 flex items-center justify-center bg-primary transition-all duration-700 overflow-hidden">
+        <div class="relative w-40 h-40 flex items-center justify-center">
+            <!-- Main Neumorphic Circle -->
+            <div
+                class="absolute w-32 h-32 rounded-full bg-primary shadow-[15px_15px_30px_#02020d,-15px_-15px_30px_#080833]">
+            </div>
+
+            <!-- Inner Inset Circle -->
+            <div
+                class="absolute w-24 h-24 rounded-full bg-primary shadow-[inset_8px_8px_16px_#02020d,inset_-8px_-8px_16px_#080833]">
+            </div>
+
+            <!-- Rotating Light Ring -->
+            <div
+                class="absolute w-32 h-32 rounded-full border-4 border-transparent border-t-[#9382FF] border-l-[#9382FF]/30 animate-[spin_2s_cubic-bezier(0.58,0.185,0.395,0.81)_infinite]">
+            </div>
+
+            <!-- Second Rotating Ring (Opposite) -->
+            <div
+                class="absolute w-32 h-32 rounded-full border-4 border-transparent border-b-[#FF71BF] border-r-[#FF71BF]/30 animate-[spin_2s_cubic-bezier(0.58,0.185,0.395,0.81)_infinite_reverse]">
+            </div>
+
+            <!-- Center Content -->
+            <div class="relative z-10 flex flex-col items-center">
+                <img src="assets/images/favicon.png" alt="Logo" class="w-10 h-10 object-contain animate-pulse">
+            </div>
+        </div>
+    </div>
+    <!-- Preloader End -->
+
+
+    <header class="bg-[#11112A] sticky top-0 z-50 border-b border-white/5 shadow-lg">
+        <div class="max-w-[1320px] mx-auto px-4 relative">
+            <div class="flex items-center justify-between h-[90px]">
+                <!-- Logo Section -->
+                <div class="flex items-center">
+                    <a href="index.html">
+                        <img src="assets/images/logo.png" alt="educate" class="h-10 w-auto">
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex items-center space-x-[40px]">
+                    <!-- Demos Mega Menu Item -->
+                    <div class="group">
+                        <button
+                            class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300 flex items-center gap-1.5 py-8 cursor-pointer relative z-[100]">
+                            Demos <i
+                                class="fa-solid fa-angle-down text-[11px] group-hover:rotate-180 transition-transform"></i>
+                        </button>
+
+                        <!-- Menu Blur Overlay -->
+                        <div
+                            class="fixed inset-0 bg-[#050520]/60 backdrop-blur-[6px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 z-[90] pointer-events-none">
+                        </div>
+
+                        <!-- Demos Mega Menu Content -->
+                        <div
+                            class="absolute left-1/2 -translate-x-1/2 top-full opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-100 w-[1200px]">
+                            <div
+                                class="bg-white rounded-b-[20px] shadow-[0px_30px_70px_rgba(0,0,0,0.15)] overflow-hidden p-8">
+                                <div class="grid grid-cols-5 gap-6 mb-10">
+                                    <!-- Demo Card 1 -->
+                                    <div class="group/demo transition-all duration-300">
+                                        <div
+                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
+                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                            </div>
+                                            <div class="relative overflow-hidden aspect-[4/4]">
+                                                <img src="assets/images/demo/demo-1.webp" alt="Electronics One"
+                                                    class="w-full object-contain">
+                                                <div
+                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5
+                                            class="text-center mt-4 text-[15px] font-bold font-spartan text-[#050520] group-hover/demo:text-secondary transition-colors">
+                                            Electronics One</h5>
+                                    </div>
+
+                                    <!-- Demo Card 2 -->
+                                    <div class="group/demo transition-all duration-300">
+                                        <div
+                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
+                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                            </div>
+                                            <div class="relative overflow-hidden aspect-[4/4]">
+                                                <img src="assets/images/demo/demo-2.webp" alt="Fashion One"
+                                                    class="w-full object-contain">
+                                                <div
+                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5
+                                            class="text-center mt-4 text-[15px] font-bold font-spartan text-[#050520] group-hover/demo:text-secondary transition-colors">
+                                            Fashion One</h5>
+                                    </div>
+
+                                    <!-- Demo Card 3 -->
+                                    <div class="group/demo transition-all duration-300">
+                                        <div
+                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
+                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                            </div>
+                                            <div class="relative overflow-hidden aspect-[4/4]">
+                                                <img src="assets/images/demo/demo-3.webp" alt="Furniture One"
+                                                    class="w-full object-contain">
+                                                <div
+                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5
+                                            class="text-center mt-4 text-[15px] font-bold font-spartan text-[#050520] group-hover/demo:text-secondary transition-colors">
+                                            Furniture One</h5>
+                                    </div>
+
+                                    <!-- Demo Card 4 -->
+                                    <div class="group/demo transition-all duration-300">
+                                        <div
+                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
+                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                            </div>
+                                            <div class="relative overflow-hidden aspect-[4/4]">
+                                                <img src="assets/images/demo/demo-5.webp" alt="Print Service One"
+                                                    class="w-full object-contain">
+                                                <div
+                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5
+                                            class="text-center mt-4 text-[15px] font-bold font-spartan text-[#050520] group-hover/demo:text-secondary transition-colors">
+                                            Print Service One</h5>
+                                    </div>
+
+                                    <!-- Demo Card 5 -->
+                                    <div class="group/demo transition-all duration-300">
+                                        <div
+                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
+                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                            </div>
+                                            <div class="relative overflow-hidden aspect-[4/4]">
+                                                <img src="assets/images/demo/demo-6.webp" alt="Cosmetic Beauty One"
+                                                    class="w-full object-contain">
+                                                <div
+                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5
+                                            class="text-center mt-4 text-[15px] font-bold font-spartan text-[#050520] group-hover/demo:text-secondary transition-colors">
+                                            Cosmetic Beauty One</h5>
+                                    </div>
+
+                                    <!-- Demo Card 6 -->
+                                    <div class="group/demo transition-all duration-300">
+                                        <div
+                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
+                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                            </div>
+                                            <div class="relative overflow-hidden aspect-[4/4]">
+                                                <img src="assets/images/demo/demo-8.webp" alt="Sports One"
+                                                    class="w-full object-contain">
+                                                <div
+                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5
+                                            class="text-center mt-4 text-[15px] font-bold font-spartan text-[#050520] group-hover/demo:text-secondary transition-colors">
+                                            Sports One</h5>
+                                    </div>
+
+                                    <!-- Demo Card 7 -->
+                                    <div class="group/demo transition-all duration-300">
+                                        <div
+                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
+                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                            </div>
+                                            <div class="relative overflow-hidden aspect-[4/4]">
+                                                <img src="assets/images/demo/demo-9.webp" alt="Glass One"
+                                                    class="w-full object-contain">
+                                                <div
+                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5
+                                            class="text-center mt-4 text-[15px] font-bold font-spartan text-[#050520] group-hover/demo:text-secondary transition-colors">
+                                            Glass One</h5>
+                                    </div>
+
+                                    <!-- Demo Card 8 -->
+                                    <div class="group/demo transition-all duration-300">
+                                        <div
+                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
+                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                            </div>
+                                            <div class="relative overflow-hidden aspect-[4/4]">
+                                                <img src="assets/images/demo/demo-10.webp" alt="Phone One"
+                                                    class="w-full object-contain">
+                                                <div
+                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5
+                                            class="text-center mt-4 text-[15px] font-bold font-spartan text-[#050520] group-hover/demo:text-secondary transition-colors">
+                                            Phone One</h5>
+                                    </div>
+
+                                    <!-- Demo Card 9 -->
+                                    <div class="group/demo transition-all duration-300">
+                                        <div
+                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
+                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                            </div>
+                                            <div class="relative overflow-hidden aspect-[4/4]">
+                                                <img src="assets/images/demo/demo-11.webp" alt="Accessories One"
+                                                    class="w-full object-contain">
+                                                <div
+                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5
+                                            class="text-center mt-4 text-[15px] font-bold font-spartan text-[#050520] group-hover/demo:text-secondary transition-colors">
+                                            Accessories One</h5>
+                                    </div>
+
+                                    <!-- Demo Card 10 -->
+                                    <div class="group/demo transition-all duration-300">
+                                        <div
+                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
+                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                            </div>
+                                            <div class="relative overflow-hidden aspect-[4/4]">
+                                                <img src="assets/images/demo/demo-1.webp" alt="jewellery One"
+                                                    class="w-full object-contain">
+                                                <div
+                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <h5
+                                            class="text-center mt-4 text-[15px] font-bold font-spartan text-[#050520] group-hover/demo:text-secondary transition-colors">
+                                            jewellery One</h5>
+                                    </div>
+                                </div>
+
+                                <!-- View All Button -->
+                                <div class="flex justify-center -mb-4">
+                                    <a href="#"
+                                        class="inline-flex items-center gap-3 px-10 py-4 rounded-[50px] bg-[#2D56FF] text-white text-[16px] font-bold font-spartan hover:shadow-[0px_15px_30px_rgba(45,86,255,0.4)] transition-all duration-300 hover:-translate-y-1">
+                                        View All The Trending Collection
+                                        <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
+                                            <i
+                                                class="fa-solid fa-arrow-right-from-bracket rotate-[-45deg] text-[14px]"></i>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#"
+                        class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300 flex items-center gap-1.5">Pages</a>
+
+                    <!-- Mega Menu Item -->
+                    <div class="group">
+                        <button
+                            class="flex items-center gap-1.5 rounded-[50px] text-white text-[16px] font-medium font-inter transition-all duration-300 relative z-[100]">
+                            Elements <i
+                                class="fa-solid fa-angle-down text-[12px] group-hover:rotate-180 transition-transform"></i>
+                        </button>
+
+                        <!-- Menu Blur Overlay -->
+                        <div
+                            class="fixed inset-0 bg-[#050520]/60 backdrop-blur-[6px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 z-[90] pointer-events-none">
+                        </div>
+
+                        <!-- Mega Menu Content -->
+                        <div
+                            class="absolute left-1/2 -translate-x-1/2 top-full pt-[30px] opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-5 group-hover:translate-y-0 transition-all duration-300 z-100 w-[1140px]">
+                            <div
+                                class="bg-white rounded-[20px] shadow-[0px_30px_70px_rgba(0,0,0,0.2)] overflow-hidden flex">
+                                <!-- Left Columns (Links) -->
+                                <div class="flex-1 grid grid-cols-3 p-10 gap-x-12">
+                                    <!-- Column 1: Ultimate User Experience -->
+                                    <div>
+                                        <h4
+                                            class="text-[#888888] text-[13px] font-bold font-spartan uppercase tracking-wider mb-8 pb-3 border-b border-gray-100">
+                                            Ultimate User Experience</h4>
+                                        <ul class="space-y-4">
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Easy
+                                                    to Customize Codes</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Powerful
+                                                    Page Options</a></li>
+                                            <li><a href="#"
+                                                    class="flex items-center justify-between text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Fast
+                                                    Performance <span
+                                                        class="px-2 py-0.5 rounded-[4px] bg-secondary text-white text-[9px] font-bold">HOT</span></a>
+                                            </li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Ultimate
+                                                    Header Layouts</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Excessive
+                                                    Footer Variation</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Advanced
+                                                    Mega Menu</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Popup
+                                                    & Sidebar Search</a></li>
+                                            <li><a href="#"
+                                                    class="flex items-center justify-between text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">All
+                                                    Boost Sales Features <span
+                                                        class="px-2 py-0.5 rounded-[4px] bg-secondary text-white text-[9px] font-bold">NEW</span></a>
+                                            </li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Mobile-first
+                                                    Experience</a></li>
+                                            <li><a href="#"
+                                                    class="flex items-center justify-between text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">User
+                                                    Feedback <span
+                                                        class="px-2 py-0.5 rounded-[4px] bg-[#FFBD7A] text-white text-[9px] font-bold">COMING</span></a>
+                                            </li>
+                                            <li><a href="#"
+                                                    class="flex items-center justify-between text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Seamless
+                                                    Integration <span
+                                                        class="px-2 py-0.5 rounded-[4px] bg-[#FFBD7A] text-white text-[9px] font-bold">COMING</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- Column 2: Flexible Shopping -->
+                                    <div>
+                                        <h4
+                                            class="text-[#888888] text-[13px] font-bold font-spartan uppercase tracking-wider mb-8 pb-3 border-b border-gray-100">
+                                            Flexible Shopping</h4>
+                                        <ul class="space-y-4">
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Smart
+                                                    Product Filtering</a></li>
+                                            <li><a href="#"
+                                                    class="flex items-center justify-between text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Variant
+                                                    Swatches <span
+                                                        class="px-2 py-0.5 rounded-[4px] bg-[#FF71BF] text-white text-[9px] font-bold uppercase">FULLY
+                                                        READY</span></a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Product
+                                                    Compare</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">WishLists
+                                                    Builder</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Quick
+                                                    View</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Flash
+                                                    Sales Management</a></li>
+                                            <li><a href="#"
+                                                    class="flex items-center justify-between text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Cart
+                                                    Upsell <span
+                                                        class="px-2 py-0.5 rounded-[4px] bg-secondary text-white text-[9px] font-bold">NEW</span></a>
+                                            </li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Size
+                                                    Chart Variation</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Sticky
+                                                    Add To Cart</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Product
+                                                    Video & 3D View</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Multi-Step
+                                                    Checkout</a></li>
+                                        </ul>
+                                    </div>
+                                    <!-- Column 3: Boost Sales -->
+                                    <div>
+                                        <h4
+                                            class="text-[#888888] text-[13px] font-bold font-spartan uppercase tracking-wider mb-8 pb-3 border-b border-gray-100">
+                                            Boost Sales</h4>
+                                        <ul class="space-y-4">
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Back
+                                                    To Stock Notification</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Sales
+                                                    Popup</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Pre
+                                                    Order</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Backorder</a>
+                                            </li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Partial
+                                                    Payment</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Shareable
+                                                    Cart</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Bulk
+                                                    Amount Purchase</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Stock
+                                                    Progress Bar</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Sales
+                                                    Push Notification</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Special
+                                                    Offers Management</a></li>
+                                            <li><a href="#"
+                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Free
+                                                    Shipping Threshold</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Right Column (Image/Grid) -->
+                                <div class="w-[450px] bg-gray-light p-8">
+                                    <div class="grid grid-cols-2 gap-4 h-full">
+                                        <div
+                                            class="relative group/card overflow-hidden rounded-xl shadow-md bg-white p-2">
+                                            <img src="assets/images/demo/demo-1.webp" alt="Preview"
+                                                class="w-full h-32 object-cover rounded-lg mb-2 transition-transform duration-500 group-hover/card:scale-110">
+                                            <p class="text-[12px] font-bold font-spartan text-gray-800">Classic Demo</p>
+                                        </div>
+                                        <div
+                                            class="relative group/card overflow-hidden rounded-xl shadow-md bg-white p-2">
+                                            <img src="assets/images/demo/demo-2.webp" alt="Preview"
+                                                class="w-full h-32 object-cover rounded-lg mb-2 transition-transform duration-500 group-hover/card:scale-110">
+                                            <p class="text-[12px] font-bold font-spartan text-gray-800">Modern Shop</p>
+                                        </div>
+                                        <div
+                                            class="relative group/card overflow-hidden rounded-xl shadow-md bg-white p-2">
+                                            <img src="assets/images/demo/demo-3.webp" alt="Preview"
+                                                class="w-full h-32 object-cover rounded-lg mb-2 transition-transform duration-500 group-hover/card:scale-110">
+                                            <p class="text-[12px] font-bold font-spartan text-gray-800">LMS System</p>
+                                        </div>
+                                        <div
+                                            class="relative group/card overflow-hidden rounded-xl shadow-md bg-white p-2 flex items-center justify-center border-2 border-dashed border-gray-200 hover:border-secondary transition-colors cursor-pointer">
+                                            <div class="text-center">
+                                                <i class="fa-solid fa-plus text-secondary mb-1"></i>
+                                                <p class="text-[10px] font-bold font-spartan text-gray-500 uppercase">
+                                                    View All</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Action Section -->
+                <div class="flex items-center gap-6">
+                    <!-- Language Switcher -->
+                    <div class="hidden sm:flex items-center gap-2 cursor-pointer group">
+                        <img src="https://flagcdn.com/w20/us.png" alt="English"
+                            class="w-5 h-5 rounded-full object-cover">
+                        <span
+                            class="text-white/90 text-[15px] font-medium font-inter group-hover:text-secondary transition-all">English</span>
+                        <i
+                            class="fa-solid fa-angle-down text-white/40 text-[10px] group-hover:text-secondary transition-all"></i>
+                    </div>
+
+                    <!-- Cart Icon -->
+                    <div id="cart-btn" class="relative cursor-pointer group">
+                        <div
+                            class="w-[46px] h-[46px] rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/90 group-hover:bg-secondary group-hover:border-secondary transition-all duration-300">
+                            <i class="fa-solid fa-cart-shopping text-[17px]"></i>
+                        </div>
+                        <span
+                            class="absolute -top-1 -right-1 w-[20px] h-[20px] bg-[#9382FF] text-white text-[11px] font-bold rounded-full flex items-center justify-center border-2 border-primary">2</span>
+                    </div>
+
+                    <!-- Login link replaced with User Profile Dropdown -->
+                    <div class="relative group/user">
+                        <button id="user-profile-btn"
+                            class="hidden md:flex items-center gap-2 text-secondary text-[16px] font-medium font-inter transition-all duration-300 cursor-pointer">
+                            <i class="fa-regular fa-user"></i>
+                            <span>Admin</span>
+                        </button>
+
+                        <!-- User Dropdown Menu -->
+                        <div id="user-profile-dropdown"
+                            class="absolute top-full right-0 mt-6 w-[280px] bg-white rounded-xl shadow-[0px_20px_50px_rgba(0,0,0,0.1)] opacity-0 invisible translate-y-4 transition-all duration-300 z-[100] overflow-hidden">
+                            <!-- Profile Header -->
+                            <div class="p-6 pb-4 flex items-center gap-4">
+                                <div
+                                    class="w-16 h-16 rounded-full overflow-hidden border-2 border-secondary/20 shrink-0">
+                                    <img src="assets/images/team/team-1.webp" alt="User"
+                                        class="w-full h-full object-cover">
+                                </div>
+                                <div class="overflow-hidden">
+                                    <h4 class="text-[18px] font-bold font-spartan text-[#050520] truncate">RainbowIT
+                                    </h4>
+                                    <a href="#"
+                                        class="text-secondary text-[14px] font-medium font-inter hover:underline">View
+                                        Profile</a>
+                                </div>
+                            </div>
+
+                            <!-- Menu Links -->
+                            <div class="py-2">
+                                <a href="#"
+                                    class="flex items-center gap-3 px-6 py-2.5 text-[#52526C] hover:text-secondary hover:bg-secondary/5 transition-all text-[15px] font-medium font-inter group/item">
+                                    <i
+                                        class="fa-solid fa-house-chimney w-5 text-center text-gray-400 group-hover/item:text-secondary transition-colors"></i>
+                                    <span>My Dashboard</span>
+                                </a>
+                                <a href="#"
+                                    class="flex items-center gap-3 px-6 py-2.5 text-[#52526C] hover:text-secondary hover:bg-secondary/5 transition-all text-[15px] font-medium font-inter group/item">
+                                    <i
+                                        class="fa-regular fa-bookmark w-5 text-center text-gray-400 group-hover/item:text-secondary transition-colors"></i>
+                                    <span>Bookmark</span>
+                                </a>
+                                <a href="#"
+                                    class="flex items-center gap-3 px-6 py-2.5 text-[#52526C] hover:text-secondary hover:bg-secondary/5 transition-all text-[15px] font-medium font-inter group/item">
+                                    <i
+                                        class="fa-solid fa-briefcase w-5 text-center text-gray-400 group-hover/item:text-secondary transition-colors"></i>
+                                    <span>Enrolled Courses</span>
+                                </a>
+                                <a href="#"
+                                    class="flex items-center gap-3 px-6 py-2.5 text-[#52526C] hover:text-secondary hover:bg-secondary/5 transition-all text-[15px] font-medium font-inter group/item">
+                                    <i
+                                        class="fa-regular fa-heart w-5 text-center text-gray-400 group-hover/item:text-secondary transition-colors"></i>
+                                    <span>Wishlist</span>
+                                </a>
+                                <a href="#"
+                                    class="flex items-center gap-3 px-6 py-2.5 text-[#52526C] hover:text-secondary hover:bg-secondary/5 transition-all text-[15px] font-medium font-inter group/item">
+                                    <i
+                                        class="fa-regular fa-star w-5 text-center text-gray-400 group-hover/item:text-secondary transition-colors"></i>
+                                    <span>Reviews</span>
+                                </a>
+                                <a href="#"
+                                    class="flex items-center gap-3 px-6 py-2.5 text-[#52526C] hover:text-secondary hover:bg-secondary/5 transition-all text-[15px] font-medium font-inter group/item">
+                                    <i
+                                        class="fa-solid fa-list-check w-5 text-center text-gray-400 group-hover/item:text-secondary transition-colors"></i>
+                                    <span>My Quiz Attempts</span>
+                                </a>
+                                <a href="#"
+                                    class="flex items-center gap-3 px-6 py-2.5 text-[#52526C] hover:text-secondary hover:bg-secondary/5 transition-all text-[15px] font-medium font-inter group/item">
+                                    <i
+                                        class="fa-regular fa-clock w-5 text-center text-gray-400 group-hover/item:text-secondary transition-colors"></i>
+                                    <span>Order History</span>
+                                </a>
+                                <a href="#"
+                                    class="flex items-center gap-3 px-6 py-2.5 text-[#52526C] hover:text-secondary hover:bg-secondary/5 transition-all text-[15px] font-medium font-inter group/item">
+                                    <i
+                                        class="fa-regular fa-comment w-5 text-center text-gray-400 group-hover/item:text-secondary transition-colors"></i>
+                                    <span>Question & Answer</span>
+                                </a>
+                            </div>
+
+                            <!-- Separator -->
+                            <div class="border-t border-gray-100"></div>
+
+                            <!-- Getting Started -->
+                            <div class="py-2">
+                                <a href="#"
+                                    class="flex items-center gap-3 px-6 py-2.5 text-[#52526C] hover:text-secondary hover:bg-secondary/5 transition-all text-[15px] font-medium font-inter group/item">
+                                    <i
+                                        class="fa-solid fa-book-open w-5 text-center text-gray-400 group-hover/item:text-secondary transition-colors"></i>
+                                    <span>Getting Started</span>
+                                </a>
+                            </div>
+
+                            <!-- Separator -->
+                            <div class="border-t border-gray-100"></div>
+
+                            <!-- Settings & Logout -->
+                            <div class="py-2">
+                                <a href="#"
+                                    class="flex items-center gap-3 px-6 py-2.5 text-[#52526C] hover:text-secondary hover:bg-secondary/5 transition-all text-[15px] font-medium font-inter group/item">
+                                    <i
+                                        class="fa-solid fa-gear w-5 text-center text-gray-400 group-hover/item:text-secondary transition-colors"></i>
+                                    <span>Settings</span>
+                                </a>
+                                <a href="#"
+                                    class="flex items-center gap-3 px-6 py-2.5 text-[#52526C] hover:text-secondary hover:bg-secondary/5 transition-all text-[15px] font-medium font-inter group/item">
+                                    <i
+                                        class="fa-solid fa-arrow-right-from-bracket w-5 text-center text-gray-400 group-hover/item:text-secondary transition-colors"></i>
+                                    <span>Logout</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Join Button -->
+                    <a href="#"
+                        class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-[50px] bg-linear-to-r from-[#B26EF7] via-[#FF71BF] to-[#FFBD7A] text-white text-[16px] font-semibold font-spartan hover:shadow-[0px_10px_30px_rgba(178,110,247,0.4)] hover:-translate-y-0.5 transition-all duration-300 border-b-2 border-primary/29">
+                        <img src="assets/images/icon/right-icon.svg" alt="Join" class="w-5 h-5">
+                        <span>Join for free</span>
+                    </a>
+
+                    <!-- Mobile Toggle -->
+                    <button id="mobile-menu-btn" class="lg:hidden text-white/90 text-2xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Container -->
+            <div id="mobile-menu" class="hidden lg:hidden pb-6 border-t border-white/5">
+                <div class="flex flex-col space-y-4 pt-4">
+                    <a href="#"
+                        class="text-white/80 hover:text-secondary transition-colors text-[16px] font-inter">Demos</a>
+                    <a href="#"
+                        class="text-white/80 hover:text-secondary transition-colors text-[16px] font-inter">Pages</a>
+                    <a href="#"
+                        class="text-white/80 hover:text-secondary transition-colors text-[16px] font-inter">Elements</a>
+                    <a href="#"
+                        class="text-white/80 hover:text-secondary transition-colors text-[16px] font-inter">More</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Major Partners Section Start -->
+        <section id="partners" class="bg-primary py-[100px] relative overflow-hidden">
+            <!-- Background Decoration -->
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/5 blur-[120px] rounded-full pointer-events-none">
+            </div>
+
+            <div class="max-w-[1320px] mx-auto px-4 relative z-10">
+                <!-- Section Header -->
+                <div class="text-center mb-[60px]">
+                    <span
+                        class="inline-flex items-center justify-center px-[16px] py-[6px] rounded-full border border-white/10 bg-white/5 text-secondary text-[13px] font-bold font-spartan mb-[24px]">
+                        Major Partners
+                    </span>
+                    <h2 class="text-white text-[36px] md:text-[54px] font-bold font-spartan leading-tight mb-[16px]">
+                        Institution <span class="gradient-color-primary bg-clip-text text-transparent">Work With Us</span>
+                    </h2>
+                    <p class="text-white/60 text-[16px] md:text-[18px] font-inter max-w-[670px] mx-auto">
+                        We collaborate with 325+ leading universities and companies
+                    </p>
+                </div>
+
+                <!-- Brand Grid -->
+                <div class="flex flex-col gap-[24px] items-center">
+                    <!-- Row 1 -->
+                    <div class="flex flex-wrap justify-center gap-[24px]">
+                        <!-- Grammarly -->
+                        <div class="w-[220px] h-[100px] bg-box-color border border-white/5 rounded-12 flex items-center justify-center group hover:border-secondary/30 transition-all duration-300">
+                            <img src="assets/images/brand/grammarly.png" alt="grammarly" class="max-h-[35px] opacity-60 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <!-- Medium -->
+                        <div class="w-[220px] h-[100px] bg-box-color border border-white/5 rounded-12 flex items-center justify-center group hover:border-secondary/30 transition-all duration-300">
+                            <img src="assets/images/brand/medium.png" alt="medium" class="max-h-[35px] opacity-60 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <!-- Microsoft -->
+                        <div class="w-[220px] h-[100px] bg-box-color border border-white/5 rounded-12 flex items-center justify-center group hover:border-secondary/30 transition-all duration-300">
+                            <img src="assets/images/brand/microsoft.png" alt="microsoft" class="max-h-[35px] opacity-60 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <!-- Framer -->
+                        <div class="w-[220px] h-[100px] bg-box-color border border-white/5 rounded-12 flex items-center justify-center group hover:border-secondary/30 transition-all duration-300">
+                            <img src="assets/images/brand/framer.png" alt="framer" class="max-h-[35px] opacity-60 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <!-- Airbnb -->
+                        <div class="w-[220px] h-[100px] bg-box-color border border-white/5 rounded-12 flex items-center justify-center group hover:border-secondary/30 transition-all duration-300">
+                            <img src="assets/images/brand/airbnb.png" alt="airbnb" class="max-h-[35px] opacity-60 group-hover:opacity-100 transition-opacity">
+                        </div>
+                    </div>
+
+                    <!-- Row 2 -->
+                    <div class="flex flex-wrap justify-center gap-[24px]">
+                        <!-- Slack -->
+                        <div class="w-[220px] h-[100px] bg-box-color border border-white/5 rounded-12 flex items-center justify-center group hover:border-secondary/30 transition-all duration-300">
+                            <img src="assets/images/brand/slack.png" alt="slack" class="max-h-[35px] opacity-60 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <!-- Asana -->
+                        <div class="w-[220px] h-[100px] bg-box-color border border-white/5 rounded-12 flex items-center justify-center group hover:border-secondary/30 transition-all duration-300">
+                            <img src="assets/images/brand/asana.png" alt="asana" class="max-h-[35px] opacity-60 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <!-- Dropbox -->
+                        <div class="w-[220px] h-[100px] bg-box-color border border-white/5 rounded-12 flex items-center justify-center group hover:border-secondary/30 transition-all duration-300">
+                            <img src="assets/images/brand/dropbox.png" alt="dropbox" class="max-h-[35px] opacity-60 group-hover:opacity-100 transition-opacity">
+                        </div>
+                        <!-- Discord -->
+                        <div class="w-[220px] h-[100px] bg-box-color border border-white/5 rounded-12 flex items-center justify-center group hover:border-secondary/30 transition-all duration-300">
+                            <img src="assets/images/brand/discord.png" alt="discord" class="max-h-[35px] opacity-60 group-hover:opacity-100 transition-opacity">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Become A Partner Button -->
+                <div class="text-center mt-[60px]">
+                    <a href="#" class="inline-flex items-center gap-[10px] px-[40px] py-[16px] rounded-full bg-linear-to-r from-border-secondary via-[#FF71BF] to-[#FFBD7A] text-white text-[18px] font-bold font-spartan hover:shadow-[0px_10px_30px_rgba(178,110,247,0.4)] hover:-translate-y-1 transition-all duration-300 border-b-2 border-primary/30">
+                        <span>Become A Partner</span>
+                        <i class="fa-solid fa-arrow-right text-[16px]"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Major Partners Section End -->
+        
+        <!-- Student Experiences Section Start -->
+        <section id="student-experiences" class="bg-primary py-[100px] relative overflow-hidden">
+            <div class="max-w-[1320px] mx-auto px-4 relative z-10">
+                <!-- Section Header -->
+                <div class="text-center mb-[80px]">
+                    <span class="inline-flex items-center justify-center px-[16px] py-[6px] rounded-full border border-white/10 bg-white/5 text-secondary text-[13px] font-bold font-spartan mb-[24px]">
+                        Our Testimonials
+                    </span>
+                    <h2 class="text-white text-[36px] md:text-[54px] font-bold font-spartan leading-tight">
+                        Student Experiences That <br> <span class="gradient-color-primary bg-clip-text text-transparent">Inspire</span>
+                    </h2>
+                </div>
+
+                <div class="flex flex-col lg:flex-row items-center gap-[40px] lg:gap-[100px]">
+                    <!-- Left Side: Main Image -->
+                    <div class="w-full lg:w-[450px] shrink-0">
+                        <div class="relative rounded-[24px] overflow-hidden aspect-[4/5] shadow-[0px_30px_60px_rgba(0,0,0,0.3)] border border-white/5">
+                            <img id="exp-main-img" src="assets/images/review/review-1.webp" alt="Main Experience" class="w-full h-full object-cover transition-all duration-700">
+                            <!-- Image Overlay Gradient -->
+                            <div class="absolute inset-0 bg-linear-to-t from-primary/40 to-transparent"></div>
+                        </div>
+                    </div>
+
+                    <!-- Middle: Thumbnail Nav with Swiper & Arrows -->
+                    <div class="flex flex-col items-center gap-[15px] shrink-0">
+                        <!-- Up Arrow -->
+                        <button class="exp-thumb-prev w-[40px] h-[40px] flex items-center justify-center text-white/30 hover:text-secondary transition-all cursor-pointer disabled:opacity-0 disabled:pointer-events-none">
+                            <i class="fa-solid fa-chevron-up text-[16px]"></i>
+                        </button>
+
+                        <div class="swiper exp-thumb-swiper h-[240px] w-[95px] py-2">
+                            <div class="swiper-wrapper">
+                                <!-- Slide 1 -->
+                                <div class="swiper-slide h-auto!">
+                                    <div class="relative w-[80px] h-[80px] mx-auto cursor-pointer group active" data-exp-index="0">
+                                        <!-- Colorful Ring (Visible only when active) -->
+                                        <div class="absolute -inset-[5px] rounded-full bg-linear-to-r from-[#B26EF7] via-[#FF71BF] to-[#FFBD7A] opacity-0 group-[.active]:opacity-100 transition-all duration-300 group-[.active]:scale-105"></div>
+                                        <!-- Profile Container -->
+                                        <div class="relative w-full h-full rounded-full border-4 border-[#050520] overflow-hidden transition-all duration-300 group-[:not(.active)]:opacity-50 group-[:not(.active)]:scale-90">
+                                            <img src="assets/images/review/review-1.webp" alt="Thumb" class="w-full h-full object-cover">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Slide 2 -->
+                                <div class="swiper-slide h-auto!">
+                                    <div class="relative w-[80px] h-[80px] mx-auto cursor-pointer group" data-exp-index="1">
+                                        <div class="absolute -inset-[5px] rounded-full bg-linear-to-r from-[#B26EF7] via-[#FF71BF] to-[#FFBD7A] opacity-0 group-[.active]:opacity-100 transition-all duration-300 group-[.active]:scale-105"></div>
+                                        <div class="relative w-full h-full rounded-full border-4 border-[#050520] overflow-hidden transition-all duration-300 group-[:not(.active)]:opacity-50 group-[:not(.active)]:scale-90">
+                                            <img src="assets/images/review/review-2.webp" alt="Thumb" class="w-full h-full object-cover">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Slide 3 -->
+                                <div class="swiper-slide h-auto!">
+                                    <div class="relative w-[80px] h-[80px] mx-auto cursor-pointer group" data-exp-index="2">
+                                        <div class="absolute -inset-[5px] rounded-full bg-linear-to-r from-[#B26EF7] via-[#FF71BF] to-[#FFBD7A] opacity-0 group-[.active]:opacity-100 transition-all duration-300 group-[.active]:scale-105"></div>
+                                        <div class="relative w-full h-full rounded-full border-4 border-[#050520] overflow-hidden transition-all duration-300 group-[:not(.active)]:opacity-50 group-[:not(.active)]:scale-90">
+                                            <img src="assets/images/review/review-3.webp" alt="Thumb" class="w-full h-full object-cover">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Down Arrow -->
+                        <button class="exp-thumb-next w-[40px] h-[40px] flex items-center justify-center text-white/30 hover:text-secondary transition-all cursor-pointer disabled:opacity-0 disabled:pointer-events-none">
+                            <i class="fa-solid fa-chevron-down text-[16px]"></i>
+                        </button>
+                    </div>
+
+                    <!-- Right Side: Content Swiper -->
+                    <div class="w-full lg:flex-1 min-w-0">
+                        <div class="swiper exp-content-swiper overflow-hidden">
+                            <div class="swiper-wrapper">
+                                <!-- Slide 1 -->
+                                <div class="swiper-slide" data-main-img="assets/images/review/review-1.webp">
+                                    <div class="flex flex-col h-full">
+                                        <!-- Testimonial Card -->
+                                        <div class="relative p-[1px] rounded-[30px] bg-linear-to-br from-[#00F2FE]/50 via-transparent to-[#00F2FE]/50">
+                                            <div class="bg-[#050520] p-[40px] md:p-[50px] rounded-[29px] relative border border-[#00F2FE]/20">
+                                                <!-- Status Icon -->
+                                                <div class="absolute top-[40px] right-[40px] w-[32px] h-[32px] rounded-full bg-[#00F2FE] flex items-center justify-center text-[#050520]">
+                                                    <i class="fa-solid fa-check text-[16px]"></i>
+                                                </div>
+
+                                                <h4 class="text-white text-[28px] md:text-[32px] font-bold font-spartan mb-[8px] max-w-[85%]">Advanced UI/UX Design Masterclass</h4>
+                                                <p class="text-white/60 text-[16px] font-inter mb-[24px]">Online Specialist</p>
+
+                                                <!-- Rating -->
+                                                <div class="flex items-center gap-[12px] mb-[32px]">
+                                                    <div class="flex items-center gap-1.5 text-[#FFB800]">
+                                                        <i class="fa-solid fa-star text-[18px]"></i>
+                                                        <i class="fa-solid fa-star text-[18px]"></i>
+                                                        <i class="fa-solid fa-star text-[18px]"></i>
+                                                        <i class="fa-solid fa-star text-[18px]"></i>
+                                                        <i class="fa-solid fa-star-half-stroke text-[18px]"></i>
+                                                    </div>
+                                                    <span class="text-white text-[20px] font-bold font-spartan leading-none">5.0</span>
+                                                </div>
+
+                                                <p class="text-white/80 text-[18px] md:text-[20px] font-inter leading-[1.7] mb-[40px]">
+                                                    This course on the marketplace transformed my career! The instructors are top-notch and content-wise, incredibly relevant. I landed dream job months after graduate! Highly recommend!
+                                                </p>
+
+                                                <a href="#" class="inline-flex items-center justify-center px-[35px] py-[18px] rounded-[15px] bg-[#00F2FE] text-[#050520] font-bold font-spartan text-[16px] hover:shadow-[0px_10px_30px_rgba(0,242,254,0.4)] hover:-translate-y-1 transition-all duration-300">
+                                                    View This Course
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 2 -->
+                                <div class="swiper-slide" data-main-img="assets/images/review/review-2.webp">
+                                    <div class="flex flex-col h-full">
+                                        <!-- Testimonial Card -->
+                                        <div class="relative p-[1px] rounded-[30px] bg-linear-to-br from-[#00F2FE]/50 via-transparent to-[#00F2FE]/50">
+                                            <div class="bg-[#050520] p-[40px] md:p-[50px] rounded-[29px] relative border border-[#00F2FE]/20">
+                                                <!-- Status Icon -->
+                                                <div class="absolute top-[40px] right-[40px] w-[32px] h-[32px] rounded-full bg-[#00F2FE] flex items-center justify-center text-[#050520]">
+                                                    <i class="fa-solid fa-check text-[16px]"></i>
+                                                </div>
+
+                                                <h4 class="text-white text-[28px] md:text-[32px] font-bold font-spartan mb-[8px] max-w-[85%]">Full-Stack Web Development</h4>
+                                                <p class="text-white/60 text-[16px] font-inter mb-[24px]">Graphic Designer</p>
+
+                                                <!-- Rating -->
+                                                <div class="flex items-center gap-[12px] mb-[32px]">
+                                                    <div class="flex items-center gap-1.5 text-[#FFB800]">
+                                                        <i class="fa-solid fa-star text-[18px]"></i>
+                                                        <i class="fa-solid fa-star text-[18px]"></i>
+                                                        <i class="fa-solid fa-star text-[18px]"></i>
+                                                        <i class="fa-solid fa-star text-[18px]"></i>
+                                                        <i class="fa-solid fa-star text-[18px]"></i>
+                                                    </div>
+                                                    <span class="text-white text-[20px] font-bold font-spartan leading-none">5.0</span>
+                                                </div>
+
+                                                <p class="text-white/80 text-[18px] md:text-[20px] font-inter leading-[1.7] mb-[40px]">
+                                                    I've taken many courses, but this one stands out for its practical approach. The projects we built are now part of my professional portfolio. It's worth every penny!
+                                                </p>
+
+                                                <a href="#" class="inline-flex items-center justify-center px-[35px] py-[18px] rounded-[15px] bg-[#00F2FE] text-[#050520] font-bold font-spartan text-[16px] hover:shadow-[0px_10px_30px_rgba(0,242,254,0.4)] hover:-translate-y-1 transition-all duration-300">
+                                                    View This Course
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Slide 3 -->
+                                <div class="swiper-slide" data-main-img="assets/images/review/review-3.webp">
+                                    <div class="flex flex-col h-full">
+                                        <!-- Testimonial Card -->
+                                        <div class="relative p-[1px] rounded-[30px] bg-linear-to-br from-[#00F2FE]/50 via-transparent to-[#00F2FE]/50">
+                                            <div class="bg-[#050520] p-[40px] md:p-[50px] rounded-[29px] relative border border-[#00F2FE]/20">
+                                                <!-- Status Icon -->
+                                                <div class="absolute top-[40px] right-[40px] w-[32px] h-[32px] rounded-full bg-[#00F2FE] flex items-center justify-center text-[#050520]">
+                                                    <i class="fa-solid fa-check text-[16px]"></i>
+                                                </div>
+
+                                                <h4 class="text-white text-[28px] md:text-[32px] font-bold font-spartan mb-[8px] max-w-[85%]">Digital Marketing Growth</h4>
+                                                <p class="text-white/60 text-[16px] font-inter mb-[24px]">Marketing Expert</p>
+
+                                                <!-- Rating -->
+                                                <div class="flex items-center gap-[12px] mb-[32px]">
+                                                    <div class="flex items-center gap-1.5 text-[#FFB800]">
+                                                        <i class="fa-solid fa-star text-[18px]"></i>
+                                                        <i class="fa-solid fa-star text-[18px]"></i>
+                                                        <i class="fa-solid fa-star text-[18px]"></i>
+                                                        <i class="fa-solid fa-star text-[18px]"></i>
+                                                        <i class="fa-solid fa-star-half-stroke text-[18px]"></i>
+                                                    </div>
+                                                    <span class="text-white text-[20px] font-bold font-spartan leading-none">4.9</span>
+                                                </div>
+
+                                                <p class="text-white/80 text-[18px] md:text-[20px] font-inter leading-[1.7] mb-[40px]">
+                                                    The depth of knowledge shared in this course is incredible. I've been able to apply the strategies immediately to my business and see real growth in our conversion rates.
+                                                </p>
+
+                                                <a href="#" class="inline-flex items-center justify-center px-[35px] py-[18px] rounded-[15px] bg-[#00F2FE] text-[#050520] font-bold font-spartan text-[16px] hover:shadow-[0px_10px_30px_rgba(0,242,254,0.4)] hover:-translate-y-1 transition-all duration-300">
+                                                    View This Course
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Student Experiences Section End -->
+
+
+
+    </main>
+    <!-- footer section start -->
+    <footer class="bg-primary pt-[100px] pb-[40px] relative overflow-hidden border-t border-white/5">
+        <div class="max-w-[1320px] mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-[40px] lg:gap-[60px] mb-[80px]">
+                <!-- Column 1: Logo & Socials -->
+                <div class="lg:col-span-4">
+                    <div class="mb-[30px]">
+                        <a href="index.html">
+                            <img src="assets/images/logo.png" alt="Hi Study" class="h-[40px] w-auto">
+                        </a>
+                    </div>
+                    <p class="text-white/60 text-[16px] font-inter leading-[1.7] mb-[30px] max-w-[320px]">
+                        We're always in search for talented and motivated people. Don't be shy introduce yourself!
+                    </p>
+                    <div class="flex items-center gap-[15px] mb-[40px]">
+                        <a href="#"
+                            class="w-[45px] h-[45px] rounded-full bg-white/5 flex items-center justify-center text-white/60 hover:bg-secondary hover:text-white transition-all duration-300">
+                            <i class="fa-brands fa-facebook-f text-[14px]"></i>
+                        </a>
+                        <a href="#"
+                            class="w-[45px] h-[45px] rounded-full bg-white/5 flex items-center justify-center text-white/60 hover:bg-secondary hover:text-white transition-all duration-300">
+                            <i class="fa-brands fa-twitter text-[14px]"></i>
+                        </a>
+                        <a href="#"
+                            class="w-[45px] h-[45px] rounded-full bg-white/5 flex items-center justify-center text-white/60 hover:bg-secondary hover:text-white transition-all duration-300">
+                            <i class="fa-brands fa-instagram text-[14px]"></i>
+                        </a>
+                        <a href="#"
+                            class="w-[45px] h-[45px] rounded-full bg-white/5 flex items-center justify-center text-white/60 hover:bg-secondary hover:text-white transition-all duration-300">
+                            <i class="fa-brands fa-linkedin-in text-[14px]"></i>
+                        </a>
+                    </div>
+                    <a href="#"
+                        class="inline-flex items-center gap-[10px] px-[30px] py-[15px] rounded-full border border-secondary/30 text-white font-bold font-spartan text-[16px] hover:bg-secondary transition-all duration-300 group">
+                        Contact With Us <i
+                            class="fa-solid fa-arrow-right text-[14px] transition-transform group-hover:translate-x-1"></i>
+                    </a>
+                </div>
+
+                <!-- Column 2: Useful Links -->
+                <div class="lg:col-span-2">
+                    <h4 class="text-white text-[20px] font-bold font-spartan mb-[30px]">Useful Links</h4>
+                    <ul class="space-y-[15px]">
+                        <li><a href="#"
+                                class="text-white/60 hover:text-secondary font-inter text-[16px] transition-all duration-300">Marketplace</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-secondary font-inter text-[16px] transition-all duration-300">kindergarten</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-secondary font-inter text-[16px] transition-all duration-300">University</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-secondary font-inter text-[16px] transition-all duration-300">GYM
+                                Coaching</a></li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-secondary font-inter text-[16px] transition-all duration-300">Faq</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-secondary font-inter text-[16px] transition-all duration-300">About
+                                Us</a></li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-secondary font-inter text-[16px] transition-all duration-300">Privacy
+                                Policy</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Our Company -->
+                <div class="lg:col-span-2">
+                    <h4 class="text-white text-[20px] font-bold font-spartan mb-[30px]">Our Company</h4>
+                    <ul class="space-y-[15px]">
+                        <li><a href="#"
+                                class="text-white/60 hover:text-secondary font-inter text-[16px] transition-all duration-300">Contact
+                                Us</a></li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-secondary font-inter text-[16px] transition-all duration-300">Become
+                                Teacher</a></li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-secondary font-inter text-[16px] transition-all duration-300">Blog</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-secondary font-inter text-[16px] transition-all duration-300">Instructor</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-secondary font-inter text-[16px] transition-all duration-300">Events</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-secondary font-inter text-[16px] transition-all duration-300">Course</a>
+                        </li>
+                        <li><a href="#"
+                                class="text-white/60 hover:text-secondary font-inter text-[16px] transition-all duration-300">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Get Contact & Newsletter -->
+                <div class="lg:col-span-4">
+                    <h4 class="text-white text-[20px] font-bold font-spartan mb-[30px]">Get Contact</h4>
+                    <div class="space-y-[15px] mb-[40px]">
+                        <p class="text-white/60 font-inter text-[16px] flex items-center gap-[10px]"><span
+                                class="text-white font-bold">Phone:</span> (406) 555-0120</p>
+                        <p class="text-white/60 font-inter text-[16px] flex items-center gap-[10px]"><span
+                                class="text-white font-bold">E-mail:</span> rainbow@example.com</p>
+                        <p class="text-white/60 font-inter text-[16px] flex items-center gap-[10px]"><span
+                                class="text-white font-bold">Address:</span> 5205 North Kierland Blvd.</p>
+                    </div>
+
+                    <h4 class="text-white text-[20px] font-bold font-spartan mb-[25px]">Newsletter</h4>
+                    <form class="relative max-w-[380px]">
+                        <input type="email" placeholder="Enter Your E-Mail"
+                            class="w-full h-[60px] bg-white/5 border border-white/10 rounded-full px-[25px] text-white font-inter text-[15px] focus:outline-none focus:border-secondary transition-all">
+                        <button type="submit"
+                            class="absolute right-[5px] top-[5px] h-[50px] px-[25px] rounded-full bg-linear-to-r from-border-secondary to-[#AF40FF] text-white font-bold font-spartan text-[15px] hover:shadow-[0px_10px_20px_rgba(147,130,255,0.3)] transition-all">
+                            Subscribe
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div
+                class="pt-[30px] border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-[20px]">
+                <p class="text-white/50 font-inter text-[15px]">
+                    Copyright © 2025 <a href="#"
+                        class="text-white font-bold hover:text-secondary transition-all">Rainbow-Themes</a>. All Rights
+                    Reserved
+                </p>
+                <ul class="flex flex-wrap items-center gap-[15px] md:gap-[25px]">
+                    <li><a href="#" class="text-white/50 hover:text-white font-inter text-[14px] transition-all">Terms
+                            of Service</a></li>
+                    <li><a href="#" class="text-white/50 hover:text-white font-inter text-[14px] transition-all">Privacy
+                            Policy</a></li>
+                    <li><a href="#"
+                            class="text-white/50 hover:text-white font-inter text-[14px] transition-all">Subscription</a>
+                    </li>
+                    <li><a href="#"
+                            class="text-white/50 hover:text-white font-inter text-[14px] transition-all border-l border-white/10 pl-[15px] md:pl-[25px]">Login
+                            & Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <!-- footer section end -->
+
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar"
+        class="fixed top-0 right-0 h-full w-full sm:w-[400px] bg-[#050520] z-[1000] translate-x-full transition-all duration-[800ms] ease-[cubic-bezier(0.23,1,0.32,1)] border-l border-white/10 shadow-2xl overflow-y-auto invisible">
+        <div class="p-6 md:p-8 h-full flex flex-col">
+            <!-- Sidebar Header -->
+            <div class="flex items-center justify-between mb-8 pb-6 border-b border-white/10 transform transition-all duration-700 delay-300 opacity-0 translate-y-4"
+                id="cart-header">
+                <h2 class="text-white text-[24px] font-bold font-spartan">Your shopping cart</h2>
+                <button id="cart-close-btn"
+                    class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:bg-white/5 transition-all duration-300">
+                    <i class="fa-solid fa-xmark text-[20px]"></i>
+                </button>
+            </div>
+
+            <!-- Cart Items -->
+            <div class="flex-grow space-y-6 overflow-y-auto pr-2 custom-scrollbar" id="cart-items-container">
+                <!-- Item 1 -->
+                <div
+                    class="flex gap-4 group transform transition-all duration-700 delay-[400ms] opacity-0 translate-y-4 cart-item">
+                    <div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 border border-white/10">
+                        <img src="assets/images/course/course-imag.webp" alt="Course"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex justify-between items-start">
+                            <h3
+                                class="text-white font-medium font-inter hover:text-secondary transition-colors line-clamp-1">
+                                <a href="#">Miracle Morning</a>
+                            </h3>
+                            <button class="text-white/40 hover:text-red-500 transition-colors ml-2">
+                                <i class="fa-solid fa-xmark text-sm"></i>
+                            </button>
+                        </div>
+                        <p class="text-white/60 text-[14px] font-inter mt-1">1 * $22</p>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div
+                    class="flex gap-4 group transform transition-all duration-700 delay-[500ms] opacity-0 translate-y-4 cart-item">
+                    <div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 border border-white/10">
+                        <img src="assets/images/course/course-imag2.webp" alt="Course"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex justify-between items-start">
+                            <h3
+                                class="text-white font-medium font-inter hover:text-secondary transition-colors line-clamp-1">
+                                <a href="#">Happy Strong</a>
+                            </h3>
+                            <button class="text-white/40 hover:text-red-500 transition-colors ml-2">
+                                <i class="fa-solid fa-xmark text-sm"></i>
+                            </button>
+                        </div>
+                        <p class="text-white/60 text-[14px] font-inter mt-1">1 * $30</p>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div
+                    class="flex gap-4 group transform transition-all duration-700 delay-[600ms] opacity-0 translate-y-4 cart-item">
+                    <div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 border border-white/10">
+                        <img src="assets/images/course/course-imag3.webp" alt="Course"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex justify-between items-start">
+                            <h3
+                                class="text-white font-medium font-inter hover:text-secondary transition-colors line-clamp-1">
+                                <a href="#">Rich Dad Poor Dad</a>
+                            </h3>
+                            <button class="text-white/40 hover:text-red-500 transition-colors ml-2">
+                                <i class="fa-solid fa-xmark text-sm"></i>
+                            </button>
+                        </div>
+                        <p class="text-white/60 text-[14px] font-inter mt-1">1 * $50</p>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div
+                    class="flex gap-4 group transform transition-all duration-700 delay-[700ms] opacity-0 translate-y-4 cart-item">
+                    <div class="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 border border-white/10">
+                        <img src="assets/images/course/course-imag.webp" alt="Course"
+                            class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex justify-between items-start">
+                            <h3
+                                class="text-white font-medium font-inter hover:text-secondary transition-colors line-clamp-1">
+                                <a href="#">Momentum Theorem</a>
+                            </h3>
+                            <button class="text-white/40 hover:text-red-500 transition-colors ml-2">
+                                <i class="fa-solid fa-xmark text-sm"></i>
+                            </button>
+                        </div>
+                        <p class="text-white/60 text-[14px] font-inter mt-1">1 * $50</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="mt-8 pt-8 border-t border-white/10 transform transition-all duration-700 delay-[800ms] opacity-0 translate-y-4"
+                id="cart-footer">
+                <div class="flex items-center justify-between mb-8">
+                    <span class="text-white text-[18px] font-bold font-spartan uppercase">Subtotal:</span>
+                    <span class="text-white text-[18px] font-bold font-spartan">$121</span>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <a href="#"
+                        class="w-full h-[56px] flex items-center justify-center rounded-[10px] border border-white/10 text-white font-semibold font-spartan hover:bg-white hover:text-[#050520] transition-all duration-300">View
+                        Cart</a>
+                    <a href="#"
+                        class="w-full h-[56px] flex items-center justify-center rounded-[10px] bg-linear-to-r from-[#B26EF7] via-[#FF71BF] to-[#FFBD7A] text-white font-semibold font-spartan hover:shadow-[0px_10px_30px_rgba(178,110,247,0.4)] transition-all duration-300 border-b-2 border-primary/29">Checkout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar Backdrop -->
+    <div id="cart-backdrop"
+        class="fixed inset-0 bg-black/80 z-[999] opacity-0 invisible transition-all duration-[800ms] ease-[cubic-bezier(0.23,1,0.32,1)]">
+    </div>
+
+    <!-- Back to Top -->
+    <div id="back-to-top"
+        class="fixed bottom-[30px] right-[30px] z-60 w-[100px] h-[100px] cursor-pointer group opacity-0 invisible translate-y-4 transition-all duration-500">
+        <div id="back-to-top-glow" class="absolute inset-0 rounded-full bg-[#24BD25]/0 transition-all duration-500">
+        </div>
+        <svg class="w-full h-full transform -rotate-90 relative z-10">
+            <circle class="text-white/10" stroke-width="4" stroke="currentColor" fill="transparent" r="45" cx="50"
+                cy="50"></circle>
+            <circle id="back-to-top-progress" class="text-[#24BD25]" stroke-width="4" stroke-dasharray="282.7"
+                stroke-dashoffset="282.7" stroke-linecap="round" stroke="currentColor" fill="transparent" r="45" cx="50"
+                cy="50"></circle>
+        </svg>
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+            <span id="back-to-top-percent" class="text-white text-[18px] font-bold font-spartan leading-none">0%</span>
+            <span id="back-to-top-text"
+                class="text-white/60 text-[10px] font-medium font-inter uppercase tracking-wider mt-1 leading-tight">Explore
+                <br> More</span>
+        </div>
+    </div>
+
+    <script src="assets/js/modernizr.min.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/swiper.js"></script>
+    <script src="assets/js/jquery-appear.js"></script>
+    <script src="assets/js/animation.js"></script>
+    <script src="assets/js/text-type.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script src="assets/js/countdown.js"></script>
+    <script src="assets/js/progressbar.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/imageloaded.js"></script>
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Main JS -->
+    <script src="assets/js/main.min.js"></script>
+</body>
+
+</html>
