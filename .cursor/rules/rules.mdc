@@ -20,11 +20,12 @@ Key Principles
 - Please carefully read and follow all the prompts I provide. Do not create or modify any section without reviewing those instructions first. Work only according to the given prompts.
 - Before creating any section, please include my variables and ensure all CSS is applied properly and efficiently.
 - you applay fontawesome icon in our template
-- you applay inline Tailwind css our templates
+- you applay variable Tailwind css our templates
+- As short as possible code
 -  /* Fonts */
-  --font-spartan: "League Spartan", sans-serif; // all title usd this font
-  --font-inter: "Inter", sans-serif; /// body and paragrap usd this is font
-
+- font-spartan: "League Spartan", sans-serif; // all title usd this font
+- font-inter: "Inter", sans-serif; /// body and paragrap usd this is font
+- Footer menu hover all same
 
 - Themeforest Stander Code applay
 - Write clean, semantic HTML with a minimal and accessible structure

@@ -821,13 +821,13 @@ document.addEventListener('DOMContentLoaded', function () {
         const expContentSwiper = new Swiper(expContentSwiperEl, {
             slidesPerView: 1,
             spaceBetween: 30,
-            loop: true,
+            // loop: true,
             speed: 1000,
             watchSlidesProgress: true,
-            autoplay: {
-                delay: 5000,
-                disableOnInteraction: false,
-            },
+            // autoplay: {
+            //     delay: 5000,
+            //     disableOnInteraction: false,
+            // },
             effect: 'fade',
             fadeEffect: {
                 crossFade: true

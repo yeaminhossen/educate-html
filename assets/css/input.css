@@ -139,7 +139,7 @@
 
 
   /* Gradients */
-  --gradient-primary: linear-gradient(to right, #B26EF7 0%, #FF71BF 47%, #FFBD7A 100%);
+  --gradient-primary: linear-gradient(to right, #360185 0%, #8F0177 47%, #FF0051 100%);
   --gradient-secondary: linear-gradient(to right, #7E6FC0 0%, #302A53 100%);
 
   /* Button Colors */
