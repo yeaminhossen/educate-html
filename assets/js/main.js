@@ -15,6 +15,8 @@ document.addEventListener('DOMContentLoaded', function () {
             window.addEventListener('load', hidePreloader);
         }
     }
+//// Set background images from data attributes
+
 
     document.querySelectorAll('[data-background]').forEach((el) => {
         const url = el.getAttribute('data-background');
@@ -135,7 +137,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    const blogSwiperEl = document.querySelector('.blog-swiper');
+    //blog swiper initialization 3 slides per view
+    const blogSwiperEl = document.querySelector('.blog-active-swiper');
 
     if (blogSwiperEl && window.Swiper) {
         new Swiper(blogSwiperEl, {
@@ -158,7 +161,31 @@ document.addEventListener('DOMContentLoaded', function () {
             },
         });
     }
+    //blog swiper initialization 2 slides per view
+    const blogSwiperEl2 = document.querySelector('.blog-active-two-swiper');
 
+    if (blogSwiperEl2 && window.Swiper) {
+        new Swiper(blogSwiperEl2, {
+            slidesPerView: 2,
+            spaceBetween: 24,
+            loop: true,
+            speed: 700,
+            watchOverflow: true,
+            pagination: {
+                el: '.blog-two-swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.blog-two-swiper-next',
+                prevEl: '.blog-two-swiper-prev',
+            },
+            breakpoints: {
+                768: { slidesPerView: 2 },
+            },
+        });
+    }
+
+    //team swiper initialization
     const teamSwiperEl = document.querySelector('.team-swiper');
 
     if (teamSwiperEl && window.Swiper) {
@@ -689,9 +716,16 @@ document.addEventListener('DOMContentLoaded', function () {
             delay: 5000,
             disableOnInteraction: false,
         },
+        navigation: {
+            nextEl: '.testimonial-next',
+            prevEl: '.testimonial-prev',
+        },
         pagination: {
             el: '.testimonial-pagination',
             clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + ' w-[10px]! h-[10px]! bg-white/20! opacity-100! rounded-full transition-all duration-300 [&.swiper-pagination-bullet-active]:bg-white!"></span>';
+            },
         },
     });
 

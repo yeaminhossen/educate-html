@@ -638,7 +638,7 @@
   .testimonial-pagination .swiper-pagination-bullet {
     width: 10px;
     height: 10px;
-    background: rgba(147, 130, 255, 0.2);
+    background: rgba(255, 255, 255, 0.2);
     opacity: 1;
     transition: all 0.3s ease;
     border-radius: 50%;
@@ -646,19 +646,7 @@
   }
 
   .testimonial-pagination .swiper-pagination-bullet-active {
-    width: 24px;
-    height: 24px;
-    background: #9382ff;
-    box-shadow: 0 0 20px rgba(147, 130, 255, 0.4);
-    position: relative;
-  }
-
-  .testimonial-pagination .swiper-pagination-bullet-active::after {
-    content: "";
-    position: absolute;
-    inset: 6px;
-    background: #050520;
-    border-radius: 50%;
+    background: #ffffff;
   }
 
   @keyframes video-pulse {
