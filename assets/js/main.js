@@ -109,8 +109,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 clickable: true,
             },
             breakpoints: {
-                768: { slidesPerView: 2 },
+                640: { slidesPerView: 2 },
                 1024: { slidesPerView: 3 },
+                1320: { slidesPerView: 4.2, centeredSlides: true },
             },
         });
     };
@@ -199,13 +200,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 nextEl: '.team-swiper-next',
                 prevEl: '.team-swiper-prev',
             },
-            pagination: {
-                el: '.team-swiper-pagination',
-                clickable: true,
-            },
             breakpoints: {
-                768: { slidesPerView: 2 },
+                640: { slidesPerView: 2 },
                 1024: { slidesPerView: 3 },
+                1280: { slidesPerView: 4 },
             },
         });
     }

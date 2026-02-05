@@ -213,6 +213,11 @@
   .gradient-color-secondary {
     background: var(--gradient-secondary);
   }
+
+  .hover-gradient-primary:hover,
+  .hover-gradient-primary:focus-visible {
+    background: var(--gradient-primary);
+  }
   .gradient-border-primary {
     border: 2px solid transparent;
     background: linear-gradient(var(--color-primary), var(--color-primary)) padding-box,
