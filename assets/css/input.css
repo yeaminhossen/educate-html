@@ -204,6 +204,23 @@
   .box-color {
     background-color: var(--box-color);
   }
+  .facts-counter-glow {
+    @apply relative;
+  }
+  .facts-counter-glow::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 100px;
+    height: 100px;
+    background: #B26EF7;
+    opacity: 1;
+    filter: blur(70px);
+    border-radius: 9999px;
+    pointer-events: none;
+    transition: opacity 300ms;
+  }
   .gray-color {
     color: var(--color-gray);
   } 
@@ -704,6 +721,20 @@
   .hero-bullet:hover span {
     border-color: var(--color-secondary);
     color: var(--color-secondary);
+  }
+
+  .counter-card-blur::before {
+    content: "";
+    position: absolute;
+    top: -45px;
+    left: -45px;
+    width: 95px;
+    height: 132px;
+    background: #B26EF7;
+    filter: blur(120px);
+    opacity: 0.4;
+    z-index: 0;
+    pointer-events: none;
   }
 }
 

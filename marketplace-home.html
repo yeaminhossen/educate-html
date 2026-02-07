@@ -688,18 +688,582 @@
     </header>
 
     <main>
+        <!-- course tabs Section Start -->
+         <section id="course-tabs" class="bg-primary py-[100px] relative overflow-hidden">
+            <div class="absolute inset-0 pointer-events-none">
+                <img src="assets/images/course/bg-pattern.png" alt="" class="absolute top-0 left-0 w-full opacity-10">
+                <img src="assets/images/course/bg-shape.png" alt=""
+                    class="absolute -top-[80px] -right-[80px] w-[340px] opacity-40 blur-[2px]">
+                <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-secondary/6 blur-[140px] rounded-[50px]">
+                </div>
+            </div>
+
+            <div class="max-w-[1320px] mx-auto px-4 relative z-10">
+                <div class="text-center mb-[40px]">
+                    <span
+                        class="inline-flex items-center justify-center px-[16px] py-[6px] rounded-[50px] border border-white/10 bg-white/5 text-secondary text-[13px] font-bold font-spartan mb-[24px]">
+                        10k+ Courses
+                    </span>
+                    <h2 class="text-white text-[34px] md:text-[54px] font-bold font-spartan leading-tight mb-[14px]">
+                        Choose Your Favorite Course <br class="hidden md:block">
+                        and <span class="gradient-color-primary bg-clip-text text-transparent">Grow</span> your Skills
+                    </h2>
+                    <p class="text-white/60 text-[16px] md:text-[18px] font-inter max-w-[720px] mx-auto">
+                        Find the right course by category, then start learning right away.
+                    </p>
+                </div>
+
+                <div class="flex flex-col lg:flex-row items-stretch lg:items-center gap-[14px] mb-[30px]">
+                    <div class="flex items-center gap-[10px]">
+                        <button type="button" data-course-tabs-prev aria-label="Scroll categories left"
+                            class="hidden md:flex w-11 h-11 rounded-[50px] bg-white/5 border border-white/10 items-center justify-center text-white/60 hover:text-white hover:border-white/20 hover:bg-white/10 transition-all">
+                            <i class="fa-solid fa-chevron-left text-[14px]"></i>
+                        </button>
+
+                        <div id="course-tabs-tablist"
+                            class="flex items-center gap-[10px] min-w-0 max-w-full overflow-x-auto whitespace-nowrap scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                            <button type="button" data-course-filter="all"
+                                class="course-tabs-btn px-[18px] h-[44px] rounded-[50px] text-[15px] font-semibold font-inter transition-all bg-secondary text-white border border-secondary shadow-[0px_10px_20px_rgba(147,130,255,0.3)]">
+                                All Course
+                            </button>
+                            <button type="button" data-course-filter="art-design"
+                                class="course-tabs-btn px-[18px] h-[44px] rounded-[50px] text-[15px] font-semibold font-inter transition-all bg-white/5 border border-white/10 text-white/60 hover:text-white hover:border-white/20">
+                                Art and Design
+                            </button>
+                            <button type="button" data-course-filter="graphic-design"
+                                class="course-tabs-btn px-[18px] h-[44px] rounded-[50px] text-[15px] font-semibold font-inter transition-all bg-white/5 border border-white/10 text-white/60 hover:text-white hover:border-white/20">
+                                Graphic Design
+                            </button>
+                            <button type="button" data-course-filter="sales-marketing"
+                                class="course-tabs-btn px-[18px] h-[44px] rounded-[50px] text-[15px] font-semibold font-inter transition-all bg-white/5 border border-white/10 text-white/60 hover:text-white hover:border-white/20">
+                                Sales marketing
+                            </button>
+                            <button type="button" data-course-filter="it-solution"
+                                class="course-tabs-btn px-[18px] h-[44px] rounded-[50px] text-[15px] font-semibold font-inter transition-all bg-white/5 border border-white/10 text-white/60 hover:text-white hover:border-white/20">
+                                IT Solution
+                            </button>
+                            <button type="button" data-course-filter="web-development"
+                                class="course-tabs-btn px-[18px] h-[44px] rounded-[50px] text-[15px] font-semibold font-inter transition-all bg-white/5 border border-white/10 text-white/60 hover:text-white hover:border-white/20">
+                                Web Development
+                            </button>
+                            <button type="button" data-course-filter="app-development"
+                                class="course-tabs-btn px-[18px] h-[44px] rounded-[50px] text-[15px] font-semibold font-inter transition-all bg-white/5 border border-white/10 text-white/60 hover:text-white hover:border-white/20">
+                                App Development
+                            </button>
+                            <button type="button" data-course-filter="business"
+                            class="course-tabs-btn px-[18px] h-[44px] rounded-[50px] text-[15px] font-semibold font-inter transition-all bg-white/5 border border-white/10 text-white/60 hover:text-white hover:border-white/20">
+                            Business
+                        </button>
+                        <button type="button" data-course-filter="marketing"
+                            class="course-tabs-btn px-[18px] h-[44px] rounded-[50px] text-[15px] font-semibold font-inter transition-all bg-white/5 border border-white/10 text-white/60 hover:text-white hover:border-white/20">
+                            Marketing
+                        </button>
+                        <button type="button" data-course-filter="business"
+                            class="course-tabs-btn px-[18px] h-[44px] rounded-[50px] text-[15px] font-semibold font-inter transition-all bg-white/5 border border-white/10 text-white/60 hover:text-white hover:border-white/20">
+                            Business
+                        </button>
+                        </div>
+
+                        <button type="button" data-course-tabs-next aria-label="Scroll categories right"
+                            class="hidden md:flex w-11 h-11 rounded-[50px] bg-white/5 border border-white/10 items-center justify-center text-white/60 hover:text-white hover:border-white/20 hover:bg-white/10 transition-all">
+                            <i class="fa-solid fa-chevron-right text-[14px]"></i>
+                        </button>
+                    </div>
+
+                    <div class="relative w-full lg:w-[320px] lg:ml-auto flex items-center justify-end">
+                        <button type="button" data-course-search-open aria-label="Open search"
+                            class="w-[50px] h-[50px] rounded-[50px] bg-white/5 border border-white/10 flex items-center justify-center text-white/60 hover:text-white hover:border-white/20 hover:bg-white/10 transition-all">
+                            <i class="fa-solid fa-magnifying-glass text-[16px]"></i>
+                        </button>
+
+                        <div data-course-search-popover
+                            class="hidden absolute right-0 bottom-full mb-[12px] z-50 w-[320px] sm:w-[380px] max-w-[90vw] bg-box-color border border-white/15 rounded-[18px] p-[14px] shadow-[0px_35px_90px_rgba(0,0,0,0.65)] overflow-hidden">
+                            <div class="absolute -top-[120px] -right-[120px] w-[240px] h-[240px] bg-secondary/25 blur-[55px] rounded-full pointer-events-none"></div>
+                            <div class="absolute -bottom-[120px] -left-[120px] w-[240px] h-[240px] bg-[#FF71BF]/15 blur-[60px] rounded-full pointer-events-none"></div>
+
+                            <div class="relative flex items-center gap-[10px]">
+                                <div class="relative grow">
+                                    <input id="course-tabs-search" type="search" placeholder="Search courses"
+                                        class="w-full h-[52px] rounded-[50px] bg-white/6 border border-white/12 pl-[48px] pr-[18px] text-white/90 placeholder:text-white/35 font-inter text-[15px] outline-none focus:border-secondary/70 focus:bg-white/8 transition-all">
+                                    <i
+                                        class="fa-solid fa-magnifying-glass absolute left-[18px] top-1/2 -translate-y-1/2 text-white/40 text-[16px]"></i>
+                                </div>
+                                <button type="button" data-course-search-close aria-label="Close search"
+                                    class="w-[52px] h-[52px] rounded-[50px] bg-white/6 border border-white/12 flex items-center justify-center text-white/70 hover:text-white hover:border-white/25 hover:bg-white/12 transition-all">
+                                    <i class="fa-solid fa-xmark text-[18px]"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="course-tabs-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[24px]">
+                    <article data-course-item data-course-category="web-development"
+                        data-course-title="Creating Reusable and Scalable UI Elements (Vue JS Feature)"
+                        class="bg-box-color border border-white/5 rounded-[18px] overflow-hidden group hover:border-secondary/30 transition-all duration-300 hover:-translate-y-1">
+                        <a href="#" class="block relative aspect-16/10 overflow-hidden p-[30px]">
+                            <img src="assets/images/course/course-1.webp" alt="Web development course"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-[8px]">
+                            <span
+                                class="absolute top-[50px] left-[50px] px-[12px] h-[30px] rounded-[50px] bg-primary/70 border border-white/10 text-white text-[12px] font-semibold font-inter flex items-center">
+                                Web Development
+                            </span>
+                        </a>
+                        <div class="p-[22px]">
+                            <div class="flex items-center gap-[14px] text-white/55 text-[13px] font-inter mb-[10px]">
+                                <span class="inline-flex items-center gap-[6px]">
+                                    <i class="fa-regular fa-file-lines text-[13px] text-white/35"></i> 15 Lessons
+                                </span>
+                                <span class="inline-flex items-center gap-[6px]">
+                                    <i class="fa-regular fa-user text-[13px] text-white/35"></i> 30 Students
+                                </span>
+                            </div>
+                            <h3 class="text-white text-[20px] md:text-[22px] font-bold font-spartan leading-tight mb-[12px] line-clamp-2">
+                                <a href="#" class="hover:text-secondary transition-colors">Creating Reusable and Scalable UI Elements Vue Js Feature</a>
+                            </h3>
+                            <div class="flex items-center justify-between gap-[14px]">
+                                <div class="flex items-center gap-[8px]">
+                                    <div class="flex items-center gap-[2px] text-yellow text-[13px]">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class="text-white/45 text-[13px] font-inter">(0 Reviews)</span>
+                                </div>
+                                <div class="flex items-center gap-[8px]">
+                                    <span class="text-white text-[18px] font-bold font-spartan">$75</span>
+                                    <span class="text-white/35 text-[14px] font-inter line-through">$150</span>
+                                </div>
+                            </div>
+                            <div class="mt-[16px] flex items-center justify-between gap-[12px]">
+                                <a href="#"
+                                    class="inline-flex items-center gap-[10px] h-[44px] px-[16px] rounded-[50px] bg-white/5 border border-white/10 text-white text-[14px] font-semibold font-inter hover:bg-secondary hover:border-secondary hover:shadow-[0px_10px_25px_rgba(147,130,255,0.35)] transition-all">
+                                    <i class="fa-solid fa-cart-shopping text-[14px]"></i>
+                                    Enroll Now
+                                </a>
+                                <a href="#"
+                                    class="inline-flex items-center justify-center w-[44px] h-[44px] rounded-[50px] bg-white/5 border border-white/10 text-white/60 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all"
+                                    aria-label="Add to wishlist">
+                                    <i class="fa-regular fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article data-course-item data-course-category="graphic-design" data-course-title="Modern Brand Identity & Visual Systems"
+                        class="bg-box-color border border-white/5 rounded-[18px] overflow-hidden group hover:border-secondary/30 transition-all duration-300 hover:-translate-y-1">
+                        <a href="#" class="block relative aspect-16/10 overflow-hidden p-[30px]">
+                            <img src="assets/images/course/course-2.webp" alt="Graphic design course"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-[8px]">
+                            <span
+                                class="absolute top-[50px] left-[50px] px-[12px] h-[30px] rounded-[50px] bg-primary/70 border border-white/10 text-white text-[12px] font-semibold font-inter flex items-center">
+                                Graphic Design
+                            </span>
+                        </a>
+                        <div class="p-[22px]">
+                            <div class="flex items-center gap-[14px] text-white/55 text-[13px] font-inter mb-[10px]">
+                                <span class="inline-flex items-center gap-[6px]">
+                                    <i class="fa-regular fa-file-lines text-[13px] text-white/35"></i> 18 Lessons
+                                </span>
+                                <span class="inline-flex items-center gap-[6px]">
+                                    <i class="fa-regular fa-user text-[13px] text-white/35"></i> 42 Students
+                                </span>
+                            </div>
+                            <h3 class="text-white text-[20px] md:text-[22px] font-bold font-spartan leading-tight mb-[12px] line-clamp-2">
+                                <a href="#" class="hover:text-secondary transition-colors">Modern Brand Identity & Visual Systems</a>
+                            </h3>
+                            <div class="flex items-center justify-between gap-[14px]">
+                                <div class="flex items-center gap-[8px]">
+                                    <div class="flex items-center gap-[2px] text-yellow text-[13px]">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                                    </div>
+                                    <span class="text-white/45 text-[13px] font-inter">(12 Reviews)</span>
+                                </div>
+                                <div class="flex items-center gap-[8px]">
+                                    <span class="text-white text-[18px] font-bold font-spartan">$49</span>
+                                    <span class="text-white/35 text-[14px] font-inter line-through">$99</span>
+                                </div>
+                            </div>
+                            <div class="mt-[16px] flex items-center justify-between gap-[12px]">
+                                <a href="#"
+                                    class="inline-flex items-center gap-[10px] h-[44px] px-[16px] rounded-[50px] bg-white/5 border border-white/10 text-white text-[14px] font-semibold font-inter hover:bg-secondary hover:border-secondary hover:shadow-[0px_10px_25px_rgba(147,130,255,0.35)] transition-all">
+                                    <i class="fa-solid fa-cart-shopping text-[14px]"></i>
+                                    Enroll Now
+                                </a>
+                                <a href="#"
+                                    class="inline-flex items-center justify-center w-[44px] h-[44px] rounded-[50px] bg-white/5 border border-white/10 text-white/60 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all"
+                                    aria-label="Add to wishlist">
+                                    <i class="fa-regular fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article data-course-item data-course-category="sales-marketing" data-course-title="Sales Funnels That Convert (Beginner to Pro)"
+                        class="bg-box-color border border-white/5 rounded-[18px] overflow-hidden group hover:border-secondary/30 transition-all duration-300 hover:-translate-y-1">
+                        <a href="#" class="block relative aspect-16/10 overflow-hidden p-[30px]">
+                            <img src="assets/images/course/course-3.webp" alt="Sales marketing course"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-[8px]">
+                            <span
+                                class="absolute top-[50px] left-[50px] px-[12px] h-[30px] rounded-[50px] bg-primary/70 border border-white/10 text-white text-[12px] font-semibold font-inter flex items-center">
+                                Sales marketing
+                            </span>
+                        </a>
+                        <div class="p-[22px]">
+                            <div class="flex items-center gap-[14px] text-white/55 text-[13px] font-inter mb-[10px]">
+                                <span class="inline-flex items-center gap-[6px]">
+                                    <i class="fa-regular fa-file-lines text-[13px] text-white/35"></i> 12 Lessons
+                                </span>
+                                <span class="inline-flex items-center gap-[6px]">
+                                    <i class="fa-regular fa-user text-[13px] text-white/35"></i> 55 Students
+                                </span>
+                            </div>
+                            <h3 class="text-white text-[20px] md:text-[22px] font-bold font-spartan leading-tight mb-[12px] line-clamp-2">
+                                <a href="#" class="hover:text-secondary transition-colors">Sales Funnels That Convert (Beginner to Pro)</a>
+                            </h3>
+                            <div class="flex items-center justify-between gap-[14px]">
+                                <div class="flex items-center gap-[8px]">
+                                    <div class="flex items-center gap-[2px] text-yellow text-[13px]">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class="text-white/45 text-[13px] font-inter">(9 Reviews)</span>
+                                </div>
+                                <div class="flex items-center gap-[8px]">
+                                    <span class="text-white text-[18px] font-bold font-spartan">$59</span>
+                                    <span class="text-white/35 text-[14px] font-inter line-through">$120</span>
+                                </div>
+                            </div>
+                            <div class="mt-[16px] flex items-center justify-between gap-[12px]">
+                                <a href="#"
+                                    class="inline-flex items-center gap-[10px] h-[44px] px-[16px] rounded-[50px] bg-white/5 border border-white/10 text-white text-[14px] font-semibold font-inter hover:bg-secondary hover:border-secondary hover:shadow-[0px_10px_25px_rgba(147,130,255,0.35)] transition-all">
+                                    <i class="fa-solid fa-cart-shopping text-[14px]"></i>
+                                    Enroll Now
+                                </a>
+                                <a href="#"
+                                    class="inline-flex items-center justify-center w-[44px] h-[44px] rounded-[50px] bg-white/5 border border-white/10 text-white/60 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all"
+                                    aria-label="Add to wishlist">
+                                    <i class="fa-regular fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article data-course-item data-course-category="it-solution" data-course-title="IT Support Fundamentals & Troubleshooting"
+                        class="bg-box-color border border-white/5 rounded-[18px] overflow-hidden group hover:border-secondary/30 transition-all duration-300 hover:-translate-y-1">
+                        <a href="#" class="block relative aspect-16/10 overflow-hidden p-[30px]">
+                            <img src="assets/images/course/course-4.webp" alt="IT solution course"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-[8px]">
+                            <span
+                                class="absolute top-[50px] left-[50px] px-[12px] h-[30px] rounded-[50px] bg-primary/70 border border-white/10 text-white text-[12px] font-semibold font-inter flex items-center">
+                                IT Solution
+                            </span>
+                        </a>
+                        <div class="p-[22px]">
+                            <div class="flex items-center gap-[14px] text-white/55 text-[13px] font-inter mb-[10px]">
+                                <span class="inline-flex items-center gap-[6px]">
+                                    <i class="fa-regular fa-file-lines text-[13px] text-white/35"></i> 20 Lessons
+                                </span>
+                                <span class="inline-flex items-center gap-[6px]">
+                                    <i class="fa-regular fa-user text-[13px] text-white/35"></i> 38 Students
+                                </span>
+                            </div>
+                            <h3 class="text-white text-[20px] md:text-[22px] font-bold font-spartan leading-tight mb-[12px] line-clamp-2">
+                                <a href="#" class="hover:text-secondary transition-colors">IT Support Fundamentals & Troubleshooting</a>
+                            </h3>
+                            <div class="flex items-center justify-between gap-[14px]">
+                                <div class="flex items-center gap-[8px]">
+                                    <div class="flex items-center gap-[2px] text-yellow text-[13px]">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
+                                    </div>
+                                    <span class="text-white/45 text-[13px] font-inter">(6 Reviews)</span>
+                                </div>
+                                <div class="flex items-center gap-[8px]">
+                                    <span class="text-white text-[18px] font-bold font-spartan">$39</span>
+                                    <span class="text-white/35 text-[14px] font-inter line-through">$79</span>
+                                </div>
+                            </div>
+                            <div class="mt-[16px] flex items-center justify-between gap-[12px]">
+                                <a href="#"
+                                    class="inline-flex items-center gap-[10px] h-[44px] px-[16px] rounded-[50px] bg-white/5 border border-white/10 text-white text-[14px] font-semibold font-inter hover:bg-secondary hover:border-secondary hover:shadow-[0px_10px_25px_rgba(147,130,255,0.35)] transition-all">
+                                    <i class="fa-solid fa-cart-shopping text-[14px]"></i>
+                                    Enroll Now
+                                </a>
+                                <a href="#"
+                                    class="inline-flex items-center justify-center w-[44px] h-[44px] rounded-[50px] bg-white/5 border border-white/10 text-white/60 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all"
+                                    aria-label="Add to wishlist">
+                                    <i class="fa-regular fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article data-course-item data-course-category="art-design" data-course-title="Creative Illustration: From Sketch to Final Artwork"
+                        class="bg-box-color border border-white/5 rounded-[18px] overflow-hidden group hover:border-secondary/30 transition-all duration-300 hover:-translate-y-1">
+                        <a href="#" class="block relative aspect-16/10 overflow-hidden p-[30px]">
+                            <img src="assets/images/course/course-5.webp" alt="Art and design course"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-[8px]">
+                            <span
+                                class="absolute top-[50px] left-[50px] px-[12px] h-[30px] rounded-[50px] bg-primary/70 border border-white/10 text-white text-[12px] font-semibold font-inter flex items-center">
+                                Art and Design
+                            </span>
+                        </a>
+                        <div class="p-[22px]">
+                            <div class="flex items-center gap-[14px] text-white/55 text-[13px] font-inter mb-[10px]">
+                                <span class="inline-flex items-center gap-[6px]">
+                                    <i class="fa-regular fa-file-lines text-[13px] text-white/35"></i> 16 Lessons
+                                </span>
+                                <span class="inline-flex items-center gap-[6px]">
+                                    <i class="fa-regular fa-user text-[13px] text-white/35"></i> 61 Students
+                                </span>
+                            </div>
+                            <h3 class="text-white text-[20px] md:text-[22px] font-bold font-spartan leading-tight mb-[12px] line-clamp-2">
+                                <a href="#" class="hover:text-secondary transition-colors">Creative Illustration: From Sketch to Final Artwork</a>
+                            </h3>
+                            <div class="flex items-center justify-between gap-[14px]">
+                                <div class="flex items-center gap-[8px]">
+                                    <div class="flex items-center gap-[2px] text-yellow text-[13px]">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                                    </div>
+                                    <span class="text-white/45 text-[13px] font-inter">(14 Reviews)</span>
+                                </div>
+                                <div class="flex items-center gap-[8px]">
+                                    <span class="text-white text-[18px] font-bold font-spartan">$45</span>
+                                    <span class="text-white/35 text-[14px] font-inter line-through">$90</span>
+                                </div>
+                            </div>
+                            <div class="mt-[16px] flex items-center justify-between gap-[12px]">
+                                <a href="#"
+                                    class="inline-flex items-center gap-[10px] h-[44px] px-[16px] rounded-[50px] bg-white/5 border border-white/10 text-white text-[14px] font-semibold font-inter hover:bg-secondary hover:border-secondary hover:shadow-[0px_10px_25px_rgba(147,130,255,0.35)] transition-all">
+                                    <i class="fa-solid fa-cart-shopping text-[14px]"></i>
+                                    Enroll Now
+                                </a>
+                                <a href="#"
+                                    class="inline-flex items-center justify-center w-[44px] h-[44px] rounded-[50px] bg-white/5 border border-white/10 text-white/60 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all"
+                                    aria-label="Add to wishlist">
+                                    <i class="fa-regular fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article data-course-item data-course-category="web-development" data-course-title="JavaScript Essentials for Real Projects"
+                        class="bg-box-color border border-white/5 rounded-[18px] overflow-hidden group hover:border-secondary/30 transition-all duration-300 hover:-translate-y-1">
+                        <a href="#" class="block relative aspect-16/10 overflow-hidden p-[30px]">
+                            <img src="assets/images/course/course-6.webp" alt="Web development course"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-[8px]">
+                            <span
+                                class="absolute top-[50px] left-[50px] px-[12px] h-[30px] rounded-[50px] bg-primary/70 border border-white/10 text-white text-[12px] font-semibold font-inter flex items-center">
+                                Web Development
+                            </span>
+                        </a>
+                        <div class="p-[22px]">
+                            <div class="flex items-center gap-[14px] text-white/55 text-[13px] font-inter mb-[10px]">
+                                <span class="inline-flex items-center gap-[6px]">
+                                    <i class="fa-regular fa-file-lines text-[13px] text-white/35"></i> 14 Lessons
+                                </span>
+                                <span class="inline-flex items-center gap-[6px]">
+                                    <i class="fa-regular fa-user text-[13px] text-white/35"></i> 47 Students
+                                </span>
+                            </div>
+                            <h3 class="text-white text-[20px] md:text-[22px] font-bold font-spartan leading-tight mb-[12px] line-clamp-2">
+                                <a href="#" class="hover:text-secondary transition-colors">JavaScript Essentials for Real Projects</a>
+                            </h3>
+                            <div class="flex items-center justify-between gap-[14px]">
+                                <div class="flex items-center gap-[8px]">
+                                    <div class="flex items-center gap-[2px] text-yellow text-[13px]">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class="text-white/45 text-[13px] font-inter">(24 Reviews)</span>
+                                </div>
+                                <div class="flex items-center gap-[8px]">
+                                    <span class="text-white text-[18px] font-bold font-spartan">$69</span>
+                                    <span class="text-white/35 text-[14px] font-inter line-through">$140</span>
+                                </div>
+                            </div>
+                            <div class="mt-[16px] flex items-center justify-between gap-[12px]">
+                                <a href="#"
+                                    class="inline-flex items-center gap-[10px] h-[44px] px-[16px] rounded-[50px] bg-white/5 border border-white/10 text-white text-[14px] font-semibold font-inter hover:bg-secondary hover:border-secondary hover:shadow-[0px_10px_25px_rgba(147,130,255,0.35)] transition-all">
+                                    <i class="fa-solid fa-cart-shopping text-[14px]"></i>
+                                    Enroll Now
+                                </a>
+                                <a href="#"
+                                    class="inline-flex items-center justify-center w-[44px] h-[44px] rounded-[50px] bg-white/5 border border-white/10 text-white/60 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all"
+                                    aria-label="Add to wishlist">
+                                    <i class="fa-regular fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article data-course-item data-course-category="app-development" data-course-title="Mobile App UI: Components & Prototyping"
+                        class="bg-box-color border border-white/5 rounded-[18px] overflow-hidden group hover:border-secondary/30 transition-all duration-300 hover:-translate-y-1">
+                        <a href="#" class="block relative aspect-16/10 overflow-hidden p-[30px]">
+                            <img src="assets/images/course/course-7.webp" alt="App development course"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-[8px]">
+                            <span
+                                class="absolute top-[50px] left-[50px] px-[12px] h-[30px] rounded-[50px] bg-primary/70 border border-white/10 text-white text-[12px] font-semibold font-inter flex items-center">
+                                App Development
+                            </span>
+                        </a>
+                        <div class="p-[22px]">
+                            <div class="flex items-center gap-[14px] text-white/55 text-[13px] font-inter mb-[10px]">
+                                <span class="inline-flex items-center gap-[6px]">
+                                    <i class="fa-regular fa-file-lines text-[13px] text-white/35"></i> 17 Lessons
+                                </span>
+                                <span class="inline-flex items-center gap-[6px]">
+                                    <i class="fa-regular fa-user text-[13px] text-white/35"></i> 33 Students
+                                </span>
+                            </div>
+                            <h3 class="text-white text-[20px] md:text-[22px] font-bold font-spartan leading-tight mb-[12px] line-clamp-2">
+                                <a href="#" class="hover:text-secondary transition-colors">Mobile App UI: Components & Prototyping</a>
+                            </h3>
+                            <div class="flex items-center justify-between gap-[14px]">
+                                <div class="flex items-center gap-[8px]">
+                                    <div class="flex items-center gap-[2px] text-yellow text-[13px]">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                                    </div>
+                                    <span class="text-white/45 text-[13px] font-inter">(8 Reviews)</span>
+                                </div>
+                                <div class="flex items-center gap-[8px]">
+                                    <span class="text-white text-[18px] font-bold font-spartan">$52</span>
+                                    <span class="text-white/35 text-[14px] font-inter line-through">$104</span>
+                                </div>
+                            </div>
+                            <div class="mt-[16px] flex items-center justify-between gap-[12px]">
+                                <a href="#"
+                                    class="inline-flex items-center gap-[10px] h-[44px] px-[16px] rounded-[50px] bg-white/5 border border-white/10 text-white text-[14px] font-semibold font-inter hover:bg-secondary hover:border-secondary hover:shadow-[0px_10px_25px_rgba(147,130,255,0.35)] transition-all">
+                                    <i class="fa-solid fa-cart-shopping text-[14px]"></i>
+                                    Enroll Now
+                                </a>
+                                <a href="#"
+                                    class="inline-flex items-center justify-center w-[44px] h-[44px] rounded-[50px] bg-white/5 border border-white/10 text-white/60 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all"
+                                    aria-label="Add to wishlist">
+                                    <i class="fa-regular fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article data-course-item data-course-category="it-solution" data-course-title="Cybersecurity Basics: Protect Systems & Data"
+                        class="bg-box-color border border-white/5 rounded-[18px] overflow-hidden group hover:border-secondary/30 transition-all duration-300 hover:-translate-y-1">
+                        <a href="#" class="block relative aspect-16/10 overflow-hidden p-[30px]">
+                            <img src="assets/images/course/course-8.webp" alt="IT solution course"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-[8px]">
+                            <span
+                                class="absolute top-[50px] left-[50px] px-[12px] h-[30px] rounded-[50px] bg-primary/70 border border-white/10 text-white text-[12px] font-semibold font-inter flex items-center">
+                                IT Solution
+                            </span>
+                        </a>
+                        <div class="p-[22px]">
+                            <div class="flex items-center gap-[14px] text-white/55 text-[13px] font-inter mb-[10px]">
+                                <span class="inline-flex items-center gap-[6px]">
+                                    <i class="fa-regular fa-file-lines text-[13px] text-white/35"></i> 19 Lessons
+                                </span>
+                                <span class="inline-flex items-center gap-[6px]">
+                                    <i class="fa-regular fa-user text-[13px] text-white/35"></i> 29 Students
+                                </span>
+                            </div>
+                            <h3 class="text-white text-[20px] md:text-[22px] font-bold font-spartan leading-tight mb-[12px] line-clamp-2">
+                                <a href="#" class="hover:text-secondary transition-colors">Cybersecurity Basics: Protect Systems & Data</a>
+                            </h3>
+                            <div class="flex items-center justify-between gap-[14px]">
+                                <div class="flex items-center gap-[8px]">
+                                    <div class="flex items-center gap-[2px] text-yellow text-[13px]">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                    </div>
+                                    <span class="text-white/45 text-[13px] font-inter">(16 Reviews)</span>
+                                </div>
+                                <div class="flex items-center gap-[8px]">
+                                    <span class="text-white text-[18px] font-bold font-spartan">$64</span>
+                                    <span class="text-white/35 text-[14px] font-inter line-through">$128</span>
+                                </div>
+                            </div>
+                            <div class="mt-[16px] flex items-center justify-between gap-[12px]">
+                                <a href="#"
+                                    class="inline-flex items-center gap-[10px] h-[44px] px-[16px] rounded-[50px] bg-white/5 border border-white/10 text-white text-[14px] font-semibold font-inter hover:bg-secondary hover:border-secondary hover:shadow-[0px_10px_25px_rgba(147,130,255,0.35)] transition-all">
+                                    <i class="fa-solid fa-cart-shopping text-[14px]"></i>
+                                    Enroll Now
+                                </a>
+                                <a href="#"
+                                    class="inline-flex items-center justify-center w-[44px] h-[44px] rounded-[50px] bg-white/5 border border-white/10 text-white/60 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all"
+                                    aria-label="Add to wishlist">
+                                    <i class="fa-regular fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article data-course-item data-course-category="graphic-design" data-course-title="Typography Masterclass for Digital Products"
+                        class="bg-box-color border border-white/5 rounded-[18px] overflow-hidden group hover:border-secondary/30 transition-all duration-300 hover:-translate-y-1">
+                        <a href="#" class="block relative aspect-16/10 overflow-hidden p-[30px]">
+                            <img src="assets/images/course/course-9.webp" alt="Graphic design course"
+                                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 rounded-[8px]">
+                            <span
+                                class="absolute top-[50px] left-[50px] px-[12px] h-[30px] rounded-[50px] bg-primary/70 border border-white/10 text-white text-[12px] font-semibold font-inter flex items-center">
+                                Graphic Design
+                            </span>
+                        </a>
+                        <div class="p-[22px]">
+                            <div class="flex items-center gap-[14px] text-white/55 text-[13px] font-inter mb-[10px]">
+                                <span class="inline-flex items-center gap-[6px]">
+                                    <i class="fa-regular fa-file-lines text-[13px] text-white/35"></i> 13 Lessons
+                                </span>
+                                <span class="inline-flex items-center gap-[6px]">
+                                    <i class="fa-regular fa-user text-[13px] text-white/35"></i> 40 Students
+                                </span>
+                            </div>
+                            <h3 class="text-white text-[20px] md:text-[22px] font-bold font-spartan leading-tight mb-[12px] line-clamp-2">
+                                <a href="#" class="hover:text-secondary transition-colors">Typography Masterclass for Digital Products</a>
+                            </h3>
+                            <div class="flex items-center justify-between gap-[14px]">
+                                <div class="flex items-center gap-[8px]">
+                                    <div class="flex items-center gap-[2px] text-yellow text-[13px]">
+                                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i>
+                                    </div>
+                                    <span class="text-white/45 text-[13px] font-inter">(11 Reviews)</span>
+                                </div>
+                                <div class="flex items-center gap-[8px]">
+                                    <span class="text-white text-[18px] font-bold font-spartan">$44</span>
+                                    <span class="text-white/35 text-[14px] font-inter line-through">$88</span>
+                                </div>
+                            </div>
+                            <div class="mt-[16px] flex items-center justify-between gap-[12px]">
+                                <a href="#"
+                                    class="inline-flex items-center gap-[10px] h-[44px] px-[16px] rounded-[50px] bg-white/5 border border-white/10 text-white text-[14px] font-semibold font-inter hover:bg-secondary hover:border-secondary hover:shadow-[0px_10px_25px_rgba(147,130,255,0.35)] transition-all">
+                                    <i class="fa-solid fa-cart-shopping text-[14px]"></i>
+                                    Enroll Now
+                                </a>
+                                <a href="#"
+                                    class="inline-flex items-center justify-center w-[44px] h-[44px] rounded-[50px] bg-white/5 border border-white/10 text-white/60 hover:text-white hover:bg-white/10 hover:border-white/20 transition-all"
+                                    aria-label="Add to wishlist">
+                                    <i class="fa-regular fa-heart"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="text-center mt-[55px]">
+                    <a href="#"
+                        class="inline-flex items-center gap-[10px] px-[40px] py-[16px] rounded-[50px] bg-linear-to-r from-border-secondary via-[#FF71BF] to-[#FFBD7A] text-white text-[18px] font-bold font-spartan hover:shadow-[0px_10px_30px_rgba(178,110,247,0.4)] hover:-translate-y-1 transition-all duration-300 border-b-2 border-primary/30">
+                        <span>View All Courses</span>
+                        <i class="fa-solid fa-arrow-right text-[16px]"></i>
+                    </a>
+                </div>
+            </div>
+         </section>
+           <!-- course tabs Section end -->
         <!-- Major Partners Section Start -->
         <section id="partners" class="bg-primary py-[100px] relative overflow-hidden">
             <!-- Background Decoration -->
             <div
-                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/5 blur-[120px] rounded-full pointer-events-none">
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/5 blur-[120px] rounded-[50px] pointer-events-none">
             </div>
 
             <div class="max-w-[1320px] mx-auto px-4 relative z-10">
                 <!-- Section Header -->
                 <div class="text-center mb-[60px]">
                     <span
-                        class="inline-flex items-center justify-center px-[16px] py-[6px] rounded-full border border-white/10 bg-white/5 text-secondary text-[13px] font-bold font-spartan mb-[24px]">
+                        class="inline-flex items-center justify-center px-[16px] py-[6px] rounded-[50px] border border-white/10 bg-white/5 text-secondary text-[13px] font-bold font-spartan mb-[24px]">
                         Major Partners
                     </span>
                     <h2 class="text-white text-[36px] md:text-[54px] font-bold font-spartan leading-tight mb-[16px]">
@@ -779,7 +1343,7 @@
                 <!-- Become A Partner Button -->
                 <div class="text-center mt-[60px]">
                     <a href="#"
-                        class="inline-flex items-center gap-[10px] px-[40px] py-[16px] rounded-full bg-linear-to-r from-border-secondary via-[#FF71BF] to-[#FFBD7A] text-white text-[18px] font-bold font-spartan hover:shadow-[0px_10px_30px_rgba(178,110,247,0.4)] hover:-translate-y-1 transition-all duration-300 border-b-2 border-primary/30">
+                        class="inline-flex items-center gap-[10px] px-[40px] py-[16px] rounded-[50px] bg-linear-to-r from-border-secondary via-[#FF71BF] to-[#FFBD7A] text-white text-[18px] font-bold font-spartan hover:shadow-[0px_10px_30px_rgba(178,110,247,0.4)] hover:-translate-y-1 transition-all duration-300 border-b-2 border-primary/30">
                         <span>Become A Partner</span>
                         <i class="fa-solid fa-arrow-right text-[16px]"></i>
                     </a>

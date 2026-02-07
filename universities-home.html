@@ -59,9 +59,36 @@
     <!-- Preloader End -->
 
 
-    <header class="bg-[#11112A] sticky top-0 z-50 border-b border-white/5 shadow-lg">
-        <div class="max-w-[1320px] mx-auto px-4 relative">
-            <div class="flex items-center justify-between h-[90px]">
+    <header class="sticky top-0 z-50 shadow-lg">
+        <div class="gradient-color-primary h-[40px]">
+            <div class="max-w-[1320px] mx-auto px-4 h-full flex items-center justify-between gap-4 text-white text-[14px]">
+                <div class="md:hidden flex items-center gap-2">
+                    <i class="fa-solid fa-phone text-[14px]"></i>
+                    <a href="tel:+1256214203215" class="hover:text-white/90 transition-colors">256 214 203 215</a>
+                </div>
+                <div class="hidden md:flex items-center gap-5">
+                    <a href="tel:+1256214203215" class="flex items-center gap-2 hover:text-white/90 transition-colors">
+                        <i class="fa-solid fa-phone text-[14px]"></i>
+                        <span>256 214 203 215</span>
+                    </a>
+                    <span class="h-4 w-px bg-white/20"></span>
+                    <div class="flex items-center gap-2">
+                        <i class="fa-solid fa-location-dot text-[14px]"></i>
+                        <span>258 Helena Street, New York</span>
+                    </div>
+                </div>
+                <nav class="hidden lg:flex items-center gap-6">
+                    <a href="#" class="hover:text-white/90 transition-colors">About Us</a>
+                    <a href="#" class="hover:text-white/90 transition-colors">Course</a>
+                    <a href="#" class="hover:text-white/90 transition-colors">Instructor</a>
+                    <a href="#" class="hover:text-white/90 transition-colors">Events</a>
+                    <a href="#" class="hover:text-white/90 transition-colors">Become A Teacher</a>
+                </nav>
+            </div>
+        </div>
+        <div class="bg-[#11112A]">
+            <div class="max-w-[1320px] mx-auto px-4 relative">
+                <div class="flex items-center justify-between h-[90px]">
                 <!-- Logo Section -->
                 <div class="flex items-center">
                     <a href="index.html">
@@ -659,7 +686,7 @@
 
                     <!-- Join Button -->
                     <a href="#"
-                        class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-[50px] bg-linear-to-r from-[#B26EF7] via-[#FF71BF] to-[#FFBD7A] text-white text-[16px] font-semibold font-spartan hover:shadow-[0px_10px_30px_rgba(178,110,247,0.4)] hover:-translate-y-0.5 transition-all duration-300 border-b-2 border-primary/29">
+                        class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-[50px] bg-linear-to-r from-[#360185] via-[#8F0177] to-[#FF0051] text-white text-[16px] font-semibold font-spartan hover:shadow-[0px_10px_30px_rgba(178,110,247,0.4)] hover:-translate-y-0.5 transition-all duration-300 border-b-2 border-primary/29">
                         <img src="assets/images/icon/right-icon.svg" alt="Join" class="w-5 h-5">
                         <span>Join for free</span>
                     </a>
@@ -683,6 +710,7 @@
                     <a href="#"
                         class="text-white/80 hover:text-secondary transition-colors text-[16px] font-inter">More</a>
                 </div>
+                </div>
             </div>
         </div>
     </header>
@@ -693,20 +721,20 @@
             <div class="hero-swiper swiper h-full">
                 <div class="swiper-wrapper">
                     <!-- Slide 1 -->
-                    <div class="swiper-slide relative flex items-center">
+                    <div class="swiper-slide group relative flex items-center">
                         <!-- Background Image with Overlay -->
                         <div class="absolute inset-0 bg-cover bg-center transition-transform duration-[2000ms] scale-110 group-[.swiper-slide-active]:scale-100"
                             style="background-image: url('assets/images/hero/university-bg.webp');">
                             <div class="absolute inset-0 bg-[#050520]/60"></div>
                         </div>
 
-                        <div class="max-w-[1320px] mx-auto px-4 w-full relative z-10">
+                        <div class="max-w-[1320px] mx-auto px-4 lg:px-[80px] w-full relative z-10">
                             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                                 <!-- Left Content -->
                                 <div class="lg:col-span-7">
                                     <div class="overflow-hidden mb-6">
                                         <span
-                                            class="inline-block px-5 py-2 rounded-full border border-white/10 bg-white/5 text-white text-[14px] font-bold font-spartan animate-slideDown">
+                                            class="inline-block px-5 py-2 rounded-[50px] border border-white/10 bg-white/5 text-white text-[14px] font-bold font-spartan animate-slideDown">
                                             Get 25% Off During COVID-19
                                         </span>
                                     </div>
@@ -723,48 +751,38 @@
                                     </p>
                                     <div class="flex flex-wrap gap-5 animate-slideUp">
                                         <a href="#"
-                                            class="inline-flex items-center gap-3 px-10 py-5 rounded-full bg-linear-to-r from-[#B26EF7] via-[#FF71BF] to-[#FFBD7A] text-white text-[18px] font-bold font-spartan hover:shadow-[0px_15px_30px_rgba(178,110,247,0.4)] transition-all duration-300 hover:-translate-y-1">
+                                            class="inline-flex items-center gap-3 px-10 py-5 rounded-[50px] bg-linear-to-r from-[#360185] via-[#8F0177] to-[#FF0051] text-white text-[18px] font-bold font-spartan hover:shadow-[0px_15px_30px_rgba(178,110,247,0.4)] transition-all duration-300 hover:-translate-y-1">
                                             Become A Partner <i class="fa-solid fa-arrow-right text-[16px]"></i>
                                         </a>
                                         <a href="#"
-                                            class="inline-flex items-center gap-3 px-10 py-5 rounded-full border border-white/20 text-white text-[18px] font-bold font-spartan hover:bg-white hover:text-primary transition-all duration-300">
+                                            class="inline-flex items-center gap-3 px-10 py-5 rounded-[50px] border border-white/20 text-white text-[18px] font-bold font-spartan hover:bg-white hover:text-primary transition-all duration-300">
                                             Course Benefits
                                         </a>
                                     </div>
                                 </div>
 
-                                <!-- Right Content (Animated Card) -->
-                                <div class="lg:col-span-5 relative">
-                                    <div
-                                        class="hero-small-card relative z-20 transition-all duration-1000 translate-x-[50px] opacity-0 group-[.swiper-slide-active]:translate-x-0 group-[.swiper-slide-active]:opacity-100">
-                                        <div
-                                            class="bg-linear-to-br from-[#1A1A3A] to-[#0D0D26] p-4 rounded-[20px] border border-white/10 shadow-2xl overflow-hidden group/card">
-                                            <div class="text-center py-6">
-                                                <h3 class="text-white text-[24px] font-bold font-spartan mb-2">
-                                                    Scholarship Facility</h3>
-                                                <p class="text-white/60 text-[14px] font-inter">At its core, this entity
-                                                    operates as a bastion of strategic insight.</p>
-                                            </div>
-                                            <div class="relative overflow-hidden rounded-[15px] aspect-[4/3]">
-                                                <img src="assets/images/about/about-image1.webp" alt="Scholarship"
-                                                    class="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110">
-                                                <div class="absolute inset-0 bg-secondary/20 mix-blend-overlay"></div>
-                                            </div>
-                                        </div>
+                            </div>
+                        </div>
 
-                                        <!-- Decorative Elements -->
-                                        <div
-                                            class="absolute -top-10 -right-10 w-20 h-20 bg-secondary/20 blur-3xl rounded-full">
-                                        </div>
-                                        <div
-                                            class="absolute -bottom-10 -left-10 w-20 h-20 bg-secondary/20 blur-3xl rounded-full">
-                                        </div>
-                                        <div
-                                            class="absolute top-1/2 -right-4 w-12 h-12 flex items-center justify-center text-white/20 text-[40px] rotate-12">
-                                            <i class="fa-solid fa-clover"></i>
-                                        </div>
-                                    </div>
+                        <div
+                            class="hero-small-card absolute right-4 bottom-6 sm:right-6 sm:bottom-8 lg:right-[80px] lg:bottom-[80px] z-20 transition-all duration-1000 ease-out translate-y-[70px] opacity-0 group-[.swiper-slide-active]:translate-y-0 group-[.swiper-slide-active]:opacity-100">
+                            <div
+                                class="bg-linear-to-br from-[#1A1A3A] to-[#0D0D26] relative flex flex-col w-full max-w-[364px] h-[340px] p-4 rounded-[20px] border-[10px] border-white/10 shadow-2xl overflow-hidden group/card">
+                                <div class="text-center pt-4 pb-3">
+                                    <h3 class="text-white text-[24px] font-bold font-spartan mb-2">Scholarship Facility</h3>
+                                    <p class="text-white/60 text-[14px] font-inter">At its core, this entity operates as a bastion of strategic insight.</p>
                                 </div>
+                                <div class="relative overflow-hidden rounded-[15px] w-full max-w-[344px] h-[175px] mx-auto mt-auto">
+                                    <img src="assets/images/hero/university-bg.webp" alt="Scholarship"
+                                        class="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110">
+                                    <div class="absolute inset-0 bg-secondary/20 mix-blend-overlay"></div>
+                                </div>
+                            </div>
+
+                            <div class="absolute -top-10 -right-10 w-20 h-20 bg-secondary/20 blur-3xl rounded-full"></div>
+                            <div class="absolute -bottom-10 -left-10 w-20 h-20 bg-secondary/20 blur-3xl rounded-full"></div>
+                            <div class="absolute top-1/2 -right-4 w-12 h-12 flex items-center justify-center text-white/20 text-[40px] rotate-12">
+                                <i class="fa-solid fa-clover"></i>
                             </div>
                         </div>
 
@@ -772,33 +790,33 @@
                         <div class="absolute left-10 top-1/2 -translate-y-1/2 z-20 hidden xl:flex flex-col gap-8">
                             <div class="hero-bullet flex items-center gap-4 cursor-pointer group active" data-index="0">
                                 <span
-                                    class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white font-bold font-spartan group-[.active]:bg-secondary group-[.active]:border-secondary transition-all">01</span>
+                                    class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white font-bold font-spartan transition-all">01</span>
                             </div>
                             <div class="hero-bullet flex items-center gap-4 cursor-pointer group" data-index="1">
                                 <span
-                                    class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white font-bold font-spartan group-[.active]:bg-secondary group-[.active]:border-secondary transition-all">02</span>
+                                    class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white font-bold font-spartan transition-all">02</span>
                             </div>
                             <div class="hero-bullet flex items-center gap-4 cursor-pointer group" data-index="2">
                                 <span
-                                    class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white font-bold font-spartan group-[.active]:bg-secondary group-[.active]:border-secondary transition-all">03</span>
+                                    class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white font-bold font-spartan transition-all">03</span>
                             </div>
                         </div>
                     </div>
                     <!-- Slide 1 -->
-                    <div class="swiper-slide relative flex items-center">
+                    <div class="swiper-slide group relative flex items-center">
                         <!-- Background Image with Overlay -->
                         <div class="absolute inset-0 bg-cover bg-center transition-transform duration-[2000ms] scale-110 group-[.swiper-slide-active]:scale-100"
-                            style="background-image: url('assets/images/hero/university-bg.webp');">
+                            style="background-image: url('assets/images/hero/hero.webp');">
                             <div class="absolute inset-0 bg-[#050520]/60"></div>
                         </div>
 
-                        <div class="max-w-[1320px] mx-auto px-4 w-full relative z-10">
+                        <div class="max-w-[1320px] mx-auto px-4 lg:px-[80px] w-full relative z-10">
                             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                                 <!-- Left Content -->
                                 <div class="lg:col-span-7">
                                     <div class="overflow-hidden mb-6">
                                         <span
-                                            class="inline-block px-5 py-2 rounded-full border border-white/10 bg-white/5 text-white text-[14px] font-bold font-spartan animate-slideDown">
+                                            class="inline-block px-5 py-2 rounded-[50px] border border-white/10 bg-white/5 text-white text-[14px] font-bold font-spartan animate-slideDown">
                                             Get 25% Off During COVID-19
                                         </span>
                                     </div>
@@ -815,48 +833,38 @@
                                     </p>
                                     <div class="flex flex-wrap gap-5 animate-slideUp">
                                         <a href="#"
-                                            class="inline-flex items-center gap-3 px-10 py-5 rounded-full bg-linear-to-r from-[#B26EF7] via-[#FF71BF] to-[#FFBD7A] text-white text-[18px] font-bold font-spartan hover:shadow-[0px_15px_30px_rgba(178,110,247,0.4)] transition-all duration-300 hover:-translate-y-1">
+                                            class="inline-flex items-center gap-3 px-10 py-5 rounded-[50px] bg-linear-to-r from-[#360185] via-[#8F0177] to-[#FF0051] text-white text-[18px] font-bold font-spartan hover:shadow-[0px_15px_30px_rgba(178,110,247,0.4)] transition-all duration-300 hover:-translate-y-1">
                                             Become A Partner <i class="fa-solid fa-arrow-right text-[16px]"></i>
                                         </a>
                                         <a href="#"
-                                            class="inline-flex items-center gap-3 px-10 py-5 rounded-full border border-white/20 text-white text-[18px] font-bold font-spartan hover:bg-white hover:text-primary transition-all duration-300">
+                                            class="inline-flex items-center gap-3 px-10 py-5 rounded-[50px] border border-white/20 text-white text-[18px] font-bold font-spartan hover:bg-white hover:text-primary transition-all duration-300">
                                             Course Benefits
                                         </a>
                                     </div>
                                 </div>
 
-                                <!-- Right Content (Animated Card) -->
-                                <div class="lg:col-span-5 relative">
-                                    <div
-                                        class="hero-small-card relative z-20 transition-all duration-1000 translate-x-[50px] opacity-0 group-[.swiper-slide-active]:translate-x-0 group-[.swiper-slide-active]:opacity-100">
-                                        <div
-                                            class="bg-linear-to-br from-[#1A1A3A] to-[#0D0D26] p-4 rounded-[20px] border border-white/10 shadow-2xl overflow-hidden group/card">
-                                            <div class="text-center py-6">
-                                                <h3 class="text-white text-[24px] font-bold font-spartan mb-2">
-                                                    Scholarship Facility</h3>
-                                                <p class="text-white/60 text-[14px] font-inter">At its core, this entity
-                                                    operates as a bastion of strategic insight.</p>
-                                            </div>
-                                            <div class="relative overflow-hidden rounded-[15px] aspect-[4/3]">
-                                                <img src="assets/images/about/about-image1.webp" alt="Scholarship"
-                                                    class="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110">
-                                                <div class="absolute inset-0 bg-secondary/20 mix-blend-overlay"></div>
-                                            </div>
-                                        </div>
+                            </div>
+                        </div>
 
-                                        <!-- Decorative Elements -->
-                                        <div
-                                            class="absolute -top-10 -right-10 w-20 h-20 bg-secondary/20 blur-3xl rounded-full">
-                                        </div>
-                                        <div
-                                            class="absolute -bottom-10 -left-10 w-20 h-20 bg-secondary/20 blur-3xl rounded-full">
-                                        </div>
-                                        <div
-                                            class="absolute top-1/2 -right-4 w-12 h-12 flex items-center justify-center text-white/20 text-[40px] rotate-12">
-                                            <i class="fa-solid fa-clover"></i>
-                                        </div>
-                                    </div>
+                        <div
+                            class="hero-small-card absolute right-4 bottom-6 sm:right-6 sm:bottom-8 lg:right-[80px] lg:bottom-[80px] z-20 transition-all duration-1000 ease-out translate-y-[70px] opacity-0 group-[.swiper-slide-active]:translate-y-0 group-[.swiper-slide-active]:opacity-100">
+                            <div
+                                class="bg-linear-to-br from-[#1A1A3A] to-[#0D0D26] relative flex flex-col w-full max-w-[364px] h-[340px] p-4 rounded-[20px] border-[10px] border-white/10 shadow-2xl overflow-hidden group/card">
+                                <div class="text-center pt-4 pb-3">
+                                    <h3 class="text-white text-[24px] font-bold font-spartan mb-2">Scholarship Facility</h3>
+                                    <p class="text-white/60 text-[14px] font-inter">At its core, this entity operates as a bastion of strategic insight.</p>
                                 </div>
+                                <div class="relative overflow-hidden rounded-[15px] w-full max-w-[344px] h-[175px] mx-auto mt-auto">
+                                    <img src="assets/images/hero/hero.webp" alt="Scholarship"
+                                        class="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110">
+                                    <div class="absolute inset-0 bg-secondary/20 mix-blend-overlay"></div>
+                                </div>
+                            </div>
+
+                            <div class="absolute -top-10 -right-10 w-20 h-20 bg-secondary/20 blur-3xl rounded-full"></div>
+                            <div class="absolute -bottom-10 -left-10 w-20 h-20 bg-secondary/20 blur-3xl rounded-full"></div>
+                            <div class="absolute top-1/2 -right-4 w-12 h-12 flex items-center justify-center text-white/20 text-[40px] rotate-12">
+                                <i class="fa-solid fa-clover"></i>
                             </div>
                         </div>
 
@@ -864,33 +872,33 @@
                         <div class="absolute left-10 top-1/2 -translate-y-1/2 z-20 hidden xl:flex flex-col gap-8">
                             <div class="hero-bullet flex items-center gap-4 cursor-pointer group active" data-index="0">
                                 <span
-                                    class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white font-bold font-spartan group-[.active]:bg-secondary group-[.active]:border-secondary transition-all">01</span>
+                                    class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white font-bold font-spartan transition-all">01</span>
                             </div>
                             <div class="hero-bullet flex items-center gap-4 cursor-pointer group" data-index="1">
                                 <span
-                                    class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white font-bold font-spartan group-[.active]:bg-secondary group-[.active]:border-secondary transition-all">02</span>
+                                    class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white font-bold font-spartan transition-all">02</span>
                             </div>
                             <div class="hero-bullet flex items-center gap-4 cursor-pointer group" data-index="2">
                                 <span
-                                    class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white font-bold font-spartan group-[.active]:bg-secondary group-[.active]:border-secondary transition-all">03</span>
+                                    class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white font-bold font-spartan transition-all">03</span>
                             </div>
                         </div>
                     </div>
                     <!-- Slide 1 -->
-                    <div class="swiper-slide relative flex items-center">
+                    <div class="swiper-slide group relative flex items-center">
                         <!-- Background Image with Overlay -->
                         <div class="absolute inset-0 bg-cover bg-center transition-transform duration-[2000ms] scale-110 group-[.swiper-slide-active]:scale-100"
-                            style="background-image: url('assets/images/hero/university-bg.webp');">
+                            style="background-image: url('assets/images/hero/hero2.webp');">
                             <div class="absolute inset-0 bg-[#050520]/60"></div>
                         </div>
 
-                        <div class="max-w-[1320px] mx-auto px-4 w-full relative z-10">
+                        <div class="max-w-[1320px] mx-auto px-4 lg:px-[80px] w-full relative z-10">
                             <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
                                 <!-- Left Content -->
                                 <div class="lg:col-span-7">
                                     <div class="overflow-hidden mb-6">
                                         <span
-                                            class="inline-block px-5 py-2 rounded-full border border-white/10 bg-white/5 text-white text-[14px] font-bold font-spartan animate-slideDown">
+                                            class="inline-block px-5 py-2 rounded-[50px] border border-white/10 bg-white/5 text-white text-[14px] font-bold font-spartan animate-slideDown">
                                             Get 25% Off During COVID-19
                                         </span>
                                     </div>
@@ -907,48 +915,38 @@
                                     </p>
                                     <div class="flex flex-wrap gap-5 animate-slideUp">
                                         <a href="#"
-                                            class="inline-flex items-center gap-3 px-10 py-5 rounded-full bg-linear-to-r from-[#B26EF7] via-[#FF71BF] to-[#FFBD7A] text-white text-[18px] font-bold font-spartan hover:shadow-[0px_15px_30px_rgba(178,110,247,0.4)] transition-all duration-300 hover:-translate-y-1">
+                                            class="inline-flex items-center gap-3 px-10 py-5 rounded-[50px] bg-linear-to-r from-[#360185] via-[#8F0177] to-[#FF0051] text-white text-[18px] font-bold font-spartan hover:shadow-[0px_15px_30px_rgba(178,110,247,0.4)] transition-all duration-300 hover:-translate-y-1">
                                             Become A Partner <i class="fa-solid fa-arrow-right text-[16px]"></i>
                                         </a>
                                         <a href="#"
-                                            class="inline-flex items-center gap-3 px-10 py-5 rounded-full border border-white/20 text-white text-[18px] font-bold font-spartan hover:bg-white hover:text-primary transition-all duration-300">
+                                            class="inline-flex items-center gap-3 px-10 py-5 rounded-[50px] border border-white/20 text-white text-[18px] font-bold font-spartan hover:bg-white hover:text-primary transition-all duration-300">
                                             Course Benefits
                                         </a>
                                     </div>
                                 </div>
 
-                                <!-- Right Content (Animated Card) -->
-                                <div class="lg:col-span-5 relative">
-                                    <div
-                                        class="hero-small-card relative z-20 transition-all duration-1000 translate-x-[50px] opacity-0 group-[.swiper-slide-active]:translate-x-0 group-[.swiper-slide-active]:opacity-100">
-                                        <div
-                                            class="bg-linear-to-br from-[#1A1A3A] to-[#0D0D26] p-4 rounded-[20px] border border-white/10 shadow-2xl overflow-hidden group/card">
-                                            <div class="text-center py-6">
-                                                <h3 class="text-white text-[24px] font-bold font-spartan mb-2">
-                                                    Scholarship Facility</h3>
-                                                <p class="text-white/60 text-[14px] font-inter">At its core, this entity
-                                                    operates as a bastion of strategic insight.</p>
-                                            </div>
-                                            <div class="relative overflow-hidden rounded-[15px] aspect-[4/3]">
-                                                <img src="assets/images/about/about-image1.webp" alt="Scholarship"
-                                                    class="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110">
-                                                <div class="absolute inset-0 bg-secondary/20 mix-blend-overlay"></div>
-                                            </div>
-                                        </div>
+                            </div>
+                        </div>
 
-                                        <!-- Decorative Elements -->
-                                        <div
-                                            class="absolute -top-10 -right-10 w-20 h-20 bg-secondary/20 blur-3xl rounded-full">
-                                        </div>
-                                        <div
-                                            class="absolute -bottom-10 -left-10 w-20 h-20 bg-secondary/20 blur-3xl rounded-full">
-                                        </div>
-                                        <div
-                                            class="absolute top-1/2 -right-4 w-12 h-12 flex items-center justify-center text-white/20 text-[40px] rotate-12">
-                                            <i class="fa-solid fa-clover"></i>
-                                        </div>
-                                    </div>
+                        <div
+                            class="hero-small-card absolute right-4 bottom-6 sm:right-6 sm:bottom-8 lg:right-[80px] lg:bottom-[80px] z-20 transition-all duration-1000 ease-out translate-y-[70px] opacity-0 group-[.swiper-slide-active]:translate-y-0 group-[.swiper-slide-active]:opacity-100">
+                            <div
+                                class="bg-linear-to-br from-[#1A1A3A] to-[#0D0D26] relative flex flex-col w-full max-w-[364px] h-[340px] p-4 rounded-[20px] border-[10px] border-white/10 shadow-2xl overflow-hidden group/card">
+                                <div class="text-center pt-4 pb-3">
+                                    <h3 class="text-white text-[24px] font-bold font-spartan mb-2">Scholarship Facility</h3>
+                                    <p class="text-white/60 text-[14px] font-inter">At its core, this entity operates as a bastion of strategic insight.</p>
                                 </div>
+                                <div class="relative overflow-hidden rounded-[15px] w-full max-w-[344px] h-[175px] mx-auto mt-auto">
+                                    <img src="assets/images/hero/hero2.webp" alt="Scholarship"
+                                        class="w-full h-full object-cover transition-transform duration-700 group-hover/card:scale-110">
+                                    <div class="absolute inset-0 bg-secondary/20 mix-blend-overlay"></div>
+                                </div>
+                            </div>
+
+                            <div class="absolute -top-10 -right-10 w-20 h-20 bg-secondary/20 blur-3xl rounded-full"></div>
+                            <div class="absolute -bottom-10 -left-10 w-20 h-20 bg-secondary/20 blur-3xl rounded-full"></div>
+                            <div class="absolute top-1/2 -right-4 w-12 h-12 flex items-center justify-center text-white/20 text-[40px] rotate-12">
+                                <i class="fa-solid fa-clover"></i>
                             </div>
                         </div>
 
@@ -956,15 +954,15 @@
                         <div class="absolute left-10 top-1/2 -translate-y-1/2 z-20 hidden xl:flex flex-col gap-8">
                             <div class="hero-bullet flex items-center gap-4 cursor-pointer group active" data-index="0">
                                 <span
-                                    class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white font-bold font-spartan group-[.active]:bg-secondary group-[.active]:border-secondary transition-all">01</span>
+                                    class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white font-bold font-spartan transition-all">01</span>
                             </div>
                             <div class="hero-bullet flex items-center gap-4 cursor-pointer group" data-index="1">
                                 <span
-                                    class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white font-bold font-spartan group-[.active]:bg-secondary group-[.active]:border-secondary transition-all">02</span>
+                                    class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white font-bold font-spartan transition-all">02</span>
                             </div>
                             <div class="hero-bullet flex items-center gap-4 cursor-pointer group" data-index="2">
                                 <span
-                                    class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white font-bold font-spartan group-[.active]:bg-secondary group-[.active]:border-secondary transition-all">03</span>
+                                    class="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white font-bold font-spartan transition-all">03</span>
                             </div>
                         </div>
                     </div>
@@ -1030,7 +1028,7 @@
                     <!-- Right Content Area -->
                     <div>
                         <span
-                            class="inline-flex items-center justify-center px-5 py-2 rounded-full border border-white/10 bg-white/5 text-secondary text-[14px] font-bold font-spartan mb-6">
+                            class="inline-flex items-center justify-center px-5 py-2 rounded-[50px] border border-white/10 bg-white/5 text-secondary text-[14px] font-bold font-spartan mb-6">
                             About Our Platform
                         </span>
 
@@ -1089,7 +1087,7 @@
 
                         <!-- CTA Button -->
                         <a href="#"
-                            class="inline-flex items-center gap-3 px-10 py-5 rounded-full bg-linear-to-r from-border-secondary via-[#FF71BF] to-[#FFBD7A] text-white text-[18px] font-bold font-spartan hover:shadow-[0px_15px_30px_rgba(178,110,247,0.4)] transition-all duration-300 hover:-translate-y-1 border-b-2 border-primary/29">
+                            class="inline-flex items-center gap-3 px-10 py-5 rounded-[50px] bg-linear-to-r from-border-secondary via-[#FF71BF] to-[#FFBD7A] text-white text-[18px] font-bold font-spartan hover:shadow-[0px_15px_30px_rgba(178,110,247,0.4)] transition-all duration-300 hover:-translate-y-1 border-b-2 border-primary/29">
                             Explore More
                             <i class="fa-solid fa-arrow-right text-[16px]"></i>
                         </a>ss
@@ -1103,120 +1101,51 @@
         <div class="bg-primary py-[80px] relative overflow-hidden">
             <div class="max-w-[1320px] mx-auto px-4 relative z-10">
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Counter Card 1 -->
-                    <div
-                        class="relative group p-10 rounded-big bg-box-color border border-white/5 overflow-hidden transition-all duration-300 hover:border-secondary/30 hover:-translate-y-2">
-                        <!-- Icon -->
-                        <div
-                            class="w-[60px] h-[60px] rounded-full bg-secondary/10 flex items-center justify-center text-secondary mb-[25px] relative z-10">
-                            <i class="fa-solid fa-user-graduate text-[24px]"></i>
-                        </div>
-                        <!-- Content -->
-                        <div class="relative z-10">
-                            <h3 class="text-white text-[36px] font-bold font-spartan mb-2">20k+</h3>
-                            <p class="text-white/60 text-[16px] font-inter">Total Student Enrolled</p>
-                        </div>
-                        <!-- Background Glow -->
-                        <div
-                            class="absolute top-0 left-0 w-full h-full bg-linear-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        </div>
-                        <!-- Wavy Lines Pattern -->
-                        <div
-                            class="absolute right-[-20px] bottom-[-20px] opacity-10 pointer-events-none transform group-hover:scale-110 transition-transform duration-500">
-                            <svg width="150" height="150" viewBox="0 0 150 150" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M150 50C120 50 100 70 100 100C100 130 80 150 50 150" stroke="white"
-                                    stroke-width="2" />
-                                <path d="M150 70C130 70 120 80 120 100C120 120 110 130 90 130" stroke="white"
-                                    stroke-width="2" />
-                                <path d="M150 90C140 90 135 95 135 105C135 115 130 120 120 120" stroke="white"
-                                    stroke-width="2" />
-                            </svg>
-                        </div>
-                    </div>
 
-                    <!-- Counter Card 2 -->
-                    <div
-                        class="relative group p-10 rounded-big bg-box-color border border-white/5 overflow-hidden transition-all duration-300 hover:border-secondary/30 hover:-translate-y-2">
-                        <div
-                            class="w-[60px] h-[60px] rounded-full bg-secondary/10 flex items-center justify-center text-secondary mb-[25px] relative z-10">
-                            <i class="fa-solid fa-bolt-lightning text-[24px]"></i>
+                    <div class="relative group p-[30px] rounded-big box-color border border-white/5 overflow-hidden transition-all duration-300 hover:border-secondary/30 hover:-translate-y-2 facts-counter-glow">
+                        <div class="w-[60px] h-[60px] rounded-full gradient-color-secondary flex items-center justify-center mb-[25px] relative z-10">
+                            <img src="assets/images/facts/svg-icon-1.svg" alt="Students" width="20" height="24">
                         </div>
                         <div class="relative z-10">
-                            <h3 class="text-white text-[36px] font-bold font-spartan mb-2">20k+</h3>
-                            <p class="text-white/60 text-[16px] font-inter">Total Student Enrolled</p>
+                            <h3 class="text-white text-[36px] font-bold font-spartan">20k+</h3>
+                            <p class="text-white/60 text-[14px] font-inter">Total Student Enrolled</p>
                         </div>
-                        <div
-                            class="absolute top-0 left-0 w-full h-full bg-linear-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        </div>
-                        <div
-                            class="absolute right-[-20px] bottom-[-20px] opacity-10 pointer-events-none transform group-hover:scale-110 transition-transform duration-500">
-                            <svg width="150" height="150" viewBox="0 0 150 150" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M150 50C120 50 100 70 100 100C100 130 80 150 50 150" stroke="white"
-                                    stroke-width="2" />
-                                <path d="M150 70C130 70 120 80 120 100C120 120 110 130 90 130" stroke="white"
-                                    stroke-width="2" />
-                                <path d="M150 90C140 90 135 95 135 105C135 115 130 120 120 120" stroke="white"
-                                    stroke-width="2" />
-                            </svg>
-                        </div>
+                        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <img src="assets/images/facts/bg-shape.png" alt="" class="absolute right-[-20px] bottom-[-20px] w-[250px] h-[250px]  pointer-events-none">
                     </div>
-
-                    <!-- Counter Card 3 -->
-                    <div
-                        class="relative group p-10 rounded-big bg-box-color border border-white/5 overflow-hidden transition-all duration-300 hover:border-secondary/30 hover:-translate-y-2">
-                        <div
-                            class="w-[60px] h-[60px] rounded-full bg-secondary/10 flex items-center justify-center text-secondary mb-[25px] relative z-10">
-                            <i class="fa-solid fa-chalkboard-user text-[24px]"></i>
+ 
+                      <div class="relative group p-[30px] rounded-big box-color border border-white/5 overflow-hidden transition-all duration-300 hover:border-secondary/30 hover:-translate-y-2 facts-counter-glow">
+                        <div class="w-[60px] h-[60px] rounded-full gradient-color-secondary flex items-center justify-center mb-[25px] relative z-10">
+                            <img src="assets/images/facts/svg-icon-2.svg" alt="Lightning" width="14" height="26">
                         </div>
                         <div class="relative z-10">
-                            <h3 class="text-white text-[36px] font-bold font-spartan mb-2">20k+</h3>
-                            <p class="text-white/60 text-[16px] font-inter">Total Student Enrolled</p>
+                            <h3 class="text-white text-[36px] font-bold font-spartan">20k+</h3>
+                            <p class="text-white/60 text-[14px] font-inter">Total Student Enrolled</p>
                         </div>
-                        <div
-                            class="absolute top-0 left-0 w-full h-full bg-linear-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                        </div>
-                        <div
-                            class="absolute right-[-20px] bottom-[-20px] opacity-10 pointer-events-none transform group-hover:scale-110 transition-transform duration-500">
-                            <svg width="150" height="150" viewBox="0 0 150 150" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M150 50C120 50 100 70 100 100C100 130 80 150 50 150" stroke="white"
-                                    stroke-width="2" />
-                                <path d="M150 70C130 70 120 80 120 100C120 120 110 130 90 130" stroke="white"
-                                    stroke-width="2" />
-                                <path d="M150 90C140 90 135 95 135 105C135 115 130 120 120 120" stroke="white"
-                                    stroke-width="2" />
-                            </svg>
-                        </div>
+                        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <img src="assets/images/facts/bg-shape.png" alt="" class="absolute right-[-20px] bottom-[-20px] w-[250px] h-[250px]  pointer-events-none">
                     </div>
-
-                    <!-- Counter Card 4 -->
-                    <div
-                        class="relative group p-10 rounded-big bg-box-color border border-white/5 overflow-hidden transition-all duration-300 hover:border-secondary/30 hover:-translate-y-2">
-                        <div
-                            class="w-[60px] h-[60px] rounded-full bg-secondary/10 flex items-center justify-center text-secondary mb-[25px] relative z-10">
-                            <i class="fa-solid fa-percent text-[24px]"></i>
+                      <div class="relative group p-[30px] rounded-big box-color border border-white/5 overflow-hidden transition-all duration-300 hover:border-secondary/30 hover:-translate-y-2 facts-counter-glow">
+                        <div class="w-[60px] h-[60px] rounded-full gradient-color-secondary flex items-center justify-center mb-[25px] relative z-10">
+                            <img src="assets/images/facts/svg-icon-3.svg" alt="Teacher" width="30" height="26">
                         </div>
                         <div class="relative z-10">
-                            <h3 class="text-white text-[36px] font-bold font-spartan mb-2">20k+</h3>
-                            <p class="text-white/60 text-[16px] font-inter">Total Student Enrolled</p>
+                            <h3 class="text-white text-[36px] font-bold font-spartan">20k+</h3>
+                            <p class="text-white/60 text-[14px] font-inter">Total Student Enrolled</p>
                         </div>
-                        <div
-                            class="absolute top-0 left-0 w-full h-full bg-linear-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <img src="assets/images/facts/bg-shape.png" alt="" class="absolute right-[-20px] bottom-[-20px] w-[250px] h-[250px]  pointer-events-none">
+                    </div>
+                      <div class="relative group p-[30px] rounded-big box-color border border-white/5 overflow-hidden transition-all duration-300 hover:border-secondary/30 hover:-translate-y-2 facts-counter-glow">
+                        <div class="w-[60px] h-[60px] rounded-full gradient-color-secondary flex items-center justify-center mb-[25px] relative z-10">
+                            <img src="assets/images/facts/svg-icon-5.svg" alt="Discount" width="24" height="26">
                         </div>
-                        <div
-                            class="absolute right-[-20px] bottom-[-20px] opacity-10 pointer-events-none transform group-hover:scale-110 transition-transform duration-500">
-                            <svg width="150" height="150" viewBox="0 0 150 150" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M150 50C120 50 100 70 100 100C100 130 80 150 50 150" stroke="white"
-                                    stroke-width="2" />
-                                <path d="M150 70C130 70 120 80 120 100C120 120 110 130 90 130" stroke="white"
-                                    stroke-width="2" />
-                                <path d="M150 90C140 90 135 95 135 105C135 115 130 120 120 120" stroke="white"
-                                    stroke-width="2" />
-                            </svg>
+                        <div class="relative z-10">
+                            <h3 class="text-white text-[36px] font-bold font-spartan">20k+</h3>
+                            <p class="text-white/60 text-[14px] font-inter">Total Student Enrolled</p>
                         </div>
+                        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-secondary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <img src="assets/images/facts/bg-shape.png" alt="" class="absolute right-[-20px] bottom-[-20px] w-[250px] h-[250px]  pointer-events-none">   
                     </div>
                 </div>
             </div>
@@ -1345,7 +1274,7 @@
                 <div class="max-w-[1320px] mx-auto px-4">
                     <div class="text-center mb-16">
                         <span
-                            class="inline-flex items-center justify-center px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-secondary text-[13px] font-bold font-spartan mb-6">
+                            class="inline-flex items-center justify-center px-4 py-1.5 rounded-[50px] border border-white/10 bg-white/5 text-secondary text-[13px] font-bold font-spartan mb-6">
                             Popular Courses
                         </span>
                         <h2 class="text-white text-[36px] md:text-[54px] font-bold font-spartan leading-tight mb-8">
@@ -1354,13 +1283,13 @@
                         </h2>
                         <div class="flex flex-wrap items-center justify-center gap-4 mb-12">
                             <button data-tab-filter="under-graduate"
-                                class="course-tab-btn px-8 py-3 rounded-full bg-secondary text-white text-[16px] font-bold font-spartan shadow-[0px_10px_20px_rgba(147,130,255,0.3)] transition-all">Under
+                                class="course-tab-btn px-8 py-3 rounded-[50px] bg-secondary text-white text-[16px] font-bold font-spartan shadow-[0px_10px_20px_rgba(147,130,255,0.3)] transition-all">Under
                                 Graduate programs</button>
                             <button data-tab-filter="data-engineering"
-                                class="course-tab-btn px-8 py-3 rounded-full bg-white/5 border border-white/10 text-white/60 text-[16px] font-bold font-spartan hover:bg-white/10 hover:text-white transition-all">Data
+                                class="course-tab-btn px-8 py-3 rounded-[50px] bg-white/5 border border-white/10 text-white/60 text-[16px] font-bold font-spartan hover:bg-white/10 hover:text-white transition-all">Data
                                 Engineering</button>
                             <button data-tab-filter="online-programs"
-                                class="course-tab-btn px-8 py-3 rounded-full bg-white/5 border border-white/10 text-white/60 text-[16px] font-bold font-spartan hover:bg-white/10 hover:text-white transition-all">Online
+                                class="course-tab-btn px-8 py-3 rounded-[50px] bg-white/5 border border-white/10 text-white/60 text-[16px] font-bold font-spartan hover:bg-white/10 hover:text-white transition-all">Online
                                 Programs</button>
                         </div>
                     </div>
@@ -1376,7 +1305,7 @@
                                         <img src="assets/images/course/course-1.webp" alt="Course"
                                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                                         <span
-                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Programming</span>
+                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-[50px] bg-secondary text-white text-[11px] font-bold">Programming</span>
                                     </div>
                                     <div class="flex flex-col grow pt-[30px]">
                                         <div class="flex items-center gap-2 mb-4">
@@ -1396,7 +1325,7 @@
                                         </h3>
                                         <div class="mt-auto">
                                             <a href="#"
-                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/10 text-white text-[14px] font-bold font-spartan hover:bg-secondary transition-all">View
+                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-[50px] bg-white/10 text-white text-[14px] font-bold font-spartan hover:bg-secondary transition-all">View
                                                 Details</a>
                                         </div>
                                     </div>
@@ -1410,7 +1339,7 @@
                                         <img src="assets/images/course/course-2.webp" alt="Course"
                                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                                         <span
-                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Programming</span>
+                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-[50px] bg-secondary text-white text-[11px] font-bold">Programming</span>
                                     </div>
                                     <div class="flex flex-col grow pt-[30px]">
                                         <div class="flex items-center gap-2 mb-4">
@@ -1430,7 +1359,7 @@
                                         </h3>
                                         <div class="mt-auto">
                                             <a href="#"
-                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/10 text-white text-[14px] font-bold font-spartan hover:bg-secondary transition-all">View
+                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-[50px] bg-white/10 text-white text-[14px] font-bold font-spartan hover:bg-secondary transition-all">View
                                                 Details</a>
                                         </div>
                                     </div>
@@ -1444,7 +1373,7 @@
                                         <img src="assets/images/course/course-3.webp" alt="Course"
                                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                                         <span
-                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Programming</span>
+                                                class="absolute top-4 left-4 px-3 py-1.5 rounded-[50px] bg-secondary text-white text-[11px] font-bold">Programming</span>
                                     </div>
                                     <div class="flex flex-col grow pt-[30px]">
                                         <div class="flex items-center gap-2 mb-4">
@@ -1464,7 +1393,7 @@
                                         </h3>
                                         <div class="mt-auto">
                                             <a href="#"
-                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/10 text-white text-[14px] font-bold font-spartan hover:bg-secondary transition-all">View
+                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-[50px] bg-white/10 text-white text-[14px] font-bold font-spartan hover:bg-secondary transition-all">View
                                                 Details</a>
                                         </div>
                                     </div>
@@ -1478,7 +1407,7 @@
                                         <img src="assets/images/course/course-1.webp" alt="Course"
                                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                                         <span
-                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Programming</span>
+                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-[50px] bg-secondary text-white text-[11px] font-bold">Programming</span>
                                     </div>
                                     <div class="flex flex-col grow pt-[30px]">
                                         <div class="flex items-center gap-2 mb-4">
@@ -1498,7 +1427,7 @@
                                         </h3>
                                         <div class="mt-auto">
                                             <a href="#"
-                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/10 text-white text-[14px] font-bold font-spartan hover:bg-secondary transition-all">View
+                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-[50px] bg-white/10 text-white text-[14px] font-bold font-spartan hover:bg-secondary transition-all">View
                                                 Details</a>
                                         </div>
                                     </div>
@@ -1512,7 +1441,7 @@
                                         <img src="assets/images/course/course-2.webp" alt="Course"
                                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                                         <span
-                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Programming</span>
+                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-[50px] bg-secondary text-white text-[11px] font-bold">Programming</span>
                                     </div>
                                     <div class="flex flex-col grow pt-[30px]">
                                         <div class="flex items-center gap-2 mb-4">
@@ -1532,7 +1461,7 @@
                                         </h3>
                                         <div class="mt-auto">
                                             <a href="#"
-                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/10 text-white text-[14px] font-bold font-spartan hover:bg-secondary transition-all">View
+                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-[50px] bg-white/10 text-white text-[14px] font-bold font-spartan hover:bg-secondary transition-all">View
                                                 Details</a>
                                         </div>
                                     </div>
@@ -1546,7 +1475,7 @@
                                         <img src="assets/images/course/course-2.webp" alt="Course"
                                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                                         <span
-                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Programming</span>
+                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-[50px] bg-secondary text-white text-[11px] font-bold">Programming</span>
                                     </div>
                                     <div class="flex flex-col grow pt-[30px]">
                                         <div class="flex items-center gap-2 mb-4">
@@ -1566,7 +1495,7 @@
                                         </h3>
                                         <div class="mt-auto">
                                             <a href="#"
-                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/10 text-white text-[14px] font-bold font-spartan hover:bg-secondary transition-all">View
+                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-[50px] bg-white/10 text-white text-[14px] font-bold font-spartan hover:bg-secondary transition-all">View
                                                 Details</a>
                                         </div>
                                     </div>
@@ -1579,10 +1508,10 @@
                                         <img src="assets/images/course/course-1.webp" alt="Course"
                                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                                         <span
-                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Programming</span>
+                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-[50px] bg-secondary text-white text-[11px] font-bold">Programming</span>
                                     </div>
                                     <div class="flex flex-col grow pt-[30px]">
-                                        <div class="flex items-center gap-2 mb-4">
+                                        <div class="flex items-center gap-2 mb-4">  
                                             <div class="flex items-center gap-1">
                                                 <i class="fa-solid fa-star text-yellow text-[10px]"></i>
                                                 <i class="fa-solid fa-star text-yellow text-[10px]"></i>
@@ -1599,7 +1528,7 @@
                                         </h3>
                                         <div class="mt-auto">
                                             <a href="#"
-                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/10 text-white text-[14px] font-bold font-spartan hover:bg-secondary transition-all">View
+                                                    class="inline-flex items-center justify-center px-6 py-2.5 rounded-[50px] bg-white/10 text-white text-[14px] font-bold font-spartan hover:bg-secondary transition-all">View
                                                 Details</a>
                                         </div>
                                     </div>
@@ -1613,7 +1542,7 @@
                                         <img src="assets/images/course/course-2.webp" alt="Course"
                                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                                         <span
-                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Programming</span>
+                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-[50px] bg-secondary text-white text-[11px] font-bold">Programming</span>
                                     </div>
                                     <div class="flex flex-col grow pt-[30px]">
                                         <div class="flex items-center gap-2 mb-4">
@@ -1633,7 +1562,7 @@
                                         </h3>
                                         <div class="mt-auto">
                                             <a href="#"
-                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/10 text-white text-[14px] font-bold font-spartan hover:bg-secondary transition-all">View
+                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-[50px] bg-white/10 text-white text-[14px] font-bold font-spartan hover:bg-secondary transition-all">View
                                                 Details</a>
                                         </div>
                                     </div>
@@ -1647,7 +1576,7 @@
                                         <img src="assets/images/course/course-3.webp" alt="Course"
                                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                                         <span
-                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Programming</span>
+                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-[50px] bg-secondary text-white text-[11px] font-bold">Programming</span>
                                     </div>
                                     <div class="flex flex-col grow pt-[30px]">
                                         <div class="flex items-center gap-2 mb-4">
@@ -1667,7 +1596,7 @@
                                         </h3>
                                         <div class="mt-auto">
                                             <a href="#"
-                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/10 text-white text-[14px] font-bold font-spartan hover:bg-secondary transition-all">View
+                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-[50px] bg-white/10 text-white text-[14px] font-bold font-spartan hover:bg-secondary transition-all">View
                                                 Details</a>
                                         </div>
                                     </div>
@@ -1681,7 +1610,7 @@
                                         <img src="assets/images/course/course-1.webp" alt="Course"
                                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                                         <span
-                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Programming</span>
+                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-[50px] bg-secondary text-white text-[11px] font-bold">Programming</span>
                                     </div>
                                     <div class="flex flex-col grow pt-[30px]">
                                         <div class="flex items-center gap-2 mb-4">
@@ -1701,7 +1630,7 @@
                                         </h3>
                                         <div class="mt-auto">
                                             <a href="#"
-                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/10 text-white text-[14px] font-bold font-spartan hover:bg-secondary transition-all">View
+                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-[50px] bg-white/10 text-white text-[14px] font-bold font-spartan hover:bg-secondary transition-all">View
                                                 Details</a>
                                         </div>
                                     </div>
@@ -1715,7 +1644,7 @@
                                         <img src="assets/images/course/course-2.webp" alt="Course"
                                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                                         <span
-                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Programming</span>
+                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-[50px] bg-secondary text-white text-[11px] font-bold">Programming</span>
                                     </div>
                                     <div class="flex flex-col grow pt-[30px]">
                                         <div class="flex items-center gap-2 mb-4">
@@ -1735,7 +1664,7 @@
                                         </h3>
                                         <div class="mt-auto">
                                             <a href="#"
-                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/10 text-white text-[14px] font-bold font-spartan hover:bg-secondary transition-all">View
+                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-[50px] bg-white/10 text-white text-[14px] font-bold font-spartan hover:bg-secondary transition-all">View
                                                 Details</a>
                                         </div>
                                     </div>
@@ -1749,7 +1678,7 @@
                                         <img src="assets/images/course/course-2.webp" alt="Course"
                                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                                         <span
-                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Programming</span>
+                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-[50px] bg-secondary text-white text-[11px] font-bold">Programming</span>
                                     </div>
                                     <div class="flex flex-col grow pt-[30px]">
                                         <div class="flex items-center gap-2 mb-4">
@@ -1769,7 +1698,7 @@
                                         </h3>
                                         <div class="mt-auto">
                                             <a href="#"
-                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/10 text-white text-[14px] font-bold font-spartan hover:bg-secondary transition-all">View
+                                                    class="inline-flex items-center justify-center px-6 py-2.5 rounded-[50px] bg-white/10 text-white text-[14px] font-bold font-spartan hover:bg-secondary transition-all">View
                                                 Details</a>
                                         </div>
                                     </div>
@@ -1798,7 +1727,7 @@
             <div class="max-w-[1320px] mx-auto px-4 relative z-10">
                 <div class="text-center mb-16">
                     <span
-                        class="inline-flex items-center justify-center px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-secondary text-[13px] font-bold font-spartan mb-6">
+                        class="inline-flex items-center justify-center px-4 py-1.5 rounded-[50px] border border-white/10 bg-white/5 text-secondary text-[13px] font-bold font-spartan mb-6">
                         Our Instructors
                     </span>
                     <h2 class="text-white text-[36px] md:text-[54px] font-bold font-spartan leading-tight mb-4">
@@ -2013,7 +1942,7 @@
                 <!-- Section Header -->
                 <div class="text-center mb-16">
                     <span
-                        class="inline-flex items-center justify-center px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-secondary text-[13px] font-bold font-spartan mb-6">
+                        class="inline-flex items-center justify-center px-4 py-1.5 rounded-[50px] border border-white/10 bg-white/5 text-secondary text-[13px] font-bold font-spartan mb-6">
                         Set Career Goals
                     </span>
                     <h2 class="text-white text-[36px] md:text-[54px] font-bold font-spartan leading-tight mb-4">
@@ -2235,7 +2164,7 @@
                 <!-- Section Header -->
                 <div class="text-center mb-16">
                     <span
-                        class="inline-flex items-center justify-center px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-secondary text-[13px] font-bold font-spartan mb-6">
+                        class="inline-flex items-center justify-center px-4 py-1.5 rounded-[50px] border border-white/10 bg-white/5 text-secondary text-[13px] font-bold font-spartan mb-6">
                         Why Choose Us
                     </span>
                     <h2
@@ -2911,7 +2840,7 @@
                         class="w-full h-[56px] flex items-center justify-center rounded-[10px] border border-white/10 text-white font-semibold font-spartan hover:bg-white hover:text-[#050520] transition-all duration-300">View
                         Cart</a>
                     <a href="#"
-                        class="w-full h-[56px] flex items-center justify-center rounded-[10px] bg-linear-to-r from-[#B26EF7] via-[#FF71BF] to-[#FFBD7A] text-white font-semibold font-spartan hover:shadow-[0px_10px_30px_rgba(178,110,247,0.4)] transition-all duration-300 border-b-2 border-primary/29">Checkout</a>
+                        class="w-full h-[56px] flex items-center justify-center rounded-[10px] bg-linear-to-r from-[#360185] via-[#8F0177] to-[#FF0051] text-white font-semibold font-spartan hover:shadow-[0px_10px_30px_rgba(178,110,247,0.4)] transition-all duration-300 border-b-2 border-primary/29">Checkout</a>
                 </div>
             </div>
         </div>

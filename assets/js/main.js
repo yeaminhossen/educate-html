@@ -664,6 +664,148 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // Marketplace Course Tabs (Grid + Search)
+    const courseTabsSection = document.querySelector('#course-tabs');
+
+    if (courseTabsSection) {
+        const tabList = courseTabsSection.querySelector('#course-tabs-tablist');
+        const prevBtn = courseTabsSection.querySelector('[data-course-tabs-prev]');
+        const nextBtn = courseTabsSection.querySelector('[data-course-tabs-next]');
+        const filterBtns = Array.from(courseTabsSection.querySelectorAll('[data-course-filter]'));
+        const items = Array.from(courseTabsSection.querySelectorAll('[data-course-item]'));
+        const searchOpenBtn = courseTabsSection.querySelector('[data-course-search-open]');
+        const searchCloseBtn = courseTabsSection.querySelector('[data-course-search-close]');
+        const searchPopover = courseTabsSection.querySelector('[data-course-search-popover]');
+        const searchInput = courseTabsSection.querySelector('#course-tabs-search');
+
+        const ACTIVE_CLASSES = ['bg-secondary', 'text-white', 'border-secondary', 'shadow-[0px_10px_20px_rgba(147,130,255,0.3)]'];
+        const INACTIVE_CLASSES = ['bg-white/5', 'border-white/10', 'text-white/60'];
+
+        let currentFilter = 'all';
+        let currentQuery = '';
+
+        const setActiveBtn = (btn) => {
+            filterBtns.forEach((b) => {
+                b.classList.remove(...ACTIVE_CLASSES);
+                b.classList.add(...INACTIVE_CLASSES);
+            });
+
+            if (btn) {
+                btn.classList.remove(...INACTIVE_CLASSES);
+                btn.classList.add(...ACTIVE_CLASSES);
+            }
+        };
+
+        const applyFilters = () => {
+            const query = currentQuery.trim().toLowerCase();
+
+            items.forEach((item) => {
+                const category = (item.getAttribute('data-course-category') || '').toLowerCase();
+                const title = (item.getAttribute('data-course-title') || '').toLowerCase();
+                const matchesFilter = currentFilter === 'all' || category === currentFilter;
+                const matchesQuery = !query || title.includes(query);
+
+                item.classList.toggle('hidden', !(matchesFilter && matchesQuery));
+            });
+        };
+
+        filterBtns.forEach((btn) => {
+            btn.addEventListener('click', () => {
+                currentFilter = (btn.getAttribute('data-course-filter') || 'all').toLowerCase();
+                setActiveBtn(btn);
+                applyFilters();
+            });
+        });
+
+        if (searchInput) {
+            searchInput.addEventListener('input', () => {
+                currentQuery = searchInput.value || '';
+                applyFilters();
+            });
+        }
+
+        const openSearch = () => {
+            if (!searchPopover) return;
+            searchPopover.classList.remove('hidden');
+            if (searchInput) searchInput.focus();
+        };
+
+        const closeSearch = () => {
+            if (!searchPopover) return;
+            if (searchInput) searchInput.value = '';
+            currentQuery = '';
+            applyFilters();
+            searchPopover.classList.add('hidden');
+        };
+
+        if (searchOpenBtn) {
+            searchOpenBtn.addEventListener('click', openSearch);
+        }
+
+        if (searchCloseBtn) {
+            searchCloseBtn.addEventListener('click', closeSearch);
+        }
+
+        document.addEventListener('click', (e) => {
+            if (!searchPopover || searchPopover.classList.contains('hidden')) return;
+            if (searchPopover.contains(e.target) || (searchOpenBtn && searchOpenBtn.contains(e.target))) return;
+            closeSearch();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && searchPopover && !searchPopover.classList.contains('hidden')) closeSearch();
+        });
+
+        const scrollTabsBy = (delta) => {
+            if (!tabList) return;
+            tabList.scrollBy({ left: delta, behavior: 'smooth' });
+        };
+
+        if (prevBtn) {
+            prevBtn.addEventListener('click', () => scrollTabsBy(-280));
+        }
+
+        if (nextBtn) {
+            nextBtn.addEventListener('click', () => scrollTabsBy(280));
+        }
+
+        const updateTabViewport = () => {
+            if (!tabList) return;
+
+            const isDesktop = window.innerWidth >= 1024;
+            if (!isDesktop) {
+                tabList.style.maxWidth = '';
+                return;
+            }
+
+            const tabs = Array.from(tabList.querySelectorAll('button[data-course-filter]'));
+            const VISIBLE_TABS = 7;
+
+            if (tabs.length <= VISIBLE_TABS) {
+                tabList.style.maxWidth = '';
+                return;
+            }
+
+            const styles = window.getComputedStyle(tabList);
+            const gap = parseFloat(styles.gap || styles.columnGap || '0') || 0;
+
+            let width = 0;
+            for (let i = 0; i < VISIBLE_TABS; i += 1) {
+                width += tabs[i].offsetWidth || 0;
+            }
+            width += gap * (VISIBLE_TABS - 1);
+
+            tabList.style.maxWidth = `${Math.ceil(width)}px`;
+        };
+
+        updateTabViewport();
+        window.addEventListener('resize', updateTabViewport);
+
+        const defaultBtn = filterBtns.find((b) => (b.getAttribute('data-course-filter') || '').toLowerCase() === 'all') || filterBtns[0];
+        setActiveBtn(defaultBtn);
+        applyFilters();
+    }
+
     // Why Choose Us Tabs
     const whyChooseTabs = document.querySelectorAll('[data-choose-tab]');
     const whyChooseContents = document.querySelectorAll('[data-choose-content]');
@@ -735,6 +877,13 @@ document.addEventListener('DOMContentLoaded', function () {
     // Hero Swiper Initialization
     const heroSwiperEl = document.querySelector('.hero-swiper');
     if (heroSwiperEl && window.Swiper) {
+        const setActiveHeroBullet = (activeIndex) => {
+            document.querySelectorAll('.hero-bullet').forEach((bullet) => {
+                const bulletIndex = Number(bullet.getAttribute('data-index'));
+                bullet.classList.toggle('active', bulletIndex === activeIndex);
+            });
+        };
+
         const heroSwiper = new Swiper(heroSwiperEl, {
             slidesPerView: 1,
             spaceBetween: 0,
@@ -749,16 +898,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 crossFade: true
             },
             on: {
+                init: function () {
+                    setActiveHeroBullet(this.realIndex);
+                },
                 slideChange: function () {
-                    const activeIndex = this.realIndex;
-                    const bullets = document.querySelectorAll('.hero-bullet');
-                    bullets.forEach((bullet, idx) => {
-                        if (idx === activeIndex) {
-                            bullet.classList.add('active');
-                        } else {
-                            bullet.classList.remove('active');
-                        }
-                    });
+                    setActiveHeroBullet(this.realIndex);
                 }
             }
         });
