@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
             breakpoints: {
                 640: { slidesPerView: 2 },
                 1024: { slidesPerView: 3 },
-                1320: { slidesPerView: 4.2, centeredSlides: true },
+                1320: { slidesPerView: 3.3, centeredSlides: true },
             },
         });
     };
@@ -1050,6 +1050,23 @@ document.addEventListener('DOMContentLoaded', function () {
             thumb.addEventListener('click', function() {
                 const index = parseInt(this.getAttribute('data-exp-index'));
                 expContentSwiper.slideToLoop(index);
+            });
+        });
+    }
+
+    const navOverlay = document.getElementById('nav-overlay');
+    const navGroups = document.querySelectorAll('header nav .group');
+    if (navOverlay && navGroups.length) {
+        navGroups.forEach(group => {
+            group.addEventListener('mouseenter', () => {
+                navOverlay.classList.remove('opacity-0', 'invisible');
+                navOverlay.classList.add('opacity-100', 'visible');
+                navOverlay.style.pointerEvents = 'auto';
+            });
+            group.addEventListener('mouseleave', () => {
+                navOverlay.classList.add('opacity-0', 'invisible');
+                navOverlay.classList.remove('opacity-100', 'visible');
+                navOverlay.style.pointerEvents = 'none';
             });
         });
     }
