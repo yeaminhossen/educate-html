@@ -13,7 +13,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
     <!-- Google Fonts -->
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Spartan:wght@100..900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
     <!-- CSS
 	============================================ -->
@@ -659,7 +659,7 @@
 
                     <!-- Join Button -->
                     <a href="#"
-                        class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-[50px] bg-linear-to-r from-[#B26EF7] via-[#FF71BF] to-[#FFBD7A] text-white text-[16px] font-semibold font-hanken hover:shadow-[0px_10px_30px_rgba(178,110,247,0.4)] hover:-translate-y-0.5 transition-all duration-300 border-b-2 border-primary/29">
+                        class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-[50px] gradient-color-primary text-white text-[16px] font-semibold font-hanken hover:shadow-[0px_10px_30px_rgba(178,110,247,0.4)] hover:-translate-y-0.5 transition-all duration-300 border-b-2 border-primary/29">
                         <img src="assets/images/icon/right-icon.svg" alt="Join" class="w-5 h-5">
                         <span>Join for free</span>
                     </a>
@@ -688,706 +688,118 @@
     </header>
 
     <main>
-        <!-- about Section Start -->
-        <section id="about" class="bg-primary py-[100px] relative overflow-hidden">
-            <div class="max-w-[1320px] mx-auto px-4 relative z-10">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-[80px] items-center">
-                    <!-- Left Image Area -->
-                    <div class="relative">
-                        <!-- Experience Badge -->
-                        <div
-                            class="absolute -top-[40px] -left-[40px] z-30 bg-linear-to-br from-[#6246E5] to-[#3B2BA0] rounded-big p-6 shadow-xl transition-transform hover:-translate-y-2 duration-300">
-                            <div class="flex items-center gap-4">
-                                <span class="text-white text-[48px] font-bold font-hanken leading-none">24</span>
-                                <div class="text-white/80 text-[14px] font-medium font-inter leading-tight">
-                                    Years of<br>experience
-                                </div>
-                            </div>
-                            <!-- Decorative curves in badge -->
-                            <div
-                                class="absolute top-0 right-0 w-full h-full opacity-10 pointer-events-none overflow-hidden rounded-big">
-                                <svg viewBox="0 0 100 100"
-                                    class="w-full h-full transform scale-150 translate-x-1/4 -translate-y-1/4">
-                                    <circle cx="100" cy="0" r="80" fill="none" stroke="white" stroke-width="2" />
-                                    <circle cx="100" cy="0" r="60" fill="none" stroke="white" stroke-width="2" />
-                                </svg>
-                            </div>
-                        </div>
-
-                        <!-- Main Images -->
-                        <div class="relative z-10">
-                            <!-- Background Shape/Decoration -->
-                            <div class="absolute -bottom-[20px] -left-[20px] -z-10">
-                                <i class="fa-solid fa-clover text-secondary/20 text-[80px] rotate-12"></i>
-                            </div>
-
-                            <!-- Path Decoration -->
-                            <div class="absolute -top-[10%] -right-[10%] -z-10 opacity-50">
-                                <img src="assets/images/about/path.png" alt="path" class="w-full h-auto">
-                            </div>
-
-                            <!-- Right/Main Image -->
-                            <div
-                                class="ml-auto w-full max-w-[450px] rounded-[20px] overflow-hidden border-[6px] border-white/5 shadow-2xl">
-                                <img src="assets/images/about/about-image1.webp" alt="Students studying"
-                                    class="w-full h-auto object-cover">
-                            </div>
-
-                            <!-- Left/Overlapping Image -->
-                            <div
-                                class="absolute -left-[60px] top-[140px] w-[280px] rounded-[20px] overflow-hidden border-[6px] border-white/5 shadow-2xl z-20">
-                                <img src="assets/images/about/about-image2.webp" alt="Students in hallway"
-                                    class="w-full h-auto object-cover">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Right Content Area -->
-                    <div>
-                        <span
-                            class="inline-flex items-center justify-center px-5 py-2 rounded-full border border-white/10 bg-white/5 text-secondary text-[14px] font-bold font-hanken mb-6">
-                            About Our Platform
-                        </span>
-
-                        <h2 class="text-white text-[40px] md:text-[54px] font-bold font-hanken leading-[1.1] mb-6">
-                            Welcome Educate University <span
-                                class="gradient-color-primary bg-clip-text text-transparent">of Excellence</span>
-                        </h2>
-
-                        <p class="text-white/60 text-[16px] md:text-[18px] font-inter leading-[1.7] mb-8">
-                            Education is the most powerful weapon which you can to change leadership is not about a
-                            title or a designation it's about.
-                        </p>
-
-                        <!-- Feature List -->
-                        <ul class="space-y-4 mb-10">
-                            <li class="flex items-start gap-3">
-                                <div class="mt-1 shrink-0">
-                                    <i class="fa-solid fa-check text-secondary text-[14px]"></i>
-                                </div>
-                                <span class="text-white/80 text-[16px] font-inter">Create content and courses that align
-                                    with individual needs and learning</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <div class="mt-1 shrink-0">
-                                    <i class="fa-solid fa-check text-secondary text-[14px]"></i>
-                                </div>
-                                <span class="text-white/80 text-[16px] font-inter">Engage students through multimedia
-                                    materials, quizzes, and hands-on activities</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <div class="mt-1 shrink-0">
-                                    <i class="fa-solid fa-check text-secondary text-[14px]"></i>
-                                </div>
-                                <span class="text-white/80 text-[16px] font-inter">Monitor student performance through
-                                    dashboards that provide learning insights</span>
-                            </li>
-                        </ul>
-
-                        <!-- Info Cards Row -->
-                        <div class="flex flex-wrap gap-8 mb-12">
-                            <div class="flex items-center gap-4">
-                                <div
-                                    class="w-[50px] h-[50px] rounded-full bg-secondary/10 flex items-center justify-center text-secondary shadow-[0_0_20px_rgba(147,130,255,0.2)]">
-                                    <i class="fa-solid fa-check text-[18px]"></i>
-                                </div>
-                                <span class="text-white text-[16px] font-bold font-hanken">Learn from anywhere</span>
-                            </div>
-                            <div class="flex items-center gap-4">
-                                <div
-                                    class="w-[50px] h-[50px] rounded-full bg-secondary/10 flex items-center justify-center text-secondary shadow-[0_0_20px_rgba(147,130,255,0.2)]">
-                                    <i class="fa-solid fa-check text-[18px]"></i>
-                                </div>
-                                <span class="text-white text-[16px] font-bold font-hanken">Learn from anywhere</span>
-                            </div>
-                        </div>
-
-                        <!-- CTA Button -->
-                        <a href="#"
-                            class="inline-flex items-center gap-3 px-10 py-5 rounded-full bg-linear-to-r from-border-secondary via-[#FF71BF] to-[#FFBD7A] text-white text-[18px] font-bold font-hanken hover:shadow-[0px_15px_30px_rgba(178,110,247,0.4)] transition-all duration-300 hover:-translate-y-1 border-b-2 border-primary/29">
-                            Explore More
-                            <i class="fa-solid fa-arrow-right text-[16px]"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- about Section End -->
-
-        <!-- Major Partners Section Start -->
-        <section id="partners"
-            class="bg-primary py-20 md:py-24 relative overflow-hidden rbt-scroll-trigger rbt-scroll-trigger--offscreen">
-            <!-- Background Decoration -->
+        <section aria-labelledby="hero-heading" class="bg-primary relative overflow-hidden pt-[270px] pb-[210px]">
             <div
-                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/5 blur-[120px] rounded-full pointer-events-none">
+                class="absolute inset-0 [background:radial-gradient(850px_circle_at_18%_35%,rgba(147,130,255,0.35),transparent_55%),radial-gradient(780px_circle_at_78%_35%,rgba(255,113,191,0.18),transparent_60%)]">
+            </div>
+            <div
+                class="absolute inset-0 opacity-[0.10] [background:repeating-linear-gradient(90deg,rgba(255,255,255,0.10)_0px,rgba(255,255,255,0.10)_48px,transparent_48px,transparent_132px)]">
             </div>
 
-            <div class="max-w-[1320px] mx-auto px-4 relative z-10">
-                <!-- Section Header -->
-                <div class="text-center mb-16">
-                    <span
-                        class="inline-flex items-center justify-center px-4 py-1.5 rounded-[50px] border border-white/10 bg-white/5 text-secondary text-[13px] font-bold font-hanken mb-6">
-                        Our Partners
-                    </span>
-                    <h2 class="text-white text-[36px] md:text-[54px] font-bold font-hanken leading-tight mb-4">
-                        Institution <span class="gradient-color-primary bg-clip-text text-transparent">Work With
-                            Us</span>
-                    </h2>
-                    <p class="text-white/60 text-[16px] md:text-[18px] font-inter max-w-[670px] mx-auto">
-                        Education is the most powerful weapon which you can to change the world leadership is not about
-                        a title or a designation
-                    </p>
-                </div>
+            <img src="assets/images/hero/cap.png" alt=""
+                class="hidden sm:block absolute left-[215px] top-[160px] w-[120px] object-cover">
+            <img src="assets/images/hero/star.png" alt=""
+                class="hidden lg:block absolute left-[120px] bottom-[120px] w-[26px] opacity-70 pointer-events-none select-none animated infinite pulse">
+            <img src="assets/images/hero/icon.png" alt=""
+                class="hidden sm:block absolute left-[44%] top-[140px] w-[34px] opacity-70 pointer-events-none select-none">
 
-                <!-- Brand Slider -->
-                <div class="swiper brand-swiper">
-                    <div class="swiper-wrapper">
-                        <!-- Slack -->
-                        <div class="swiper-slide">
-                            <div
-                                class="h-[100px] bg-primary bg-box-color border border-white/5 rounded-12 flex items-center justify-center group hover:border-secondary/30 transition-all duration-300 relative overflow-hidden before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-0 before:bg-linear-to-t before:from-secondary/20 before:to-transparent hover:before:h-full before:transition-all before:duration-500 before:pointer-events-none">
-                                <div class="flex items-center gap-3 relative z-10">
-                                    <img src="assets/images/brand/slack.png" alt="slack">
-                                </div>
+            <div class="max-w-[1320px] mx-auto px-4 relative">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-[45px] items-center">
+                    <div class="lg:col-span-6 relative z-10">
+                        <div class="flex flex-wrap items-center gap-x-[18px] gap-y-[10px] mb-[28px]">
+                            <div class="inline-flex items-center gap-[8px] text-white/85 font-inter text-[14px]">
+                                <i class="fa-solid fa-star text-[#24BD25] text-[14px]"></i>
+                                <span class="font-semibold text-white">Trustpilot</span>
+                                <span class="inline-flex items-center gap-[3px] text-[11px]">
+                                    <i class="fa-solid fa-star text-[#24BD25]"></i>
+                                    <i class="fa-solid fa-star text-[#24BD25]"></i>
+                                    <i class="fa-solid fa-star text-[#24BD25]"></i>
+                                    <i class="fa-solid fa-star text-[#24BD25]"></i>
+                                    <i class="fa-solid fa-star text-[#24BD25]"></i>
+                                </span>
+                            </div>
+                            <div class="text-white/70 font-inter text-[14px]">
+                                Excellent <span class="text-white font-semibold">4.9</span>
                             </div>
                         </div>
-                        <!-- Asana -->
-                        <div class="swiper-slide">
-                            <div
-                                class="h-[100px] bg-primary bg-box-color border border-white/5 rounded-12 flex items-center justify-center group hover:border-secondary/30 transition-all duration-300 relative overflow-hidden before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-0 before:bg-linear-to-t before:from-secondary/20 before:to-transparent hover:before:h-full before:transition-all before:duration-500 before:pointer-events-none">
-                                <div class="flex items-center gap-3 relative z-10">
-                                    <img src="assets/images/brand/asana.png" alt="asana">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Dropbox -->
-                        <div class="swiper-slide">
-                            <div
-                                class="h-[100px] bg-primary bg-box-color border border-white/5 rounded-12 flex items-center justify-center group hover:border-secondary/30 transition-all duration-300 relative overflow-hidden before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-0 before:bg-linear-to-t before:from-secondary/20 before:to-transparent hover:before:h-full before:transition-all before:duration-500 before:pointer-events-none">
-                                <div class="flex items-center gap-3 relative z-10">
 
-                                    <img src="assets/images/brand/dropbox.png" alt="dropbox">
+                        <h1 id="hero-heading"
+                            class="text-white font-hanken font-extrabold text-[38px] sm:text-[48px] lg:text-[58px] leading-[1.05] tracking-[-0.02em] mb-[18px]">
+                            Faster Progress With<br class="hidden sm:block"> Expert Guidance
+                        </h1>
+                        <p
+                            class="text-white/65 font-inter text-[16px] sm:text-[17px] leading-[1.7] max-w-[520px] mb-[34px]">
+                            Lorem ipsum dolor sit amet consectetur ullamco est sit aliqua do amet sint. Velit officia
+                            consequat duis enim velit mollit.
+                        </p>
+                        <div class="flex items-center gap-[10px]">
+                            <div class="flex flex-wrap items-center gap-[18px]">
+                                <a href="#"
+                                    class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-[50px] gradient-color-primary text-white text-[16px] font-semibold font-hanken hover:shadow-[0px_10px_30px_rgba(178,110,247,0.4)] hover:-translate-y-0.5 transition-all duration-300 border-b-2 border-primary/29">
+                                    <img src="assets/images/icon/right-icon.svg" alt="Join" class="w-5 h-5">
+                                    <span>Apply Now</span>
+                                </a>
+                            </div>
+                            <div class="flex items-center gap-[10px]">
+                                <img src="assets/images/hero/icon.png" alt="" class="w-[18px] h-[18px] opacity-90">
+                                <div class="leading-[1.1]">
+                                    <div class="text-white font-hanken font-bold text-[16px]">100%</div>
+                                    <div class="text-white/60 font-inter text-[12px]">Success Rate</div>
                                 </div>
                             </div>
                         </div>
-                        <!-- Grammarly -->
-                        <div class="swiper-slide">
-                            <div
-                                class="h-[100px] bg-primary bg-box-color border border-white/5 rounded-12 flex items-center justify-center group hover:border-secondary/30 transition-all duration-300 relative overflow-hidden before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-0 before:bg-linear-to-t before:from-secondary/20 before:to-transparent hover:before:h-full before:transition-all before:duration-500 before:pointer-events-none">
-                                <div class="flex items-center gap-3 relative z-10">
-                                    <img src="assets/images/brand/grammarly.png" alt="grammarly">
+                        <div class="flex flex-wrap items-center gap-x-[34px] gap-y-[18px] mt-[42px]">
+
+
+                            <div class="flex items-center gap-[12px]">
+                                <div class="flex items-center -space-x-[10px]">
+                                    <span
+                                        class="w-[36px] h-[36px] rounded-full border border-white/15 bg-transparent">
+                                        <img src="assets/images/faq/avada1.png  " alt="User" class="w-full h-full object-cover">
+                                    </span>
+                                    <span
+                                        class="w-[36px] h-[36px] rounded-full border border-white/15 bg-transparent">
+                                        <img src="assets/images/faq/avada2.png" alt="User" class="w-full h-full object-cover">
+                                    </span>
+                                    <span
+                                        class="w-[36px] h-[36px] rounded-full border border-white/15 bg-transparent">
+                                        <img src="assets/images/faq/avada3.png" alt="User" class="w-full h-full object-cover">
+                                    </span>
+                                    <span
+                                        class="w-[36px] h-[36px] rounded-full border border-white/15 bg-transparent">
+                                        <img src="assets/images/faq/avada4.png" alt="User" class="w-full h-full object-cover">
+                                    </span>
                                 </div>
-                            </div>
-                        </div>
-                        <!-- Medium -->
-                        <div class="swiper-slide">
-                            <div
-                                class="h-[100px] bg-primary bg-box-color border border-white/5 rounded-12 flex items-center justify-center group hover:border-secondary/30 transition-all duration-300 relative overflow-hidden before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-0 before:bg-linear-to-t before:from-secondary/20 before:to-transparent hover:before:h-full before:transition-all before:duration-500 before:pointer-events-none">
-                                <div class="flex items-center gap-3 relative z-10">
-                                    <img src="assets/images/brand/medium.png" alt="medium">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Microsoft -->
-                        <div class="swiper-slide">
-                            <div
-                                class="h-[100px] bg-primary bg-box-color border border-white/5 rounded-12 flex items-center justify-center group hover:border-secondary/30 transition-all duration-300 relative overflow-hidden before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-0 before:bg-linear-to-t before:from-secondary/20 before:to-transparent hover:before:h-full before:transition-all before:duration-500 before:pointer-events-none">
-                                <div class="flex items-center gap-3 relative z-10">
-                                    <img src="assets/images/brand/microsoft.png" alt="microsoft">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Airbnb -->
-                        <div class="swiper-slide">
-                            <div
-                                class="h-[100px] bg-primary bg-box-color border border-white/5 rounded-12 flex items-center justify-center group hover:border-secondary/30 transition-all duration-300 relative overflow-hidden before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-0 before:bg-linear-to-t before:from-secondary/20 before:to-transparent hover:before:h-full before:transition-all before:duration-500 before:pointer-events-none">
-                                <div class="flex items-center gap-3 relative z-10">
-                                    <img src="assets/images/brand/airbnb.png" alt="airbnb">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Framer -->
-                        <div class="swiper-slide">
-                            <div
-                                class="h-[100px] bg-primary bg-box-color border border-white/5 rounded-12 flex items-center justify-center group hover:border-secondary/30 transition-all duration-300 relative overflow-hidden before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-0 before:bg-linear-to-t before:from-secondary/20 before:to-transparent hover:before:h-full before:transition-all before:duration-500 before:pointer-events-none">
-                                <div class="flex items-center gap-3 relative z-10">
-                                    <img src="assets/images/brand/framer.png" alt="framer">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Discord -->
-                        <div class="swiper-slide relative">
-                            <div
-                                class="h-[100px] bg-primary bg-box-color border border-white/5 rounded-12 flex items-center justify-center group hover:border-secondary/30 transition-all duration-300 relative overflow-hidden before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-0 before:bg-linear-to-t before:from-secondary/20 before:to-transparent hover:before:h-full before:transition-all before:duration-500 before:pointer-events-none">
-                                <div class="flex items-center gap-3 relative z-10">
-                                    <img src="assets/images/brand/discord.png" alt="discord">
+                                <div class="leading-[1.1]">
+                                    <div class="text-white font-hanken font-bold text-[16px]">36k+</div>
+                                    <div class="text-white/60 font-inter text-[12px]">Satisfied Students</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
+                    <div class="lg:col-span-6 relative z-10">
+                        <div class="relative max-w-[720px] mx-auto lg:ml-auto">
+                            <div
+                                class="absolute -top-[140px] -right-[140px] w-[520px] h-[520px] rounded-full bg-secondary/20 blur-3xl">
+                            </div>
+                            <img src="assets/images/hero/element.png" alt=""
+                                class="hidden sm:block absolute left-[110px] top-[120px] w-[120px] opacity-90 pointer-events-none select-none">
+                        </div>
+                    </div>
+
+                </div>
             </div>
-        </section>
-        <!-- Major Partners Section End -->
 
-        <!-- Popular Courses Section Start -->
-        <section id="popular-courses" class="bg-primary py-20 md:py-24 relative overflow-hidden">
-            <div class="max-w-[1320px] mx-auto px-4 relative z-10">
-                <!-- Section Header -->
-                <div class="text-center mb-16">
-                    <span
-                        class="inline-flex items-center justify-center px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-secondary text-[13px] font-bold font-hanken mb-6">
-                        Popular Courses
-                    </span>
-                    <h2 class="text-white text-[36px] md:text-[54px] font-bold font-hanken leading-tight mb-8">
-                        Choose a Course to Begin <br>
-                        <span class="gradient-color-primary bg-clip-text text-transparent">Your Journey</span>
-                    </h2>
+            <div class="hero-shape absolute top-[-50px] right-[-35px]">
+                <img src="assets/images/hero/shpe.png" alt="Hero Shape" class="w-full h-full object-cover">
+            </div>
 
-                    <!-- Tabs Navigation -->
-                    <div class="flex flex-wrap items-center justify-center gap-4 mb-12">
-                        <button data-tab-filter="under-graduate"
-                            class="course-tab-btn px-8 py-3 rounded-full bg-secondary text-white text-[16px] font-bold font-hanken shadow-[0px_10px_20px_rgba(147,130,255,0.3)] transition-all">Under
-                            Graduate programs</button>
-                        <button data-tab-filter="data-engineering"
-                            class="course-tab-btn px-8 py-3 rounded-full bg-white/5 border border-white/10 text-white/60 text-[16px] font-bold font-hanken hover:bg-white/10 hover:text-white transition-all">Data
-                            Engineering</button>
-                        <button data-tab-filter="online-programs"
-                            class="course-tab-btn px-8 py-3 rounded-full bg-white/5 border border-white/10 text-white/60 text-[16px] font-bold font-hanken hover:bg-white/10 hover:text-white transition-all">Online
-                            Programs</button>
-                    </div>
-                </div>
-
-                <!-- Slider -->
-                <div class="relative">
-                    <div class="course-swiper swiper">
-                        <div class="swiper-wrapper">
-                            <!-- Slide 1 -->
-                            <div class="swiper-slide h-auto" data-category="under-graduate">
-                                <div
-                                    class="bg-box-color rounded-big border border-white/10 overflow-hidden group h-full flex flex-col">
-                                    <div class="relative overflow-hidden aspect-video">
-                                        <img src="assets/images/course/course-imag.webp" alt="Course"
-                                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                                        <span
-                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Programming</span>
-                                    </div>
-                                    <div class="p-8 flex flex-col grow">
-                                        <div class="flex items-center gap-2 mb-4">
-                                            <div class="flex items-center gap-1">
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                            </div>
-                                            <span class="text-white/40 text-[12px] font-inter">(5.0/ 2 Ratings)</span>
-                                        </div>
-                                        <h3
-                                            class="text-white text-[22px] font-bold font-hanken leading-tight mb-8 hover:text-secondary transition-colors">
-                                            <a href="#">Reactive data updates for smooth and dynamic user
-                                                experiences</a>
-                                        </h3>
-                                        <div class="mt-auto">
-                                            <a href="#"
-                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/10 text-white text-[14px] font-bold font-hanken hover:bg-secondary transition-all">View
-                                                Details</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Slide 2 -->
-                            <div class="swiper-slide h-auto" data-category="data-engineering">
-                                <div
-                                    class="bg-box-color rounded-big border border-white/10 overflow-hidden group h-full flex flex-col">
-                                    <div class="relative overflow-hidden aspect-video">
-                                        <img src="assets/images/course/course-imag2.webp" alt="Course"
-                                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                                        <span
-                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Programming</span>
-                                    </div>
-                                    <div class="p-8 flex flex-col grow">
-                                        <div class="flex items-center gap-2 mb-4">
-                                            <div class="flex items-center gap-1">
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                            </div>
-                                            <span class="text-white/40 text-[12px] font-inter">(5.0/ 2 Ratings)</span>
-                                        </div>
-                                        <h3
-                                            class="text-white text-[22px] font-bold font-hanken leading-tight mb-8 hover:text-secondary transition-colors">
-                                            <a href="#">Reactive data updates for smooth and dynamic user
-                                                experiences</a>
-                                        </h3>
-                                        <div class="mt-auto">
-                                            <a href="#"
-                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/10 text-white text-[14px] font-bold font-hanken hover:bg-secondary transition-all">View
-                                                Details</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Slide 3 -->
-                            <div class="swiper-slide h-auto" data-category="online-programs">
-                                <div
-                                    class="bg-box-color rounded-big border border-white/10 overflow-hidden group h-full flex flex-col">
-                                    <div class="relative overflow-hidden aspect-video">
-                                        <img src="assets/images/course/course-imag3.webp" alt="Course"
-                                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                                        <span
-                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Programming</span>
-                                    </div>
-                                    <div class="p-8 flex flex-col grow">
-                                        <div class="flex items-center gap-2 mb-4">
-                                            <div class="flex items-center gap-1">
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                            </div>
-                                            <span class="text-white/40 text-[12px] font-inter">(5.0/ 2 Ratings)</span>
-                                        </div>
-                                        <h3
-                                            class="text-white text-[22px] font-bold font-hanken leading-tight mb-8 hover:text-secondary transition-colors">
-                                            <a href="#">Reactive data updates for smooth and dynamic user
-                                                experiences</a>
-                                        </h3>
-                                        <div class="mt-auto">
-                                            <a href="#"
-                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/10 text-white text-[14px] font-bold font-hanken hover:bg-secondary transition-all">View
-                                                Details</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Slide 4 -->
-                            <div class="swiper-slide h-auto" data-category="under-graduate">
-                                <div
-                                    class="bg-box-color rounded-big border border-white/10 overflow-hidden group h-full flex flex-col">
-                                    <div class="relative overflow-hidden aspect-video">
-                                        <img src="assets/images/course/course-imag.webp" alt="Course"
-                                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                                        <span
-                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Programming</span>
-                                    </div>
-                                    <div class="p-8 flex flex-col grow">
-                                        <div class="flex items-center gap-2 mb-4">
-                                            <div class="flex items-center gap-1">
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                            </div>
-                                            <span class="text-white/40 text-[12px] font-inter">(5.0/ 2 Ratings)</span>
-                                        </div>
-                                        <h3
-                                            class="text-white text-[22px] font-bold font-hanken leading-tight mb-8 hover:text-secondary transition-colors">
-                                            <a href="#">Reactive data updates for smooth and dynamic user
-                                                experiences</a>
-                                        </h3>
-                                        <div class="mt-auto">
-                                            <a href="#"
-                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/10 text-white text-[14px] font-bold font-hanken hover:bg-secondary transition-all">View
-                                                Details</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Slide 5 -->
-                            <div class="swiper-slide h-auto" data-category="data-engineering">
-                                <div
-                                    class="bg-box-color rounded-big border border-white/10 overflow-hidden group h-full flex flex-col">
-                                    <div class="relative overflow-hidden aspect-video">
-                                        <img src="assets/images/course/course-imag2.webp" alt="Course"
-                                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                                        <span
-                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Programming</span>
-                                    </div>
-                                    <div class="p-8 flex flex-col grow">
-                                        <div class="flex items-center gap-2 mb-4">
-                                            <div class="flex items-center gap-1">
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                            </div>
-                                            <span class="text-white/40 text-[12px] font-inter">(5.0/ 2 Ratings)</span>
-                                        </div>
-                                        <h3
-                                            class="text-white text-[22px] font-bold font-hanken leading-tight mb-8 hover:text-secondary transition-colors">
-                                            <a href="#">Reactive data updates for smooth and dynamic user
-                                                experiences</a>
-                                        </h3>
-                                        <div class="mt-auto">
-                                            <a href="#"
-                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/10 text-white text-[14px] font-bold font-hanken hover:bg-secondary transition-all">View
-                                                Details</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Slide 6 -->
-                            <div class="swiper-slide h-auto" data-category="online-programs">
-                                <div
-                                    class="bg-box-color rounded-big border border-white/10 overflow-hidden group h-full flex flex-col">
-                                    <div class="relative overflow-hidden aspect-video">
-                                        <img src="assets/images/course/course-imag2.webp" alt="Course"
-                                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                                        <span
-                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Programming</span>
-                                    </div>
-                                    <div class="p-8 flex flex-col grow">
-                                        <div class="flex items-center gap-2 mb-4">
-                                            <div class="flex items-center gap-1">
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                            </div>
-                                            <span class="text-white/40 text-[12px] font-inter">(5.0/ 2 Ratings)</span>
-                                        </div>
-                                        <h3
-                                            class="text-white text-[22px] font-bold font-hanken leading-tight mb-8 hover:text-secondary transition-colors">
-                                            <a href="#">Reactive data updates for smooth and dynamic user
-                                                experiences</a>
-                                        </h3>
-                                        <div class="mt-auto">
-                                            <a href="#"
-                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/10 text-white text-[14px] font-bold font-hanken hover:bg-secondary transition-all">View
-                                                Details</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="swiper-slide h-auto" data-category="under-graduate">
-                                <div
-                                    class="bg-box-color rounded-big border border-white/10 overflow-hidden group h-full flex flex-col">
-                                    <div class="relative overflow-hidden aspect-video">
-                                        <img src="assets/images/course/course-imag.webp" alt="Course"
-                                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                                        <span
-                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Programming</span>
-                                    </div>
-                                    <div class="p-8 flex flex-col grow">
-                                        <div class="flex items-center gap-2 mb-4">
-                                            <div class="flex items-center gap-1">
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                            </div>
-                                            <span class="text-white/40 text-[12px] font-inter">(5.0/ 2 Ratings)</span>
-                                        </div>
-                                        <h3
-                                            class="text-white text-[22px] font-bold font-hanken leading-tight mb-8 hover:text-secondary transition-colors">
-                                            <a href="#">Reactive data updates for smooth and dynamic user
-                                                experiences</a>
-                                        </h3>
-                                        <div class="mt-auto">
-                                            <a href="#"
-                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/10 text-white text-[14px] font-bold font-hanken hover:bg-secondary transition-all">View
-                                                Details</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Slide 2 -->
-                            <div class="swiper-slide h-auto" data-category="data-engineering">
-                                <div
-                                    class="bg-box-color rounded-big border border-white/10 overflow-hidden group h-full flex flex-col">
-                                    <div class="relative overflow-hidden aspect-video">
-                                        <img src="assets/images/course/course-imag2.webp" alt="Course"
-                                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                                        <span
-                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Programming</span>
-                                    </div>
-                                    <div class="p-8 flex flex-col grow">
-                                        <div class="flex items-center gap-2 mb-4">
-                                            <div class="flex items-center gap-1">
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                            </div>
-                                            <span class="text-white/40 text-[12px] font-inter">(5.0/ 2 Ratings)</span>
-                                        </div>
-                                        <h3
-                                            class="text-white text-[22px] font-bold font-hanken leading-tight mb-8 hover:text-secondary transition-colors">
-                                            <a href="#">Reactive data updates for smooth and dynamic user
-                                                experiences</a>
-                                        </h3>
-                                        <div class="mt-auto">
-                                            <a href="#"
-                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/10 text-white text-[14px] font-bold font-hanken hover:bg-secondary transition-all">View
-                                                Details</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Slide 3 -->
-                            <div class="swiper-slide h-auto" data-category="online-programs">
-                                <div
-                                    class="bg-box-color rounded-big border border-white/10 overflow-hidden group h-full flex flex-col">
-                                    <div class="relative overflow-hidden aspect-video">
-                                        <img src="assets/images/course/course-imag3.webp" alt="Course"
-                                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                                        <span
-                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Programming</span>
-                                    </div>
-                                    <div class="p-8 flex flex-col grow">
-                                        <div class="flex items-center gap-2 mb-4">
-                                            <div class="flex items-center gap-1">
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                            </div>
-                                            <span class="text-white/40 text-[12px] font-inter">(5.0/ 2 Ratings)</span>
-                                        </div>
-                                        <h3
-                                            class="text-white text-[22px] font-bold font-hanken leading-tight mb-8 hover:text-secondary transition-colors">
-                                            <a href="#">Reactive data updates for smooth and dynamic user
-                                                experiences</a>
-                                        </h3>
-                                        <div class="mt-auto">
-                                            <a href="#"
-                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/10 text-white text-[14px] font-bold font-hanken hover:bg-secondary transition-all">View
-                                                Details</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Slide 4 -->
-                            <div class="swiper-slide h-auto" data-category="under-graduate">
-                                <div
-                                    class="bg-box-color rounded-big border border-white/10 overflow-hidden group h-full flex flex-col">
-                                    <div class="relative overflow-hidden aspect-video">
-                                        <img src="assets/images/course/course-imag.webp" alt="Course"
-                                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                                        <span
-                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Programming</span>
-                                    </div>
-                                    <div class="p-8 flex flex-col grow">
-                                        <div class="flex items-center gap-2 mb-4">
-                                            <div class="flex items-center gap-1">
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                            </div>
-                                            <span class="text-white/40 text-[12px] font-inter">(5.0/ 2 Ratings)</span>
-                                        </div>
-                                        <h3
-                                            class="text-white text-[22px] font-bold font-hanken leading-tight mb-8 hover:text-secondary transition-colors">
-                                            <a href="#">Reactive data updates for smooth and dynamic user
-                                                experiences</a>
-                                        </h3>
-                                        <div class="mt-auto">
-                                            <a href="#"
-                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/10 text-white text-[14px] font-bold font-hanken hover:bg-secondary transition-all">View
-                                                Details</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Slide 5 -->
-                            <div class="swiper-slide h-auto" data-category="data-engineering">
-                                <div
-                                    class="bg-box-color rounded-big border border-white/10 overflow-hidden group h-full flex flex-col">
-                                    <div class="relative overflow-hidden aspect-video">
-                                        <img src="assets/images/course/course-imag2.webp" alt="Course"
-                                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                                        <span
-                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Programming</span>
-                                    </div>
-                                    <div class="p-8 flex flex-col grow">
-                                        <div class="flex items-center gap-2 mb-4">
-                                            <div class="flex items-center gap-1">
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                            </div>
-                                            <span class="text-white/40 text-[12px] font-inter">(5.0/ 2 Ratings)</span>
-                                        </div>
-                                        <h3
-                                            class="text-white text-[22px] font-bold font-hanken leading-tight mb-8 hover:text-secondary transition-colors">
-                                            <a href="#">Reactive data updates for smooth and dynamic user
-                                                experiences</a>
-                                        </h3>
-                                        <div class="mt-auto">
-                                            <a href="#"
-                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/10 text-white text-[14px] font-bold font-hanken hover:bg-secondary transition-all">View
-                                                Details</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Slide 6 -->
-                            <div class="swiper-slide h-auto" data-category="online-programs">
-                                <div
-                                    class="bg-box-color rounded-big border border-white/10 overflow-hidden group h-full flex flex-col">
-                                    <div class="relative overflow-hidden aspect-video">
-                                        <img src="assets/images/course/course-imag2.webp" alt="Course"
-                                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                                        <span
-                                            class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Programming</span>
-                                    </div>
-                                    <div class="p-8 flex flex-col grow">
-                                        <div class="flex items-center gap-2 mb-4">
-                                            <div class="flex items-center gap-1">
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                                <i class="fa-solid fa-star text-yellow text-[10px]"></i>
-                                            </div>
-                                            <span class="text-white/40 text-[12px] font-inter">(5.0/ 2 Ratings)</span>
-                                        </div>
-                                        <h3
-                                            class="text-white text-[22px] font-bold font-hanken leading-tight mb-8 hover:text-secondary transition-colors">
-                                            <a href="#">Reactive data updates for smooth and dynamic user
-                                                experiences</a>
-                                        </h3>
-                                        <div class="mt-auto">
-                                            <a href="#"
-                                                class="inline-flex items-center justify-center px-6 py-2.5 rounded-full bg-white/10 text-white text-[14px] font-bold font-hanken hover:bg-secondary transition-all">View
-                                                Details</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Navigation -->
-                    <div class="mt-12 flex items-center justify-center gap-4">
-                        <button
-                            class="course-swiper-prev w-10 h-10 rounded-full bg-primary border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-secondary transition-all">
-                            <i class="fa-solid fa-chevron-left text-[14px]"></i>
-                        </button>
-                        <button
-                            class="course-swiper-next w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-white shadow-[0px_10px_20px_rgba(147,130,255,0.3)] hover:scale-105 transition-all">
-                            <i class="fa-solid fa-chevron-right text-[14px]"></i>
-                        </button>
-                    </div>
-                </div>
+            <div class="hero-image absolute right-[90px] bottom-0">
+                <img src="assets/images/hero/hero-2.png" alt="Expert tutor"
+                    class="relative z-10 w-full h-full object-contain object-bottom">
             </div>
         </section>
-        <!-- Popular Courses Section End -->
 
     </main>
     <!-- footer section start -->
@@ -1423,7 +835,7 @@
                         </a>
                     </div>
                     <a href="#"
-                        class="inline-flex items-center gap-[10px] px-[30px] py-[15px] rounded-full border border-secondary/30 text-white font-bold font-hanken text-[16px] hover:bg-secondary transition-all duration-300 group">
+                        class="inline-flex items-center gap-[10px] px-[30px] py-[15px] rounded-[50px] border border-secondary/30 text-white font-bold font-hanken text-[16px] hover:bg-secondary transition-all duration-300 group">
                         Contact With Us <i
                             class="fa-solid fa-arrow-right text-[14px] transition-transform group-hover:translate-x-1"></i>
                     </a>

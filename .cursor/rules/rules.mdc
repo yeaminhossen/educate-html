@@ -23,7 +23,7 @@ Key Principles
 - you applay variable Tailwind css our templates
 - As short as possible code
 -  /* Fonts */
-- font-spartan: "League Spartan", sans-serif; // all title usd this font
+- font-Hanken: "League Spartan", sans-serif; // all title usd this font
 - font-inter: "Inter", sans-serif; /// body and paragrap usd this is font
 - Footer menu hover all same
 
