@@ -235,6 +235,13 @@
   .hover-gradient-primary:focus-visible {
     background: var(--gradient-primary);
   }
+
+  .hover-gradient-border:hover,
+  .hover-gradient-border:focus-visible {
+    border-color: transparent;
+    background: linear-gradient(#050520, #050520) padding-box,
+                var(--border-gradient-primary) border-box;
+  }
   .gradient-border-primary {
     border: 2px solid transparent;
     background: linear-gradient(var(--color-primary), var(--color-primary)) padding-box,
@@ -657,6 +664,21 @@
   }
 
   /* Testimonial Styles */
+ .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    background: #f9f9f9 !important;
+    opacity: 1;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    margin: 0 !important;
+  }
+   .swiper-pagination-bullet-active {
+    background: #9382ff !important;
+    width: 10px;
+    height: 10px;
+  }
+
   .testimonial-pagination .swiper-pagination-bullet {
     width: 10px;
     height: 10px;

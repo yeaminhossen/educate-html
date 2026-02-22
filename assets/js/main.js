@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const initCourseSwiper = (el) => {
         if (!el || !window.Swiper) return null;
 
-        const container = el.closest('.relative') || el.parentElement;
+        const container = el.parentElement.parentElement;
         const nextEl = container.querySelector('.course-swiper-next');
         const prevEl = container.querySelector('.course-swiper-prev');
         const paginationEl = container.querySelector('.course-swiper-pagination');
@@ -131,6 +131,10 @@ document.addEventListener('DOMContentLoaded', function () {
             navigation: {
                 nextEl: '.review-swiper-next',
                 prevEl: '.review-swiper-prev',
+            },
+            pagination: {
+                el: '.review-swiper-pagination',
+                clickable: true,
             },
             breakpoints: {
                 992: { slidesPerView: 2 },
@@ -200,6 +204,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 nextEl: '.team-swiper-next',
                 prevEl: '.team-swiper-prev',
             },
+            pagination: {
+                el: '.team-swiper-pagination',
+                clickable: true,
+            },
             breakpoints: {
                 640: { slidesPerView: 2 },
                 1024: { slidesPerView: 3 },
@@ -212,30 +220,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const TEAM_SHARE_BTN_SELECTOR = '[data-team-share]';
     const TEAM_SOCIALS_SELECTOR = '[data-team-social]';
 
-    const TEAM_SHARE_BTN_OPEN_CLASSES = [
-        'rounded-full',
-        'bg-linear-to-r',
-        'from-border-secondary',
-        'via-[#FF71BF]',
-        'to-[#FFBD7A]',
-        'border',
-        'border-transparent',
-        'shadow-[0px_14px_40px_rgba(178,110,247,0.35)]',
-        'scale-105',
-    ];
-
-    const TEAM_SHARE_BTN_CLOSED_CLASSES = [
-        'rounded-big',
-        'bg-[#0F102A]',
-        'border-white/10',
-        'shadow-[0px_14px_40px_rgba(0,0,0,0.35)]',
-    ];
-
-    const TEAM_SOCIALS_OPEN_CLASSES = ['opacity-100', 'translate-y-0', 'scale-100', 'pointer-events-auto'];
-    const TEAM_SOCIALS_CLOSED_CLASSES = ['opacity-0', 'translate-y-2', 'scale-95', 'pointer-events-none'];
-
-    const TEAM_SOCIAL_ITEM_OPEN_CLASSES = ['opacity-100', 'translate-y-0'];
-    const TEAM_SOCIAL_ITEM_CLOSED_CLASSES = ['opacity-0', 'translate-y-2'];
 
     const swapClasses = (el, isOn, onClasses, offClasses) => {
         if (!el) return;
@@ -251,13 +235,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (shareBtn) {
             shareBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-            swapClasses(shareBtn, isOpen, TEAM_SHARE_BTN_OPEN_CLASSES, TEAM_SHARE_BTN_CLOSED_CLASSES);
+            swapClasses(shareBtn, isOpen, shareBtn.dataset.openClasses.split(' '), shareBtn.dataset.closedClasses.split(' '));
         }
 
         if (socials) {
-            swapClasses(socials, isOpen, TEAM_SOCIALS_OPEN_CLASSES, TEAM_SOCIALS_CLOSED_CLASSES);
+            swapClasses(socials, isOpen, socials.dataset.openClasses.split(' '), socials.dataset.closedClasses.split(' '));
             socials.querySelectorAll('a').forEach((link) => {
-                swapClasses(link, isOpen, TEAM_SOCIAL_ITEM_OPEN_CLASSES, TEAM_SOCIAL_ITEM_CLOSED_CLASSES);
+                swapClasses(link, isOpen, link.dataset.openClasses.split(' '), link.dataset.closedClasses.split(' '));
             });
         }
     };
