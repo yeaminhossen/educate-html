@@ -52,6 +52,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
             trigger.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
 
+            item.classList.toggle('!border-secondary/60', isOpen);
+            item.classList.toggle('!shadow-[0px_0px_30px_rgba(147,130,255,0.18)]', isOpen);
+
             if (panel) {
                 panel.classList.toggle('grid-rows-[1fr]', isOpen);
                 panel.classList.toggle('grid-rows-[0fr]', !isOpen);
@@ -1053,5 +1056,70 @@ document.addEventListener('DOMContentLoaded', function () {
                 navOverlay.style.pointerEvents = 'none';
             });
         });
+    }
+
+    const topbarClose = document.getElementById('topbar-close');
+    if (topbarClose) {
+        topbarClose.addEventListener('click', () => document.getElementById('site-topbar').remove());
+    }
+
+    const heroThumbEl = document.querySelector('.hero-thumb-swiper');
+    if (heroThumbEl && window.Swiper) {
+        const heroData = [
+            { subtitle: 'Education Platform', title: 'Starter A Creative Community Without Limits', desc: 'Education is the most powerful weapon which you can use to change. Leadership is not about a title or a designation it\'s about.', btn: 'Explore Course', img: 'assets/images/hero/hero-slider.webp' },
+            { subtitle: 'Marketing & Growth', title: 'Master Digital Marketing Skills Today', desc: 'Unlock real-world marketing techniques used by industry leaders. Build campaigns that convert and grow your brand globally.', btn: 'Start Marketing', img: 'assets/images/hero/hero-slider-2.webp' },
+            { subtitle: 'Technology', title: 'Build Your Tech Career From Ground Up', desc: 'Start from basics and climb to full-stack expertise. Join thousands of developers who transformed their careers.', btn: 'Start Coding', img: 'assets/images/hero/hero-slider-3.webp' },
+            { subtitle: 'Creative Design', title: 'Explore Creative Arts & Design Fields', desc: 'Express yourself through powerful creative tools. Become a sought-after designer in any industry.', btn: 'Explore Design', img: 'assets/images/hero/hero-slider.webp' },
+            { subtitle: 'Business', title: 'Launch Your Business With Expert Guidance', desc: 'Learn business fundamentals from scratch and turn your ideas into profitable ventures with mentorship.', btn: 'Start Business', img: 'assets/images/hero/hero-slider-2.webp' }
+        ];
+
+        let heroActiveIdx = -1;
+        const hTitle = document.getElementById('hero-title');
+        const hDesc = document.getElementById('hero-desc');
+        const hSubtitle = document.getElementById('hero-subtitle');
+        const hImg = document.getElementById('hero-main-img');
+        const hBtn = document.getElementById('hero-btn');
+        const hThumbs = document.querySelectorAll('.hero-thumb-item');
+
+        const setHeroActive = (idx) => {
+            if (idx === heroActiveIdx) return;
+            heroActiveIdx = idx;
+            hThumbs.forEach((t, i) => {
+                const badge = t.querySelector('.hero-thumb-badge');
+                const isActive = i === idx;
+                t.classList.toggle('scale-100', isActive);
+                t.classList.toggle('opacity-100', isActive);
+                t.classList.toggle('scale-90', !isActive);
+                t.classList.toggle('opacity-70', !isActive);
+                if (badge) badge.classList.toggle('hidden', !isActive);
+            });
+            [hTitle, hDesc, hSubtitle].forEach(el => {
+                if (el) { el.style.opacity = '0'; el.style.transform = 'translateY(10px)'; }
+            });
+            if (hImg) { hImg.style.opacity = '0'; hImg.style.transform = 'scale(0.96)'; }
+            setTimeout(() => {
+                const d = heroData[idx];
+                if (hSubtitle) hSubtitle.textContent = d.subtitle;
+                if (hTitle) hTitle.textContent = d.title;
+                if (hDesc) hDesc.textContent = d.desc;
+                if (hBtn) hBtn.textContent = d.btn;
+                if (hImg) hImg.src = d.img;
+                [hTitle, hDesc, hSubtitle].forEach(el => {
+                    if (el) { el.style.opacity = '1'; el.style.transform = 'translateY(0)'; }
+                });
+                if (hImg) { hImg.style.opacity = '1'; hImg.style.transform = 'scale(1)'; }
+            }, 300);
+        };
+
+        new Swiper(heroThumbEl, {
+            slidesPerView: 4,
+            spaceBetween: 16,
+            speed: 600,
+            navigation: { nextEl: '.hero-thumb-next', prevEl: '.hero-thumb-prev' },
+            breakpoints: { 0: { slidesPerView: 1.5, spaceBetween: 12 }, 640: { slidesPerView: 2.5, spaceBetween: 14 }, 1024: { slidesPerView: 4, spaceBetween: 16 } }
+        });
+
+        setHeroActive(0);
+        hThumbs.forEach((t, i) => t.addEventListener('click', () => setHeroActive(i)));
     }
 });
