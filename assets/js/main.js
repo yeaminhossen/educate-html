@@ -876,10 +876,10 @@ document.addEventListener('DOMContentLoaded', function () {
             spaceBetween: 0,
             loop: true,
             speed: 1200,
-            autoplay: {
-                delay: 6000,
-                disableOnInteraction: false,
-            },
+            // autoplay: {
+            //     delay: 6000,
+            //     disableOnInteraction: false,
+            // },
             effect: 'fade',
             fadeEffect: {
                 crossFade: true

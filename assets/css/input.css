@@ -734,15 +734,14 @@
 
   /* Side indicators */
   .hero-bullet.active span {
-    background-color: var(--color-secondary);
-    border-color: var(--color-secondary);
-    box-shadow: 0 0 20px rgba(147, 130, 255, 0.4);
+    background: var(--gradient-secondary);
     transform: scale(1.1);
+    border: none;
   }
 
   .hero-bullet:hover span {
-    border-color: var(--color-secondary);
-    color: var(--color-secondary);
+    border-color: color-mix(in oklab,var(--color-white)20%,transparent);
+    color: #ffffff;
   }
 
   .counter-card-blur::before {
