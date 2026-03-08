@@ -79,8 +79,7 @@
     <!-- Topbar End -->
 
     <header class="sticky top-0 z-50 transition-all duration-300 bg-[#11112A]">
-        <div
-            class="max-w-[1320px] rounded-bl-[20px] rounded-br-[20px] mx-auto px-4 relative pt-[10px] pb-[10px]">
+        <div class="max-w-[1320px] rounded-bl-[20px] rounded-br-[20px] mx-auto px-4 relative pt-[10px] pb-[10px]">
             <div class="flex items-center justify-between h-[70px]">
                 <!-- Logo Section -->
                 <div class="flex items-center">
@@ -905,106 +904,150 @@
 
     <main>
         <!-- Hero Section Start -->
-        <section id="hero" class="bg-primary relative overflow-hidden">
+        <section id="hero" class="bg-primary relative overflow-hidden flex flex-col">
+            <!-- Background Glows -->
             <div class="absolute inset-0 pointer-events-none">
-                <div
-                    class="absolute top-0 left-0 w-[700px] h-[600px] bg-secondary/8 blur-[160px] rounded-full -translate-x-1/3 -translate-y-1/4">
-                </div>
-                <div
-                    class="absolute top-1/2 right-0 w-[500px] h-[500px] bg-[#FF71BF]/5 blur-[150px] rounded-full translate-x-1/3 -translate-y-1/2">
+                <div class="absolute top-0 left-0 w-[700px] h-[700px] bg-secondary/10 blur-[180px] rounded-full -translate-x-1/3 -translate-y-1/4"></div>
+                <div class="absolute top-1/2 right-0 w-[600px] h-[600px] bg-[#FF71BF]/8 blur-[160px] rounded-full translate-x-1/3 -translate-y-1/2"></div>
+                <div class="absolute bottom-0 left-1/2 w-[400px] h-[400px] bg-[#4ECDC4]/5 blur-[140px] rounded-full -translate-x-1/2"></div>
+            </div>
+
+            <!-- Decorative dots/shapes -->
+            <div class="absolute top-20 left-[5%] w-2 h-2 rounded-full bg-secondary/40 animate-pulse hidden lg:block"></div>
+            <div class="absolute top-40 left-[8%] w-1.5 h-1.5 rounded-full bg-[#FF71BF]/50 animate-pulse hidden lg:block" style="animation-delay:0.5s"></div>
+            <div class="absolute top-60 left-[3%] w-1 h-1 rounded-full bg-white/30 animate-pulse hidden lg:block" style="animation-delay:1s"></div>
+
+            <!-- Hero Image -->
+            <div class="absolute right-0 top-0 hidden lg:block z-0">
+                <div class="relative h-full">
+                    <img id="hero-main-img" src="assets/images/hero/hero-slider.webp" alt="Hero"
+                        class="w-[850px] object-cover object-center transition-all duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/60 to-transparent"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-primary via-transparent to-transparent"></div>
                 </div>
             </div>
-            <div class="absolute right-0 top-0 h-full w-[52%] hidden lg:block">
-                <img id="hero-main-img" src="assets/images/hero/hero-slider.webp" alt="Hero"
-                    class="w-full h-full object-cover rounded-bl-3xl shadow-[0px_40px_100px_rgba(0,0,0,0.4)] transition-all duration-500">
-            </div>
-            <div class="max-w-[1320px] mx-auto px-4 relative z-10 flex flex-col min-h-[838px]">
-                <div class="pt-[150px] flex-1">
-                    <span id="hero-subtitle"
-                        class="text-secondary text-[13px] font-semibold font-inter uppercase tracking-widest">Education
-                        Platform</span>
-                    <h1 id="hero-title"
-                        class="text-[44px] lg:text-[56px] font-bold font-hanken text-white leading-[1.1] mt-3 max-w-[560px] transition-all duration-500">
-                        Starter A Creative Community Without Limits</h1>
-                    <p id="hero-desc"
-                        class="text-gray-300 text-[16px] font-inter leading-relaxed max-w-[460px] mt-5 transition-all duration-500">
-                        Education is the most powerful weapon which you can use to change. Leadership is not about a
-                        title or a designation it's about.</p>
-                    <div class="flex items-center gap-5 flex-wrap mt-7">
+
+            <!-- Main Content -->
+            <div class="max-w-[1320px] mx-auto px-4 relative z-10 flex-1 w-full">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                <div class="pt-14 pb-6">
+                    <!-- Badge -->
+                    <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-[50px] border border-secondary/30 bg-secondary/10 mb-6">
+                        <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                        <span id="hero-subtitle" class="text-secondary text-[13px] font-semibold font-inter tracking-widest uppercase">No.1 Education Marketplace</span>
+                    </div>
+
+                    <!-- Heading -->
+                    <h1 id="hero-title" class="text-[46px] lg:text-[62px] font-bold font-hanken text-white leading-[1.08] transition-all duration-500">
+                        Learn Skills That <br>
+                        <span class="gradient-color-primary bg-clip-text text-transparent">Shape Your Future</span><br>
+                        Without Limits
+                    </h1>
+
+                    <!-- Description -->
+                    <p id="hero-desc" class="text-white/60 text-[16px] font-inter leading-[1.8] max-w-[480px] mt-5 transition-all duration-500">
+                        Unlock your potential with 1000+ expert-led courses. Learn at your own pace, earn certificates, and land your dream career.
+                    </p>
+
+                    <!-- Buttons -->
+                    <div class="flex items-center gap-4 flex-wrap mt-8">
                         <a id="hero-btn" href="#"
-                            class="inline-flex items-center gap-2 px-7 py-[14px] rounded-[50px] gradient-color-primary text-white text-[15px] font-semibold font-inter hover:opacity-90 hover:scale-[1.02] transition-all duration-300">Explore
-                            Course</a>
+                            class="group inline-flex items-center gap-2.5 px-8 py-[15px] rounded-[50px] gradient-color-primary text-white text-[15px] font-semibold font-hanken hover:shadow-[0px_14px_40px_rgba(178,110,247,0.45)] hover:-translate-y-0.5 transition-all duration-300 border-b-2 border-primary/29">
+                            <i class="fa-solid fa-rocket text-[14px]"></i> Explore Courses
+                        </a>
                         <a href="#"
-                            class="inline-flex items-center gap-2 text-white text-[15px] font-inter hover:text-secondary transition-colors duration-300">Start
-                            Learning <i class="fa-solid fa-arrow-right text-[13px]"></i></a>
+                            class="group inline-flex items-center gap-2.5 px-8 py-[15px] rounded-[50px] border border-white/15 bg-white/5 text-white text-[15px] font-semibold font-hanken hover:border-secondary/40 hover:bg-secondary/10 transition-all duration-300">
+                            <i class="fa-solid fa-play text-[12px] text-secondary"></i> Watch Demo
+                        </a>
+                    </div>
+
+                    <!-- Stats Row -->
+                    <div class="flex items-center gap-6 flex-wrap mt-10">
+                        <div class="flex items-center gap-2.5">
+                            <div class="flex -space-x-2">
+                                <img src="assets/images/team/teacher1.webp" class="w-8 h-8 rounded-full border-2 border-primary object-cover" alt="">
+                                <img src="assets/images/team/teacher2.webp" class="w-8 h-8 rounded-full border-2 border-primary object-cover" alt="">
+                                <img src="assets/images/team/teacher5.webp" class="w-8 h-8 rounded-full border-2 border-primary object-cover" alt="">
+                            </div>
+                            <div>
+                                <p class="text-white text-[13px] font-bold font-hanken leading-none">2,648+</p>
+                                <p class="text-white/50 text-[11px] font-inter mt-0.5">Students Enrolled</p>
+                            </div>
+                        </div>
+                        <div class="w-px h-8 bg-white/10"></div>
+                        <div class="flex items-center gap-2">
+                            <div class="flex items-center gap-0.5">
+                                <i class="fa-solid fa-star text-[#F7B731] text-[12px]"></i>
+                                <i class="fa-solid fa-star text-[#F7B731] text-[12px]"></i>
+                                <i class="fa-solid fa-star text-[#F7B731] text-[12px]"></i>
+                                <i class="fa-solid fa-star text-[#F7B731] text-[12px]"></i>
+                                <i class="fa-solid fa-star text-[#F7B731] text-[12px]"></i>
+                            </div>
+                            <span class="text-white text-[13px] font-bold font-hanken">4.9</span>
+                            <span class="text-white/50 text-[12px] font-inter">(12k reviews)</span>
+                        </div>
+                        <div class="w-px h-8 bg-white/10"></div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-certificate text-secondary text-[16px]"></i>
+                            <span class="text-white/70 text-[13px] font-inter">Certificate <span class="text-white font-semibold">Included</span></span>
+                        </div>
                     </div>
                 </div>
+                <!-- Right column placeholder for hero image -->
+                <div class="hidden lg:block"></div>
+                </div>
             </div>
-            <div class="pb-12 mt-8 lg:max-w-[1100px]">
-                <div class="flex items-center gap-3">
-                    <button
-                        class="hero-thumb-prev shrink-0 w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:border-secondary hover:text-secondary transition-all duration-300"><i
-                            class="fa-solid fa-arrow-left text-[13px]"></i></button>
-                    <div class="swiper hero-thumb-swiper overflow-hidden flex-1">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <div
-                                    class="hero-thumb-item rounded-xl overflow-hidden cursor-pointer relative transition-all duration-500 scale-90 opacity-70">
-                                    <img src="assets/images/hero/hero-slider.webp" alt=""
-                                        class="w-[275px] h-[275px] object-cover">
-                                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">
-                                    </div><span
-                                        class="hero-thumb-badge absolute bottom-2 left-0 text-white text-[11px] font-semibold font-hanken px-2 py-0.5 rounded-[4px] gradient-color-primary hidden">Web
-                                        Design</span>
+
+            <!-- Thumb Slider -->
+            <div class="relative z-[999] px-4 pb-10 flex justify-start">
+                <div class="rounded-[20px] p-5 border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm max-w-[1000px] w-full">
+                    <div class="flex items-center gap-3">
+                        <button class="hero-thumb-prev shrink-0 w-9 h-9 rounded-full border border-white/15 flex items-center justify-center text-white/60 hover:border-secondary hover:text-secondary transition-all duration-300">
+                            <i class="fa-solid fa-arrow-left text-[12px]"></i>
+                        </button>
+                        <div class="swiper hero-thumb-swiper overflow-hidden flex-1">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="hero-thumb-item rounded-[12px] overflow-hidden cursor-pointer relative transition-all duration-500 scale-95 opacity-60">
+                                        <img src="assets/images/hero/hero-slider.webp" alt="" class="w-full h-[160px] object-cover">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                                        <span class="hero-thumb-badge absolute bottom-2.5 left-2.5 text-white text-[11px] font-semibold font-hanken px-3 py-1 rounded-[50px] gradient-color-primary hidden">Web Design</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div
-                                    class="hero-thumb-item rounded-xl overflow-hidden cursor-pointer relative transition-all duration-500 scale-90 opacity-70">
-                                    <img src="assets/images/hero/hero-slider-2.webp" alt=""
-                                        class="w-[275px] h-[275px] object-cover">
-                                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">
-                                    </div><span
-                                        class="hero-thumb-badge absolute bottom-2 left-0 text-white text-[11px] font-semibold font-hanken px-2 py-0.5 rounded-[4px] gradient-color-primary hidden">Sales
-                                        Marketing</span>
+                                <div class="swiper-slide">
+                                    <div class="hero-thumb-item rounded-[12px] overflow-hidden cursor-pointer relative transition-all duration-500 scale-95 opacity-60">
+                                        <img src="assets/images/hero/hero-slider-2.webp" alt="" class="w-full h-[160px] object-cover">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                                        <span class="hero-thumb-badge absolute bottom-2.5 left-2.5 text-white text-[11px] font-semibold font-hanken px-3 py-1 rounded-[50px] gradient-color-primary hidden">Sales Marketing</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div
-                                    class="hero-thumb-item rounded-xl overflow-hidden cursor-pointer relative transition-all duration-500 scale-90 opacity-70">
-                                    <img src="assets/images/hero/hero-slider-3.webp" alt=""
-                                        class="w-[275px] h-[275px] object-cover">
-                                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">
-                                    </div><span
-                                        class="hero-thumb-badge absolute bottom-2 left-0 text-white text-[11px] font-semibold font-hanken px-2 py-0.5 rounded-[4px] gradient-color-primary hidden">Technology</span>
+                                <div class="swiper-slide">
+                                    <div class="hero-thumb-item rounded-[12px] overflow-hidden cursor-pointer relative transition-all duration-500 scale-95 opacity-60">
+                                        <img src="assets/images/hero/hero-slider-3.webp" alt="" class="w-full h-[160px] object-cover">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                                        <span class="hero-thumb-badge absolute bottom-2.5 left-2.5 text-white text-[11px] font-semibold font-hanken px-3 py-1 rounded-[50px] gradient-color-primary hidden">Technology</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div
-                                    class="hero-thumb-item rounded-xl overflow-hidden cursor-pointer relative transition-all duration-500 scale-90 opacity-70">
-                                    <img src="assets/images/hero/hero-slider.webp" alt=""
-                                        class="w-[275px] h-[275px] object-cover">
-                                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">
-                                    </div><span
-                                        class="hero-thumb-badge absolute bottom-2 left-0 text-white text-[11px] font-semibold font-hanken px-2 py-0.5 rounded-[4px] gradient-color-primary hidden">Creative
-                                        Arts</span>
+                                <div class="swiper-slide">
+                                    <div class="hero-thumb-item rounded-[12px] overflow-hidden cursor-pointer relative transition-all duration-500 scale-95 opacity-60">
+                                        <img src="assets/images/hero/hero-slider.webp" alt="" class="w-full h-[160px] object-cover">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                                        <span class="hero-thumb-badge absolute bottom-2.5 left-2.5 text-white text-[11px] font-semibold font-hanken px-3 py-1 rounded-[50px] gradient-color-primary hidden">Creative Arts</span>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="swiper-slide">
-                                <div
-                                    class="hero-thumb-item rounded-xl overflow-hidden cursor-pointer relative transition-all duration-500 scale-90 opacity-70">
-                                    <img src="assets/images/hero/hero-slider-2.webp" alt=""
-                                        class="w-[275px] h-[275px] object-cover">
-                                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent">
-                                    </div><span
-                                        class="hero-thumb-badge absolute bottom-2 left-0 text-white text-[11px] font-semibold font-hanken px-2 py-0.5 rounded-[4px] gradient-color-primary hidden">Business</span>
+                                <div class="swiper-slide">
+                                    <div class="hero-thumb-item rounded-[12px] overflow-hidden cursor-pointer relative transition-all duration-500 scale-95 opacity-60">
+                                        <img src="assets/images/hero/hero-slider-2.webp" alt="" class="w-full h-[160px] object-cover">
+                                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                                        <span class="hero-thumb-badge absolute bottom-2.5 left-2.5 text-white text-[11px] font-semibold font-hanken px-3 py-1 rounded-[50px] gradient-color-primary hidden">Business</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                        <button class="hero-thumb-next shrink-0 w-9 h-9 rounded-full border border-white/15 flex items-center justify-center text-white/60 hover:border-secondary hover:text-secondary transition-all duration-300">
+                            <i class="fa-solid fa-arrow-right text-[12px]"></i>
+                        </button>
                     </div>
-                    <button
-                        class="hero-thumb-next shrink-0 w-10 h-10 rounded-full border border-white/20 flex items-center justify-center text-white hover:border-secondary hover:text-secondary transition-all duration-300"><i
-                            class="fa-solid fa-arrow-right text-[13px]"></i></button>
                 </div>
             </div>
         </section>
@@ -1670,6 +1713,78 @@
             </div>
         </section>
         <!-- course tabs Section end -->
+
+        <!-- Counter Section Start -->
+        <section class="bg-primary relative overflow-hidden">
+            <div class="pointer-events-none absolute inset-0">
+                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[#B26EF7] opacity-[0.08] blur-[150px] rounded-full"></div>
+            </div>
+            <div class="max-w-[1320px] mx-auto px-4 relative z-10">
+                <div class="rounded-[24px] overflow-hidden" style="background: linear-gradient(135deg, rgba(147,130,255,0.08) 0%, rgba(255,113,191,0.05) 50%, rgba(147,130,255,0.08) 100%); border: 1px solid rgba(147,130,255,0.15);">
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
+                        <div class="group relative text-center px-6 py-10 transition-all duration-300 hover:bg-white/[0.03]
+                            [&:not(:last-child)]:border-r [&:not(:last-child)]:border-white/[0.07]
+                            max-lg:[&:nth-child(2)]:border-r-0 max-md:[&:nth-child(2)]:border-r-0
+                            max-lg:border-b max-lg:[&:nth-child(n+5)]:border-b-0
+                            max-md:border-b max-md:[&:nth-child(n+5)]:border-b-0 max-md:[&:nth-child(n+5)]:border-b">
+                            <div class="inline-flex items-center justify-center w-[48px] h-[48px] rounded-[12px] bg-secondary/10 border border-secondary/20 mb-4 group-hover:bg-secondary/20 transition-all duration-300">
+                                <i class="fa-solid fa-play-circle text-secondary text-[18px]"></i>
+                            </div>
+                            <h3 class="text-white text-[36px] md:text-[42px] font-bold font-hanken leading-none mb-1.5">
+                                <span class="counter" data-target="1000">0</span><span class="gradient-color-primary bg-clip-text text-transparent">+</span>
+                            </h3>
+                            <p class="text-white/50 text-[13px] font-inter tracking-wide">Courses &amp; Video</p>
+                        </div>
+                        <div class="group relative text-center px-6 py-10 transition-all duration-300 hover:bg-white/[0.03] border-r border-white/[0.07] max-md:border-r-0 border-b lg:border-b-0 max-md:border-b">
+                            <div class="inline-flex items-center justify-center w-[48px] h-[48px] rounded-[12px] bg-[#FF71BF]/10 border border-[#FF71BF]/20 mb-4 group-hover:bg-[#FF71BF]/20 transition-all duration-300">
+                                <i class="fa-solid fa-book-open text-[#FF71BF] text-[18px]"></i>
+                            </div>
+                            <h3 class="text-white text-[36px] md:text-[42px] font-bold font-hanken leading-none mb-1.5">
+                                <span class="counter" data-target="40">0</span><span class="text-[#FF71BF]">+</span>
+                            </h3>
+                            <p class="text-white/50 text-[13px] font-inter tracking-wide">Subjects</p>
+                        </div>
+                        <div class="group relative text-center px-6 py-10 transition-all duration-300 hover:bg-white/[0.03] border-r border-white/[0.07] max-lg:border-r-0 border-b lg:border-b-0 max-md:border-b">
+                            <div class="inline-flex items-center justify-center w-[48px] h-[48px] rounded-[12px] bg-[#4ECDC4]/10 border border-[#4ECDC4]/20 mb-4 group-hover:bg-[#4ECDC4]/20 transition-all duration-300">
+                                <i class="fa-solid fa-user-graduate text-[#4ECDC4] text-[18px]"></i>
+                            </div>
+                            <h3 class="text-white text-[36px] md:text-[42px] font-bold font-hanken leading-none mb-1.5">
+                                <span class="counter" data-target="2648">0</span>
+                            </h3>
+                            <p class="text-white/50 text-[13px] font-inter tracking-wide">Student Enrolled</p>
+                        </div>
+                        <div class="group relative text-center px-6 py-10 transition-all duration-300 hover:bg-white/[0.03] border-r border-white/[0.07] border-b lg:border-b-0 max-md:border-b">
+                            <div class="inline-flex items-center justify-center w-[48px] h-[48px] rounded-[12px] bg-[#F7B731]/10 border border-[#F7B731]/20 mb-4 group-hover:bg-[#F7B731]/20 transition-all duration-300">
+                                <i class="fa-solid fa-briefcase text-[#F7B731] text-[18px]"></i>
+                            </div>
+                            <h3 class="text-white text-[36px] md:text-[42px] font-bold font-hanken leading-none mb-1.5">
+                                <span class="counter" data-target="790">0</span><span class="text-[#F7B731]">+</span>
+                            </h3>
+                            <p class="text-white/50 text-[13px] font-inter tracking-wide">Job Placement</p>
+                        </div>
+                        <div class="group relative text-center px-6 py-10 transition-all duration-300 hover:bg-white/[0.03] border-r border-white/[0.07] max-md:border-r-0">
+                            <div class="inline-flex items-center justify-center w-[48px] h-[48px] rounded-[12px] bg-[#26de81]/10 border border-[#26de81]/20 mb-4 group-hover:bg-[#26de81]/20 transition-all duration-300">
+                                <i class="fa-solid fa-face-smile text-[#26de81] text-[18px]"></i>
+                            </div>
+                            <h3 class="text-white text-[36px] md:text-[42px] font-bold font-hanken leading-none mb-1.5">
+                                <span class="counter" data-target="99">0</span><span class="text-[#26de81]">%</span>
+                            </h3>
+                            <p class="text-white/50 text-[13px] font-inter tracking-wide">Satisfaction Rate</p>
+                        </div>
+                        <div class="group relative text-center px-6 py-10 transition-all duration-300 hover:bg-white/[0.03]">
+                            <div class="inline-flex items-center justify-center w-[48px] h-[48px] rounded-[12px] bg-[#fd9644]/10 border border-[#fd9644]/20 mb-4 group-hover:bg-[#fd9644]/20 transition-all duration-300">
+                                <i class="fa-solid fa-chalkboard-user text-[#fd9644] text-[18px]"></i>
+                            </div>
+                            <h3 class="text-white text-[36px] md:text-[42px] font-bold font-hanken leading-none mb-1.5">
+                                <span class="counter" data-target="100">0</span><span class="text-[#fd9644]">+</span>
+                            </h3>
+                            <p class="text-white/50 text-[13px] font-inter tracking-wide">Professional Teachers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Counter Section End -->
 
         <!-- Student Experiences Section Start -->
         <section id="student-experiences" class="bg-primary py-[100px] relative overflow-hidden">
@@ -2430,6 +2545,136 @@
             </div>
         </section>
         <!-- Team Section End -->
+        <!-- Blog Section Start -->
+        <section id="blog" class="bg-primary py-20 md:py-24 relative overflow-hidden">
+            <div
+                class="pointer-events-none absolute -top-[170px] -left-[170px] w-[360px] h-[360px] bg-[#B26EF7] opacity-15 blur-[140px] rounded-full">
+            </div>
+            <div
+                class="pointer-events-none absolute -bottom-[170px] -right-[170px] w-[360px] h-[360px] bg-[#FF71BF] opacity-10 blur-[140px] rounded-full">
+            </div>
+
+            <div class="max-w-[1320px] mx-auto px-4">
+                <div class="text-center max-w-[820px] mx-auto mb-12 md:mb-14">
+                    <span
+                        class="inline-flex items-center justify-center gap-2 border border-white/10 rounded-[50px] px-[25px] py-2.5 text-[14px] font-semibold mb-4"
+                        style="background: linear-gradient(180deg, #1A1A35 0%, #0F102A 100%)">
+                        <i class="fa-solid fa-lightbulb text-[#D6DAF0]"></i>
+                        <span class="text-[#D6DAF0]">Our Insight</span>
+                    </span>
+                    <h2 class="text-[#D6DAF0] text-[38px] md:text-[44px] font-bold font-hanken leading-tight">
+                        Latest News &amp; Blog From<br>
+                        <span class="gradient-color-primary bg-clip-text text-transparent">Educate Marketplace</span>
+                    </h2>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+                    <!-- Card 1 -->
+                    <article
+                        class="group bg-[#0F102A] border border-white/10 rounded-[16px] overflow-hidden transition-all duration-500 hover:border-white/20 hover:shadow-[0px_18px_60px_rgba(0,0,0,0.35)]">
+                        <a href="#" class="block relative overflow-hidden">
+                            <img src="assets/images/blog/blog-image1.webp" alt="Some tips from successful traders"
+                                class="w-full h-[220px] object-cover transition-transform duration-700 group-hover:scale-110"
+                                loading="lazy">
+                            <span
+                                class="absolute top-4 left-4 px-4 py-1.5 rounded-[50px] bg-[#13132E] border border-white/10 text-white/70 text-[12px] font-medium">Robotics</span>
+                        </a>
+                        <div class="p-6">
+                            <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-white/50 text-[12px] mb-4">
+                                <span class="inline-flex items-center gap-1.5"><i
+                                        class="fa-regular fa-user text-secondary"></i> Admin RBT</span>
+                                <span class="inline-flex items-center gap-1.5"><i
+                                        class="fa-regular fa-comment text-secondary"></i> 3 Comments</span>
+                                <span class="inline-flex items-center gap-1.5"><i
+                                        class="fa-regular fa-calendar text-secondary"></i> 16 March, 2024</span>
+                            </div>
+                            <h3 class="text-[#D6DAF0] text-[18px] font-bold font-hanken leading-snug mb-5">
+                                <a href="#" class="hover:text-secondary transition-colors">Some tips from successful
+                                    traders to success..</a>
+                            </h3>
+                            <a href="#"
+                                class="group/btn inline-flex items-center justify-center h-[38px] px-5 rounded-[50px] bg-white/5 border border-white/10 text-white/70 text-[13px] transition-all duration-500 hover-gradient-primary hover:text-white hover:border-transparent hover:-translate-y-1 hover:shadow-[0px_10px_20px_rgba(178,110,247,0.3)]">
+                                Read More <i
+                                    class="fa-solid fa-arrow-right text-[11px] ml-2 transition-transform duration-500 group-hover/btn:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Card 2 -->
+                    <article
+                        class="group bg-[#0F102A] border border-white/10 rounded-[16px] overflow-hidden transition-all duration-500 hover:border-white/20 hover:shadow-[0px_18px_60px_rgba(0,0,0,0.35)]">
+                        <a href="#" class="block relative overflow-hidden">
+                            <img src="assets/images/blog/blog-image2.webp" alt="Mobile-First Design"
+                                class="w-full h-[220px] object-cover transition-transform duration-700 group-hover:scale-110"
+                                loading="lazy">
+                            <span
+                                class="absolute top-4 left-4 px-4 py-1.5 rounded-[50px] bg-[#13132E] border border-white/10 text-white/70 text-[12px] font-medium">Technology</span>
+                        </a>
+                        <div class="p-6">
+                            <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-white/50 text-[12px] mb-4">
+                                <span class="inline-flex items-center gap-1.5"><i
+                                        class="fa-regular fa-user text-secondary"></i> Admin RBT</span>
+                                <span class="inline-flex items-center gap-1.5"><i
+                                        class="fa-regular fa-comment text-secondary"></i> 3 Comments</span>
+                                <span class="inline-flex items-center gap-1.5"><i
+                                        class="fa-regular fa-calendar text-secondary"></i> 16 March, 2024</span>
+                            </div>
+                            <h3 class="text-[#D6DAF0] text-[18px] font-bold font-hanken leading-snug mb-5">
+                                <a href="#" class="hover:text-secondary transition-colors">Mobile-First Design: Why It's
+                                    No Longer Optional</a>
+                            </h3>
+                            <a href="#"
+                                class="group/btn inline-flex items-center justify-center h-[38px] px-5 rounded-[50px] bg-white/5 border border-white/10 text-white/70 text-[13px] transition-all duration-500 hover-gradient-primary hover:text-white hover:border-transparent hover:-translate-y-1 hover:shadow-[0px_10px_20px_rgba(178,110,247,0.3)]">
+                                Read More <i
+                                    class="fa-solid fa-arrow-right text-[11px] ml-2 transition-transform duration-500 group-hover/btn:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Card 3 -->
+                    <article
+                        class="group bg-[#0F102A] border border-white/10 rounded-[16px] overflow-hidden transition-all duration-500 hover:border-white/20 hover:shadow-[0px_18px_60px_rgba(0,0,0,0.35)]">
+                        <a href="#" class="block relative overflow-hidden">
+                            <img src="assets/images/blog/blog-image3.webp" alt="Social Media Strategy"
+                                class="w-full h-[220px] object-cover transition-transform duration-700 group-hover:scale-110"
+                                loading="lazy">
+                            <span
+                                class="absolute top-4 left-4 px-4 py-1.5 rounded-[50px] text-secondary text-[12px] font-medium border border-secondary/30 bg-secondary/10">Marketing,
+                                AI</span>
+                        </a>
+                        <div class="p-6">
+                            <div class="flex flex-wrap items-center gap-x-4 gap-y-2 text-white/50 text-[12px] mb-4">
+                                <span class="inline-flex items-center gap-1.5"><i
+                                        class="fa-regular fa-user text-secondary"></i> Admin RBT</span>
+                                <span class="inline-flex items-center gap-1.5"><i
+                                        class="fa-regular fa-comment text-secondary"></i> 3 Comments</span>
+                                <span class="inline-flex items-center gap-1.5"><i
+                                        class="fa-regular fa-calendar text-secondary"></i> 16 March, 2024</span>
+                            </div>
+                            <h3 class="text-[#D6DAF0] text-[18px] font-bold font-hanken leading-snug mb-5">
+                                <a href="#" class="hover:text-secondary transition-colors">How to Build a High-Impact
+                                    Social Media Strategy</a>
+                            </h3>
+                            <a href="#"
+                                class="group/btn inline-flex items-center justify-center h-[38px] px-5 rounded-[50px] gradient-color-primary text-white text-[13px] font-semibold transition-all duration-500 hover:shadow-[0px_10px_20px_rgba(178,110,247,0.4)] hover:-translate-y-1">
+                                Read More <i
+                                    class="fa-solid fa-arrow-right text-[11px] ml-2 transition-transform duration-500 group-hover/btn:translate-x-1"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- View All Button -->
+                <div class="mt-12 text-center">
+                    <a href="#"
+                        class="group inline-flex items-center justify-center gap-2 h-[54px] px-8 rounded-[50px] border border-white/10 bg-white/5 text-white/80 text-[15px] font-semibold font-hanken transition-all duration-500 hover-gradient-primary hover:text-white hover:border-transparent hover:-translate-y-1 hover:shadow-[0px_14px_40px_rgba(178,110,247,0.35)]">
+                        View All Posts <i
+                            class="fa-solid fa-arrow-right text-[13px] transition-transform duration-500 group-hover:translate-x-1"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Blog Section End -->
         <!-- Newsletter Section Start -->
         <section class="bg-[#050520]">
             <div class="max-w-[1060px] mx-auto px-4">
@@ -2483,6 +2728,8 @@
             </div>
         </section>
         <!-- Newsletter Section End -->
+
+
 
     </main>
 
