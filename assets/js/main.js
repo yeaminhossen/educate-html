@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
             window.addEventListener('load', hidePreloader);
         }
     }
-//// Set background images from data attributes
+    //// Set background images from data attributes
 
 
     document.querySelectorAll('[data-background]').forEach((el) => {
@@ -193,6 +193,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
         });
     }
+    
 
     //team swiper initialization
     const teamSwiperEl = document.querySelector('.team-swiper');
@@ -492,7 +493,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const openCart = () => {
             // Calculate scrollbar width to prevent "dhakha" (jerk)
             const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
-            
+
             if (scrollbarWidth > 0) {
                 // Apply compensation to body instantly
                 body.style.paddingRight = `${scrollbarWidth}px`;
@@ -505,18 +506,18 @@ document.addEventListener('DOMContentLoaded', function () {
             cartSidebar.classList.add('translate-x-0');
             cartBackdrop.classList.remove('opacity-0', 'invisible');
             cartBackdrop.classList.add('opacity-100');
-            
+
             // Staggered animations for content
             if (cartHeader) {
                 cartHeader.classList.remove('opacity-0', 'translate-y-4');
                 cartHeader.classList.add('opacity-100', 'translate-y-0');
             }
-            
+
             cartItems.forEach((item) => {
                 item.classList.remove('opacity-0', 'translate-y-4');
                 item.classList.add('opacity-100', 'translate-y-0');
             });
-            
+
             if (cartFooter) {
                 cartFooter.classList.remove('opacity-0', 'translate-y-4');
                 cartFooter.classList.add('opacity-100', 'translate-y-0');
@@ -528,18 +529,18 @@ document.addEventListener('DOMContentLoaded', function () {
             cartSidebar.classList.add('translate-x-full');
             cartBackdrop.classList.remove('opacity-100');
             cartBackdrop.classList.add('opacity-0', 'invisible');
-            
+
             // Reset animations for content
             if (cartHeader) {
                 cartHeader.classList.add('opacity-0', 'translate-y-4');
                 cartHeader.classList.remove('opacity-100', 'translate-y-0');
             }
-            
+
             cartItems.forEach((item) => {
                 item.classList.add('opacity-0 ', 'translate-y-4');
                 item.classList.remove('opacity-100', 'translate-y-0');
             });
-            
+
             if (cartFooter) {
                 cartFooter.classList.add('opacity-0', 'translate-y-4');
                 cartFooter.classList.remove('opacity-100', 'translate-y-0');
@@ -549,7 +550,7 @@ document.addEventListener('DOMContentLoaded', function () {
             setTimeout(() => {
                 if (cartSidebar.classList.contains('translate-x-full')) {
                     cartSidebar.classList.add('invisible');
-                    
+
                     // Reset all styles
                     body.style.overflow = '';
                     body.style.paddingRight = '';
@@ -616,7 +617,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (courseTabs.length > 0 && popularCourseSection) {
         const popularCourseSwiper = popularCourseSection.querySelector('.course-swiper');
         const swiperWrapper = popularCourseSwiper.querySelector('.swiper-wrapper');
-        
+
         // Capture original slides (excluding duplicates created by Swiper)
         const originalSlides = Array.from(swiperWrapper.querySelectorAll('.swiper-slide:not(.swiper-slide-duplicate)'));
 
@@ -897,7 +898,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Hero Bullet Click
         document.querySelectorAll('.hero-bullet').forEach(bullet => {
-            bullet.addEventListener('click', function() {
+            bullet.addEventListener('click', function () {
                 const index = parseInt(this.getAttribute('data-index'));
                 heroSwiper.slideToLoop(index);
             });
@@ -908,7 +909,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const testimonialMainSwiperEl = document.querySelector('.testimonial-main-swiper');
     if (testimonialMainSwiperEl && window.Swiper) {
         const mainImage = document.getElementById('testimonial-main-image');
-        
+
         const testimonialMainSwiper = new Swiper(testimonialMainSwiperEl, {
             slidesPerView: 1,
             spaceBetween: 30,
@@ -938,12 +939,12 @@ document.addEventListener('DOMContentLoaded', function () {
                     if (mainImage) {
                         const activeSlide = this.slides[this.activeIndex];
                         const newImageUrl = activeSlide.getAttribute('data-main-image');
-                        
+
                         if (newImageUrl) {
                             // Smooth image transition
                             mainImage.style.opacity = '0';
                             mainImage.style.transform = 'scale(0.95)';
-                            
+
                             setTimeout(() => {
                                 mainImage.src = newImageUrl;
                                 mainImage.onload = () => {
@@ -961,83 +962,70 @@ document.addEventListener('DOMContentLoaded', function () {
     // New Experience Swiper
     const expContentSwiperEl = document.querySelector('.exp-content-swiper');
     const expThumbSwiperEl = document.querySelector('.exp-thumb-swiper');
-    
+
     if (expContentSwiperEl && expThumbSwiperEl && window.Swiper) {
         const mainImg = document.getElementById('exp-main-img');
         const thumbItems = document.querySelectorAll('.exp-thumb-swiper [data-exp-index]');
+        const expCurrentEl = document.getElementById('exp-current');
+        const expProgressEl = document.getElementById('exp-progress');
+        const totalExpSlides = expContentSwiperEl.querySelectorAll('.swiper-slide').length;
 
-        // Initialize Thumbnail Swiper first
+        const updateExpUI = (realIndex) => {
+            if (expCurrentEl) expCurrentEl.textContent = String(realIndex + 1).padStart(2, '0');
+            if (expProgressEl) expProgressEl.style.width = `${((realIndex + 1) / totalExpSlides) * 100}%`;
+            expThumbSwiperEl.querySelectorAll('[data-exp-index]').forEach(thumb => {
+                thumb.classList.toggle('active', parseInt(thumb.getAttribute('data-exp-index')) === realIndex);
+            });
+        };
+
         const expThumbSwiper = new Swiper(expThumbSwiperEl, {
             direction: 'vertical',
             slidesPerView: 3,
             spaceBetween: 20,
             centeredSlides: true,
             watchSlidesProgress: true,
-            loop: true,
+            loop: false,
             speed: 800,
-            navigation: {
-                nextEl: '.exp-thumb-next',
-                prevEl: '.exp-thumb-prev',
+            breakpoints: {
+                0: { direction: 'horizontal', slidesPerView: 3 },
+                1024: { direction: 'vertical', slidesPerView: 3 },
             },
         });
 
-        // Initialize Content Swiper
         const expContentSwiper = new Swiper(expContentSwiperEl, {
             slidesPerView: 1,
             spaceBetween: 30,
-            // loop: true,
             speed: 1000,
-            watchSlidesProgress: true,
-            // autoplay: {
-            //     delay: 5000,
-            //     disableOnInteraction: false,
-            // },
+            autoplay: { delay: 5000, disableOnInteraction: false },
             effect: 'fade',
-            fadeEffect: {
-                crossFade: true
-            },
+            fadeEffect: { crossFade: true },
+            navigation: { nextEl: '.exp-nav-next', prevEl: '.exp-nav-prev' },
             on: {
+                init: function () { updateExpUI(this.realIndex); },
                 slideChange: function () {
                     const activeIndex = this.realIndex;
-                    
-                    // Update main image
+                    updateExpUI(activeIndex);
                     if (mainImg) {
                         const activeSlide = this.slides[this.activeIndex];
-                        if (activeSlide) {
-                            const newImgUrl = activeSlide.getAttribute('data-main-img');
-                            if (newImgUrl && mainImg.src !== newImgUrl) {
-                                mainImg.style.opacity = '0';
-                                mainImg.style.transform = 'scale(0.95)';
-                                setTimeout(() => {
-                                    mainImg.src = newImgUrl;
-                                    mainImg.style.opacity = '1';
-                                    mainImg.style.transform = 'scale(1)';
-                                }, 400);
-                            }
+                        const newImgUrl = activeSlide && activeSlide.getAttribute('data-main-img');
+                        if (newImgUrl && !mainImg.src.endsWith(newImgUrl)) {
+                            mainImg.style.opacity = '0';
+                            mainImg.style.transform = 'scale(0.95)';
+                            setTimeout(() => {
+                                mainImg.src = newImgUrl;
+                                mainImg.style.opacity = '1';
+                                mainImg.style.transform = 'scale(1)';
+                            }, 400);
                         }
                     }
-
-                    // Update Thumbnail slider position
-                    expThumbSwiper.slideToLoop(activeIndex);
-
-                    // Update active class on thumb items
-                    thumbItems.forEach(thumb => {
-                        const index = parseInt(thumb.getAttribute('data-exp-index'));
-                        if (index === activeIndex) {
-                            thumb.classList.add('active');
-                        } else {
-                            thumb.classList.remove('active');
-                        }
-                    });
+                    expThumbSwiper.slideTo(activeIndex);
                 }
             }
         });
 
-        // Click on thumbs to navigate
         thumbItems.forEach(thumb => {
-            thumb.addEventListener('click', function() {
-                const index = parseInt(this.getAttribute('data-exp-index'));
-                expContentSwiper.slideToLoop(index);
+            thumb.addEventListener('click', function () {
+                expContentSwiper.slideToLoop(parseInt(this.getAttribute('data-exp-index')));
             });
         });
     }
