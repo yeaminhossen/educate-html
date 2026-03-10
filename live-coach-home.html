@@ -58,10 +58,9 @@
     </div>
     <!-- Preloader End -->
 
-
-    <header class="bg-[#11112A] sticky top-0 z-50 border-b border-white/5 shadow-lg">
-        <div class="max-w-[1320px] mx-auto px-4 relative">
-            <div class="flex items-center justify-between h-[90px]">
+    <header class="bg-transparent sticky top-0 z-50 mb-[-110px] transition-all duration-300">
+        <div class="max-w-[1320px] bg-[#11112A] rounded-bl-[20px] rounded-br-[20px] mx-auto px-4 relative pt-[10px] pb-[10px]">
+            <div class="flex items-center justify-between h-[70px]">
                 <!-- Logo Section -->
                 <div class="flex items-center">
                     <a href="index.html">
@@ -79,256 +78,215 @@
                                 class="fa-solid fa-angle-down text-[11px] group-hover:rotate-180 transition-transform"></i>
                         </button>
 
-                        <!-- Menu Blur Overlay -->
-                        <div
-                            class="fixed inset-0 bg-[#050520]/60 backdrop-blur-[6px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 z-[90] pointer-events-none">
-                        </div>
+    <!-- Demos Mega Menu Content -->
+                       <div class="absolute left-1/2 -translate-x-1/2 top-full pt-[20px] opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-4 group-hover:translate-y-0 transition-all duration-300 z-100 w-[1200px]">
+                           <div class="bg-[#0D0D27] rounded-[20px] shadow-[0px_40px_80px_rgba(0,0,0,0.6)] overflow-hidden p-8 border border-white/[0.06]">
+                               <div class="grid grid-cols-5 gap-5 mb-8">
 
-                        <!-- Demos Mega Menu Content -->
-                        <div
-                            class="absolute left-1/2 -translate-x-1/2 top-full opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-100 w-[1200px]">
-                            <div
-                                class="bg-white rounded-b-[20px] shadow-[0px_30px_70px_rgba(0,0,0,0.15)] overflow-hidden p-8">
-                                <div class="grid grid-cols-5 gap-6 mb-10">
-                                    <!-- Demo Card 1 -->
-                                    <div class="group/demo transition-all duration-300">
-                                        <div
-                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
-                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
-                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
-                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
-                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
-                                            </div>
-                                            <div class="relative overflow-hidden aspect-[4/4]">
-                                                <img src="assets/images/demo/demo-1.webp" alt="Electronics One"
-                                                    class="w-full object-contain">
-                                                <div
-                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <h5
-                                            class="text-center mt-4 text-[15px] font-bold font-hanken text-[#050520] group-hover/demo:text-secondary transition-colors">
-                                            Electronics One</h5>
-                                    </div>
+                                   <!-- Demo Card 1 -->
+                                   <a href="#" class="group/demo block">
+                                       <div class="bg-[#13132E] rounded-[12px] overflow-hidden border border-white/[0.06] transition-all duration-400 group-hover/demo:border-secondary/40 group-hover/demo:shadow-[0px_8px_30px_rgba(147,130,255,0.2)] p-2">
+                                           <div class="px-3 py-2 border-b border-white/[0.06] flex items-center gap-1.5">
+                                               <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                               <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                               <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                           </div>
+                                           <div class="relative overflow-hidden aspect-[4/4]">
+                                               <img src="assets/images/demo/demo-1.webp" alt="Electronics One" class="w-full object-contain transition-transform duration-500 group-hover/demo:scale-[1.08]">
+                                               <div class="absolute inset-0 bg-primary/0 group-hover/demo:bg-primary/40 transition-colors duration-400"></div>
+                                               <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover/demo:opacity-100 transition-all duration-300 delay-75">
+                                                   <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-[50px] gradient-color-primary text-white text-[11px] font-semibold font-hanken translate-y-3 group-hover/demo:translate-y-0 transition-transform duration-300"><i class="fa-solid fa-eye text-[10px]"></i> Preview</span>
+                                               </div>
+                                           </div>
+                                       </div>
+                                       <h5 class="text-center mt-3 text-[13px] font-bold font-hanken text-white/70 group-hover/demo:text-secondary transition-colors duration-300">Electronics One</h5>
+                                   </a>
 
-                                    <!-- Demo Card 2 -->
-                                    <div class="group/demo transition-all duration-300">
-                                        <div
-                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
-                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
-                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
-                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
-                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
-                                            </div>
-                                            <div class="relative overflow-hidden aspect-[4/4]">
-                                                <img src="assets/images/demo/demo-2.webp" alt="Fashion One"
-                                                    class="w-full object-contain">
-                                                <div
-                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <h5
-                                            class="text-center mt-4 text-[15px] font-bold font-hanken text-[#050520] group-hover/demo:text-secondary transition-colors">
-                                            Fashion One</h5>
-                                    </div>
+                                   <!-- Demo Card 2 -->
+                                   <a href="#" class="group/demo block">
+                                       <div class="bg-[#13132E] rounded-[12px] overflow-hidden border border-white/[0.06] transition-all duration-400 group-hover/demo:border-secondary/40 group-hover/demo:shadow-[0px_8px_30px_rgba(147,130,255,0.2)] p-2">
+                                           <div class="px-3 py-2 border-b border-white/[0.06] flex items-center gap-1.5">
+                                               <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                               <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                               <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                           </div>
+                                           <div class="relative overflow-hidden aspect-[4/4]">
+                                               <img src="assets/images/demo/demo-2.webp" alt="Fashion One" class="w-full object-contain transition-transform duration-500 group-hover/demo:scale-[1.08]">
+                                               <div class="absolute inset-0 bg-primary/0 group-hover/demo:bg-primary/40 transition-colors duration-400"></div>
+                                               <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover/demo:opacity-100 transition-all duration-300 delay-75">
+                                                   <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-[50px] gradient-color-primary text-white text-[11px] font-semibold font-hanken translate-y-3 group-hover/demo:translate-y-0 transition-transform duration-300"><i class="fa-solid fa-eye text-[10px]"></i> Preview</span>
+                                               </div>
+                                           </div>
+                                       </div>
+                                       <h5 class="text-center mt-3 text-[13px] font-bold font-hanken text-white/70 group-hover/demo:text-secondary transition-colors duration-300">Fashion One</h5>
+                                   </a>
 
-                                    <!-- Demo Card 3 -->
-                                    <div class="group/demo transition-all duration-300">
-                                        <div
-                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
-                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
-                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
-                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
-                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
-                                            </div>
-                                            <div class="relative overflow-hidden aspect-[4/4]">
-                                                <img src="assets/images/demo/demo-3.webp" alt="Furniture One"
-                                                    class="w-full object-contain">
-                                                <div
-                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <h5
-                                            class="text-center mt-4 text-[15px] font-bold font-hanken text-[#050520] group-hover/demo:text-secondary transition-colors">
-                                            Furniture One</h5>
-                                    </div>
+                                   <!-- Demo Card 3 -->
+                                   <a href="#" class="group/demo block">
+                                       <div class="bg-[#13132E] rounded-[12px] overflow-hidden border border-white/[0.06] transition-all duration-400 group-hover/demo:border-secondary/40 group-hover/demo:shadow-[0px_8px_30px_rgba(147,130,255,0.2)] p-2">
+                                           <div class="px-3 py-2 border-b border-white/[0.06] flex items-center gap-1.5">
+                                               <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                               <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                               <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                           </div>
+                                           <div class="relative overflow-hidden aspect-[4/4]">
+                                               <img src="assets/images/demo/demo-3.webp" alt="Furniture One" class="w-full object-contain transition-transform duration-500 group-hover/demo:scale-[1.08]">
+                                               <div class="absolute inset-0 bg-primary/0 group-hover/demo:bg-primary/40 transition-colors duration-400"></div>
+                                               <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover/demo:opacity-100 transition-all duration-300 delay-75">
+                                                   <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-[50px] gradient-color-primary text-white text-[11px] font-semibold font-hanken translate-y-3 group-hover/demo:translate-y-0 transition-transform duration-300"><i class="fa-solid fa-eye text-[10px]"></i> Preview</span>
+                                               </div>
+                                           </div>
+                                       </div>
+                                       <h5 class="text-center mt-3 text-[13px] font-bold font-hanken text-white/70 group-hover/demo:text-secondary transition-colors duration-300">Furniture One</h5>
+                                   </a>
 
-                                    <!-- Demo Card 4 -->
-                                    <div class="group/demo transition-all duration-300">
-                                        <div
-                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
-                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
-                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
-                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
-                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
-                                            </div>
-                                            <div class="relative overflow-hidden aspect-[4/4]">
-                                                <img src="assets/images/demo/demo-5.webp" alt="Print Service One"
-                                                    class="w-full object-contain">
-                                                <div
-                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <h5
-                                            class="text-center mt-4 text-[15px] font-bold font-hanken text-[#050520] group-hover/demo:text-secondary transition-colors">
-                                            Print Service One</h5>
-                                    </div>
+                                   <!-- Demo Card 4 -->
+                                   <a href="#" class="group/demo block">
+                                       <div class="bg-[#13132E] rounded-[12px] overflow-hidden border border-white/[0.06] transition-all duration-400 group-hover/demo:border-secondary/40 group-hover/demo:shadow-[0px_8px_30px_rgba(147,130,255,0.2)] p-2">
+                                           <div class="px-3 py-2 border-b border-white/[0.06] flex items-center gap-1.5">
+                                               <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                               <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                               <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                           </div>
+                                           <div class="relative overflow-hidden aspect-[4/4]">
+                                               <img src="assets/images/demo/demo-5.webp" alt="Print Service One" class="w-full object-contain transition-transform duration-500 group-hover/demo:scale-[1.08]">
+                                               <div class="absolute inset-0 bg-primary/0 group-hover/demo:bg-primary/40 transition-colors duration-400"></div>
+                                               <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover/demo:opacity-100 transition-all duration-300 delay-75">
+                                                   <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-[50px] gradient-color-primary text-white text-[11px] font-semibold font-hanken translate-y-3 group-hover/demo:translate-y-0 transition-transform duration-300"><i class="fa-solid fa-eye text-[10px]"></i> Preview</span>
+                                               </div>
+                                           </div>
+                                       </div>
+                                       <h5 class="text-center mt-3 text-[13px] font-bold font-hanken text-white/70 group-hover/demo:text-secondary transition-colors duration-300">Print Service One</h5>
+                                   </a>
 
-                                    <!-- Demo Card 5 -->
-                                    <div class="group/demo transition-all duration-300">
-                                        <div
-                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
-                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
-                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
-                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
-                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
-                                            </div>
-                                            <div class="relative overflow-hidden aspect-[4/4]">
-                                                <img src="assets/images/demo/demo-6.webp" alt="Cosmetic Beauty One"
-                                                    class="w-full object-contain">
-                                                <div
-                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <h5
-                                            class="text-center mt-4 text-[15px] font-bold font-hanken text-[#050520] group-hover/demo:text-secondary transition-colors">
-                                            Cosmetic Beauty One</h5>
-                                    </div>
+                                   <!-- Demo Card 5 -->
+                                   <a href="#" class="group/demo block">
+                                       <div class="bg-[#13132E] rounded-[12px] overflow-hidden border border-white/[0.06] transition-all duration-400 group-hover/demo:border-secondary/40 group-hover/demo:shadow-[0px_8px_30px_rgba(147,130,255,0.2)] p-2">
+                                           <div class="px-3 py-2 border-b border-white/[0.06] flex items-center gap-1.5">
+                                               <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                               <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                               <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                           </div>
+                                           <div class="relative overflow-hidden aspect-[4/4]">
+                                               <img src="assets/images/demo/demo-6.webp" alt="Cosmetic Beauty One" class="w-full object-contain transition-transform duration-500 group-hover/demo:scale-[1.08]">
+                                               <div class="absolute inset-0 bg-primary/0 group-hover/demo:bg-primary/40 transition-colors duration-400"></div>
+                                               <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover/demo:opacity-100 transition-all duration-300 delay-75">
+                                                   <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-[50px] gradient-color-primary text-white text-[11px] font-semibold font-hanken translate-y-3 group-hover/demo:translate-y-0 transition-transform duration-300"><i class="fa-solid fa-eye text-[10px]"></i> Preview</span>
+                                               </div>
+                                           </div>
+                                       </div>
+                                       <h5 class="text-center mt-3 text-[13px] font-bold font-hanken text-white/70 group-hover/demo:text-secondary transition-colors duration-300">Cosmetic Beauty One</h5>
+                                   </a>
 
-                                    <!-- Demo Card 6 -->
-                                    <div class="group/demo transition-all duration-300">
-                                        <div
-                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
-                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
-                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
-                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
-                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
-                                            </div>
-                                            <div class="relative overflow-hidden aspect-[4/4]">
-                                                <img src="assets/images/demo/demo-8.webp" alt="Sports One"
-                                                    class="w-full object-contain">
-                                                <div
-                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <h5
-                                            class="text-center mt-4 text-[15px] font-bold font-hanken text-[#050520] group-hover/demo:text-secondary transition-colors">
-                                            Sports One</h5>
-                                    </div>
+                                   <!-- Demo Card 6 -->
+                                   <a href="#" class="group/demo block">
+                                       <div class="bg-[#13132E] rounded-[12px] overflow-hidden border border-white/[0.06] transition-all duration-400 group-hover/demo:border-secondary/40 group-hover/demo:shadow-[0px_8px_30px_rgba(147,130,255,0.2)] p-2">
+                                           <div class="px-3 py-2 border-b border-white/[0.06] flex items-center gap-1.5">
+                                               <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                               <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                               <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                           </div>
+                                           <div class="relative overflow-hidden aspect-[4/4]">
+                                               <img src="assets/images/demo/demo-8.webp" alt="Sports One" class="w-full object-contain transition-transform duration-500 group-hover/demo:scale-[1.08]">
+                                               <div class="absolute inset-0 bg-primary/0 group-hover/demo:bg-primary/40 transition-colors duration-400"></div>
+                                               <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover/demo:opacity-100 transition-all duration-300 delay-75">
+                                                   <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-[50px] gradient-color-primary text-white text-[11px] font-semibold font-hanken translate-y-3 group-hover/demo:translate-y-0 transition-transform duration-300"><i class="fa-solid fa-eye text-[10px]"></i> Preview</span>
+                                               </div>
+                                           </div>
+                                       </div>
+                                       <h5 class="text-center mt-3 text-[13px] font-bold font-hanken text-white/70 group-hover/demo:text-secondary transition-colors duration-300">Sports One</h5>
+                                   </a>
 
-                                    <!-- Demo Card 7 -->
-                                    <div class="group/demo transition-all duration-300">
-                                        <div
-                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
-                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
-                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
-                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
-                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
-                                            </div>
-                                            <div class="relative overflow-hidden aspect-[4/4]">
-                                                <img src="assets/images/demo/demo-9.webp" alt="Glass One"
-                                                    class="w-full object-contain">
-                                                <div
-                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <h5
-                                            class="text-center mt-4 text-[15px] font-bold font-hanken text-[#050520] group-hover/demo:text-secondary transition-colors">
-                                            Glass One</h5>
-                                    </div>
+                                   <!-- Demo Card 7 -->
+                                   <a href="#" class="group/demo block">
+                                       <div class="bg-[#13132E] rounded-[12px] overflow-hidden border border-white/[0.06] transition-all duration-400 group-hover/demo:border-secondary/40 group-hover/demo:shadow-[0px_8px_30px_rgba(147,130,255,0.2)] p-2">
+                                           <div class="px-3 py-2 border-b border-white/[0.06] flex items-center gap-1.5">
+                                               <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                               <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                               <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                           </div>
+                                           <div class="relative overflow-hidden aspect-[4/4]">
+                                               <img src="assets/images/demo/demo-9.webp" alt="Glass One" class="w-full object-contain transition-transform duration-500 group-hover/demo:scale-[1.08]">
+                                               <div class="absolute inset-0 bg-primary/0 group-hover/demo:bg-primary/40 transition-colors duration-400"></div>
+                                               <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover/demo:opacity-100 transition-all duration-300 delay-75">
+                                                   <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-[50px] gradient-color-primary text-white text-[11px] font-semibold font-hanken translate-y-3 group-hover/demo:translate-y-0 transition-transform duration-300"><i class="fa-solid fa-eye text-[10px]"></i> Preview</span>
+                                               </div>
+                                           </div>
+                                       </div>
+                                       <h5 class="text-center mt-3 text-[13px] font-bold font-hanken text-white/70 group-hover/demo:text-secondary transition-colors duration-300">Glass One</h5>
+                                   </a>
 
-                                    <!-- Demo Card 8 -->
-                                    <div class="group/demo transition-all duration-300">
-                                        <div
-                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
-                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
-                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
-                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
-                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
-                                            </div>
-                                            <div class="relative overflow-hidden aspect-[4/4]">
-                                                <img src="assets/images/demo/demo-10.webp" alt="Phone One"
-                                                    class="w-full object-contain">
-                                                <div
-                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <h5
-                                            class="text-center mt-4 text-[15px] font-bold font-hanken text-[#050520] group-hover/demo:text-secondary transition-colors">
-                                            Phone One</h5>
-                                    </div>
+                                   <!-- Demo Card 8 -->
+                                   <a href="#" class="group/demo block">
+                                       <div class="bg-[#13132E] rounded-[12px] overflow-hidden border border-white/[0.06] transition-all duration-400 group-hover/demo:border-secondary/40 group-hover/demo:shadow-[0px_8px_30px_rgba(147,130,255,0.2)] p-2">
+                                           <div class="px-3 py-2 border-b border-white/[0.06] flex items-center gap-1.5">
+                                               <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                               <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                               <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                           </div>
+                                           <div class="relative overflow-hidden aspect-[4/4]">
+                                               <img src="assets/images/demo/demo-10.webp" alt="Phone One" class="w-full object-contain transition-transform duration-500 group-hover/demo:scale-[1.08]">
+                                               <div class="absolute inset-0 bg-primary/0 group-hover/demo:bg-primary/40 transition-colors duration-400"></div>
+                                               <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover/demo:opacity-100 transition-all duration-300 delay-75">
+                                                   <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-[50px] gradient-color-primary text-white text-[11px] font-semibold font-hanken translate-y-3 group-hover/demo:translate-y-0 transition-transform duration-300"><i class="fa-solid fa-eye text-[10px]"></i> Preview</span>
+                                               </div>
+                                           </div>
+                                       </div>
+                                       <h5 class="text-center mt-3 text-[13px] font-bold font-hanken text-white/70 group-hover/demo:text-secondary transition-colors duration-300">Phone One</h5>
+                                   </a>
 
-                                    <!-- Demo Card 9 -->
-                                    <div class="group/demo transition-all duration-300">
-                                        <div
-                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
-                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
-                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
-                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
-                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
-                                            </div>
-                                            <div class="relative overflow-hidden aspect-[4/4]">
-                                                <img src="assets/images/demo/demo-11.webp" alt="Accessories One"
-                                                    class="w-full object-contain">
-                                                <div
-                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <h5
-                                            class="text-center mt-4 text-[15px] font-bold font-hanken text-[#050520] group-hover/demo:text-secondary transition-colors">
-                                            Accessories One</h5>
-                                    </div>
+                                   <!-- Demo Card 9 -->
+                                   <a href="#" class="group/demo block">
+                                       <div class="bg-[#13132E] rounded-[12px] overflow-hidden border border-white/[0.06] transition-all duration-400 group-hover/demo:border-secondary/40 group-hover/demo:shadow-[0px_8px_30px_rgba(147,130,255,0.2)] p-2">
+                                           <div class="px-3 py-2 border-b border-white/[0.06] flex items-center gap-1.5">
+                                               <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                               <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                               <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                           </div>
+                                           <div class="relative overflow-hidden aspect-[4/4]">
+                                               <img src="assets/images/demo/demo-11.webp" alt="Accessories One" class="w-full object-contain transition-transform duration-500 group-hover/demo:scale-[1.08]">
+                                               <div class="absolute inset-0 bg-primary/0 group-hover/demo:bg-primary/40 transition-colors duration-400"></div>
+                                               <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover/demo:opacity-100 transition-all duration-300 delay-75">
+                                                   <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-[50px] gradient-color-primary text-white text-[11px] font-semibold font-hanken translate-y-3 group-hover/demo:translate-y-0 transition-transform duration-300"><i class="fa-solid fa-eye text-[10px]"></i> Preview</span>
+                                               </div>
+                                           </div>
+                                       </div>
+                                       <h5 class="text-center mt-3 text-[13px] font-bold font-hanken text-white/70 group-hover/demo:text-secondary transition-colors duration-300">Accessories One</h5>
+                                   </a>
 
-                                    <!-- Demo Card 10 -->
-                                    <div class="group/demo transition-all duration-300">
-                                        <div
-                                            class="bg-white rounded-[12px] overflow-hidden shadow-sm border border-gray-100 transition-all duration-300 hover:scale-105 p-2">
-                                            <div class="px-3 py-2 border-b border-gray-50 flex items-center gap-1.5">
-                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
-                                                <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
-                                                <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
-                                            </div>
-                                            <div class="relative overflow-hidden aspect-[4/4]">
-                                                <img src="assets/images/demo/demo-1.webp" alt="jewellery One"
-                                                    class="w-full object-contain">
-                                                <div
-                                                    class="absolute inset-0 bg-secondary/0 transition-colors duration-300">
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <h5
-                                            class="text-center mt-4 text-[15px] font-bold font-hanken text-[#050520] group-hover/demo:text-secondary transition-colors">
-                                            jewellery One</h5>
-                                    </div>
-                                </div>
+                                   <!-- Demo Card 10 -->
+                                   <a href="#" class="group/demo block">
+                                       <div class="bg-[#13132E] rounded-[12px] overflow-hidden border border-white/[0.06] transition-all duration-400 group-hover/demo:border-secondary/40 group-hover/demo:shadow-[0px_8px_30px_rgba(147,130,255,0.2)] p-2">
+                                           <div class="px-3 py-2 border-b border-white/[0.06] flex items-center gap-1.5">
+                                               <span class="w-1.5 h-1.5 rounded-full bg-[#FF5F56]"></span>
+                                               <span class="w-1.5 h-1.5 rounded-full bg-[#FFBD2E]"></span>
+                                               <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
+                                           </div>
+                                           <div class="relative overflow-hidden aspect-[4/4]">
+                                               <img src="assets/images/demo/demo-1.webp" alt="Jewellery One" class="w-full object-contain transition-transform duration-500 group-hover/demo:scale-[1.08]">
+                                               <div class="absolute inset-0 bg-primary/0 group-hover/demo:bg-primary/40 transition-colors duration-400"></div>
+                                               <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover/demo:opacity-100 transition-all duration-300 delay-75">
+                                                   <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-[50px] gradient-color-primary text-white text-[11px] font-semibold font-hanken translate-y-3 group-hover/demo:translate-y-0 transition-transform duration-300"><i class="fa-solid fa-eye text-[10px]"></i> Preview</span>
+                                               </div>
+                                           </div>
+                                       </div>
+                                       <h5 class="text-center mt-3 text-[13px] font-bold font-hanken text-white/70 group-hover/demo:text-secondary transition-colors duration-300">Jewellery One</h5>
+                                   </a>
 
-                                <!-- View All Button -->
-                                <div class="flex justify-center -mb-4">
-                                    <a href="#"
-                                        class="inline-flex items-center gap-3 px-10 py-4 rounded-[50px] bg-[#2D56FF] text-white text-[16px] font-bold font-hanken hover:shadow-[0px_15px_30px_rgba(45,86,255,0.4)] transition-all duration-300 hover:-translate-y-1">
-                                        View All The Trending Collection
-                                        <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
-                                            <i
-                                                class="fa-solid fa-arrow-right-from-bracket rotate-[-45deg] text-[14px]"></i>
-                                        </div>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                               </div>
+
+                               <!-- View All Button -->
+                               <div class="flex justify-center pt-2 border-t border-white/[0.06]">
+                                   <a href="#" class="inline-flex items-center gap-2.5 px-8 py-3.5 mt-6 rounded-[50px] gradient-color-primary text-white text-[16px] font-semibold font-hanken hover:shadow-[0px_10px_30px_rgba(178,110,247,0.4)] hover:-translate-y-0.5 transition-all duration-300 border-b-2 border-primary/29">
+                                       <span>View All The Trending Collection</span>
+                                       <div class="w-7 h- flex items-center justify-center">
+                                           <i class="fa-regular fa-loader rotate-[-45deg] text-[18px]"></i>
+                                       </div>
+                                   </a>
+                               </div>
+                           </div>
+                       </div>
                     </div>
-
-                    <a href="#"
-                        class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300 flex items-center gap-1.5">Pages</a>
-
                     <!-- Mega Menu Item -->
                     <div class="group">
                         <button
@@ -337,189 +295,192 @@
                                 class="fa-solid fa-angle-down text-[12px] group-hover:rotate-180 transition-transform"></i>
                         </button>
 
-                        <!-- Menu Blur Overlay -->
-                        <div
-                            class="fixed inset-0 bg-[#050520]/60 backdrop-blur-[6px] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-500 z-[90] pointer-events-none">
-                        </div>
-
                         <!-- Mega Menu Content -->
-                        <div
-                            class="absolute left-1/2 -translate-x-1/2 top-full pt-[30px] opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-5 group-hover:translate-y-0 transition-all duration-300 z-100 w-[1140px]">
-                            <div
-                                class="bg-white rounded-[20px] shadow-[0px_30px_70px_rgba(0,0,0,0.2)] overflow-hidden flex">
+                        <div class="absolute left-1/2 -translate-x-1/2 top-full pt-[20px] opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-4 group-hover:translate-y-0 transition-all duration-300 z-100 w-[1140px]">
+                            <div class="bg-[#0D0D27] rounded-[20px] shadow-[0px_40px_80px_rgba(0,0,0,0.6)] overflow-hidden flex border border-white/[0.06]">
                                 <!-- Left Columns (Links) -->
-                                <div class="flex-1 grid grid-cols-3 p-10 gap-x-12">
-                                    <!-- Column 1: Ultimate User Experience -->
+                                <div class="flex-1 grid grid-cols-3 p-9 gap-x-10">
+                                    <!-- Column 1 -->
                                     <div>
-                                        <h4
-                                            class="text-[#888888] text-[13px] font-bold font-hanken uppercase tracking-wider mb-8 pb-3 border-b border-gray-100">
-                                            Ultimate User Experience</h4>
-                                        <ul class="space-y-4">
-                                            <li><a href="#"
-                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Easy
-                                                    to Customize Codes</a></li>
-                                            <li><a href="#"
-                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Powerful
-                                                    Page Options</a></li>
-                                            <li><a href="#"
-                                                    class="flex items-center justify-between text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Fast
-                                                    Performance <span
-                                                        class="px-2 py-0.5 rounded-[4px] bg-secondary text-white text-[9px] font-bold">HOT</span></a>
-                                            </li>
-                                            <li><a href="#"
-                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Ultimate
-                                                    Header Layouts</a></li>
-                                            <li><a href="#"
-                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Excessive
-                                                    Footer Variation</a></li>
-                                            <li><a href="#"
-                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Advanced
-                                                    Mega Menu</a></li>
-                                            <li><a href="#"
-                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Popup
-                                                    & Sidebar Search</a></li>
-                                            <li><a href="#"
-                                                    class="flex items-center justify-between text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">All
-                                                    Boost Sales Features <span
-                                                        class="px-2 py-0.5 rounded-[4px] bg-secondary text-white text-[9px] font-bold">NEW</span></a>
-                                            </li>
-                                            <li><a href="#"
-                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Mobile-first
-                                                    Experience</a></li>
-                                            <li><a href="#"
-                                                    class="flex items-center justify-between text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">User
-                                                    Feedback <span
-                                                        class="px-2 py-0.5 rounded-[4px] bg-[#FFBD7A] text-white text-[9px] font-bold">COMING</span></a>
-                                            </li>
-                                            <li><a href="#"
-                                                    class="flex items-center justify-between text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Seamless
-                                                    Integration <span
-                                                        class="px-2 py-0.5 rounded-[4px] bg-[#FFBD7A] text-white text-[9px] font-bold">COMING</span></a>
-                                            </li>
+                                        <h4 class="text-white/30 text-[11px] font-bold font-hanken uppercase tracking-[0.12em] mb-6 pb-3 border-b border-white/[0.08] flex items-center gap-2">
+                                            <i class="fa-solid fa-wand-magic-sparkles text-secondary text-[10px]"></i>
+                                            Ultimate User Experience
+                                        </h4>
+                                        <ul class="space-y-[14px]">
+                                            <li><a href="#" class="group/link flex items-center justify-between text-white/60 text-[14px] font-medium font-inter hover:text-white transition-colors duration-200">
+                                                <span class="flex items-center gap-2"><i class="fa-solid fa-circle-dot text-[6px] text-secondary/50 group-hover/link:text-secondary transition-colors"></i>Easy to Customize Codes</span>
+                                            </a></li>
+                                            <li><a href="#" class="group/link flex items-center justify-between text-white/60 text-[14px] font-medium font-inter hover:text-white transition-colors duration-200">
+                                                <span class="flex items-center gap-2"><i class="fa-solid fa-circle-dot text-[6px] text-secondary/50 group-hover/link:text-secondary transition-colors"></i>Powerful Page Options</span>
+                                            </a></li>
+                                            <li><a href="#" class="group/link flex items-center justify-between text-white/60 text-[14px] font-medium font-inter hover:text-white transition-colors duration-200">
+                                                <span class="flex items-center gap-2"><i class="fa-solid fa-circle-dot text-[6px] text-secondary/50 group-hover/link:text-secondary transition-colors"></i>Fast Performance</span>
+                                                <span class="px-2 py-0.5 rounded-[4px] bg-secondary text-white text-[9px] font-bold">HOT</span>
+                                            </a></li>
+                                            <li><a href="#" class="group/link flex items-center gap-2 text-white/60 text-[14px] font-medium font-inter hover:text-white transition-colors duration-200">
+                                                <i class="fa-solid fa-circle-dot text-[6px] text-secondary/50 group-hover/link:text-secondary transition-colors"></i>Ultimate Header Layouts
+                                            </a></li>
+                                            <li><a href="#" class="group/link flex items-center gap-2 text-white/60 text-[14px] font-medium font-inter hover:text-white transition-colors duration-200">
+                                                <i class="fa-solid fa-circle-dot text-[6px] text-secondary/50 group-hover/link:text-secondary transition-colors"></i>Excessive Footer Variation
+                                            </a></li>
+                                            <li><a href="#" class="group/link flex items-center gap-2 text-white/60 text-[14px] font-medium font-inter hover:text-white transition-colors duration-200">
+                                                <i class="fa-solid fa-circle-dot text-[6px] text-secondary/50 group-hover/link:text-secondary transition-colors"></i>Advanced Mega Menu
+                                            </a></li>
+                                            <li><a href="#" class="group/link flex items-center gap-2 text-white/60 text-[14px] font-medium font-inter hover:text-white transition-colors duration-200">
+                                                <i class="fa-solid fa-circle-dot text-[6px] text-secondary/50 group-hover/link:text-secondary transition-colors"></i>Popup &amp; Sidebar Search
+                                            </a></li>
+                                            <li><a href="#" class="group/link flex items-center justify-between text-white/60 text-[14px] font-medium font-inter hover:text-white transition-colors duration-200">
+                                                <span class="flex items-center gap-2"><i class="fa-solid fa-circle-dot text-[6px] text-secondary/50 group-hover/link:text-secondary transition-colors"></i>All Boost Sales Features</span>
+                                                <span class="px-2 py-0.5 rounded-[4px] bg-secondary text-white text-[9px] font-bold">NEW</span>
+                                            </a></li>
+                                            <li><a href="#" class="group/link flex items-center gap-2 text-white/60 text-[14px] font-medium font-inter hover:text-white transition-colors duration-200">
+                                                <i class="fa-solid fa-circle-dot text-[6px] text-secondary/50 group-hover/link:text-secondary transition-colors"></i>Mobile-first Experience
+                                            </a></li>
+                                            <li><a href="#" class="group/link flex items-center justify-between text-white/60 text-[14px] font-medium font-inter hover:text-white transition-colors duration-200">
+                                                <span class="flex items-center gap-2"><i class="fa-solid fa-circle-dot text-[6px] text-secondary/50 group-hover/link:text-secondary transition-colors"></i>User Feedback</span>
+                                                <span class="px-2 py-0.5 rounded-[4px] bg-[#FFBD7A] text-white text-[9px] font-bold">COMING</span>
+                                            </a></li>
+                                            <li><a href="#" class="group/link flex items-center justify-between text-white/60 text-[14px] font-medium font-inter hover:text-white transition-colors duration-200">
+                                                <span class="flex items-center gap-2"><i class="fa-solid fa-circle-dot text-[6px] text-secondary/50 group-hover/link:text-secondary transition-colors"></i>Seamless Integration</span>
+                                                <span class="px-2 py-0.5 rounded-[4px] bg-[#FFBD7A] text-white text-[9px] font-bold">COMING</span>
+                                            </a></li>
                                         </ul>
                                     </div>
-                                    <!-- Column 2: Flexible Shopping -->
+                                    <!-- Column 2 -->
                                     <div>
-                                        <h4
-                                            class="text-[#888888] text-[13px] font-bold font-hanken uppercase tracking-wider mb-8 pb-3 border-b border-gray-100">
-                                            Flexible Shopping</h4>
-                                        <ul class="space-y-4">
-                                            <li><a href="#"
-                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Smart
-                                                    Product Filtering</a></li>
-                                            <li><a href="#"
-                                                    class="flex items-center justify-between text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Variant
-                                                    Swatches <span
-                                                        class="px-2 py-0.5 rounded-[4px] bg-[#FF71BF] text-white text-[9px] font-bold uppercase">FULLY
-                                                        READY</span></a></li>
-                                            <li><a href="#"
-                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Product
-                                                    Compare</a></li>
-                                            <li><a href="#"
-                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">WishLists
-                                                    Builder</a></li>
-                                            <li><a href="#"
-                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Quick
-                                                    View</a></li>
-                                            <li><a href="#"
-                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Flash
-                                                    Sales Management</a></li>
-                                            <li><a href="#"
-                                                    class="flex items-center justify-between text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Cart
-                                                    Upsell <span
-                                                        class="px-2 py-0.5 rounded-[4px] bg-secondary text-white text-[9px] font-bold">NEW</span></a>
-                                            </li>
-                                            <li><a href="#"
-                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Size
-                                                    Chart Variation</a></li>
-                                            <li><a href="#"
-                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Sticky
-                                                    Add To Cart</a></li>
-                                            <li><a href="#"
-                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Product
-                                                    Video & 3D View</a></li>
-                                            <li><a href="#"
-                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Multi-Step
-                                                    Checkout</a></li>
+                                        <h4 class="text-white/30 text-[11px] font-bold font-hanken uppercase tracking-[0.12em] mb-6 pb-3 border-b border-white/[0.08] flex items-center gap-2">
+                                            <i class="fa-solid fa-bag-shopping text-secondary text-[10px]"></i>
+                                            Flexible Shopping
+                                        </h4>
+                                        <ul class="space-y-[14px]">
+                                            <li><a href="#" class="group/link flex items-center gap-2 text-white/60 text-[14px] font-medium font-inter hover:text-white transition-colors duration-200">
+                                                <i class="fa-solid fa-circle-dot text-[6px] text-secondary/50 group-hover/link:text-secondary transition-colors"></i>Smart Product Filtering
+                                            </a></li>
+                                            <li><a href="#" class="group/link flex items-center justify-between text-white/60 text-[14px] font-medium font-inter hover:text-white transition-colors duration-200">
+                                                <span class="flex items-center gap-2"><i class="fa-solid fa-circle-dot text-[6px] text-secondary/50 group-hover/link:text-secondary transition-colors"></i>Variant Swatches</span>
+                                                <span class="px-2 py-0.5 rounded-[4px] bg-[#FF71BF] text-white text-[9px] font-bold">READY</span>
+                                            </a></li>
+                                            <li><a href="#" class="group/link flex items-center gap-2 text-white/60 text-[14px] font-medium font-inter hover:text-white transition-colors duration-200">
+                                                <i class="fa-solid fa-circle-dot text-[6px] text-secondary/50 group-hover/link:text-secondary transition-colors"></i>Product Compare
+                                            </a></li>
+                                            <li><a href="#" class="group/link flex items-center gap-2 text-white/60 text-[14px] font-medium font-inter hover:text-white transition-colors duration-200">
+                                                <i class="fa-solid fa-circle-dot text-[6px] text-secondary/50 group-hover/link:text-secondary transition-colors"></i>WishLists Builder
+                                            </a></li>
+                                            <li><a href="#" class="group/link flex items-center gap-2 text-white/60 text-[14px] font-medium font-inter hover:text-white transition-colors duration-200">
+                                                <i class="fa-solid fa-circle-dot text-[6px] text-secondary/50 group-hover/link:text-secondary transition-colors"></i>Quick View
+                                            </a></li>
+                                            <li><a href="#" class="group/link flex items-center gap-2 text-white/60 text-[14px] font-medium font-inter hover:text-white transition-colors duration-200">
+                                                <i class="fa-solid fa-circle-dot text-[6px] text-secondary/50 group-hover/link:text-secondary transition-colors"></i>Flash Sales Management
+                                            </a></li>
+                                            <li><a href="#" class="group/link flex items-center justify-between text-white/60 text-[14px] font-medium font-inter hover:text-white transition-colors duration-200">
+                                                <span class="flex items-center gap-2"><i class="fa-solid fa-circle-dot text-[6px] text-secondary/50 group-hover/link:text-secondary transition-colors"></i>Cart Upsell</span>
+                                                <span class="px-2 py-0.5 rounded-[4px] bg-secondary text-white text-[9px] font-bold">NEW</span>
+                                            </a></li>
+                                            <li><a href="#" class="group/link flex items-center gap-2 text-white/60 text-[14px] font-medium font-inter hover:text-white transition-colors duration-200">
+                                                <i class="fa-solid fa-circle-dot text-[6px] text-secondary/50 group-hover/link:text-secondary transition-colors"></i>Size Chart Variation
+                                            </a></li>
+                                            <li><a href="#" class="group/link flex items-center gap-2 text-white/60 text-[14px] font-medium font-inter hover:text-white transition-colors duration-200">
+                                                <i class="fa-solid fa-circle-dot text-[6px] text-secondary/50 group-hover/link:text-secondary transition-colors"></i>Sticky Add To Cart
+                                            </a></li>
+                                            <li><a href="#" class="group/link flex items-center gap-2 text-white/60 text-[14px] font-medium font-inter hover:text-white transition-colors duration-200">
+                                                <i class="fa-solid fa-circle-dot text-[6px] text-secondary/50 group-hover/link:text-secondary transition-colors"></i>Product Video &amp; 3D View
+                                            </a></li>
+                                            <li><a href="#" class="group/link flex items-center gap-2 text-white/60 text-[14px] font-medium font-inter hover:text-white transition-colors duration-200">
+                                                <i class="fa-solid fa-circle-dot text-[6px] text-secondary/50 group-hover/link:text-secondary transition-colors"></i>Multi-Step Checkout
+                                            </a></li>
                                         </ul>
                                     </div>
-                                    <!-- Column 3: Boost Sales -->
+                                    <!-- Column 3 -->
                                     <div>
-                                        <h4
-                                            class="text-[#888888] text-[13px] font-bold font-hanken uppercase tracking-wider mb-8 pb-3 border-b border-gray-100">
-                                            Boost Sales</h4>
-                                        <ul class="space-y-4">
-                                            <li><a href="#"
-                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Back
-                                                    To Stock Notification</a></li>
-                                            <li><a href="#"
-                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Sales
-                                                    Popup</a></li>
-                                            <li><a href="#"
-                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Pre
-                                                    Order</a></li>
-                                            <li><a href="#"
-                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Backorder</a>
-                                            </li>
-                                            <li><a href="#"
-                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Partial
-                                                    Payment</a></li>
-                                            <li><a href="#"
-                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Shareable
-                                                    Cart</a></li>
-                                            <li><a href="#"
-                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Bulk
-                                                    Amount Purchase</a></li>
-                                            <li><a href="#"
-                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Stock
-                                                    Progress Bar</a></li>
-                                            <li><a href="#"
-                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Sales
-                                                    Push Notification</a></li>
-                                            <li><a href="#"
-                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Special
-                                                    Offers Management</a></li>
-                                            <li><a href="#"
-                                                    class="text-[#333333] text-[15px] font-medium font-inter hover:text-secondary transition-colors">Free
-                                                    Shipping Threshold</a></li>
+                                        <h4 class="text-white/30 text-[11px] font-bold font-hanken uppercase tracking-[0.12em] mb-6 pb-3 border-b border-white/[0.08] flex items-center gap-2">
+                                            <i class="fa-solid fa-rocket text-secondary text-[10px]"></i>
+                                            Boost Sales
+                                        </h4>
+                                        <ul class="space-y-[14px]">
+                                            <li><a href="#" class="group/link flex items-center gap-2 text-white/60 text-[14px] font-medium font-inter hover:text-white transition-colors duration-200">
+                                                <i class="fa-solid fa-circle-dot text-[6px] text-secondary/50 group-hover/link:text-secondary transition-colors"></i>Back To Stock Notification
+                                            </a></li>
+                                            <li><a href="#" class="group/link flex items-center gap-2 text-white/60 text-[14px] font-medium font-inter hover:text-white transition-colors duration-200">
+                                                <i class="fa-solid fa-circle-dot text-[6px] text-secondary/50 group-hover/link:text-secondary transition-colors"></i>Sales Popup
+                                            </a></li>
+                                            <li><a href="#" class="group/link flex items-center gap-2 text-white/60 text-[14px] font-medium font-inter hover:text-white transition-colors duration-200">
+                                                <i class="fa-solid fa-circle-dot text-[6px] text-secondary/50 group-hover/link:text-secondary transition-colors"></i>Pre Order
+                                            </a></li>
+                                            <li><a href="#" class="group/link flex items-center gap-2 text-white/60 text-[14px] font-medium font-inter hover:text-white transition-colors duration-200">
+                                                <i class="fa-solid fa-circle-dot text-[6px] text-secondary/50 group-hover/link:text-secondary transition-colors"></i>Backorder
+                                            </a></li>
+                                            <li><a href="#" class="group/link flex items-center gap-2 text-white/60 text-[14px] font-medium font-inter hover:text-white transition-colors duration-200">
+                                                <i class="fa-solid fa-circle-dot text-[6px] text-secondary/50 group-hover/link:text-secondary transition-colors"></i>Partial Payment
+                                            </a></li>
+                                            <li><a href="#" class="group/link flex items-center gap-2 text-white/60 text-[14px] font-medium font-inter hover:text-white transition-colors duration-200">
+                                                <i class="fa-solid fa-circle-dot text-[6px] text-secondary/50 group-hover/link:text-secondary transition-colors"></i>Shareable Cart
+                                            </a></li>
+                                            <li><a href="#" class="group/link flex items-center gap-2 text-white/60 text-[14px] font-medium font-inter hover:text-white transition-colors duration-200">
+                                                <i class="fa-solid fa-circle-dot text-[6px] text-secondary/50 group-hover/link:text-secondary transition-colors"></i>Bulk Amount Purchase
+                                            </a></li>
+                                            <li><a href="#" class="group/link flex items-center gap-2 text-white/60 text-[14px] font-medium font-inter hover:text-white transition-colors duration-200">
+                                                <i class="fa-solid fa-circle-dot text-[6px] text-secondary/50 group-hover/link:text-secondary transition-colors"></i>Stock Progress Bar
+                                            </a></li>
+                                            <li><a href="#" class="group/link flex items-center gap-2 text-white/60 text-[14px] font-medium font-inter hover:text-white transition-colors duration-200">
+                                                <i class="fa-solid fa-circle-dot text-[6px] text-secondary/50 group-hover/link:text-secondary transition-colors"></i>Sales Push Notification
+                                            </a></li>
+                                            <li><a href="#" class="group/link flex items-center gap-2 text-white/60 text-[14px] font-medium font-inter hover:text-white transition-colors duration-200">
+                                                <i class="fa-solid fa-circle-dot text-[6px] text-secondary/50 group-hover/link:text-secondary transition-colors"></i>Special Offers Management
+                                            </a></li>
+                                            <li><a href="#" class="group/link flex items-center gap-2 text-white/60 text-[14px] font-medium font-inter hover:text-white transition-colors duration-200">
+                                                <i class="fa-solid fa-circle-dot text-[6px] text-secondary/50 group-hover/link:text-secondary transition-colors"></i>Free Shipping Threshold
+                                            </a></li>
                                         </ul>
                                     </div>
                                 </div>
 
-                                <!-- Right Column (Image/Grid) -->
-                                <div class="w-[450px] bg-gray-light p-8">
-                                    <div class="grid grid-cols-2 gap-4 h-full">
-                                        <div
-                                            class="relative group/card overflow-hidden rounded-xl shadow-md bg-white p-2">
-                                            <img src="assets/images/demo/demo-1.webp" alt="Preview"
-                                                class="w-full h-32 object-cover rounded-lg mb-2 transition-transform duration-500 group-hover/card:scale-110">
-                                            <p class="text-[12px] font-bold font-hanken text-gray-800">Classic Demo</p>
-                                        </div>
-                                        <div
-                                            class="relative group/card overflow-hidden rounded-xl shadow-md bg-white p-2">
-                                            <img src="assets/images/demo/demo-2.webp" alt="Preview"
-                                                class="w-full h-32 object-cover rounded-lg mb-2 transition-transform duration-500 group-hover/card:scale-110">
-                                            <p class="text-[12px] font-bold font-hanken text-gray-800">Modern Shop</p>
-                                        </div>
-                                        <div
-                                            class="relative group/card overflow-hidden rounded-xl shadow-md bg-white p-2">
-                                            <img src="assets/images/demo/demo-3.webp" alt="Preview"
-                                                class="w-full h-32 object-cover rounded-lg mb-2 transition-transform duration-500 group-hover/card:scale-110">
-                                            <p class="text-[12px] font-bold font-hanken text-gray-800">LMS System</p>
-                                        </div>
-                                        <div
-                                            class="relative group/card overflow-hidden rounded-xl shadow-md bg-white p-2 flex items-center justify-center border-2 border-dashed border-gray-200 hover:border-secondary transition-colors cursor-pointer">
-                                            <div class="text-center">
-                                                <i class="fa-solid fa-plus text-secondary mb-1"></i>
-                                                <p class="text-[10px] font-bold font-hanken text-gray-500 uppercase">
-                                                    View All</p>
+                                <!-- Right Column (2 Image Cards) -->
+                                <div class="w-[260px] bg-[#080820] p-6 flex flex-col gap-5 border-l border-white/[0.06]">
+                                    <p class="text-white/30 text-[11px] font-bold font-hanken uppercase tracking-[0.12em] flex items-center gap-2">
+                                        <i class="fa-solid fa-layer-group text-secondary text-[10px]"></i>
+                                        Featured Demos
+                                    </p>
+                                    <a href="#" class="group/card block bg-[#13132E] rounded-[12px] overflow-hidden border border-white/[0.06] hover:border-secondary/40 hover:shadow-[0px_8px_30px_rgba(147,130,255,0.2)] transition-all duration-400">
+                                        <div class="relative overflow-hidden h-[130px]">
+                                            <img src="assets/images/demo/demo-1.webp" alt="Classic Demo" class="w-full h-full object-cover transition-transform duration-500 group-hover/card:scale-[1.08]">
+                                            <div class="absolute inset-0 bg-primary/0 group-hover/card:bg-primary/40 transition-colors duration-400"></div>
+                                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover/card:opacity-100 transition-all duration-300">
+                                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-[50px] gradient-color-primary text-white text-[11px] font-semibold font-hanken translate-y-2 group-hover/card:translate-y-0 transition-transform duration-300"><i class="fa-solid fa-eye text-[10px]"></i> Preview</span>
                                             </div>
                                         </div>
-                                    </div>
+                                        <div class="px-3 py-2.5 flex items-center justify-between">
+                                            <p class="text-white/70 text-[13px] font-bold font-hanken group-hover/card:text-secondary transition-colors">Classic Demo</p>
+                                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/20 group-hover/card:text-secondary transition-colors"></i>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="group/card block bg-[#13132E] rounded-[12px] overflow-hidden border border-white/[0.06] hover:border-secondary/40 hover:shadow-[0px_8px_30px_rgba(147,130,255,0.2)] transition-all duration-400">
+                                        <div class="relative overflow-hidden h-[130px]">
+                                            <img src="assets/images/demo/demo-3.webp" alt="LMS System" class="w-full h-full object-cover transition-transform duration-500 group-hover/card:scale-[1.08]">
+                                            <div class="absolute inset-0 bg-primary/0 group-hover/card:bg-primary/40 transition-colors duration-400"></div>
+                                            <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover/card:opacity-100 transition-all duration-300">
+                                                <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-[50px] gradient-color-primary text-white text-[11px] font-semibold font-hanken translate-y-2 group-hover/card:translate-y-0 transition-transform duration-300"><i class="fa-solid fa-eye text-[10px]"></i> Preview</span>
+                                            </div>
+                                        </div>
+                                        <div class="px-3 py-2.5 flex items-center justify-between">
+                                            <p class="text-white/70 text-[13px] font-bold font-hanken group-hover/card:text-secondary transition-colors">LMS System</p>
+                                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-white/20 group-hover/card:text-secondary transition-colors"></i>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="mt-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-[50px] border border-white/[0.1] text-white/50 text-[12px] font-semibold font-hanken hover:border-secondary/50 hover:text-secondary transition-all duration-300">
+                                        <i class="fa-solid fa-grid-2 text-[10px]"></i> View All Demo
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <a href="#"
+                        class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300 flex items-center gap-1.5">Courses
+                    </a>
+
+
+                    <a href="#"
+                        class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300 flex items-center gap-1.5">Shop</a>
+
                 </nav>
 
                 <!-- Action Section -->
@@ -563,8 +524,7 @@
                                         class="w-full h-full object-cover">
                                 </div>
                                 <div class="overflow-hidden">
-                                    <h4 class="text-[18px] font-bold font-hanken text-[#050520] truncate">RainbowIT
-                                    </h4>
+                                    <h4 class="text-[18px] font-bold font-hanken text-[#050520] truncate">RainbowIT</h4>
                                     <a href="#"
                                         class="text-secondary text-[14px] font-medium font-inter hover:underline">View
                                         Profile</a>
@@ -659,7 +619,7 @@
 
                     <!-- Join Button -->
                     <a href="#"
-                        class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-[50px] bg-linear-to-r from-[#B26EF7] via-[#FF71BF] to-[#FFBD7A] text-white text-[16px] font-semibold font-hanken hover:shadow-[0px_10px_30px_rgba(178,110,247,0.4)] hover:-translate-y-0.5 transition-all duration-300 border-b-2 border-primary/29">
+                        class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-[50px] gradient-color-primary text-white text-[16px] font-semibold font-hanken hover:shadow-[0px_10px_30px_rgba(178,110,247,0.4)] hover:-translate-y-0.5 transition-all duration-300 border-b-2 border-primary/29">
                         <img src="assets/images/icon/right-icon.svg" alt="Join" class="w-5 h-5">
                         <span>Join for free</span>
                     </a>
@@ -688,132 +648,6 @@
     </header>
 
     <main>
-        <!-- about Section Start -->
-        <section id="about" class="bg-primary py-[100px] relative overflow-hidden">
-            <div class="max-w-[1320px] mx-auto px-4 relative z-10">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-[80px] items-center">
-                    <!-- Left Image Area -->
-                    <div class="relative">
-                        <!-- Experience Badge -->
-                        <div
-                            class="absolute -top-[40px] -left-[40px] z-30 bg-linear-to-br from-[#6246E5] to-[#3B2BA0] rounded-big p-6 shadow-xl transition-transform hover:-translate-y-2 duration-300">
-                            <div class="flex items-center gap-4">
-                                <span class="text-white text-[48px] font-bold font-hanken leading-none">24</span>
-                                <div class="text-white/80 text-[14px] font-medium font-inter leading-tight">
-                                    Years of<br>experience
-                                </div>
-                            </div>
-                            <!-- Decorative curves in badge -->
-                            <div
-                                class="absolute top-0 right-0 w-full h-full opacity-10 pointer-events-none overflow-hidden rounded-big">
-                                <svg viewBox="0 0 100 100"
-                                    class="w-full h-full transform scale-150 translate-x-1/4 -translate-y-1/4">
-                                    <circle cx="100" cy="0" r="80" fill="none" stroke="white" stroke-width="2" />
-                                    <circle cx="100" cy="0" r="60" fill="none" stroke="white" stroke-width="2" />
-                                </svg>
-                            </div>
-                        </div>
-
-                        <!-- Main Images -->
-                        <div class="relative z-10">
-                            <!-- Background Shape/Decoration -->
-                            <div class="absolute -bottom-[20px] -left-[20px] -z-10">
-                                <i class="fa-solid fa-clover text-secondary/20 text-[80px] rotate-12"></i>
-                            </div>
-
-                            <!-- Path Decoration -->
-                            <div class="absolute -top-[10%] -right-[10%] -z-10 opacity-50">
-                                <img src="assets/images/about/path.png" alt="path" class="w-full h-auto">
-                            </div>
-
-                            <!-- Right/Main Image -->
-                            <div
-                                class="ml-auto w-full max-w-[450px] rounded-[20px] overflow-hidden border-[6px] border-white/5 shadow-2xl">
-                                <img src="assets/images/about/about-image1.webp" alt="Students studying"
-                                    class="w-full h-auto object-cover">
-                            </div>
-
-                            <!-- Left/Overlapping Image -->
-                            <div
-                                class="absolute -left-[60px] top-[140px] w-[280px] rounded-[20px] overflow-hidden border-[6px] border-white/5 shadow-2xl z-20">
-                                <img src="assets/images/about/about-image2.webp" alt="Students in hallway"
-                                    class="w-full h-auto object-cover">
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Right Content Area -->
-                    <div>
-                        <span
-                            class="inline-flex items-center justify-center px-5 py-2 rounded-full border border-white/10 bg-white/5 text-secondary text-[14px] font-bold font-hanken mb-6">
-                            About Our Platform
-                        </span>
-
-                        <h2 class="text-white text-[40px] md:text-[54px] font-bold font-hanken leading-[1.1] mb-6">
-                            Welcome Educate University <span
-                                class="gradient-color-primary bg-clip-text text-transparent">of Excellence</span>
-                        </h2>
-
-                        <p class="text-white/60 text-[16px] md:text-[18px] font-inter leading-[1.7] mb-8">
-                            Education is the most powerful weapon which you can to change leadership is not about a
-                            title or a designation it's about.
-                        </p>
-
-                        <!-- Feature List -->
-                        <ul class="space-y-4 mb-10">
-                            <li class="flex items-start gap-3">
-                                <div class="mt-1 shrink-0">
-                                    <i class="fa-solid fa-check text-secondary text-[14px]"></i>
-                                </div>
-                                <span class="text-white/80 text-[16px] font-inter">Create content and courses that align
-                                    with individual needs and learning</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <div class="mt-1 shrink-0">
-                                    <i class="fa-solid fa-check text-secondary text-[14px]"></i>
-                                </div>
-                                <span class="text-white/80 text-[16px] font-inter">Engage students through multimedia
-                                    materials, quizzes, and hands-on activities</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <div class="mt-1 shrink-0">
-                                    <i class="fa-solid fa-check text-secondary text-[14px]"></i>
-                                </div>
-                                <span class="text-white/80 text-[16px] font-inter">Monitor student performance through
-                                    dashboards that provide learning insights</span>
-                            </li>
-                        </ul>
-
-                        <!-- Info Cards Row -->
-                        <div class="flex flex-wrap gap-8 mb-12">
-                            <div class="flex items-center gap-4">
-                                <div
-                                    class="w-[50px] h-[50px] rounded-full bg-secondary/10 flex items-center justify-center text-secondary shadow-[0_0_20px_rgba(147,130,255,0.2)]">
-                                    <i class="fa-solid fa-check text-[18px]"></i>
-                                </div>
-                                <span class="text-white text-[16px] font-bold font-hanken">Learn from anywhere</span>
-                            </div>
-                            <div class="flex items-center gap-4">
-                                <div
-                                    class="w-[50px] h-[50px] rounded-full bg-secondary/10 flex items-center justify-center text-secondary shadow-[0_0_20px_rgba(147,130,255,0.2)]">
-                                    <i class="fa-solid fa-check text-[18px]"></i>
-                                </div>
-                                <span class="text-white text-[16px] font-bold font-hanken">Learn from anywhere</span>
-                            </div>
-                        </div>
-
-                        <!-- CTA Button -->
-                        <a href="#"
-                            class="inline-flex items-center gap-3 px-10 py-5 rounded-full bg-linear-to-r from-border-secondary via-[#FF71BF] to-[#FFBD7A] text-white text-[18px] font-bold font-hanken hover:shadow-[0px_15px_30px_rgba(178,110,247,0.4)] transition-all duration-300 hover:-translate-y-1 border-b-2 border-primary/29">
-                            Explore More
-                            <i class="fa-solid fa-arrow-right text-[16px]"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- about Section End -->
-
         <!-- Major Partners Section Start -->
         <section id="partners"
             class="bg-primary py-20 md:py-24 relative overflow-hidden rbt-scroll-trigger rbt-scroll-trigger--offscreen">
@@ -1388,6 +1222,284 @@
             </div>
         </section>
         <!-- Popular Courses Section End -->
+
+        <!-- Explore Top Courses Section Start -->
+        <section id="explore-courses" class="bg-primary py-20 md:py-24 relative overflow-hidden">
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-secondary/5 blur-[140px] rounded-full pointer-events-none"></div>
+            <div class="max-w-[1320px] mx-auto px-4 relative z-10">
+                <!-- Section Header -->
+                <div class="text-center mb-14">
+                    <span class="inline-flex items-center justify-center px-5 py-2 rounded-full border border-secondary/30 bg-secondary/10 text-secondary text-[13px] font-bold font-hanken mb-5">
+                        The Practice
+                    </span>
+                    <h2 class="text-white text-[36px] md:text-[54px] font-bold font-hanken leading-tight mb-3">
+                        Explore Top Courses Categorist
+                    </h2>
+                    <p class="gradient-color-primary bg-clip-text text-transparent text-[28px] md:text-[36px] font-bold font-hanken">
+                        Change Yourself
+                    </p>
+                </div>
+
+                <!-- Slider Wrapper -->
+                <div class="relative">
+                    <div class="course-swiper swiper">
+                        <div class="swiper-wrapper">
+
+                            <!-- Card 1 -->
+                            <div class="swiper-slide h-auto">
+                                <div class="bg-box-color rounded-big border border-white/10 overflow-hidden group h-full flex flex-col hover:border-secondary/40 hover:shadow-[0px_10px_40px_rgba(147,130,255,0.15)] transition-all duration-300">
+                                    <div class="relative overflow-hidden aspect-video">
+                                        <img src="assets/images/course/course-imag.webp" alt="Live Business Coaching" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                        <span class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-[#FF4D4D] text-white text-[11px] font-bold flex items-center gap-1.5">
+                                            <i class="fa-solid fa-circle text-[6px] animate-pulse"></i> Live
+                                        </span>
+                                    </div>
+                                    <div class="p-6 flex flex-col grow">
+                                        <div class="flex items-center gap-4 mb-3 text-white/50 text-[12px] font-inter">
+                                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-book-open text-secondary text-[11px]"></i> 15 Lessons</span>
+                                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-user-group text-secondary text-[11px]"></i> 30 Students</span>
+                                        </div>
+                                        <h3 class="text-white text-[18px] font-bold font-hanken leading-snug mb-3 hover:text-secondary transition-colors">
+                                            <a href="#">Creating Reusable and Scalable UI Elements Vue Js Feature</a>
+                                        </h3>
+                                        <div class="flex items-center gap-2 mb-4">
+                                            <div class="flex items-center gap-0.5">
+                                                <i class="fa-solid fa-star text-yellow text-[11px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[11px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[11px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[11px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[11px]"></i>
+                                            </div>
+                                            <span class="text-white/40 text-[12px] font-inter">(0 Reviews)</span>
+                                        </div>
+                                        <div class="mt-auto flex items-center justify-between">
+                                            <div class="flex items-center gap-2">
+                                                <span class="text-white font-bold font-hanken text-[18px]">$75</span>
+                                                <span class="text-white/40 font-inter text-[14px] line-through">$150</span>
+                                            </div>
+                                            <a href="#" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 text-white text-[13px] font-bold font-hanken hover:bg-secondary hover:shadow-[0px_8px_20px_rgba(147,130,255,0.3)] transition-all duration-300">
+                                                <i class="fa-solid fa-cart-shopping text-[11px]"></i> Enroll Now
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div class="swiper-slide h-auto">
+                                <div class="bg-box-color rounded-big border border-white/10 overflow-hidden group h-full flex flex-col hover:border-secondary/40 hover:shadow-[0px_10px_40px_rgba(147,130,255,0.15)] transition-all duration-300">
+                                    <div class="relative overflow-hidden aspect-video">
+                                        <img src="assets/images/course/course-imag2.webp" alt="Business Strategy Masterclass" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                        <span class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Business</span>
+                                    </div>
+                                    <div class="p-6 flex flex-col grow">
+                                        <div class="flex items-center gap-4 mb-3 text-white/50 text-[12px] font-inter">
+                                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-book-open text-secondary text-[11px]"></i> 22 Lessons</span>
+                                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-user-group text-secondary text-[11px]"></i> 124 Students</span>
+                                        </div>
+                                        <h3 class="text-white text-[18px] font-bold font-hanken leading-snug mb-3 hover:text-secondary transition-colors">
+                                            <a href="#">Business Strategy Masterclass for Entrepreneurs & Founders</a>
+                                        </h3>
+                                        <div class="flex items-center gap-2 mb-4">
+                                            <div class="flex items-center gap-0.5">
+                                                <i class="fa-solid fa-star text-yellow text-[11px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[11px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[11px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[11px]"></i>
+                                                <i class="fa-regular fa-star text-yellow text-[11px]"></i>
+                                            </div>
+                                            <span class="text-white/40 text-[12px] font-inter">(18 Reviews)</span>
+                                        </div>
+                                        <div class="mt-auto flex items-center justify-between">
+                                            <div class="flex items-center gap-2">
+                                                <span class="text-white font-bold font-hanken text-[18px]">$89</span>
+                                                <span class="text-white/40 font-inter text-[14px] line-through">$180</span>
+                                            </div>
+                                            <a href="#" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 text-white text-[13px] font-bold font-hanken hover:bg-secondary hover:shadow-[0px_8px_20px_rgba(147,130,255,0.3)] transition-all duration-300">
+                                                <i class="fa-solid fa-cart-shopping text-[11px]"></i> Enroll Now
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div class="swiper-slide h-auto">
+                                <div class="bg-box-color rounded-big border border-white/10 overflow-hidden group h-full flex flex-col hover:border-secondary/40 hover:shadow-[0px_10px_40px_rgba(147,130,255,0.15)] transition-all duration-300">
+                                    <div class="relative overflow-hidden aspect-video">
+                                        <img src="assets/images/course/course-imag3.webp" alt="Personal Development Coaching" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                        <span class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-[#FF71BF] text-white text-[11px] font-bold">Coaching</span>
+                                    </div>
+                                    <div class="p-6 flex flex-col grow">
+                                        <div class="flex items-center gap-4 mb-3 text-white/50 text-[12px] font-inter">
+                                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-book-open text-secondary text-[11px]"></i> 18 Lessons</span>
+                                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-user-group text-secondary text-[11px]"></i> 87 Students</span>
+                                        </div>
+                                        <h3 class="text-white text-[18px] font-bold font-hanken leading-snug mb-3 hover:text-secondary transition-colors">
+                                            <a href="#">Personal Development Coaching — Build Confidence & Leadership</a>
+                                        </h3>
+                                        <div class="flex items-center gap-2 mb-4">
+                                            <div class="flex items-center gap-0.5">
+                                                <i class="fa-solid fa-star text-yellow text-[11px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[11px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[11px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[11px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[11px]"></i>
+                                            </div>
+                                            <span class="text-white/40 text-[12px] font-inter">(34 Reviews)</span>
+                                        </div>
+                                        <div class="mt-auto flex items-center justify-between">
+                                            <div class="flex items-center gap-2">
+                                                <span class="text-white font-bold font-hanken text-[18px]">$65</span>
+                                                <span class="text-white/40 font-inter text-[14px] line-through">$130</span>
+                                            </div>
+                                            <a href="#" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 text-white text-[13px] font-bold font-hanken hover:bg-secondary hover:shadow-[0px_8px_20px_rgba(147,130,255,0.3)] transition-all duration-300">
+                                                <i class="fa-solid fa-cart-shopping text-[11px]"></i> Enroll Now
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 4 -->
+                            <div class="swiper-slide h-auto">
+                                <div class="bg-box-color rounded-big border border-white/10 overflow-hidden group h-full flex flex-col hover:border-secondary/40 hover:shadow-[0px_10px_40px_rgba(147,130,255,0.15)] transition-all duration-300">
+                                    <div class="relative overflow-hidden aspect-video">
+                                        <img src="assets/images/course/course-imag.webp" alt="Digital Marketing Mastery" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                        <span class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-[#FFBD7A] text-white text-[11px] font-bold">Marketing</span>
+                                    </div>
+                                    <div class="p-6 flex flex-col grow">
+                                        <div class="flex items-center gap-4 mb-3 text-white/50 text-[12px] font-inter">
+                                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-book-open text-secondary text-[11px]"></i> 28 Lessons</span>
+                                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-user-group text-secondary text-[11px]"></i> 210 Students</span>
+                                        </div>
+                                        <h3 class="text-white text-[18px] font-bold font-hanken leading-snug mb-3 hover:text-secondary transition-colors">
+                                            <a href="#">Digital Marketing Mastery — SEO, Ads & Social Media Growth</a>
+                                        </h3>
+                                        <div class="flex items-center gap-2 mb-4">
+                                            <div class="flex items-center gap-0.5">
+                                                <i class="fa-solid fa-star text-yellow text-[11px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[11px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[11px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[11px]"></i>
+                                                <i class="fa-solid fa-star-half-stroke text-yellow text-[11px]"></i>
+                                            </div>
+                                            <span class="text-white/40 text-[12px] font-inter">(52 Reviews)</span>
+                                        </div>
+                                        <div class="mt-auto flex items-center justify-between">
+                                            <div class="flex items-center gap-2">
+                                                <span class="text-white font-bold font-hanken text-[18px]">$95</span>
+                                                <span class="text-white/40 font-inter text-[14px] line-through">$199</span>
+                                            </div>
+                                            <a href="#" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 text-white text-[13px] font-bold font-hanken hover:bg-secondary hover:shadow-[0px_8px_20px_rgba(147,130,255,0.3)] transition-all duration-300">
+                                                <i class="fa-solid fa-cart-shopping text-[11px]"></i> Enroll Now
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 5 -->
+                            <div class="swiper-slide h-auto">
+                                <div class="bg-box-color rounded-big border border-white/10 overflow-hidden group h-full flex flex-col hover:border-secondary/40 hover:shadow-[0px_10px_40px_rgba(147,130,255,0.15)] transition-all duration-300">
+                                    <div class="relative overflow-hidden aspect-video">
+                                        <img src="assets/images/course/course-imag2.webp" alt="Mindset & Productivity" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                        <span class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-[#FF4D4D] text-white text-[11px] font-bold flex items-center gap-1.5">
+                                            <i class="fa-solid fa-circle text-[6px] animate-pulse"></i> Live
+                                        </span>
+                                    </div>
+                                    <div class="p-6 flex flex-col grow">
+                                        <div class="flex items-center gap-4 mb-3 text-white/50 text-[12px] font-inter">
+                                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-book-open text-secondary text-[11px]"></i> 12 Lessons</span>
+                                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-user-group text-secondary text-[11px]"></i> 65 Students</span>
+                                        </div>
+                                        <h3 class="text-white text-[18px] font-bold font-hanken leading-snug mb-3 hover:text-secondary transition-colors">
+                                            <a href="#">Mindset & Productivity Coaching — Peak Performance System</a>
+                                        </h3>
+                                        <div class="flex items-center gap-2 mb-4">
+                                            <div class="flex items-center gap-0.5">
+                                                <i class="fa-solid fa-star text-yellow text-[11px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[11px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[11px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[11px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[11px]"></i>
+                                            </div>
+                                            <span class="text-white/40 text-[12px] font-inter">(27 Reviews)</span>
+                                        </div>
+                                        <div class="mt-auto flex items-center justify-between">
+                                            <div class="flex items-center gap-2">
+                                                <span class="text-white font-bold font-hanken text-[18px]">$55</span>
+                                                <span class="text-white/40 font-inter text-[14px] line-through">$110</span>
+                                            </div>
+                                            <a href="#" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 text-white text-[13px] font-bold font-hanken hover:bg-secondary hover:shadow-[0px_8px_20px_rgba(147,130,255,0.3)] transition-all duration-300">
+                                                <i class="fa-solid fa-cart-shopping text-[11px]"></i> Enroll Now
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 6 -->
+                            <div class="swiper-slide h-auto">
+                                <div class="bg-box-color rounded-big border border-white/10 overflow-hidden group h-full flex flex-col hover:border-secondary/40 hover:shadow-[0px_10px_40px_rgba(147,130,255,0.15)] transition-all duration-300">
+                                    <div class="relative overflow-hidden aspect-video">
+                                        <img src="assets/images/course/course-imag3.webp" alt="Public Speaking & Communication" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                                        <span class="absolute top-4 left-4 px-3 py-1.5 rounded-full bg-secondary text-white text-[11px] font-bold">Communication</span>
+                                    </div>
+                                    <div class="p-6 flex flex-col grow">
+                                        <div class="flex items-center gap-4 mb-3 text-white/50 text-[12px] font-inter">
+                                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-book-open text-secondary text-[11px]"></i> 20 Lessons</span>
+                                            <span class="flex items-center gap-1.5"><i class="fa-solid fa-user-group text-secondary text-[11px]"></i> 143 Students</span>
+                                        </div>
+                                        <h3 class="text-white text-[18px] font-bold font-hanken leading-snug mb-3 hover:text-secondary transition-colors">
+                                            <a href="#">Public Speaking & Communication Skills for Career Growth</a>
+                                        </h3>
+                                        <div class="flex items-center gap-2 mb-4">
+                                            <div class="flex items-center gap-0.5">
+                                                <i class="fa-solid fa-star text-yellow text-[11px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[11px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[11px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[11px]"></i>
+                                                <i class="fa-solid fa-star text-yellow text-[11px]"></i>
+                                            </div>
+                                            <span class="text-white/40 text-[12px] font-inter">(41 Reviews)</span>
+                                        </div>
+                                        <div class="mt-auto flex items-center justify-between">
+                                            <div class="flex items-center gap-2">
+                                                <span class="text-white font-bold font-hanken text-[18px]">$79</span>
+                                                <span class="text-white/40 font-inter text-[14px] line-through">$160</span>
+                                            </div>
+                                            <a href="#" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white/10 text-white text-[13px] font-bold font-hanken hover:bg-secondary hover:shadow-[0px_8px_20px_rgba(147,130,255,0.3)] transition-all duration-300">
+                                                <i class="fa-solid fa-cart-shopping text-[11px]"></i> Enroll Now
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div class="mt-10 flex items-center justify-center gap-4">
+                        <button class="course-swiper-prev w-10 h-10 rounded-full bg-primary border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-secondary transition-all">
+                            <i class="fa-solid fa-chevron-left text-[14px]"></i>
+                        </button>
+                        <button class="course-swiper-next w-10 h-10 rounded-full bg-secondary flex items-center justify-center text-white shadow-[0px_10px_20px_rgba(147,130,255,0.3)] hover:scale-105 transition-all">
+                            <i class="fa-solid fa-chevron-right text-[14px]"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- View All Link -->
+                <div class="text-center mt-12">
+                    <a href="#" class="inline-flex items-center gap-2 text-secondary text-[16px] font-bold font-hanken hover:gap-4 transition-all duration-300">
+                        View All Courses <i class="fa-solid fa-arrow-right text-[14px]"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Explore Top Courses Section End -->
 
     </main>
     <!-- footer section start -->
