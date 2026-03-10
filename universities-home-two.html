@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="assets/css/output.css">
     <link rel="stylesheet" href="assets/css/input.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>header.scrolled-header{top:0;margin-left:0;margin-right:0}</style>
 </head>
 
 <body class="rbt-header-sticky primary-color font-inter bg-[#050520]">
@@ -58,7 +59,7 @@
     </div>
     <!-- Preloader End -->
 
-    <header class="sticky top-[12px] md:top-[20px] lg:top-[30px] z-50 mx-[12px] md:mx-[20px] lg:mx-[30px]">
+    <header class="sticky top-[12px] md:top-[20px] lg:top-[30px] z-50 mx-[12px] md:mx-[20px] lg:mx-[30px] transition-[top,margin] duration-300">
         <div class="bg-[#11112A] rounded-[16px] md:rounded-[20px] lg:rounded-[25px] border border-white/[0.06] shadow-[0px_20px_60px_rgba(0,0,0,0.4)]">
             <div class="px-4 md:px-5 lg:px-6 relative">
                 <div class="flex items-center justify-between h-[64px] md:h-[72px] lg:h-[80px]">
@@ -320,6 +321,412 @@
         </div>
     </section>
     <!-- AI / CTA Banner Section End -->
+
+    <!-- Counter Section Start -->
+    <section class="bg-[#050520] py-[50px] md:py-[70px] lg:py-[80px] relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-1/2 left-1/4 -translate-y-1/2 w-[300px] md:w-[400px] h-[300px] md:h-[400px] rounded-full bg-[#9382FF]/5 blur-[100px]"></div>
+            <div class="absolute top-1/2 right-1/4 -translate-y-1/2 w-[300px] md:w-[400px] h-[300px] md:h-[400px] rounded-full bg-[#FF71BF]/5 blur-[100px]"></div>
+        </div>
+        <div class="max-w-[1320px] mx-auto px-4 relative">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-[16px] md:gap-[20px]">
+                <div class="group bg-[#0D0D27] border border-white/[0.08] hover:border-secondary/30 rounded-[16px] md:rounded-[20px] p-[22px] sm:p-[26px] lg:p-[30px] text-center transition-all duration-300 hover:shadow-[0px_20px_50px_rgba(147,130,255,0.1)]">
+                    <div class="w-[44px] h-[44px] md:w-[52px] md:h-[52px] rounded-full bg-[#9382FF]/10 flex items-center justify-center mx-auto mb-[14px] md:mb-[18px] group-hover:bg-[#9382FF]/20 transition-all duration-300">
+                        <i class="fa-solid fa-users text-secondary text-[18px] md:text-[20px]"></i>
+                    </div>
+                    <h3 class="text-white text-[32px] sm:text-[36px] lg:text-[42px] font-bold font-hanken leading-none mb-[6px] md:mb-[8px]">
+                        <span class="counter" data-target="32640">0</span>
+                    </h3>
+                    <p class="text-[#A9B1E0] text-[13px] md:text-[14px] font-inter">Total Enrollment</p>
+                </div>
+                <div class="group bg-[#0D0D27] border border-white/[0.08] hover:border-secondary/30 rounded-[16px] md:rounded-[20px] p-[22px] sm:p-[26px] lg:p-[30px] text-center transition-all duration-300 hover:shadow-[0px_20px_50px_rgba(147,130,255,0.1)]">
+                    <div class="w-[44px] h-[44px] md:w-[52px] md:h-[52px] rounded-full bg-[#FF71BF]/10 flex items-center justify-center mx-auto mb-[14px] md:mb-[18px] group-hover:bg-[#FF71BF]/20 transition-all duration-300">
+                        <i class="fa-solid fa-book-open text-[#FF71BF] text-[18px] md:text-[20px]"></i>
+                    </div>
+                    <h3 class="text-white text-[32px] sm:text-[36px] lg:text-[42px] font-bold font-hanken leading-none mb-[6px] md:mb-[8px]">
+                        <span class="counter" data-target="1500">0</span><span>+</span>
+                    </h3>
+                    <p class="text-[#A9B1E0] text-[13px] md:text-[14px] font-inter">Online Courses</p>
+                </div>
+                <div class="group bg-[#0D0D27] border border-white/[0.08] hover:border-secondary/30 rounded-[16px] md:rounded-[20px] p-[22px] sm:p-[26px] lg:p-[30px] text-center transition-all duration-300 hover:shadow-[0px_20px_50px_rgba(147,130,255,0.1)] sm:col-span-2 lg:col-span-1">
+                    <div class="w-[44px] h-[44px] md:w-[52px] md:h-[52px] rounded-full bg-[#FFBD7A]/10 flex items-center justify-center mx-auto mb-[14px] md:mb-[18px] group-hover:bg-[#FFBD7A]/20 transition-all duration-300">
+                        <i class="fa-solid fa-star text-[#FFBD7A] text-[18px] md:text-[20px]"></i>
+                    </div>
+                    <h3 class="text-white text-[32px] sm:text-[36px] lg:text-[42px] font-bold font-hanken leading-none mb-[6px] md:mb-[8px]">
+                        <span class="counter" data-target="99">0</span><span>.9%</span>
+                    </h3>
+                    <p class="text-[#A9B1E0] text-[13px] md:text-[14px] font-inter">Satisfaction Rate</p>
+                </div>
+                <div class="group bg-[#0D0D27] border border-white/[0.08] hover:border-secondary/30 rounded-[16px] md:rounded-[20px] p-[22px] sm:p-[26px] lg:p-[30px] text-center transition-all duration-300 hover:shadow-[0px_20px_50px_rgba(147,130,255,0.1)]">
+                    <div class="w-[44px] h-[44px] md:w-[52px] md:h-[52px] rounded-full bg-[#36D399]/10 flex items-center justify-center mx-auto mb-[14px] md:mb-[18px] group-hover:bg-[#36D399]/20 transition-all duration-300">
+                        <i class="fa-solid fa-chalkboard-user text-[#36D399] text-[18px] md:text-[20px]"></i>
+                    </div>
+                    <h3 class="text-white text-[32px] sm:text-[36px] lg:text-[42px] font-bold font-hanken leading-none mb-[6px] md:mb-[8px]">
+                        <span class="counter" data-target="500">0</span><span>+</span>
+                    </h3>
+                    <p class="text-[#A9B1E0] text-[13px] md:text-[14px] font-inter">Professional Teachers</p>
+                </div>
+                <div class="group bg-[#0D0D27] border border-white/[0.08] hover:border-secondary/30 rounded-[16px] md:rounded-[20px] p-[22px] sm:p-[26px] lg:p-[30px] text-center transition-all duration-300 hover:shadow-[0px_20px_50px_rgba(147,130,255,0.1)]">
+                    <div class="w-[44px] h-[44px] md:w-[52px] md:h-[52px] rounded-full bg-[#60A5FA]/10 flex items-center justify-center mx-auto mb-[14px] md:mb-[18px] group-hover:bg-[#60A5FA]/20 transition-all duration-300">
+                        <i class="fa-solid fa-briefcase text-[#60A5FA] text-[18px] md:text-[20px]"></i>
+                    </div>
+                    <h3 class="text-white text-[32px] sm:text-[36px] lg:text-[42px] font-bold font-hanken leading-none mb-[6px] md:mb-[8px]">
+                        <span class="counter" data-target="790">0</span><span>+</span>
+                    </h3>
+                    <p class="text-[#A9B1E0] text-[13px] md:text-[14px] font-inter">Job Placement</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Counter Section End -->
+
+    <!-- Testimonial Section Start -->
+    <section class="bg-[#050520] py-[80px] lg:py-[110px] relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-0 left-1/4 w-[500px] h-[500px] rounded-full bg-[#9382FF]/6 blur-[130px]"></div>
+            <div class="absolute bottom-0 right-1/4 w-[400px] h-[400px] rounded-full bg-[#FF71BF]/5 blur-[110px]"></div>
+        </div>
+        <div class="max-w-[1320px] mx-auto px-4 relative">
+            <div class="text-center mb-[60px]">
+                <span class="inline-block px-[18px] py-[7px] rounded-full border border-white/20 bg-white/5 text-white text-[13px] font-inter mb-[20px]">Testimonials</span>
+                <h2 class="text-white text-[36px] lg:text-[48px] font-bold font-hanken leading-[1.2]">What Our Students Say At<br><span class="text-secondary">Educate University</span></h2>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-[30px] items-center">
+                <!-- Image Slider -->
+                <div class="lg:col-span-5">
+                    <div class="swiper testimonial-image-slider rounded-[24px] overflow-hidden">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide relative">
+                                <img src="assets/images/team/teacher1.webp" alt="Student" class="w-full h-[480px] lg:h-[560px] object-cover">
+                                <div class="absolute inset-0 bg-linear-to-t from-[#050520]/70 via-transparent to-transparent"></div>
+                            </div>
+                            <div class="swiper-slide relative">
+                                <img src="assets/images/team/teacher2.webp" alt="Student" class="w-full h-[480px] lg:h-[560px] object-cover">
+                                <div class="absolute inset-0 bg-linear-to-t from-[#050520]/70 via-transparent to-transparent"></div>
+                            </div>
+                            <div class="swiper-slide relative">
+                                <img src="assets/images/team/teacher5.webp" alt="Student" class="w-full h-[480px] lg:h-[560px] object-cover">
+                                <div class="absolute inset-0 bg-linear-to-t from-[#050520]/70 via-transparent to-transparent"></div>
+                            </div>
+                            <div class="swiper-slide relative">
+                                <img src="assets/images/team/teacher7.webp" alt="Student" class="w-full h-[480px] lg:h-[560px] object-cover">
+                                <div class="absolute inset-0 bg-linear-to-t from-[#050520]/70 via-transparent to-transparent"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Content Slider -->
+                <div class="lg:col-span-7 lg:pl-[50px]">
+                    <div class="flex items-center gap-[30px] mb-[40px]">
+                        <div class="text-center">
+                            <div class="text-white text-[34px] font-bold font-hanken leading-none">4.9</div>
+                            <div class="flex items-center justify-center gap-[3px] mt-[6px]">
+                                <i class="fa-solid fa-star text-[#FFBD7A] text-[11px]"></i>
+                                <i class="fa-solid fa-star text-[#FFBD7A] text-[11px]"></i>
+                                <i class="fa-solid fa-star text-[#FFBD7A] text-[11px]"></i>
+                                <i class="fa-solid fa-star text-[#FFBD7A] text-[11px]"></i>
+                                <i class="fa-solid fa-star text-[#FFBD7A] text-[11px]"></i>
+                            </div>
+                            <p class="text-[#A9B1E0] text-[12px] font-inter mt-[4px]">Avg. Rating</p>
+                        </div>
+                        <div class="w-px h-[50px] bg-white/10"></div>
+                        <div class="text-center">
+                            <div class="text-white text-[34px] font-bold font-hanken leading-none">12K+</div>
+                            <p class="text-[#A9B1E0] text-[12px] font-inter mt-[10px]">Happy Students</p>
+                        </div>
+                        <div class="w-px h-[50px] bg-white/10"></div>
+                        <div class="text-center">
+                            <div class="text-white text-[34px] font-bold font-hanken leading-none">98%</div>
+                            <p class="text-[#A9B1E0] text-[12px] font-inter mt-[10px]">Recommend Us</p>
+                        </div>
+                    </div>
+                    <div class="w-[60px] h-[60px] rounded-[16px] bg-secondary/10 border border-secondary/20 flex items-center justify-center mb-[28px]">
+                        <i class="fa-solid fa-quote-left text-secondary text-[22px]"></i>
+                    </div>
+                    <div class="swiper testimonial-content-slider overflow-hidden">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <p class="text-[#C8CFEE] text-[18px] lg:text-[20px] font-inter leading-[1.85] mb-[36px]">"At Educate University, students are more than learners—they are the purpose behind our vision. Their journeys inspire us to create an environment that empowers potential and nurtures creativity."</p>
+                                <div class="flex items-center justify-between gap-[16px]">
+                                    <div>
+                                        <h4 class="text-white text-[18px] font-bold font-hanken">Soufiane Serghini</h4>
+                                        <p class="text-[#A9B1E0] text-[14px] font-inter mt-[4px]">Senior Developer, Tech Corp</p>
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <i class="fa-solid fa-star text-[#FFBD7A] text-[14px]"></i>
+                                        <i class="fa-solid fa-star text-[#FFBD7A] text-[14px]"></i>
+                                        <i class="fa-solid fa-star text-[#FFBD7A] text-[14px]"></i>
+                                        <i class="fa-solid fa-star text-[#FFBD7A] text-[14px]"></i>
+                                        <i class="fa-solid fa-star text-[#FFBD7A] text-[14px]"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <p class="text-[#C8CFEE] text-[18px] lg:text-[20px] font-inter leading-[1.85] mb-[36px]">"The quality of education at Educate University is exceptional. Faculty members are dedicated professionals who genuinely care about student success and deliver world-class learning experiences."</p>
+                                <div class="flex items-center justify-between gap-[16px]">
+                                    <div>
+                                        <h4 class="text-white text-[18px] font-bold font-hanken">Maria Johnson</h4>
+                                        <p class="text-[#A9B1E0] text-[14px] font-inter mt-[4px]">UI/UX Designer, Creative Studio</p>
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <i class="fa-solid fa-star text-[#FFBD7A] text-[14px]"></i>
+                                        <i class="fa-solid fa-star text-[#FFBD7A] text-[14px]"></i>
+                                        <i class="fa-solid fa-star text-[#FFBD7A] text-[14px]"></i>
+                                        <i class="fa-solid fa-star text-[#FFBD7A] text-[14px]"></i>
+                                        <i class="fa-solid fa-star text-[#FFBD7A] text-[14px]"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <p class="text-[#C8CFEE] text-[18px] lg:text-[20px] font-inter leading-[1.85] mb-[36px]">"My experience here transformed my career completely. The practical skills and knowledge gained at Educate University opened doors I never thought possible before joining this incredible institution."</p>
+                                <div class="flex items-center justify-between gap-[16px]">
+                                    <div>
+                                        <h4 class="text-white text-[18px] font-bold font-hanken">Ahmed Al-Rashid</h4>
+                                        <p class="text-[#A9B1E0] text-[14px] font-inter mt-[4px]">Data Scientist, Analytics Hub</p>
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <i class="fa-solid fa-star text-[#FFBD7A] text-[14px]"></i>
+                                        <i class="fa-solid fa-star text-[#FFBD7A] text-[14px]"></i>
+                                        <i class="fa-solid fa-star text-[#FFBD7A] text-[14px]"></i>
+                                        <i class="fa-solid fa-star text-[#FFBD7A] text-[14px]"></i>
+                                        <i class="fa-solid fa-star text-[#FFBD7A] text-[14px]"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <p class="text-[#C8CFEE] text-[18px] lg:text-[20px] font-inter leading-[1.85] mb-[36px]">"The collaborative environment and innovative teaching methods at Educate University make learning joyful and impactful—it truly prepares you with everything needed to succeed in the real world."</p>
+                                <div class="flex items-center justify-between gap-[16px]">
+                                    <div>
+                                        <h4 class="text-white text-[18px] font-bold font-hanken">Sarah Williams</h4>
+                                        <p class="text-[#A9B1E0] text-[14px] font-inter mt-[4px]">Product Manager, Global Tech</p>
+                                    </div>
+                                    <div class="flex items-center gap-1">
+                                        <i class="fa-solid fa-star text-[#FFBD7A] text-[14px]"></i>
+                                        <i class="fa-solid fa-star text-[#FFBD7A] text-[14px]"></i>
+                                        <i class="fa-solid fa-star text-[#FFBD7A] text-[14px]"></i>
+                                        <i class="fa-solid fa-star text-[#FFBD7A] text-[14px]"></i>
+                                        <i class="fa-solid fa-star text-[#FFBD7A] text-[14px]"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between gap-[16px] mt-[36px] pt-[28px] border-t border-white/[0.08]">
+                        <div class="testimonial-pagination flex items-center gap-[8px] [&_.swiper-pagination-bullet]:w-[8px] [&_.swiper-pagination-bullet]:h-[8px] [&_.swiper-pagination-bullet]:rounded-full [&_.swiper-pagination-bullet]:bg-white/20 [&_.swiper-pagination-bullet]:opacity-100 [&_.swiper-pagination-bullet]:cursor-pointer [&_.swiper-pagination-bullet]:transition-all [&_.swiper-pagination-bullet]:duration-300 [&_.swiper-pagination-bullet-active]:!bg-secondary [&_.swiper-pagination-bullet-active]:!w-[28px] [&_.swiper-pagination-bullet-active]:!rounded-[50px]"></div>
+                        <div class="flex items-center gap-[10px]">
+                            <button class="testimonial-prev w-[48px] h-[48px] rounded-[50px] border border-white/10 bg-white/5 flex items-center justify-center text-white/50 hover:bg-secondary hover:border-secondary hover:text-white transition-all duration-300">
+                                <i class="fa-solid fa-arrow-left text-[13px]"></i>
+                            </button>
+                            <button class="testimonial-next w-[48px] h-[48px] rounded-[50px] bg-secondary border border-secondary flex items-center justify-center text-white hover:bg-transparent hover:text-secondary transition-all duration-300">
+                                <i class="fa-solid fa-arrow-right text-[13px]"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonial Section End -->
+
+    <!-- University Category Section Start -->
+    <section id="uni-category" class="bg-[#050520] py-[100px] overflow-hidden">
+        <div class="max-w-[1320px] mx-auto px-4">
+
+            <!-- Section Header -->
+            <div class="text-center mb-[60px]">
+                <span class="inline-flex items-center gap-[8px] px-[18px] py-[8px] rounded-[50px] border border-white/10 bg-white/[0.04] text-[#A9B1E0] text-[13px] font-inter mb-[20px]">
+                    <i class="fa-solid fa-building-columns text-secondary text-[11px]"></i>
+                    University Categories
+                </span>
+                <h2 class="text-white text-[36px] md:text-[44px] font-bold font-hanken leading-[1.2] mb-[16px]">
+                    Explore Education <span class="text-secondary">Categories</span>
+                </h2>
+                <p class="text-[#A9B1E0] text-[16px] font-inter max-w-[540px] mx-auto leading-[1.7]">Browse our diverse range of academic disciplines and find the perfect program to shape your future career.</p>
+            </div>
+
+            <!-- Filter Tabs -->
+            <div class="flex flex-wrap items-center justify-center gap-[10px] mb-[50px]" id="cat-tabs">
+                <button data-tab="all" class="cat-tab active-tab px-[20px] py-[9px] rounded-[50px] text-[14px] font-medium font-inter transition-all duration-300">All Fields</button>
+                <button data-tab="science" class="cat-tab px-[20px] py-[9px] rounded-[50px] text-[14px] font-medium font-inter transition-all duration-300">Science & Tech</button>
+                <button data-tab="arts" class="cat-tab px-[20px] py-[9px] rounded-[50px] text-[14px] font-medium font-inter transition-all duration-300">Arts & Design</button>
+                <button data-tab="business" class="cat-tab px-[20px] py-[9px] rounded-[50px] text-[14px] font-medium font-inter transition-all duration-300">Business</button>
+                <button data-tab="health" class="cat-tab px-[20px] py-[9px] rounded-[50px] text-[14px] font-medium font-inter transition-all duration-300">Health & Medicine</button>
+                <button data-tab="law" class="cat-tab px-[20px] py-[9px] rounded-[50px] text-[14px] font-medium font-inter transition-all duration-300">Law & Society</button>
+            </div>
+
+            <!-- Category Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-[24px]" id="cat-grid">
+
+                <!-- Card 1 -->
+                <div class="cat-card group relative bg-white/[0.03] border border-white/[0.07] rounded-[20px] p-[30px] hover:bg-white/[0.07] hover:border-secondary/30 transition-all duration-400 cursor-pointer overflow-hidden" data-cat="science">
+                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none rounded-[20px]" style="background:radial-gradient(circle at 30% 20%,rgba(147,130,255,0.08) 0%,transparent 70%)"></div>
+                    <div class="w-[60px] h-[60px] rounded-[16px] bg-[#9382FF]/10 border border-[#9382FF]/20 flex items-center justify-center mb-[22px] group-hover:bg-[#9382FF]/20 group-hover:scale-110 transition-all duration-300">
+                        <i class="fa-solid fa-flask text-[#9382FF] text-[22px]"></i>
+                    </div>
+                    <h4 class="text-white text-[18px] font-bold font-hanken mb-[8px] group-hover:text-secondary transition-colors duration-300">Science & Technology</h4>
+                    <p class="text-[#A9B1E0] text-[13px] font-inter leading-[1.7] mb-[20px]">Physics, Chemistry, Computer Science, Engineering and cutting-edge research fields.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-[#9382FF] text-[13px] font-semibold font-inter bg-[#9382FF]/10 px-[12px] py-[5px] rounded-[50px]">142 Courses</span>
+                        <div class="w-[34px] h-[34px] rounded-full border border-white/10 flex items-center justify-center text-white/40 group-hover:bg-secondary group-hover:border-secondary group-hover:text-white transition-all duration-300">
+                            <i class="fa-solid fa-arrow-right text-[12px]"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="cat-card group relative bg-white/[0.03] border border-white/[0.07] rounded-[20px] p-[30px] hover:bg-white/[0.07] hover:border-secondary/30 transition-all duration-400 cursor-pointer overflow-hidden" data-cat="arts">
+                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none rounded-[20px]" style="background:radial-gradient(circle at 30% 20%,rgba(255,107,139,0.08) 0%,transparent 70%)"></div>
+                    <div class="w-[60px] h-[60px] rounded-[16px] bg-[#FF6B8B]/10 border border-[#FF6B8B]/20 flex items-center justify-center mb-[22px] group-hover:bg-[#FF6B8B]/20 group-hover:scale-110 transition-all duration-300">
+                        <i class="fa-solid fa-pen-nib text-[#FF6B8B] text-[22px]"></i>
+                    </div>
+                    <h4 class="text-white text-[18px] font-bold font-hanken mb-[8px] group-hover:text-secondary transition-colors duration-300">Arts & Design</h4>
+                    <p class="text-[#A9B1E0] text-[13px] font-inter leading-[1.7] mb-[20px]">Fine Arts, Graphic Design, Architecture, Interior Design and Creative Media studies.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-[#FF6B8B] text-[13px] font-semibold font-inter bg-[#FF6B8B]/10 px-[12px] py-[5px] rounded-[50px]">98 Courses</span>
+                        <div class="w-[34px] h-[34px] rounded-full border border-white/10 flex items-center justify-center text-white/40 group-hover:bg-secondary group-hover:border-secondary group-hover:text-white transition-all duration-300">
+                            <i class="fa-solid fa-arrow-right text-[12px]"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="cat-card group relative bg-white/[0.03] border border-white/[0.07] rounded-[20px] p-[30px] hover:bg-white/[0.07] hover:border-secondary/30 transition-all duration-400 cursor-pointer overflow-hidden" data-cat="business">
+                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none rounded-[20px]" style="background:radial-gradient(circle at 30% 20%,rgba(255,189,122,0.08) 0%,transparent 70%)"></div>
+                    <div class="w-[60px] h-[60px] rounded-[16px] bg-[#FFBD7A]/10 border border-[#FFBD7A]/20 flex items-center justify-center mb-[22px] group-hover:bg-[#FFBD7A]/20 group-hover:scale-110 transition-all duration-300">
+                        <i class="fa-solid fa-chart-line text-[#FFBD7A] text-[22px]"></i>
+                    </div>
+                    <h4 class="text-white text-[18px] font-bold font-hanken mb-[8px] group-hover:text-secondary transition-colors duration-300">Business & Management</h4>
+                    <p class="text-[#A9B1E0] text-[13px] font-inter leading-[1.7] mb-[20px]">MBA, Finance, Marketing, Entrepreneurship and global business strategy programs.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-[#FFBD7A] text-[13px] font-semibold font-inter bg-[#FFBD7A]/10 px-[12px] py-[5px] rounded-[50px]">117 Courses</span>
+                        <div class="w-[34px] h-[34px] rounded-full border border-white/10 flex items-center justify-center text-white/40 group-hover:bg-secondary group-hover:border-secondary group-hover:text-white transition-all duration-300">
+                            <i class="fa-solid fa-arrow-right text-[12px]"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="cat-card group relative bg-white/[0.03] border border-white/[0.07] rounded-[20px] p-[30px] hover:bg-white/[0.07] hover:border-secondary/30 transition-all duration-400 cursor-pointer overflow-hidden" data-cat="health">
+                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none rounded-[20px]" style="background:radial-gradient(circle at 30% 20%,rgba(52,211,153,0.08) 0%,transparent 70%)"></div>
+                    <div class="w-[60px] h-[60px] rounded-[16px] bg-[#34D399]/10 border border-[#34D399]/20 flex items-center justify-center mb-[22px] group-hover:bg-[#34D399]/20 group-hover:scale-110 transition-all duration-300">
+                        <i class="fa-solid fa-stethoscope text-[#34D399] text-[22px]"></i>
+                    </div>
+                    <h4 class="text-white text-[18px] font-bold font-hanken mb-[8px] group-hover:text-secondary transition-colors duration-300">Health & Medicine</h4>
+                    <p class="text-[#A9B1E0] text-[13px] font-inter leading-[1.7] mb-[20px]">Medicine, Nursing, Public Health, Pharmacy and Biomedical Science programs.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-[#34D399] text-[13px] font-semibold font-inter bg-[#34D399]/10 px-[12px] py-[5px] rounded-[50px]">86 Courses</span>
+                        <div class="w-[34px] h-[34px] rounded-full border border-white/10 flex items-center justify-center text-white/40 group-hover:bg-secondary group-hover:border-secondary group-hover:text-white transition-all duration-300">
+                            <i class="fa-solid fa-arrow-right text-[12px]"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="cat-card group relative bg-white/[0.03] border border-white/[0.07] rounded-[20px] p-[30px] hover:bg-white/[0.07] hover:border-secondary/30 transition-all duration-400 cursor-pointer overflow-hidden" data-cat="law">
+                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none rounded-[20px]" style="background:radial-gradient(circle at 30% 20%,rgba(96,165,250,0.08) 0%,transparent 70%)"></div>
+                    <div class="w-[60px] h-[60px] rounded-[16px] bg-[#60A5FA]/10 border border-[#60A5FA]/20 flex items-center justify-center mb-[22px] group-hover:bg-[#60A5FA]/20 group-hover:scale-110 transition-all duration-300">
+                        <i class="fa-solid fa-scale-balanced text-[#60A5FA] text-[22px]"></i>
+                    </div>
+                    <h4 class="text-white text-[18px] font-bold font-hanken mb-[8px] group-hover:text-secondary transition-colors duration-300">Law & Social Science</h4>
+                    <p class="text-[#A9B1E0] text-[13px] font-inter leading-[1.7] mb-[20px]">Law, Political Science, Sociology, Psychology and International Relations degrees.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-[#60A5FA] text-[13px] font-semibold font-inter bg-[#60A5FA]/10 px-[12px] py-[5px] rounded-[50px]">74 Courses</span>
+                        <div class="w-[34px] h-[34px] rounded-full border border-white/10 flex items-center justify-center text-white/40 group-hover:bg-secondary group-hover:border-secondary group-hover:text-white transition-all duration-300">
+                            <i class="fa-solid fa-arrow-right text-[12px]"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="cat-card group relative bg-white/[0.03] border border-white/[0.07] rounded-[20px] p-[30px] hover:bg-white/[0.07] hover:border-secondary/30 transition-all duration-400 cursor-pointer overflow-hidden" data-cat="science">
+                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none rounded-[20px]" style="background:radial-gradient(circle at 30% 20%,rgba(147,130,255,0.08) 0%,transparent 70%)"></div>
+                    <div class="w-[60px] h-[60px] rounded-[16px] bg-[#9382FF]/10 border border-[#9382FF]/20 flex items-center justify-center mb-[22px] group-hover:bg-[#9382FF]/20 group-hover:scale-110 transition-all duration-300">
+                        <i class="fa-solid fa-microchip text-[#9382FF] text-[22px]"></i>
+                    </div>
+                    <h4 class="text-white text-[18px] font-bold font-hanken mb-[8px] group-hover:text-secondary transition-colors duration-300">Computer Science & AI</h4>
+                    <p class="text-[#A9B1E0] text-[13px] font-inter leading-[1.7] mb-[20px]">Software Engineering, Artificial Intelligence, Data Science and Cybersecurity tracks.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-[#9382FF] text-[13px] font-semibold font-inter bg-[#9382FF]/10 px-[12px] py-[5px] rounded-[50px]">203 Courses</span>
+                        <div class="w-[34px] h-[34px] rounded-full border border-white/10 flex items-center justify-center text-white/40 group-hover:bg-secondary group-hover:border-secondary group-hover:text-white transition-all duration-300">
+                            <i class="fa-solid fa-arrow-right text-[12px]"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="cat-card group relative bg-white/[0.03] border border-white/[0.07] rounded-[20px] p-[30px] hover:bg-white/[0.07] hover:border-secondary/30 transition-all duration-400 cursor-pointer overflow-hidden" data-cat="arts">
+                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none rounded-[20px]" style="background:radial-gradient(circle at 30% 20%,rgba(255,107,139,0.08) 0%,transparent 70%)"></div>
+                    <div class="w-[60px] h-[60px] rounded-[16px] bg-[#FF6B8B]/10 border border-[#FF6B8B]/20 flex items-center justify-center mb-[22px] group-hover:bg-[#FF6B8B]/20 group-hover:scale-110 transition-all duration-300">
+                        <i class="fa-solid fa-film text-[#FF6B8B] text-[22px]"></i>
+                    </div>
+                    <h4 class="text-white text-[18px] font-bold font-hanken mb-[8px] group-hover:text-secondary transition-colors duration-300">Media & Communication</h4>
+                    <p class="text-[#A9B1E0] text-[13px] font-inter leading-[1.7] mb-[20px]">Journalism, Mass Communication, Film Production and Digital Media programs.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-[#FF6B8B] text-[13px] font-semibold font-inter bg-[#FF6B8B]/10 px-[12px] py-[5px] rounded-[50px]">65 Courses</span>
+                        <div class="w-[34px] h-[34px] rounded-full border border-white/10 flex items-center justify-center text-white/40 group-hover:bg-secondary group-hover:border-secondary group-hover:text-white transition-all duration-300">
+                            <i class="fa-solid fa-arrow-right text-[12px]"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8 — CTA -->
+                <div class="cat-card group relative rounded-[20px] p-[30px] overflow-hidden cursor-pointer" data-cat="all" style="background:linear-gradient(135deg,#360185 0%,#8F0177 50%,#FF0051 100%)">
+                    <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-400 pointer-events-none rounded-[20px]" style="background:radial-gradient(circle at 70% 80%,rgba(255,255,255,0.12) 0%,transparent 60%)"></div>
+                    <div class="w-[60px] h-[60px] rounded-[16px] bg-white/20 flex items-center justify-center mb-[22px] group-hover:scale-110 transition-transform duration-300">
+                        <i class="fa-solid fa-graduation-cap text-white text-[22px]"></i>
+                    </div>
+                    <h4 class="text-white text-[18px] font-bold font-hanken mb-[8px]">View All Programs</h4>
+                    <p class="text-white/70 text-[13px] font-inter leading-[1.7] mb-[24px]">Discover 800+ academic programs across all disciplines at top-ranked universities.</p>
+                    <a href="#" class="inline-flex items-center gap-[8px] text-white text-[14px] font-semibold font-inter group-hover:gap-[12px] transition-all duration-300">
+                        Explore All <i class="fa-solid fa-arrow-right text-[12px]"></i>
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Bottom Stats Bar -->
+            <div class="mt-[60px] grid grid-cols-2 md:grid-cols-4 gap-[1px] bg-white/[0.06] rounded-[20px] overflow-hidden">
+                <div class="bg-[#050520] px-[16px] sm:px-[24px] md:px-[30px] py-[20px] sm:py-[24px] md:py-[28px] flex items-center gap-[12px] sm:gap-[16px]">
+                    <div class="w-[40px] h-[40px] sm:w-[48px] sm:h-[48px] rounded-[12px] sm:rounded-[14px] bg-secondary/10 flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-building-columns text-secondary text-[15px] sm:text-[18px]"></i>
+                    </div>
+                    <div>
+                        <p class="text-white text-[20px] sm:text-[24px] md:text-[26px] font-bold font-hanken leading-none">48+</p>
+                        <p class="text-[#A9B1E0] text-[11px] sm:text-[13px] font-inter mt-[4px]">Universities</p>
+                    </div>
+                </div>
+                <div class="bg-[#050520] px-[16px] sm:px-[24px] md:px-[30px] py-[20px] sm:py-[24px] md:py-[28px] flex items-center gap-[12px] sm:gap-[16px]">
+                    <div class="w-[40px] h-[40px] sm:w-[48px] sm:h-[48px] rounded-[12px] sm:rounded-[14px] bg-[#FF6B8B]/10 flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-book-open text-[#FF6B8B] text-[15px] sm:text-[18px]"></i>
+                    </div>
+                    <div>
+                        <p class="text-white text-[20px] sm:text-[24px] md:text-[26px] font-bold font-hanken leading-none">800+</p>
+                        <p class="text-[#A9B1E0] text-[11px] sm:text-[13px] font-inter mt-[4px]">Total Programs</p>
+                    </div>
+                </div>
+                <div class="bg-[#050520] px-[16px] sm:px-[24px] md:px-[30px] py-[20px] sm:py-[24px] md:py-[28px] flex items-center gap-[12px] sm:gap-[16px]">
+                    <div class="w-[40px] h-[40px] sm:w-[48px] sm:h-[48px] rounded-[12px] sm:rounded-[14px] bg-[#FFBD7A]/10 flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-users text-[#FFBD7A] text-[15px] sm:text-[18px]"></i>
+                    </div>
+                    <div>
+                        <p class="text-white text-[20px] sm:text-[24px] md:text-[26px] font-bold font-hanken leading-none">120K+</p>
+                        <p class="text-[#A9B1E0] text-[11px] sm:text-[13px] font-inter mt-[4px]">Enrolled Students</p>
+                    </div>
+                </div>
+                <div class="bg-[#050520] px-[16px] sm:px-[24px] md:px-[30px] py-[20px] sm:py-[24px] md:py-[28px] flex items-center gap-[12px] sm:gap-[16px]">
+                    <div class="w-[40px] h-[40px] sm:w-[48px] sm:h-[48px] rounded-[12px] sm:rounded-[14px] bg-[#34D399]/10 flex items-center justify-center shrink-0">
+                        <i class="fa-solid fa-certificate text-[#34D399] text-[15px] sm:text-[18px]"></i>
+                    </div>
+                    <div>
+                        <p class="text-white text-[20px] sm:text-[24px] md:text-[26px] font-bold font-hanken leading-none">95%</p>
+                        <p class="text-[#A9B1E0] text-[11px] sm:text-[13px] font-inter mt-[4px]">Job Placement</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- University Category Section End -->
 
     </main>
     <!-- Instagram Section Start -->

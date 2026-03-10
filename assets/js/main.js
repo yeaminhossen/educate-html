@@ -377,6 +377,18 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         }, { passive: true });
 
+        const stickyHeader = document.querySelector('header');
+        if (stickyHeader) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 10) {
+                    
+                    stickyHeader.classList.add('scrolled-header');
+                } else {
+                    stickyHeader.classList.remove('scrolled-header');
+                }
+            }, { passive: true });
+        }
+
         // Initial check
         updateScrollProgress();
 
@@ -1110,5 +1122,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
         setHeroActive(0);
         hThumbs.forEach((t, i) => t.addEventListener('click', () => setHeroActive(i)));
+    }
+
+    // University Category Filter Tabs
+    const catTabs = document.querySelectorAll('.cat-tab');
+    const catCards = document.querySelectorAll('.cat-card');
+    if (catTabs.length && catCards.length) {
+        catTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                catTabs.forEach(t => t.classList.remove('active-tab'));
+                tab.classList.add('active-tab');
+                const filter = tab.dataset.tab;
+                catCards.forEach(card => {
+                    const show = filter === 'all' || card.dataset.cat === filter;
+                    card.style.opacity = show ? '1' : '0.25';
+                    card.style.transform = show ? 'scale(1)' : 'scale(0.96)';
+                    card.style.pointerEvents = show ? '' : 'none';
+                });
+            });
+        });
     }
 });
