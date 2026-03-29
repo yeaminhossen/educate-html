@@ -34,6 +34,8 @@ document.addEventListener('DOMContentLoaded', function () {
     if (mobileMenuBtn && mobileMenu) {
         mobileMenuBtn.addEventListener('click', function () {
             mobileMenu.classList.toggle('hidden');
+            const open = !mobileMenu.classList.contains('hidden');
+            mobileMenuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
         });
     }
 
@@ -114,7 +116,6 @@ document.addEventListener('DOMContentLoaded', function () {
             breakpoints: {
                 640: { slidesPerView: 2 },
                 1024: { slidesPerView: 3 },
-                1320: { slidesPerView: 4, centeredSlides: true },
             },
         });
     };
@@ -500,7 +501,40 @@ document.addEventListener('DOMContentLoaded', function () {
     if (cartBtn && cartSidebar && cartCloseBtn && cartBackdrop) {
         const cartHeader = document.getElementById('cart-header');
         const cartFooter = document.getElementById('cart-footer');
-        const cartItems = document.querySelectorAll('.cart-item');
+        const cartItemsContainer = document.getElementById('cart-items-container');
+        const cartItemCountEl = document.getElementById('cart-item-count');
+        const cartSubtotalEl = document.getElementById('cart-subtotal');
+        const cartEmptyMsg = document.getElementById('cart-empty-msg');
+        const cartCheckoutBtn = document.getElementById('cart-checkout-btn');
+
+        const getCartRows = () => (cartItemsContainer ? cartItemsContainer.querySelectorAll('.cart-item') : []);
+
+        const updateCartTotals = () => {
+            if (!cartItemsContainer) return;
+            const rows = cartItemsContainer.querySelectorAll('.cart-item');
+            let subtotal = 0;
+            let qtySum = 0;
+            rows.forEach((row) => {
+                const unit = Number(row.dataset.unitPrice) || 0;
+                const qtyEl = row.querySelector('.cart-item-qty');
+                let qty = parseInt(qtyEl && qtyEl.textContent, 10);
+                if (Number.isNaN(qty) || qty < 1) qty = 1;
+                qtySum += qty;
+                subtotal += unit * qty;
+                const lineTotalEl = row.querySelector('.cart-item-line-total');
+                if (lineTotalEl) lineTotalEl.textContent = '$' + unit * qty;
+                const minusBtn = row.querySelector('.cart-item-qty-minus');
+                if (minusBtn) minusBtn.disabled = qty <= 1;
+            });
+            if (cartItemCountEl) cartItemCountEl.textContent = String(qtySum);
+            if (cartSubtotalEl) cartSubtotalEl.textContent = '$' + subtotal;
+            if (cartEmptyMsg) cartEmptyMsg.classList.toggle('hidden', rows.length > 0);
+            if (cartCheckoutBtn) {
+                const empty = rows.length === 0;
+                cartCheckoutBtn.classList.toggle('pointer-events-none', empty);
+                cartCheckoutBtn.classList.toggle('opacity-50', empty);
+            }
+        };
 
         const openCart = () => {
             // Calculate scrollbar width to prevent "dhakha" (jerk)
@@ -516,6 +550,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             cartSidebar.classList.remove('translate-x-full', 'invisible');
             cartSidebar.classList.add('translate-x-0');
+            cartSidebar.setAttribute('aria-hidden', 'false');
             cartBackdrop.classList.remove('opacity-0', 'invisible');
             cartBackdrop.classList.add('opacity-100');
 
@@ -525,7 +560,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 cartHeader.classList.add('opacity-100', 'translate-y-0');
             }
 
-            cartItems.forEach((item) => {
+            getCartRows().forEach((item) => {
                 item.classList.remove('opacity-0', 'translate-y-4');
                 item.classList.add('opacity-100', 'translate-y-0');
             });
@@ -539,6 +574,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const closeCart = () => {
             cartSidebar.classList.remove('translate-x-0');
             cartSidebar.classList.add('translate-x-full');
+            cartSidebar.setAttribute('aria-hidden', 'true');
             cartBackdrop.classList.remove('opacity-100');
             cartBackdrop.classList.add('opacity-0', 'invisible');
 
@@ -548,7 +584,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 cartHeader.classList.remove('opacity-100', 'translate-y-0');
             }
 
-            cartItems.forEach((item) => {
+            getCartRows().forEach((item) => {
                 item.classList.add('opacity-0 ', 'translate-y-4');
                 item.classList.remove('opacity-100', 'translate-y-0');
             });
@@ -578,12 +614,56 @@ document.addEventListener('DOMContentLoaded', function () {
         cartCloseBtn.addEventListener('click', closeCart);
         cartBackdrop.addEventListener('click', closeCart);
 
-        // Close on Escape key
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
+            if (e.key === 'Escape' && cartSidebar.classList.contains('translate-x-0')) {
                 closeCart();
             }
         });
+
+        if (cartItemsContainer) {
+            cartItemsContainer.addEventListener('click', (e) => {
+                const removeBtn = e.target.closest('.cart-item-remove');
+                if (removeBtn) {
+                    e.preventDefault();
+                    const row = removeBtn.closest('.cart-item');
+                    if (row) row.remove();
+                    updateCartTotals();
+                    return;
+                }
+                const plus = e.target.closest('.cart-item-qty-plus');
+                if (plus) {
+                    e.preventDefault();
+                    const row = plus.closest('.cart-item');
+                    if (!row) return;
+                    const qtyEl = row.querySelector('.cart-item-qty');
+                    let q = parseInt(qtyEl && qtyEl.textContent, 10) || 1;
+                    if (q < 99) qtyEl.textContent = String(q + 1);
+                    updateCartTotals();
+                    return;
+                }
+                const minus = e.target.closest('.cart-item-qty-minus');
+                if (minus) {
+                    e.preventDefault();
+                    if (minus.disabled) return;
+                    const row = minus.closest('.cart-item');
+                    if (!row) return;
+                    const qtyEl = row.querySelector('.cart-item-qty');
+                    let q = parseInt(qtyEl && qtyEl.textContent, 10) || 1;
+                    if (q > 1) qtyEl.textContent = String(q - 1);
+                    updateCartTotals();
+                }
+            });
+        }
+
+        if (cartCheckoutBtn) {
+            cartCheckoutBtn.addEventListener('click', (e) => {
+                if (!cartItemsContainer || cartItemsContainer.querySelectorAll('.cart-item').length === 0) {
+                    e.preventDefault();
+                }
+            });
+        }
+
+        updateCartTotals();
     }
 
     // User Profile Dropdown Toggle
@@ -595,9 +675,11 @@ document.addEventListener('DOMContentLoaded', function () {
             if (show) {
                 userProfileDropdown.classList.remove('opacity-0', 'invisible', 'translate-y-4');
                 userProfileDropdown.classList.add('opacity-100', 'visible', 'translate-y-0');
+                userProfileBtn.setAttribute('aria-expanded', 'true');
             } else {
                 userProfileDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
                 userProfileDropdown.classList.add('opacity-0', 'invisible', 'translate-y-4');
+                userProfileBtn.setAttribute('aria-expanded', 'false');
             }
         };
 
@@ -607,14 +689,12 @@ document.addEventListener('DOMContentLoaded', function () {
             toggleDropdown(!isOpen);
         });
 
-        // Close when clicking outside
         document.addEventListener('click', (e) => {
             if (!userProfileDropdown.contains(e.target) && e.target !== userProfileBtn) {
                 toggleDropdown(false);
             }
         });
 
-        // Close on Escape key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape') {
                 toggleDropdown(false);
@@ -1141,5 +1221,35 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
             });
         });
+    }
+
+    const pricingToggle = document.querySelector('[data-pricing-toggle]');
+    if (pricingToggle) {
+        const monthlyBtn = pricingToggle.querySelector('[data-billing="monthly"]');
+        const yearlyBtn = pricingToggle.querySelector('[data-billing="yearly"]');
+        const note = pricingToggle.querySelector('[data-pricing-note]');
+        const amounts = document.querySelectorAll('#pricing [data-price-amount]');
+        const activeCls = ['gradient-color-primary', 'text-white', 'shadow-[0px_4px_22px_rgba(178,110,247,0.28)]'];
+        const paint = (yearly) => {
+            if (!monthlyBtn || !yearlyBtn) return;
+            monthlyBtn.setAttribute('aria-pressed', yearly ? 'false' : 'true');
+            yearlyBtn.setAttribute('aria-pressed', yearly ? 'true' : 'false');
+            activeCls.forEach((c) => {
+                monthlyBtn.classList.toggle(c, !yearly);
+                yearlyBtn.classList.toggle(c, yearly);
+            });
+            monthlyBtn.classList.toggle('text-white/55', yearly);
+            monthlyBtn.classList.toggle('hover:text-white/90', yearly);
+            yearlyBtn.classList.toggle('text-white/55', !yearly);
+            yearlyBtn.classList.toggle('hover:text-white/90', !yearly);
+            amounts.forEach((el) => {
+                el.textContent = yearly ? el.getAttribute('data-yearly') : el.getAttribute('data-monthly');
+            });
+            if (note) {
+                note.textContent = yearly ? 'Billed annually (20% off). Cancel anytime.' : 'Billed monthly. Cancel anytime.';
+            }
+        };
+        monthlyBtn.addEventListener('click', () => paint(false));
+        yearlyBtn.addEventListener('click', () => paint(true));
     }
 });
