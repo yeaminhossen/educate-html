@@ -60,7 +60,7 @@
 
     <div id="nav-overlay" class="fixed inset-0 bg-[#050520]/60 backdrop-blur-[6px] opacity-0 invisible transition-all duration-500 z-[45] pointer-events-none"></div>
 
-    <header class="bg-transparent sticky top-0 z-50 mb-[-110px] w-full min-w-0 overflow-x-hidden transition-all duration-300">
+    <header class="bg-transparent sticky top-0 z-50 mb-[-110px] w-full min-w-0 transition-all duration-300">
         <div class="max-w-[1320px] bg-[#11112A] rounded-bl-[20px] rounded-br-[20px] mx-auto px-3 sm:px-4 relative pt-[10px] pb-[10px] min-w-0">
             <div class="flex items-center justify-between gap-2 min-w-0 h-[70px]">
                 <!-- Logo Section -->
@@ -488,13 +488,33 @@
                 <!-- Action Section -->
                 <div class="flex items-center shrink-0 gap-2 sm:gap-3 xl:gap-6 min-w-0">
                     <!-- Language Switcher (desktop xl+) -->
-                    <div class="hidden xl:flex items-center gap-2 cursor-pointer group shrink-0">
-                        <img src="https://flagcdn.com/w20/us.png" alt="English"
-                            class="w-5 h-5 rounded-full object-cover">
-                        <span
-                            class="text-white/90 text-[15px] font-medium font-inter group-hover:text-secondary transition-all">English</span>
-                        <i
-                            class="fa-solid fa-angle-down text-white/40 text-[10px] group-hover:text-secondary transition-all"></i>
+                    <div class="relative hidden xl:block shrink-0">
+                        <button id="language-switcher-btn" type="button" aria-expanded="false" aria-haspopup="true"
+                            aria-controls="language-switcher-dropdown" aria-label="Language, English"
+                            class="inline-flex items-center gap-2 rounded-lg px-2 py-2 text-white/90 hover:bg-white/5 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-[#11112A]">
+                            <img id="language-switcher-flag" src="https://flagcdn.com/w20/us.png" alt="English" class="w-5 h-5 rounded-full object-cover" width="20" height="20">
+                            <span id="language-switcher-label" class="text-[15px] font-medium font-inter">English</span>
+                            <i class="fa-solid fa-angle-down text-white/40 text-[10px] transition-colors" aria-hidden="true"></i>
+                        </button>
+                        <nav id="language-switcher-dropdown" aria-label="Language options"
+                            class="absolute top-full right-0 mt-3 w-[250px] rounded-2xl border border-white/[0.08] bg-[#0D0D27] shadow-[0px_24px_60px_rgba(0,0,0,0.55)] p-2 opacity-0 invisible translate-y-4 transition-all duration-300 ease-out z-[100]">
+                            <a href="#" data-lang-flag="https://flagcdn.com/w20/us.png" data-lang-label="English" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-[#D6DAF0] hover:bg-white/[0.05] hover:text-secondary transition-colors text-[14px] font-medium font-inter">
+                                <img src="https://flagcdn.com/w20/us.png" alt="English" class="w-5 h-5 rounded-full object-cover" width="20" height="20">
+                                <span>English</span>
+                            </a>
+                            <a href="#" data-lang-flag="https://flagcdn.com/w20/bd.png" data-lang-label="Bangla" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-[#D6DAF0] hover:bg-white/[0.05] hover:text-secondary transition-colors text-[14px] font-medium font-inter">
+                                <img src="https://flagcdn.com/w20/bd.png" alt="Bangla" class="w-5 h-5 rounded-full object-cover" width="20" height="20">
+                                <span>Bangla</span>
+                            </a>
+                            <a href="#" data-lang-flag="https://flagcdn.com/w20/sa.png" data-lang-label="Arabic" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-[#D6DAF0] hover:bg-white/[0.05] hover:text-secondary transition-colors text-[14px] font-medium font-inter">
+                                <img src="https://flagcdn.com/w20/sa.png" alt="Arabic" class="w-5 h-5 rounded-full object-cover" width="20" height="20">
+                                <span>Arabic</span>
+                            </a>
+                            <a href="#" data-lang-flag="https://flagcdn.com/w20/es.png" data-lang-label="Spanish" class="flex items-center gap-3 rounded-xl px-3 py-2.5 text-[#D6DAF0] hover:bg-white/[0.05] hover:text-secondary transition-colors text-[14px] font-medium font-inter">
+                                <img src="https://flagcdn.com/w20/es.png" alt="Spanish" class="w-5 h-5 rounded-full object-cover" width="20" height="20">
+                                <span>Spanish</span>
+                            </a>
+                        </nav>
                     </div>
 
                     <!-- Cart Icon -->
@@ -513,7 +533,7 @@
                             aria-controls="user-profile-dropdown" aria-label="Account, Admin"
                             class="hidden md:inline-flex items-center gap-0 xl:gap-2 rounded-lg px-1 py-1 -mx-1 text-secondary text-[15px] xl:text-[16px] font-medium font-inter transition-all duration-300 cursor-pointer hover:bg-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-[#11112A]">
                             <i class="fa-regular fa-user text-[17px] xl:text-[16px]" aria-hidden="true"></i>
-                            <span class="hidden xl:inline">Admin</span>
+                            <span class="inline">Admin</span>
                         </button>
 
                         <nav id="user-profile-dropdown" aria-label="Account"
@@ -524,7 +544,7 @@
                                     <div class="relative shrink-0">
                                         <div
                                             class="w-[52px] h-[52px] rounded-full overflow-hidden ring-2 ring-secondary/35 ring-offset-2 ring-offset-[#13132E]">
-                                            <img src="assets/images/team/team-1.webp" alt=""
+                                            <img src="assets/images/team/teacher5.webp" alt=""
                                                 class="w-full h-full object-cover" width="52" height="52">
                                         </div>
                                         <span
@@ -653,11 +673,11 @@
             <div id="mobile-menu" class="hidden xl:hidden pb-6 border-t border-white/5">
                 <div class="flex flex-col pt-4">
                     <p class="text-[10px] font-bold font-hanken uppercase tracking-[0.12em] text-white/35 mb-2">Language</p>
-                    <button type="button" aria-label="Language, English"
+                    <button type="button" id="mobile-language-switcher-display" aria-label="Language, English"
                         class="flex w-full items-center justify-between gap-2 rounded-xl border border-white/[0.08] bg-white/[0.03] px-3 py-3 text-left cursor-pointer group hover:border-secondary/30 transition-colors">
                         <span class="flex items-center gap-2 min-w-0">
-                            <img src="https://flagcdn.com/w20/us.png" alt="" class="w-5 h-5 rounded-full object-cover shrink-0" width="20" height="20">
-                            <span class="text-white/90 text-[15px] font-medium font-inter truncate">English</span>
+                            <img id="mobile-language-switcher-flag" src="https://flagcdn.com/w20/us.png" alt="" class="w-5 h-5 rounded-full object-cover shrink-0" width="20" height="20">
+                            <span id="mobile-language-switcher-label" class="text-white/90 text-[15px] font-medium font-inter truncate">English</span>
                         </span>
                         <i class="fa-solid fa-angle-down text-white/40 text-[10px] group-hover:text-secondary transition-colors shrink-0" aria-hidden="true"></i>
                     </button>
@@ -680,54 +700,54 @@
     <main>
         <!-- Hero Section Start -->
         <section id="hero"
-            class="bg-primary pt-[150px] sm:pt-[180px] md:pt-[210px] lg:pt-[230px] pb-[60px] sm:pb-[80px] lg:pb-[100px] relative overflow-hidden">
+            class="bg-primary pt-[230px] pb-[60px] sm:pt-[180px] md:pb-[100px] relative overflow-hidden  ">
             <!-- Shape Background -->
-            <div class="absolute top-[80px] sm:top-[120px] md:top-[150px] left-0 pointer-events-none z-0 max-w-[min(100%,280px)] sm:max-w-none">
-                <img src="assets/images/hero/shape.png" alt="Shape" class="w-full h-auto max-w-full sm:w-auto sm:h-auto">
+            <div class="absolute top-[150px] left-0 pointer-events-none z-0">
+                <img src="assets/images/hero/shape.png" alt="Shape" class="w-auto h-auto">
             </div>
 
             <!-- Background Decorations -->
             <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
-                <div class="absolute top-[20%] left-[-5%] w-[min(400px,90vw)] h-[min(400px,90vw)] max-w-[400px] max-h-[400px] bg-[#B26EF7] blur-[150px] rounded-full">
+                <div class="absolute top-[20%] left-[-5%] w-[400px] h-[400px] bg-[#B26EF7] blur-[150px] rounded-full">
                 </div>
                 <div
-                    class="absolute bottom-[10%] right-[-5%] w-[min(400px,90vw)] h-[min(400px,90vw)] max-w-[400px] max-h-[400px] bg-[#FF71BF] blur-[150px] rounded-full">
+                    class="absolute bottom-[10%] right-[-5%] w-[400px] h-[400px] bg-[#FF71BF] blur-[150px] rounded-full">
                 </div>
             </div>
 
             <div class="max-w-[1320px] mx-auto px-4 relative z-10">
-                <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-12 lg:gap-[60px] items-center">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-[60px] items-center">
                     <!-- Left Content -->
-                    <div class="lg:col-span-8 min-w-0 text-center sm:text-left">
+                    <div class="lg:col-span-8">
                         <span
-                            class="inline-flex items-center gap-2.5 px-5 py-2 rounded-[50px] bg-white/5 border border-white/10 text-secondary text-[14px] font-semibold font-inter mb-6 md:mb-8">
+                            class="inline-flex items-center gap-2.5 px-5 py-2 rounded-[50px] bg-white/5 border border-white/10 text-secondary text-[14px] font-semibold font-inter mb-8">
                             <i class="fa-solid fa-user-graduate text-secondary"></i>
                             Welcome To Online Education
                         </span>
 
-                        <h1 class="text-[#D6DAF0] text-[32px] sm:text-[44px] md:text-[65px] font-bold font-hanken leading-[1.15] sm:leading-[1.2] md:leading-[80px] mb-6 md:mb-8">
+ <h1 class="text-[#D6DAF0] text-[32px] sm:text-[40px] md:text-[65px] font-bold font-hanken leading-[42px] sm:leading-[52px] md:leading-[80px] mb-6 sm:mb-8">
                             Start learning from the world’s <span
                                 class="gradient-color-primary bg-clip-text text-transparent font-semibold">Best
                                 Sites</span>
                         </h1>
 
-                        <p class="text-[#D6DAF0] text-[16px] sm:text-[18px] leading-[1.7] font-inter mb-8 sm:mb-10 md:mb-12 max-w-[520px] mx-auto sm:mx-0">
+                        <p class="text-[#D6DAF0] text-[18px] leading-[1.7] font-inter mb-12 max-w-[520px]">
                             Education is the most powerful weapon which you can to change leadership is not about a
                             title or a designation it's about.
                         </p>
 
                         <!-- Search Box -->
-                        <div class="relative max-w-[480px] mb-10 md:mb-14 mx-auto sm:mx-0 flex flex-col gap-3 sm:block">
+                        <div class="relative max-w-[480px] mb-14">
                             <input type="text" placeholder="What do you want to learn?.."
-                                class="w-full h-[56px] sm:h-[66px] bg-[#11112D] border border-white/10 rounded-[50px] px-5 sm:px-8 pr-5 sm:pr-[150px] text-white text-[15px] sm:text-base placeholder:text-[#D6DAF0] focus:outline-none focus:border-secondary/50 transition-all duration-300 ease-in-out font-inter">
-                            <button type="button"
-                                class="relative sm:absolute sm:right-[6px] sm:top-[6px] w-full sm:w-auto h-12 sm:h-[54px] px-6 sm:px-8 rounded-[50px] gradient-color-primary text-white font-semibold font-hanken flex items-center justify-center gap-2 hover:shadow-[0px_10px_25px_rgba(178,110,247,0.4)] sm:hover:-translate-y-0.5 transition-all duration-500 ease-in-out border-b-2 border-primary/29">
+                                class="w-full h-[66px] bg-[#11112D] border border-white/10 rounded-[50px] px-8 text-white placeholder:text-[#D6DAF0]  focus:outline-none focus:border-secondary/50 transition-all duration-300 ease-in-out font-inter">
+                            <button
+                                class="absolute right-[6px] top-[6px] h-[54px] px-8 rounded-[50px] gradient-color-primary text-white font-semibold font-hanken flex items-center gap-2 hover:shadow-[0px_10px_25px_rgba(178,110,247,0.4)] hover:-translate-y-0.5 transition-all duration-500 ease-in-out border-b-2 border-primary/29">
                                 Search <i class="fa-solid fa-magnifying-glass text-[14px]"></i>
                             </button>
                         </div>
 
                         <!-- Stats -->
-                        <div class="flex flex-wrap items-center justify-center sm:justify-start gap-8 sm:gap-10 md:gap-16">
+                        <div class="flex flex-wrap items-center gap-10 md:gap-16">
                             <div class="flex items-center gap-4">
                                 <div
                                     class="w-[54px] h-[54px] rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-secondary text-[20px]">
@@ -754,25 +774,25 @@
                     </div>
 
                     <!-- Right Image Area -->
-                    <div class="relative lg:col-span-4 w-full max-w-[400px] mx-auto lg:max-w-none lg:mx-0 mt-4 sm:mt-6 lg:mt-0">
+                    <div class="relative lg:col-span-4">
                         <!-- Dots Shape -->
-                        <div class="absolute -top-[26px] -left-[25px] z-0 max-lg:scale-90 max-lg:-left-3 pointer-events-none">
-                            <img src="assets/images/hero/dots.png" alt="" class="max-w-[min(100%,200px)] lg:max-w-none">
+                        <div class="absolute -top-[26px] -left-[25px] z-0">
+                            <img src="assets/images/hero/dots.png" alt="dots">
                         </div>
                         <div
-                            class="relative z-10 rounded-[24px] overflow-hidden border-[6px] border-white/10 shadow-2xl py-[8px] px-[8px] bg-[#0F102A] w-full">
+                            class="relative z-10 rounded-[24px] overflow-hidden border-[6px] border-white/ shadow-2xl py-[8px] px-[8px] bg-[#0F102A]">
                             <img src="assets/images/hero/image.webp" alt="Student learning online"
-                                class="w-full max-w-[400px] mx-auto aspect-[5/6] object-cover rounded-[8px] h-auto lg:w-[400px] lg:h-[480px] lg:max-w-[400px]">
+                                class="w-[400px] h-[480px] object-cover rounded-[8px]">
                         </div>
 
                         <!-- Transparent Shape -->
-                        <div class="hidden xl:block absolute -right-[120px] top-1/2 -translate-y-1/2 -z-10 pointer-events-none">
-                            <img src="assets/images/hero/transfarant-shape.png" alt="" class="max-w-[min(280px,40vw)]">
+                        <div class="absolute -right-[120px] top-1/2 -translate-y-1/2 -z-10">
+                            <img src="assets/images/hero/transfarant-shape.png" alt="shape">
                         </div>
 
                         <!-- Floating Card -->
                         <div
-                            class="absolute left-1/2 -translate-x-1/2 bottom-[-8px] sm:bottom-4 md:bottom-8 lg:bottom-[100px] lg:left-[-100px] lg:translate-x-0 bg-[#0F102A]/90 border border-white/10 backdrop-blur-[20px] rounded-[12px] pl-[20px] pt-[15px] pb-[14px] shadow-[0px_20px_50px_rgba(0,0,0,0.5)] transition-all duration-500 max-lg:hover:-translate-y-0 lg:hover:-translate-y-2 hover:border-white group w-[min(262px,calc(100vw-2rem))] h-[124px] z-20">
+                            class="absolute bottom-[100px] left-1/2 -translate-x-1/2 md:left-[35px] md:translate-x-0 bg-[#0F102A]/90 border border-white/10 backdrop-blur-[20px] rounded-[12px] pl-[20px] pt-[15px] pb-[14px] shadow-[0px_20px_50px_rgba(0,0,0,0.5)] transition-all duration-500 hover:-translate-y-2 hover:border-white group w-[262px] h-[124px] z-20">
                             <!-- Background Curved Lines -->
                             <div class="absolute top-0 right-0 h-full  pointer-events-none px-[14px] pl-[20px]">
                                 <img src="assets/images/faq/card-shape.png" alt="" class="w-full h-full object-cover">
@@ -880,7 +900,7 @@
 
         <!-- Major Partners Section Start -->
         <section id="partners"
-            class="bg-primary py-20 md:py-24 relative overflow-hidden  ">
+            class="bg-primary py-[60px] md:py-24 relative overflow-hidden  ">
             <!-- Background Decoration -->
             <div
                 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-secondary/5 blur-[120px] rounded-full pointer-events-none">
@@ -892,10 +912,10 @@
                     <span class="inline-flex items-center justify-center gap-2 border border-white/10 rounded-[50px] px-[25px] py-2.5 text-[14px] font-semibold mb-4" style="background: linear-gradient(180deg, #1A1A35 0%, #0F102A 100%)">
                         <span class="text-[#D6DAF0] ">Our Partners</span>
                     </span>
-                    <h2 class="text-[#D6DAF0]  text-[44px] font-bold font-hanken leading-tight mb-4">
+                    <h2 class="text-[#D6DAF0] text-[30px] sm:text-[36px] md:text-[44px] font-bold font-hanken leading-tight mb-4">
                         Building The Future of <span class="gradient-color-primary bg-clip-text text-transparent">Education</span>
                     </h2>
-                    <p class="text-[#D6DAF0] text-[16px] md:text-[18px] font-inter max-w-[670px] mx-auto">
+                    <p class="text-[#D6DAF0] text-[14px] sm:text-[16px] md:text-[18px] font-inter max-w-[670px] mx-auto">
                         Through strategic partnerships with educational institutions, we create impactful learning experiences that shape tomorrow’s leaders.
                     </p>
                 </div>
@@ -992,7 +1012,7 @@
         </section>
         <!-- Major Partners Section End -->
 
-        <section id="why-choose" class="bg-primary py-20 md:py-24 relative overflow-hidden">
+        <section id="why-choose" class="bg-primary py-[60px] md:py-24 relative overflow-hidden">
             <div
                 class="pointer-events-none absolute bottom-0 right-0 w-[320px] h-[320px] bg-[#FF71BF] opacity-10 blur-[120px] rounded-full">
             </div>
@@ -1004,11 +1024,11 @@
                         <i class="fa-solid fa-shield-halved text-[#D6DAF0]"></i>
                         <span class="text-[#D6DAF0]">Why Educate</span>
                     </span>
-                    <h2 class="text-[#D6DAF0] text-[36px] md:text-[44px] font-bold font-hanken leading-tight mb-4">
+                    <h2 class="text-[#D6DAF0] text-[30px] sm:text-[36px] md:text-[44px] font-bold font-hanken leading-tight mb-4">
                         Built for Serious<br>
                         <span class="gradient-color-primary bg-clip-text text-transparent">Online Learners</span>
                     </h2>
-                    <p class="text-[#D6DAF0] text-[15px] font-inter leading-relaxed">
+                    <p class="text-[#D6DAF0] text-[14px] sm:text-[15px] md:text-[16px] font-inter leading-relaxed">
                         Structured paths, mentor support, and outcomes you can show employers or clients.
                     </p>
                 </div>
@@ -1046,7 +1066,7 @@
 
         <!-- Course categories -->
         <section id="categories"
-            class="bg-primary pt-12 md:pt-16">
+            class="bg-primary py-[60px] md:py-16">
             <div class="max-w-[1320px] mx-auto px-4">
                 <div class="text-center mb-12 md:mb-16">
                     <span
@@ -1055,7 +1075,7 @@
                         <i class="fa-solid fa-graduation-cap text-[#D6DAF0] "></i>
                         <span class="text-[#D6DAF0] ">Start Learning Today</span>
                     </span>
-                    <h2 class="text-[#D6DAF0]  text-[44px] font-bold font-hanken leading-tight mb-4">
+                    <h2 class="text-[#D6DAF0] text-[30px] sm:text-[36px] md:text-[44px] font-bold font-hanken leading-tight mb-4">
                         Master In-Demand Digital<br>
                         <span class="gradient-color-primary bg-clip-text text-transparent">Skills</span>
                     </h2>
@@ -1258,9 +1278,9 @@
         </section>
 
         <!-- Courses -->
-        <section id="courses" class="bg-primary py-20 md:py-24 pt-12">
+        <section id="courses" class="bg-primary py-[60px] md:py-24">
             <div class="max-w-[1820px] mx-auto px-4">
-                <div class="relative overflow-hidden rounded-[20px] bg-[#160A35] bg-no-repeat bg-center bg-cover px-5 py-12 md:px-10 md:py-16 before:pointer-events-none before:content-[''] before:absolute before:top-[-120px] before:left-[-120px] before:w-[260px] before:h-[260px] before:bg-[#B26EF7] before:opacity-25 before:blur-[110px] before:rounded-full after:pointer-events-none after:content-[''] after:absolute after:bottom-[-120px] after:right-[-120px] after:w-[260px] after:h-[260px] after:bg-[#FF71BF] after:opacity-20 after:blur-[110px] after:rounded-full"
+                <div class="relative overflow-hidden rounded-[20px] bg-[#160A35] bg-no-repeat bg-center bg-cover px-4 py-10 sm:px-5 sm:py-12 md:px-10 md:py-16 before:pointer-events-none before:content-[''] before:absolute before:top-[-120px] before:left-[-120px] before:w-[260px] before:h-[260px] before:bg-[#B26EF7] before:opacity-25 before:blur-[110px] before:rounded-full after:pointer-events-none after:content-[''] after:absolute after:bottom-[-120px] after:right-[-120px] after:w-[260px] after:h-[260px] after:bg-[#FF71BF] after:opacity-20 after:blur-[110px] after:rounded-full"
                     data-background="assets/images/course/bg-shape.png">
                     <div class="relative z-10">
                         <div class="text-center max-w-[760px] mx-auto mb-10 md:mb-12">
@@ -1270,7 +1290,7 @@
                                 <i class="fa-solid fa-graduation-cap text-[#D6DAF0] "></i>
                                 <span class="text-[#D6DAF0] ">10+ Courses</span>
                             </span>
-                            <h2 class="text-[#D6DAF0]  text-[30px] md:text-[44px] font-bold font-hanken mt-5 leading-tight">
+                            <h2 class="text-[#D6DAF0] text-[26px] sm:text-[34px] md:text-[44px] font-bold font-hanken mt-5 leading-tight">
                                 Pick Your Favorite Course and
                                 <span class="text-secondary">Grow your Skills</span>
                             </h2>
@@ -1285,12 +1305,12 @@
                                             <div class="relative overflow-hidden">
                                                 <img src="assets/images/course/course-1.webp"
                                                     alt="Modern Web Development with HTML, CSS & JavaScript"
-                                                    class="w-full h-[250px] object-cover transition duration-500 ease-out hover:scale-110 hover:opacity-80">
+                                                    class="w-full h-[220px] sm:h-[250px] object-cover transition duration-500 ease-out hover:scale-110 hover:opacity-80">
                                                 <span
                                                     class="absolute top-4 right-4 bg-[#9382FF] text-white text-[12px] font-medium px-3 py-1 rounded-[20px]">All
                                                     Level</span>
                                             </div>
-                                            <div class="p-6 flex flex-col h-full">
+                                            <div class="p-5 sm:p-6 flex flex-col h-full">
                                                 <div
                                                     class="flex flex-wrap items-center gap-x-5 gap-y-2 text-[#D6DAF0] text-[12px] mb-4">
                                                     <span class="inline-flex items-center gap-2">
@@ -1303,17 +1323,17 @@
                                                     </span>
                                                 </div>
                                                 <h3
-                                                    class="text-white text-[20px] font-bold font-hanken leading-snug mb-6">
+                                                    class="text-white text-[18px] sm:text-[20px] font-bold font-hanken leading-snug mb-5 sm:mb-6">
                                                     <a href="#" class="hover:text-secondary transition-colors">Modern
                                                         Web Development with HTML, CSS & JavaScript</a>
                                                 </h3>
-                                                <div class="flex items-center justify-between gap-4 mb-6">
-                                                    <div class="flex items-center gap-3">
+                                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4 mb-5 sm:mb-6">
+                                                    <div class="flex items-center gap-3 min-w-0">
                                                         <img src="assets/images/blog/bg-1.webp" alt="Instructor"
                                                             class="w-[32px] h-[32px] rounded-full object-cover">
                                                         <span class="text-[#D6DAF0]  text-[13px]">Javier Bardem</span>
                                                     </div>
-                                                    <div class="flex items-center gap-2">
+                                                    <div class="flex items-center gap-2 flex-wrap">
                                                         <div class="flex items-center gap-1">
                                                             <i class="fa-solid fa-star text-[#FCC418] text-[12px]"></i>
                                                             <i class="fa-solid fa-star text-[#FCC418] text-[12px]"></i>
@@ -1324,13 +1344,13 @@
                                                         <span class="text-[#D6DAF0] text-[12px]">(4.9 Reviews)</span>
                                                     </div>
                                                 </div>
-                                                <div class="mt-auto flex items-center justify-between gap-4">
+                                                <div class="mt-auto flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4">
                                                     <div class="flex items-center gap-2">
                                                         <span class="text-white text-[16px] font-semibold">$75</span>
                                                         <span class="text-white/35 line-through text-[14px]">$150</span>
                                                     </div>
                                                     <a href="#"
-                                                        class="inline-flex items-center justify-center h-[40px] px-5 rounded-[20px] gradient-color-primary text-white text-[14px] font-medium hover:shadow-[0px_8px_25px_rgba(178,110,247,0.45)] transition-all">View
+                                                        class="inline-flex items-center justify-center h-[40px] px-5 rounded-[20px] gradient-color-primary text-white text-[14px] font-medium w-full sm:w-auto hover:shadow-[0px_8px_25px_rgba(178,110,247,0.45)] transition-all">View
                                                         Details</a>
                                                 </div>
                                             </div>
@@ -1343,12 +1363,12 @@
                                             <div class="relative overflow-hidden">
                                                 <img src="assets/images/course/course-2.webp"
                                                     alt="UI/UX Design Masterclass: From Wireframe to Final Design"
-                                                    class="w-full h-[250px] object-cover transition duration-500 ease-out hover:scale-110 hover:opacity-80">
+                                                    class="w-full h-[220px] sm:h-[250px] object-cover transition duration-500 ease-out hover:scale-110 hover:opacity-80">
                                                 <span
                                                     class="absolute top-4 right-4 bg-[#9382FF] text-white text-[12px] font-medium px-3 py-1 rounded-[20px]">All
                                                     Level</span>
                                             </div>
-                                            <div class="p-6 flex flex-col h-full">
+                                            <div class="p-5 sm:p-6 flex flex-col h-full">
                                                 <div
                                                     class="flex flex-wrap items-center gap-x-5 gap-y-2 text-[#D6DAF0] text-[12px] mb-4">
                                                     <span class="inline-flex items-center gap-2">
@@ -1361,17 +1381,17 @@
                                                     </span>
                                                 </div>
                                                 <h3
-                                                    class="text-white text-[20px] font-bold font-hanken leading-snug mb-6">
+                                                    class="text-white text-[18px] sm:text-[20px] font-bold font-hanken leading-snug mb-5 sm:mb-6">
                                                     <a href="#" class="hover:text-secondary transition-colors">UI/UX
                                                         Design Masterclass: From Wireframe to Final Design</a>
                                                 </h3>
-                                                <div class="flex items-center justify-between gap-4 mb-6">
-                                                    <div class="flex items-center gap-3">
+                                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4 mb-5 sm:mb-6">
+                                                    <div class="flex items-center gap-3 min-w-0">
                                                         <img src="assets/images/blog/bg-1.webp" alt="Instructor"
                                                             class="w-[32px] h-[32px] rounded-full object-cover">
                                                         <span class="text-[#D6DAF0]  text-[13px]">Javier Bardem</span>
                                                     </div>
-                                                    <div class="flex items-center gap-2">
+                                                    <div class="flex items-center gap-2 flex-wrap">
                                                         <div class="flex items-center gap-1">
                                                             <i class="fa-solid fa-star text-[#FCC418] text-[12px]"></i>
                                                             <i class="fa-solid fa-star text-[#FCC418] text-[12px]"></i>
@@ -1382,13 +1402,13 @@
                                                         <span class="text-[#D6DAF0] text-[12px]">(4.9 Reviews)</span>
                                                     </div>
                                                 </div>
-                                                <div class="mt-auto flex items-center justify-between gap-4">
+                                                <div class="mt-auto flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4">
                                                     <div class="flex items-center gap-2">
                                                         <span class="text-white text-[16px] font-semibold">$75</span>
                                                         <span class="text-white/35 line-through text-[14px]">$150</span>
                                                     </div>
                                                     <a href="#"
-                                                        class="inline-flex items-center justify-center h-[40px] px-5 rounded-[20px] gradient-color-primary text-white text-[14px] font-medium hover:shadow-[0px_8px_25px_rgba(178,110,247,0.45)] transition-all">View
+                                                        class="inline-flex items-center justify-center h-[40px] px-5 rounded-[20px] gradient-color-primary text-white text-[14px] font-medium w-full sm:w-auto hover:shadow-[0px_8px_25px_rgba(178,110,247,0.45)] transition-all">View
                                                         Details</a>
                                                 </div>
                                             </div>
@@ -1401,12 +1421,12 @@
                                             <div class="relative overflow-hidden">
                                                 <img src="assets/images/course/course-3.webp"
                                                     alt="Learn English from Scratch: Beginner to Confident Speaker"
-                                                    class="w-full h-[250px] object-cover transition duration-500 ease-out hover:scale-110 hover:opacity-80">
+                                                    class="w-full h-[220px] sm:h-[250px] object-cover transition duration-500 ease-out hover:scale-110 hover:opacity-80">
                                                 <span
                                                     class="absolute top-4 right-4 bg-[#9382FF] text-white text-[12px] font-medium px-3 py-1 rounded-[20px]">All
                                                     Level</span>
                                             </div>
-                                            <div class="p-6 flex flex-col h-full">
+                                            <div class="p-5 sm:p-6 flex flex-col h-full">
                                                 <div
                                                     class="flex flex-wrap items-center gap-x-5 gap-y-2 text-[#D6DAF0] text-[12px] mb-4">
                                                     <span class="inline-flex items-center gap-2">
@@ -1419,17 +1439,17 @@
                                                     </span>
                                                 </div>
                                                 <h3
-                                                    class="text-white text-[20px] font-bold font-hanken leading-snug mb-6">
+                                                    class="text-white text-[18px] sm:text-[20px] font-bold font-hanken leading-snug mb-5 sm:mb-6">
                                                     <a href="#" class="hover:text-secondary transition-colors">Learn
                                                         English from Scratch: Beginner to Confident Speaker</a>
                                                 </h3>
-                                                <div class="flex items-center justify-between gap-4 mb-6">
-                                                    <div class="flex items-center gap-3">
+                                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4 mb-5 sm:mb-6">
+                                                    <div class="flex items-center gap-3 min-w-0">
                                                         <img src="assets/images/blog/bg.webp" alt="Instructor"
                                                             class="w-[32px] h-[32px] rounded-full object-cover">
                                                         <span class="text-[#D6DAF0]  text-[13px]">Javier Bardem</span>
                                                     </div>
-                                                    <div class="flex items-center gap-2">
+                                                    <div class="flex items-center gap-2 flex-wrap">
                                                         <div class="flex items-center gap-1">
                                                             <i class="fa-solid fa-star text-[#FCC418] text-[12px]"></i>
                                                             <i class="fa-solid fa-star text-[#FCC418] text-[12px]"></i>
@@ -1440,13 +1460,13 @@
                                                         <span class="text-[#D6DAF0] text-[12px]">(0 Reviews)</span>
                                                     </div>
                                                 </div>
-                                                <div class="mt-auto flex items-center justify-between gap-4">
+                                                <div class="mt-auto flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4">
                                                     <div class="flex items-center gap-2">
                                                         <span class="text-white text-[16px] font-semibold">$75</span>
                                                         <span class="text-white/35 line-through text-[14px]">$150</span>
                                                     </div>
                                                     <a href="#"
-                                                        class="inline-flex items-center justify-center h-[40px] px-5 rounded-[20px] gradient-color-primary text-white text-[14px] font-medium hover:shadow-[0px_8px_25px_rgba(178,110,247,0.45)] transition-all">View
+                                                        class="inline-flex items-center justify-center h-[40px] px-5 rounded-[20px] gradient-color-primary text-white text-[14px] font-medium w-full sm:w-auto hover:shadow-[0px_8px_25px_rgba(178,110,247,0.45)] transition-all">View
                                                         Details</a>
                                                 </div>
                                             </div>
@@ -1475,7 +1495,7 @@
             </div>
         </section>
 
-        <section id="how-it-works" class="bg-primary py-20 md:py-24 relative overflow-hidden"
+        <section id="how-it-works" class="bg-primary py-[60px] md:py-24 relative overflow-hidden"
             aria-labelledby="how-it-works-heading">
             <div
                 class="pointer-events-none absolute -top-[120px] right-[8%] w-[280px] h-[280px] bg-[#9382FF] opacity-10 blur-[100px] rounded-full">
@@ -1641,7 +1661,7 @@
         </section>
 
         <section id="reviews"
-            class="bg-primary py-20 md:py-24 relative overflow-hidden">
+            class="bg-primary py-[60px] md:py-24 relative overflow-hidden">
             <div
                 class="pointer-events-none absolute -top-[160px] left-1/2 -translate-x-1/2 w-[420px] h-[420px] bg-[#B26EF7] opacity-15 blur-[140px] rounded-full">
             </div>
@@ -1654,7 +1674,7 @@
                         <i class="fa-solid fa-graduation-cap text-[#D6DAF0] "></i>
                         <span class="text-[#D6DAF0] ">Student Reviews</span>
                     </span>
-                    <h2 class="text-[#D6DAF0]  text-[44px] font-bold font-hanken leading-tight mb-4">
+                    <h2 class="text-[#D6DAF0] text-[30px] sm:text-[36px] md:text-[44px] font-bold font-hanken leading-tight mb-4">
                         Real Success Stories From <br>
                         <span class="gradient-color-primary bg-clip-text text-transparent">Our Graduates</span>
                     </h2>
@@ -1859,7 +1879,7 @@
         </section>
 
         <!-- Statistics Section -->
-        <section id="statistics" class="bg-primary pb-12 md:pb-20 ">
+        <section id="statistics" class="bg-primary pb-[60px] md:pb-20 ">
             <div class="max-w-[1320px] mx-auto px-4">
                 <div
                     class="bg-box-color border border-white/10 rounded-[20px] py-14 px-6 md:px-12 flex flex-wrap justify-between items-center gap-y-10 relative overflow-hidden group shadow-[0px_20px_50px_rgba(0,0,0,0.3)] transition-all duration-500 hover:border-white/20">
@@ -1942,7 +1962,7 @@
 
         <!-- Team Section -->
         <section id="team"
-            class="bg-primary py-20 md:py-24 relative overflow-hidden  ">
+            class="bg-primary py-[60px] md:py-24 relative overflow-hidden  ">
             <div
                 class="pointer-events-none absolute -top-[160px] left-1/2 -translate-x-1/2 w-[420px] h-[420px] bg-[#FF71BF] opacity-10 blur-[140px] rounded-full">
             </div>
@@ -1955,11 +1975,11 @@
                         <i class="fa-solid fa-graduation-cap text-[#D6DAF0] "></i>
                         <span class="text-[#D6DAF0] ">Meet Our Faculty</span>
                     </span>
-                    <h2 class="text-[#D6DAF0]  text-[44px] font-bold font-hanken leading-tight mb-4">
+                    <h2 class="text-[#D6DAF0] text-[30px] sm:text-[36px] md:text-[44px] font-bold font-hanken leading-tight mb-4">
                         Experienced Educators Committed <br>
                         <span class="gradient-color-primary bg-clip-text text-transparent">to Your Success</span>
                     </h2>
-                    <p class="text-[#D6DAF0] text-[16px] font-inter leading-relaxed max-w-[640px] mx-auto">
+                    <p class="text-[#D6DAF0] text-[14px] sm:text-[15px] md:text-[16px] font-inter leading-relaxed max-w-[640px] mx-auto">
                         Learn from certified instructors and industry specialists who design courses, mentor learners, and stay current with modern teaching methods.
                     </p>
                 </div>
@@ -2162,7 +2182,7 @@
             </div>
         </section>
 
-        <section id="pricing" class="bg-primary py-20 md:py-24 relative overflow-hidden" aria-labelledby="pricing-heading">
+        <section id="pricing" class="bg-primary py-[60px] md:py-24 relative overflow-hidden" aria-labelledby="pricing-heading">
             <div class="pointer-events-none absolute -top-[100px] left-[10%] w-[300px] h-[300px] bg-[#B26EF7] opacity-10 blur-[110px] rounded-full"></div>
             <div class="pointer-events-none absolute bottom-[10%] right-[8%] w-[280px] h-[280px] bg-[#9382FF] opacity-[0.07] blur-[100px] rounded-full"></div>
             <div class="max-w-[1320px] mx-auto px-4 relative z-10">
@@ -2306,7 +2326,7 @@
 
         <!-- FAQ Section -->
         <section id="faq"
-            class="bg-primary py-20 md:py-24 relative overflow-hidden  ">
+            class="bg-primary py-[60px] md:py-24 relative overflow-hidden  ">
             <div
                 class="pointer-events-none absolute -top-[140px] -left-[140px] w-[320px] h-[320px] bg-[#B26EF7] opacity-20 blur-[120px] rounded-full">
             </div>
@@ -2324,7 +2344,7 @@
                             <span class="text-[#D6DAF0] ">Most Asked Question</span>
                         </span>
 
-                        <h2 class="text-[#D6DAF0]  text-[36px] md:text-[44px] font-bold font-hanken mt-5 leading-[1.12]">
+                        <h2 class="text-[#D6DAF0] text-[30px] sm:text-[36px] md:text-[44px] font-bold font-hanken mt-5 leading-[1.12]">
                             High-Performance System<br>
                             <span class="gradient-color-primary bg-clip-text text-transparent">Framework</span>
                         </h2>
@@ -2449,7 +2469,7 @@
 
                         <!-- faq card start -->
                         <div
-                            class="absolute bottom-[100px] right-[-100px] bg-[#0F102A]/90 border border-white/10 backdrop-blur-[20px] rounded-[12px] pl-[20px] pt-[15px] pb-[14px] shadow-[0px_20px_50px_rgba(0,0,0,0.5)] transition-all duration-500 hover:-translate-y-2 hover:border-white group overflow-hidden w-[262px] h-[124px] z-20">
+                            class="absolute left-1/2 -translate-x-1/2 bottom-[24px] bg-[#0F102A]/90 border border-white/10 backdrop-blur-[20px] rounded-[12px] pl-[20px] pt-[15px] pb-[14px] shadow-[0px_20px_50px_rgba(0,0,0,0.5)] transition-all duration-500 hover:-translate-y-2 hover:border-white group overflow-hidden w-[240px] min-h-[124px] z-20 sm:w-[262px] sm:bottom-[100px] sm:right-[-100px] sm:left-auto sm:translate-x-0">
                             <!-- Background Curved Lines -->
                             <div class="absolute top-0 right-0 h-full  pointer-events-none px-[14px] pl-[20px]">
                                 <img src="assets/images/faq/card-shape.png" alt="" class="w-full h-full object-cover">
@@ -2489,7 +2509,7 @@
                                         <img src="assets/images/faq/avada2.png" alt="Student"
                                             class="w-[42px] h-[42px] rounded-full border-[3px] border-[#1E1F42] object-cover transition-transform group-hover/avatar:scale-110 duration-300 cursor-pointer relative z-0 group-hover/avatar:z-20">
                                         <div
-                                            class="absolute top-full left-1/2 -translate-sx-1/2 mt-3 opacity-0 invisible group-hover/avatar:opacity-100 group-hover/avatar:visible transition-all duration-300 z-30 pointer-events-none flex flex-col items-center">
+                                            class="absolute top-full left-1/2 -translate-x-1/2 mt-3 opacity-0 invisible group-hover/avatar:opacity-100 group-hover/avatar:visible transition-all duration-300 z-30 pointer-events-none flex flex-col items-center">
                                             <div class="relative bg-secondary px-2.5 py-1 rounded-[6px] shadow-lg">
                                                 <div
                                                     class="absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-secondary rotate-45">
@@ -2558,7 +2578,7 @@
         <!-- faq section end -->
 
         <section id="blog"
-            class="bg-primary py-20 md:py-24 relative overflow-hidden  ">
+            class="bg-primary py-[60px] md:py-24 relative overflow-hidden  ">
             <div
                 class="pointer-events-none absolute -top-[170px] -left-[170px] w-[360px] h-[360px] bg-[#B26EF7] opacity-15 blur-[140px] rounded-full">
             </div>
@@ -2575,11 +2595,11 @@
                         <span class="text-[#D6DAF0] ">Expert Advice</span>
                     </span>
                    
-                    <h2 class="text-[#D6DAF0]  text-[44px] font-bold font-hanken leading-tight mb-4">
+                    <h2 class="text-[#D6DAF0] text-[30px] sm:text-[36px] md:text-[44px] font-bold font-hanken leading-tight mb-4">
                         Expert Articles to Accelerate Your<br>
                         <span class="gradient-color-primary bg-clip-text text-transparent">Learning Journey</span>
                     </h2>
-                    <p class="text-[#D6DAF0] text-[15px] font-inter leading-relaxed max-w-[640px] mx-auto">
+                    <p class="text-[#D6DAF0] text-[14px] sm:text-[15px] md:text-[16px] font-inter leading-relaxed max-w-[640px] mx-auto">
                         Tips, tools, and teaching ideas from our educators—updated regularly.
                     </p>
                 </div>
@@ -2744,7 +2764,7 @@
             </div>
         </section>
 
-        <section id="cta-enroll" class="bg-primary pb-20 md:pb-24 pt-4" aria-label="Enroll call to action">
+        <section id="cta-enroll" class="bg-primary pb-[60px] md:pb-24 pt-4" aria-label="Enroll call to action">
             <div class="max-w-[1320px] mx-auto px-4">
                 <div
                     class="relative overflow-hidden rounded-[20px] border border-white/10 bg-[#0F102A] px-8 py-12 md:px-14 md:py-14 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
@@ -2752,10 +2772,10 @@
                         class="pointer-events-none absolute -top-[80px] -right-[60px] w-[240px] h-[240px] bg-[#B26EF7] opacity-20 blur-[90px] rounded-full">
                     </div>
                     <div class="relative z-10 max-w-[640px]">
-                        <h2 class="text-[#D6DAF0] text-[28px] md:text-[36px] font-bold font-hanken leading-tight mb-3">
+                        <h2 class="text-[#D6DAF0] text-[24px] sm:text-[30px] md:text-[36px] font-bold font-hanken leading-tight mb-3">
                             Ready to start your next <span class="gradient-color-primary bg-clip-text text-transparent">skill?</span>
                         </h2>
-                        <p class="text-white/55 text-[15px] font-inter leading-relaxed">
+                        <p class="text-white/55 text-[14px] sm:text-[15px] md:text-[16px] font-inter leading-relaxed">
                             Join thousands of learners—browse courses or create a free account in minutes.
                         </p>
                     </div>

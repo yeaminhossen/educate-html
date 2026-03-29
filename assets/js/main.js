@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         return new Swiper(el, {
             slidesPerView: 1,
-            spaceBetween: 24,
+            spaceBetween: 16,
             centeredSlides: true,
             loop: true,
             speed: 700,
@@ -114,8 +114,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 clickable: true,
             },
             breakpoints: {
-                640: { slidesPerView: 2 },
-                1024: { slidesPerView: 3 },
+                480: { spaceBetween: 20 },
+                640: { slidesPerView: 2, spaceBetween: 22 },
+                1024: { slidesPerView: 3, spaceBetween: 24 },
             },
         });
     };
@@ -295,8 +296,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (brandSwiperEl && window.Swiper) {
         new Swiper(brandSwiperEl, {
-            slidesPerView: 2,
-            spaceBetween: 16,
+            slidesPerView: 1.35,
+            spaceBetween: 12,
             loop: true,
             speed: 1000,
             autoplay: {
@@ -304,7 +305,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 disableOnInteraction: false,
             },
             breakpoints: {
-                480: { slidesPerView: 2, spaceBetween: 20 },
+                400: { slidesPerView: 2, spaceBetween: 14 },
+                480: { slidesPerView: 2, spaceBetween: 16 },
                 640: { slidesPerView: 3, spaceBetween: 20 },
                 992: { slidesPerView: 4, spaceBetween: 24 },
                 1200: { slidesPerView: 5, spaceBetween: 24 },
@@ -685,12 +687,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
         userProfileBtn.addEventListener('click', (e) => {
             e.stopPropagation();
-            const isOpen = !userProfileDropdown.classList.contains('invisible');
+            const isOpen = userProfileBtn.getAttribute('aria-expanded') === 'true';
             toggleDropdown(!isOpen);
         });
 
         document.addEventListener('click', (e) => {
-            if (!userProfileDropdown.contains(e.target) && e.target !== userProfileBtn) {
+            if (!userProfileDropdown.contains(e.target) && !userProfileBtn.contains(e.target)) {
                 toggleDropdown(false);
             }
         });
@@ -699,6 +701,69 @@ document.addEventListener('DOMContentLoaded', function () {
             if (e.key === 'Escape') {
                 toggleDropdown(false);
             }
+        });
+    }
+
+    // Language Switcher Dropdown Toggle
+    const languageSwitcherBtn = document.getElementById('language-switcher-btn');
+    const languageSwitcherDropdown = document.getElementById('language-switcher-dropdown');
+
+    if (languageSwitcherBtn && languageSwitcherDropdown) {
+        const toggleLanguageDropdown = (show) => {
+            if (show) {
+                languageSwitcherDropdown.classList.remove('opacity-0', 'invisible', 'translate-y-4');
+                languageSwitcherDropdown.classList.add('opacity-100', 'visible', 'translate-y-0');
+                languageSwitcherBtn.setAttribute('aria-expanded', 'true');
+            } else {
+                languageSwitcherDropdown.classList.remove('opacity-100', 'visible', 'translate-y-0');
+                languageSwitcherDropdown.classList.add('opacity-0', 'invisible', 'translate-y-4');
+                languageSwitcherBtn.setAttribute('aria-expanded', 'false');
+            }
+        };
+
+        languageSwitcherBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = languageSwitcherBtn.getAttribute('aria-expanded') === 'true';
+            toggleLanguageDropdown(!isOpen);
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!languageSwitcherDropdown.contains(e.target) && !languageSwitcherBtn.contains(e.target)) {
+                toggleLanguageDropdown(false);
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                toggleLanguageDropdown(false);
+            }
+        });
+
+        languageSwitcherDropdown.addEventListener('click', (e) => {
+            const link = e.target.closest('[data-lang-flag][data-lang-label]');
+            if (!link) return;
+            e.preventDefault();
+            e.stopPropagation();
+            const flag = link.getAttribute('data-lang-flag');
+            const label = link.getAttribute('data-lang-label');
+            const deskFlag = document.getElementById('language-switcher-flag');
+            const deskLabel = document.getElementById('language-switcher-label');
+            const mobFlag = document.getElementById('mobile-language-switcher-flag');
+            const mobLabel = document.getElementById('mobile-language-switcher-label');
+            const mobBtn = document.getElementById('mobile-language-switcher-display');
+            if (deskFlag && flag) {
+                deskFlag.src = flag;
+                deskFlag.alt = label || '';
+            }
+            if (deskLabel && label) deskLabel.textContent = label;
+            if (mobFlag && flag) {
+                mobFlag.src = flag;
+                if (label) mobFlag.alt = label;
+            }
+            if (mobLabel && label) mobLabel.textContent = label;
+            if (mobBtn && label) mobBtn.setAttribute('aria-label', `Language, ${label}`);
+            languageSwitcherBtn.setAttribute('aria-label', `Language, ${label}`);
+            toggleLanguageDropdown(false);
         });
     }
 
