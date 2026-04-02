@@ -58,26 +58,6 @@
     </div>
     <!-- Preloader End -->
 
-    <div id="nav-overlay"
-        class="fixed inset-0 bg-[#050520]/60 backdrop-blur-[6px] opacity-0 invisible transition-all duration-500 z-[45] pointer-events-none">
-    </div>
-
-    <!-- Topbar -->
-    <div id="site-topbar" class="relative z-[60] gradient-color-primary py-[7px]">
-        <div class="max-w-[1320px] mx-auto px-4 flex items-center justify-center gap-3">
-            <p class="text-white text-[13px] font-inter font-medium tracking-wide">Join the UX/UI Design Mastery Course
-                Today!</p>
-            <a href="#"
-                class=" bg-white text-primary shrink-0 text-[12px] font-bold font-inter px-4 py-[4px] rounded-[50px]">20%
-                Off</a>
-        </div>
-        <button id="topbar-close"
-            class="absolute right-4 top-1/2 -translate-y-1/2 text-[#D6DAF0]  hover:text-white transition-colors duration-200">
-            <i class="fa-solid fa-xmark text-[14px]"></i>
-        </button>
-    </div>
-    <!-- Topbar End -->
-
     <header class="sticky top-0 z-50 transition-all duration-300 bg-[#11112A]">
         <div class="max-w-[1320px] rounded-bl-[20px] rounded-br-[20px] mx-auto px-4 relative pt-[10px] pb-[10px]">
             <div class="flex items-center justify-between h-[70px]">
@@ -88,8 +68,8 @@
                     </a>
                 </div>
 
-                <!-- Desktop Navigation -->
-                <nav class="hidden lg:flex items-center space-x-[40px]">
+                <!-- Desktop Navigation (xl+ — avoids 1024px row overflow) -->
+                <nav class="hidden xl:flex items-center space-x-[40px] shrink-0">
                     <!-- Demos Mega Menu Item -->
                     <div class="group">
                         <button
@@ -106,7 +86,7 @@
                                 <div class="grid grid-cols-5 gap-5 mb-8">
 
                                     <!-- Demo Card 1 -->
-                                    <a href="#" class="group/demo block">
+                                    <a href="index.html" class="group/demo block">
                                         <div
                                             class="bg-[#13132E] rounded-[12px] overflow-hidden border border-white/[0.06] transition-all duration-400 group-hover/demo:border-secondary/40 group-hover/demo:shadow-[0px_8px_30px_rgba(147,130,255,0.2)] p-2">
                                             <div
@@ -116,7 +96,7 @@
                                                 <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
                                             </div>
                                             <div class="relative overflow-hidden aspect-[4/4]">
-                                                <img src="assets/images/demo/demo-1.webp" alt="Electronics One"
+                                                <img src="assets/images/demo/demo-1.webp" alt="Online Course"
                                                     class="w-full object-contain transition-transform duration-500 group-hover/demo:scale-[1.08]">
                                                 <div
                                                     class="absolute inset-0 bg-primary/0 group-hover/demo:bg-primary/40 transition-colors duration-400">
@@ -131,11 +111,11 @@
                                         </div>
                                         <h5
                                             class="text-center mt-3 text-[13px] font-bold font-hanken text-[#D6DAF0]  group-hover/demo:text-secondary transition-colors duration-300">
-                                            Electronics One</h5>
+                                            Online Course</h5>
                                     </a>
 
                                     <!-- Demo Card 2 -->
-                                    <a href="#" class="group/demo block">
+                                    <a href="universities-home.html" class="group/demo block">
                                         <div
                                             class="bg-[#13132E] rounded-[12px] overflow-hidden border border-white/[0.06] transition-all duration-400 group-hover/demo:border-secondary/40 group-hover/demo:shadow-[0px_8px_30px_rgba(147,130,255,0.2)] p-2">
                                             <div
@@ -145,7 +125,7 @@
                                                 <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
                                             </div>
                                             <div class="relative overflow-hidden aspect-[4/4]">
-                                                <img src="assets/images/demo/demo-2.webp" alt="Fashion One"
+                                                <img src="assets/images/demo/demo-2.webp" alt="Universities & Colleges"
                                                     class="w-full object-contain transition-transform duration-500 group-hover/demo:scale-[1.08]">
                                                 <div
                                                     class="absolute inset-0 bg-primary/0 group-hover/demo:bg-primary/40 transition-colors duration-400">
@@ -160,11 +140,11 @@
                                         </div>
                                         <h5
                                             class="text-center mt-3 text-[13px] font-bold font-hanken text-[#D6DAF0]  group-hover/demo:text-secondary transition-colors duration-300">
-                                            Fashion One</h5>
+                                            Universities & Colleges</h5>
                                     </a>
 
                                     <!-- Demo Card 3 -->
-                                    <a href="#" class="group/demo block">
+                                    <a href="universities-home-two.html" class="group/demo block">
                                         <div
                                             class="bg-[#13132E] rounded-[12px] overflow-hidden border border-white/[0.06] transition-all duration-400 group-hover/demo:border-secondary/40 group-hover/demo:shadow-[0px_8px_30px_rgba(147,130,255,0.2)] p-2">
                                             <div
@@ -174,7 +154,7 @@
                                                 <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
                                             </div>
                                             <div class="relative overflow-hidden aspect-[4/4]">
-                                                <img src="assets/images/demo/demo-3.webp" alt="Furniture One"
+                                                <img src="assets/images/demo/demo-3.webp" alt="Universities"
                                                     class="w-full object-contain transition-transform duration-500 group-hover/demo:scale-[1.08]">
                                                 <div
                                                     class="absolute inset-0 bg-primary/0 group-hover/demo:bg-primary/40 transition-colors duration-400">
@@ -189,11 +169,11 @@
                                         </div>
                                         <h5
                                             class="text-center mt-3 text-[13px] font-bold font-hanken text-[#D6DAF0]  group-hover/demo:text-secondary transition-colors duration-300">
-                                            Furniture One</h5>
+                                            Universities</h5>
                                     </a>
 
                                     <!-- Demo Card 4 -->
-                                    <a href="#" class="group/demo block">
+                                    <a href="marketplace-home.html" class="group/demo block">
                                         <div
                                             class="bg-[#13132E] rounded-[12px] overflow-hidden border border-white/[0.06] transition-all duration-400 group-hover/demo:border-secondary/40 group-hover/demo:shadow-[0px_8px_30px_rgba(147,130,255,0.2)] p-2">
                                             <div
@@ -203,7 +183,7 @@
                                                 <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
                                             </div>
                                             <div class="relative overflow-hidden aspect-[4/4]">
-                                                <img src="assets/images/demo/demo-5.webp" alt="Print Service One"
+                                                <img src="assets/images/demo/demo-5.webp" alt="Marketplace"
                                                     class="w-full object-contain transition-transform duration-500 group-hover/demo:scale-[1.08]">
                                                 <div
                                                     class="absolute inset-0 bg-primary/0 group-hover/demo:bg-primary/40 transition-colors duration-400">
@@ -218,11 +198,11 @@
                                         </div>
                                         <h5
                                             class="text-center mt-3 text-[13px] font-bold font-hanken text-[#D6DAF0]  group-hover/demo:text-secondary transition-colors duration-300">
-                                            Print Service One</h5>
+                                            Marketplace</h5>
                                     </a>
 
                                     <!-- Demo Card 5 -->
-                                    <a href="#" class="group/demo block">
+                                    <a href="language-academy.html" class="group/demo block">
                                         <div
                                             class="bg-[#13132E] rounded-[12px] overflow-hidden border border-white/[0.06] transition-all duration-400 group-hover/demo:border-secondary/40 group-hover/demo:shadow-[0px_8px_30px_rgba(147,130,255,0.2)] p-2">
                                             <div
@@ -232,7 +212,7 @@
                                                 <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
                                             </div>
                                             <div class="relative overflow-hidden aspect-[4/4]">
-                                                <img src="assets/images/demo/demo-6.webp" alt="Cosmetic Beauty One"
+                                                <img src="assets/images/demo/demo-4.webp" alt="Language Academy"
                                                     class="w-full object-contain transition-transform duration-500 group-hover/demo:scale-[1.08]">
                                                 <div
                                                     class="absolute inset-0 bg-primary/0 group-hover/demo:bg-primary/40 transition-colors duration-400">
@@ -247,7 +227,7 @@
                                         </div>
                                         <h5
                                             class="text-center mt-3 text-[13px] font-bold font-hanken text-[#D6DAF0]  group-hover/demo:text-secondary transition-colors duration-300">
-                                            Cosmetic Beauty One</h5>
+                                            Language Academy</h5>
                                     </a>
 
                                     <!-- Demo Card 6 -->
@@ -261,7 +241,7 @@
                                                 <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
                                             </div>
                                             <div class="relative overflow-hidden aspect-[4/4]">
-                                                <img src="assets/images/demo/demo-8.webp" alt="Sports One"
+                                                <img src="assets/images/demo/demo-6.webp" alt="Gym Training"
                                                     class="w-full object-contain transition-transform duration-500 group-hover/demo:scale-[1.08]">
                                                 <div
                                                     class="absolute inset-0 bg-primary/0 group-hover/demo:bg-primary/40 transition-colors duration-400">
@@ -276,7 +256,7 @@
                                         </div>
                                         <h5
                                             class="text-center mt-3 text-[13px] font-bold font-hanken text-[#D6DAF0]  group-hover/demo:text-secondary transition-colors duration-300">
-                                            Sports One</h5>
+                                            Gym Training</h5>
                                     </a>
 
                                     <!-- Demo Card 7 -->
@@ -290,7 +270,7 @@
                                                 <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
                                             </div>
                                             <div class="relative overflow-hidden aspect-[4/4]">
-                                                <img src="assets/images/demo/demo-9.webp" alt="Glass One"
+                                                <img src="assets/images/demo/demo-6.webp" alt="Life Coach"
                                                     class="w-full object-contain transition-transform duration-500 group-hover/demo:scale-[1.08]">
                                                 <div
                                                     class="absolute inset-0 bg-primary/0 group-hover/demo:bg-primary/40 transition-colors duration-400">
@@ -305,7 +285,7 @@
                                         </div>
                                         <h5
                                             class="text-center mt-3 text-[13px] font-bold font-hanken text-[#D6DAF0]  group-hover/demo:text-secondary transition-colors duration-300">
-                                            Glass One</h5>
+                                            Life Coach</h5>
                                     </a>
 
                                     <!-- Demo Card 8 -->
@@ -319,7 +299,7 @@
                                                 <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
                                             </div>
                                             <div class="relative overflow-hidden aspect-[4/4]">
-                                                <img src="assets/images/demo/demo-10.webp" alt="Phone One"
+                                                <img src="assets/images/demo/demo-6.webp" alt="Business Coach"
                                                     class="w-full object-contain transition-transform duration-500 group-hover/demo:scale-[1.08]">
                                                 <div
                                                     class="absolute inset-0 bg-primary/0 group-hover/demo:bg-primary/40 transition-colors duration-400">
@@ -334,7 +314,7 @@
                                         </div>
                                         <h5
                                             class="text-center mt-3 text-[13px] font-bold font-hanken text-[#D6DAF0]  group-hover/demo:text-secondary transition-colors duration-300">
-                                            Phone One</h5>
+                                            Business Coach</h5>
                                     </a>
 
                                     <!-- Demo Card 9 -->
@@ -348,7 +328,7 @@
                                                 <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
                                             </div>
                                             <div class="relative overflow-hidden aspect-[4/4]">
-                                                <img src="assets/images/demo/demo-11.webp" alt="Accessories One"
+                                                <img src="assets/images/demo/demo-6.webp" alt="Skill Development"
                                                     class="w-full object-contain transition-transform duration-500 group-hover/demo:scale-[1.08]">
                                                 <div
                                                     class="absolute inset-0 bg-primary/0 group-hover/demo:bg-primary/40 transition-colors duration-400">
@@ -363,7 +343,7 @@
                                         </div>
                                         <h5
                                             class="text-center mt-3 text-[13px] font-bold font-hanken text-[#D6DAF0]  group-hover/demo:text-secondary transition-colors duration-300">
-                                            Accessories One</h5>
+                                            Skill Development</h5>
                                     </a>
 
                                     <!-- Demo Card 10 -->
@@ -377,7 +357,7 @@
                                                 <span class="w-1.5 h-1.5 rounded-full bg-[#27C93F]"></span>
                                             </div>
                                             <div class="relative overflow-hidden aspect-[4/4]">
-                                                <img src="assets/images/demo/demo-1.webp" alt="Jewellery One"
+                                                <img src="assets/images/demo/demo-6.webp" alt="Programming"
                                                     class="w-full object-contain transition-transform duration-500 group-hover/demo:scale-[1.08]">
                                                 <div
                                                     class="absolute inset-0 bg-primary/0 group-hover/demo:bg-primary/40 transition-colors duration-400">
@@ -392,7 +372,7 @@
                                         </div>
                                         <h5
                                             class="text-center mt-3 text-[13px] font-bold font-hanken text-[#D6DAF0]  group-hover/demo:text-secondary transition-colors duration-300">
-                                            Jewellery One</h5>
+                                            Programming</h5>
                                     </a>
 
                                 </div>
@@ -402,7 +382,7 @@
                                     <a href="#"
                                         class="inline-flex items-center gap-2.5 px-8 py-3.5 mt-6 rounded-[50px] gradient-color-primary text-white text-[16px] font-semibold font-hanken hover:shadow-[0px_10px_30px_rgba(178,110,247,0.4)] hover:-translate-y-0.5 transition-all duration-300 border-b-2 border-primary/29">
                                         <span>View All The Trending Collection</span>
-                                        <div class="w-7 h- flex items-center justify-center">
+                                        <div class="w-7 h-7 flex items-center justify-center shrink-0">
                                             <i class="fa-regular fa-loader rotate-[-45deg] text-[18px]"></i>
                                         </div>
                                     </a>
@@ -907,15 +887,24 @@
         <section id="hero" class="bg-primary relative overflow-hidden flex flex-col">
             <!-- Background Glows -->
             <div class="absolute inset-0 pointer-events-none">
-                <div class="absolute top-0 left-0 w-[700px] h-[700px] bg-secondary/10 blur-[180px] rounded-full -translate-x-1/3 -translate-y-1/4"></div>
-                <div class="absolute top-1/2 right-0 w-[600px] h-[600px] bg-[#FF71BF]/8 blur-[160px] rounded-full translate-x-1/3 -translate-y-1/2"></div>
-                <div class="absolute bottom-0 left-1/2 w-[400px] h-[400px] bg-[#4ECDC4]/5 blur-[140px] rounded-full -translate-x-1/2"></div>
+                <div
+                    class="absolute top-0 left-0 w-[700px] h-[700px] bg-secondary/10 blur-[180px] rounded-full -translate-x-1/3 -translate-y-1/4">
+                </div>
+                <div
+                    class="absolute top-1/2 right-0 w-[600px] h-[600px] bg-[#FF71BF]/8 blur-[160px] rounded-full translate-x-1/3 -translate-y-1/2">
+                </div>
+                <div
+                    class="absolute bottom-0 left-1/2 w-[400px] h-[400px] bg-[#4ECDC4]/5 blur-[140px] rounded-full -translate-x-1/2">
+                </div>
             </div>
 
             <!-- Decorative dots/shapes -->
-            <div class="absolute top-20 left-[5%] w-2 h-2 rounded-full bg-secondary/40 animate-pulse hidden lg:block"></div>
-            <div class="absolute top-40 left-[8%] w-1.5 h-1.5 rounded-full bg-[#FF71BF]/50 animate-pulse hidden lg:block" style="animation-delay:0.5s"></div>
-            <div class="absolute top-60 left-[3%] w-1 h-1 rounded-full bg-white/30 animate-pulse hidden lg:block" style="animation-delay:1s"></div>
+            <div class="absolute top-20 left-[5%] w-2 h-2 rounded-full bg-secondary/40 animate-pulse hidden lg:block">
+            </div>
+            <div class="absolute top-40 left-[8%] w-1.5 h-1.5 rounded-full bg-[#FF71BF]/50 animate-pulse hidden lg:block"
+                style="animation-delay:0.5s"></div>
+            <div class="absolute top-60 left-[3%] w-1 h-1 rounded-full bg-white/30 animate-pulse hidden lg:block"
+                style="animation-delay:1s"></div>
 
             <!-- Hero Image -->
             <div class="absolute right-0 top-0 hidden lg:block z-0">
@@ -930,121 +919,163 @@
             <!-- Main Content -->
             <div class="max-w-[1320px] mx-auto px-4 relative z-10 flex-1 w-full">
                 <div class="grid grid-cols-1 lg:grid-cols-2">
-                <div class="pt-14 pb-6">
-                    <!-- Badge -->
-                    <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-[50px] border border-secondary/30 bg-secondary/10 mb-6">
-                        <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
-                        <span id="hero-subtitle" class="text-secondary text-[13px] font-semibold font-inter tracking-widest uppercase">No.1 Education Marketplace</span>
-                    </div>
+                    <div class="pt-14 pb-6">
+                        <!-- Badge -->
+                        <div
+                            class="inline-flex items-center gap-2.5 px-4 py-2 rounded-[50px] border border-secondary/30 bg-secondary/10 mb-6">
+                            <span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+                            <span id="hero-subtitle"
+                                class="text-secondary text-[13px] font-semibold font-inter tracking-widest uppercase">No.1
+                                Education Marketplace</span>
+                        </div>
 
-                    <!-- Heading -->
-                    <h1 id="hero-title" class="text-[46px] lg:text-[62px] font-bold font-hanken text-white leading-[1.08] transition-all duration-500">
-                        Learn Skills That <br>
-                        <span class="gradient-color-primary bg-clip-text text-transparent">Shape Your Future</span><br>
-                        Without Limits
-                    </h1>
+                        <!-- Heading -->
+                        <h1 id="hero-title"
+                            class="text-[46px] lg:text-[62px] font-bold font-hanken text-white leading-[1.08] transition-all duration-500">
+                            Learn Skills That <br>
+                            <span class="gradient-color-primary bg-clip-text text-transparent">Shape Your
+                                Future</span><br>
+                            Without Limits
+                        </h1>
 
-                    <!-- Description -->
-                    <p id="hero-desc" class="text-[#D6DAF0] text-[16px] font-inter leading-[1.8] max-w-[480px] mt-5 transition-all duration-500">
-                        Unlock your potential with 1000+ expert-led courses. Learn at your own pace, earn certificates, and land your dream career.
-                    </p>
+                        <!-- Description -->
+                        <p id="hero-desc"
+                            class="text-[#D6DAF0] text-[16px] font-inter leading-[1.8] max-w-[480px] mt-5 transition-all duration-500">
+                            Unlock your potential with 1000+ expert-led courses. Learn at your own pace, earn
+                            certificates, and land your dream career.
+                        </p>
 
-                    <!-- Buttons -->
-                    <div class="flex items-center gap-4 flex-wrap mt-8">
-                        <a id="hero-btn" href="#"
-                            class="group inline-flex items-center gap-2.5 px-8 py-[15px] rounded-[50px] gradient-color-primary text-white text-[15px] font-semibold font-hanken hover:shadow-[0px_14px_40px_rgba(178,110,247,0.45)] hover:-translate-y-0.5 transition-all duration-300 border-b-2 border-primary/29">
-                            <i class="fa-solid fa-rocket text-[14px]"></i> Explore Courses
-                        </a>
-                        <a href="#"
-                            class="group inline-flex items-center gap-2.5 px-8 py-[15px] rounded-[50px] border border-white/15 bg-white/5 text-white text-[15px] font-semibold font-hanken hover:border-secondary/40 hover:bg-secondary/10 transition-all duration-300">
-                            <i class="fa-solid fa-play text-[12px] text-secondary"></i> Watch Demo
-                        </a>
-                    </div>
+                        <!-- Buttons -->
+                        <div class="flex items-center gap-4 flex-wrap mt-8">
+                            <a id="hero-btn" href="#"
+                                class="group inline-flex items-center gap-2.5 px-8 py-[15px] rounded-[50px] gradient-color-primary text-white text-[15px] font-semibold font-hanken hover:shadow-[0px_14px_40px_rgba(178,110,247,0.45)] hover:-translate-y-0.5 transition-all duration-300 border-b-2 border-primary/29">
+                                <i class="fa-solid fa-rocket text-[14px]"></i> Explore Courses
+                            </a>
+                            <a href="#"
+                                class="group inline-flex items-center gap-2.5 px-8 py-[15px] rounded-[50px] border border-white/15 bg-white/5 text-white text-[15px] font-semibold font-hanken hover:border-secondary/40 hover:bg-secondary/10 transition-all duration-300">
+                                <i class="fa-solid fa-play text-[12px] text-secondary"></i> Watch Demo
+                            </a>
+                        </div>
 
-                    <!-- Stats Row -->
-                    <div class="flex items-center gap-6 flex-wrap mt-10">
-                        <div class="flex items-center gap-2.5">
-                            <div class="flex -space-x-2">
-                                <img src="assets/images/team/teacher1.webp" class="w-8 h-8 rounded-full border-2 border-primary object-cover" alt="">
-                                <img src="assets/images/team/teacher2.webp" class="w-8 h-8 rounded-full border-2 border-primary object-cover" alt="">
-                                <img src="assets/images/team/teacher5.webp" class="w-8 h-8 rounded-full border-2 border-primary object-cover" alt="">
+                        <!-- Stats Row -->
+                        <div class="flex items-center gap-6 flex-wrap mt-10">
+                            <div class="flex items-center gap-2.5">
+                                <div class="flex -space-x-2">
+                                    <img src="assets/images/team/teacher1.webp"
+                                        class="w-8 h-8 rounded-full border-2 border-primary object-cover" alt="">
+                                    <img src="assets/images/team/teacher2.webp"
+                                        class="w-8 h-8 rounded-full border-2 border-primary object-cover" alt="">
+                                    <img src="assets/images/team/teacher5.webp"
+                                        class="w-8 h-8 rounded-full border-2 border-primary object-cover" alt="">
+                                </div>
+                                <div>
+                                    <p class="text-white text-[13px] font-bold font-hanken leading-none">2,648+</p>
+                                    <p class="text-[#D6DAF0]  text-[11px] font-inter mt-0.5">Students Enrolled</p>
+                                </div>
                             </div>
-                            <div>
-                                <p class="text-white text-[13px] font-bold font-hanken leading-none">2,648+</p>
-                                <p class="text-[#D6DAF0]  text-[11px] font-inter mt-0.5">Students Enrolled</p>
+                            <div class="w-px h-8 bg-white/10"></div>
+                            <div class="flex items-center gap-2">
+                                <div class="flex items-center gap-0.5">
+                                    <i class="fa-solid fa-star text-[#F7B731] text-[12px]"></i>
+                                    <i class="fa-solid fa-star text-[#F7B731] text-[12px]"></i>
+                                    <i class="fa-solid fa-star text-[#F7B731] text-[12px]"></i>
+                                    <i class="fa-solid fa-star text-[#F7B731] text-[12px]"></i>
+                                    <i class="fa-solid fa-star text-[#F7B731] text-[12px]"></i>
+                                </div>
+                                <span class="text-white text-[13px] font-bold font-hanken">4.9</span>
+                                <span class="text-[#D6DAF0]  text-[12px] font-inter">(12k reviews)</span>
+                            </div>
+                            <div class="w-px h-8 bg-white/10"></div>
+                            <div class="flex items-center gap-2">
+                                <i class="fa-solid fa-certificate text-secondary text-[16px]"></i>
+                                <span class="text-[#D6DAF0]  text-[13px] font-inter">Certificate <span
+                                        class="text-white font-semibold">Included</span></span>
                             </div>
                         </div>
-                        <div class="w-px h-8 bg-white/10"></div>
-                        <div class="flex items-center gap-2">
-                            <div class="flex items-center gap-0.5">
-                                <i class="fa-solid fa-star text-[#F7B731] text-[12px]"></i>
-                                <i class="fa-solid fa-star text-[#F7B731] text-[12px]"></i>
-                                <i class="fa-solid fa-star text-[#F7B731] text-[12px]"></i>
-                                <i class="fa-solid fa-star text-[#F7B731] text-[12px]"></i>
-                                <i class="fa-solid fa-star text-[#F7B731] text-[12px]"></i>
-                            </div>
-                            <span class="text-white text-[13px] font-bold font-hanken">4.9</span>
-                            <span class="text-[#D6DAF0]  text-[12px] font-inter">(12k reviews)</span>
-                        </div>
-                        <div class="w-px h-8 bg-white/10"></div>
-                        <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-certificate text-secondary text-[16px]"></i>
-                            <span class="text-[#D6DAF0]  text-[13px] font-inter">Certificate <span class="text-white font-semibold">Included</span></span>
-                        </div>
                     </div>
-                </div>
-                <!-- Right column placeholder for hero image -->
-                <div class="hidden lg:block"></div>
+                    <!-- Right column placeholder for hero image -->
+                    <div class="hidden lg:block"></div>
                 </div>
             </div>
 
             <!-- Thumb Slider -->
             <div class="relative z-[999] px-4 pb-10 flex justify-start">
-                <div class="rounded-[20px] p-5 border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm max-w-[1000px] w-full">
+                <div
+                    class="rounded-[20px] p-5 border border-white/[0.08] bg-white/[0.03] backdrop-blur-sm max-w-[1000px] w-full">
                     <div class="flex items-center gap-3">
-                        <button class="hero-thumb-prev shrink-0 w-9 h-9 rounded-full border border-white/15 flex items-center justify-center text-[#D6DAF0] hover:border-secondary hover:text-secondary transition-all duration-300">
+                        <button
+                            class="hero-thumb-prev shrink-0 w-9 h-9 rounded-full border border-white/15 flex items-center justify-center text-[#D6DAF0] hover:border-secondary hover:text-secondary transition-all duration-300">
                             <i class="fa-solid fa-arrow-left text-[12px]"></i>
                         </button>
                         <div class="swiper hero-thumb-swiper overflow-hidden flex-1">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
-                                    <div class="hero-thumb-item rounded-[12px] overflow-hidden cursor-pointer relative transition-all duration-500 scale-95 opacity-60">
-                                        <img src="assets/images/hero/hero-slider.webp" alt="" class="w-full h-[160px] object-cover">
-                                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                                        <span class="hero-thumb-badge absolute bottom-2.5 left-2.5 text-white text-[11px] font-semibold font-hanken px-3 py-1 rounded-[50px] gradient-color-primary hidden">Web Design</span>
+                                    <div
+                                        class="hero-thumb-item rounded-[12px] overflow-hidden cursor-pointer relative transition-all duration-500 scale-95 opacity-60">
+                                        <img src="assets/images/hero/hero-slider.webp" alt=""
+                                            class="w-full h-[160px] object-cover">
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent">
+                                        </div>
+                                        <span
+                                            class="hero-thumb-badge absolute bottom-2.5 left-2.5 text-white text-[11px] font-semibold font-hanken px-3 py-1 rounded-[50px] gradient-color-primary hidden">Web
+                                            Design</span>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="hero-thumb-item rounded-[12px] overflow-hidden cursor-pointer relative transition-all duration-500 scale-95 opacity-60">
-                                        <img src="assets/images/hero/hero-slider-2.webp" alt="" class="w-full h-[160px] object-cover">
-                                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                                        <span class="hero-thumb-badge absolute bottom-2.5 left-2.5 text-white text-[11px] font-semibold font-hanken px-3 py-1 rounded-[50px] gradient-color-primary hidden">Sales Marketing</span>
+                                    <div
+                                        class="hero-thumb-item rounded-[12px] overflow-hidden cursor-pointer relative transition-all duration-500 scale-95 opacity-60">
+                                        <img src="assets/images/hero/hero-slider-2.webp" alt=""
+                                            class="w-full h-[160px] object-cover">
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent">
+                                        </div>
+                                        <span
+                                            class="hero-thumb-badge absolute bottom-2.5 left-2.5 text-white text-[11px] font-semibold font-hanken px-3 py-1 rounded-[50px] gradient-color-primary hidden">Sales
+                                            Marketing</span>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="hero-thumb-item rounded-[12px] overflow-hidden cursor-pointer relative transition-all duration-500 scale-95 opacity-60">
-                                        <img src="assets/images/hero/hero-slider-3.webp" alt="" class="w-full h-[160px] object-cover">
-                                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                                        <span class="hero-thumb-badge absolute bottom-2.5 left-2.5 text-white text-[11px] font-semibold font-hanken px-3 py-1 rounded-[50px] gradient-color-primary hidden">Technology</span>
+                                    <div
+                                        class="hero-thumb-item rounded-[12px] overflow-hidden cursor-pointer relative transition-all duration-500 scale-95 opacity-60">
+                                        <img src="assets/images/hero/hero-slider-3.webp" alt=""
+                                            class="w-full h-[160px] object-cover">
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent">
+                                        </div>
+                                        <span
+                                            class="hero-thumb-badge absolute bottom-2.5 left-2.5 text-white text-[11px] font-semibold font-hanken px-3 py-1 rounded-[50px] gradient-color-primary hidden">Technology</span>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="hero-thumb-item rounded-[12px] overflow-hidden cursor-pointer relative transition-all duration-500 scale-95 opacity-60">
-                                        <img src="assets/images/hero/hero-slider.webp" alt="" class="w-full h-[160px] object-cover">
-                                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                                        <span class="hero-thumb-badge absolute bottom-2.5 left-2.5 text-white text-[11px] font-semibold font-hanken px-3 py-1 rounded-[50px] gradient-color-primary hidden">Creative Arts</span>
+                                    <div
+                                        class="hero-thumb-item rounded-[12px] overflow-hidden cursor-pointer relative transition-all duration-500 scale-95 opacity-60">
+                                        <img src="assets/images/hero/hero-slider.webp" alt=""
+                                            class="w-full h-[160px] object-cover">
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent">
+                                        </div>
+                                        <span
+                                            class="hero-thumb-badge absolute bottom-2.5 left-2.5 text-white text-[11px] font-semibold font-hanken px-3 py-1 rounded-[50px] gradient-color-primary hidden">Creative
+                                            Arts</span>
                                     </div>
                                 </div>
                                 <div class="swiper-slide">
-                                    <div class="hero-thumb-item rounded-[12px] overflow-hidden cursor-pointer relative transition-all duration-500 scale-95 opacity-60">
-                                        <img src="assets/images/hero/hero-slider-2.webp" alt="" class="w-full h-[160px] object-cover">
-                                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                                        <span class="hero-thumb-badge absolute bottom-2.5 left-2.5 text-white text-[11px] font-semibold font-hanken px-3 py-1 rounded-[50px] gradient-color-primary hidden">Business</span>
+                                    <div
+                                        class="hero-thumb-item rounded-[12px] overflow-hidden cursor-pointer relative transition-all duration-500 scale-95 opacity-60">
+                                        <img src="assets/images/hero/hero-slider-2.webp" alt=""
+                                            class="w-full h-[160px] object-cover">
+                                        <div
+                                            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent">
+                                        </div>
+                                        <span
+                                            class="hero-thumb-badge absolute bottom-2.5 left-2.5 text-white text-[11px] font-semibold font-hanken px-3 py-1 rounded-[50px] gradient-color-primary hidden">Business</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <button class="hero-thumb-next shrink-0 w-9 h-9 rounded-full border border-white/15 flex items-center justify-center text-[#D6DAF0] hover:border-secondary hover:text-secondary transition-all duration-300">
+                        <button
+                            class="hero-thumb-next shrink-0 w-9 h-9 rounded-full border border-white/15 flex items-center justify-center text-[#D6DAF0] hover:border-secondary hover:text-secondary transition-all duration-300">
                             <i class="fa-solid fa-arrow-right text-[12px]"></i>
                         </button>
                     </div>
@@ -1717,26 +1748,33 @@
         <!-- Counter Section Start -->
         <section class="bg-primary relative overflow-hidden">
             <div class="pointer-events-none absolute inset-0">
-                <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[#B26EF7] opacity-[0.08] blur-[150px] rounded-full"></div>
+                <div
+                    class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[#B26EF7] opacity-[0.08] blur-[150px] rounded-full">
+                </div>
             </div>
             <div class="max-w-[1320px] mx-auto px-4 relative z-10">
-                <div class="rounded-[24px] overflow-hidden" style="background: linear-gradient(135deg, rgba(147,130,255,0.08) 0%, rgba(255,113,191,0.05) 50%, rgba(147,130,255,0.08) 100%); border: 1px solid rgba(147,130,255,0.15);">
+                <div class="rounded-[24px] overflow-hidden"
+                    style="background: linear-gradient(135deg, rgba(147,130,255,0.08) 0%, rgba(255,113,191,0.05) 50%, rgba(147,130,255,0.08) 100%); border: 1px solid rgba(147,130,255,0.15);">
                     <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
                         <div class="group relative text-center px-6 py-10 transition-all duration-300 hover:bg-white/[0.03]
                             [&:not(:last-child)]:border-r [&:not(:last-child)]:border-white/[0.07]
                             max-lg:[&:nth-child(2)]:border-r-0 max-md:[&:nth-child(2)]:border-r-0
                             max-lg:border-b max-lg:[&:nth-child(n+5)]:border-b-0
                             max-md:border-b max-md:[&:nth-child(n+5)]:border-b-0 max-md:[&:nth-child(n+5)]:border-b">
-                            <div class="inline-flex items-center justify-center w-[48px] h-[48px] rounded-[12px] bg-secondary/10 border border-secondary/20 mb-4 group-hover:bg-secondary/20 transition-all duration-300">
+                            <div
+                                class="inline-flex items-center justify-center w-[48px] h-[48px] rounded-[12px] bg-secondary/10 border border-secondary/20 mb-4 group-hover:bg-secondary/20 transition-all duration-300">
                                 <i class="fa-solid fa-play-circle text-secondary text-[18px]"></i>
                             </div>
                             <h3 class="text-white text-[36px] md:text-[42px] font-bold font-hanken leading-none mb-1.5">
-                                <span class="counter" data-target="1000">0</span><span class="gradient-color-primary bg-clip-text text-transparent">+</span>
+                                <span class="counter" data-target="1000">0</span><span
+                                    class="gradient-color-primary bg-clip-text text-transparent">+</span>
                             </h3>
                             <p class="text-[#D6DAF0]  text-[13px] font-inter tracking-wide">Courses &amp; Video</p>
                         </div>
-                        <div class="group relative text-center px-6 py-10 transition-all duration-300 hover:bg-white/[0.03] border-r border-white/[0.07] max-md:border-r-0 border-b lg:border-b-0 max-md:border-b">
-                            <div class="inline-flex items-center justify-center w-[48px] h-[48px] rounded-[12px] bg-[#FF71BF]/10 border border-[#FF71BF]/20 mb-4 group-hover:bg-[#FF71BF]/20 transition-all duration-300">
+                        <div
+                            class="group relative text-center px-6 py-10 transition-all duration-300 hover:bg-white/[0.03] border-r border-white/[0.07] max-md:border-r-0 border-b lg:border-b-0 max-md:border-b">
+                            <div
+                                class="inline-flex items-center justify-center w-[48px] h-[48px] rounded-[12px] bg-[#FF71BF]/10 border border-[#FF71BF]/20 mb-4 group-hover:bg-[#FF71BF]/20 transition-all duration-300">
                                 <i class="fa-solid fa-book-open text-[#FF71BF] text-[18px]"></i>
                             </div>
                             <h3 class="text-white text-[36px] md:text-[42px] font-bold font-hanken leading-none mb-1.5">
@@ -1744,8 +1782,10 @@
                             </h3>
                             <p class="text-[#D6DAF0]  text-[13px] font-inter tracking-wide">Subjects</p>
                         </div>
-                        <div class="group relative text-center px-6 py-10 transition-all duration-300 hover:bg-white/[0.03] border-r border-white/[0.07] max-lg:border-r-0 border-b lg:border-b-0 max-md:border-b">
-                            <div class="inline-flex items-center justify-center w-[48px] h-[48px] rounded-[12px] bg-[#4ECDC4]/10 border border-[#4ECDC4]/20 mb-4 group-hover:bg-[#4ECDC4]/20 transition-all duration-300">
+                        <div
+                            class="group relative text-center px-6 py-10 transition-all duration-300 hover:bg-white/[0.03] border-r border-white/[0.07] max-lg:border-r-0 border-b lg:border-b-0 max-md:border-b">
+                            <div
+                                class="inline-flex items-center justify-center w-[48px] h-[48px] rounded-[12px] bg-[#4ECDC4]/10 border border-[#4ECDC4]/20 mb-4 group-hover:bg-[#4ECDC4]/20 transition-all duration-300">
                                 <i class="fa-solid fa-user-graduate text-[#4ECDC4] text-[18px]"></i>
                             </div>
                             <h3 class="text-white text-[36px] md:text-[42px] font-bold font-hanken leading-none mb-1.5">
@@ -1753,8 +1793,10 @@
                             </h3>
                             <p class="text-[#D6DAF0]  text-[13px] font-inter tracking-wide">Student Enrolled</p>
                         </div>
-                        <div class="group relative text-center px-6 py-10 transition-all duration-300 hover:bg-white/[0.03] border-r border-white/[0.07] border-b lg:border-b-0 max-md:border-b">
-                            <div class="inline-flex items-center justify-center w-[48px] h-[48px] rounded-[12px] bg-[#F7B731]/10 border border-[#F7B731]/20 mb-4 group-hover:bg-[#F7B731]/20 transition-all duration-300">
+                        <div
+                            class="group relative text-center px-6 py-10 transition-all duration-300 hover:bg-white/[0.03] border-r border-white/[0.07] border-b lg:border-b-0 max-md:border-b">
+                            <div
+                                class="inline-flex items-center justify-center w-[48px] h-[48px] rounded-[12px] bg-[#F7B731]/10 border border-[#F7B731]/20 mb-4 group-hover:bg-[#F7B731]/20 transition-all duration-300">
                                 <i class="fa-solid fa-briefcase text-[#F7B731] text-[18px]"></i>
                             </div>
                             <h3 class="text-white text-[36px] md:text-[42px] font-bold font-hanken leading-none mb-1.5">
@@ -1762,8 +1804,10 @@
                             </h3>
                             <p class="text-[#D6DAF0]  text-[13px] font-inter tracking-wide">Job Placement</p>
                         </div>
-                        <div class="group relative text-center px-6 py-10 transition-all duration-300 hover:bg-white/[0.03] border-r border-white/[0.07] max-md:border-r-0">
-                            <div class="inline-flex items-center justify-center w-[48px] h-[48px] rounded-[12px] bg-[#26de81]/10 border border-[#26de81]/20 mb-4 group-hover:bg-[#26de81]/20 transition-all duration-300">
+                        <div
+                            class="group relative text-center px-6 py-10 transition-all duration-300 hover:bg-white/[0.03] border-r border-white/[0.07] max-md:border-r-0">
+                            <div
+                                class="inline-flex items-center justify-center w-[48px] h-[48px] rounded-[12px] bg-[#26de81]/10 border border-[#26de81]/20 mb-4 group-hover:bg-[#26de81]/20 transition-all duration-300">
                                 <i class="fa-solid fa-face-smile text-[#26de81] text-[18px]"></i>
                             </div>
                             <h3 class="text-white text-[36px] md:text-[42px] font-bold font-hanken leading-none mb-1.5">
@@ -1771,8 +1815,10 @@
                             </h3>
                             <p class="text-[#D6DAF0]  text-[13px] font-inter tracking-wide">Satisfaction Rate</p>
                         </div>
-                        <div class="group relative text-center px-6 py-10 transition-all duration-300 hover:bg-white/[0.03]">
-                            <div class="inline-flex items-center justify-center w-[48px] h-[48px] rounded-[12px] bg-[#fd9644]/10 border border-[#fd9644]/20 mb-4 group-hover:bg-[#fd9644]/20 transition-all duration-300">
+                        <div
+                            class="group relative text-center px-6 py-10 transition-all duration-300 hover:bg-white/[0.03]">
+                            <div
+                                class="inline-flex items-center justify-center w-[48px] h-[48px] rounded-[12px] bg-[#fd9644]/10 border border-[#fd9644]/20 mb-4 group-hover:bg-[#fd9644]/20 transition-all duration-300">
                                 <i class="fa-solid fa-chalkboard-user text-[#fd9644] text-[18px]"></i>
                             </div>
                             <h3 class="text-white text-[36px] md:text-[42px] font-bold font-hanken leading-none mb-1.5">
@@ -1932,7 +1978,8 @@
                                                         <p
                                                             class="text-white text-[15px] font-bold font-hanken leading-none mb-[4px]">
                                                             Sarah Johnson</p>
-                                                        <p class="text-[#D6DAF0]  text-[12px] font-inter">UI/UX Designer,
+                                                        <p class="text-[#D6DAF0]  text-[12px] font-inter">UI/UX
+                                                            Designer,
                                                             Google</p>
                                                     </div>
                                                 </div>
@@ -1986,7 +2033,8 @@
                                                         <p
                                                             class="text-white text-[15px] font-bold font-hanken leading-none mb-[4px]">
                                                             Marcus Chen</p>
-                                                        <p class="text-[#D6DAF0]  text-[12px] font-inter">Full-Stack Dev,
+                                                        <p class="text-[#D6DAF0]  text-[12px] font-inter">Full-Stack
+                                                            Dev,
                                                             Meta</p>
                                                     </div>
                                                 </div>
@@ -2040,7 +2088,8 @@
                                                         <p
                                                             class="text-white text-[15px] font-bold font-hanken leading-none mb-[4px]">
                                                             Aisha Rodriguez</p>
-                                                        <p class="text-[#D6DAF0]  text-[12px] font-inter">Marketing Lead,
+                                                        <p class="text-[#D6DAF0]  text-[12px] font-inter">Marketing
+                                                            Lead,
                                                             HubSpot</p>
                                                     </div>
                                                 </div>
@@ -2339,7 +2388,8 @@
                                     <span
                                         class="absolute bottom-0 right-0 w-6 h-6 rounded-full bg-[#24BD25] border-2 border-[#13132E]"></span>
                                 </div>
-                                <h3 class="text-[#D6DAF0]  text-[18px] font-bold font-inter mb-1">Isabella E. Olivia</h3>
+                                <h3 class="text-[#D6DAF0]  text-[18px] font-bold font-inter mb-1">Isabella E. Olivia
+                                </h3>
                                 <p class="text-secondary text-[14px] font-inter mb-3">Web Developer</p>
                                 <div class="flex items-center justify-center gap-1 mb-4">
                                     <i class="fa-solid fa-star text-[#FCC418] text-[12px]"></i>
@@ -2697,7 +2747,8 @@
                     </h2>
 
                     <!-- Sub heading -->
-                    <p class="relative text-[#D6DAF0]  text-[15px] max-w-[420px] mx-auto leading-relaxed mb-8">Get curated
+                    <p class="relative text-[#D6DAF0]  text-[15px] max-w-[420px] mx-auto leading-relaxed mb-8">Get
+                        curated
                         courses, expert tips, and exclusive deals delivered straight to your inbox.</p>
 
                     <!-- Form -->
@@ -2741,7 +2792,8 @@
                     <div class="flex items-center gap-3">
                         <img src="assets/images/logo.png" alt="Logo" class="h-8 lg:h-10 w-auto">
                     </div>
-                    <p class="text-[#D6DAF0]  text-[14px] leading-relaxed font-inter">Education is typically divided into
+                    <p class="text-[#D6DAF0]  text-[14px] leading-relaxed font-inter">Education is typically divided
+                        into
                         various
                         levels, including primary, secondary</p>
                     <div class="space-y-3">
