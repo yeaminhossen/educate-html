@@ -746,6 +746,22 @@
     color: #ffffff;
   }
 
+  .course-filter-btn {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    color: rgba(214,218,240,0.65);
+  }
+  .course-filter-btn:hover {
+    background: rgba(147,130,255,0.08);
+    border-color: rgba(147,130,255,0.3);
+    color: #D6DAF0;
+  }
+  .course-filter-btn.active-filter {
+    background: linear-gradient(to right, #360185 0%, #8F0177 47%, #FF0051 100%);
+    border-color: transparent;
+    color: #ffffff;
+  }
+
   .counter-card-blur::before {
     content: "";
     position: absolute;
