@@ -593,12 +593,14 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    transition: padding-left 0.25s ease, color 0.25s ease, background 0.25s ease;
   }
   
   .footer-menu-link .footer-arrow {
     opacity: 0;
-    transform: translateX(-4px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateX(-6px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    flex-shrink: 0;
   }
   
   .footer-menu-link:hover .footer-arrow {
@@ -608,6 +610,7 @@
   
   .footer-menu-link.active .footer-arrow {
     opacity: 1;
+    transform: translateX(0);
   }
 
   .font-inter {
