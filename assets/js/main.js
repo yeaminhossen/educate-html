@@ -526,40 +526,59 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
+    const renderCounterValue = (counter, value) => {
+        const prefix = counter.getAttribute('data-prefix') || '';
+        const suffix = counter.getAttribute('data-suffix') || '';
+        counter.textContent = `${prefix}${Math.round(value).toLocaleString()}${suffix}`;
+    };
+
     // Counter Up Animation
     const counters = document.querySelectorAll('.counter');
     const counterObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const counter = entry.target;
-                const target = parseInt(counter.getAttribute('data-target'));
-                const duration = 2000; // 2 seconds
-                const startTime = performance.now();
-
-                const updateCounter = (currentTime) => {
-                    const elapsedTime = currentTime - startTime;
-                    const progress = Math.min(elapsedTime / duration, 1);
-                    const currentCount = Math.floor(progress * target);
-
-                    // Add comma for large numbers (like 1,500)
-                    counter.innerText = currentCount.toLocaleString();
-
-                    if (progress < 1) {
-                        requestAnimationFrame(updateCounter);
-                    } else {
-                        counter.innerText = target.toLocaleString();
-                    }
-                };
-
-                requestAnimationFrame(updateCounter);
-                observer.unobserve(counter);
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) {
+                return;
             }
+
+            const counter = entry.target;
+            if (counter.dataset.counterAnimated === 'true') {
+                observer.unobserve(counter);
+                return;
+            }
+
+            const target = parseInt(counter.getAttribute('data-target'), 10);
+            if (!Number.isFinite(target)) {
+                observer.unobserve(counter);
+                return;
+            }
+
+            const duration = 2000;
+            const startTime = performance.now();
+            counter.dataset.counterAnimated = 'true';
+
+            const updateCounter = (currentTime) => {
+                const elapsedTime = currentTime - startTime;
+                const progress = Math.min(elapsedTime / duration, 1);
+                const currentCount = Math.floor(progress * target);
+
+                renderCounterValue(counter, currentCount);
+
+                if (progress < 1) {
+                    requestAnimationFrame(updateCounter);
+                    return;
+                }
+
+                renderCounterValue(counter, target);
+            };
+
+            requestAnimationFrame(updateCounter);
+            observer.unobserve(counter);
         });
     }, {
         threshold: 0.5
     });
 
-    counters.forEach(counter => counterObserver.observe(counter));
+    counters.forEach((counter) => counterObserver.observe(counter));
 
 
     // Cart Sidebar Toggle
@@ -1491,11 +1510,20 @@ document.addEventListener('DOMContentLoaded', function () {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const counter = entry.target;
-                    const target = parseInt(counter.getAttribute('data-target'));
+                    if (counter.dataset.counterAnimated === 'true') {
+                        observer.unobserve(counter);
+                        return;
+                    }
+                    const target = parseInt(counter.getAttribute('data-target'), 10);
+                    if (!Number.isFinite(target)) {
+                        observer.unobserve(counter);
+                        return;
+                    }
                     const duration = 2000; // 2 seconds
                     const frameRate = 1000 / 60; // 60fps
                     const totalFrames = Math.round(duration / frameRate);
                     let frame = 0;
+                    counter.dataset.counterAnimated = 'true';
                     
                     const updateCounter = () => {
                         frame++;
@@ -1505,10 +1533,10 @@ document.addEventListener('DOMContentLoaded', function () {
                         const current = Math.round(target * easeOutQuad(progress));
                         
                         if (frame <= totalFrames) {
-                            counter.innerText = current;
+                            renderCounterValue(counter, current);
                             requestAnimationFrame(updateCounter);
                         } else {
-                            counter.innerText = target;
+                            renderCounterValue(counter, target);
                         }
                     };
                     

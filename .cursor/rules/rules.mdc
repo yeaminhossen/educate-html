@@ -1,7 +1,7 @@
 ---
-description: 
 alwaysApply: true
 ---
+
 
 Key Principles
 
@@ -79,9 +79,3 @@ Output Rules
 - Always reply in English, even if instructions are given in Bangla
 - Do not add opinions, explanations, or suggestions unless explicitly asked
 - our all code sort version add our file.
-
-
-
-Another
-- Before writing any code, please first check whether similar code already exists in the project. Especially for JavaScript, make sure to verify if the functionality is already implemented somewhere.
-- Here is the optimized content (Title, Tags, and Description) designed to push your education item to the top.

@@ -707,123 +707,106 @@
 
     <main>
         <!-- Hero Banner Section Start -->
-        <section class="relative bg-[#050520] overflow-hidden py-[80px] lg:py-[110px]">
+        <section class="relative bg-[#050520] overflow-hidden py-[80px] md:py-[100px] lg:py-[120px]">
             <div class="absolute inset-0 pointer-events-none">
-                <div class="absolute top-[-80px] right-[5%] w-[650px] h-[650px] rounded-full bg-secondary/12 blur-[140px]"></div>
-                <div class="absolute bottom-[-100px] left-[0%] w-[500px] h-[500px] rounded-full bg-[#FF71BF]/8 blur-[130px]"></div>
-                <div class="absolute top-[30%] left-[30%] w-[400px] h-[400px] rounded-full bg-[#5B1FBF]/10 blur-[120px]"></div>
+                <div class="absolute inset-0 opacity-[0.35] bg-[linear-gradient(rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px)] [background-size:48px_48px]"></div>
+                <div class="absolute top-[-80px] right-[5%] w-[650px] h-[650px] rounded-full bg-secondary/14 blur-[150px]"></div>
+                <div class="absolute bottom-[-100px] left-[0%] w-[520px] h-[520px] rounded-full bg-[#FF71BF]/10 blur-[140px]"></div>
+                <div class="absolute top-[28%] left-[22%] w-[420px] h-[420px] rounded-full bg-[#5B1FBF]/12 blur-[128px]"></div>
             </div>
 
-            <div class="max-w-[1320px] mx-auto px-4 relative z-10">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-[60px] xl:gap-[80px] items-center">
+            <div class="max-w-[1320px] mx-auto px-4 sm:px-6 relative z-10">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-[44px] md:gap-[56px] lg:gap-[72px] xl:gap-[88px] items-center">
 
-                    <!-- Left: Text Content -->
-                    <div>
-                        <div class="inline-flex items-center gap-[10px] px-[18px] py-[9px] rounded-[50px] border border-secondary/30 bg-secondary/10 mb-[28px]">
-                            <span class="w-[7px] h-[7px] rounded-full bg-secondary animate-pulse shrink-0"></span>
-                            <span class="text-secondary text-[13px] font-inter font-medium">#1 Ranked University 2025</span>
+                    <div class="max-w-[620px] lg:pt-[8px]">
+                        <div class="inline-flex items-center gap-[10px] px-[16px] sm:px-[20px] py-[10px] rounded-[50px] border border-secondary/35 bg-secondary/[0.12] backdrop-blur-md shadow-[0px_12px_40px_rgba(147,130,255,0.12)] mb-[26px] md:mb-[32px]">
+                            <span class="flex h-[26px] w-[26px] items-center justify-center rounded-full bg-secondary/20 text-secondary shrink-0"><i class="fa-solid fa-award text-[11px]"></i></span>
+                            <span class="text-secondary text-[12px] sm:text-[13px] font-inter font-semibold tracking-wide">#1 Ranked University 2025</span>
                         </div>
 
-                        <h1 class="text-white text-[44px] lg:text-[56px] xl:text-[66px] font-bold font-hanken leading-[1.05] mb-[22px]">
-                            Shape Your <br>
-                            <span class="text-transparent bg-clip-text bg-linear-to-r from-secondary via-[#C96EFF] to-[#FF71BF]">Future</span> With<br>
-                            Excellence
+                        <h1 class="text-white text-[40px] sm:text-[48px] lg:text-[58px] xl:text-[68px] font-bold font-hanken leading-[1.03] tracking-[-1px] sm:tracking-[-1.2px] mb-[20px] md:mb-[26px] drop-shadow-[0px_18px_50px_rgba(0,0,0,0.35)]">
+                            Shape Your Future <br class="hidden sm:block">
+                            With <span class="inline-block text-transparent bg-clip-text bg-linear-to-r from-secondary via-[#C96EFF] to-[#FF71BF] drop-shadow-[0px_10px_36px_rgba(201,110,255,0.45)]">Excellence</span>
                         </h1>
 
-                        <p class="text-[#D6DAF0] text-[15px] font-inter leading-[1.8] mb-[38px] max-w-[460px]">Join 36,000+ students building world-class careers. Expert faculty, cutting-edge programs, and a global alumni network await you.</p>
+                        <p class="text-[#D6DAF0]/95 text-[15px] sm:text-[16px] font-inter leading-[1.85] mb-[32px] md:mb-[40px] max-w-[540px]">Join 36,000+ students building world-class careers. Expert faculty, cutting-edge programs, and a global alumni network await you.</p>
 
-                        <div class="flex flex-wrap items-center gap-[14px] mb-[48px]">
-                            <a href="#" class="inline-flex items-center gap-[10px] px-[28px] py-[14px] rounded-full bg-linear-to-r from-[#360185] via-[#8F0177] to-[#FF0051] text-white text-[14px] font-semibold font-hanken hover:shadow-[0px_15px_40px_rgba(143,1,119,0.5)] hover:-translate-y-1 transition-all duration-300">
-                                Apply Today <i class="fa-solid fa-arrow-right text-[11px]"></i>
+                        <div class="flex flex-wrap items-center gap-[12px] sm:gap-[16px] mb-[44px] md:mb-[52px]">
+                            <a href="#" class="group inline-flex items-center justify-center gap-[10px] px-[30px] py-[15px] rounded-[50px] bg-linear-to-r from-[#360185] via-[#8F0177] to-[#FF0051] text-white text-[14px] font-semibold font-hanken shadow-[0px_14px_40px_rgba(143,1,119,0.35)] hover:shadow-[0px_20px_50px_rgba(143,1,119,0.55)] hover:-translate-y-[3px] active:translate-y-0 transition-all duration-300 min-w-[184px] ring-1 ring-white/10">
+                                Apply Today <i class="fa-solid fa-arrow-right text-[11px] transition-transform duration-300 group-hover:translate-x-[3px]"></i>
                             </a>
-                            <a href="#" class="inline-flex items-center gap-[10px] px-[28px] py-[13px] rounded-full border border-white/20 bg-white/[0.04] text-white text-[14px] font-semibold font-hanken hover:border-secondary/40 hover:bg-secondary/10 transition-all duration-300">
-                                <span class="w-[28px] h-[28px] rounded-full bg-secondary/20 flex items-center justify-center shrink-0"><i class="fa-solid fa-play text-secondary text-[9px] ml-[2px]"></i></span>
+                            <a href="#" class="inline-flex items-center justify-center gap-[10px] px-[24px] sm:px-[28px] py-[14px] rounded-[50px] border border-white/25 bg-white/[0.06] backdrop-blur-sm text-white text-[14px] font-semibold font-hanken hover:border-secondary/50 hover:bg-secondary/[0.14] hover:shadow-[0px_16px_44px_rgba(0,0,0,0.35)] hover:-translate-y-[2px] active:translate-y-0 transition-all duration-300 min-w-[214px]">
+                                <span class="w-[30px] h-[30px] rounded-full bg-linear-to-br from-secondary/30 to-secondary/10 flex items-center justify-center shrink-0 ring-1 ring-secondary/25"><i class="fa-solid fa-play text-secondary text-[10px] ml-[3px]"></i></span>
                                 Watch Campus Tour
                             </a>
                         </div>
 
-                        <div class="flex flex-wrap items-center gap-[28px] pt-[32px] border-t border-white/[0.08]">
-                            <div>
-                                <p class="text-white text-[28px] font-bold font-hanken leading-none">36k+</p>
-                                <p class="text-[#D6DAF0] text-[12px] font-inter mt-[5px]">Students Enrolled</p>
-                            </div>
-                            <div class="w-[1px] h-[38px] bg-white/10"></div>
-                            <div>
-                                <p class="text-white text-[28px] font-bold font-hanken leading-none">200+</p>
-                                <p class="text-[#D6DAF0] text-[12px] font-inter mt-[5px]">Expert Faculty</p>
-                            </div>
-                            <div class="w-[1px] h-[38px] bg-white/10"></div>
-                            <div>
-                                <p class="text-white text-[28px] font-bold font-hanken leading-none">98%</p>
-                                <p class="text-[#D6DAF0] text-[12px] font-inter mt-[5px]">Job Placement</p>
-                            </div>
-                            <div class="w-[1px] h-[38px] bg-white/10"></div>
-                            <div>
-                                <p class="text-white text-[28px] font-bold font-hanken leading-none">50+</p>
-                                <p class="text-[#D6DAF0] text-[12px] font-inter mt-[5px]">Programs</p>
+                        <div class="rounded-[18px] border border-white/[0.1] bg-[#0D0D27]/60 backdrop-blur-sm p-[14px] sm:p-[16px] relative overflow-hidden shadow-[0px_16px_48px_rgba(0,0,0,0.25)]">
+                            <div class="absolute top-0 left-0 right-0 h-[3px] bg-linear-to-r from-secondary via-[#C96EFF] to-[#FF71BF]"></div>
+                            <div class="grid grid-cols-2 md:grid-cols-4 gap-[10px] sm:gap-[12px]">
+                                <div class="group relative flex gap-[10px] rounded-[14px] border border-white/[0.06] bg-white/[0.03] px-[12px] py-[12px] hover:border-secondary/30 transition-colors duration-300">
+                                    <span class="flex h-[40px] w-[40px] shrink-0 items-center justify-center rounded-[12px] bg-secondary/15 text-secondary ring-1 ring-secondary/20 group-hover:bg-secondary/25"><i class="fa-solid fa-user-graduate text-[14px]"></i></span>
+                                    <div class="min-w-0">
+                                        <p class="text-white text-[22px] sm:text-[24px] font-bold font-hanken leading-none tabular-nums tracking-tight"><span class="counter" data-target="36" data-suffix="k+">36k+</span></p>
+                                        <p class="text-[#D6DAF0] text-[11px] font-inter mt-[4px] leading-tight">Students enrolled</p>
+                                    </div>
+                                </div>
+                                <div class="group relative flex gap-[10px] rounded-[14px] border border-white/[0.06] bg-white/[0.03] px-[12px] py-[12px] hover:border-secondary/30 transition-colors duration-300">
+                                    <span class="flex h-[40px] w-[40px] shrink-0 items-center justify-center rounded-[12px] bg-secondary/15 text-secondary ring-1 ring-secondary/20 group-hover:bg-secondary/25"><i class="fa-solid fa-chalkboard-user text-[14px]"></i></span>
+                                    <div class="min-w-0">
+                                        <p class="text-white text-[22px] sm:text-[24px] font-bold font-hanken leading-none tabular-nums tracking-tight"><span class="counter" data-target="200" data-suffix="+">200+</span></p>
+                                        <p class="text-[#D6DAF0] text-[11px] font-inter mt-[4px] leading-tight">Expert faculty</p>
+                                    </div>
+                                </div>
+                                <div class="group relative flex gap-[10px] rounded-[14px] border border-white/[0.06] bg-white/[0.03] px-[12px] py-[12px] hover:border-secondary/30 transition-colors duration-300">
+                                    <span class="flex h-[40px] w-[40px] shrink-0 items-center justify-center rounded-[12px] bg-secondary/15 text-secondary ring-1 ring-secondary/20 group-hover:bg-secondary/25"><i class="fa-solid fa-briefcase text-[14px]"></i></span>
+                                    <div class="min-w-0">
+                                        <p class="text-white text-[22px] sm:text-[24px] font-bold font-hanken leading-none tabular-nums tracking-tight"><span class="counter" data-target="98" data-suffix="%">98%</span></p>
+                                        <p class="text-[#D6DAF0] text-[11px] font-inter mt-[4px] leading-tight">Job placement</p>
+                                    </div>
+                                </div>
+                                <div class="group relative flex gap-[10px] rounded-[14px] border border-white/[0.06] bg-white/[0.03] px-[12px] py-[12px] hover:border-secondary/30 transition-colors duration-300">
+                                    <span class="flex h-[40px] w-[40px] shrink-0 items-center justify-center rounded-[12px] bg-secondary/15 text-secondary ring-1 ring-secondary/20 group-hover:bg-secondary/25"><i class="fa-solid fa-book-open text-[14px]"></i></span>
+                                    <div class="min-w-0">
+                                        <p class="text-white text-[22px] sm:text-[24px] font-bold font-hanken leading-none tabular-nums tracking-tight"><span class="counter" data-target="50" data-suffix="+">50+</span></p>
+                                        <p class="text-[#D6DAF0] text-[11px] font-inter mt-[4px] leading-tight">Programs</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Right: Image Composition -->
-                    <div class="relative hidden lg:block">
-                        <div class="absolute inset-0 rounded-[28px] bg-linear-to-br from-secondary/20 to-[#FF71BF]/10 blur-[2px] translate-x-[8px] translate-y-[8px]"></div>
-                        <div class="relative rounded-[28px] overflow-hidden">
-                            <img src="assets/images/banner/img.png" alt="Graduate Student" class="w-full h-[580px] object-cover object-top">
-                            <div class="absolute inset-0 bg-linear-to-t from-[#050520]/70 via-transparent to-transparent"></div>
-                        </div>
+                    <div class="relative max-w-[520px] mx-auto w-full lg:max-w-[540px] lg:ml-auto">
+                        <div class="absolute -inset-[1px] rounded-[24px] lg:rounded-[26px] bg-linear-to-br from-secondary/35 via-transparent to-[#FF71BF]/25 opacity-80 blur-[1px]"></div>
+                        <div class="absolute inset-0 rounded-[22px] lg:rounded-[26px] bg-linear-to-br from-secondary/25 to-[#FF71BF]/12 blur-[2px] translate-x-[6px] translate-y-[6px] lg:translate-x-[8px] lg:translate-y-[8px]"></div>
+                        <div class="group relative rounded-[24px] lg:rounded-[26px] overflow-hidden border border-white/15 shadow-[0px_28px_80px_rgba(5,5,32,0.72)] ring-1 ring-white/[0.06]">
+                            <img src="assets/images/banner/img.png" alt="Graduate Student" class="w-full max-w-full h-[700px] object-cover object-[center_top] scale-[1.03] transition-transform duration-700 ease-out group-hover:scale-[1.05]">
+                            <div class="absolute inset-0 pointer-events-none bg-linear-to-t from-[#050520]/82 via-[#050520]/22 to-transparent"></div>
+                            <div class="absolute inset-0 pointer-events-none bg-linear-to-r from-secondary/12 via-transparent to-[#FF71BF]/12 mix-blend-screen opacity-90"></div>
+                            <div class="absolute bottom-0 left-0 right-0 h-[4px] bg-linear-to-r from-secondary via-[#C96EFF] to-[#FF71BF] opacity-90"></div>
 
-                        <!-- House building bottom -->
-                        <div class="absolute bottom-[-10px] left-[20px]">
-                            <img src="assets/images/banner/house.png" alt="Campus" class="h-[110px] w-auto object-contain drop-shadow-2xl opacity-80">
-                        </div>
-
-                        <!-- Floating: Trustpilot -->
-                        <div class="absolute top-[28px] left-[-44px] bg-[#0D0D27]/95 backdrop-blur-sm border border-white/10 rounded-[18px] p-[18px] shadow-[0px_20px_60px_rgba(0,0,0,0.6)]">
-                            <div class="flex items-center gap-[10px] mb-[10px]">
-                                <div class="w-[38px] h-[38px] rounded-[10px] bg-[#00B67A]/15 flex items-center justify-center shrink-0">
-                                    <svg class="w-[18px] h-[18px]" viewBox="0 0 24 24" fill="none"><path d="M12 2L8.5 9H1l6 5.5L4.5 22 12 17.5 19.5 22 17 14.5l6-5.5h-7.5L12 2z" fill="#00B67A"/></svg>
+                            <div class="absolute z-[20] top-1/2 -translate-y-1/2 right-1/2 translate-x-1/2 sm:right-[16px] lg:right-[20px] max-w-[calc(100%-24px)] sm:max-w-none rounded-[18px] lg:rounded-[20px] border border-white/15 bg-[#0D0D27]/90 backdrop-blur-md p-[14px] lg:p-[18px] shadow-[0px_24px_70px_rgba(0,0,0,0.55)] ring-1 ring-secondary/15">
+                                <div class="flex items-center justify-between gap-[12px] mb-[10px]">
+                                    <p class="text-[#D6DAF0] text-[11px] font-inter font-medium">Our Students</p>
+                                    <div class="flex items-center gap-[3px] text-[#FFB84D]">
+                                        <i class="fa-solid fa-star text-[10px]"></i><i class="fa-solid fa-star text-[10px]"></i><i class="fa-solid fa-star text-[10px]"></i><i class="fa-solid fa-star text-[10px]"></i><i class="fa-solid fa-star-half-stroke text-[10px]"></i>
+                                    </div>
                                 </div>
-                                <div>
-                                    <p class="text-white text-[15px] font-bold font-hanken leading-none">4.9 / 5.0</p>
-                                    <p class="text-[#D6DAF0] text-[11px] font-inter mt-[2px]">Trustpilot Rating</p>
-                                </div>
-                            </div>
-                            <div class="flex gap-[3px]">
-                                <i class="fa-solid fa-star text-[#00B67A] text-[12px]"></i>
-                                <i class="fa-solid fa-star text-[#00B67A] text-[12px]"></i>
-                                <i class="fa-solid fa-star text-[#00B67A] text-[12px]"></i>
-                                <i class="fa-solid fa-star text-[#00B67A] text-[12px]"></i>
-                                <i class="fa-solid fa-star text-[#00B67A] text-[12px]"></i>
-                            </div>
-                        </div>
-
-                        <!-- Floating: Admissions Open -->
-                        <div class="absolute top-[28px] right-[-36px] bg-linear-to-br from-secondary/25 to-[#FF71BF]/20 backdrop-blur-sm border border-secondary/25 rounded-[18px] p-[18px] shadow-[0px_20px_60px_rgba(0,0,0,0.5)]">
-                            <i class="fa-solid fa-graduation-cap text-secondary text-[22px] mb-[8px] block"></i>
-                            <p class="text-white text-[16px] font-bold font-hanken leading-none">2025</p>
-                            <p class="text-[#D6DAF0] text-[11px] font-inter mt-[3px]">Admissions Open</p>
-                            <a href="#" class="inline-flex items-center gap-[5px] text-secondary text-[11px] font-inter font-semibold mt-[10px] hover:gap-[8px] transition-all duration-300">Apply Now <i class="fa-solid fa-arrow-right text-[9px]"></i></a>
-                        </div>
-
-                        <!-- Floating: Students -->
-                        <div class="absolute bottom-[44px] left-[-44px] bg-[#0D0D27]/95 backdrop-blur-sm border border-white/10 rounded-[18px] p-[18px] shadow-[0px_20px_60px_rgba(0,0,0,0.6)]">
-                            <p class="text-[#D6DAF0] text-[11px] font-inter mb-[10px]">Our Students</p>
-                            <div class="flex items-center gap-[10px]">
-                                <div class="flex -space-x-[8px]">
-                                    <img src="assets/images/team/team-1.webp" alt="" class="w-[34px] h-[34px] rounded-full border-2 border-[#0D0D27] object-cover">
-                                    <img src="assets/images/team/team-2.webp" alt="" class="w-[34px] h-[34px] rounded-full border-2 border-[#0D0D27] object-cover">
-                                    <img src="assets/images/team/team-3.webp" alt="" class="w-[34px] h-[34px] rounded-full border-2 border-[#0D0D27] object-cover">
-                                    <img src="assets/images/team/team-4.webp" alt="" class="w-[34px] h-[34px] rounded-full border-2 border-[#0D0D27] object-cover">
-                                    <div class="w-[34px] h-[34px] rounded-full bg-secondary/20 border-2 border-[#0D0D27] flex items-center justify-center"><i class="fa-solid fa-plus text-secondary text-[10px]"></i></div>
-                                </div>
-                                <div>
-                                    <p class="text-white text-[14px] font-bold font-hanken leading-none">36k+</p>
-                                    <p class="text-[#D6DAF0] text-[11px] font-inter">Active Students</p>
+                                <div class="flex items-center gap-[12px]">
+                                    <div class="flex -space-x-[8px]">
+                                        <img src="assets/images/team/team-1.webp" alt="" class="w-[36px] h-[36px] rounded-full border-2 border-[#0D0D27] object-cover ring-1 ring-white/10">
+                                        <img src="assets/images/team/team-2.webp" alt="" class="w-[36px] h-[36px] rounded-full border-2 border-[#0D0D27] object-cover ring-1 ring-white/10">
+                                        <img src="assets/images/team/team-3.webp" alt="" class="w-[36px] h-[36px] rounded-full border-2 border-[#0D0D27] object-cover ring-1 ring-white/10">
+                                        <img src="assets/images/team/team-4.webp" alt="" class="w-[36px] h-[36px] rounded-full border-2 border-[#0D0D27] object-cover ring-1 ring-white/10">
+                                        <div class="w-[36px] h-[36px] rounded-full bg-secondary/25 border-2 border-[#0D0D27] flex items-center justify-center ring-1 ring-secondary/30"><i class="fa-solid fa-plus text-secondary text-[10px]"></i></div>
+                                    </div>
+                                    <div>
+                                        <p class="text-white text-[15px] font-bold font-hanken leading-none">36k+</p>
+                                        <p class="text-[#D6DAF0] text-[11px] font-inter mt-[4px]">Active this term</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
                     </div>
 
                 </div>
@@ -2000,35 +1983,35 @@
 
         <!-- Newsletter Band -->
         <div class="relative">
-            <div class="max-w-[1320px] mx-auto px-[15px] xl:px-0 py-[60px] md:py-[70px] lg:py-[80px]">
-                <div class="relative rounded-[20px] overflow-hidden border border-secondary/20 bg-gradient-to-br from-secondary/10 via-white/[0.03] to-[#8F0177]/10 p-[40px] md:p-[50px] lg:p-[60px]">
+            <div class="max-w-[1320px] mx-auto px-[15px] xl:px-0 py-[56px] md:py-[64px] lg:py-[72px]">
+                <div class="relative rounded-[20px] overflow-hidden border border-secondary/20 bg-gradient-to-br from-secondary/10 via-white/[0.03] to-[#8F0177]/10 p-[36px] md:p-[44px] lg:p-[52px]">
                     <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%239382ff\' fill-opacity=\'0.03\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-40 pointer-events-none"></div>
                     <div class="absolute top-[-30px] right-[-30px] w-[200px] h-[200px] bg-secondary/15 rounded-full blur-[80px] pointer-events-none"></div>
-                    <div class="relative flex flex-col lg:flex-row items-center justify-between gap-[30px] lg:gap-[50px]">
+                    <div class="relative flex flex-col lg:flex-row items-center justify-between gap-[28px] lg:gap-[44px]">
                         <div class="text-center lg:text-left lg:max-w-[520px]">
-                            <span class="inline-flex items-center gap-[8px] bg-secondary/15 border border-secondary/25 text-secondary font-inter text-[12px] font-semibold uppercase tracking-[1.5px] px-[14px] py-[6px] rounded-full mb-[16px]">
+                            <span class="inline-flex items-center gap-[8px] bg-secondary/15 border border-secondary/25 text-secondary font-inter text-[12px] font-semibold uppercase tracking-[1.5px] px-[14px] py-[7px] rounded-full mb-[14px]">
                                 <i class="fa-solid fa-bell text-[10px]"></i> Stay Updated
                             </span>
-                            <h3 class="text-white font-hanken font-bold text-[26px] md:text-[30px] lg:text-[34px] leading-[1.2] mb-[12px]">
+                            <h3 class="text-white font-hanken font-bold text-[26px] md:text-[30px] lg:text-[34px] leading-[1.18] tracking-[-0.02em] mb-[14px]">
                                 Never Miss a <span class="text-secondary">Learning</span> Opportunity
                             </h3>
-                            <p class="text-[#D6DAF0] font-inter text-[15px] leading-[1.7]">Join 50,000+ learners. Get courses, events &amp; updates delivered to your inbox weekly.</p>
+                            <p class="text-[#D6DAF0] font-inter text-[15px] leading-[1.65]">Join 50,000+ learners. Get courses, events &amp; updates delivered to your inbox weekly.</p>
                         </div>
                         <div class="w-full lg:w-auto lg:min-w-[460px]">
                             <form class="relative">
                                 <div class="flex flex-col sm:flex-row gap-[12px] sm:gap-0 bg-white/5 border border-white/10 rounded-[14px] p-[6px] focus-within:border-secondary/40 transition-colors">
-                                    <div class="flex items-center flex-1 px-[14px] gap-[10px]">
+                                    <div class="flex items-center flex-1 px-[16px] gap-[10px]">
                                         <i class="fa-regular fa-envelope text-secondary text-[16px] shrink-0"></i>
                                         <input type="email" placeholder="Your email address"
-                                            class="flex-1 bg-transparent text-[#D6DAF0] font-inter text-[14px] outline-none placeholder-white/30 py-[10px]">
+                                            class="flex-1 bg-transparent text-[#D6DAF0] font-inter text-[14px] leading-[1.5] outline-none placeholder-white/30 py-[12px]">
                                     </div>
-                                    <button type="submit" class="bg-secondary hover:bg-secondary/85 text-white font-hanken font-semibold text-[14px] px-[28px] py-[14px] rounded-[10px] transition-all flex items-center justify-center gap-[8px] whitespace-nowrap group">
+                                    <button type="submit" class="bg-secondary hover:bg-secondary/85 text-white font-hanken font-semibold text-[14px] leading-none px-[28px] py-[14px] rounded-[10px] transition-all flex items-center justify-center gap-[8px] whitespace-nowrap group">
                                         Subscribe <i class="fa-solid fa-paper-plane group-hover:translate-x-[2px] group-hover:-translate-y-[2px] transition-transform text-[13px]"></i>
                                     </button>
                                 </div>
-                                <p class="text-white/30 font-inter text-[12px] mt-[10px] text-center sm:text-left"><i class="fa-solid fa-shield-halved text-secondary/60 mr-[5px]"></i>No spam ever. Unsubscribe anytime.</p>
+                                <p class="text-white/30 font-inter text-[12px] leading-[1.5] mt-[12px] text-center sm:text-left"><i class="fa-solid fa-shield-halved text-secondary/60 mr-[6px]"></i>No spam ever. Unsubscribe anytime.</p>
                             </form>
-                            <div class="flex items-center gap-[20px] mt-[20px] justify-center sm:justify-start">
+                            <div class="flex items-center gap-[20px] mt-[22px] justify-center sm:justify-start">
                                 <div class="flex items-center gap-[8px]">
                                     <div class="flex -space-x-[8px]">
                                         <img src="assets/images/team/team-1.webp" alt="" class="w-[28px] h-[28px] rounded-full border-[2px] border-[#050520] object-cover">
@@ -2036,10 +2019,10 @@
                                         <img src="assets/images/team/team-3.webp" alt="" class="w-[28px] h-[28px] rounded-full border-[2px] border-[#050520] object-cover">
                                         <div class="w-[28px] h-[28px] rounded-full border-[2px] border-[#050520] bg-secondary flex items-center justify-center text-white font-inter text-[10px] font-bold">+</div>
                                     </div>
-                                    <span class="text-[#D6DAF0] font-inter text-[12px]"><span class="text-white font-semibold">50K+</span> subscribers</span>
+                                    <span class="text-[#D6DAF0] font-inter text-[12px] leading-[1.4]"><span class="text-white font-semibold">50K+</span> subscribers</span>
                                 </div>
-                                <div class="h-[14px] w-[1px] bg-white/10"></div>
-                                <div class="flex items-center gap-[6px]">
+                                <div class="h-[16px] w-[1px] bg-white/10 shrink-0"></div>
+                                <div class="flex items-center gap-[8px]">
                                     <div class="flex gap-[2px]">
                                         <i class="fa-solid fa-star text-[#FFB800] text-[10px]"></i>
                                         <i class="fa-solid fa-star text-[#FFB800] text-[10px]"></i>
@@ -2047,7 +2030,7 @@
                                         <i class="fa-solid fa-star text-[#FFB800] text-[10px]"></i>
                                         <i class="fa-solid fa-star text-[#FFB800] text-[10px]"></i>
                                     </div>
-                                    <span class="text-[#D6DAF0] font-inter text-[12px]"><span class="text-white font-semibold">4.9</span> rated</span>
+                                    <span class="text-[#D6DAF0] font-inter text-[12px] leading-[1.4]"><span class="text-white font-semibold">4.9</span> rated</span>
                                 </div>
                             </div>
                         </div>
@@ -2059,42 +2042,42 @@
 
         <!-- Stats Strip -->
         <div class="border-y border-white/[0.05] bg-white/[0.02]">
-            <div class="max-w-[1320px] mx-auto px-[15px] xl:px-0 py-[24px]">
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-[20px]">
-                    <div class="flex items-center gap-[14px] group">
+            <div class="max-w-[1320px] mx-auto px-[15px] xl:px-0 py-[28px] md:py-[32px]">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-x-[24px] gap-y-[22px]">
+                    <div class="flex items-center gap-[16px] group">
                         <div class="w-[44px] h-[44px] rounded-[10px] bg-secondary/10 border border-secondary/20 flex items-center justify-center text-secondary text-[18px] shrink-0 group-hover:bg-secondary group-hover:text-white transition-all">
                             <i class="fa-solid fa-graduation-cap"></i>
                         </div>
-                        <div>
-                            <p class="text-white font-hanken font-bold text-[20px] leading-none">25K+</p>
-                            <p class="text-[#D6DAF0] font-inter text-[12px] mt-[3px]">Students Enrolled</p>
+                        <div class="min-w-0">
+                            <p class="text-white font-hanken font-bold text-[22px] leading-[1.1] tracking-[-0.02em]">25K+</p>
+                            <p class="text-[#D6DAF0] font-inter text-[13px] leading-[1.35] mt-[6px]">Students Enrolled</p>
                         </div>
                     </div>
-                    <div class="flex items-center gap-[14px] group">
+                    <div class="flex items-center gap-[16px] group">
                         <div class="w-[44px] h-[44px] rounded-[10px] bg-secondary/10 border border-secondary/20 flex items-center justify-center text-secondary text-[18px] shrink-0 group-hover:bg-secondary group-hover:text-white transition-all">
                             <i class="fa-solid fa-book-open"></i>
                         </div>
-                        <div>
-                            <p class="text-white font-hanken font-bold text-[20px] leading-none">1,200+</p>
-                            <p class="text-[#D6DAF0] font-inter text-[12px] mt-[3px]">Online Courses</p>
+                        <div class="min-w-0">
+                            <p class="text-white font-hanken font-bold text-[22px] leading-[1.1] tracking-[-0.02em]">1,200+</p>
+                            <p class="text-[#D6DAF0] font-inter text-[13px] leading-[1.35] mt-[6px]">Online Courses</p>
                         </div>
                     </div>
-                    <div class="flex items-center gap-[14px] group">
+                    <div class="flex items-center gap-[16px] group">
                         <div class="w-[44px] h-[44px] rounded-[10px] bg-secondary/10 border border-secondary/20 flex items-center justify-center text-secondary text-[18px] shrink-0 group-hover:bg-secondary group-hover:text-white transition-all">
                             <i class="fa-solid fa-chalkboard-user"></i>
                         </div>
-                        <div>
-                            <p class="text-white font-hanken font-bold text-[20px] leading-none">380+</p>
-                            <p class="text-[#D6DAF0] font-inter text-[12px] mt-[3px]">Expert Instructors</p>
+                        <div class="min-w-0">
+                            <p class="text-white font-hanken font-bold text-[22px] leading-[1.1] tracking-[-0.02em]">380+</p>
+                            <p class="text-[#D6DAF0] font-inter text-[13px] leading-[1.35] mt-[6px]">Expert Instructors</p>
                         </div>
                     </div>
-                    <div class="flex items-center gap-[14px] group">
+                    <div class="flex items-center gap-[16px] group">
                         <div class="w-[44px] h-[44px] rounded-[10px] bg-secondary/10 border border-secondary/20 flex items-center justify-center text-secondary text-[18px] shrink-0 group-hover:bg-secondary group-hover:text-white transition-all">
                             <i class="fa-solid fa-trophy"></i>
                         </div>
-                        <div>
-                            <p class="text-white font-hanken font-bold text-[20px] leading-none">98%</p>
-                            <p class="text-[#D6DAF0] font-inter text-[12px] mt-[3px]">Satisfaction Rate</p>
+                        <div class="min-w-0">
+                            <p class="text-white font-hanken font-bold text-[22px] leading-[1.1] tracking-[-0.02em]">98%</p>
+                            <p class="text-[#D6DAF0] font-inter text-[13px] leading-[1.35] mt-[6px]">Satisfaction Rate</p>
                         </div>
                     </div>
                 </div>
@@ -2102,26 +2085,26 @@
         </div>
 
         <!-- Main Footer -->
-        <div class="max-w-[1320px] mx-auto px-[15px] xl:px-0 pt-[60px] md:pt-[70px] lg:pt-[80px]">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-[40px] xl:gap-[50px] mb-[50px] lg:mb-[70px]">
+        <div class="max-w-[1320px] mx-auto px-[15px] xl:px-0 pt-[56px] md:pt-[64px] lg:pt-[72px]">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-[36px] xl:gap-[44px] mb-[48px] lg:mb-[64px]">
 
                 <!-- Col 1: Brand -->
                 <div class="md:col-span-2 lg:col-span-4">
-                    <a href="index.html" class="inline-block mb-[22px]">
+                    <a href="index.html" class="inline-block mb-[20px]">
                         <img src="assets/images/logo.png" alt="educate" class="h-[42px] w-auto">
                     </a>
-                    <p class="text-[#D6DAF0] font-inter text-[15px] leading-[1.8] mb-[28px] lg:max-w-[300px]">
+                    <p class="text-[#D6DAF0] font-inter text-[15px] leading-[1.75] mb-[24px] lg:max-w-[300px]">
                         Empowering learners at every level — from primary foundations to advanced university education.
                     </p>
 
-                    <div class="space-y-[10px] mb-[28px]">
+                    <div class="space-y-[12px] mb-[24px]">
                         <a href="tel:+14065550120" class="flex items-center gap-[14px] group w-fit">
                             <span class="w-[40px] h-[40px] rounded-[10px] bg-secondary/10 border border-secondary/20 flex items-center justify-center text-secondary text-[14px] shrink-0 group-hover:bg-secondary group-hover:text-white group-hover:border-secondary group-hover:shadow-[0_0_20px_rgba(147,130,255,0.3)] transition-all duration-300">
                                 <i class="fa-solid fa-phone"></i>
                             </span>
                             <div>
-                                <p class="text-white/40 font-inter text-[11px] uppercase tracking-[1px] leading-none mb-[3px]">Call Us</p>
-                                <p class="text-[#D6DAF0] font-inter text-[14px] group-hover:text-secondary transition-colors">(406) 555-0120</p>
+                                <p class="text-white/40 font-inter text-[11px] uppercase tracking-[1px] leading-none mb-[4px]">Call Us</p>
+                                <p class="text-[#D6DAF0] font-inter text-[14px] leading-[1.45] group-hover:text-secondary transition-colors">(406) 555-0120</p>
                             </div>
                         </a>
                         <a href="mailto:rainbow@example.com" class="flex items-center gap-[14px] group w-fit">
@@ -2129,8 +2112,8 @@
                                 <i class="fa-solid fa-envelope"></i>
                             </span>
                             <div>
-                                <p class="text-white/40 font-inter text-[11px] uppercase tracking-[1px] leading-none mb-[3px]">Email Us</p>
-                                <p class="text-[#D6DAF0] font-inter text-[14px] group-hover:text-secondary transition-colors">rainbow@example.com</p>
+                                <p class="text-white/40 font-inter text-[11px] uppercase tracking-[1px] leading-none mb-[4px]">Email Us</p>
+                                <p class="text-[#D6DAF0] font-inter text-[14px] leading-[1.45] group-hover:text-secondary transition-colors">rainbow@example.com</p>
                             </div>
                         </a>
                         <div class="flex items-center gap-[14px]">
@@ -2138,13 +2121,13 @@
                                 <i class="fa-solid fa-location-dot"></i>
                             </span>
                             <div>
-                                <p class="text-white/40 font-inter text-[11px] uppercase tracking-[1px] leading-none mb-[3px]">Location</p>
-                                <p class="text-[#D6DAF0] font-inter text-[14px]">5205 North Kierland Blvd.</p>
+                                <p class="text-white/40 font-inter text-[11px] uppercase tracking-[1px] leading-none mb-[4px]">Location</p>
+                                <p class="text-[#D6DAF0] font-inter text-[14px] leading-[1.45]">5205 North Kierland Blvd.</p>
                             </div>
                         </div>
                     </div>
 
-                    <div class="flex items-center flex-wrap gap-[8px]">
+                    <div class="flex items-center flex-wrap gap-[10px]">
                         <a href="#" aria-label="Facebook" class="w-[38px] h-[38px] rounded-[10px] bg-white/5 border border-white/10 flex items-center justify-center text-[#D6DAF0] hover:bg-[#1877F2] hover:border-[#1877F2] hover:text-white hover:shadow-[0_4px_15px_rgba(24,119,242,0.35)] transition-all duration-300 text-[14px]"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="#" aria-label="Twitter" class="w-[38px] h-[38px] rounded-[10px] bg-white/5 border border-white/10 flex items-center justify-center text-[#D6DAF0] hover:bg-[#1DA1F2] hover:border-[#1DA1F2] hover:text-white hover:shadow-[0_4px_15px_rgba(29,161,242,0.35)] transition-all duration-300 text-[14px]"><i class="fa-brands fa-twitter"></i></a>
                         <a href="#" aria-label="LinkedIn" class="w-[38px] h-[38px] rounded-[10px] bg-white/5 border border-white/10 flex items-center justify-center text-[#D6DAF0] hover:bg-[#0A66C2] hover:border-[#0A66C2] hover:text-white hover:shadow-[0_4px_15px_rgba(10,102,194,0.35)] transition-all duration-300 text-[14px]"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -2155,79 +2138,79 @@
 
                 <!-- Col 2: Resources -->
                 <div class="md:col-span-1 lg:col-span-2">
-                    <h5 class="text-white font-hanken font-bold text-[17px] mb-[24px] flex items-center gap-[10px]">
-                        <span class="w-[4px] h-[18px] bg-secondary rounded-full inline-block"></span> Resources
+                    <h5 class="text-white font-hanken font-bold text-[18px] leading-[1.25] tracking-[-0.02em] mb-[20px] flex items-center gap-[10px]">
+                        <span class="w-[4px] h-[18px] bg-secondary rounded-full inline-block shrink-0"></span> Resources
                     </h5>
-                    <ul class="space-y-[4px]">
-                        <li><a href="#" class="text-[#D6DAF0] hover:text-secondary transition-all text-[14px] font-inter footer-menu-link py-[7px] px-[10px] rounded-[8px] hover:bg-secondary/8 hover:pl-[14px] -ml-[10px] w-full"><span>Educa Course</span><i class="fa-solid fa-arrow-right text-[11px] footer-arrow ml-auto"></i></a></li>
-                        <li><a href="#" class="text-[#D6DAF0] hover:text-secondary transition-all text-[14px] font-inter footer-menu-link py-[7px] px-[10px] rounded-[8px] hover:bg-secondary/8 hover:pl-[14px] -ml-[10px] w-full"><span>Marketplace</span><i class="fa-solid fa-arrow-right text-[11px] footer-arrow ml-auto"></i></a></li>
-                        <li><a href="#" class="text-[#D6DAF0] hover:text-secondary transition-all text-[14px] font-inter footer-menu-link py-[7px] px-[10px] rounded-[8px] hover:bg-secondary/8 hover:pl-[14px] -ml-[10px] w-full"><span>University</span><i class="fa-solid fa-arrow-right text-[11px] footer-arrow ml-auto"></i></a></li>
-                        <li><a href="#" class="text-[#D6DAF0] hover:text-secondary transition-all text-[14px] font-inter footer-menu-link py-[7px] px-[10px] rounded-[8px] hover:bg-secondary/8 hover:pl-[14px] -ml-[10px] w-full"><span>Course Overview</span><i class="fa-solid fa-arrow-right text-[11px] footer-arrow ml-auto"></i></a></li>
-                        <li><a href="#" class="text-[#D6DAF0] hover:text-secondary transition-all text-[14px] font-inter footer-menu-link py-[7px] px-[10px] rounded-[8px] hover:bg-secondary/8 hover:pl-[14px] -ml-[10px] w-full"><span>FAQ</span><i class="fa-solid fa-arrow-right text-[11px] footer-arrow ml-auto"></i></a></li>
-                        <li><a href="#" class="text-[#D6DAF0] hover:text-secondary transition-all text-[14px] font-inter footer-menu-link py-[7px] px-[10px] rounded-[8px] hover:bg-secondary/8 hover:pl-[14px] -ml-[10px] w-full"><span>Refunds Policy</span><i class="fa-solid fa-arrow-right text-[11px] footer-arrow ml-auto"></i></a></li>
+                    <ul class="space-y-[2px]">
+                        <li><a href="#" class="text-[#D6DAF0] hover:text-secondary transition-all text-[14px] leading-[1.5] font-inter footer-menu-link py-[8px] px-[10px] rounded-[8px] hover:bg-secondary/8 hover:pl-[14px] -ml-[10px] w-full"><span>Educa Course</span><i class="fa-solid fa-arrow-right text-[11px] footer-arrow ml-auto"></i></a></li>
+                        <li><a href="#" class="text-[#D6DAF0] hover:text-secondary transition-all text-[14px] leading-[1.5] font-inter footer-menu-link py-[8px] px-[10px] rounded-[8px] hover:bg-secondary/8 hover:pl-[14px] -ml-[10px] w-full"><span>Marketplace</span><i class="fa-solid fa-arrow-right text-[11px] footer-arrow ml-auto"></i></a></li>
+                        <li><a href="#" class="text-[#D6DAF0] hover:text-secondary transition-all text-[14px] leading-[1.5] font-inter footer-menu-link py-[8px] px-[10px] rounded-[8px] hover:bg-secondary/8 hover:pl-[14px] -ml-[10px] w-full"><span>University</span><i class="fa-solid fa-arrow-right text-[11px] footer-arrow ml-auto"></i></a></li>
+                        <li><a href="#" class="text-[#D6DAF0] hover:text-secondary transition-all text-[14px] leading-[1.5] font-inter footer-menu-link py-[8px] px-[10px] rounded-[8px] hover:bg-secondary/8 hover:pl-[14px] -ml-[10px] w-full"><span>Course Overview</span><i class="fa-solid fa-arrow-right text-[11px] footer-arrow ml-auto"></i></a></li>
+                        <li><a href="#" class="text-[#D6DAF0] hover:text-secondary transition-all text-[14px] leading-[1.5] font-inter footer-menu-link py-[8px] px-[10px] rounded-[8px] hover:bg-secondary/8 hover:pl-[14px] -ml-[10px] w-full"><span>FAQ</span><i class="fa-solid fa-arrow-right text-[11px] footer-arrow ml-auto"></i></a></li>
+                        <li><a href="#" class="text-[#D6DAF0] hover:text-secondary transition-all text-[14px] leading-[1.5] font-inter footer-menu-link py-[8px] px-[10px] rounded-[8px] hover:bg-secondary/8 hover:pl-[14px] -ml-[10px] w-full"><span>Refunds Policy</span><i class="fa-solid fa-arrow-right text-[11px] footer-arrow ml-auto"></i></a></li>
                     </ul>
                 </div>
 
                 <!-- Col 3: Company -->
                 <div class="md:col-span-1 lg:col-span-2">
-                    <h5 class="text-white font-hanken font-bold text-[17px] mb-[24px] flex items-center gap-[10px]">
-                        <span class="w-[4px] h-[18px] bg-secondary rounded-full inline-block"></span> Company
+                    <h5 class="text-white font-hanken font-bold text-[18px] leading-[1.25] tracking-[-0.02em] mb-[20px] flex items-center gap-[10px]">
+                        <span class="w-[4px] h-[18px] bg-secondary rounded-full inline-block shrink-0"></span> Company
                     </h5>
-                    <ul class="space-y-[4px]">
-                        <li><a href="#" class="text-[#D6DAF0] hover:text-secondary transition-all text-[14px] font-inter footer-menu-link py-[7px] px-[10px] rounded-[8px] hover:bg-secondary/8 hover:pl-[14px] -ml-[10px] w-full"><span>About Us</span><i class="fa-solid fa-arrow-right text-[11px] footer-arrow ml-auto"></i></a></li>
-                        <li><a href="#" class="text-[#D6DAF0] hover:text-secondary transition-all text-[14px] font-inter footer-menu-link py-[7px] px-[10px] rounded-[8px] hover:bg-secondary/8 hover:pl-[14px] -ml-[10px] w-full"><span>Become Teacher</span><i class="fa-solid fa-arrow-right text-[11px] footer-arrow ml-auto"></i></a></li>
-                        <li><a href="#" class="text-[#D6DAF0] hover:text-secondary transition-all text-[14px] font-inter footer-menu-link py-[7px] px-[10px] rounded-[8px] hover:bg-secondary/8 hover:pl-[14px] -ml-[10px] w-full"><span>News &amp; Blog</span><i class="fa-solid fa-arrow-right text-[11px] footer-arrow ml-auto"></i></a></li>
-                        <li><a href="#" class="text-[#D6DAF0] hover:text-secondary transition-all text-[14px] font-inter footer-menu-link py-[7px] px-[10px] rounded-[8px] hover:bg-secondary/8 hover:pl-[14px] -ml-[10px] w-full"><span>Instructor</span><i class="fa-solid fa-arrow-right text-[11px] footer-arrow ml-auto"></i></a></li>
-                        <li><a href="#" class="text-[#D6DAF0] hover:text-secondary transition-all text-[14px] font-inter footer-menu-link py-[7px] px-[10px] rounded-[8px] hover:bg-secondary/8 hover:pl-[14px] -ml-[10px] w-full"><span>Our Events</span><i class="fa-solid fa-arrow-right text-[11px] footer-arrow ml-auto"></i></a></li>
-                        <li><a href="#" class="text-[#D6DAF0] hover:text-secondary transition-all text-[14px] font-inter footer-menu-link py-[7px] px-[10px] rounded-[8px] hover:bg-secondary/8 hover:pl-[14px] -ml-[10px] w-full"><span>Contact Us</span><i class="fa-solid fa-arrow-right text-[11px] footer-arrow ml-auto"></i></a></li>
+                    <ul class="space-y-[2px]">
+                        <li><a href="#" class="text-[#D6DAF0] hover:text-secondary transition-all text-[14px] leading-[1.5] font-inter footer-menu-link py-[8px] px-[10px] rounded-[8px] hover:bg-secondary/8 hover:pl-[14px] -ml-[10px] w-full"><span>About Us</span><i class="fa-solid fa-arrow-right text-[11px] footer-arrow ml-auto"></i></a></li>
+                        <li><a href="#" class="text-[#D6DAF0] hover:text-secondary transition-all text-[14px] leading-[1.5] font-inter footer-menu-link py-[8px] px-[10px] rounded-[8px] hover:bg-secondary/8 hover:pl-[14px] -ml-[10px] w-full"><span>Become Teacher</span><i class="fa-solid fa-arrow-right text-[11px] footer-arrow ml-auto"></i></a></li>
+                        <li><a href="#" class="text-[#D6DAF0] hover:text-secondary transition-all text-[14px] leading-[1.5] font-inter footer-menu-link py-[8px] px-[10px] rounded-[8px] hover:bg-secondary/8 hover:pl-[14px] -ml-[10px] w-full"><span>News &amp; Blog</span><i class="fa-solid fa-arrow-right text-[11px] footer-arrow ml-auto"></i></a></li>
+                        <li><a href="#" class="text-[#D6DAF0] hover:text-secondary transition-all text-[14px] leading-[1.5] font-inter footer-menu-link py-[8px] px-[10px] rounded-[8px] hover:bg-secondary/8 hover:pl-[14px] -ml-[10px] w-full"><span>Instructor</span><i class="fa-solid fa-arrow-right text-[11px] footer-arrow ml-auto"></i></a></li>
+                        <li><a href="#" class="text-[#D6DAF0] hover:text-secondary transition-all text-[14px] leading-[1.5] font-inter footer-menu-link py-[8px] px-[10px] rounded-[8px] hover:bg-secondary/8 hover:pl-[14px] -ml-[10px] w-full"><span>Our Events</span><i class="fa-solid fa-arrow-right text-[11px] footer-arrow ml-auto"></i></a></li>
+                        <li><a href="#" class="text-[#D6DAF0] hover:text-secondary transition-all text-[14px] leading-[1.5] font-inter footer-menu-link py-[8px] px-[10px] rounded-[8px] hover:bg-secondary/8 hover:pl-[14px] -ml-[10px] w-full"><span>Contact Us</span><i class="fa-solid fa-arrow-right text-[11px] footer-arrow ml-auto"></i></a></li>
                     </ul>
                 </div>
 
                 <!-- Col 4: App & Coaching -->
                 <div class="md:col-span-2 lg:col-span-4">
-                    <h5 class="text-white font-hanken font-bold text-[17px] mb-[24px] flex items-center gap-[10px]">
-                        <span class="w-[4px] h-[18px] bg-secondary rounded-full inline-block"></span> Get The App
+                    <h5 class="text-white font-hanken font-bold text-[18px] leading-[1.25] tracking-[-0.02em] mb-[20px] flex items-center gap-[10px]">
+                        <span class="w-[4px] h-[18px] bg-secondary rounded-full inline-block shrink-0"></span> Get The App
                     </h5>
-                    <p class="text-[#D6DAF0] font-inter text-[14px] leading-[1.7] mb-[18px]">Download our app and start learning on the go. Available for iOS &amp; Android.</p>
-                    <div class="flex flex-col sm:flex-row gap-[10px] mb-[28px]">
-                        <a href="#" class="flex-1 group flex items-center gap-[12px] bg-white/5 border border-white/10 hover:border-secondary/50 hover:bg-secondary/10 hover:shadow-[0_8px_30px_rgba(147,130,255,0.15)] rounded-[12px] px-[18px] py-[14px] transition-all duration-300">
+                    <p class="text-[#D6DAF0] font-inter text-[14px] leading-[1.65] mb-[20px]">Download our app and start learning on the go. Available for iOS &amp; Android.</p>
+                    <div class="flex flex-col sm:flex-row gap-[12px] mb-[24px]">
+                        <a href="#" class="flex-1 group flex items-center gap-[12px] bg-white/5 border border-white/10 hover:border-secondary/50 hover:bg-secondary/10 hover:shadow-[0_8px_30px_rgba(147,130,255,0.15)] rounded-[12px] px-[18px] py-[15px] transition-all duration-300">
                             <i class="fa-brands fa-apple text-white text-[26px] shrink-0 group-hover:text-secondary transition-colors"></i>
                             <div class="min-w-0">
-                                <p class="text-white/40 font-inter text-[10px] uppercase tracking-[1px] leading-none mb-[4px]">Download on the</p>
-                                <p class="text-white font-hanken font-semibold text-[14px] truncate">App Store</p>
+                                <p class="text-white/40 font-inter text-[10px] uppercase tracking-[1px] leading-none mb-[5px]">Download on the</p>
+                                <p class="text-white font-hanken font-semibold text-[14px] leading-[1.2] truncate">App Store</p>
                             </div>
                             <i class="fa-solid fa-arrow-right text-[11px] text-secondary/0 group-hover:text-secondary ml-auto transition-all duration-300 group-hover:translate-x-[2px]"></i>
                         </a>
-                        <a href="#" class="flex-1 group flex items-center gap-[12px] bg-white/5 border border-white/10 hover:border-secondary/50 hover:bg-secondary/10 hover:shadow-[0_8px_30px_rgba(147,130,255,0.15)] rounded-[12px] px-[18px] py-[14px] transition-all duration-300">
+                        <a href="#" class="flex-1 group flex items-center gap-[12px] bg-white/5 border border-white/10 hover:border-secondary/50 hover:bg-secondary/10 hover:shadow-[0_8px_30px_rgba(147,130,255,0.15)] rounded-[12px] px-[18px] py-[15px] transition-all duration-300">
                             <i class="fa-brands fa-google-play text-white text-[22px] shrink-0 group-hover:text-secondary transition-colors"></i>
                             <div class="min-w-0">
-                                <p class="text-white/40 font-inter text-[10px] uppercase tracking-[1px] leading-none mb-[4px]">Get it on</p>
-                                <p class="text-white font-hanken font-semibold text-[14px] truncate">Google Play</p>
+                                <p class="text-white/40 font-inter text-[10px] uppercase tracking-[1px] leading-none mb-[5px]">Get it on</p>
+                                <p class="text-white font-hanken font-semibold text-[14px] leading-[1.2] truncate">Google Play</p>
                             </div>
                             <i class="fa-solid fa-arrow-right text-[11px] text-secondary/0 group-hover:text-secondary ml-auto transition-all duration-300 group-hover:translate-x-[2px]"></i>
                         </a>
                     </div>
                     <div class="relative rounded-[14px] overflow-hidden border border-white/[0.08] bg-gradient-to-br from-white/[0.04] to-secondary/5">
                         <div class="absolute top-0 right-0 w-[80px] h-[80px] bg-secondary/10 rounded-full blur-[30px] pointer-events-none"></div>
-                        <div class="px-[22px] py-[20px]">
-                            <h6 class="text-white font-hanken font-semibold text-[15px] mb-[16px] flex items-center gap-[10px]">
-                                <span class="w-[32px] h-[32px] rounded-[8px] bg-secondary/15 border border-secondary/20 flex items-center justify-center text-secondary text-[13px]"><i class="fa-regular fa-clock"></i></span>
+                        <div class="px-[20px] py-[18px]">
+                            <h6 class="text-white font-hanken font-semibold text-[15px] leading-[1.3] mb-[14px] flex items-center gap-[10px]">
+                                <span class="w-[32px] h-[32px] rounded-[8px] bg-secondary/15 border border-secondary/20 flex items-center justify-center text-secondary text-[13px] shrink-0"><i class="fa-regular fa-clock"></i></span>
                                 Coaching Hours
                             </h6>
-                            <div class="space-y-[8px]">
-                                <div class="flex items-center justify-between text-[13px] font-inter bg-white/[0.03] rounded-[8px] px-[14px] py-[10px]">
+                            <div class="space-y-[10px]">
+                                <div class="flex items-center justify-between text-[13px] leading-[1.4] font-inter bg-white/[0.03] rounded-[8px] px-[14px] py-[11px] gap-[12px]">
                                     <div class="flex items-center gap-[8px]">
                                         <span class="w-[6px] h-[6px] rounded-full bg-secondary shrink-0"></span>
                                         <span class="text-[#D6DAF0]">Sat – Thu</span>
                                     </div>
-                                    <span class="text-white font-medium bg-secondary/10 px-[10px] py-[3px] rounded-full text-[12px]">10:00 – 20:00</span>
+                                    <span class="text-white font-medium bg-secondary/10 px-[10px] py-[4px] rounded-full text-[12px] leading-[1.3] shrink-0">10:00 – 20:00</span>
                                 </div>
-                                <div class="flex items-center justify-between text-[13px] font-inter bg-white/[0.03] rounded-[8px] px-[14px] py-[10px]">
+                                <div class="flex items-center justify-between text-[13px] leading-[1.4] font-inter bg-white/[0.03] rounded-[8px] px-[14px] py-[11px] gap-[12px]">
                                     <div class="flex items-center gap-[8px]">
                                         <span class="w-[6px] h-[6px] rounded-full bg-[#FF5757] shrink-0"></span>
                                         <span class="text-[#D6DAF0]">Friday</span>
                                     </div>
-                                    <span class="text-[#FF5757] font-medium bg-[#FF5757]/10 px-[10px] py-[3px] rounded-full text-[12px]">Closed</span>
+                                    <span class="text-[#FF5757] font-medium bg-[#FF5757]/10 px-[10px] py-[4px] rounded-full text-[12px] leading-[1.3] shrink-0">Closed</span>
                                 </div>
                             </div>
                         </div>
@@ -2236,21 +2219,21 @@
             </div>
 
             <!-- Bottom Bar -->
-            <div class="relative border-t border-white/[0.06] py-[28px]">
+            <div class="relative border-t border-white/[0.06] py-[24px] md:py-[30px]">
                 <div class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-secondary/20 to-transparent"></div>
-                <div class="flex flex-col md:flex-row items-center justify-between gap-[16px]">
-                    <div class="flex items-center gap-[16px]">
-                        <img src="assets/images/logo.png" alt="educate" class="h-[28px] w-auto opacity-60">
-                        <p class="text-[#D6DAF0]/70 font-inter text-[13px] text-center md:text-left">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-[18px]">
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-[12px] sm:gap-[16px] text-center sm:text-left">
+                        <img src="assets/images/logo.png" alt="educate" class="h-[28px] w-auto opacity-60 mx-auto sm:mx-0">
+                        <p class="text-[#D6DAF0]/70 font-inter text-[14px] leading-[1.5] md:text-left">
                             © 2024 <a href="#" class="text-white/80 font-semibold hover:text-secondary transition-all">Rainbow-Themes</a>. All rights reserved.
                         </p>
                     </div>
-                    <ul class="flex items-center flex-wrap justify-center gap-[6px]">
-                        <li><a href="#" class="text-[#D6DAF0]/70 hover:text-secondary font-inter text-[13px] transition-all px-[12px] py-[6px] rounded-[6px] hover:bg-secondary/8">Terms of Use</a></li>
+                    <ul class="flex items-center flex-wrap justify-center gap-[4px] sm:gap-[6px]">
+                        <li><a href="#" class="text-[#D6DAF0]/70 hover:text-secondary font-inter text-[14px] leading-[1.4] transition-all px-[12px] py-[7px] rounded-[6px] hover:bg-secondary/8">Terms of Use</a></li>
                         <li class="w-[3px] h-[3px] rounded-full bg-white/15"></li>
-                        <li><a href="#" class="text-[#D6DAF0]/70 hover:text-secondary font-inter text-[13px] transition-all px-[12px] py-[6px] rounded-[6px] hover:bg-secondary/8">Privacy Policy</a></li>
+                        <li><a href="#" class="text-[#D6DAF0]/70 hover:text-secondary font-inter text-[14px] leading-[1.4] transition-all px-[12px] py-[7px] rounded-[6px] hover:bg-secondary/8">Privacy Policy</a></li>
                         <li class="w-[3px] h-[3px] rounded-full bg-white/15"></li>
-                        <li><a href="#" class="text-[#D6DAF0]/70 hover:text-secondary font-inter text-[13px] transition-all px-[12px] py-[6px] rounded-[6px] hover:bg-secondary/8">Cookie Policy</a></li>
+                        <li><a href="#" class="text-[#D6DAF0]/70 hover:text-secondary font-inter text-[14px] leading-[1.4] transition-all px-[12px] py-[7px] rounded-[6px] hover:bg-secondary/8">Cookie Policy</a></li>
                     </ul>
                 </div>
             </div>
