@@ -261,7 +261,21 @@ document.addEventListener('DOMContentLoaded', function () {
             },
         });
     }
-    
+
+    document.querySelectorAll('.blog-standard-gallery').forEach((el) => {
+        if (!window.Swiper) return;
+        const wrap = el.closest('.blog-standard-gallery-wrap');
+        if (!wrap) return;
+        new Swiper(el, {
+            slidesPerView: 1,
+            loop: true,
+            speed: 600,
+            navigation: {
+                nextEl: wrap.querySelector('.blog-standard-gallery-next'),
+                prevEl: wrap.querySelector('.blog-standard-gallery-prev'),
+            },
+        });
+    });
 
     //team swiper initialization
     const teamSwiperEl = document.querySelector('.team-swiper');
@@ -381,7 +395,29 @@ document.addEventListener('DOMContentLoaded', function () {
             },
         });
     });
-
+    // Brand Swiper two
+    document.querySelectorAll('.brand-swiper-two').forEach(el => {
+        if (!window.Swiper) return;
+        
+        const isAutoWidth = el.querySelector('.swiper-slide')?.classList.contains('!w-auto');
+        
+        new Swiper(el, {
+            slidesPerView: isAutoWidth ? 'auto' : 2.35,
+            spaceBetween: 24,
+            loop: true,
+            speed: 4000,
+            autoplay: {
+                delay: 0,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                400: { slidesPerView: isAutoWidth ? 'auto' : 3, spaceBetween: 30 },
+                640: { slidesPerView: isAutoWidth ? 'auto' : 4, spaceBetween: 40 },
+                992: { slidesPerView: isAutoWidth ? 'auto' : 5, spaceBetween: 50 },
+                1200: { slidesPerView: isAutoWidth ? 'auto' : 7, spaceBetween: 60 },
+            },
+        });
+    });
     const backToTopBtn = document.getElementById('back-to-top');
     const backToTopProgress = document.getElementById('back-to-top-progress');
     const backToTopPercent = document.getElementById('back-to-top-percent');
@@ -1549,6 +1585,195 @@ document.addEventListener('DOMContentLoaded', function () {
         counters1.forEach(counter => counterObserver.observe(counter));
     }
 
+    document.querySelectorAll('[data-course-detail-tabs]').forEach((root) => {
+        const tabs = Array.from(root.querySelectorAll('[data-course-detail-tab]'));
+        const panels = Array.from(root.querySelectorAll('[data-course-detail-panel]'));
+        if (!tabs.length || !panels.length) return;
+        const activate = (id) => {
+            tabs.forEach((btn) => {
+                const active = btn.getAttribute('data-course-detail-tab') === id;
+                btn.classList.toggle('bg-secondary', active);
+                btn.classList.toggle('border-secondary', active);
+                btn.classList.toggle('text-white', active);
+                btn.classList.toggle('shadow-[0px_8px_25px_rgba(147,130,255,0.35)]', active);
+                btn.classList.toggle('bg-white/[0.04]', !active);
+                btn.classList.toggle('border-white/10', !active);
+                btn.classList.toggle('text-white/70', !active);
+                btn.setAttribute('aria-selected', active ? 'true' : 'false');
+            });
+            panels.forEach((panel) => {
+                const show = panel.getAttribute('data-course-detail-panel') === id;
+                panel.classList.toggle('hidden', !show);
+            });
+        };
+        tabs.forEach((btn) => {
+            btn.addEventListener('click', () => activate(btn.getAttribute('data-course-detail-tab')));
+        });
+        const first = tabs[0].getAttribute('data-course-detail-tab');
+        if (first) activate(first);
+    });
+
+    const coursesArchive = document.querySelector('[data-courses-archive]');
+    if (coursesArchive) {
+        const gridEl = coursesArchive.querySelector('#courses-archive-grid');
+        const viewBtns = coursesArchive.querySelectorAll('[data-courses-view]');
+        const topicChips = coursesArchive.querySelectorAll('.courses-topic-chip');
+        const sortSelect = coursesArchive.querySelector('#courses-archive-sort');
+        const countEl = coursesArchive.querySelector('#courses-archive-count');
+        let items = Array.from(coursesArchive.querySelectorAll('[data-course-archive-item]'));
+        const searchInput = coursesArchive.querySelector('#courses-archive-search');
+        const gridCls = 'grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6';
+        let activeTopic = '';
+        const chipOn =
+            'courses-topic-chip shrink-0 min-h-[40px] px-3.5 py-2 rounded-[50px] text-[13px] font-semibold font-inter bg-secondary text-white border border-secondary shadow-[0px_6px_18px_rgba(147,130,255,0.35)] transition-all';
+        const chipOff =
+            'courses-topic-chip shrink-0 min-h-[40px] px-3.5 py-2 rounded-[50px] text-[13px] font-semibold font-inter bg-white/[0.05] text-[#D6DAF0] border border-white/12 hover:border-white/25 hover:text-white transition-all';
+        const setBtn = (btn, on) => {
+            btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+            btn.className = on
+                ? 'courses-view-btn w-11 h-11 rounded-[10px] flex items-center justify-center bg-secondary text-white border border-secondary shadow-[0px_8px_20px_rgba(147,130,255,0.35)] transition-all'
+                : 'courses-view-btn w-11 h-11 rounded-[10px] flex items-center justify-center bg-white/[0.05] border border-white/10 text-[#D6DAF0] hover:text-white hover:border-white/20 transition-all';
+        };
+        const setView = (mode) => {
+            const list = mode === 'list';
+            if (gridEl) gridEl.className = list ? 'flex flex-col gap-5' : gridCls;
+            items.forEach((card) => {
+                const thumb = card.querySelector('.course-archive-thumb');
+                if (list) {
+                    card.classList.add('sm:flex-row', 'sm:items-stretch');
+                    if (thumb) {
+                        thumb.classList.add('sm:w-[280px]', 'sm:shrink-0', 'sm:self-stretch', 'sm:min-h-[200px]', 'sm:aspect-auto');
+                    }
+                } else {
+                    card.classList.remove('sm:flex-row', 'sm:items-stretch');
+                    if (thumb) {
+                        thumb.classList.remove('sm:w-[280px]', 'sm:shrink-0', 'sm:self-stretch', 'sm:min-h-[200px]', 'sm:aspect-auto');
+                    }
+                }
+            });
+            viewBtns.forEach((b) => setBtn(b, (b.getAttribute('data-courses-view') || 'grid') === mode));
+        };
+        const applyFilters = () => {
+            const q = searchInput ? searchInput.value.trim().toLowerCase() : '';
+            let visible = 0;
+            items.forEach((card) => {
+                const topic = (card.getAttribute('data-course-topic') || '').trim();
+                const okTopic = !activeTopic || topic === activeTopic;
+                const okSearch = !q || (card.textContent || '').toLowerCase().includes(q);
+                const show = okTopic && okSearch;
+                card.classList.toggle('hidden', !show);
+                if (show) visible += 1;
+            });
+            if (countEl) {
+                const total = items.length;
+                if (visible === total && !q && !activeTopic) {
+                    countEl.innerHTML = '<span class="text-white/90 font-medium">Showing 1–' + total + '</span> of 30 results';
+                } else {
+                    countEl.innerHTML = '<span class="text-white/90 font-medium">' + visible + '</span> course' + (visible !== 1 ? 's' : '') + ' match your filters';
+                }
+            }
+        };
+        const sortItems = () => {
+            if (!gridEl || !sortSelect) return;
+            const mode = sortSelect.value;
+            const sorted = items.slice();
+            const title = (el) => (el.querySelector('h2 a') || el.querySelector('h2'))?.textContent?.trim() || '';
+            const price = (el) => parseFloat(el.getAttribute('data-course-price') || '0') || 0;
+            if (mode === 'title-asc') sorted.sort((a, b) => title(a).localeCompare(title(b)));
+            else if (mode === 'title-desc') sorted.sort((a, b) => title(b).localeCompare(title(a)));
+            else if (mode === 'price-asc') sorted.sort((a, b) => price(a) - price(b));
+            else if (mode === 'price-desc') sorted.sort((a, b) => price(b) - price(a));
+            sorted.forEach((n) => gridEl.appendChild(n));
+            items = sorted;
+        };
+        viewBtns.forEach((b) => b.addEventListener('click', () => setView(b.getAttribute('data-courses-view') || 'grid')));
+        topicChips.forEach((chip) => {
+            chip.addEventListener('click', () => {
+                activeTopic = (chip.getAttribute('data-course-topic') || '').trim();
+                topicChips.forEach((c) => {
+                    const isAll = c.getAttribute('data-course-topic') === '';
+                    const t = (c.getAttribute('data-course-topic') || '').trim();
+                    const on = isAll ? activeTopic === '' : t === activeTopic;
+                    c.className = on ? chipOn : chipOff;
+                });
+                applyFilters();
+            });
+        });
+        if (sortSelect) sortSelect.addEventListener('change', () => { sortItems(); applyFilters(); });
+        if (searchInput && items.length) searchInput.addEventListener('input', applyFilters);
+        applyFilters();
+    }
+
+    const eventsArchive = document.querySelector('[data-events-archive]');
+    if (eventsArchive) {
+        const topicChips = eventsArchive.querySelectorAll('.events-topic-chip');
+        const countEl = eventsArchive.querySelector('#events-archive-count');
+        const items = Array.from(eventsArchive.querySelectorAll('[data-event-archive-item]'));
+        const searchInput = eventsArchive.querySelector('#events-archive-search');
+        let activeTopic = '';
+        const chipOn =
+            'events-topic-chip shrink-0 min-h-[40px] px-3.5 py-2 rounded-[50px] text-[13px] font-semibold font-inter bg-secondary text-white border border-secondary shadow-[0px_6px_18px_rgba(147,130,255,0.35)] transition-all';
+        const chipOff =
+            'events-topic-chip shrink-0 min-h-[40px] px-3.5 py-2 rounded-[50px] text-[13px] font-semibold font-inter bg-white/[0.05] text-[#D6DAF0] border border-white/12 hover:border-white/25 hover:text-white transition-all';
+        const applyFilters = () => {
+            const q = searchInput ? searchInput.value.trim().toLowerCase() : '';
+            let visible = 0;
+            items.forEach((card) => {
+                const topic = (card.getAttribute('data-event-topic') || '').trim();
+                const okTopic = !activeTopic || topic === activeTopic;
+                const okSearch = !q || (card.textContent || '').toLowerCase().includes(q);
+                const show = okTopic && okSearch;
+                card.classList.toggle('hidden', !show);
+                if (show) visible += 1;
+            });
+            if (countEl) {
+                const total = items.length;
+                if (visible === total && !q && !activeTopic) {
+                    countEl.innerHTML = '<span class="text-white/90 font-medium">Showing ' + total + '</span> events';
+                } else {
+                    countEl.innerHTML =
+                        '<span class="text-white/90 font-medium">' +
+                        visible +
+                        '</span> event' +
+                        (visible !== 1 ? 's' : '') +
+                        ' match';
+                }
+            }
+        };
+        topicChips.forEach((chip) => {
+            chip.addEventListener('click', () => {
+                activeTopic = (chip.getAttribute('data-event-topic') || '').trim();
+                topicChips.forEach((c) => {
+                    const isAll = c.getAttribute('data-event-topic') === '';
+                    const t = (c.getAttribute('data-event-topic') || '').trim();
+                    const on = isAll ? activeTopic === '' : t === activeTopic;
+                    c.className = on ? chipOn : chipOff;
+                });
+                applyFilters();
+            });
+        });
+        if (searchInput && items.length) searchInput.addEventListener('input', applyFilters);
+        applyFilters();
+    }
+
+    document.querySelectorAll('[data-about-expand]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+            const sel = btn.getAttribute('data-about-expand');
+            const target = sel ? document.querySelector(sel) : null;
+            if (!target) return;
+            const expanded = target.getAttribute('data-expanded') === 'true';
+            if (expanded) {
+                target.classList.add('line-clamp-4');
+                target.setAttribute('data-expanded', 'false');
+                btn.textContent = 'Show more';
+            } else {
+                target.classList.remove('line-clamp-4');
+                target.setAttribute('data-expanded', 'true');
+                btn.textContent = 'Show less';
+            }
+        });
+    });
+
     // FAQ Accordion
     const faqItems = document.querySelectorAll('.faq-item');
     if (faqItems.length && !document.querySelector('[data-faq-accordion]')) {
@@ -1610,4 +1835,108 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+
+    (function initEducateCursor() {
+        if (!window.matchMedia('(pointer: fine)').matches) {
+            return;
+        }
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            return;
+        }
+
+        const root = document.createElement('div');
+        root.id = 'educate-cursor-root';
+        root.setAttribute('aria-hidden', 'true');
+        const ring = document.createElement('div');
+        ring.id = 'educate-cursor-ring';
+        const dot = document.createElement('div');
+        dot.id = 'educate-cursor-dot';
+        root.appendChild(ring);
+        root.appendChild(dot);
+        document.body.appendChild(root);
+
+        let mx = -100;
+        let my = -100;
+        let rx = -100;
+        let ry = -100;
+        let dx = -100;
+        let dy = -100;
+        let visible = false;
+        let raf = 0;
+
+        const lerp = (a, b, t) => a + (b - a) * t;
+
+        const isFormField = (el) => {
+            if (!el || el.nodeType !== 1) return false;
+            const n = el.nodeName;
+            if (n === 'INPUT' || n === 'TEXTAREA' || n === 'SELECT') return true;
+            if (el.isContentEditable || el.getAttribute('contenteditable') === 'true') return true;
+            return !!el.closest('input, textarea, select, [contenteditable="true"]');
+        };
+
+        const setHover = (on) => {
+            root.classList.toggle('is-hover', on);
+        };
+
+        const setFormMode = (on) => {
+            root.classList.toggle('is-hidden', on);
+            document.body.classList.toggle('has-custom-cursor', !on && visible);
+        };
+
+        const loop = () => {
+            rx = lerp(rx, mx, 0.12);
+            ry = lerp(ry, my, 0.12);
+            dx = lerp(dx, mx, 0.45);
+            dy = lerp(dy, my, 0.45);
+            const hover = root.classList.contains('is-hover');
+            ring.style.transform = `translate3d(${rx}px, ${ry}px, 0)`;
+            dot.style.transform = `translate3d(${dx}px, ${dy}px, 0) scale(${hover ? 0.82 : 1})`;
+            raf = requestAnimationFrame(loop);
+        };
+
+        document.addEventListener(
+            'mousemove',
+            (e) => {
+                mx = e.clientX;
+                my = e.clientY;
+                if (!visible) {
+                    visible = true;
+                    root.classList.add('is-visible');
+                    document.body.classList.add('has-custom-cursor');
+                    cancelAnimationFrame(raf);
+                    raf = requestAnimationFrame(loop);
+                }
+            },
+            { passive: true }
+        );
+
+        document.addEventListener(
+            'mouseover',
+            (e) => {
+                const t = e.target;
+                if (isFormField(t)) {
+                    setFormMode(true);
+                    setHover(false);
+                    return;
+                }
+                setFormMode(false);
+                const interactive = t.closest(
+                    'a[href], button, [role="button"], label[for], .cursor-pointer, [data-cursor-hover]'
+                );
+                setHover(!!interactive);
+            },
+            true
+        );
+
+        const hideCursor = () => {
+            root.classList.remove('is-visible');
+            document.body.classList.remove('has-custom-cursor');
+            visible = false;
+            cancelAnimationFrame(raf);
+        };
+
+        document.documentElement.addEventListener('mouseleave', hideCursor);
+
+        window.addEventListener('blur', hideCursor);
+    })();
 });

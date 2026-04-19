@@ -213,6 +213,33 @@ textarea {
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
+header.universities-header.scrolled-header {
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100%;
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+  background-color: #050520 !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+header.universities-header.scrolled-header .universities-header-shell {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 0;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  box-shadow: none;
+  background-color: #050520 !important;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
 .scrolled-header #header-top-bar {
   max-height: 0;
   opacity: 0;
@@ -222,4 +249,83 @@ textarea {
 
 #header-top-bar {
   max-height: 100px;
+}
+
+:root {
+  --cursor-ring: rgba(147, 130, 255, 0.55);
+  --cursor-ring-glow: rgba(178, 110, 247, 0.35);
+  --cursor-dot: #ffffff;
+  --cursor-dot-accent: #9382ff;
+}
+
+#educate-cursor-root {
+  position: fixed;
+  inset: 0;
+  z-index: 99998;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+#educate-cursor-root.is-visible {
+  opacity: 1;
+}
+
+#educate-cursor-root.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#educate-cursor-ring {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  margin-left: -20px;
+  margin-top: -20px;
+  border-radius: 50%;
+  border: 1px solid var(--cursor-ring);
+  background: radial-gradient(circle at 30% 30%, rgba(147, 130, 255, 0.12), transparent 65%);
+  box-shadow: 0 0 24px var(--cursor-ring-glow), inset 0 0 12px rgba(255, 255, 255, 0.06);
+  transition: width 0.45s cubic-bezier(0.23, 1, 0.32, 1), height 0.45s cubic-bezier(0.23, 1, 0.32, 1),
+    margin 0.45s cubic-bezier(0.23, 1, 0.32, 1), border-color 0.35s ease, box-shadow 0.35s ease;
+  will-change: transform;
+}
+
+#educate-cursor-root.is-hover #educate-cursor-ring {
+  width: 56px;
+  height: 56px;
+  margin-left: -28px;
+  margin-top: -28px;
+  border-color: rgba(178, 110, 247, 0.75);
+  box-shadow: 0 0 32px rgba(178, 110, 247, 0.45), inset 0 0 16px rgba(255, 255, 255, 0.08);
+}
+
+#educate-cursor-dot {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 7px;
+  height: 7px;
+  margin-left: -3.5px;
+  margin-top: -3.5px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #ffffff, var(--cursor-dot-accent));
+  box-shadow: 0 0 12px rgba(147, 130, 255, 0.65);
+  will-change: transform;
+}
+
+body.has-custom-cursor {
+  cursor: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #educate-cursor-root {
+    display: none !important;
+  }
+  body.has-custom-cursor {
+    cursor: auto;
+  }
 }
