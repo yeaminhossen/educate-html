@@ -1939,4 +1939,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
         window.addEventListener('blur', hideCursor);
     })();
+
+    document.body.addEventListener('click', function (e) {
+        const btn = e.target.closest('[data-copy-value]');
+        if (!btn || btn.closest('a')) return;
+        const text = btn.getAttribute('data-copy-value');
+        if (!text) return;
+        e.preventDefault();
+        const label = btn.querySelector('[data-copy-label]');
+        const setLabel = function (t) {
+            if (label) label.textContent = t;
+        };
+        const orig = label ? label.textContent : '';
+        const done = function () {
+            if (label) setLabel('Copied');
+            setTimeout(function () {
+                if (label) setLabel(orig);
+            }, 1600);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(done).catch(function () {});
+        }
+    });
 });

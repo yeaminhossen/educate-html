@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Contact — Educate</title>
-    <meta name="robots" content="noindex, follow">
-    <meta name="description" content="">
+    <title>Course filter — Educate</title>
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Filter Educate courses by topic, price, and level. Search the catalog, switch views, and find your next class.">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Favicon -->
@@ -882,12 +882,11 @@
         </div>
     </header>
 
-    <main>
-        <section class="relative bg-[#050520] pt-[100px] pb-[56px] overflow-hidden" aria-labelledby="contact-hero-title">
-            <div class="pointer-events-none absolute inset-0 overflow-hidden">
-                <div class="absolute top-8 left-4 md:left-8 w-[180px] h-[180px] opacity-[0.12] bg-[radial-gradient(circle,#4F8EF7_1px,transparent_1px)] bg-[length:14px_14px]"></div>
-                <div class="absolute top-0 right-0 w-[420px] h-[420px] bg-secondary/18 blur-[120px] rounded-full"></div>
-                <div class="absolute bottom-0 left-1/4 w-[360px] h-[360px] bg-[#4F8EF7]/12 blur-[100px] rounded-full"></div>
+﻿    <main>
+        <section class="relative bg-[#050520] pt-[100px] pb-[100px] overflow-hidden" aria-labelledby="courses-archive-title">
+            <div class="pointer-events-none absolute inset-0">
+                <div class="absolute top-0 right-0 w-[420px] h-[420px] bg-secondary/20 blur-[120px] rounded-full"></div>
+                <div class="absolute bottom-0 left-1/4 w-[360px] h-[360px] bg-[#4F8EF7]/15 blur-[100px] rounded-full"></div>
             </div>
             <div class="relative z-10 max-w-[1320px] mx-auto px-4 text-center md:text-left">
                 <nav class="mb-5 md:mb-6 flex justify-center md:justify-start" aria-label="Breadcrumb">
@@ -900,154 +899,329 @@
                                 </a>
                             </li>
                             <li class="flex items-center text-secondary/55 px-0.5" aria-hidden="true"><i class="fa-solid fa-chevron-right text-[9px] sm:text-[10px]"></i></li>
+                            <li class="flex items-center shrink-0">
+                                <a href="course.html" class="text-[12px] sm:text-[13px] font-medium font-inter text-white/70 hover:text-secondary transition-colors">Courses</a>
+                            </li>
+                            <li class="flex items-center text-secondary/55 px-0.5" aria-hidden="true"><i class="fa-solid fa-chevron-right text-[9px] sm:text-[10px]"></i></li>
                             <li class="flex items-center min-w-0">
-                                <span class="text-[12px] sm:text-[13px] font-semibold font-inter text-white" aria-current="page">Contact</span>
+                                <span class="text-[12px] sm:text-[13px] font-semibold font-inter text-white" aria-current="page">Filter</span>
                             </li>
                         </ol>
                     </div>
                 </nav>
-                <div class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1.5 mb-4 backdrop-blur-sm">
-                    <span class="h-1.5 w-1.5 rounded-full bg-secondary shadow-[0_0_10px_#9382FF]"></span>
-                    <span class="text-[12px] font-inter font-medium tracking-wide text-white/70 uppercase">Get in touch</span>
+                <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5">
+                    <div>
+                        <h1 id="courses-archive-title" class="text-white text-[30px] sm:text-[40px] md:text-[48px] font-bold font-hanken leading-[1.12]">Filter courses</h1>
+                        <p class="text-[#D6DAF0] text-[15px] md:text-[16px] font-inter mt-3 max-w-[560px]">Refine by topic, price, and level—then learn on demand with the same course catalog as our main directory.</p>
+                        <ul class="flex flex-wrap justify-center md:justify-start gap-2 sm:gap-3 mt-6 list-none p-0" role="list">
+                            <li class="inline-flex items-center gap-2 px-3 py-1.5 rounded-[50px] bg-white/[0.05] border border-white/10 text-[12px] sm:text-[13px] font-inter text-[#D6DAF0]"><i class="fa-solid fa-sliders text-secondary text-[11px]" aria-hidden="true"></i> Smart filters</li>
+                            <li class="inline-flex items-center gap-2 px-3 py-1.5 rounded-[50px] bg-white/[0.05] border border-white/10 text-[12px] sm:text-[13px] font-inter text-[#D6DAF0]"><i class="fa-solid fa-magnifying-glass text-secondary text-[11px]" aria-hidden="true"></i> Live search</li>
+                            <li class="inline-flex items-center gap-2 px-3 py-1.5 rounded-[50px] bg-white/[0.05] border border-white/10 text-[12px] sm:text-[13px] font-inter text-[#D6DAF0]"><i class="fa-solid fa-grid-2 text-secondary text-[11px]" aria-hidden="true"></i> Grid or list</li>
+                        </ul>
+                    </div>
+                    <span class="inline-flex self-center md:self-end items-center gap-2 px-4 py-2 rounded-[50px] bg-white/[0.06] border border-white/10 text-secondary text-[13px] font-bold font-hanken"><i class="fa-solid fa-layer-group text-[12px]" aria-hidden="true"></i> 30 Courses</span>
                 </div>
-                <h1 id="contact-hero-title" class="text-[30px] sm:text-[40px] md:text-[48px] font-bold font-hanken leading-[1.12] bg-gradient-to-r from-white via-[#E8EAFF] to-white/75 bg-clip-text text-transparent max-w-[920px]">Let's start a conversation</h1>
-                <p class="text-[#D6DAF0] text-[15px] md:text-[16px] font-inter mt-3 max-w-[640px] leading-relaxed">Questions about courses, partnerships, or campus licensing—send a message and we’ll route it to the right team.</p>
-                <ul class="flex flex-wrap justify-center md:justify-start gap-2 sm:gap-3 mt-6 list-none p-0" role="list">
-                    <li class="inline-flex items-center gap-2 px-3 py-1.5 rounded-[50px] bg-white/[0.05] border border-white/10 text-[12px] sm:text-[13px] font-inter text-[#D6DAF0]"><i class="fa-solid fa-bolt text-secondary text-[11px]" aria-hidden="true"></i> Same-day reply</li>
-                    <li class="inline-flex items-center gap-2 px-3 py-1.5 rounded-[50px] bg-white/[0.05] border border-white/10 text-[12px] sm:text-[13px] font-inter text-[#D6DAF0]"><i class="fa-solid fa-shield-halved text-secondary text-[11px]" aria-hidden="true"></i> Encrypted inbox</li>
-                    <li class="inline-flex items-center gap-2 px-3 py-1.5 rounded-[50px] bg-white/[0.05] border border-white/10 text-[12px] sm:text-[13px] font-inter text-[#D6DAF0]"><i class="fa-solid fa-headset text-secondary text-[11px]" aria-hidden="true"></i> Human support</li>
-                </ul>
             </div>
         </section>
 
-        <section class="bg-[#050520] border-t border-white/[0.06] pb-[100px] md:pb-[120px]" aria-label="Contact form and details">
-            <div class="max-w-[1320px] mx-auto px-4 pt-[48px] md:pt-[56px]">
+        <section class="bg-[#050520] border-t border-white/[0.06] pt-[60px] pb-[60px]" data-courses-archive>
+            <div class="max-w-[1320px] mx-auto px-4">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 xl:gap-10 items-start">
-                    <div class="lg:col-span-7 min-w-0">
-                        <div class="rounded-[20px] border border-white/[0.09] bg-[#0F102A] p-6 sm:p-8 md:p-10 shadow-[0px_20px_60px_rgba(0,0,0,0.35)] ring-1 ring-white/[0.04]">
-                            <h2 class="text-white text-[20px] sm:text-[22px] font-bold font-hanken mb-2 flex items-center gap-3">
-                                <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-[12px] bg-gradient-to-br from-secondary/30 to-[#4F8EF7]/20 text-secondary ring-1 ring-white/10"><i class="fa-regular fa-paper-plane text-[16px]" aria-hidden="true"></i></span>
-                                Send a message
-                            </h2>
-                            <p class="text-[#D6DAF0]/90 text-[14px] font-inter mb-8 leading-relaxed">Fields marked with <span class="text-secondary" aria-hidden="true">*</span><span class="sr-only">required</span> are required.</p>
-                            <form id="contact-page-form" class="space-y-5" action="#" method="post" novalidate>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                                    <div class="space-y-2">
-                                        <label for="contact-name" class="block text-[13px] font-medium font-inter text-white/90">Full name <span class="text-secondary">*</span></label>
-                                        <input type="text" id="contact-name" name="name" required autocomplete="name" placeholder="Alex Morgan" class="w-full min-h-[48px] rounded-[12px] border border-white/[0.1] bg-white/[0.04] px-4 text-[14px] font-inter text-white placeholder:text-white/35 outline-none transition-all focus:border-secondary/50 focus:ring-2 focus:ring-secondary/25">
-                                    </div>
-                                    <div class="space-y-2">
-                                        <label for="contact-email" class="block text-[13px] font-medium font-inter text-white/90">Email <span class="text-secondary">*</span></label>
-                                        <input type="email" id="contact-email" name="email" required autocomplete="email" placeholder="you@company.com" class="w-full min-h-[48px] rounded-[12px] border border-white/[0.1] bg-white/[0.04] px-4 text-[14px] font-inter text-white placeholder:text-white/35 outline-none transition-all focus:border-secondary/50 focus:ring-2 focus:ring-secondary/25">
-                                    </div>
-                                </div>
-                                <div class="space-y-2">
-                                    <label for="contact-phone" class="block text-[13px] font-medium font-inter text-white/90">Phone</label>
-                                    <input type="tel" id="contact-phone" name="phone" autocomplete="tel" placeholder="+1 (555) 000-0000" class="w-full min-h-[48px] rounded-[12px] border border-white/[0.1] bg-white/[0.04] px-4 text-[14px] font-inter text-white placeholder:text-white/35 outline-none transition-all focus:border-secondary/50 focus:ring-2 focus:ring-secondary/25">
-                                </div>
-                                <div class="space-y-2">
-                                    <label for="contact-subject" class="block text-[13px] font-medium font-inter text-white/90">Topic <span class="text-secondary">*</span></label>
-                                    <div class="relative">
-                                        <select id="contact-subject" name="subject" required class="w-full min-h-[48px] appearance-none rounded-[12px] border border-white/[0.1] bg-white/[0.04] px-4 pr-11 text-[14px] font-inter text-white outline-none transition-all focus:border-secondary/50 focus:ring-2 focus:ring-secondary/25">
-                                            <option value="" disabled selected class="bg-[#0F102A] text-[#D6DAF0]">Select a topic</option>
-                                            <option value="courses" class="bg-[#0F102A]">Courses &amp; enrollment</option>
-                                            <option value="billing" class="bg-[#0F102A]">Billing &amp; invoices</option>
-                                            <option value="partnership" class="bg-[#0F102A]">Partnership &amp; campus</option>
-                                            <option value="technical" class="bg-[#0F102A]">Technical support</option>
-                                            <option value="other" class="bg-[#0F102A]">Other</option>
-                                        </select>
-                                        <i class="fa-solid fa-chevron-down pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[11px] text-white/40" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-                                <div class="space-y-2">
-                                    <label for="contact-message" class="block text-[13px] font-medium font-inter text-white/90">Message <span class="text-secondary">*</span></label>
-                                    <textarea id="contact-message" name="message" required rows="5" placeholder="Tell us what you need—goals, timeline, and any links that help." class="w-full resize-y min-h-[140px] rounded-[12px] border border-white/[0.1] bg-white/[0.04] px-4 py-3 text-[14px] font-inter text-white placeholder:text-white/35 outline-none transition-all focus:border-secondary/50 focus:ring-2 focus:ring-secondary/25"></textarea>
-                                </div>
-                                <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-2">
-                                    <label class="inline-flex items-start gap-3 cursor-pointer group">
-                                        <input type="checkbox" name="privacy" required class="mt-1 h-4 w-4 shrink-0 rounded border-white/20 bg-white/[0.06] text-secondary focus:ring-secondary/40">
-                                        <span class="text-[13px] font-inter text-[#D6DAF0]/90 leading-snug">I agree to the <a href="#" class="text-secondary hover:text-white transition-colors">privacy policy</a>. <span class="text-secondary">*</span></span>
-                                    </label>
-                                    <button type="submit" class="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-[50px] px-8 gradient-color-primary text-white text-[15px] font-semibold font-hanken hover:shadow-[0px_10px_30px_rgba(178,110,247,0.4)] hover:-translate-y-0.5 transition-all duration-300 border-b-2 border-primary/29 shrink-0">
-                                        <i class="fa-solid fa-paper-plane text-[14px]" aria-hidden="true"></i>
-                                        Send message
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
-                    <aside class="lg:col-span-5 shrink-0 lg:sticky lg:top-[100px] space-y-5">
-                        <div class="rounded-[20px] border border-white/[0.09] bg-[#0F102A] p-6 shadow-[0px_20px_55px_rgba(0,0,0,0.38)] ring-1 ring-white/[0.04]">
-                            <h2 class="text-white text-[17px] font-bold font-hanken mb-5 flex items-center gap-2"><i class="fa-solid fa-location-dot text-secondary text-[16px]" aria-hidden="true"></i> Visit us</h2>
-                            <ul class="space-y-4 list-none p-0 m-0">
-                                <li class="flex gap-4">
-                                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-[12px] bg-white/[0.05] border border-white/[0.08] text-secondary"><i class="fa-solid fa-map-pin text-[15px]" aria-hidden="true"></i></span>
-                                    <div>
-                                        <p class="text-[12px] font-inter uppercase tracking-wide text-white/45 mb-0.5">Address</p>
-                                        <p class="text-[14px] font-inter text-[#D6DAF0] leading-relaxed">4517 Washington Ave. Manchester, Kentucky 39495, USA</p>
-                                    </div>
-                                </li>
-                                <li class="flex gap-4">
-                                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-[12px] bg-white/[0.05] border border-white/[0.08] text-secondary"><i class="fa-solid fa-phone text-[15px]" aria-hidden="true"></i></span>
-                                    <div>
-                                        <p class="text-[12px] font-inter uppercase tracking-wide text-white/45 mb-0.5">Phone</p>
-                                        <a href="tel:+923123456789" class="text-[15px] font-inter font-medium text-white hover:text-secondary transition-colors">+92 312 3456789</a>
-                                    </div>
-                                </li>
-                                <li class="flex gap-4">
-                                    <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-[12px] bg-white/[0.05] border border-white/[0.08] text-secondary"><i class="fa-regular fa-envelope text-[15px]" aria-hidden="true"></i></span>
-                                    <div>
-                                        <p class="text-[12px] font-inter uppercase tracking-wide text-white/45 mb-0.5">Email</p>
-                                        <a href="mailto:educa.info@gmail.com" class="text-[15px] font-inter font-medium text-white hover:text-secondary transition-colors break-all">educa.info@gmail.com</a>
-                                    </div>
-                                </li>
+                    <aside class="order-2 lg:order-1 lg:col-span-3 min-w-0 lg:sticky lg:top-[100px] space-y-6" aria-label="Filters">
+                        <div class="rounded-[18px] border border-white/10 bg-[#0F102A] p-5 sm:p-6 shadow-[0px_16px_50px_rgba(0,0,0,0.3)]">
+                            <h2 class="text-[13px] font-bold font-hanken uppercase tracking-[0.14em] text-white mb-4 pb-3 border-b border-white/10">Rating</h2>
+                            <ul class="space-y-3">
+                                <li><label class="flex items-center gap-3 cursor-pointer"><input type="radio" name="filter-rating" class="peer sr-only" value="5"><span class="w-4 h-4 rounded-full border-2 border-white/25 shrink-0 peer-checked:border-secondary peer-checked:bg-secondary"></span><span class="flex text-[#FCC418] text-[11px] gap-0.5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span><span class="text-[13px] font-semibold font-inter text-white/85">5 Star</span></label></li>
+                                <li><label class="flex items-center gap-3 cursor-pointer"><input type="radio" name="filter-rating" class="peer sr-only" value="4"><span class="w-4 h-4 rounded-full border-2 border-white/25 shrink-0 peer-checked:border-secondary peer-checked:bg-secondary"></span><span class="flex text-[#FCC418] text-[11px] gap-0.5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></span><span class="text-[13px] font-semibold font-inter text-white/85">4 Star</span></label></li>
+                                <li><label class="flex items-center gap-3 cursor-pointer"><input type="radio" name="filter-rating" class="peer sr-only" value="3"><span class="w-4 h-4 rounded-full border-2 border-white/25 shrink-0 peer-checked:border-secondary peer-checked:bg-secondary"></span><span class="flex text-[#FCC418] text-[11px] gap-0.5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></span><span class="text-[13px] font-semibold font-inter text-white/85">3 Star</span></label></li>
+                                <li><label class="flex items-center gap-3 cursor-pointer"><input type="radio" name="filter-rating" class="peer sr-only" value="2"><span class="w-4 h-4 rounded-full border-2 border-white/25 shrink-0 peer-checked:border-secondary peer-checked:bg-secondary"></span><span class="flex text-[#FCC418] text-[11px] gap-0.5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></span><span class="text-[13px] font-semibold font-inter text-white/85">2 Star</span></label></li>
+                                <li><label class="flex items-center gap-3 cursor-pointer"><input type="radio" name="filter-rating" class="peer sr-only" value="1"><span class="w-4 h-4 rounded-full border-2 border-white/25 shrink-0 peer-checked:border-secondary peer-checked:bg-secondary"></span><span class="flex text-[#FCC418] text-[11px] gap-0.5"><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></span><span class="text-[13px] font-semibold font-inter text-white/85">1 Star</span></label></li>
                             </ul>
                         </div>
 
-                        <div class="rounded-[20px] border border-white/[0.09] bg-[#0F102A] p-6 shadow-[0px_20px_55px_rgba(0,0,0,0.38)] ring-1 ring-white/[0.04]">
-                            <h2 class="text-white text-[17px] font-bold font-hanken mb-4 flex items-center gap-2"><i class="fa-regular fa-clock text-secondary text-[16px]" aria-hidden="true"></i> Office hours</h2>
-                            <dl class="space-y-3 m-0">
-                                <div class="flex items-center justify-between gap-3 text-[14px] font-inter">
-                                    <dt class="text-[#D6DAF0]/80">Mon – Fri</dt>
-                                    <dd class="text-white font-medium m-0">9:00 – 18:00</dd>
-                                </div>
-                                <div class="flex items-center justify-between gap-3 text-[14px] font-inter border-t border-white/[0.06] pt-3">
-                                    <dt class="text-[#D6DAF0]/80">Saturday</dt>
-                                    <dd class="text-white font-medium m-0">10:00 – 14:00</dd>
-                                </div>
-                                <div class="flex items-center justify-between gap-3 text-[14px] font-inter border-t border-white/[0.06] pt-3">
-                                    <dt class="text-[#D6DAF0]/80">Sunday</dt>
-                                    <dd class="text-white/55 font-medium m-0">Closed</dd>
-                                </div>
-                            </dl>
+                        <div class="rounded-[18px] border border-white/10 bg-[#0F102A] p-5 sm:p-6 shadow-[0px_16px_50px_rgba(0,0,0,0.3)]">
+                            <h2 class="text-[13px] font-bold font-hanken uppercase tracking-[0.14em] text-white mb-4 pb-3 border-b border-white/10">Sort by Author</h2>
+                            <ul class="space-y-2.5">
+                                <li><label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" class="w-4 h-4 rounded border-white/25 bg-white/[0.04] text-secondary focus:ring-secondary/50"> <span class="text-[14px] font-inter text-[#D6DAF0]">Alexandra Reed</span></label></li>
+                                <li><label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" class="w-4 h-4 rounded border-white/25 bg-white/[0.04] text-secondary focus:ring-secondary/50"> <span class="text-[14px] font-inter text-[#D6DAF0]">Christopher Blake</span></label></li>
+                                <li><label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" class="w-4 h-4 rounded border-white/25 bg-white/[0.04] text-secondary focus:ring-secondary/50"> <span class="text-[14px] font-inter text-[#D6DAF0]">Maria Santos</span></label></li>
+                                <li><label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" class="w-4 h-4 rounded border-white/25 bg-white/[0.04] text-secondary focus:ring-secondary/50"> <span class="text-[14px] font-inter text-[#D6DAF0]">James Cole</span></label></li>
+                            </ul>
+                            <details class="mt-4 group">
+                                <summary class="list-none cursor-pointer text-[13px] font-semibold font-inter text-secondary hover:text-white transition-colors flex items-center gap-1.5 [&::-webkit-details-marker]:hidden"><i class="fa-solid fa-chevron-down text-[10px] transition-transform group-open:rotate-180"></i> Show more</summary>
+                                <ul class="mt-3 space-y-2.5 pt-3 border-t border-white/[0.06]">
+                                    <li><label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" class="w-4 h-4 rounded border-white/25 bg-white/[0.04] text-secondary focus:ring-secondary/50"> <span class="text-[14px] font-inter text-[#D6DAF0]">Elena Voss</span></label></li>
+                                    <li><label class="flex items-center gap-3 cursor-pointer"><input type="checkbox" class="w-4 h-4 rounded border-white/25 bg-white/[0.04] text-secondary focus:ring-secondary/50"> <span class="text-[14px] font-inter text-[#D6DAF0]">David Lin</span></label></li>
+                                </ul>
+                            </details>
                         </div>
 
-                        <div class="rounded-[20px] p-px bg-gradient-to-br from-secondary via-[#B26EF7] to-[#FF71BF] shadow-[0px_18px_50px_rgba(147,130,255,0.2)]">
-                            <div class="rounded-[19px] bg-[#0F102A] p-6 border border-white/[0.06]">
-                                <h2 class="text-white text-[18px] font-bold font-hanken mb-2">Prefer a quick call?</h2>
-                                <p class="text-[#D6DAF0]/85 text-[14px] font-inter leading-relaxed mb-5">Book a 15-minute intro and we’ll map the best path for your team or institution.</p>
-                                <a href="tel:+923123456789" class="mb-3 flex min-h-[48px] w-full items-center justify-center gap-2 rounded-[12px] gradient-color-primary text-white text-[14px] font-semibold font-hanken hover:shadow-[0px_10px_28px_rgba(178,110,247,0.4)] transition-all"><i class="fa-solid fa-phone-volume text-[15px]" aria-hidden="true"></i> Call now</a>
-                                <a href="faq.html" class="flex min-h-[48px] w-full items-center justify-center gap-2 rounded-[12px] border border-white/15 text-white text-[14px] font-semibold font-hanken hover:bg-white/5 transition-all"><i class="fa-regular fa-circle-question text-[15px]" aria-hidden="true"></i> Browse FAQ</a>
-                            </div>
+                        <div class="rounded-[18px] border border-white/10 bg-[#0F102A] p-5 sm:p-6 shadow-[0px_16px_50px_rgba(0,0,0,0.3)]">
+                            <h2 class="text-[13px] font-bold font-hanken uppercase tracking-[0.14em] text-white mb-4 pb-3 border-b border-white/10">Sort by Price</h2>
+                            <ul class="space-y-3">
+                                <li><label class="flex items-center gap-3 cursor-pointer"><input type="radio" name="filter-price" class="peer sr-only" checked><span class="w-4 h-4 rounded-full border-2 border-white/25 shrink-0 peer-checked:border-secondary peer-checked:bg-secondary"></span><span class="text-[14px] font-inter text-[#D6DAF0]">All</span></label></li>
+                                <li><label class="flex items-center gap-3 cursor-pointer"><input type="radio" name="filter-price" class="peer sr-only"><span class="w-4 h-4 rounded-full border-2 border-white/25 shrink-0 peer-checked:border-secondary peer-checked:bg-secondary"></span><span class="text-[14px] font-inter text-[#D6DAF0]">Free</span></label></li>
+                                <li><label class="flex items-center gap-3 cursor-pointer"><input type="radio" name="filter-price" class="peer sr-only"><span class="w-4 h-4 rounded-full border-2 border-white/25 shrink-0 peer-checked:border-secondary peer-checked:bg-secondary"></span><span class="text-[14px] font-inter text-[#D6DAF0]">Paid</span></label></li>
+                            </ul>
+                        </div>
+
+                        <div class="rounded-[18px] border border-white/10 bg-[#0F102A] p-5 sm:p-6 shadow-[0px_16px_50px_rgba(0,0,0,0.3)]">
+                            <h2 class="text-[13px] font-bold font-hanken uppercase tracking-[0.14em] text-white mb-4 pb-3 border-b border-white/10">Levels</h2>
+                            <ul class="space-y-3">
+                                <li><label class="flex items-center gap-3 cursor-pointer"><input type="radio" name="filter-level" class="peer sr-only" checked><span class="w-4 h-4 rounded-full border-2 border-white/25 shrink-0 peer-checked:border-secondary peer-checked:bg-secondary"></span><span class="text-[14px] font-inter text-[#D6DAF0]">All Levels</span></label></li>
+                                <li><label class="flex items-center gap-3 cursor-pointer"><input type="radio" name="filter-level" class="peer sr-only"><span class="w-4 h-4 rounded-full border-2 border-white/25 shrink-0 peer-checked:border-secondary peer-checked:bg-secondary"></span><span class="text-[14px] font-inter text-[#D6DAF0]">Beginner</span></label></li>
+                                <li><label class="flex items-center gap-3 cursor-pointer"><input type="radio" name="filter-level" class="peer sr-only"><span class="w-4 h-4 rounded-full border-2 border-white/25 shrink-0 peer-checked:border-secondary peer-checked:bg-secondary"></span><span class="text-[14px] font-inter text-[#D6DAF0]">Intermediate</span></label></li>
+                                <li><label class="flex items-center gap-3 cursor-pointer"><input type="radio" name="filter-level" class="peer sr-only"><span class="w-4 h-4 rounded-full border-2 border-white/25 shrink-0 peer-checked:border-secondary peer-checked:bg-secondary"></span><span class="text-[14px] font-inter text-[#D6DAF0]">Expert</span></label></li>
+                            </ul>
+                        </div>
+
+                        <div class="rounded-[18px] border border-white/10 bg-[#0F102A] p-5 sm:p-6 shadow-[0px_16px_50px_rgba(0,0,0,0.3)]">
+                            <h2 class="text-[13px] font-bold font-hanken uppercase tracking-[0.14em] text-white mb-4 pb-3 border-b border-white/10">Sort by Order</h2>
+                            <ul class="space-y-3">
+                                <li><label class="flex items-center gap-3 cursor-pointer"><input type="radio" name="filter-order" class="peer sr-only" checked><span class="w-4 h-4 rounded-full border-2 border-white/25 shrink-0 peer-checked:border-secondary peer-checked:bg-secondary"></span><span class="text-[14px] font-inter text-[#D6DAF0]">Default</span></label></li>
+                                <li><label class="flex items-center gap-3 cursor-pointer"><input type="radio" name="filter-order" class="peer sr-only"><span class="w-4 h-4 rounded-full border-2 border-white/25 shrink-0 peer-checked:border-secondary peer-checked:bg-secondary"></span><span class="text-[14px] font-inter text-[#D6DAF0]">Latest</span></label></li>
+                                <li><label class="flex items-center gap-3 cursor-pointer"><input type="radio" name="filter-order" class="peer sr-only"><span class="w-4 h-4 rounded-full border-2 border-white/25 shrink-0 peer-checked:border-secondary peer-checked:bg-secondary"></span><span class="text-[14px] font-inter text-[#D6DAF0]">Oldest</span></label></li>
+                            </ul>
                         </div>
                     </aside>
-                </div>
 
-                <div class="mt-10 md:mt-12">
-                    <div class="rounded-[20px] border border-white/[0.09] bg-[#0F102A] overflow-hidden shadow-[0px_24px_70px_rgba(0,0,0,0.4)] ring-1 ring-white/[0.04]">
-                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 px-5 sm:px-6 py-4 border-b border-white/[0.06]">
-                            <h2 class="text-white text-[17px] font-bold font-hanken flex items-center gap-2 m-0"><i class="fa-solid fa-map-location-dot text-secondary text-[16px]" aria-hidden="true"></i> Map</h2>
-                            <a href="https://www.openstreetmap.org/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-[13px] font-inter text-secondary hover:text-white transition-colors"><span>Open in maps</span><i class="fa-solid fa-arrow-up-right-from-square text-[11px]" aria-hidden="true"></i></a>
+                    <div class="order-1 lg:order-2 lg:col-span-9 min-w-0 space-y-6">
+                        <div class="flex flex-col gap-4 p-4 sm:p-5 rounded-[16px] border border-white/10 bg-[#0F102A]/80 backdrop-blur-sm shadow-[0px_12px_40px_rgba(0,0,0,0.25)]">
+                            <div class="flex flex-wrap items-center gap-3">
+                                <span class="text-[11px] font-bold font-hanken uppercase tracking-[0.12em] text-white/45 shrink-0">Topic</span>
+                                <div class="flex flex-nowrap sm:flex-wrap gap-2 min-w-0 overflow-x-auto sm:overflow-visible pb-1 sm:pb-0 -mx-1 px-1" role="group" aria-label="Filter by topic">
+                                    <button type="button" data-course-topic="" class="courses-topic-chip shrink-0 min-h-[40px] px-3.5 py-2 rounded-[50px] text-[13px] font-semibold font-inter bg-secondary text-white border border-secondary shadow-[0px_6px_18px_rgba(147,130,255,0.35)] transition-all">All</button>
+                                    <button type="button" data-course-topic="development" class="courses-topic-chip shrink-0 min-h-[40px] px-3.5 py-2 rounded-[50px] text-[13px] font-semibold font-inter bg-white/[0.05] text-[#D6DAF0] border border-white/12 hover:border-white/25 hover:text-white transition-all">Development</button>
+                                    <button type="button" data-course-topic="business" class="courses-topic-chip shrink-0 min-h-[40px] px-3.5 py-2 rounded-[50px] text-[13px] font-semibold font-inter bg-white/[0.05] text-[#D6DAF0] border border-white/12 hover:border-white/25 hover:text-white transition-all">Business</button>
+                                    <button type="button" data-course-topic="design" class="courses-topic-chip shrink-0 min-h-[40px] px-3.5 py-2 rounded-[50px] text-[13px] font-semibold font-inter bg-white/[0.05] text-[#D6DAF0] border border-white/12 hover:border-white/25 hover:text-white transition-all">Design</button>
+                                    <button type="button" data-course-topic="health" class="courses-topic-chip shrink-0 min-h-[40px] px-3.5 py-2 rounded-[50px] text-[13px] font-semibold font-inter bg-white/[0.05] text-[#D6DAF0] border border-white/12 hover:border-white/25 hover:text-white transition-all">Healthcare</button>
+                                    <button type="button" data-course-topic="tech" class="courses-topic-chip shrink-0 min-h-[40px] px-3.5 py-2 rounded-[50px] text-[13px] font-semibold font-inter bg-white/[0.05] text-[#D6DAF0] border border-white/12 hover:border-white/25 hover:text-white transition-all">IT &amp; Support</button>
+                                </div>
+                            </div>
+                            <div class="flex flex-col sm:flex-row sm:flex-wrap sm:items-center gap-4 pt-1 border-t border-white/[0.06]">
+                            <div class="flex items-center gap-2 shrink-0">
+                                <button type="button" data-courses-view="grid" class="courses-view-btn w-11 h-11 rounded-[10px] flex items-center justify-center bg-secondary text-white border border-secondary shadow-[0px_8px_20px_rgba(147,130,255,0.35)] transition-all" aria-pressed="true" aria-label="Grid view">
+                                    <i class="fa-solid fa-grid-2 text-[14px]" aria-hidden="true"></i>
+                                </button>
+                                <button type="button" data-courses-view="list" class="courses-view-btn w-11 h-11 rounded-[10px] flex items-center justify-center bg-white/[0.05] border border-white/10 text-[#D6DAF0] hover:text-white hover:border-white/20 transition-all" aria-pressed="false" aria-label="List view">
+                                    <i class="fa-solid fa-list-ul text-[14px]" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <div class="flex flex-col sm:flex-row sm:items-center gap-3 w-full sm:w-auto sm:ml-auto lg:ml-0 xl:ml-auto flex-1 min-w-0">
+                                <label class="sr-only" for="courses-archive-sort">Sort courses</label>
+                                <select id="courses-archive-sort" class="w-full sm:w-[min(100%,200px)] h-[46px] rounded-[12px] bg-white/[0.06] border border-white/12 px-3 text-[14px] font-inter text-white/90 outline-none focus:border-secondary/60 cursor-pointer shrink-0">
+                                    <option value="default">Sort: Featured</option>
+                                    <option value="title-asc">Title A–Z</option>
+                                    <option value="title-desc">Title Z–A</option>
+                                    <option value="price-asc">Price: Low to high</option>
+                                    <option value="price-desc">Price: High to low</option>
+                                </select>
+                            </div>
+                            <p id="courses-archive-count" class="text-[13px] sm:text-[14px] font-inter text-[#D6DAF0] w-full sm:w-auto sm:text-right"><span class="text-white/90 font-medium">Showing 1–6</span> of 30 results</p>
+                            <div class="relative w-full sm:w-[min(100%,280px)] sm:ml-0 lg:ml-auto xl:ml-auto">
+                                <label class="sr-only" for="courses-archive-search">Search courses</label>
+                                <input id="courses-archive-search" type="search" placeholder="Search courses…" autocomplete="off" class="w-full h-[46px] rounded-[50px] bg-white/[0.06] border border-white/12 pl-11 pr-4 text-[14px] font-inter text-white/90 placeholder:text-white/35 outline-none focus:border-secondary/60 focus:bg-white/[0.08] transition-all">
+                                <i class="fa-solid fa-magnifying-glass pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-white/35 text-[14px]" aria-hidden="true"></i>
+                            </div>
+                            </div>
                         </div>
-                        <div class="relative w-full aspect-[21/9] min-h-[220px] sm:min-h-[280px] bg-white/[0.03]">
-                            <iframe title="Map showing office region" class="absolute inset-0 h-full w-full border-0 grayscale-[0.2] contrast-[1.05]" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.openstreetmap.org/export/embed.html?bbox=-85.82%2C37.05%2C-85.72%2C37.12&amp;layer=mapnik"></iframe>
+
+                        <div id="courses-archive-grid" class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6" data-courses-grid>
+                            <article data-course-archive-item data-course-topic="health" data-course-price="99" class="group flex flex-col bg-[#0F102A] border border-white/[0.08] rounded-[18px] overflow-hidden hover:border-secondary/35 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0px_20px_50px_rgba(0,0,0,0.35)] focus-within:ring-2 focus-within:ring-secondary/40 focus-within:ring-offset-2 focus-within:ring-offset-[#050520]">
+                                <a href="course.details.html" class="course-archive-thumb block relative aspect-[16/10] overflow-hidden">
+                                    <img src="assets/images/course/course-1.webp" alt="" class="w-full h-full object-cover transition-transform duration-600 group-hover:scale-[1.04]">
+                                    <span class="absolute top-4 left-4 w-14 h-14 rounded-full bg-gradient-to-br from-secondary to-[#B26EF7] text-white text-[11px] font-bold font-hanken flex items-center justify-center border-2 border-white/20 shadow-lg">-50%</span>
+                                </a>
+                                <div class="p-5 flex flex-col flex-1 min-h-0">
+                                    <div class="flex items-center gap-2 mb-3">
+                                        <span class="flex text-[#FCC418] text-[12px] gap-0.5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></span>
+                                        <span class="text-white/45 text-[12px] font-inter">(0 Reviews)</span>
+                                    </div>
+                                    <h2 class="text-white text-[18px] md:text-[20px] font-bold font-hanken leading-snug mb-3 line-clamp-2"><a href="course.details.html" class="hover:text-secondary transition-colors">Fundamentals of HIPAA Compliance</a></h2>
+                                    <p class="text-[#D6DAF0]/90 text-[13px] font-inter leading-relaxed line-clamp-2 mb-4">Learn privacy rules, safeguards, and documentation workflows used in real healthcare settings.</p>
+                                    <div class="flex flex-wrap items-center gap-3 text-white/50 text-[12px] font-inter mb-4">
+                                        <span class="inline-flex items-center gap-1.5"><i class="fa-regular fa-file-lines text-white/30"></i> 24 Lessons</span>
+                                        <span class="inline-flex items-center gap-1.5"><i class="fa-regular fa-user text-white/30"></i> 128 Students</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 mt-auto pt-2 border-t border-white/[0.06]">
+                                        <img src="assets/images/team/team-1.webp" alt="" class="w-10 h-10 rounded-full object-cover border border-white/10 shrink-0" width="40" height="40">
+                                        <div class="min-w-0 flex-1">
+                                            <p class="text-white text-[14px] font-semibold font-hanken truncate">Alexandra Reed</p>
+                                            <p class="text-[11px] text-white/40 font-inter truncate">Healthcare IT</p>
+                                        </div>
+                                        <div class="text-right shrink-0">
+                                            <p class="text-white/35 text-[13px] font-inter line-through">$199</p>
+                                            <p class="text-white text-[17px] font-bold font-hanken">$99</p>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="mt-4 inline-flex items-center gap-2 text-secondary text-[14px] font-semibold font-inter hover:text-white transition-colors"><i class="fa-solid fa-cart-shopping text-[13px]"></i> Add to cart</a>
+                                </div>
+                            </article>
+
+                            <article data-course-archive-item data-course-topic="development" data-course-price="75" class="group flex flex-col bg-[#0F102A] border border-white/[0.08] rounded-[18px] overflow-hidden hover:border-secondary/35 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0px_20px_50px_rgba(0,0,0,0.35)] focus-within:ring-2 focus-within:ring-secondary/40 focus-within:ring-offset-2 focus-within:ring-offset-[#050520]">
+                                <a href="course-details-two.html" class="course-archive-thumb block relative aspect-[16/10] overflow-hidden">
+                                    <img src="assets/images/course/course-2.webp" alt="" class="w-full h-full object-cover transition-transform duration-600 group-hover:scale-[1.04]">
+                                    <span class="absolute top-4 left-4 w-14 h-14 rounded-full bg-gradient-to-br from-secondary to-[#B26EF7] text-white text-[11px] font-bold font-hanken flex items-center justify-center border-2 border-white/20 shadow-lg">-50%</span>
+                                </a>
+                                <div class="p-5 flex flex-col flex-1 min-h-0">
+                                    <div class="flex items-center gap-2 mb-3">
+                                        <span class="flex text-[#FCC418] text-[12px] gap-0.5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                                        <span class="text-white/45 text-[12px] font-inter">(18 Reviews)</span>
+                                    </div>
+                                    <h2 class="text-white text-[18px] md:text-[20px] font-bold font-hanken leading-snug mb-3 line-clamp-2"><a href="course-details-two.html" class="hover:text-secondary transition-colors">React.js Front to Back</a></h2>
+                                    <p class="text-[#D6DAF0]/90 text-[13px] font-inter leading-relaxed line-clamp-2 mb-4">Hooks, routing, state management, and deployment from a single cohesive project.</p>
+                                    <div class="flex flex-wrap items-center gap-3 text-white/50 text-[12px] font-inter mb-4">
+                                        <span class="inline-flex items-center gap-1.5"><i class="fa-regular fa-file-lines text-white/30"></i> 32 Lessons</span>
+                                        <span class="inline-flex items-center gap-1.5"><i class="fa-regular fa-user text-white/30"></i> 2.4k Students</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 mt-auto pt-2 border-t border-white/[0.06]">
+                                        <img src="assets/images/team/team-2.webp" alt="" class="w-10 h-10 rounded-full object-cover border border-white/10 shrink-0" width="40" height="40">
+                                        <div class="min-w-0 flex-1">
+                                            <p class="text-white text-[14px] font-semibold font-hanken truncate">Christopher Blake</p>
+                                            <p class="text-[11px] text-white/40 font-inter truncate">Full Stack Dev</p>
+                                        </div>
+                                        <div class="text-right shrink-0">
+                                            <p class="text-white/35 text-[13px] font-inter line-through">$150</p>
+                                            <p class="text-white text-[17px] font-bold font-hanken">$75</p>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="mt-4 inline-flex items-center gap-2 text-secondary text-[14px] font-semibold font-inter hover:text-white transition-colors"><i class="fa-solid fa-cart-shopping text-[13px]"></i> Add to cart</a>
+                                </div>
+                            </article>
+
+                            <article data-course-archive-item data-course-topic="business" data-course-price="59" class="group flex flex-col bg-[#0F102A] border border-white/[0.08] rounded-[18px] overflow-hidden hover:border-secondary/35 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0px_20px_50px_rgba(0,0,0,0.35)] focus-within:ring-2 focus-within:ring-secondary/40 focus-within:ring-offset-2 focus-within:ring-offset-[#050520]">
+                                <a href="course.details.html" class="course-archive-thumb block relative aspect-[16/10] overflow-hidden">
+                                    <img src="assets/images/course/course-3.webp" alt="" class="w-full h-full object-cover transition-transform duration-600 group-hover:scale-[1.04]">
+                                    <span class="absolute top-4 left-4 w-14 h-14 rounded-full bg-gradient-to-br from-[#4F8EF7] to-secondary text-white text-[11px] font-bold font-hanken flex items-center justify-center border-2 border-white/20 shadow-lg">-40%</span>
+                                </a>
+                                <div class="p-5 flex flex-col flex-1 min-h-0">
+                                    <div class="flex items-center gap-2 mb-3">
+                                        <span class="flex text-[#FCC418] text-[12px] gap-0.5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i></span>
+                                        <span class="text-white/45 text-[12px] font-inter">(9 Reviews)</span>
+                                    </div>
+                                    <h2 class="text-white text-[18px] md:text-[20px] font-bold font-hanken leading-snug mb-3 line-clamp-2"><a href="course.details.html" class="hover:text-secondary transition-colors">Sales Funnels That Convert</a></h2>
+                                    <p class="text-[#D6DAF0]/90 text-[13px] font-inter leading-relaxed line-clamp-2 mb-4">Map awareness to purchase with messaging, automation, and measurable KPIs.</p>
+                                    <div class="flex flex-wrap items-center gap-3 text-white/50 text-[12px] font-inter mb-4">
+                                        <span class="inline-flex items-center gap-1.5"><i class="fa-regular fa-file-lines text-white/30"></i> 12 Lessons</span>
+                                        <span class="inline-flex items-center gap-1.5"><i class="fa-regular fa-user text-white/30"></i> 55 Students</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 mt-auto pt-2 border-t border-white/[0.06]">
+                                        <img src="assets/images/team/team-3.webp" alt="" class="w-10 h-10 rounded-full object-cover border border-white/10 shrink-0" width="40" height="40">
+                                        <div class="min-w-0 flex-1">
+                                            <p class="text-white text-[14px] font-semibold font-hanken truncate">Maria Santos</p>
+                                            <p class="text-[11px] text-white/40 font-inter truncate">Growth Marketing</p>
+                                        </div>
+                                        <div class="text-right shrink-0">
+                                            <p class="text-white/35 text-[13px] font-inter line-through">$120</p>
+                                            <p class="text-white text-[17px] font-bold font-hanken">$59</p>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="mt-4 inline-flex items-center gap-2 text-secondary text-[14px] font-semibold font-inter hover:text-white transition-colors"><i class="fa-solid fa-cart-shopping text-[13px]"></i> Add to cart</a>
+                                </div>
+                            </article>
+
+                            <article data-course-archive-item data-course-topic="tech" data-course-price="0" class="group flex flex-col bg-[#0F102A] border border-white/[0.08] rounded-[18px] overflow-hidden hover:border-secondary/35 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0px_20px_50px_rgba(0,0,0,0.35)] focus-within:ring-2 focus-within:ring-secondary/40 focus-within:ring-offset-2 focus-within:ring-offset-[#050520]">
+                                <a href="course.details.html" class="course-archive-thumb block relative aspect-[16/10] overflow-hidden">
+                                    <img src="assets/images/course/course-4.webp" alt="" class="w-full h-full object-cover transition-transform duration-600 group-hover:scale-[1.04]">
+                                    <span class="absolute top-4 left-4 px-3 py-1 rounded-[50px] bg-primary/75 border border-white/10 text-white text-[11px] font-bold font-hanken">Free</span>
+                                </a>
+                                <div class="p-5 flex flex-col flex-1 min-h-0">
+                                    <div class="flex items-center gap-2 mb-3">
+                                        <span class="flex text-[#FCC418] text-[12px] gap-0.5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                                        <span class="text-white/45 text-[12px] font-inter">(22 Reviews)</span>
+                                    </div>
+                                    <h2 class="text-white text-[18px] md:text-[20px] font-bold font-hanken leading-snug mb-3 line-clamp-2"><a href="course.details.html" class="hover:text-secondary transition-colors">IT Support &amp; Troubleshooting</a></h2>
+                                    <p class="text-[#D6DAF0]/90 text-[13px] font-inter leading-relaxed line-clamp-2 mb-4">Ticketing, hardware diagnostics, and soft skills for first-line support teams.</p>
+                                    <div class="flex flex-wrap items-center gap-3 text-white/50 text-[12px] font-inter mb-4">
+                                        <span class="inline-flex items-center gap-1.5"><i class="fa-regular fa-file-lines text-white/30"></i> 20 Lessons</span>
+                                        <span class="inline-flex items-center gap-1.5"><i class="fa-regular fa-user text-white/30"></i> 412 Students</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 mt-auto pt-2 border-t border-white/[0.06]">
+                                        <img src="assets/images/blog/bg.webp" alt="" class="w-10 h-10 rounded-full object-cover border border-white/10 shrink-0" width="40" height="40">
+                                        <div class="min-w-0 flex-1">
+                                            <p class="text-white text-[14px] font-semibold font-hanken truncate">James Cole</p>
+                                            <p class="text-[11px] text-white/40 font-inter truncate">IT Operations</p>
+                                        </div>
+                                        <div class="text-right shrink-0">
+                                            <p class="text-white text-[17px] font-bold font-hanken">$0</p>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="mt-4 inline-flex items-center gap-2 text-secondary text-[14px] font-semibold font-inter hover:text-white transition-colors"><i class="fa-solid fa-cart-shopping text-[13px]"></i> Add to cart</a>
+                                </div>
+                            </article>
+
+                            <article data-course-archive-item data-course-topic="design" data-course-price="45" class="group flex flex-col bg-[#0F102A] border border-white/[0.08] rounded-[18px] overflow-hidden hover:border-secondary/35 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0px_20px_50px_rgba(0,0,0,0.35)] focus-within:ring-2 focus-within:ring-secondary/40 focus-within:ring-offset-2 focus-within:ring-offset-[#050520]">
+                                <a href="course-details-two.html" class="course-archive-thumb block relative aspect-[16/10] overflow-hidden">
+                                    <img src="assets/images/course/course-5.webp" alt="" class="w-full h-full object-cover transition-transform duration-600 group-hover:scale-[1.04]">
+                                    <span class="absolute top-4 left-4 w-14 h-14 rounded-full bg-gradient-to-br from-secondary to-[#B26EF7] text-white text-[11px] font-bold font-hanken flex items-center justify-center border-2 border-white/20 shadow-lg">-35%</span>
+                                </a>
+                                <div class="p-5 flex flex-col flex-1 min-h-0">
+                                    <div class="flex items-center gap-2 mb-3">
+                                        <span class="flex text-[#FCC418] text-[12px] gap-0.5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></span>
+                                        <span class="text-white/45 text-[12px] font-inter">(14 Reviews)</span>
+                                    </div>
+                                    <h2 class="text-white text-[18px] md:text-[20px] font-bold font-hanken leading-snug mb-3 line-clamp-2"><a href="course-details-two.html" class="hover:text-secondary transition-colors">Creative Illustration Masterclass</a></h2>
+                                    <p class="text-[#D6DAF0]/90 text-[13px] font-inter leading-relaxed line-clamp-2 mb-4">Light, color, and composition exercises from sketch to polished portfolio shots.</p>
+                                    <div class="flex flex-wrap items-center gap-3 text-white/50 text-[12px] font-inter mb-4">
+                                        <span class="inline-flex items-center gap-1.5"><i class="fa-regular fa-file-lines text-white/30"></i> 16 Lessons</span>
+                                        <span class="inline-flex items-center gap-1.5"><i class="fa-regular fa-user text-white/30"></i> 610 Students</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 mt-auto pt-2 border-t border-white/[0.06]">
+                                        <img src="assets/images/blog/bg-1.webp" alt="" class="w-10 h-10 rounded-full object-cover border border-white/10 shrink-0" width="40" height="40">
+                                        <div class="min-w-0 flex-1">
+                                            <p class="text-white text-[14px] font-semibold font-hanken truncate">Elena Voss</p>
+                                            <p class="text-[11px] text-white/40 font-inter truncate">Art Director</p>
+                                        </div>
+                                        <div class="text-right shrink-0">
+                                            <p class="text-white/35 text-[13px] font-inter line-through">$90</p>
+                                            <p class="text-white text-[17px] font-bold font-hanken">$45</p>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="mt-4 inline-flex items-center gap-2 text-secondary text-[14px] font-semibold font-inter hover:text-white transition-colors"><i class="fa-solid fa-cart-shopping text-[13px]"></i> Add to cart</a>
+                                </div>
+                            </article>
+
+                            <article data-course-archive-item data-course-topic="development" data-course-price="60" class="group flex flex-col bg-[#0F102A] border border-white/[0.08] rounded-[18px] overflow-hidden hover:border-secondary/35 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0px_20px_50px_rgba(0,0,0,0.35)] focus-within:ring-2 focus-within:ring-secondary/40 focus-within:ring-offset-2 focus-within:ring-offset-[#050520]">
+                                <a href="course.details.html" class="course-archive-thumb block relative aspect-[16/10] overflow-hidden">
+                                    <img src="assets/images/course/course-6.webp" alt="" class="w-full h-full object-cover transition-transform duration-600 group-hover:scale-[1.04]">
+                                    <span class="absolute top-4 left-4 w-14 h-14 rounded-full bg-gradient-to-br from-secondary to-[#B26EF7] text-white text-[11px] font-bold font-hanken flex items-center justify-center border-2 border-white/20 shadow-lg">-45%</span>
+                                </a>
+                                <div class="p-5 flex flex-col flex-1 min-h-0">
+                                    <div class="flex items-center gap-2 mb-3">
+                                        <span class="flex text-[#FCC418] text-[12px] gap-0.5"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></span>
+                                        <span class="text-white/45 text-[12px] font-inter">(31 Reviews)</span>
+                                    </div>
+                                    <h2 class="text-white text-[18px] md:text-[20px] font-bold font-hanken leading-snug mb-3 line-clamp-2"><a href="course.details.html" class="hover:text-secondary transition-colors">Vue.js Design Systems</a></h2>
+                                    <p class="text-[#D6DAF0]/90 text-[13px] font-inter leading-relaxed line-clamp-2 mb-4">Component libraries, tokens, and Storybook handoff for product teams.</p>
+                                    <div class="flex flex-wrap items-center gap-3 text-white/50 text-[12px] font-inter mb-4">
+                                        <span class="inline-flex items-center gap-1.5"><i class="fa-regular fa-file-lines text-white/30"></i> 15 Lessons</span>
+                                        <span class="inline-flex items-center gap-1.5"><i class="fa-regular fa-user text-white/30"></i> 980 Students</span>
+                                    </div>
+                                    <div class="flex items-center gap-3 mt-auto pt-2 border-t border-white/[0.06]">
+                                        <img src="assets/images/team/team-1.webp" alt="" class="w-10 h-10 rounded-full object-cover border border-white/10 shrink-0" width="40" height="40">
+                                        <div class="min-w-0 flex-1">
+                                            <p class="text-white text-[14px] font-semibold font-hanken truncate">David Lin</p>
+                                            <p class="text-[11px] text-white/40 font-inter truncate">UI Engineering</p>
+                                        </div>
+                                        <div class="text-right shrink-0">
+                                            <p class="text-white/35 text-[13px] font-inter line-through">$110</p>
+                                            <p class="text-white text-[17px] font-bold font-hanken">$60</p>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="mt-4 inline-flex items-center gap-2 text-secondary text-[14px] font-semibold font-inter hover:text-white transition-colors"><i class="fa-solid fa-cart-shopping text-[13px]"></i> Add to cart</a>
+                                </div>
+                            </article>
+                        </div>
+
+                        <div class="flex justify-center pt-4">
+                            <button type="button" class="min-h-[52px] px-10 rounded-[50px] gradient-color-primary text-white text-[15px] font-semibold font-hanken border-b-2 border-primary/30 hover:shadow-[0px_12px_35px_rgba(178,110,247,0.45)] hover:-translate-y-0.5 transition-all duration-300">Load More</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
     <!-- footer section start -->
     <footer class="bg-primary relative overflow-hidden pb-8">
         <div class="max-w-[1320px] mx-auto px-4">

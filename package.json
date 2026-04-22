@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "build:css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --watch",
-    "build:css:prod": "tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --minify"
+    "build:css": "node ./node_modules/@tailwindcss/cli/dist/index.mjs -i ./assets/css/input.css -o ./assets/css/output.css --watch",
+    "build:css:prod": "node ./node_modules/@tailwindcss/cli/dist/index.mjs -i ./assets/css/input.css -o ./assets/css/output.css --minify"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.1.18",
@@ -11,6 +11,7 @@
     "@parcel/watcher": "^2.5.6"
   },
   "optionalDependencies": {
+    "@parcel/watcher-win32-x64": "^2.5.6",
     "lightningcss-darwin-arm64": "^1.30.2"
   }
 }
