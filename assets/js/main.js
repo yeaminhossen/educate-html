@@ -1961,4 +1961,23 @@ document.addEventListener('DOMContentLoaded', function () {
             navigator.clipboard.writeText(text).then(done).catch(function () {});
         }
     });
+
+    const pricingBillingToggle = document.getElementById('pricing-billing-toggle');
+    const pricingBillingKnob = document.getElementById('pricing-billing-knob');
+    if (pricingBillingToggle) {
+        const syncPricingBilling = function () {
+            const yr = pricingBillingToggle.checked;
+            document.querySelectorAll('.js-pricing-mo').forEach(function (el) {
+                el.classList.toggle('hidden', yr);
+            });
+            document.querySelectorAll('.js-pricing-yr').forEach(function (el) {
+                el.classList.toggle('hidden', !yr);
+            });
+            if (pricingBillingKnob) {
+                pricingBillingKnob.classList.toggle('translate-x-7', yr);
+            }
+        };
+        pricingBillingToggle.addEventListener('change', syncPricingBilling);
+        syncPricingBilling();
+    }
 });
