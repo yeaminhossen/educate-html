@@ -191,27 +191,26 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    const reviewSwiperEl = document.querySelector('.review-swiper');
-
-    if (reviewSwiperEl && window.Swiper) {
+    document.querySelectorAll('.review-swiper').forEach((reviewSwiperEl) => {
+        if (!window.Swiper) return;
+        const wrap = reviewSwiperEl.parentElement;
+        if (!wrap) return;
+        const nextEl = wrap.querySelector('.review-swiper-next');
+        const prevEl = wrap.querySelector('.review-swiper-prev');
+        const pagEl = wrap.querySelector('.review-swiper-pagination');
+        if (!nextEl || !prevEl || !pagEl) return;
         new Swiper(reviewSwiperEl, {
             slidesPerView: 1,
             spaceBetween: 24,
             loop: true,
             speed: 700,
-            navigation: {
-                nextEl: '.review-swiper-next',
-                prevEl: '.review-swiper-prev',
-            },
-            pagination: {
-                el: '.review-swiper-pagination',
-                clickable: true,
-            },
+            navigation: { nextEl, prevEl },
+            pagination: { el: pagEl, clickable: true },
             breakpoints: {
                 992: { slidesPerView: 2 },
             },
         });
-    }
+    });
 
     //blog swiper initialization 3 slides per view
     const blogSwiperEl = document.querySelector('.blog-active-swiper');
@@ -277,31 +276,28 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    //team swiper initialization
-    const teamSwiperEl = document.querySelector('.team-swiper');
-
-    if (teamSwiperEl && window.Swiper) {
-        new Swiper(teamSwiperEl, {
+    document.querySelectorAll('.team-swiper').forEach((teamSwiperEl) => {
+        if (!window.Swiper) return;
+        const root = teamSwiperEl.closest('section') || teamSwiperEl.parentElement;
+        const prevEl = root && root.querySelector('.team-swiper-prev');
+        const nextEl = root && root.querySelector('.team-swiper-next');
+        const paginationEl = root && root.querySelector('.team-swiper-pagination');
+        const opts = {
             slidesPerView: 1,
             spaceBetween: 24,
             loop: true,
             speed: 700,
             watchOverflow: true,
-            navigation: {
-                nextEl: '.team-swiper-next',
-                prevEl: '.team-swiper-prev',
-            },
-            pagination: {
-                el: '.team-swiper-pagination',
-                clickable: true,
-            },
             breakpoints: {
                 640: { slidesPerView: 2 },
                 1024: { slidesPerView: 3 },
                 1280: { slidesPerView: 4 },
             },
-        });
-    }
+        };
+        if (prevEl && nextEl) opts.navigation = { prevEl, nextEl };
+        if (paginationEl) opts.pagination = { el: paginationEl, clickable: true };
+        new Swiper(teamSwiperEl, opts);
+    });
 
     const TEAM_CARD_SELECTOR = '[data-team-card]';
     const TEAM_SHARE_BTN_SELECTOR = '[data-team-share]';
@@ -1115,10 +1111,10 @@ document.addEventListener('DOMContentLoaded', function () {
             btn.addEventListener('click', function () {
                 const target = this.dataset.aboutTab;
                 aboutTabBtns.forEach(b => {
-                    b.classList.remove('gradient-color-primary', 'text-white', 'shadow-[0_8px_25px_rgba(178,110,247,0.4)]');
+                    b.classList.remove('gradient-color-primary-flow', 'text-white', 'shadow-[0_8px_25px_rgba(178,110,247,0.4)]');
                     b.classList.add('bg-[#10102B]', 'border', 'border-white/[0.08]', 'text-[#D6DAF0]/70');
                 });
-                this.classList.add('gradient-color-primary', 'text-white');
+                this.classList.add('gradient-color-primary-flow', 'text-white');
                 this.classList.remove('bg-[#10102B]', 'border', 'border-white/[0.08]', 'text-[#D6DAF0]/70');
                 aboutContents.forEach(c => {
                     c.getAttribute('data-about-content') === target ? (c.classList.remove('hidden'), c.classList.add('block')) : (c.classList.remove('block'), c.classList.add('hidden'));
@@ -1127,41 +1123,47 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Testimonial Sliders Sync
-    const testimonialImageSwiper = new Swiper('.testimonial-image-slider', {
-        slidesPerView: 1,
-        spaceBetween: 0,
-        loop: true,
-        speed: 800,
-        effect: 'slide',
-        allowTouchMove: false, // Image slider is controlled by content slider
-    });
+    document.querySelectorAll('.testimonial-content-slider').forEach((contentEl) => {
+        if (!window.Swiper) return;
+        const root = contentEl.closest('section');
+        if (!root) return;
+        const imageEl = root.querySelector('.testimonial-image-slider');
+        const nextEl = root.querySelector('.testimonial-next');
+        const prevEl = root.querySelector('.testimonial-prev');
+        const pagEl = root.querySelector('.testimonial-pagination');
+        if (!imageEl || !nextEl || !prevEl || !pagEl) return;
 
-    const testimonialContentSwiper = new Swiper('.testimonial-content-slider', {
-        slidesPerView: 1,
-        spaceBetween: 30,
-        loop: true,
-        speed: 800,
-        autoplay: {
-            delay: 5000,
-            disableOnInteraction: false,
-        },
-        navigation: {
-            nextEl: '.testimonial-next',
-            prevEl: '.testimonial-prev',
-        },
-        pagination: {
-            el: '.testimonial-pagination',
-            clickable: true,
-            renderBullet: function (index, className) {
-                return '<span class="' + className + '"></span>';
+        const testimonialImageSwiper = new Swiper(imageEl, {
+            slidesPerView: 1,
+            spaceBetween: 0,
+            loop: true,
+            speed: 800,
+            effect: 'slide',
+            allowTouchMove: false,
+        });
+
+        const testimonialContentSwiper = new Swiper(contentEl, {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            speed: 800,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
             },
-        },
-    });
+            navigation: { nextEl, prevEl },
+            pagination: {
+                el: pagEl,
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + '"></span>';
+                },
+            },
+        });
 
-    // Sync Sliders
-    testimonialContentSwiper.on('slideChange', function () {
-        testimonialImageSwiper.slideToLoop(testimonialContentSwiper.realIndex);
+        testimonialContentSwiper.on('slideChange', function () {
+            testimonialImageSwiper.slideToLoop(testimonialContentSwiper.realIndex);
+        });
     });
 
     // Hero Swiper Initialization
@@ -1432,32 +1434,75 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    // Pricing Toggle
-    const pricingToggle = document.querySelector('[data-pricing-toggle]');
-    if (pricingToggle) {
-        const toggleBtn = document.getElementById('billing-toggle');
-        const toggleDot = document.getElementById('toggle-dot');
-        const amounts = document.querySelectorAll('#pricing [data-price-amount]');
-        
-        if (toggleBtn && toggleDot) {
-            let isYearly = false;
-            
-            toggleBtn.addEventListener('click', () => {
-                isYearly = !isYearly;
-                
-                // Update Dot Position
-                if (isYearly) {
-                    toggleDot.style.transform = 'translateX(28px)';
-                } else {
-                    toggleDot.style.transform = 'translateX(0)';
-                }
-                
-                // Update Prices
-                amounts.forEach((el) => {
-                    el.textContent = isYearly ? el.getAttribute('data-yearly') : el.getAttribute('data-monthly');
-                });
+    // Pricing Toggle (all [data-pricing-toggle]: pill groups + switch; one shared yearly state)
+    const pricingWrappers = document.querySelectorAll('[data-pricing-toggle]');
+    if (pricingWrappers.length) {
+        const amounts = document.querySelectorAll('main [data-price-amount]');
+        const pricingNote = document.querySelector('[data-pricing-note]');
+        const monthlyActive = 'flex flex-1 sm:flex-none min-h-[48px] items-center justify-center px-5 sm:px-7 rounded-[50px] text-[14px] font-semibold font-hanken transition-all duration-300 gradient-color-primary-flow text-white shadow-[0px_4px_22px_rgba(178,110,247,0.28)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F102A]';
+        const tabInactive = 'flex flex-1 sm:flex-none min-h-[48px] items-center justify-center px-5 sm:px-7 rounded-[50px] text-[14px] font-semibold font-hanken text-white/55 hover:text-white/90 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F102A]';
+        const yearlyActive = 'flex flex-1 sm:flex-none min-h-[48px] items-center justify-center gap-2 px-5 sm:px-7 rounded-[50px] text-[14px] font-semibold font-hanken transition-all duration-300 gradient-color-primary-flow text-white shadow-[0px_4px_22px_rgba(178,110,247,0.28)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F102A]';
+        const yearlyInactive = 'flex flex-1 sm:flex-none min-h-[48px] items-center justify-center gap-2 px-5 sm:px-7 rounded-[50px] text-[14px] font-semibold font-hanken text-white/55 hover:text-white/90 transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0F102A]';
+
+        const applyPriceAmounts = (isYearly) => {
+            amounts.forEach((el) => {
+                const v = isYearly ? el.getAttribute('data-yearly') : el.getAttribute('data-monthly');
+                if (v != null) el.textContent = v;
             });
-        }
+        };
+
+        let isYearly = false;
+
+        const syncPillGroups = () => {
+            pricingWrappers.forEach((wrap) => {
+                if (wrap.querySelector('#billing-toggle')) return;
+                const monthlyBtn = wrap.querySelector('button[data-billing="monthly"]');
+                const yearlyBtn = wrap.querySelector('button[data-billing="yearly"]');
+                if (!monthlyBtn || !yearlyBtn) return;
+                monthlyBtn.className = isYearly ? tabInactive : monthlyActive;
+                monthlyBtn.setAttribute('aria-pressed', isYearly ? 'false' : 'true');
+                yearlyBtn.className = isYearly ? yearlyActive : yearlyInactive;
+                yearlyBtn.setAttribute('aria-pressed', isYearly ? 'true' : 'false');
+            });
+        };
+
+        const syncSwitches = () => {
+            pricingWrappers.forEach((wrap) => {
+                const toggleDot = wrap.querySelector('#toggle-dot');
+                const toggleBtn = wrap.querySelector('#billing-toggle');
+                if (!toggleDot || !toggleBtn) return;
+                toggleDot.style.transform = isYearly ? 'translateX(28px)' : 'translateX(0)';
+                toggleBtn.setAttribute('aria-pressed', isYearly ? 'true' : 'false');
+            });
+        };
+
+        const setYearly = (v) => {
+            isYearly = v;
+            applyPriceAmounts(isYearly);
+            syncPillGroups();
+            syncSwitches();
+            if (pricingNote) {
+                pricingNote.textContent = isYearly
+                    ? 'Billed yearly (20% off as effective monthly). Cancel anytime.'
+                    : 'Billed monthly. Cancel anytime.';
+            }
+        };
+
+        pricingWrappers.forEach((wrap) => {
+            const monthlyBtn = wrap.querySelector('button[data-billing="monthly"]');
+            const yearlyBtn = wrap.querySelector('button[data-billing="yearly"]');
+            if (monthlyBtn && yearlyBtn) {
+                monthlyBtn.addEventListener('click', () => setYearly(false));
+                yearlyBtn.addEventListener('click', () => setYearly(true));
+                return;
+            }
+            const toggleBtn = wrap.querySelector('#billing-toggle');
+            const toggleDot = wrap.querySelector('#toggle-dot');
+            if (toggleBtn && toggleDot) {
+                toggleBtn.addEventListener('click', () => setYearly(!isYearly));
+            }
+        });
+        setYearly(false);
     }
 
     if (typeof Fancybox !== 'undefined') {
@@ -1776,7 +1821,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // FAQ Accordion
     const faqItems = document.querySelectorAll('.faq-item');
-    if (faqItems.length && !document.querySelector('[data-faq-accordion]')) {
+    if (faqItems.length) {
         const firstItem = faqItems[0];
         const firstAnswer = firstItem.querySelector('.faq-answer');
         const firstIcon = firstItem.querySelector('.faq-icon i');
@@ -2094,4 +2139,90 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     }
+    //our teachers swiper initialization
+    (function initUniversitiesOurTeachers() {
+        var selP = 'figure img|header h3|header p|header + p|header + p + p|address a[href^="tel:"]|address a[href^="mailto:"]';
+        function readU2(art) {
+            var im = art.querySelector('img'), h3 = art.querySelector('h3'), ps = art.querySelectorAll(':scope > p');
+            var telA = art.querySelector('a[href^="tel:"]'), mailA = art.querySelector('a[href^="mailto:"]');
+            var p0 = ps[0], p1 = ps[1], p2 = ps[2], mhref = mailA && mailA.getAttribute('href');
+            var loc = p1 && ((p1.querySelector('span') || p1).textContent.trim());
+            var sNav = art.querySelector('.teacher-source-social');
+            var sA = sNav ? sNav.querySelectorAll('a[href]') : [];
+            var gsh = function (i) { return sA[i] ? (sA[i].getAttribute('href') || '') : ''; };
+            return {
+                img: im ? im.getAttribute('src') : '',
+                name: h3 ? h3.textContent.trim() : (im && im.getAttribute('alt')) || '',
+                email: mhref ? mhref.replace(/^mailto:/i, '') : '',
+                emailHref: mhref || '',
+                role: p0 ? p0.textContent.trim() : '',
+                bio: p2 ? p2.textContent.trim() : '',
+                location: loc || '',
+                phone: telA ? telA.textContent.trim() : '',
+                tel: (telA && telA.getAttribute('href')) || '',
+                s0: gsh(0), s1: gsh(1), s2: gsh(2), s3: gsh(3), s4: gsh(4),
+            };
+        }
+        var root = document.getElementById('our-teachers'), ar = document.getElementById('our-teachers-profile'), source = document.getElementById('our-teachers-source');
+        if (!root || !ar || !source) return;
+        var items = source.querySelectorAll('article'), se = selP.split('|').map(function (s) { return ar.querySelector(s); });
+        var imgEl = se[0], nameEl = se[1], roleEl = se[2], locEl = se[3], bioEl = se[4], phoneEl = se[5], emailEl = se[6];
+        var thumbs = root.querySelectorAll('#our-teachers-swiper button'), swiperEl = document.getElementById('our-teachers-swiper');
+        var prevEl = document.getElementById('our-teachers-prev'), nextEl = document.getElementById('our-teachers-next');
+        if (!imgEl || !nameEl || !emailEl || !thumbs.length || items.length !== thumbs.length) return;
+        var teacherSwiper = (swiperEl && window.Swiper && prevEl && nextEl) ? new Swiper(swiperEl, {
+            slidesPerView: 2,
+            spaceBetween: 10,
+            watchOverflow: true,
+            speed: 400,
+            navigation: { prevEl: prevEl, nextEl: nextEl },
+            breakpoints: {
+                480: { slidesPerView: 3, spaceBetween: 10 },
+                640: { slidesPerView: 4, spaceBetween: 12 },
+                900: { slidesPerView: 5, spaceBetween: 12 },
+                1024: { slidesPerView: 7, spaceBetween: 14 },
+            },
+        }) : null;
+        var AB = 'border-secondary', IB = 'border-transparent';
+        function setOne(activeBtn) {
+            var idx = [].indexOf.call(thumbs, activeBtn), d = readU2(items[idx]);
+            if (!d || !d.img) return;
+            [].forEach.call(thumbs, function (btn) {
+                var on = btn === activeBtn, ov = btn.querySelector('span[aria-hidden="true"]');
+                btn.setAttribute('aria-pressed', on ? 'true' : 'false');
+                btn.classList.toggle(AB, on);
+                btn.classList.toggle(IB, !on);
+                if (ov) { ov.classList.toggle('opacity-100', on); ov.classList.toggle('opacity-0', !on); }
+            });
+            imgEl.src = d.img;
+            imgEl.alt = d.name;
+            nameEl.textContent = d.name;
+            emailEl.setAttribute('href', d.emailHref || ('mailto:' + (d.email || '')));
+            var es = emailEl.querySelector('span');
+            if (es) es.textContent = d.email; else emailEl.textContent = d.email;
+            if (roleEl) { roleEl.textContent = d.role || ''; roleEl.classList.toggle('hidden', !d.role); }
+            if (bioEl) { bioEl.textContent = d.bio || ''; bioEl.classList.toggle('hidden', !d.bio); }
+            if (locEl) { var lsp = locEl.querySelector('span'); if (lsp) lsp.textContent = d.location; locEl.classList.toggle('hidden', !d.location); }
+            if (phoneEl) {
+                if (d.tel) phoneEl.setAttribute('href', d.tel);
+                var psp = phoneEl.querySelector('span');
+                if (psp) psp.textContent = d.phone;
+                phoneEl.classList.toggle('hidden', !d.phone);
+            }
+            var sc = ar.querySelectorAll('#our-teachers-social a'), sh = [d.s0, d.s1, d.s2, d.s3, d.s4];
+            for (var si = 0; si < sc.length; si++) {
+                if (!sc[si]) continue;
+                var hh = sh[si] || '';
+                var ok = hh && hh !== '#';
+                sc[si].setAttribute('href', ok ? hh : '#');
+                sc[si].setAttribute('tabindex', ok ? '0' : '-1');
+                if (ok) sc[si].removeAttribute('aria-hidden'); else sc[si].setAttribute('aria-hidden', 'true');
+                sc[si].classList.toggle('pointer-events-none', !ok);
+                sc[si].classList.toggle('opacity-30', !ok);
+            }
+            if (teacherSwiper && idx >= 0) teacherSwiper.slideTo(idx, 350);
+        }
+        [].forEach.call(thumbs, function (b) { b.addEventListener('click', function () { setOne(b); }); });
+        setOne(thumbs[0]);
+    })();
 });

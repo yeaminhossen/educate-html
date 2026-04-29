@@ -1,0 +1,75 @@
+    <main id="shop-wishlist-page">
+        <section class="relative bg-[#050520] pt-[100px] pb-[28px] overflow-hidden" aria-labelledby="wishlist-hero-title">
+            <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+                <div class="absolute top-0 right-0 w-[400px] h-[400px] bg-[#FF71BF]/12 blur-[110px] rounded-full"></div>
+            </div>
+            <div class="relative z-10 max-w-[1320px] mx-auto px-4">
+                <nav class="mb-4 flex justify-center md:justify-start" aria-label="Breadcrumb">
+                    <div class="inline-flex max-w-full rounded-[50px] p-px bg-gradient-to-r from-secondary via-[#B26EF7] to-[#FF71BF] shadow-[0px_8px_32px_rgba(147,130,255,0.22)]">
+                        <ol class="inline-flex flex-wrap items-center gap-1 sm:gap-1.5 max-w-full rounded-[49px] bg-[#0F102A]/92 px-3 py-2 sm:px-4 sm:py-2.5 backdrop-blur-[12px]">
+                            <li class="flex items-center shrink-0"><a href="index.html" class="inline-flex items-center gap-1.5 text-[12px] sm:text-[13px] font-medium font-inter text-white/70 hover:text-secondary transition-colors"><i class="fa-solid fa-house text-[11px] opacity-80" aria-hidden="true"></i><span>Home</span></a></li>
+                            <li class="flex items-center text-secondary/55 px-0.5" aria-hidden="true"><i class="fa-solid fa-chevron-right text-[9px] sm:text-[10px]"></i></li>
+                            <li class="flex items-center shrink-0"><a href="shop.html" class="text-[12px] sm:text-[13px] font-medium font-inter text-white/70 hover:text-secondary transition-colors">Shop</a></li>
+                            <li class="flex items-center text-secondary/55 px-0.5" aria-hidden="true"><i class="fa-solid fa-chevron-right text-[9px] sm:text-[10px]"></i></li>
+                            <li class="flex items-center min-w-0"><span class="text-[12px] sm:text-[13px] font-semibold font-inter text-white line-clamp-1" id="wishlist-hero-title" aria-current="page">Wishlist</span></li>
+                        </ol>
+                    </div>
+                </nav>
+                <h1 class="text-[26px] sm:text-[34px] md:text-[40px] font-bold font-hanken leading-tight bg-gradient-to-r from-white via-[#E8EAFF] to-white/75 bg-clip-text text-transparent text-center md:text-left">Saved for later</h1>
+                <p class="mt-2 max-w-[640px] mx-auto md:mx-0 text-center md:text-left text-[14px] font-inter text-[#D6DAF0]/85">Courses and materials you bookmarked. Share this list with advisors or parents.</p>
+            </div>
+        </section>
+
+        <section class="bg-[#050520] pb-[90px]" aria-label="Wishlist items">
+            <div class="max-w-[1320px] mx-auto px-4">
+                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <article class="group flex flex-col rounded-[16px] border border-white/[0.08] bg-[#0A0A28] overflow-hidden hover:border-[#FF71BF]/35 transition-colors">
+                        <div class="relative aspect-[4/3] overflow-hidden">
+                            <img src="assets/images/course/course-3.webp" alt="" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" width="400" height="300">
+                            <button type="button" class="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-[10px] border border-white/10 bg-[#050520]/90 text-[#FF71BF]" aria-label="Remove from wishlist"><i class="fa-solid fa-heart text-[14px]" aria-hidden="true"></i></button>
+                        </div>
+                        <div class="p-5 flex flex-col flex-1">
+                            <p class="text-[11px] font-bold font-hanken uppercase tracking-wider text-[#FF9EC7]/90 mb-1">Lab kit</p>
+                            <h2 class="text-[17px] font-bold font-hanken text-white mb-3"><a href="shop-details.html" class="hover:text-secondary transition-colors">STEM starter kit — middle school</a></h2>
+                            <p class="text-[20px] font-bold font-hanken text-white mb-4">$89</p>
+                            <div class="mt-auto flex flex-col gap-2">
+                                <a href="shop-cart.html" class="inline-flex items-center justify-center gap-2 rounded-[50px] gradient-color-primary-flow py-3 text-[13px] font-bold font-hanken text-white border-b-2 border-primary/29">Add to cart</a>
+                                <a href="shop-details.html" class="text-center text-[13px] font-medium text-[#D6DAF0]/70 hover:text-white transition-colors">View details</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="group flex flex-col rounded-[16px] border border-white/[0.08] bg-[#0A0A28] overflow-hidden hover:border-secondary/30 transition-colors">
+                        <div class="relative aspect-[4/3] overflow-hidden">
+                            <img src="assets/images/course/course-1.webp" alt="" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" width="400" height="300">
+                            <button type="button" class="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-[10px] border border-white/10 bg-[#050520]/90 text-[#FF71BF]" aria-label="Remove from wishlist"><i class="fa-solid fa-heart text-[14px]" aria-hidden="true"></i></button>
+                        </div>
+                        <div class="p-5 flex flex-col flex-1">
+                            <p class="text-[11px] font-bold font-hanken uppercase tracking-wider text-secondary/90 mb-1">Video course</p>
+                            <h2 class="text-[17px] font-bold font-hanken text-white mb-3"><a href="shop-details.html" class="hover:text-secondary transition-colors">Miracle Morning — Study edition</a></h2>
+                            <p class="text-[20px] font-bold font-hanken text-white mb-4">$22</p>
+                            <div class="mt-auto flex flex-col gap-2">
+                                <a href="shop-cart.html" class="inline-flex items-center justify-center gap-2 rounded-[50px] gradient-color-primary-flow py-3 text-[13px] font-bold font-hanken text-white border-b-2 border-primary/29">Add to cart</a>
+                                <a href="shop-details.html" class="text-center text-[13px] font-medium text-[#D6DAF0]/70 hover:text-white transition-colors">View details</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="group flex flex-col rounded-[16px] border border-white/[0.08] bg-[#0A0A28] overflow-hidden hover:border-secondary/30 transition-colors sm:col-span-2 lg:col-span-1">
+                        <div class="relative aspect-[4/3] overflow-hidden">
+                            <img src="assets/images/course/course-2.webp" alt="" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]" width="400" height="300">
+                            <button type="button" class="absolute right-3 top-3 flex h-9 w-9 items-center justify-center rounded-[10px] border border-white/10 bg-[#050520]/90 text-[#FF71BF]" aria-label="Remove from wishlist"><i class="fa-solid fa-heart text-[14px]" aria-hidden="true"></i></button>
+                        </div>
+                        <div class="p-5 flex flex-col flex-1">
+                            <p class="text-[11px] font-bold font-hanken uppercase tracking-wider text-secondary/90 mb-1">Bundle</p>
+                            <h2 class="text-[17px] font-bold font-hanken text-white mb-3"><a href="shop-details.html" class="hover:text-secondary transition-colors">College prep reading list</a></h2>
+                            <p class="text-[20px] font-bold font-hanken text-white mb-4">$45</p>
+                            <div class="mt-auto flex flex-col gap-2">
+                                <a href="shop-cart.html" class="inline-flex items-center justify-center gap-2 rounded-[50px] gradient-color-primary-flow py-3 text-[13px] font-bold font-hanken text-white border-b-2 border-primary/29">Add to cart</a>
+                                <a href="shop-details.html" class="text-center text-[13px] font-medium text-[#D6DAF0]/70 hover:text-white transition-colors">View details</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <p class="mt-10 text-center"><a href="shop.html" class="inline-flex items-center gap-2 text-[15px] font-semibold font-hanken text-secondary hover:text-white transition-colors"><i class="fa-solid fa-arrow-left text-[12px]" aria-hidden="true"></i> Back to shop</a></p>
+            </div>
+        </section>
+    </main>

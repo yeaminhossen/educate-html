@@ -208,7 +208,7 @@ textarea {
 
 /* Scrolled Header */
 .scrolled-header {
-  background-color: #050520 !important;
+  background-color: #11112a;
   box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }

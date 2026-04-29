@@ -1,0 +1,71 @@
+    <main id="shop-checkout-page">
+        <section class="relative bg-[#050520] pt-[100px] pb-[28px] overflow-hidden" aria-labelledby="checkout-hero-title">
+            <div class="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+                <div class="absolute top-0 left-1/4 w-[360px] h-[360px] bg-[#FF71BF]/10 blur-[100px] rounded-full"></div>
+            </div>
+            <div class="relative z-10 max-w-[1320px] mx-auto px-4">
+                <nav class="mb-4 flex justify-center md:justify-start" aria-label="Breadcrumb">
+                    <div class="inline-flex max-w-full rounded-[50px] p-px bg-gradient-to-r from-secondary via-[#B26EF7] to-[#FF71BF] shadow-[0px_8px_32px_rgba(147,130,255,0.22)]">
+                        <ol class="inline-flex flex-wrap items-center gap-1 sm:gap-1.5 max-w-full rounded-[49px] bg-[#0F102A]/92 px-3 py-2 sm:px-4 sm:py-2.5 backdrop-blur-[12px]">
+                            <li class="flex items-center shrink-0"><a href="index.html" class="inline-flex items-center gap-1.5 text-[12px] sm:text-[13px] font-medium font-inter text-white/70 hover:text-secondary transition-colors"><i class="fa-solid fa-house text-[11px] opacity-80" aria-hidden="true"></i><span>Home</span></a></li>
+                            <li class="flex items-center text-secondary/55 px-0.5" aria-hidden="true"><i class="fa-solid fa-chevron-right text-[9px] sm:text-[10px]"></i></li>
+                            <li class="flex items-center shrink-0"><a href="shop.html" class="text-[12px] sm:text-[13px] font-medium font-inter text-white/70 hover:text-secondary transition-colors">Shop</a></li>
+                            <li class="flex items-center text-secondary/55 px-0.5" aria-hidden="true"><i class="fa-solid fa-chevron-right text-[9px] sm:text-[10px]"></i></li>
+                            <li class="flex items-center shrink-0"><a href="shop-cart.html" class="text-[12px] sm:text-[13px] font-medium font-inter text-white/70 hover:text-secondary transition-colors">Cart</a></li>
+                            <li class="flex items-center text-secondary/55 px-0.5" aria-hidden="true"><i class="fa-solid fa-chevron-right text-[9px] sm:text-[10px]"></i></li>
+                            <li class="flex items-center min-w-0"><span class="text-[12px] sm:text-[13px] font-semibold font-inter text-white line-clamp-1" id="checkout-hero-title" aria-current="page">Checkout</span></li>
+                        </ol>
+                    </div>
+                </nav>
+                <h1 class="text-[26px] sm:text-[34px] md:text-[40px] font-bold font-hanken leading-tight bg-gradient-to-r from-white via-[#E8EAFF] to-white/75 bg-clip-text text-transparent text-center md:text-left">Checkout</h1>
+                <p class="mt-2 max-w-[640px] mx-auto md:mx-0 text-center md:text-left text-[14px] font-inter text-[#D6DAF0]/85">Billing for individuals, schools, and teams. Add a purchase order number for institutional orders.</p>
+            </div>
+        </section>
+
+        <section class="bg-[#050520] pb-[90px] md:pb-[110px]" aria-label="Checkout form">
+            <div class="max-w-[1320px] mx-auto px-4">
+                <form class="flex flex-col lg:flex-row gap-8 lg:gap-10 lg:items-start" action="shop-order-complete.html" method="get">
+                    <div class="flex-1 min-w-0 space-y-6">
+                        <div class="rounded-[16px] border border-white/[0.08] bg-[#0A0A28] p-5 sm:p-6">
+                            <h2 class="text-[17px] font-bold font-hanken text-white mb-4 flex items-center gap-2"><span class="flex h-8 w-8 items-center justify-center rounded-lg bg-secondary/20 text-secondary text-[13px]">1</span> Contact</h2>
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <label class="block sm:col-span-2"><span class="text-[13px] font-medium text-[#D6DAF0]/80 mb-1.5 block">Email <span class="text-secondary">*</span></span><input type="email" required autocomplete="email" class="w-full rounded-[10px] border border-white/[0.1] bg-white/[0.04] px-3 py-2.5 text-[14px] font-inter text-white placeholder:text-white/35 outline-none focus:border-secondary/50" placeholder="you@school.edu"></label>
+                                <label class="block"><span class="text-[13px] font-medium text-[#D6DAF0]/80 mb-1.5 block">First name</span><input type="text" autocomplete="given-name" class="w-full rounded-[10px] border border-white/[0.1] bg-white/[0.04] px-3 py-2.5 text-[14px] text-white outline-none focus:border-secondary/50"></label>
+                                <label class="block"><span class="text-[13px] font-medium text-[#D6DAF0]/80 mb-1.5 block">Last name</span><input type="text" autocomplete="family-name" class="w-full rounded-[10px] border border-white/[0.1] bg-white/[0.04] px-3 py-2.5 text-[14px] text-white outline-none focus:border-secondary/50"></label>
+                            </div>
+                        </div>
+                        <div class="rounded-[16px] border border-white/[0.08] bg-[#0A0A28] p-5 sm:p-6">
+                            <h2 class="text-[17px] font-bold font-hanken text-white mb-4 flex items-center gap-2"><span class="flex h-8 w-8 items-center justify-center rounded-lg bg-secondary/20 text-secondary text-[13px]">2</span> Institution (optional)</h2>
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <label class="block sm:col-span-2"><span class="text-[13px] font-medium text-[#D6DAF0]/80 mb-1.5 block">School / organization</span><input type="text" class="w-full rounded-[10px] border border-white/[0.1] bg-white/[0.04] px-3 py-2.5 text-[14px] text-white outline-none focus:border-secondary/50" placeholder="District or university name"></label>
+                                <label class="block sm:col-span-2"><span class="text-[13px] font-medium text-[#D6DAF0]/80 mb-1.5 block">Purchase order #</span><input type="text" class="w-full rounded-[10px] border border-white/[0.1] bg-white/[0.04] px-3 py-2.5 text-[14px] text-white outline-none focus:border-secondary/50" placeholder="PO-2026-…"></label>
+                            </div>
+                        </div>
+                        <div class="rounded-[16px] border border-white/[0.08] bg-[#0A0A28] p-5 sm:p-6">
+                            <h2 class="text-[17px] font-bold font-hanken text-white mb-4 flex items-center gap-2"><span class="flex h-8 w-8 items-center justify-center rounded-lg bg-secondary/20 text-secondary text-[13px]">3</span> Payment</h2>
+                            <p class="text-[13px] text-[#D6DAF0]/65 mb-4">Demo form — wire your gateway here. Card data never touches this template.</p>
+                            <div class="grid sm:grid-cols-2 gap-4">
+                                <label class="block sm:col-span-2"><span class="text-[13px] font-medium text-[#D6DAF0]/80 mb-1.5 block">Name on card</span><input type="text" autocomplete="cc-name" class="w-full rounded-[10px] border border-white/[0.1] bg-white/[0.04] px-3 py-2.5 text-[14px] text-white outline-none focus:border-secondary/50"></label>
+                                <label class="block sm:col-span-2"><span class="text-[13px] font-medium text-[#D6DAF0]/80 mb-1.5 block">Card number</span><input type="text" inputmode="numeric" autocomplete="cc-number" class="w-full rounded-[10px] border border-white/[0.1] bg-white/[0.04] px-3 py-2.5 text-[14px] text-white outline-none focus:border-secondary/50" placeholder="0000 0000 0000 0000"></label>
+                                <label class="block"><span class="text-[13px] font-medium text-[#D6DAF0]/80 mb-1.5 block">Expiry</span><input type="text" autocomplete="cc-exp" class="w-full rounded-[10px] border border-white/[0.1] bg-white/[0.04] px-3 py-2.5 text-[14px] text-white outline-none focus:border-secondary/50" placeholder="MM / YY"></label>
+                                <label class="block"><span class="text-[13px] font-medium text-[#D6DAF0]/80 mb-1.5 block">CVC</span><input type="text" autocomplete="cc-csc" class="w-full rounded-[10px] border border-white/[0.1] bg-white/[0.04] px-3 py-2.5 text-[14px] text-white outline-none focus:border-secondary/50"></label>
+                            </div>
+                        </div>
+                    </div>
+                    <aside class="lg:w-[380px] shrink-0">
+                        <div class="rounded-[20px] border border-white/[0.1] bg-gradient-to-b from-[#13132E] to-[#0A0A28] p-6 lg:sticky lg:top-[100px]">
+                            <h3 class="text-[18px] font-bold font-hanken text-white mb-4">Summary</h3>
+                            <ul class="space-y-2 text-[14px] text-[#D6DAF0] border-b border-white/[0.08] pb-4 mb-4">
+                                <li class="flex justify-between"><span>Miracle Morning</span><span class="text-white tabular-nums">$22</span></li>
+                                <li class="flex justify-between"><span>Reading pack</span><span class="text-white tabular-nums">$30</span></li>
+                            </ul>
+                            <div class="flex justify-between text-[15px] font-bold font-hanken text-white mb-6"><span>Total</span><span class="tabular-nums">$51.16</span></div>
+                            <button type="submit" class="w-full inline-flex items-center justify-center gap-2 rounded-[50px] gradient-color-primary-flow py-3.5 text-[15px] font-bold font-hanken text-white border-b-2 border-primary/29 hover:shadow-[0px_12px_36px_rgba(178,110,247,0.4)] transition-all">Place order</button>
+                            <p class="mt-4 text-[12px] text-center text-[#D6DAF0]/45">By placing the order you agree to our <a href="faq.html" class="text-secondary hover:text-white">terms</a>.</p>
+                            <a href="shop-cart.html" class="mt-4 block text-center text-[14px] font-medium text-white/60 hover:text-secondary transition-colors">← Back to cart</a>
+                        </div>
+                    </aside>
+                </form>
+            </div>
+        </section>
+    </main>
