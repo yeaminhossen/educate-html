@@ -379,6 +379,8 @@ document.addEventListener('DOMContentLoaded', function () {
             spaceBetween: 24,
             loop: true,
             speed: 4000,
+            observer: true,
+            observeParents: true,
             autoplay: {
                 delay: 0,
                 disableOnInteraction: false,
