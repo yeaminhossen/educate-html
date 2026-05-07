@@ -1,0 +1,1295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Header styles — Educate</title>
+    <meta name="robots" content="noindex, follow">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Spartan:wght@100..900&display=swap"
+        rel="stylesheet">
+    <!-- CSS
+	============================================ -->
+    <link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/css/swiper.css">
+    <link rel="stylesheet" href="assets/css/animation.css">
+    <link rel="stylesheet" href="assets/css/output.css">
+    <link rel="stylesheet" href="assets/css/input.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="rbt-header-sticky primary-color font-inter">
+    <!-- Preloader Start -->
+    <div id="preloader"
+        class="fixed inset-0 z-9999 flex items-center justify-center bg-primary transition-all duration-700 overflow-hidden">
+        <div class="relative w-40 h-40 flex items-center justify-center">
+            <!-- Main Neumorphic Circle -->
+            <div
+                class="absolute w-32 h-32 rounded-full bg-primary shadow-[15px_15px_30px_#02020d,-15px_-15px_30px_#080833]">
+            </div>
+
+            <!-- Inner Inset Circle -->
+            <div
+                class="absolute w-24 h-24 rounded-full bg-primary shadow-[inset_8px_8px_16px_#02020d,inset_-8px_-8px_16px_#080833]">
+            </div>
+
+            <!-- Rotating Light Ring -->
+            <div
+                class="absolute w-32 h-32 rounded-full border-4 border-transparent border-t-[#9382FF] border-l-[#9382FF]/30 animate-[spin_2s_cubic-bezier(0.58,0.185,0.395,0.81)_infinite]">
+            </div>
+
+            <!-- Second Rotating Ring (Opposite) -->
+            <div
+                class="absolute w-32 h-32 rounded-full border-4 border-transparent border-b-[#FF71BF] border-r-[#FF71BF]/30 animate-[spin_2s_cubic-bezier(0.58,0.185,0.395,0.81)_infinite_reverse]">
+            </div>
+
+            <!-- Center Content -->
+            <div class="relative z-10 flex flex-col items-center">
+                <img src="assets/images/favicon.png" alt="Logo" class="w-10 h-10 object-contain animate-pulse">
+            </div>
+        </div>
+    </div>
+    <!-- Preloader End -->
+
+    <header class="sticky top-0 z-50 transition-all duration-300 bg-[#11112A]">
+        <div class="max-w-[1320px] rounded-bl-[20px] rounded-br-[20px] mx-auto px-4 relative pt-[10px] pb-[10px]">
+            <div class="flex items-center justify-between h-[70px]">
+                <!-- Logo Section -->
+                <div class="flex items-center">
+                    <a href="index.html">
+                        <img src="assets/images/logo.png" alt="educate" class="h-10 w-auto">
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation (xl+ — avoids 1024px row overflow) -->
+                <nav class="hidden xl:flex items-center space-x-[40px] shrink-0">
+
+                    <a href="index.html" class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300 flex items-center gap-1.5 py-8">Demos</a>
+
+                    <a href="header-styles.html" class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300 flex items-center gap-1.5 py-8">Elements</a>
+                    <a href="#"
+                        class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300 flex items-center gap-1.5">Courses
+                    </a>
+
+
+                    <a href="#"
+                        class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300 flex items-center gap-1.5">Shop</a>
+
+                </nav>
+
+                <!-- Action Section -->
+                <div class="flex items-center gap-6">
+                    <!-- Language Switcher -->
+                    <div class="hidden sm:flex items-center gap-2 cursor-pointer group">
+                        <img src="https://flagcdn.com/w20/us.png" alt="English"
+                            class="w-5 h-5 rounded-full object-cover">
+                        <span
+                            class="text-white/90 text-[15px] font-medium font-inter group-hover:text-secondary transition-all">English</span>
+                        <i
+                            class="fa-solid fa-angle-down text-white/40 text-[10px] group-hover:text-secondary transition-all"></i>
+                    </div>
+
+                    <!-- Cart Icon -->
+                    <div id="cart-btn" class="relative cursor-pointer group">
+                        <div
+                            class="w-[46px] h-[46px] rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/90 group-hover:bg-secondary group-hover:border-secondary transition-all duration-300">
+                            <i class="fa-solid fa-cart-shopping text-[17px]"></i>
+                        </div>
+                        <span
+                            class="absolute -top-1 -right-1 w-[20px] h-[20px] bg-[#9382FF] text-white text-[11px] font-bold rounded-full flex items-center justify-center border-2 border-primary">2</span>
+                    </div>
+
+                    <!-- Login link replaced with User Profile Dropdown -->
+                    <div class="relative group/user">
+                        <button id="user-profile-btn"
+                            class="hidden md:flex items-center gap-2 text-secondary text-[16px] font-medium font-inter transition-all duration-300 cursor-pointer">
+                            <i class="fa-regular fa-user"></i>
+                            <span>Admin</span>
+                        </button>
+
+                        
+                    </div>
+
+                    <!-- Join Button -->
+                    <a href="#"
+                        class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-[50px] gradient-color-primary-flow text-white text-[16px] font-semibold font-hanken hover:shadow-[0px_10px_30px_rgba(178,110,247,0.4)] hover:-translate-y-0.5 transition-all duration-300 border-b-2 border-primary/29">
+                        <img src="assets/images/icon/right-icon.svg" alt="Join" class="w-5 h-5">
+                        <span>Join for free</span>
+                    </a>
+
+                    <!-- Mobile Toggle -->
+                    <button id="mobile-menu-btn" class="lg:hidden text-white/90 text-2xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Container -->
+            <div id="mobile-menu" class="hidden lg:hidden pb-6 border-t border-white/5">
+                <div class="flex flex-col space-y-4 pt-4">
+                    <a href="#"
+                        class="text-white/80 hover:text-secondary transition-colors text-[16px] font-inter">Demos</a>
+                    <a href="#"
+                        class="text-white/80 hover:text-secondary transition-colors text-[16px] font-inter">Pages</a>
+                    <a href="#"
+                        class="text-white/80 hover:text-secondary transition-colors text-[16px] font-inter">Elements</a>
+                    <a href="#"
+                        class="text-white/80 hover:text-secondary transition-colors text-[16px] font-inter">More</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="relative bg-[#050520] pt-[100px] pb-[72px] md:pb-[88px] overflow-hidden"
+            aria-labelledby="header-styles-page-title">
+            <div class="relative z-10 max-w-[1320px] mx-auto px-4 sm:px-6 text-center">
+                <nav class="mb-6 md:mb-7 flex justify-center" aria-label="Breadcrumb">
+                    <div
+                        class="inline-flex max-w-full rounded-[50px] p-px bg-gradient-to-r from-secondary via-[#B26EF7] to-[#FF71BF] shadow-[0px_8px_32px_rgba(147,130,255,0.22)]">
+                        <ol
+                            class="inline-flex flex-wrap items-center gap-1 sm:gap-1.5 max-w-full rounded-[49px] bg-[#0F102A]/92 px-3 py-2 sm:px-4 sm:py-2.5 backdrop-blur-[12px]">
+                            <li class="flex items-center shrink-0">
+                                <a href="index.html"
+                                    class="inline-flex items-center gap-1.5 text-[12px] sm:text-[13px] font-medium font-inter text-white/70 hover:text-secondary transition-colors">
+                                    <i class="fa-solid fa-house text-[11px] opacity-80" aria-hidden="true"></i>
+                                    <span>Home</span>
+                                </a>
+                            </li>
+                            <li class="flex items-center text-secondary/55 px-0.5" aria-hidden="true"><i
+                                    class="fa-solid fa-chevron-right text-[9px] sm:text-[10px]"></i></li>
+                            <li class="flex items-center min-w-0">
+                                <span class="text-[12px] sm:text-[13px] font-semibold font-inter text-white"
+                                    aria-current="page">Header styles</span>
+                            </li>
+                        </ol>
+                    </div>
+                </nav>
+                <div class="flex flex-col items-center gap-6 md:gap-8">
+                    <div class="max-w-[720px] mx-auto flex flex-col items-center text-center">
+                        <p
+                            class="inline-flex items-center gap-2 rounded-[50px] border border-white/15 px-[14px] py-[6px] text-[11px] font-bold font-hanken uppercase tracking-[0.14em] text-secondary mb-4">
+                            <i class="fa-solid fa-compass-drafting text-[10px] opacity-90" aria-hidden="true"></i>
+                            UI reference
+                        </p>
+                        <h1 id="header-styles-page-title"
+                            class="text-[30px] sm:text-[40px] md:text-[48px] font-bold font-hanken leading-[1.12] bg-gradient-to-r from-white via-[#E8EAFF] to-white/75 bg-clip-text text-transparent max-w-[920px]">
+                            Header layout library</h1>
+                        <p
+                            class="mt-4 max-w-[640px] text-[15px] md:text-[16px] font-inter text-[#D6DAF0]/90 leading-relaxed">
+                            Every navigation shell ships as production-ready markup—preview each variant below without
+                            altering the header blocks themselves.</p>
+                        <div class="mt-6 h-px w-full max-w-[120px] mx-auto rounded-full bg-gradient-to-r from-secondary/80 via-[#B26EF7] to-[#FF71BF]/80"
+                            aria-hidden="true"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="relative bg-[#050520] py-12 md:py-16 lg:py-20 border-t border-white/[0.05]"
+            aria-labelledby="header-style-01-title">
+            <div class="max-w-[1320px] mx-auto px-4 sm:px-6">
+                <div class="mb-8 md:mb-10 max-w-[800px] mx-auto flex flex-col items-center text-center">
+                    <p
+                        class="inline-flex items-center gap-2 rounded-[50px] border border-white/15 px-[14px] py-[6px] text-[11px] font-bold font-hanken uppercase tracking-[0.14em] text-secondary mb-4">
+                        <i class="fa-solid fa-grip-lines text-[10px]" aria-hidden="true"></i>
+                        Style 01
+                    </p>
+                    <h2 id="header-style-01-title"
+                        class="text-[24px] sm:text-[32px] md:text-[38px] font-bold font-hanken leading-tight bg-gradient-to-r from-white via-[#E8EAFF] to-white/75 bg-clip-text text-transparent">
+                        Contained rounded bar</h2>
+                    <p class="mt-3 text-[14px] md:text-[15px] font-inter text-[#D6DAF0]/90 max-w-[600px]">Transparent
+                        shell with a centered max-width navigation block and overlap spacing for hero sections.</p>
+                    <div class="mt-5 h-px w-full max-w-[100px] rounded-full bg-gradient-to-r from-secondary/80 via-[#B26EF7] to-[#FF71BF]/80"
+                        aria-hidden="true"></div>
+                </div>
+                <div
+                    class="header-style-01">
+                    <header
+                        class="bg-transparent sticky top-0 z-10 mb-[-110px] w-full min-w-0 transition-all duration-300">
+                        <div
+                            class="max-w-[1320px] bg-[#11112A] rounded-bl-[20px] rounded-br-[20px] mx-auto px-3 sm:px-4 relative pt-[10px] pb-[10px] min-w-0">
+                            <div class="flex items-center justify-between gap-2 min-w-0 h-[70px]">
+                                <!-- Logo Section -->
+                                <div class="flex items-center min-w-0 shrink">
+                                    <a href="index.html" class="block min-w-0">
+                                        <img src="assets/images/logo.png" alt="educate"
+                                            class="h-9 sm:h-10 w-auto max-h-10 object-contain object-left">
+                                    </a>
+                                </div>
+
+                                <!-- Desktop Navigation (xl+ — avoids 1024px row overflow) -->
+                                <nav class="hidden xl:flex items-center space-x-[40px] shrink-0">
+
+                                    <a href="index.html" class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300 flex items-center gap-1.5 py-8">Demos</a>
+
+                                    <a href="header-styles.html" class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300 flex items-center gap-1.5 py-8">Elements</a>
+                                    <a href="course.html" class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300 flex items-center gap-1.5 py-8 cursor-pointer relative z-[100]">Courses</a>
+                                    <a href="blog-grid.html" class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300 flex items-center gap-1.5 py-8">Blog</a>
+                                </nav>
+
+                                <!-- Action Section -->
+                                <div class="flex items-center shrink-0 gap-2 sm:gap-3 xl:gap-6 min-w-0">
+                                    <!-- Language Switcher (desktop xl+) -->
+                                    <div class="relative hidden xl:block shrink-0">
+                                        <button id="language-switcher-btn" type="button" aria-expanded="false"
+                                           
+                                            aria-label="Language, English"
+                                            class="inline-flex items-center gap-2 rounded-lg px-2 py-2 text-white/90 hover:bg-white/5 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-[#11112A]">
+                                            <img id="language-switcher-flag" src="https://flagcdn.com/w20/us.png"
+                                                alt="English" class="w-5 h-5 rounded-full object-cover" width="20"
+                                                height="20">
+                                            <span id="language-switcher-label"
+                                                class="text-[15px] font-medium font-inter">English</span>
+                                            <i class="fa-solid fa-angle-down text-white/40 text-[10px] transition-colors"
+                                                aria-hidden="true"></i>
+                                        </button>
+                                        
+                                    </div>
+
+                                    <!-- Cart Icon -->
+                                    <div id="cart-btn" class="relative cursor-pointer group">
+                                        <div
+                                            class="w-[46px] h-[46px] rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/90 group-hover:bg-secondary group-hover:border-secondary transition-all duration-300">
+                                            <i class="fa-solid fa-cart-shopping text-[17px]"></i>
+                                        </div>
+                                        <span
+                                            class="absolute -top-1 -right-1 w-[20px] h-[20px] bg-[#9382FF] text-white text-[11px] font-bold rounded-full flex items-center justify-center border-2 border-primary">2</span>
+                                    </div>
+
+                                    <!-- Login link replaced with User Profile Dropdown -->
+                                    <div class="relative group/user">
+                                        <button id="user-profile-btn" type="button" aria-expanded="false"
+                                           
+                                            aria-label="Account, Admin"
+                                            class="hidden md:inline-flex items-center gap-0 xl:gap-2 rounded-lg px-1 py-1 -mx-1 text-secondary text-[15px] xl:text-[16px] font-medium font-inter transition-all duration-300 cursor-pointer hover:bg-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-[#11112A]">
+                                            <i class="fa-regular fa-user text-[17px] xl:text-[16px]"
+                                                aria-hidden="true"></i>
+                                            <span class="inline">Admin</span>
+                                        </button>
+
+                                        
+                                    </div>
+
+                                    <!-- Join Button -->
+                                    <a href="#"
+                                        class="inline-flex items-center gap-1.5 xl:gap-2.5 px-3 py-2.5 sm:px-5 sm:py-3 xl:px-7 xl:py-3.5 rounded-[50px] gradient-color-primary-flow text-white text-[13px] sm:text-[14px] xl:text-[16px] font-semibold font-hanken hover:shadow-[0px_10px_30px_rgba(178,110,247,0.4)] hover:-translate-y-0.5 transition-all duration-300 border-b-2 border-primary/29 whitespace-nowrap shrink-0">
+                                        <img src="assets/images/icon/right-icon.svg" alt=""
+                                            class="w-4 h-4 xl:w-5 xl:h-5 shrink-0" width="20" height="20">
+                                        <span>Join for free</span>
+                                    </a>
+
+                                    <!-- Mobile Toggle (< xl) -->
+                                    <button id="mobile-menu-btn" type="button" aria-expanded="false"
+                                        aria-controls="mobile-menu"
+                                        class="xl:hidden shrink-0 text-white/90 text-xl sm:text-2xl p-1 -mr-1 sm:mr-0">
+                                        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Mobile Menu Container (< xl) -->
+                            <div id="mobile-menu" class="hidden xl:hidden pb-6 border-t border-white/5">
+                                <div class="flex flex-col pt-4">
+                                    <p
+                                        class="text-[10px] font-bold font-hanken uppercase tracking-[0.12em] text-white/35 mb-2">
+                                        Language</p>
+                                    <button type="button" id="mobile-language-switcher-display"
+                                        aria-label="Language, English"
+                                        class="flex w-full items-center justify-between gap-2 rounded-xl border border-white/[0.08] bg-white/[0.03] px-3 py-3 text-left cursor-pointer group hover:border-secondary/30 transition-colors"><span class="flex items-center gap-2"><img id="mobile-language-switcher-flag" src="https://flagcdn.com/w20/us.png" alt="" class="w-5 h-5 rounded-full object-cover shrink-0" width="20" height="20"><span id="mobile-language-switcher-label" class="text-white/90 text-[15px] font-medium font-inter truncate">English</span></span></button>
+                                    <p
+                                        class="text-[10px] font-bold font-hanken uppercase tracking-[0.12em] text-white/35 mt-6 mb-2">
+                                        Menu</p>
+                                    <nav class="flex flex-col" aria-label="Mobile">
+                                        <a href="index.html"
+                                            class="min-h-[44px] flex items-center text-white/80 hover:text-secondary transition-colors text-[16px] font-inter border-b border-white/[0.06] py-2">Demos</a>
+                                        <a href="header-styles.html"
+                                            class="min-h-[44px] flex items-center text-white/80 hover:text-secondary transition-colors text-[16px] font-inter border-b border-white/[0.06] py-2">Elements</a>
+                                        <a href="course.html"
+                                            class="min-h-[44px] flex items-center text-white/80 hover:text-secondary transition-colors text-[16px] font-inter border-b border-white/[0.06] py-2">Courses</a>
+                                        <a href="blog-grid.html"
+                                            class="min-h-[44px] flex items-center text-white/80 hover:text-secondary transition-colors text-[16px] font-inter py-2">Blog</a>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                </div>
+            </div>
+        </section>
+        <section class="relative bg-[#050520] py-12 md:py-16 lg:py-20 border-t border-white/[0.05]"
+            aria-labelledby="header-style-02-title">
+            <div class="max-w-[1320px] mx-auto px-4 sm:px-6">
+                <div class="mb-8 md:mb-10 max-w-[800px] mx-auto flex flex-col items-center text-center">
+                    <p
+                        class="inline-flex items-center gap-2 rounded-[50px] border border-white/15 px-[14px] py-[6px] text-[11px] font-bold font-hanken uppercase tracking-[0.14em] text-secondary mb-4">
+                        <i class="fa-solid fa-bolt text-[10px]" aria-hidden="true"></i>
+                        Style 02
+                    </p>
+                    <h2 id="header-style-02-title"
+                        class="text-[24px] sm:text-[32px] md:text-[38px] font-bold font-hanken leading-tight bg-gradient-to-r from-white via-[#E8EAFF] to-white/75 bg-clip-text text-transparent">
+                        Gradient strip + shadow</h2>
+                    <p class="mt-3 text-[14px] md:text-[15px] font-inter text-[#D6DAF0]/90 max-w-[600px]">Promotional
+                        top rail with contact shortcuts, then the primary navigation row with elevated shadow.</p>
+                    <div class="mt-5 h-px w-full max-w-[100px] rounded-full bg-gradient-to-r from-secondary/80 via-[#B26EF7] to-[#FF71BF]/80"
+                        aria-hidden="true"></div>
+                </div>
+                <div
+                    class="rounded-[20px] border border-white/[0.09] p-2 sm:p-3 bg-[#0F102A]/60 shadow-[0px_28px_90px_rgba(0,0,0,0.5)] ring-1 ring-white/[0.04]">
+                    <header class="sticky top-0 z-10 shadow-lg">
+                        <div class="gradient-color-primary-flow h-[40px]">
+                            <div
+                                class="max-w-[1320px] mx-auto px-4 h-full flex items-center justify-between gap-4 text-white text-[14px]">
+                                <div class="md:hidden flex items-center gap-2">
+                                    <i class="fa-solid fa-phone text-[14px]"></i>
+                                    <a href="tel:+1256214203215" class="hover:text-white/90 transition-colors">256 214
+                                        203 215</a>
+                                </div>
+                                <div class="hidden md:flex items-center gap-5">
+                                    <a href="tel:+1256214203215"
+                                        class="flex items-center gap-2 hover:text-white/90 transition-colors">
+                                        <i class="fa-solid fa-phone text-[14px]"></i>
+                                        <span>256 214 203 215</span>
+                                    </a>
+                                    <span class="h-4 w-px bg-white/20"></span>
+                                    <div class="flex items-center gap-2">
+                                        <i class="fa-solid fa-location-dot text-[14px]"></i>
+                                        <span>258 Helena Street, New York</span>
+                                    </div>
+                                </div>
+                                <nav class="hidden lg:flex items-center gap-6">
+                                    <a href="#" class="hover:text-white/90 transition-colors">About Us</a>
+                                    <a href="#" class="hover:text-white/90 transition-colors">Course</a>
+                                    <a href="#" class="hover:text-white/90 transition-colors">Instructor</a>
+                                    <a href="#" class="hover:text-white/90 transition-colors">Events</a>
+                                    <a href="#" class="hover:text-white/90 transition-colors">Become A Teacher</a>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="bg-[#11112A]">
+                            <div class="max-w-[1320px] mx-auto px-3 sm:px-4 relative pt-[10px] pb-[10px] min-w-0">
+                                <div class="flex items-center justify-between gap-2 min-w-0 h-[70px]">
+                                    <!-- Logo Section -->
+                                    <div class="flex items-center min-w-0 shrink">
+                                        <a href="index.html" class="block min-w-0">
+                                            <img src="assets/images/logo.png" alt="educate"
+                                                class="h-9 sm:h-10 w-auto max-h-10 object-contain object-left">
+                                        </a>
+                                    </div>
+
+                                    <!-- Desktop Navigation (xl+ — avoids 1024px row overflow) -->
+                                    <nav class="hidden xl:flex items-center space-x-[40px] shrink-0">
+
+                                        <a href="index.html" class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300 flex items-center gap-1.5 py-8">Demos</a>
+
+                                        <a href="header-styles.html" class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300 flex items-center gap-1.5 py-8">Elements</a>
+                                        <a href="#"
+                                            class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300 flex items-center gap-1.5">Courses
+                                        </a>
+
+
+                                        <a href="#"
+                                            class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300 flex items-center gap-1.5">Shop</a>
+
+                                    </nav>
+
+                                    <!-- Action Section -->
+                                    <div class="flex items-center shrink-0 gap-2 sm:gap-3 xl:gap-6 min-w-0">
+                                        <!-- Language Switcher (desktop xl+) -->
+                                        <div class="relative hidden xl:block shrink-0">
+                                            <button id="language-switcher-btn" type="button" aria-expanded="false"
+                                               
+                                                aria-label="Language, English"
+                                                class="inline-flex items-center gap-2 rounded-lg px-2 py-2 text-white/90 hover:bg-white/5 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-[#11112A]">
+                                                <img id="language-switcher-flag" src="https://flagcdn.com/w20/us.png"
+                                                    alt="English" class="w-5 h-5 rounded-full object-cover" width="20"
+                                                    height="20">
+                                                <span id="language-switcher-label"
+                                                    class="text-[15px] font-medium font-inter">English</span>
+                                                <i class="fa-solid fa-angle-down text-white/40 text-[10px] transition-colors"
+                                                    aria-hidden="true"></i>
+                                            </button>
+                                            
+                                        </div>
+
+                                        <!-- Cart Icon -->
+                                        <div id="cart-btn" class="relative cursor-pointer group">
+                                            <div
+                                                class="w-[46px] h-[46px] rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/90 group-hover:bg-secondary group-hover:border-secondary transition-all duration-300">
+                                                <i class="fa-solid fa-cart-shopping text-[17px]"></i>
+                                            </div>
+                                            <span
+                                                class="absolute -top-1 -right-1 w-[20px] h-[20px] bg-[#9382FF] text-white text-[11px] font-bold rounded-full flex items-center justify-center border-2 border-primary">2</span>
+                                        </div>
+
+                                        <!-- Login link replaced with User Profile Dropdown -->
+                                        <div class="relative group/user">
+                                            <button id="user-profile-btn" type="button" aria-expanded="false"
+                                               
+                                                aria-label="Account, Admin"
+                                                class="hidden md:inline-flex items-center gap-0 xl:gap-2 rounded-lg px-1 py-1 -mx-1 text-secondary text-[15px] xl:text-[16px] font-medium font-inter transition-all duration-300 cursor-pointer hover:bg-white/5 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2 focus-visible:ring-offset-[#11112A]">
+                                                <i class="fa-regular fa-user text-[17px] xl:text-[16px]"
+                                                    aria-hidden="true"></i>
+                                                <span class="inline">Admin</span>
+                                            </button>
+
+                                            
+                                        </div>
+
+                                        <!-- Join Button -->
+                                        <a href="#"
+                                            class="inline-flex items-center gap-1.5 xl:gap-2.5 px-3 py-2.5 sm:px-5 sm:py-3 xl:px-7 xl:py-3.5 rounded-[50px] gradient-color-primary-flow text-white text-[13px] sm:text-[14px] xl:text-[16px] font-semibold font-hanken hover:shadow-[0px_10px_30px_rgba(178,110,247,0.4)] hover:-translate-y-0.5 transition-all duration-300 border-b-2 border-primary/29 whitespace-nowrap shrink-0">
+                                            <img src="assets/images/icon/right-icon.svg" alt=""
+                                                class="w-4 h-4 xl:w-5 xl:h-5 shrink-0" width="20" height="20">
+                                            <span>Join for free</span>
+                                        </a>
+
+                                        <!-- Mobile Toggle (< xl) -->
+                                        <button id="mobile-menu-btn" type="button" aria-expanded="false"
+                                            aria-controls="mobile-menu"
+                                            class="xl:hidden shrink-0 text-white/90 text-xl sm:text-2xl p-1 -mr-1 sm:mr-0">
+                                            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Mobile Menu Container (< xl) -->
+                                <div id="mobile-menu" class="hidden xl:hidden pb-6 border-t border-white/5">
+                                    <div class="flex flex-col pt-4">
+                                        <p
+                                            class="text-[10px] font-bold font-hanken uppercase tracking-[0.12em] text-white/35 mb-2">
+                                            Language</p>
+                                        <button type="button" id="mobile-language-switcher-display"
+                                            aria-label="Language, English"
+                                            class="flex w-full items-center justify-between gap-2 rounded-xl border border-white/[0.08] bg-white/[0.03] px-3 py-3 text-left cursor-pointer group hover:border-secondary/30 transition-colors"><span class="flex items-center gap-2"><img id="mobile-language-switcher-flag" src="https://flagcdn.com/w20/us.png" alt="" class="w-5 h-5 rounded-full object-cover shrink-0" width="20" height="20"><span id="mobile-language-switcher-label" class="text-white/90 text-[15px] font-medium font-inter truncate">English</span></span></button>
+                                        <p
+                                            class="text-[10px] font-bold font-hanken uppercase tracking-[0.12em] text-white/35 mt-6 mb-2">
+                                            Menu</p>
+                                        <nav class="flex flex-col" aria-label="Mobile">
+                                            <a href="#"
+                                                class="min-h-[44px] flex items-center text-white/80 hover:text-secondary transition-colors text-[16px] font-inter border-b border-white/[0.06] py-2">Demos</a>
+                                            <a href="#"
+                                                class="min-h-[44px] flex items-center text-white/80 hover:text-secondary transition-colors text-[16px] font-inter border-b border-white/[0.06] py-2">Elements</a>
+                                            <a href="#"
+                                                class="min-h-[44px] flex items-center text-white/80 hover:text-secondary transition-colors text-[16px] font-inter border-b border-white/[0.06] py-2">Courses</a>
+                                            <a href="#"
+                                                class="min-h-[44px] flex items-center text-white/80 hover:text-secondary transition-colors text-[16px] font-inter py-2">Shop</a>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+              
+                </div>
+            </div>
+        </section>
+        <section class="relative bg-[#050520] py-12 md:py-16 lg:py-20 border-t border-white/[0.05]"
+            aria-labelledby="header-style-03-title">
+            <div class="max-w-[1320px] mx-auto px-4 sm:px-6">
+                <div class="mb-8 md:mb-10 max-w-[800px] mx-auto flex flex-col items-center text-center">
+                    <p
+                        class="inline-flex items-center gap-2 rounded-[50px] border border-white/15 px-[14px] py-[6px] text-[11px] font-bold font-hanken uppercase tracking-[0.14em] text-secondary mb-4">
+                        <i class="fa-solid fa-table-columns text-[10px]" aria-hidden="true"></i>
+                        Style 03
+                    </p>
+                    <h2 id="header-style-03-title"
+                        class="text-[24px] sm:text-[32px] md:text-[38px] font-bold font-hanken leading-tight bg-gradient-to-r from-white via-[#E8EAFF] to-white/75 bg-clip-text text-transparent">
+                        Classic sticky bar</h2>
+                    <p class="mt-3 text-[14px] md:text-[15px] font-inter text-[#D6DAF0]/90 max-w-[600px]">Single
+                        full-width band with rounded lower corners, mega menus, and marketplace-ready utilities.</p>
+                    <div class="mt-5 h-px w-full max-w-[100px] rounded-full bg-gradient-to-r from-secondary/80 via-[#B26EF7] to-[#FF71BF]/80"
+                        aria-hidden="true"></div>
+                </div>
+                <div
+                    class="rounded-[20px] border border-white/[0.09] p-2 sm:p-3 bg-[#0F102A]/60 shadow-[0px_28px_90px_rgba(0,0,0,0.5)] ring-1 ring-white/[0.04]">
+                    <header class="sticky top-0 z-10 transition-all duration-300 bg-[#11112A]">
+                        <div
+                            class="max-w-[1320px] rounded-bl-[20px] rounded-br-[20px] mx-auto px-4 relative pt-[10px] pb-[10px]">
+                            <div class="flex items-center justify-between h-[70px]">
+                                <!-- Logo Section -->
+                                <div class="flex items-center">
+                                    <a href="index.html">
+                                        <img src="assets/images/logo.png" alt="educate" class="h-10 w-auto">
+                                    </a>
+                                </div>
+
+                                <!-- Desktop Navigation (xl+ — avoids 1024px row overflow) -->
+                                <nav class="hidden xl:flex items-center space-x-[40px] shrink-0">
+
+                                    <a href="index.html" class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300 flex items-center gap-1.5 py-8">Demos</a>
+
+                                    <a href="header-styles.html" class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300 flex items-center gap-1.5 py-8">Elements</a>
+                                    <a href="#"
+                                        class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300 flex items-center gap-1.5">Courses
+                                    </a>
+
+
+                                    <a href="#"
+                                        class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300 flex items-center gap-1.5">Shop</a>
+
+                                </nav>
+
+                                <!-- Action Section -->
+                                <div class="flex items-center gap-6">
+                                    <!-- Language Switcher -->
+                                    <div class="hidden sm:flex items-center gap-2 cursor-pointer group">
+                                        <img src="https://flagcdn.com/w20/us.png" alt="English"
+                                            class="w-5 h-5 rounded-full object-cover">
+                                        <span
+                                            class="text-white/90 text-[15px] font-medium font-inter group-hover:text-secondary transition-all">English</span>
+                                        <i
+                                            class="fa-solid fa-angle-down text-white/40 text-[10px] group-hover:text-secondary transition-all"></i>
+                                    </div>
+
+                                    <!-- Cart Icon -->
+                                    <div id="cart-btn" class="relative cursor-pointer group">
+                                        <div
+                                            class="w-[46px] h-[46px] rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/90 group-hover:bg-secondary group-hover:border-secondary transition-all duration-300">
+                                            <i class="fa-solid fa-cart-shopping text-[17px]"></i>
+                                        </div>
+                                        <span
+                                            class="absolute -top-1 -right-1 w-[20px] h-[20px] bg-[#9382FF] text-white text-[11px] font-bold rounded-full flex items-center justify-center border-2 border-primary">2</span>
+                                    </div>
+
+                                    <!-- Login link replaced with User Profile Dropdown -->
+                                    <div class="relative group/user">
+                                        <button id="user-profile-btn"
+                                            class="hidden md:flex items-center gap-2 text-secondary text-[16px] font-medium font-inter transition-all duration-300 cursor-pointer">
+                                            <i class="fa-regular fa-user"></i>
+                                            <span>Admin</span>
+                                        </button>
+
+                                        
+                                    </div>
+
+                                    <!-- Join Button -->
+                                    <a href="#"
+                                        class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-[50px] gradient-color-primary-flow text-white text-[16px] font-semibold font-hanken hover:shadow-[0px_10px_30px_rgba(178,110,247,0.4)] hover:-translate-y-0.5 transition-all duration-300 border-b-2 border-primary/29">
+                                        <img src="assets/images/icon/right-icon.svg" alt="Join" class="w-5 h-5">
+                                        <span>Join for free</span>
+                                    </a>
+
+                                    <!-- Mobile Toggle -->
+                                    <button id="mobile-menu-btn" class="lg:hidden text-white/90 text-2xl">
+                                        <i class="fa-solid fa-bars"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Mobile Menu Container -->
+                            <div id="mobile-menu" class="hidden lg:hidden pb-6 border-t border-white/5">
+                                <div class="flex flex-col space-y-4 pt-4">
+                                    <a href="#"
+                                        class="text-white/80 hover:text-secondary transition-colors text-[16px] font-inter">Demos</a>
+                                    <a href="#"
+                                        class="text-white/80 hover:text-secondary transition-colors text-[16px] font-inter">Pages</a>
+                                    <a href="#"
+                                        class="text-white/80 hover:text-secondary transition-colors text-[16px] font-inter">Elements</a>
+                                    <a href="#"
+                                        class="text-white/80 hover:text-secondary transition-colors text-[16px] font-inter">More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                </div>
+            </div>
+        </section>
+        <section class="relative bg-[#050520] py-12 md:py-16 lg:py-20 border-t border-white/[0.05]"
+            aria-labelledby="header-style-04-title">
+            <div class="max-w-[1320px] mx-auto px-4 sm:px-6">
+                <div class="mb-8 md:mb-10 max-w-[800px] mx-auto flex flex-col items-center text-center">
+                    <p
+                        class="inline-flex items-center gap-2 rounded-[50px] border border-white/15 px-[14px] py-[6px] text-[11px] font-bold font-hanken uppercase tracking-[0.14em] text-secondary mb-4">
+                        <i class="fa-solid fa-sliders text-[10px]" aria-hidden="true"></i>
+                        Style 04
+                    </p>
+                    <h2 id="header-style-04-title"
+                        class="text-[24px] sm:text-[32px] md:text-[38px] font-bold font-hanken leading-tight bg-gradient-to-r from-white via-[#E8EAFF] to-white/75 bg-clip-text text-transparent">
+                        Collapsible utility rail</h2>
+                    <p class="mt-3 text-[14px] md:text-[15px] font-inter text-[#D6DAF0]/90 max-w-[600px]">Social, phone,
+                        and email strip that can hide on scroll—ideal for marketing-heavy education sites.</p>
+                    <div class="mt-5 h-px w-full max-w-[100px] rounded-full bg-gradient-to-r from-secondary/80 via-[#B26EF7] to-[#FF71BF]/80"
+                        aria-hidden="true"></div>
+                </div>
+                <div
+                    class="rounded-[20px] border border-white/[0.09] p-2 sm:p-3 bg-[#0F102A]/60 shadow-[0px_28px_90px_rgba(0,0,0,0.5)] ring-1 ring-white/[0.04]">
+                    <header class="sticky top-0 z-10 transition-all duration-500">
+
+                        <!-- Top Bar -->
+                        <div id="header-top-bar"
+                            class="border-b border-white/[0.06] transition-all duration-300 overflow-hidden">
+                            <div class="max-w-[1320px] mx-auto px-4">
+                                <div class="flex items-center justify-between h-[42px]">
+
+                                    <!-- Left: Social + Contact -->
+                                    <div class="flex items-center gap-5 text-[13px] font-inter text-[#D6DAF0]">
+                                        <div class="hidden sm:flex items-center gap-2">
+                                            <span class="text-[#D6DAF0] text-[12px]">Follow Us:</span>
+                                            <a href="#" class="hover:text-secondary transition-colors"><i
+                                                    class="fa-brands fa-facebook-f text-[12px]"></i></a>
+                                            <a href="#" class="hover:text-secondary transition-colors"><i
+                                                    class="fa-brands fa-instagram text-[12px]"></i></a>
+                                            <a href="#" class="hover:text-secondary transition-colors"><i
+                                                    class="fa-brands fa-whatsapp text-[12px]"></i></a>
+                                            <a href="#" class="hover:text-secondary transition-colors"><i
+                                                    class="fa-brands fa-youtube text-[12px]"></i></a>
+                                        </div>
+                                        <span class="hidden sm:block w-px h-3 bg-white/[0.12]"></span>
+                                        <a href="tel:+886516315212"
+                                            class="hidden md:flex items-center gap-1.5 hover:text-secondary transition-colors">
+                                            <i class="fa-solid fa-phone-volume text-[11px] text-secondary/70"></i>
+                                            <span>(+88) 651-631-5212</span>
+                                        </a>
+                                        <span class="hidden md:block w-px h-3 bg-white/[0.12]"></span>
+                                        <a href="mailto:educate.info@gmail.com"
+                                            class="hidden lg:flex items-center gap-1.5 hover:text-secondary transition-colors">
+                                            <i class="fa-regular fa-envelope text-[11px] text-secondary/70"></i>
+                                            <span>educate.info@gmail.com</span>
+                                        </a>
+                                    </div>
+
+                                    <!-- Right: Login + Language -->
+                                    <div class="flex items-center gap-4 text-[13px] font-inter text-[#D6DAF0]">
+                                        <a href="#" class="hover:text-secondary transition-colors">Login <span
+                                                class="text-white/30">/</span> Register</a>
+                                        <span class="w-px h-3 bg-white/[0.12]"></span>
+                                        <div
+                                            class="group relative flex items-center gap-1.5 cursor-pointer hover:text-secondary transition-colors">
+                                            <img src="https://flagcdn.com/w20/us.png" alt="English"
+                                                class="w-4 h-3 object-cover rounded-[2px]">
+                                            <span>English</span>
+                                            <i
+                                                class="fa-solid fa-angle-down text-[10px] group-hover:rotate-180 transition-transform duration-300"></i>
+                                            <div
+                                                class="absolute right-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible translate-y-2 group-hover:translate-y-0 transition-all duration-300 z-[100] w-[140px]">
+                                                <div
+                                                    class="bg-[#0D0D27] rounded-[12px] border border-white/[0.08] shadow-[0px_20px_50px_rgba(0,0,0,0.5)] py-1.5 overflow-hidden">
+                                                    <a href="#"
+                                                        class="flex items-center gap-2.5 px-4 py-2 text-[#D6DAF0]  hover:text-white hover:bg-white/[0.05] transition-all text-[13px]">
+                                                        <img src="https://flagcdn.com/w20/us.png" alt="English"
+                                                            class="w-4 h-3 object-cover rounded-[2px]"> English
+                                                    </a>
+                                                    <a href="#"
+                                                        class="flex items-center gap-2.5 px-4 py-2 text-[#D6DAF0]  hover:text-white hover:bg-white/[0.05] transition-all text-[13px]">
+                                                        <img src="https://flagcdn.com/w20/de.png" alt="German"
+                                                            class="w-4 h-3 object-cover rounded-[2px]"> German
+                                                    </a>
+                                                    <a href="#"
+                                                        class="flex items-center gap-2.5 px-4 py-2 text-[#D6DAF0]  hover:text-white hover:bg-white/[0.05] transition-all text-[13px]">
+                                                        <img src="https://flagcdn.com/w20/fr.png" alt="French"
+                                                            class="w-4 h-3 object-cover rounded-[2px]"> French
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Main Nav -->
+                        <div class="max-w-[1320px] mx-auto px-4 relative">
+                            <div class="flex items-center justify-between h-[72px]">
+
+                                <!-- Logo -->
+                                <a href="index.html" class="flex-shrink-0 mr-6">
+                                    <img src="assets/images/logo.png" alt="educate" class="h-10 w-auto">
+                                </a>
+                                <span class="hidden xl:block w-px h-6 bg-white/[0.12] mr-6 flex-shrink-0"></span>
+
+                                <!-- Desktop Navigation (xl+ — avoids 1024px row overflow) -->
+                                <nav class="hidden lg:flex items-center space-x-[40px] shrink-0">
+
+                                    <a href="index.html" class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300 flex items-center gap-1.5 py-8">Demos</a>
+
+                                    <a href="header-styles.html" class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300 flex items-center gap-1.5 py-8">Elements</a>
+                                    <a href="#"
+                                        class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300 flex items-center gap-1.5">Courses
+                                    </a>
+
+
+                                    <a href="#"
+                                        class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300 flex items-center gap-1.5">Shop</a>
+
+                                </nav>
+                                <!-- Right: Search + Cart + Hamburger -->
+                                <div class="flex items-center gap-2 xl:gap-3 ml-auto xl:ml-6">
+                                    <!-- Search -->
+                                    <div
+                                        class="hidden lg:flex items-center gap-2 bg-[#1A1A35] border border-transparent rounded-[50px] px-4 py-[9px] w-[240px] lg:w-[300px] transition-all duration-300 focus-within:border-white/[0.20]">
+                                        <input type="text" placeholder="What do you want to learn?"
+                                            class="bg-transparent text-[#D6DAF0B2] text-[13px] font-inter placeholder:text-[#D6DAF0]/40 outline-none flex-1 min-w-0">
+                                        <button
+                                            class="text-[#D6DAF0]/40 hover:text-secondary transition-colors flex-shrink-0">
+                                            <i class="fa-solid fa-magnifying-glass text-[14px]"></i>
+                                        </button>
+                                    </div>
+                                    <!-- Cart -->
+                                    <div id="cart-btn" class="relative cursor-pointer group flex-shrink-0">
+                                        <div
+                                            class="w-[38px] h-[38px] md:w-[42px] md:h-[42px] rounded-full bg-white/[0.06] border border-white/10 flex items-center justify-center text-white/80 group-hover:bg-secondary group-hover:border-secondary transition-all duration-300">
+                                            <i class="fa-solid fa-cart-shopping text-[15px]"></i>
+                                        </div>
+                                        <span
+                                            class="absolute -top-1 -right-1 w-[18px] h-[18px] bg-[#9382FF] text-white text-[10px] font-bold rounded-full flex items-center justify-center border-2 border-[#11112A]">2</span>
+                                    </div>
+                                    <!-- Mobile Hamburger -->
+                                    <button id="mobile-sidebar-btn" type="button" aria-label="Toggle menu"
+                                        aria-expanded="false"
+                                        class="w-[38px] h-[38px] rounded-full bg-white/[0.06] border border-white/10 flex items-center justify-center text-[#A9B1E0] hover:text-white hover:bg-secondary hover:border-secondary transition-all duration-300 flex-shrink-0">
+                                        <svg class="w-[18px] h-[15px] shrink-0" viewBox="0 0 20 16" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <rect x="11" y="1" width="9" height="2" rx="1" fill="currentColor" />
+                                            <rect x="2" y="7" width="16" height="2" rx="1" fill="currentColor" />
+                                            <rect x="0" y="13" width="10" height="2" rx="1" fill="currentColor" />
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Mobile Sidebar -->
+                            <div id="mobile-sidebar"
+                                class="fixed top-0 right-0 w-[300px] sm:w-[380px] h-full bg-[#050520] z-[1001] translate-x-full transition-transform duration-500 ease-in-out invisible flex flex-col overflow-hidden">
+                                <!-- Sidebar Header -->
+                                <div class="p-6 flex items-center justify-between border-b border-white/[0.06]">
+                                    <a href="index.html">
+                                        <img src="assets/images/logo.png" alt="Logo" class="h-8 w-auto">
+                                    </a>
+                                    <button id="mobile-sidebar-close"
+                                        class="w-9 h-9 rounded-full bg-white/[0.06] border border-white/10 flex items-center justify-center text-[#A9B1E0] hover:text-white hover:bg-secondary transition-all">
+                                        <i class="fa-solid fa-xmark text-lg"></i>
+                                    </button>
+                                </div>
+
+                                <!-- Sidebar Content -->
+                                <div class="flex-1 overflow-y-auto p-6 custom-scrollbar">
+                                    <!-- Navigation Menu (Visible only <= 1024px) -->
+                                    <div class="lg:hidden mb-10">
+                                        <p
+                                            class="text-[11px] font-bold font-hanken uppercase tracking-[0.12em] text-white/30 mb-5">
+                                            Navigation</p>
+                                        <nav class="flex flex-col gap-1">
+                                            <a href="index.html"
+                                                class="flex items-center gap-3 px-4 py-3 text-white/80 hover:text-secondary hover:bg-white/[0.04] rounded-[10px] transition-all text-[15px] font-medium font-inter">
+                                                <i
+                                                    class="fa-solid fa-house text-secondary/60 text-[13px] w-4 text-center"></i>Home
+                                            </a>
+                                            <a href="#"
+                                                class="flex items-center gap-3 px-4 py-3 text-white/80 hover:text-secondary hover:bg-white/[0.04] rounded-[10px] transition-all text-[15px] font-medium font-inter">
+                                                <i
+                                                    class="fa-solid fa-graduation-cap text-secondary/60 text-[13px] w-4 text-center"></i>Courses
+                                            </a>
+                                            <a href="#"
+                                                class="flex items-center gap-3 px-4 py-3 text-white/80 hover:text-secondary hover:bg-white/[0.04] rounded-[10px] transition-all text-[15px] font-medium font-inter">
+                                                <i
+                                                    class="fa-solid fa-layer-group text-secondary/60 text-[13px] w-4 text-center"></i>Elements
+                                            </a>
+                                            <a href="#"
+                                                class="flex items-center gap-3 px-4 py-3 text-white/80 hover:text-secondary hover:bg-white/[0.04] rounded-[10px] transition-all text-[15px] font-medium font-inter">
+                                                <i
+                                                    class="fa-solid fa-gauge text-secondary/60 text-[13px] w-4 text-center"></i>Dashboard
+                                            </a>
+                                        </nav>
+                                    </div>
+
+                                    <!-- Unique Utility Content (Visible on all sizes) -->
+                                    <div class="space-y-10">
+                                        <!-- Contact Info -->
+                                        <div>
+                                            <p
+                                                class="text-[11px] font-bold font-hanken uppercase tracking-[0.12em] text-white/30 mb-5">
+                                                Contact Info</p>
+                                            <ul class="space-y-5">
+                                                <li class="flex items-center gap-4 group">
+                                                    <div
+                                                        class="w-11 h-11 rounded-full bg-secondary/10 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-all duration-300">
+                                                        <i class="fa-solid fa-phone text-sm"></i>
+                                                    </div>
+                                                    <div>
+                                                        <p class="text-[12px] text-white/40 font-inter mb-0.5">Phone
+                                                            Number</p>
+                                                        <a href="tel:+1234567890"
+                                                            class="text-[15px] text-white font-medium font-inter hover:text-secondary transition-colors">+1
+                                                            (234) 567-890</a>
+                                                    </div>
+                                                </li>
+                                                <li class="flex items-center gap-4 group">
+                                                    <div
+                                                        class="w-11 h-11 rounded-full bg-secondary/10 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-all duration-300">
+                                                        <i class="fa-solid fa-envelope text-sm"></i>
+                                                    </div>
+                                                    <div>
+                                                        <p class="text-[12px] text-white/40 font-inter mb-0.5">Email
+                                                            Address</p>
+                                                        <a href="mailto:hello@educate.com"
+                                                            class="text-[15px] text-white font-medium font-inter hover:text-secondary transition-colors">hello@educate.com</a>
+                                                    </div>
+                                                </li>
+                                                <li class="flex items-center gap-4 group">
+                                                    <div
+                                                        class="w-11 h-11 rounded-full bg-secondary/10 flex items-center justify-center text-secondary group-hover:bg-secondary group-hover:text-white transition-all duration-300">
+                                                        <i class="fa-solid fa-location-dot text-sm"></i>
+                                                    </div>
+                                                    <div>
+                                                        <p class="text-[12px] text-white/40 font-inter mb-0.5">Office
+                                                            Address</p>
+                                                        <p class="text-[15px] text-white font-medium font-inter">25/1,
+                                                            Rainbow Themes,
+                                                            USA</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+                                        <!-- Social Links -->
+                                        <div>
+                                            <p
+                                                class="text-[11px] font-bold font-hanken uppercase tracking-[0.12em] text-white/30 mb-5">
+                                                Follow Us</p>
+                                            <div class="flex items-center gap-3">
+                                                <a href="#"
+                                                    class="w-11 h-11 rounded-full bg-white/[0.04] border border-white/10 flex items-center justify-center text-[#D6DAF0] hover:bg-secondary hover:text-white hover:border-secondary transition-all duration-300">
+                                                    <i class="fa-brands fa-facebook-f"></i>
+                                                </a>
+                                                <a href="#"
+                                                    class="w-11 h-11 rounded-full bg-white/[0.04] border border-white/10 flex items-center justify-center text-[#D6DAF0] hover:bg-secondary hover:text-white hover:border-secondary transition-all duration-300">
+                                                    <i class="fa-brands fa-twitter"></i>
+                                                </a>
+                                                <a href="#"
+                                                    class="w-11 h-11 rounded-full bg-white/[0.04] border border-white/10 flex items-center justify-center text-[#D6DAF0] hover:bg-secondary hover:text-white hover:border-secondary transition-all duration-300">
+                                                    <i class="fa-brands fa-linkedin-in"></i>
+                                                </a>
+                                                <a href="#"
+                                                    class="w-11 h-11 rounded-full bg-white/[0.04] border border-white/10 flex items-center justify-center text-[#D6DAF0] hover:bg-secondary hover:text-white hover:border-secondary transition-all duration-300">
+                                                    <i class="fa-brands fa-instagram"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Sidebar Backdrop -->
+                            <div id="mobile-sidebar-backdrop"
+                                class="fixed inset-0 bg-black/80 z-[1000] opacity-0 invisible transition-all duration-500 cursor-pointer">
+                            </div>
+                        </div>
+                    </header>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- footer section start -->
+    <footer class="bg-primary relative overflow-hidden pb-8">
+        <div class="max-w-[1320px] mx-auto px-4">
+            <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+                <div class="space-y-6">
+                    <div class="flex items-center gap-3">
+                        <img src="assets/images/logo.png" alt="Logo" class="h-8 lg:h-10 w-auto">
+                    </div>
+                    <p class="text-[#D6DAF0]  text-[14px] leading-relaxed">Education is typically divided into various
+                        levels, including primary, secondary</p>
+                    <div class="space-y-3">
+                        <p class="text-[#D6DAF0]  text-[14px] flex items-center gap-2">
+                            <i class="fa-solid fa-phone text-secondary"></i>
+                            Phone: <a href="tel:+923123456789"
+                                class="text-[#D6DAF0]  hover:text-secondary transition-colors">+923123456789</a>
+                        </p>
+                        <p class="text-[#D6DAF0]  text-[14px] flex items-center gap-2">
+                            <i class="fa-solid fa-envelope text-secondary"></i>
+                            E-mail: <a href="mailto:educa.info@gmail.com"
+                                class="text-[#D6DAF0]  hover:text-secondary transition-colors">educa.info@gmail.com</a>
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 pt-2">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 border border-border-white flex items-center justify-center text-secondary hover:bg-secondary hover:text-white hover:border-secondary transition-all">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 border border-border-white flex items-center justify-center text-secondary hover:bg-secondary hover:text-white hover:border-secondary transition-all">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 border border-border-white flex items-center justify-center text-secondary hover:bg-secondary hover:text-white hover:border-secondary transition-all">
+                            <i class="fa-brands fa-dribbble"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/5 border border-border-white flex items-center justify-center text-secondary hover:bg-secondary hover:text-white hover:border-secondary transition-all">
+                            <i class="fa-brands fa-behance"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <nav class="space-y-6">
+                    <h5 class="text-[#D6DAF0]  text-[20px] font-bold font-hanken">Company</h5>
+                    <ul class="space-y-3">
+                        <li><a href="#"
+                                class="text-[#D6DAF0]  hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>About
+                                    Us</span> <i class="fa-solid fa-arrow-right text-[12px] footer-arrow"></i></a></li>
+                        <li><a href="#"
+                                class="text-[#D6DAF0]  hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>Become
+                                    Teacher</span> <i class="fa-solid fa-arrow-right text-[12px] footer-arrow"></i></a>
+                        </li>
+                        <li><a href="#"
+                                class="text-[#D6DAF0]  hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>News
+                                    & Blog</span> <i class="fa-solid fa-arrow-right text-[12px] footer-arrow"></i></a>
+                        </li>
+                        <li><a href="#"
+                                class="text-[#D6DAF0]  hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>Instructor</span>
+                                <i class="fa-solid fa-arrow-right text-[12px] footer-arrow"></i></a></li>
+                        <li><a href="#"
+                                class="text-[#D6DAF0]  hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>Our
+                                    Events</span> <i class="fa-solid fa-arrow-right text-[12px] footer-arrow"></i></a>
+                        </li>
+                        <li><a href="#"
+                                class="text-[#D6DAF0]  hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>Contact
+                                    Us</span> <i class="fa-solid fa-arrow-right text-[12px] footer-arrow"></i></a></li>
+                    </ul>
+                </nav>
+
+                <nav class="space-y-6">
+                    <h5 class="text-[#D6DAF0]  text-[20px] font-bold font-hanken">Resources</h5>
+                    <ul class="space-y-3">
+                        <li><a href="#"
+                                class="text-[#D6DAF0]  hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>Educa
+                                    Course</span> <i class="fa-solid fa-arrow-right text-[12px] footer-arrow"></i></a>
+                        </li>
+                        <li><a href="#"
+                                class="text-[#D6DAF0]  hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>Marketplace</span>
+                                <i class="fa-solid fa-arrow-right text-[12px] footer-arrow"></i></a></li>
+                        <li><a href="#"
+                                class="text-[#D6DAF0]  hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>University</span>
+                                <i class="fa-solid fa-arrow-right text-[12px] footer-arrow"></i></a></li>
+                        <li><a href="#"
+                                class="text-[#D6DAF0]  hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>Course
+                                    Overview</span> <i class="fa-solid fa-arrow-right text-[12px] footer-arrow"></i></a>
+                        </li>
+                        <li><a href="#"
+                                class="text-[#D6DAF0]  hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>FAQ</span>
+                                <i class="fa-solid fa-arrow-right text-[12px] footer-arrow"></i></a></li>
+                        <li><a href="#"
+                                class="text-[#D6DAF0]  hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>Refunds
+                                    Policy</span> <i class="fa-solid fa-arrow-right text-[12px] footer-arrow"></i></a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="space-y-6">
+                    <h5 class="text-[#D6DAF0]  text-[20px] font-bold font-hanken">Recent Posts</h5>
+                    <div class="space-y-4">
+                        <a href="#" class="flex gap-4">
+                            <img src="assets/images/blog/bg.webp" alt="Post thumbnail"
+                                class="w-20 h-20 rounded-[10px] object-cover shrink-0 hover:scale-105 hover:opacity-50 transition-all">
+                            <div class="flex-1">
+                                <h6
+                                    class="text-white hover:text-secondary transition-colors text-[14px] font-bold font-hanken mb-2">
+                                    Online education is empowering</h6>
+                                <p class="text-[#D6DAF0]  text-[12px] flex items-center gap-2">
+                                    <i class="fa-regular fa-clock"></i>
+                                    15 August, 2024
+                                </p>
+                            </div>
+                        </a>
+                        <a href="#" class="flex gap-4">
+                            <img src="assets/images/blog/bg-1.webp" alt="Post thumbnail"
+                                class="w-20 h-20 rounded-[10px] object-cover shrink-0 hover:scale-105 hover:opacity-50 transition-all">
+                            <div class="flex-1">
+                                <h6
+                                    class="text-white hover:text-secondary transition-colors text-[14px] font-bold font-hanken mb-2">
+                                    Online education is empowering</h6>
+                                <p class="text-[#D6DAF0]  text-[12px] flex items-center gap-2">
+                                    <i class="fa-regular fa-clock"></i>
+                                    15 August, 2024
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="border-t border-border-white pt-8">
+            <div class="max-w-[1320px] mx-auto px-4">
+                <p class="text-[#D6DAF0]  text-center text-[14px]">©2026 <a
+                        href="https://themeforest.net/user/rainbow-themes" target="_blank"
+                        class=" font-bold hover:text-secondary transition-colors">Rainbow-Themes</a> All rights
+                    reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div id="cart-sidebar" role="dialog" aria-modal="true" aria-labelledby="cart-sidebar-title" aria-hidden="true"
+        class="fixed top-0 right-0 h-full max-h-[100dvh] w-full sm:w-[420px] bg-[#050520] z-[1000] translate-x-full transition-all duration-[800ms] ease-[cubic-bezier(0.23,1,0.32,1)] border-l border-white/10 shadow-2xl overflow-hidden invisible outline-none">
+        <div class="p-5 sm:p-6 md:p-8 h-full min-h-0 flex flex-col pb-[max(1.25rem,env(safe-area-inset-bottom))]">
+            <div class="flex items-start justify-between gap-4 mb-6 pb-5 border-b border-white/10 transform transition-all duration-700 delay-300 opacity-0 translate-y-4 shrink-0"
+                id="cart-header">
+                <div class="min-w-0">
+                    <h2 id="cart-sidebar-title"
+                        class="text-white text-[22px] sm:text-[24px] font-bold font-hanken leading-tight">Your cart</h2>
+                    <p class="text-[#D6DAF0] text-[13px] font-inter mt-1.5"><span id="cart-item-count"
+                            class="text-white/90 font-medium">4</span> courses</p>
+                </div>
+                <button type="button" id="cart-close-btn"
+                    class="shrink-0 w-11 h-11 rounded-full border border-white/10 flex items-center justify-center text-[#D6DAF0] hover:text-white hover:bg-white/5 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary/60 focus-visible:ring-offset-2 focus-visible:ring-offset-[#050520]"
+                    aria-label="Close shopping cart">
+                    <i class="fa-solid fa-xmark text-[18px]" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <div class="flex-1 min-h-0 overflow-y-auto overflow-x-hidden pr-1 sm:pr-2 -mr-1 sm:-mr-2 custom-scrollbar space-y-3"
+                id="cart-items-container">
+                <p id="cart-empty-msg"
+                    class="hidden text-center text-[#D6DAF0] text-[14px] font-inter py-10 px-4 rounded-[10px] border border-dashed border-white/15 bg-white/[0.02]">
+                    Your cart is empty.
+                </p>
+                <div class="flex gap-3 sm:gap-4 rounded-[10px] bg-white/[0.04] border border-white/10 p-3 sm:p-3.5 transform transition-all duration-700 delay-[400ms] opacity-0 translate-y-4 cart-item group"
+                    data-unit-price="22">
+                    <a href="#"
+                        class="w-[72px] h-[72px] sm:w-20 sm:h-20 rounded-[10px] overflow-hidden flex-shrink-0 border border-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary/50">
+                        <img src="assets/images/course/course-1.webp" alt=""
+                            class="w-full h-full object-cover group-hover:opacity-90 transition-opacity" width="80"
+                            height="80">
+                    </a>
+                    <div class="flex-grow min-w-0 flex flex-col">
+                        <div class="flex justify-between items-start gap-2">
+                            <h3 class="text-[15px] sm:text-base font-medium font-inter text-white leading-snug pr-1">
+                                <a href="#"
+                                    class="hover:text-secondary transition-colors line-clamp-2 focus:outline-none focus-visible:text-secondary focus-visible:underline underline-offset-2">Miracle
+                                    Morning</a>
+                            </h3>
+                            <button type="button"
+                                class="cart-item-remove shrink-0 -mr-1 -mt-1 w-10 h-10 rounded-lg flex items-center justify-center text-white/45 hover:text-red-400 hover:bg-red-500/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400/50"
+                                aria-label="Remove Miracle Morning from cart">
+                                <i class="fa-solid fa-xmark text-[15px]" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="mt-auto pt-3 flex flex-wrap items-center justify-between gap-2">
+                            <div class="inline-flex items-center rounded-[8px] border border-white/10 bg-[#050520]/80">
+                                <button type="button"
+                                    class="cart-item-qty-minus w-9 h-9 flex items-center justify-center text-[#D6DAF0] hover:text-white hover:bg-white/10 rounded-l-[8px] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-secondary/50 disabled:opacity-35 disabled:pointer-events-none"
+                                    aria-label="Decrease quantity">
+                                    <i class="fa-solid fa-minus text-[11px]" aria-hidden="true"></i>
+                                </button>
+                                <span
+                                    class="cart-item-qty min-w-[2rem] text-center text-[13px] font-medium font-inter text-white tabular-nums">1</span>
+                                <button type="button"
+                                    class="cart-item-qty-plus w-9 h-9 flex items-center justify-center text-[#D6DAF0] hover:text-white hover:bg-white/10 rounded-r-[8px] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-secondary/50"
+                                    aria-label="Increase quantity">
+                                    <i class="fa-solid fa-plus text-[11px]" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <p class="text-[13px] font-inter text-[#D6DAF0]"><span class="text-white/25 mr-1"
+                                    aria-hidden="true">·</span><span
+                                    class="cart-item-line-total text-white font-semibold tabular-nums">$22</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-3 sm:gap-4 rounded-[10px] bg-white/[0.04] border border-white/10 p-3 sm:p-3.5 transform transition-all duration-700 delay-[500ms] opacity-0 translate-y-4 cart-item group"
+                    data-unit-price="30">
+                    <a href="#"
+                        class="w-[72px] h-[72px] sm:w-20 sm:h-20 rounded-[10px] overflow-hidden flex-shrink-0 border border-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary/50">
+                        <img src="assets/images/course/course-2.webp" alt=""
+                            class="w-full h-full object-cover group-hover:opacity-90 transition-opacity" width="80"
+                            height="80">
+                    </a>
+                    <div class="flex-grow min-w-0 flex flex-col">
+                        <div class="flex justify-between items-start gap-2">
+                            <h3 class="text-[15px] sm:text-base font-medium font-inter text-white leading-snug pr-1">
+                                <a href="#"
+                                    class="hover:text-secondary transition-colors line-clamp-2 focus:outline-none focus-visible:text-secondary focus-visible:underline underline-offset-2">Happy
+                                    Strong</a>
+                            </h3>
+                            <button type="button"
+                                class="cart-item-remove shrink-0 -mr-1 -mt-1 w-10 h-10 rounded-lg flex items-center justify-center text-white/45 hover:text-red-400 hover:bg-red-500/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400/50"
+                                aria-label="Remove Happy Strong from cart">
+                                <i class="fa-solid fa-xmark text-[15px]" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="mt-auto pt-3 flex flex-wrap items-center justify-between gap-2">
+                            <div class="inline-flex items-center rounded-[8px] border border-white/10 bg-[#050520]/80">
+                                <button type="button"
+                                    class="cart-item-qty-minus w-9 h-9 flex items-center justify-center text-[#D6DAF0] hover:text-white hover:bg-white/10 rounded-l-[8px] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-secondary/50 disabled:opacity-35 disabled:pointer-events-none"
+                                    aria-label="Decrease quantity">
+                                    <i class="fa-solid fa-minus text-[11px]" aria-hidden="true"></i>
+                                </button>
+                                <span
+                                    class="cart-item-qty min-w-[2rem] text-center text-[13px] font-medium font-inter text-white tabular-nums">1</span>
+                                <button type="button"
+                                    class="cart-item-qty-plus w-9 h-9 flex items-center justify-center text-[#D6DAF0] hover:text-white hover:bg-white/10 rounded-r-[8px] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-secondary/50"
+                                    aria-label="Increase quantity">
+                                    <i class="fa-solid fa-plus text-[11px]" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <p class="text-[13px] font-inter text-[#D6DAF0]"><span class="text-white/25 mr-1"
+                                    aria-hidden="true">·</span><span
+                                    class="cart-item-line-total text-white font-semibold tabular-nums">$30</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-3 sm:gap-4 rounded-[10px] bg-white/[0.04] border border-white/10 p-3 sm:p-3.5 transform transition-all duration-700 delay-[600ms] opacity-0 translate-y-4 cart-item group"
+                    data-unit-price="50">
+                    <a href="#"
+                        class="w-[72px] h-[72px] sm:w-20 sm:h-20 rounded-[10px] overflow-hidden flex-shrink-0 border border-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary/50">
+                        <img src="assets/images/course/course-3.webp" alt=""
+                            class="w-full h-full object-cover group-hover:opacity-90 transition-opacity" width="80"
+                            height="80">
+                    </a>
+                    <div class="flex-grow min-w-0 flex flex-col">
+                        <div class="flex justify-between items-start gap-2">
+                            <h3 class="text-[15px] sm:text-base font-medium font-inter text-white leading-snug pr-1">
+                                <a href="#"
+                                    class="hover:text-secondary transition-colors line-clamp-2 focus:outline-none focus-visible:text-secondary focus-visible:underline underline-offset-2">Rich
+                                    Dad Poor Dad</a>
+                            </h3>
+                            <button type="button"
+                                class="cart-item-remove shrink-0 -mr-1 -mt-1 w-10 h-10 rounded-lg flex items-center justify-center text-white/45 hover:text-red-400 hover:bg-red-500/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400/50"
+                                aria-label="Remove Rich Dad Poor Dad from cart">
+                                <i class="fa-solid fa-xmark text-[15px]" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="mt-auto pt-3 flex flex-wrap items-center justify-between gap-2">
+                            <div class="inline-flex items-center rounded-[8px] border border-white/10 bg-[#050520]/80">
+                                <button type="button"
+                                    class="cart-item-qty-minus w-9 h-9 flex items-center justify-center text-[#D6DAF0] hover:text-white hover:bg-white/10 rounded-l-[8px] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-secondary/50 disabled:opacity-35 disabled:pointer-events-none"
+                                    aria-label="Decrease quantity">
+                                    <i class="fa-solid fa-minus text-[11px]" aria-hidden="true"></i>
+                                </button>
+                                <span
+                                    class="cart-item-qty min-w-[2rem] text-center text-[13px] font-medium font-inter text-white tabular-nums">1</span>
+                                <button type="button"
+                                    class="cart-item-qty-plus w-9 h-9 flex items-center justify-center text-[#D6DAF0] hover:text-white hover:bg-white/10 rounded-r-[8px] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-secondary/50"
+                                    aria-label="Increase quantity">
+                                    <i class="fa-solid fa-plus text-[11px]" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <p class="text-[13px] font-inter text-[#D6DAF0]"><span class="text-white/25 mr-1"
+                                    aria-hidden="true">·</span><span
+                                    class="cart-item-line-total text-white font-semibold tabular-nums">$50</span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex gap-3 sm:gap-4 rounded-[10px] bg-white/[0.04] border border-white/10 p-3 sm:p-3.5 transform transition-all duration-700 delay-[700ms] opacity-0 translate-y-4 cart-item group"
+                    data-unit-price="50">
+                    <a href="#"
+                        class="w-[72px] h-[72px] sm:w-20 sm:h-20 rounded-[10px] overflow-hidden flex-shrink-0 border border-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary/50">
+                        <img src="assets/images/course/course-1.webp" alt=""
+                            class="w-full h-full object-cover group-hover:opacity-90 transition-opacity" width="80"
+                            height="80">
+                    </a>
+                    <div class="flex-grow min-w-0 flex flex-col">
+                        <div class="flex justify-between items-start gap-2">
+                            <h3 class="text-[15px] sm:text-base font-medium font-inter text-white leading-snug pr-1">
+                                <a href="#"
+                                    class="hover:text-secondary transition-colors line-clamp-2 focus:outline-none focus-visible:text-secondary focus-visible:underline underline-offset-2">Momentum
+                                    Theorem</a>
+                            </h3>
+                            <button type="button"
+                                class="cart-item-remove shrink-0 -mr-1 -mt-1 w-10 h-10 rounded-lg flex items-center justify-center text-white/45 hover:text-red-400 hover:bg-red-500/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-red-400/50"
+                                aria-label="Remove Momentum Theorem from cart">
+                                <i class="fa-solid fa-xmark text-[15px]" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="mt-auto pt-3 flex flex-wrap items-center justify-between gap-2">
+                            <div class="inline-flex items-center rounded-[8px] border border-white/10 bg-[#050520]/80">
+                                <button type="button"
+                                    class="cart-item-qty-minus w-9 h-9 flex items-center justify-center text-[#D6DAF0] hover:text-white hover:bg-white/10 rounded-l-[8px] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-secondary/50 disabled:opacity-35 disabled:pointer-events-none"
+                                    aria-label="Decrease quantity">
+                                    <i class="fa-solid fa-minus text-[11px]" aria-hidden="true"></i>
+                                </button>
+                                <span
+                                    class="cart-item-qty min-w-[2rem] text-center text-[13px] font-medium font-inter text-white tabular-nums">1</span>
+                                <button type="button"
+                                    class="cart-item-qty-plus w-9 h-9 flex items-center justify-center text-[#D6DAF0] hover:text-white hover:bg-white/10 rounded-r-[8px] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-secondary/50"
+                                    aria-label="Increase quantity">
+                                    <i class="fa-solid fa-plus text-[11px]" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                            <p class="text-[13px] font-inter text-[#D6DAF0]"><span class="text-white/25 mr-1"
+                                    aria-hidden="true">·</span><span
+                                    class="cart-item-line-total text-white font-semibold tabular-nums">$50</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-6 pt-6 border-t border-white/10 transform transition-all duration-700 delay-[800ms] opacity-0 translate-y-4 shrink-0 space-y-5"
+                id="cart-footer">
+                <div class="rounded-[10px] bg-white/[0.03] border border-white/10 p-4">
+                    <div class="flex items-baseline justify-between gap-3">
+                        <span class="text-[#D6DAF0] text-[14px] font-inter">Subtotal</span>
+                        <span id="cart-subtotal"
+                            class="text-white text-[22px] font-bold font-hanken tabular-nums">$152</span>
+                    </div>
+                    <p class="text-[#D6DAF0]/80 text-[12px] font-inter mt-2 leading-relaxed">Taxes and final total are
+                        confirmed at checkout.</p>
+                </div>
+                <div class="flex flex-col gap-3">
+                    <a href="shop-checkout.html" id="cart-checkout-btn"
+                        class="w-full min-h-[52px] h-[52px] sm:h-[56px] px-4 flex items-center justify-center gap-2 rounded-[10px] bg-linear-to-r from-[#360185] via-[#8F0177] to-[#FF0051] text-white text-[15px] font-semibold font-hanken hover:shadow-[0px_10px_30px_rgba(178,110,247,0.4)] transition-all duration-300 border-b-2 border-primary/29 focus:outline-none focus-visible:ring-2 focus-visible:ring-secondary/50 focus-visible:ring-offset-2 focus-visible:ring-offset-[#050520]">
+                        <i class="fa-solid fa-lock text-[14px] opacity-90" aria-hidden="true"></i>
+                        Checkout
+                    </a>
+                    <a href="shop-cart.html"
+                        class="w-full min-h-[52px] h-[52px] sm:h-[56px] px-4 flex items-center justify-center gap-2 rounded-[10px] border border-white/15 text-white text-[15px] font-semibold font-hanken hover:bg-white/5 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/30 focus-visible:ring-offset-2 focus-visible:ring-offset-[#050520]">
+                        <i class="fa-solid fa-bag-shopping text-[14px] opacity-80" aria-hidden="true"></i>
+                        View cart
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar Backdrop -->
+    <div id="cart-backdrop"
+        class="fixed inset-0 bg-black/80 z-[999] opacity-0 invisible transition-all duration-[800ms] ease-[cubic-bezier(0.23,1,0.32,1)] cursor-pointer"
+        aria-hidden="true">
+    </div>
+
+    <!-- Back to Top -->
+    <div id="back-to-top"
+        class="fixed bottom-[30px] right-[30px] z-60 w-[100px] h-[100px] cursor-pointer group opacity-0 invisible translate-y-4 transition-all duration-500">
+        <div id="back-to-top-glow" class="absolute inset-0 rounded-full bg-[#24BD25]/0 transition-all duration-500">
+        </div>
+        <svg class="w-full h-full transform -rotate-90 relative z-10">
+            <circle class="text-white/10" stroke-width="4" stroke="currentColor" fill="transparent" r="45" cx="50"
+                cy="50"></circle>
+            <circle id="back-to-top-progress" class="text-[#24BD25]" stroke-width="4" stroke-dasharray="282.7"
+                stroke-dashoffset="282.7" stroke-linecap="round" stroke="currentColor" fill="transparent" r="45" cx="50"
+                cy="50"></circle>
+        </svg>
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+            <span id="back-to-top-percent" class="text-white text-[18px] font-bold font-hanken leading-none">0%</span>
+            <span id="back-to-top-text"
+                class="text-[#D6DAF0] text-[10px] font-medium font-inter uppercase tracking-wider mt-1 leading-tight">Explore
+                <br> More</span>
+        </div>
+    </div>
+
+    <script src="assets/js/modernizr.min.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/swiper.js"></script>
+    <script src="assets/js/jquery-appear.js"></script>
+    <script src="assets/js/animation.js"></script>
+    <script src="assets/js/text-type.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script src="assets/js/countdown.js"></script>
+    <script src="assets/js/progressbar.min.js"></script>
+    <script src="assets/js/isotope.pkgd.min.js"></script>
+    <script src="assets/js/imageloaded.js"></script>
+    <script src="assets/js/jquery.waypoints.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <!-- Main JS -->
+    <script src="assets/js/main.min.js"></script>
+</body>
+
+</html>

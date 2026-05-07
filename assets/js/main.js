@@ -906,10 +906,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 // Update active tab UI
                 courseTabs.forEach(t => {
-                    t.classList.remove('bg-secondary', 'text-white', 'shadow-[0px_10px_20px_rgba(147,130,255,0.3)]');
+                    t.classList.remove('bg-secondary', 'text-white');
                     t.classList.add('bg-white/5', 'border', 'border-white/10', 'text-white/60');
                 });
-                this.classList.add('bg-secondary', 'text-white', 'shadow-[0px_10px_20px_rgba(147,130,255,0.3)]');
+                this.classList.add('bg-secondary', 'text-white');
                 this.classList.remove('bg-white/5', 'border', 'border-white/10', 'text-white/60');
 
                 // Destroy existing swiper
@@ -946,7 +946,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const searchPopover = courseTabsSection.querySelector('[data-course-search-popover]');
         const searchInput = courseTabsSection.querySelector('#course-tabs-search');
 
-        const ACTIVE_CLASSES = ['bg-secondary', 'text-white', 'border-secondary', 'shadow-[0px_10px_20px_rgba(147,130,255,0.3)]'];
+        const ACTIVE_CLASSES = ['bg-secondary', 'text-white', 'border-secondary'];
         const INACTIVE_CLASSES = ['bg-white/5', 'border-white/10', 'text-white/60'];
 
         let currentFilter = 'all';

@@ -288,14 +288,48 @@
     display: inline-block;
     padding: 6px 16px;
   }
+
+  .edu-wp-header-demos,
+  .edu-wp-header-elements {
+    transition: transform 0.35s cubic-bezier(0.34, 1.45, 0.64, 1), color 0.3s ease, filter 0.3s ease;
+  }
+
+  .edu-wp-header-demos:hover,
+  .edu-wp-header-elements:hover {
+    color: var(--color-secondary);
+    transform: translateY(-2px);
+  }
+
+  .edu-wp-header-profile {
+    transition: transform 0.35s cubic-bezier(0.34, 1.45, 0.64, 1), filter 0.3s ease, color 0.3s ease;
+  }
+
+  .edu-wp-header-profile:hover {
+    transform: scale(1.04);
+    filter: brightness(1.12);
+    color: rgb(196 181 255);
+  }
+
+  .edu-wp-header-mobile {
+    transition: transform 0.3s cubic-bezier(0.34, 1.45, 0.64, 1), color 0.3s ease;
+  }
+
+  .edu-wp-header-mobile:hover {
+    transform: scale(1.12);
+    color: var(--color-secondary);
+  }
+
   .btn-primary {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
     background: var(--gradient-primary);
     color: var(--color-button-text);
     border: none;
     border-radius: var(--button-radius);
     font-weight: var(--f-medium);
     cursor: pointer;
-    transition: box-shadow var(--transition), transform var(--transition-short);
+    transition: transform 0.45s cubic-bezier(0.34, 1.45, 0.64, 1), filter 0.4s ease, opacity 0.35s ease;
     box-shadow: var(--button-shadow-primary);
     display: inline-flex;
     align-items: center;
@@ -304,9 +338,30 @@
     white-space: nowrap;
   }
 
-  .btn-primary:hover {
-    box-shadow: var(--button-shadow-primary-hover);
-    transform: translateY(-2px);
+  .btn-primary::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    left: -100%;
+    width: 55%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.22), transparent);
+    transition: left 0.65s ease;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .btn-primary:hover:not(:disabled)::before {
+    left: 100%;
+  }
+
+  .btn-primary:hover:not(:disabled) {
+    transform: translateY(-3px) scale(1.02);
+    filter: brightness(1.06);
+  }
+
+  .btn-primary:active:not(:disabled) {
+    transform: translateY(-1px) scale(1.01);
+    transition-duration: 0.12s;
   }
 
   .btn-primary:disabled {
@@ -314,16 +369,20 @@
     cursor: not-allowed;
     transition: opacity var(--transition-short);
     transform: none;
+    filter: none;
   }
 
   .btn-secondary {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
     background: var(--gradient-secondary);
     color: var(--color-button-text);
     border: none;
     border-radius: var(--button-radius);
     font-weight: var(--f-medium);
     cursor: pointer;
-    transition: box-shadow var(--transition), transform var(--transition-short);
+    transition: transform 0.45s cubic-bezier(0.34, 1.45, 0.64, 1), filter 0.4s ease, opacity 0.35s ease;
     box-shadow: var(--button-shadow-secondary);
     display: inline-flex;
     align-items: center;
@@ -332,25 +391,49 @@
     white-space: nowrap;
   }
 
-  .btn-secondary:hover {
-    box-shadow: var(--button-shadow-secondary-hover);
-    transform: translateY(-2px);
+  .btn-secondary::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    left: -100%;
+    width: 55%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.18), transparent);
+    transition: left 0.65s ease;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .btn-secondary:hover:not(:disabled)::before {
+    left: 100%;
+  }
+
+  .btn-secondary:hover:not(:disabled) {
+    transform: translateY(-3px) scale(1.02);
+    filter: brightness(1.06);
+  }
+
+  .btn-secondary:active:not(:disabled) {
+    transform: translateY(-1px) scale(1.01);
+    transition-duration: 0.12s;
   }
 
   .btn-secondary:disabled {
     opacity: 0.5;
     cursor: not-allowed;
     transition: opacity var(--transition-short);
+    transform: none;
+    filter: none;
   }
 
   .btn-outline-primary {
+    position: relative;
     background: transparent;
     color: var(--color-button-text);
     border: 1px solid var(--color-button-border);
     border-radius: var(--button-radius);
     font-weight: var(--f-medium);
     cursor: pointer;
-    transition: background var(--transition), border-color var(--transition), transform var(--transition-short), color var(--transition);
+    transition: background 0.45s ease-in-out, border-color 0.45s ease-in-out, transform 0.45s cubic-bezier(0.34, 1.45, 0.64, 1), color 0.45s ease-in-out, filter 0.4s ease, opacity 0.35s ease;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -358,10 +441,15 @@
     white-space: nowrap;
   }
 
-  .btn-outline-primary:hover {
+  .btn-outline-primary:hover:not(:disabled) {
     background: var(--gradient-primary);
     border-color: transparent;
-    transform: translateY(-2px);
+    transform: translateY(-3px) scale(1.02);
+    filter: brightness(1.06);
+  }
+
+  .btn-outline-primary:active:not(:disabled) {
+    transform: translateY(-1px) scale(1.01);
   }
 
   .btn-outline-primary:disabled {
@@ -369,16 +457,19 @@
     cursor: not-allowed;
     transition: opacity var(--transition-short);
     transform: none;
+    box-shadow: none;
+    filter: none;
   }
 
   .btn-outline-secondary {
+    position: relative;
     background: transparent;
     color: var(--color-button-text);
     border: 1px solid var(--color-button-border);
     border-radius: var(--button-radius);
     font-weight: var(--f-medium);
     cursor: pointer;
-    transition: background var(--transition), border-color var(--transition), transform var(--transition-short), color var(--transition);
+    transition: background 0.45s ease-in-out, border-color 0.45s ease-in-out, transform 0.45s cubic-bezier(0.34, 1.45, 0.64, 1), color 0.45s ease-in-out, filter 0.4s ease, opacity 0.35s ease;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -386,10 +477,15 @@
     white-space: nowrap;
   }
 
-  .btn-outline-secondary:hover {
+  .btn-outline-secondary:hover:not(:disabled) {
     background: var(--gradient-secondary);
     border-color: transparent;
-    transform: translateY(-2px);
+    transform: translateY(-3px) scale(1.02);
+    filter: brightness(1.06);
+  }
+
+  .btn-outline-secondary:active:not(:disabled) {
+    transform: translateY(-1px) scale(1.01);
   }
 
   .btn-outline-secondary:disabled {
@@ -397,35 +493,76 @@
     cursor: not-allowed;
     transition: opacity var(--transition-short);
     transform: none;
+    box-shadow: none;
+    filter: none;
   }
 
   .btn-text {
     background: transparent;
     color: var(--color-button-text);
     border: none;
-    border-bottom: 2px solid var(--color-secondary);
     font-weight: var(--f-medium);
     cursor: pointer;
-    transition: background var(--transition);
+    transition: color 0.4s ease, gap 0.4s ease, transform 0.4s cubic-bezier(0.34, 1.45, 0.64, 1), opacity 0.35s ease, filter 0.35s ease;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
     white-space: nowrap;
-    padding: 0;
+    padding: 0 0 4px 0;
     position: relative;
   }
 
+  .btn-text::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--color-secondary);
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform 0.45s cubic-bezier(0.34, 1.15, 0.64, 1), background 0.35s ease;
+  }
 
+  .btn-text i {
+    transition: transform 0.45s cubic-bezier(0.34, 1.55, 0.64, 1);
+  }
+
+  .btn-text:hover:not(:disabled)::after {
+    transform: scaleX(1);
+    background: rgb(196 181 255);
+  }
+
+  .btn-text:hover:not(:disabled) {
+    color: var(--color-secondary);
+    transform: translateY(-2px);
+  }
+
+  .btn-text:hover:not(:disabled) i {
+    transform: translateX(6px);
+  }
+
+  .btn-text:disabled {
+    opacity: 0.45;
+    cursor: not-allowed;
+    transform: none;
+    filter: none;
+    transition: opacity 0.35s ease, transform 0.3s ease, color 0.3s ease, filter 0.3s ease;
+  }
 
   .btn-icon {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
     background: var(--gradient-primary);
     color: var(--color-button-text);
     border: none;
     border-radius: var(--button-radius);
     font-weight: var(--f-medium);
     cursor: pointer;
-    transition: box-shadow var(--transition), transform var(--transition-short);
+    transition: transform 0.45s cubic-bezier(0.34, 1.45, 0.64, 1), filter 0.4s ease, opacity 0.35s ease;
     box-shadow: var(--button-shadow-primary);
     display: inline-flex;
     align-items: center;
@@ -434,9 +571,33 @@
     white-space: nowrap;
   }
 
-  .btn-icon:hover {
-    box-shadow: var(--button-shadow-primary-hover);
-    transform: translateY(-2px);
+  .btn-icon::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    left: -100%;
+    width: 50%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.18), transparent);
+    transition: left 0.6s ease;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .btn-icon:hover:not(:disabled)::before {
+    left: 100%;
+  }
+
+  .btn-icon:hover:not(:disabled) {
+    transform: translateY(-3px) scale(1.02);
+    filter: brightness(1.06);
+  }
+
+  .btn-icon:hover:not(:disabled) i {
+    transform: scale(1.08);
+  }
+
+  .btn-icon i {
+    transition: transform 0.45s cubic-bezier(0.34, 1.55, 0.64, 1);
   }
 
   .btn-icon .btn-icon-arrow {
@@ -444,8 +605,8 @@
     transition: transform var(--transition-cubic);
   }
 
-  .btn-icon:hover .btn-icon-arrow {
-    transform: translateX(4px);
+  .btn-icon:hover:not(:disabled) .btn-icon-arrow {
+    transform: translateX(6px) scale(1.08);
   }
 
   .btn-icon:disabled {
@@ -453,6 +614,7 @@
     cursor: not-allowed;
     transition: opacity var(--transition-short);
     transform: none;
+    filter: none;
   }
 
   .btn-xl {
@@ -518,14 +680,35 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: background var(--transition), border-color var(--transition), transform var(--transition);
+    transition: background 0.45s ease, border-color 0.45s ease, color 0.35s ease, transform 0.45s cubic-bezier(0.34, 1.45, 0.64, 1), filter 0.4s ease;
     font-size: 20px;
+    position: relative;
+  }
+
+  .btn-circle i {
+    transition: transform 0.45s cubic-bezier(0.34, 1.55, 0.64, 1);
   }
 
   .btn-circle:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.12);
     border-color: var(--color-border-secondary);
-    transform: scale(1.05);
+    transform: scale(1.08);
+  }
+
+  .edu-wp-btn-circle-heart:hover {
+    border-color: rgba(255, 113, 191, 0.55);
+  }
+
+  .edu-wp-btn-circle-file:hover {
+    transform: scale(1.08) rotate(-8deg);
+  }
+
+  .edu-wp-btn-circle-prev:hover i {
+    transform: translateX(-4px);
+  }
+
+  .edu-wp-btn-circle-next:hover i {
+    transform: translateX(4px);
   }
 
   .btn-hover {
@@ -533,42 +716,54 @@
   }
 
   .btn-hover.btn-primary {
-    box-shadow: var(--button-shadow-primary-hover);
-    transform: translateY(-2px);
+    transform: translateY(-3px) scale(1.02);
+    filter: brightness(1.06);
   }
 
   .btn-hover.btn-secondary {
-    box-shadow: var(--button-shadow-secondary-hover);
-    transform: translateY(-2px);
+    transform: translateY(-3px) scale(1.02);
+    filter: brightness(1.06);
   }
 
   .btn-hover.btn-outline-primary {
     background: var(--gradient-primary);
     border-color: transparent;
-    transform: translateY(-2px);
+    transform: translateY(-3px) scale(1.02);
+    filter: brightness(1.06);
   }
 
   .btn-hover.btn-outline-secondary {
     background: var(--gradient-secondary);
     border-color: transparent;
-    transform: translateY(-2px);
+    transform: translateY(-3px) scale(1.02);
+    filter: brightness(1.06);
   }
 
   .btn-hover.btn-text {
-    background: var(--color-primary);
-  }
-
-  .btn-hover.btn-text::before {
-    width: 100%;
-  }
-
-  .btn-hover.btn-icon {
-    box-shadow: var(--button-shadow-primary-hover);
+    color: var(--color-secondary);
     transform: translateY(-2px);
   }
 
+  .btn-hover.btn-text::after {
+    transform: scaleX(1);
+    background: rgb(196 181 255);
+  }
+
+  .btn-hover.btn-text i {
+    transform: translateX(6px);
+  }
+
+  .btn-hover.btn-icon {
+    transform: translateY(-3px) scale(1.02);
+    filter: brightness(1.06);
+  }
+
+  .btn-hover.btn-icon i {
+    transform: scale(1.08);
+  }
+
   .btn-hover.btn-icon .btn-icon-arrow {
-    transform: translateX(4px);
+    transform: translateX(6px) scale(1.08);
   }
 }
 

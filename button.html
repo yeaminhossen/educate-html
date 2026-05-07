@@ -72,10 +72,10 @@
                 <nav class="hidden xl:flex items-center space-x-[40px] shrink-0">
                     <!-- Demos Mega Menu Item -->
                     <div class="group">
-                        <button
-                            class="text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300 flex items-center gap-1.5 py-8 cursor-pointer relative z-[100]">
+                        <button type="button"
+                            class="edu-wp-header-demos text-white/90 text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300 ease-out flex items-center gap-1.5 py-8 cursor-pointer relative z-[100]">
                             Demos <i
-                                class="fa-solid fa-angle-down text-[11px] group-hover:rotate-180 transition-transform"></i>
+                                class="fa-solid fa-angle-down text-[11px] group-hover:rotate-180 transition-transform duration-300 ease-out"></i>
                         </button>
 
                         <!-- Demos Mega Menu Content -->
@@ -380,7 +380,7 @@
                                 <!-- View All Button -->
                                 <div class="flex justify-center pt-2 border-t border-white/[0.06]">
                                     <a href="#"
-                                        class="inline-flex items-center gap-2.5 px-8 py-3.5 mt-6 rounded-[50px] gradient-color-primary-flow text-white text-[16px] font-semibold font-hanken hover:shadow-[0px_10px_30px_rgba(178,110,247,0.4)] hover:-translate-y-0.5 transition-all duration-300 border-b-2 border-primary/29">
+                                        class="inline-flex items-center gap-2.5 px-8 py-3.5 mt-6 rounded-[50px] gradient-color-primary-flow text-white text-[16px] font-semibold font-hanken hover:-translate-y-0.5 transition-all duration-300 border-b-2 border-primary/29">
                                         <span>View All The Trending Collection</span>
                                         <div class="w-7 h-7 flex items-center justify-center shrink-0">
                                             <i class="fa-regular fa-loader rotate-[-45deg] text-[18px]"></i>
@@ -392,10 +392,10 @@
                     </div>
                     <!-- Mega Menu Item -->
                     <div class="group">
-                        <button
-                            class="flex items-center gap-1.5 rounded-[50px] text-white text-[16px] font-medium font-inter transition-all duration-300 relative z-[100]">
+                        <button type="button"
+                            class="edu-wp-header-elements flex items-center gap-1.5 rounded-[50px] text-white text-[16px] font-medium font-inter hover:text-secondary transition-all duration-300 ease-out relative z-[100]">
                             Elements <i
-                                class="fa-solid fa-angle-down text-[12px] group-hover:rotate-180 transition-transform"></i>
+                                class="fa-solid fa-angle-down text-[12px] group-hover:rotate-180 transition-transform duration-300 ease-out"></i>
                         </button>
 
                         <!-- Mega Menu Content -->
@@ -742,8 +742,8 @@
 
                     <!-- Login link replaced with User Profile Dropdown -->
                     <div class="relative group/user">
-                        <button id="user-profile-btn"
-                            class="hidden md:flex items-center gap-2 text-secondary text-[16px] font-medium font-inter transition-all duration-300 cursor-pointer">
+                        <button type="button" id="user-profile-btn"
+                            class="edu-wp-header-profile hidden md:flex items-center gap-2 text-secondary text-[16px] font-medium font-inter transition-all duration-300 ease-out cursor-pointer">
                             <i class="fa-regular fa-user"></i>
                             <span>Admin</span>
                         </button>
@@ -854,13 +854,13 @@
 
                     <!-- Join Button -->
                     <a href="#"
-                        class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-[50px] gradient-color-primary-flow text-white text-[16px] font-semibold font-hanken hover:shadow-[0px_10px_30px_rgba(178,110,247,0.4)] hover:-translate-y-0.5 transition-all duration-300 border-b-2 border-primary/29">
+                        class="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-[50px] gradient-color-primary-flow text-white text-[16px] font-semibold font-hanken hover:-translate-y-0.5 transition-all duration-300 border-b-2 border-primary/29">
                         <img src="assets/images/icon/right-icon.svg" alt="Join" class="w-5 h-5">
                         <span>Join for free</span>
                     </a>
 
                     <!-- Mobile Toggle -->
-                    <button id="mobile-menu-btn" class="lg:hidden text-white/90 text-2xl">
+                    <button type="button" id="mobile-menu-btn" class="edu-wp-header-mobile lg:hidden text-white/90 text-2xl transition-all duration-300 ease-out">
                         <i class="fa-solid fa-bars"></i>
                     </button>
                 </div>
@@ -947,27 +947,27 @@
                             <h3 class="text-white text-lg font-medium mb-6">Default</h3>
                             <div class="space-y-6">
                                 <div>
-                                    <button class="btn-primary btn-md">Learnhub Button</button>
+                                    <button class="btn-primary edu-wp-btn-primary btn-md">Primary gradient button</button>
                                 </div>
                                 <div>
-                                    <button class="btn-secondary btn-md">Learnhub Button</button>
+                                    <button class="btn-secondary edu-wp-btn-secondary btn-md">Secondary gradient button</button>
                                 </div>
                                 <div>
-                                    <button class="btn-outline-primary btn-md">Learnhub Button</button>
+                                    <button class="btn-outline-primary edu-wp-btn-outline-primary btn-md">Outline primary button</button>
                                 </div>
                                 <div>
-                                    <button class="btn-outline-secondary btn-md">Learnhub Button</button>
+                                    <button class="btn-outline-secondary edu-wp-btn-outline-secondary btn-md">Outline secondary button</button>
                                 </div>
                                 <div>
-                                    <button class="btn-text p-px">Learnhub Button <i
+                                    <button class="btn-text edu-wp-btn-text p-px">Text link button <i
                                             class="fa-sharp fa-solid fa-arrow-right"></i></button>
                                 </div>
                                 <div>
-                                    <button class="btn-icon btn-md"><i class="fa-sharp fa-solid fa-arrow-right"></i>
-                                        Learnhub Button</button>
+                                    <button class="btn-icon edu-wp-btn-icon btn-md"><i class="fa-sharp fa-solid fa-arrow-right"></i>
+                                        Primary icon button (leading icon)</button>
                                 </div>
                                 <div>
-                                    <button class="btn-icon btn-md">Learnhub Button <i
+                                    <button class="btn-icon edu-wp-btn-icon btn-md">Primary icon button (trailing arrow) <i
                                             class="fas fa-arrow-right btn-icon-arrow"></i></button>
                                 </div>
                             </div>
@@ -976,27 +976,27 @@
                             <h3 class="text-white text-lg font-medium mb-6">Hover</h3>
                             <div class="space-y-6">
                                 <div>
-                                    <button class="btn-primary btn-md btn-hover">Learnhub Button</button>
+                                    <button class="btn-primary edu-wp-btn-primary btn-md btn-hover">Primary gradient button (hover)</button>
                                 </div>
                                 <div>
-                                    <button class="btn-secondary btn-md btn-hover">Learnhub Button</button>
+                                    <button class="btn-secondary edu-wp-btn-secondary btn-md btn-hover">Secondary gradient button (hover)</button>
                                 </div>
                                 <div>
-                                    <button class="btn-outline-primary btn-md btn-hover">Learnhub Button</button>
+                                    <button class="btn-outline-primary edu-wp-btn-outline-primary btn-md btn-hover">Outline primary button (hover)</button>
                                 </div>
                                 <div>
-                                    <button class="btn-outline-secondary btn-md btn-hover">Learnhub Button</button>
+                                    <button class="btn-outline-secondary edu-wp-btn-outline-secondary btn-md btn-hover">Outline secondary button (hover)</button>
                                 </div>
                                 <div>
-                                    <button class="btn-text p-px btn-hover">Learnhub Button <i
+                                    <button class="btn-text edu-wp-btn-text p-px btn-hover">Text link button (hover) <i
                                             class="fa-sharp fa-solid fa-arrow-right"></i></button>
                                 </div>
                                 <div>
-                                    <button class="btn-icon btn-md btn-hover"><i
-                                            class="fa-sharp fa-solid fa-arrow-right"></i> Learnhub Button</button>
+                                    <button class="btn-icon edu-wp-btn-icon btn-md btn-hover"><i
+                                            class="fa-sharp fa-solid fa-arrow-right"></i> Primary icon button (leading icon, hover)</button>
                                 </div>
                                 <div>
-                                    <button class="btn-icon btn-md btn-hover">Learnhub Button <i
+                                    <button class="btn-icon edu-wp-btn-icon btn-md btn-hover">Primary icon button (trailing arrow, hover) <i
                                             class="fas fa-arrow-right btn-icon-arrow"></i></button>
                                 </div>
                             </div>
@@ -1010,66 +1010,66 @@
                         <div>
                             <h3 class="text-white text-base font-medium mb-4">Extra Large</h3>
                             <div class="flex flex-wrap items-center gap-4">
-                                <button class="btn-primary btn-xl">Learnhub Button</button>
-                                <button class="btn-secondary btn-xl">Learnhub Button</button>
-                                <button class="btn-outline-primary btn-xl">Learnhub Button</button>
-                                <button class="btn-outline-secondary btn-xl">Learnhub Button</button>
-                                <button class="btn-text btn-xl ">Learnhub Button <i
+                                <button class="btn-primary edu-wp-btn-primary btn-xl">Extra large primary</button>
+                                <button class="btn-secondary edu-wp-btn-secondary btn-xl">Extra large secondary</button>
+                                <button class="btn-outline-primary edu-wp-btn-outline-primary btn-xl">Extra large outline primary</button>
+                                <button class="btn-outline-secondary edu-wp-btn-outline-secondary btn-xl">Extra large outline secondary</button>
+                                <button class="btn-text edu-wp-btn-text btn-xl ">Extra large text link <i
                                         class="fa-sharp fa-solid fa-arrow-right"></i></button>
-                                <button class="btn-icon btn-xl">Learnhub Button <i
+                                <button class="btn-icon edu-wp-btn-icon btn-xl">Extra large icon button <i
                                         class="fas fa-arrow-right btn-icon-arrow"></i></button>
                             </div>
                         </div>
                         <div>
                             <h3 class="text-white text-base font-medium mb-4">Large</h3>
                             <div class="flex flex-wrap items-center gap-4">
-                                <button class="btn-primary btn-lg">Learnhub Button</button>
-                                <button class="btn-secondary btn-lg">Learnhub Button</button>
-                                <button class="btn-outline-primary btn-lg">Learnhub Button</button>
-                                <button class="btn-outline-secondary btn-lg">Learnhub Button</button>
-                                <button class="btn-text btn-lg">Learnhub Button <i
+                                <button class="btn-primary edu-wp-btn-primary btn-lg">Large primary</button>
+                                <button class="btn-secondary edu-wp-btn-secondary btn-lg">Large secondary</button>
+                                <button class="btn-outline-primary edu-wp-btn-outline-primary btn-lg">Large outline primary</button>
+                                <button class="btn-outline-secondary edu-wp-btn-outline-secondary btn-lg">Large outline secondary</button>
+                                <button class="btn-text edu-wp-btn-text btn-lg">Large text link <i
                                         class="fa-sharp fa-solid fa-arrow-right"></i></button>
-                                <button class="btn-icon btn-lg">Learnhub Button <i
+                                <button class="btn-icon edu-wp-btn-icon btn-lg">Large icon button <i
                                         class="fas fa-arrow-right btn-icon-arrow"></i></button>
                             </div>
                         </div>
                         <div>
                             <h3 class="text-white text-base font-medium mb-4">Medium</h3>
                             <div class="flex flex-wrap items-center gap-4">
-                                <button class="btn-primary btn-md">Learnhub Button</button>
-                                <button class="btn-secondary btn-md">Learnhub Button</button>
-                                <button class="btn-outline-primary btn-md">Learnhub Button</button>
-                                <button class="btn-outline-secondary btn-md">Learnhub Button</button>
-                                <button class="btn-text p-px">Learnhub Button <i
+                                <button class="btn-primary edu-wp-btn-primary btn-md">Medium primary</button>
+                                <button class="btn-secondary edu-wp-btn-secondary btn-md">Medium secondary</button>
+                                <button class="btn-outline-primary edu-wp-btn-outline-primary btn-md">Medium outline primary</button>
+                                <button class="btn-outline-secondary edu-wp-btn-outline-secondary btn-md">Medium outline secondary</button>
+                                <button class="btn-text edu-wp-btn-text p-px">Medium text link <i
                                         class="fa-sharp fa-solid fa-arrow-right"></i></button>
-                                <button class="btn-icon btn-md">Learnhub Button <i
+                                <button class="btn-icon edu-wp-btn-icon btn-md">Medium icon button <i
                                         class="fas fa-arrow-right btn-icon-arrow"></i></button>
                             </div>
                         </div>
                         <div>
                             <h3 class="text-white text-base font-medium mb-4">Small</h3>
                             <div class="flex flex-wrap items-center gap-4">
-                                <button class="btn-primary btn-sm"><i class="fas fa-shopping-cart"></i> Buy Now</button>
-                                <button class="btn-secondary btn-sm">Learnhub Button</button>
-                                <button class="btn-outline-primary btn-sm">Learnhub Button</button>
-                                <button class="btn-outline-secondary btn-sm">Learnhub Button</button>
-                                <button class="btn-text btn-sm">Learnhub Button <i
+                                <button class="btn-primary edu-wp-btn-primary btn-sm"><i class="fas fa-shopping-cart"></i> Buy now (small)</button>
+                                <button class="btn-secondary edu-wp-btn-secondary btn-sm">Small secondary</button>
+                                <button class="btn-outline-primary edu-wp-btn-outline-primary btn-sm">Small outline primary</button>
+                                <button class="btn-outline-secondary edu-wp-btn-outline-secondary btn-sm">Small outline secondary</button>
+                                <button class="btn-text edu-wp-btn-text btn-sm">Small text link <i
                                         class="fa-sharp fa-solid fa-arrow-right"></i></button>
-                                <button class="btn-icon btn-sm">Learnhub Button <i
+                                <button class="btn-icon edu-wp-btn-icon btn-sm">Small icon button <i
                                         class="fas fa-arrow-right btn-icon-arrow"></i></button>
                             </div>
                         </div>
                         <div>
                             <h3 class="text-white text-base font-medium mb-4">Extra Small</h3>
                             <div class="flex flex-wrap items-center gap-4">
-                                <button class="btn-primary btn-xs">Learnhub <i
+                                <button class="btn-primary edu-wp-btn-primary btn-xs">Extra small primary <i
                                         class="fa-sharp fa-solid fa-arrow-right"></i></button>
-                                <button class="btn-secondary btn-xs">Learnhub Button</button>
-                                <button class="btn-outline-primary btn-xs">Learnhub Button</button>
-                                <button class="btn-outline-secondary btn-xs">Learnhub Button</button>
-                                <button class="btn-text btn-xs">Learnhub Button <i
+                                <button class="btn-secondary edu-wp-btn-secondary btn-xs">Extra small secondary</button>
+                                <button class="btn-outline-primary edu-wp-btn-outline-primary btn-xs">Extra small outline primary</button>
+                                <button class="btn-outline-secondary edu-wp-btn-outline-secondary btn-xs">Extra small outline secondary</button>
+                                <button class="btn-text edu-wp-btn-text btn-xs">Extra small text link <i
                                         class="fa-sharp fa-solid fa-arrow-right"></i></button>
-                                <button class="btn-icon btn-xs">Learnhub Button <i
+                                <button class="btn-icon edu-wp-btn-icon btn-xs">Extra small icon button <i
                                         class="fas fa-arrow-right btn-icon-arrow"></i></button>
                             </div>
                         </div>
@@ -1082,20 +1082,20 @@
                         <div>
                             <h3 class="text-white text-base font-medium mb-4">Gradient Buttons</h3>
                             <div class="flex flex-wrap items-center gap-4">
-                                <button class="btn-primary btn-md"><i class="fas fa-user-plus"></i> Sign Up</button>
-                                <button class="btn-primary btn-md"><i class="fas fa-shopping-cart"></i> Buy Now</button>
+                                <button class="btn-primary edu-wp-btn-primary btn-md"><i class="fas fa-user-plus"></i> Sign up</button>
+                                <button class="btn-primary edu-wp-btn-primary btn-md"><i class="fas fa-shopping-cart"></i> Buy now</button>
                             </div>
                         </div>
                         <div>
                             <h3 class="text-white text-base font-medium mb-4">Disabled State</h3>
                             <div class="flex flex-wrap items-center gap-4">
-                                <button class="btn-primary btn-md" disabled>Disabled Button</button>
-                                <button class="btn-secondary btn-md" disabled>Disabled Button</button>
-                                <button class="btn-outline-primary btn-md" disabled>Disabled Button</button>
-                                <button class="btn-outline-secondary btn-md" disabled>Disabled Button</button>
-                                <button class="btn-text p-px" disabled>Disabled Button <i
+                                <button class="btn-primary edu-wp-btn-primary btn-md" disabled>Disabled primary</button>
+                                <button class="btn-secondary edu-wp-btn-secondary btn-md" disabled>Disabled secondary</button>
+                                <button class="btn-outline-primary edu-wp-btn-outline-primary btn-md" disabled>Disabled outline primary</button>
+                                <button class="btn-outline-secondary edu-wp-btn-outline-secondary btn-md" disabled>Disabled outline secondary</button>
+                                <button class="btn-text edu-wp-btn-text p-px" disabled>Disabled text link <i
                                         class="fa-sharp fa-solid fa-arrow-right"></i></button>
-                                <button class="btn-icon btn-md" disabled>Disabled Button <i
+                                <button class="btn-icon edu-wp-btn-icon btn-md" disabled>Disabled icon button <i
                                         class="fas fa-arrow-right btn-icon-arrow"></i></button>
                             </div>
                         </div>
@@ -1109,25 +1109,32 @@
                         <div>
                             <h3 class="text-white text-base font-medium mb-4">Text Button</h3>
                             <div class="flex flex-wrap items-center gap-4">
-                                <button class="btn-text p-px">Read More <i
+                                <button class="btn-text edu-wp-btn-text p-px">Read More <i
                                         class="fa-sharp fa-solid fa-arrow-right"></i></button>
                             </div>
                         </div>
                         <div>
-                            <h3 class="text-white text-base font-medium mb-4">Icon Buttons</h3>
+                            <h3 class="text-white text-base font-medium mb-4">Icon Buttons <span class="text-white/45 font-normal text-sm">(header CTA style)</span></h3>
                             <div class="flex flex-wrap items-center gap-4">
-                                <button class="btn-icon btn-md"><i class="fas fa-heart"></i> Learnhub Button</button>
-                                <button class="btn-icon btn-md">Learnhub Button <i
-                                        class="fas fa-arrow-right btn-icon-arrow"></i></button>
+                                <button type="button" aria-label="Header gradient call-to-action with heart icon"
+                                    class="edu-wp-btn-header-cta edu-wp-btn-header-cta-heart inline-flex items-center gap-2.5 px-7 py-3.5 rounded-[50px] gradient-color-primary-flow text-white text-[16px] font-semibold font-hanken hover:-translate-y-0.5 transition-all duration-300 ease-out border-b-2 border-primary/29">
+                                    <i class="fas fa-heart text-[18px] leading-none" aria-hidden="true"></i>
+                                    <span>Header CTA (heart)</span>
+                                </button>
+                                <button type="button" aria-label="Header gradient call-to-action with arrow icon"
+                                    class="edu-wp-btn-header-cta edu-wp-btn-header-cta-arrow inline-flex items-center gap-2.5 px-7 py-3.5 rounded-[50px] gradient-color-primary-flow text-white text-[16px] font-semibold font-hanken hover:-translate-y-0.5 transition-all duration-300 ease-out border-b-2 border-primary/29">
+                                    <span>Header CTA (arrow)</span>
+                                    <img src="assets/images/icon/right-icon.svg" alt="" class="w-5 h-5 shrink-0" width="20" height="20">
+                                </button>
                             </div>
                         </div>
                         <div>
                             <h3 class="text-white text-base font-medium mb-4">Circle Buttons</h3>
                             <div class="flex flex-wrap items-center gap-4">
-                                <button class="btn-circle"><i class="fas fa-heart"></i></button>
-                                <button class="btn-circle"><i class="fas fa-file"></i></button>
-                                <button class="btn-circle"><i class="fas fa-chevron-left"></i></button>
-                                <button class="btn-circle"><i class="fas fa-chevron-right"></i></button>
+                                <button type="button" class="btn-circle edu-wp-btn-circle edu-wp-btn-circle-heart"><i class="fas fa-heart"></i></button>
+                                <button type="button" class="btn-circle edu-wp-btn-circle edu-wp-btn-circle-file"><i class="fas fa-file"></i></button>
+                                <button type="button" class="btn-circle edu-wp-btn-circle edu-wp-btn-circle-prev"><i class="fas fa-chevron-left"></i></button>
+                                <button type="button" class="btn-circle edu-wp-btn-circle edu-wp-btn-circle-next"><i class="fas fa-chevron-right"></i></button>
                             </div>
                         </div>
                     </div>
@@ -1135,24 +1142,10 @@
             </div>
         </section>
     </main>
-    <footer class="bg-primary relative overflow-hidden pt-16 pb-8">
-        <div class="max-w-[1320px] mx-auto px-4">
-            <section class="mb-16">
-                <div class="bg-border-primary rounded-[16px] p-8 md:p-12">
-                    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-                        <h2 class="text-white text-[30px] md:text-[36px] font-semibold">Subscribe Our Newsletter</h2>
-                        <form class="flex flex-col sm:flex-row gap-4 flex-1 md:max-w-lg md:ml-auto">
-                            <input type="email" placeholder="Email address"
-                                class="flex-1 bg-primary border border-border-white rounded-full px-6 py-4 text-white placeholder:text-[#D6DAF0]  focus:outline-none focus:border-secondary transition-colors text-[15px]">
-                            <button type="submit"
-                                class="btn-primary btn-md rounded-full flex items-center justify-center gap-2 whitespace-nowrap">
-                                Subscribe <i class="fa-solid fa-arrow-right"></i>
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </section>
 
+    <!-- footer section start -->
+    <footer class="bg-primary relative overflow-hidden pb-8">
+        <div class="max-w-[1320px] mx-auto px-4">
             <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
                 <div class="space-y-6">
                     <div class="flex items-center gap-3">
@@ -1193,7 +1186,7 @@
                 </div>
 
                 <nav class="space-y-6">
-                    <h5 class="text-white text-[20px] font-semibold">Company</h5>
+                    <h5 class="text-[#D6DAF0]  text-[20px] font-bold font-hanken">Company</h5>
                     <ul class="space-y-3">
                         <li><a href="#"
                                 class="text-[#D6DAF0]  hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>About
@@ -1220,7 +1213,7 @@
                 </nav>
 
                 <nav class="space-y-6">
-                    <h5 class="text-white text-[20px] font-semibold">Resources</h5>
+                    <h5 class="text-[#D6DAF0]  text-[20px] font-bold font-hanken">Resources</h5>
                     <ul class="space-y-3">
                         <li><a href="#"
                                 class="text-[#D6DAF0]  hover:text-secondary transition-colors text-[14px] footer-menu-link"><span>Educa
@@ -1247,14 +1240,14 @@
                 </nav>
 
                 <div class="space-y-6">
-                    <h5 class="text-white text-[20px] font-semibold">Recent Posts</h5>
+                    <h5 class="text-[#D6DAF0]  text-[20px] font-bold font-hanken">Recent Posts</h5>
                     <div class="space-y-4">
                         <a href="#" class="flex gap-4">
                             <img src="assets/images/blog/bg.webp" alt="Post thumbnail"
                                 class="w-20 h-20 rounded-[10px] object-cover shrink-0 hover:scale-105 hover:opacity-50 transition-all">
                             <div class="flex-1">
                                 <h6
-                                    class="text-white hover:text-secondary transition-colors text-[14px] font-medium mb-2">
+                                    class="text-white hover:text-secondary transition-colors text-[14px] font-bold font-hanken mb-2">
                                     Online education is empowering</h6>
                                 <p class="text-[#D6DAF0]  text-[12px] flex items-center gap-2">
                                     <i class="fa-regular fa-clock"></i>
@@ -1267,7 +1260,7 @@
                                 class="w-20 h-20 rounded-[10px] object-cover shrink-0 hover:scale-105 hover:opacity-50 transition-all">
                             <div class="flex-1">
                                 <h6
-                                    class="text-white hover:text-secondary transition-colors text-[14px] font-medium mb-2">
+                                    class="text-white hover:text-secondary transition-colors text-[14px] font-bold font-hanken mb-2">
                                     Online education is empowering</h6>
                                 <p class="text-[#D6DAF0]  text-[12px] flex items-center gap-2">
                                     <i class="fa-regular fa-clock"></i>
@@ -1289,7 +1282,6 @@
             </div>
         </div>
     </footer>
-
 
     <script src="assets/js/modernizr.min.js"></script>
     <script src="assets/js/jquery.js"></script>
